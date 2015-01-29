@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Node packages downloaded via "npm install"
 node_modules/
 
@@ -11,6 +12,7 @@ style.css
 
 # Misc files types
 *.DS_Store
+=======
 *.log
 .htaccess
 sitemap.xml
@@ -24,3 +26,4 @@ wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
 wp-content/wp-cache-config.php
+>>>>>>> 56159fc14a0aa1e589bb9fc8d6281f596996ce66
