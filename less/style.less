@@ -148,8 +148,11 @@ Version: 1.0.1
   }
 }
 
+h1 {font-size: 50px !important;letter-spacing: -3px;}
+
 h1, h2, h3 {
 	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
 	text-transform: uppercase;
 	color: @pink;
 }
@@ -165,6 +168,7 @@ figure.hammy-responsive {
 }
 
 .top-social {
+	z-index: 1;
 	position: fixed;
 	right: 20px;
 	margin-top: 20px;
@@ -177,7 +181,19 @@ figure.hammy-responsive {
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	padding: 10px;
+	margin-bottom: 0px;
 }
+
+.top-social ul:before, .top-social ul:after, 
+.top-social ul li:before, .top-social ul li:after {
+  /* All pseudo elements are 
+     abs. positioned and on bottom */
+  position: absolute;
+  bottom: 0;
+  content: "";
+}
+
+/*  COLORS PINK > BLUE #ef95ad 0%, #abdff6  */
 
 .top-social ul li {
 	float: left;
@@ -215,6 +231,19 @@ figure.hammy-responsive {
 	margin-left: 180px !important;
 }
 
+.navbar-default .navbar-nav > li > a {
+	color: white;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	-webkit-transition: 1s all easeinout;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: @pink;
+	-webkit-transition: 1s all easeinout;
+}
+
 .jumbotron {
 	padding: 0px;
 	margin: 0px;
@@ -236,11 +265,15 @@ figure.hammy-responsive {
     background: none !important;
 }
 
+.rsGalore {
+	border: 5px solid white;
+}
+
 .rsGalore .rsTags {
 	position: absolute;
 	top: 20px;
 	right: 0px;
-	padding: 15px 20px;
+	padding: 10px 15px;
 	background: @pink;
 }
 
@@ -253,6 +286,8 @@ figure.hammy-responsive {
 	right: 40px;
 	bottom: 20px;
 }
+
+.rsGalore
 
 .rsGalore .rsButton {
 	position: absolute;

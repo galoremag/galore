@@ -2,12 +2,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="top-social col-sm-2 col-sm-offset-10">
-				<ul>
-					<li><i class="fa fa-tumblr"></i></li>
-					<li><i class="fa fa-instagram"></i></li>
-					<li><i class="fa fa-facebook"></i></li>
-					<li><i class="fa fa-twitter"></i></li>
-					<li><i class="fa fa-youtube"></i></li>
+				<ul class="tab">
+					<li><a href="/"><i class="fa fa-tumblr"></i></a></li>
+					<li><a href="/"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="/"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="/"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="/"><i class="fa fa-youtube"></i></a></li>
 				</ul>
 			</div>
 		</div>
