@@ -95,3 +95,77 @@
 			</article>
 		<?php endif;
 	}
+
+	// ADD POST THUMBNAIL TO ADMIN COLUMN
+
+	add_filter('manage_posts_columns', 'posts_columns', 5);
+	add_action('manage_posts_custom_column', 'posts_custom_columns', 5, 2);
+
+	function posts_columns($defaults){
+	    $defaults['riv_post_thumbs'] = __('Thumbs');
+	    return $defaults;
+	}
+
+	function posts_custom_columns($column_name, $id){
+	        if($column_name === 'riv_post_thumbs'){
+	        echo the_post_thumbnail( 'featured-thumbnail' );
+	    }
+	}
+
+	function register_my_menus() {
+	  register_nav_menus(
+	    array(
+	      'header-menu' => __( 'Header Menu' ),
+	      'extra-menu' => __( 'Extra Menu' )
+	    )
+	  );
+	}
+	add_action( 'init', 'register_my_menus' );
+
+	add_filter('show_admin_bar', '__return_false');
+
+	add_filter('new_royalslider_skins', 'new_royalslider_add_custom_skin', 10, 2);
+	function new_royalslider_add_custom_skin($skins) {
+	      $skins['rsGalore'] = array(
+	           'label' => 'Galore Skin',
+	           'path' => get_stylesheet_directory_uri() . '/rs-galore-skin/rs-galore.css'  // get_stylesheet_directory_uri returns path to your theme folder
+	      );
+	      return $skins;
+	}
+
+	function get_template_part_with_hammy($template_name) {
+	    $content = load_template_part($template_name);
+	    if(function_exists('hammy_replace_images')){
+	        $content = hammy_replace_images($content);
+	    }
+	    echo $content;
+	}
+
+	// MOST RECENT POSTS FROM TAG 'FEATURED'
+
+	function add_additional_posts_to_slider($slides, $options, $type) {
+	    if( $options['id'] !== 6 ) { return $slides; }
+	    
+	    $slides = array();
+	   
+	    // Query #1 parameters  https://gist.github.com/luetkemj/2023628
+	    $args = array(
+	        'posts_per_page' => 3,
+	        'orderby' => 'date',
+			'tag' => 'featured'
+	    );
+	    $query = new WP_Query($args);
+	    $slides = array_merge($slides,  (array)$query->posts); // merge queried data
+
+	    // Query #2 parameters 
+	    $args = array(
+	        'posts_per_page' => 3,
+	        'orderby' => 'date',
+	        'tag' => 'featured'
+	    );
+	    $query = new WP_Query($args);
+	    $slides = array_merge($slides, (array)$query->posts); // merge queried data
+
+	    return $slides; 
+	}
+	add_filter('new_rs_slides_filter', 'add_additional_posts_to_slider', 10, 3);

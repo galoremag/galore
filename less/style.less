@@ -65,6 +65,7 @@ Version: 1.0.1
 
 // Google fonts
 //@import url(https://fonts.googleapis.com/css?family=Roboto:300,500|Open+Sans:700);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 // Your theme files 
 //@import "_global.less";
@@ -72,3 +73,226 @@ Version: 1.0.1
 //@import "_content.less";
 //@import "_sidebar.less";
 //@import "_footer.less";
+
+/*  VARIABLES  */
+
+@pink : #E81B8E;
+
+.heroGradient {
+	background: #fbb040; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #fbb040 0%, #9e1f63 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#fbb040), color-stop(100%,#9e1f63)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #fbb040 0%,#9e1f63 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #fbb040 0%,#9e1f63 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #fbb040 0%,#9e1f63 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #fbb040 0%,#9e1f63 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbb040', endColorstr='#9e1f63',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.heroGradientFade {
+	background: -moz-linear-gradient(-45deg,  rgba(251,176,64,0.5) 0%, rgba(158,31,99,0.5) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(251,176,64,0.5)), color-stop(100%,rgba(158,31,99,0.5))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  rgba(251,176,64,0.5) 0%,rgba(158,31,99,0.5) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  rgba(251,176,64,0.5) 0%,rgba(158,31,99,0.5) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  rgba(251,176,64,0.5) 0%,rgba(158,31,99,0.5) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(251,176,64,0.5) 0%,rgba(158,31,99,0.5) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80fbb040', endColorstr='#809e1f63',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.pinkBlueGradient {
+	background: #ef95ad; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #ef95ad 0%, #abdff6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ef95ad), color-stop(100%,#abdff6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #ef95ad 0%,#abdff6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #ef95ad 0%,#abdff6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #ef95ad 0%,#abdff6 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #ef95ad 0%,#abdff6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef95ad', endColorstr='#abdff6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.bluePinkGradient {
+	background: #abdff6; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #abdff6 0%, #ef95ad 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#abdff6), color-stop(100%,#ef95ad)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #abdff6 0%,#ef95ad 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #abdff6 0%,#ef95ad 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #abdff6 0%,#ef95ad 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #abdff6 0%,#ef95ad 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abdff6', endColorstr='#ef95ad',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.footerGradient {
+	background: #8e5465; /* Old browsers */
+	background: -moz-linear-gradient(left,  #8e5465 0%, #638493 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#8e5465), color-stop(100%,#638493)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #8e5465 0%,#638493 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #8e5465 0%,#638493 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #8e5465 0%,#638493 100%); /* IE10+ */
+	background: linear-gradient(to right,  #8e5465 0%,#638493 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e5465', endColorstr='#638493',GradientType=1 ); /* IE6-9 */
+}
+
+/*== Compatibility ==*/
+
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+/*  PRINT  */
+
+@media print {
+  .container {
+    width: auto;
+  }
+}
+
+h1, h2, h3 {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: @pink;
+}
+
+h1 span, h2 span, h3 span {
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: @pink;
+}
+
+figure.hammy-responsive {
+
+}
+
+.top-social {
+	position: fixed;
+	right: 20px;
+	margin-top: 20px;
+}
+
+.top-social ul {
+	.pinkBlueGradient;
+	height: 40px;
+	list-style-type: none;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	padding: 10px;
+}
+
+.top-social ul li {
+	float: left;
+	color: white;
+	margin: 0px 10px;
+}
+
+.navbar-default {
+	border: 0px;
+	overflow: visible;
+	.pinkBlueGradient;
+	margin-top: 60px;
+	box-shadow: 0px 2px 3px rgba(255, 0, 50, 0.3);
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border: 0px !important;
+}
+
+.navbar-brand {
+	position: absolute;
+	top: -40px;
+	width: 180px;
+	height: 215px;
+	overflow: visible;
+	background: url(images/galore_logo.png) no-repeat;
+	background-size: 180px auto;
+}
+
+.navbar-brand span {
+	display: none;
+}
+
+.main-cats {
+	margin-left: 180px !important;
+}
+
+.jumbotron {
+	padding: 0px;
+	margin: 0px;
+	background: url(images/greyfloral.png) repeat;
+}
+
+.jumbotrin {
+	padding: 140px 0px 80px 0px;
+	.heroGradientFade;
+	width: 100%;
+	height: 100%;
+}
+
+#new-royalslider-6,
+#new-royalslider-6 .rsOverflow,
+#new-royalslider-6 .rsSlide,
+#new-royalslider-6 .rsVideoFrameHolder,
+#new-royalslider-6 .rsThumbs {
+    background: none !important;
+}
+
+.rsGalore .rsTags {
+	position: absolute;
+	top: 20px;
+	right: 0px;
+	padding: 20px;
+	background: @pink;
+}
+
+.rsGalore .rsTags a { color: fade(white,50%); }
+.rsGalore .rsTags a:hover { color: white; }
+
+.rsGalore .rsText {
+	position: absolute;
+	text-align: right;
+	right: 40px;
+	bottom: 20px;
+}
+
+.rsGalore .rsButton {
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+}
+
+.rsGalore .rsBullets {
+	display: none !important;
+}
+
+/*  This container element gives us the scrollbars we want.  */
+#latestdiv.horizontal {
+    width: 100%;
+    height: 400px;
+    overflow-x: scroll !important;
+}
+
+/*  table-layout: fixed does a lot of the magic, here. It makes sure that the "table cells" retain the pixel dimensions you want.  */
+
+#latest .table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+/*  Arranging your content inside the "cells" is as simple as using the vertical-align and text-align properties. Floats work, too.  */
+#latest article.entry {
+    width: 400px !important;
+    height: 400px !important;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    padding: 12px !important;
+    margin: 10px !important;
+    float: left !important;
+}
+
+
+
+/*== Media Queries ==*/
+
+@import "style-responsive.less";
