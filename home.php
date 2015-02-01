@@ -71,7 +71,8 @@
 				<div class="entry home-chunk">
 				<?php the_post_thumbnail('large'); ?>
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<?php the_time(get_option('date_format')) ?>
+				<p><?php the_time(get_option('date_format')) ?></p>
+				<p>By <?php the_author_posts_link(); ?></p>
 				<?php the_excerpt(); ?>
 				</div>
 				<?php endforeach; ?>
@@ -85,7 +86,9 @@
 				<div class="entry">
 				<?php the_post_thumbnail('thumbnail'); ?>
 				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-				<?php the_time(get_option('date_format')) ?>
+				<p><?php the_time(get_option('date_format')) ?></p>
+				<!-- <p><?php the_excerpt(10); ?></p> -->
+				<p>By <?php the_author_posts_link(); ?></p>
 				</div>
 				<?php endforeach; ?>
 			</div>
@@ -99,7 +102,7 @@
 <div class="pop container-fluid">
 <div class="pop-in">
 	<div class="row">
-		<h2 class="text-center">P<span>o</span>p</h2>
+		<h2 class="text-center">Pop</h2>
 		<div class="col-sm-8 col-sm-offset-2">
 			<div class="row" id="gridcontainer">
 				<?php
@@ -125,6 +128,8 @@
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 					</div>
 	                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+	                <p><?php the_time(get_option('date_format')) ?></p>
+	                <p>By <?php the_author_posts_link(); ?></p>
 				</div>
 				<?php
 				$counter = 0;
@@ -139,6 +144,8 @@
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 					</div>
 	                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+	                <p><?php the_time(get_option('date_format')) ?></p>
+	                <p>By <?php the_author_posts_link(); ?></p>
 				</div>
 				<?php
 				$counter = 0;
@@ -153,6 +160,8 @@
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 					</div>
 	                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+	                <p><?php the_time(get_option('date_format')) ?></p>
+	                <p>By <?php the_author_posts_link(); ?></p>
 				</div>
 				<div class="clear"></div>
 				<?php
@@ -211,6 +220,8 @@
 							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 						</div>
 		                <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
+		                <p><?php the_time(get_option('date_format')) ?></p>
+	                	<p>By <?php the_author_posts_link(); ?></p>
 					</div>
 					<?php
 					$counter = 0;
@@ -225,6 +236,8 @@
 							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 						</div>
 		                <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
+		                <p><?php the_time(get_option('date_format')) ?></p>
+	                	<p>By <?php the_author_posts_link(); ?></p>
 					</div>
 					<?php
 					$counter = 0;
@@ -239,6 +252,8 @@
 							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 						</div>
 		                <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
+		                <p><?php the_time(get_option('date_format')) ?></p>
+	                	<p>By <?php the_author_posts_link(); ?></p>
 					</div>
 					<div class="clear"></div>
 					<?php
@@ -257,14 +272,13 @@
 				<div class="brand"></div>
 				<h2 class="justify">Darlings</h2>
 					<?php
-					$postslist = get_posts('numberposts=3&order=DESC&orderby=date&offset=0');
+					$postslist = get_posts('numberposts=4&order=DESC&orderby=date&offset=0');
 					foreach ($postslist as $post) :
 					setup_postdata($post);
 					?>
 					<div class="entry">
 					<?php the_post_thumbnail('thumbnail'); ?>
 					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-					<?php the_time(get_option('date_format')) ?>
 					</div>
 					<?php endforeach; ?>
 			</div>
@@ -273,8 +287,6 @@
 	</div>
 </div>
 </div>
-
-<div class="spacer40"></div>
 
 <!-- COVER STORIES -->
 
@@ -287,6 +299,19 @@
 	</div>
 </div>
 
-<div class="spacer40"></div>
+<div class="kittens container-fluid">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+			<div class="kitten-logo">
+				<img src="<?php bloginfo('template_url'); ?>/images/kitten-logo.png">
+			</div>
+			<h3 class="text-center">Finally, a talent agency for the mobile + social world.</h3>
+			<p class="text-center">See our full roster of girls <a href="/kitten">here</a>.</p>
+			<div class="kitten-girls">
+				<img src="<?php bloginfo('template_url'); ?>/images/kittens/kittens.png">
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>

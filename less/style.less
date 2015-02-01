@@ -196,8 +196,8 @@ img {
 	height: auto;
 }
 
-a {opacity: 0.7;.transition}
-a:hover {opacity: 1;.transition}
+a {opacity: 0.7;.transition; color: @pink;}
+a:hover {opacity: 1;.transition; color: @pink;}
 
 a button {
 	border-radius: 5px;
@@ -248,7 +248,16 @@ figure.hammy-responsive {
 	width: 180px;
 	height: 215px;
 	overflow: visible;
-	background: url(images/galore_logo.png) no-repeat;
+	background: url(images/galore-logo.png) no-repeat;
+	background-size: 180px auto;
+	margin-bottom: -100px;
+}
+
+.brand-white {
+	width: 180px;
+	height: 215px;
+	overflow: visible;
+	background: url(images/galore-logo-white.png) no-repeat;
 	background-size: 180px auto;
 	margin-bottom: -100px;
 }
@@ -306,7 +315,7 @@ figure.hammy-responsive {
 	width: 180px;
 	height: 215px;
 	overflow: visible;
-	background: url(images/galore_logo.png) no-repeat;
+	background: url(images/galore-logo.png) no-repeat;
 	background-size: 180px auto;
 }
 
@@ -352,7 +361,7 @@ figure.hammy-responsive {
     background: none !important;
 }
 
-.rsGalore {
+.jumbotron .rsGalore {
 	border: 5px solid white;
 }
 
@@ -473,8 +482,20 @@ figure.hammy-responsive {
 	background: url(images/cover-stories.png) repeat;
 }
 
+.kitten-logo {
+}
+
+.kitten-girls {
+}
+
 footer {
+	padding-top: 40px;
 	.footerGradient;
+	color: white;
+}
+
+.legal {
+	padding-top: 40px;
 }
 
 /*== Media Queries ==*/
