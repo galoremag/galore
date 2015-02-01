@@ -57,244 +57,256 @@
 
 <!-- SEX + ADVICE SECTION -->
 
-<div class="sex-advice container-fluid">
-<div class="sex-advice-in">
-	<div class="row">
-		<div class="row-same-height">
-			<h2 class="text-center"><span>Sex</span> + <span>Advice</span></h2>
-			<div class="col-sm-6 col-sm-offset-2">
-				<?php
-				$postslist = get_posts('numberposts=1&order=DESC&orderby=date');
-				foreach ($postslist as $post) :
-				setup_postdata($post);
-				?>
-				<div class="entry home-chunk">
-				<?php the_post_thumbnail('large'); ?>
-				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<p><?php the_time(get_option('date_format')) ?></p>
-				<p>By <?php the_author_posts_link(); ?></p>
-				<?php the_excerpt(); ?>
+<div class="sex-advice">
+	<div class="sex-advice-in">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="row-same-height">
+					<h2 class="text-center"><span>Sex</span> + <span>Advice</span></h2>
+					<div class="col-sm-6 col-sm-offset-2">
+						<?php
+						$postslist = get_posts('numberposts=1&order=DESC&orderby=date');
+						foreach ($postslist as $post) :
+						setup_postdata($post);
+						?>
+						<div class="entry home-chunk">
+						<?php the_post_thumbnail('large'); ?>
+						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						<p><?php the_time(get_option('date_format')) ?></p>
+						<p>By <?php the_author_posts_link(); ?></p>
+						<?php the_excerpt(); ?>
+						</div>
+						<?php endforeach; ?>
+					</div>
+					<div class="col-sm-2">
+						<?php
+						$postslist = get_posts('numberposts=2&order=DESC&orderby=date&offset=1');
+						foreach ($postslist as $post) :
+						setup_postdata($post);
+						?>
+						<div class="entry">
+						<?php the_post_thumbnail('thumbnail'); ?>
+						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+						<p><?php the_time(get_option('date_format')) ?></p>
+						<!-- <p><?php the_excerpt(10); ?></p> -->
+						<p>By <?php the_author_posts_link(); ?></p>
+						</div>
+						<?php endforeach; ?>
+					</div>
 				</div>
-				<?php endforeach; ?>
-			</div>
-			<div class="col-sm-2">
-				<?php
-				$postslist = get_posts('numberposts=2&order=DESC&orderby=date&offset=1');
-				foreach ($postslist as $post) :
-				setup_postdata($post);
-				?>
-				<div class="entry">
-				<?php the_post_thumbnail('thumbnail'); ?>
-				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-				<p><?php the_time(get_option('date_format')) ?></p>
-				<!-- <p><?php the_excerpt(10); ?></p> -->
-				<p>By <?php the_author_posts_link(); ?></p>
-				</div>
-				<?php endforeach; ?>
 			</div>
 		</div>
 	</div>
-</div>
 </div>
 
 <!-- POP SECTION -->
 
-<div class="pop container-fluid">
-<div class="pop-in">
-	<div class="row">
-		<h2 class="text-center">Pop</h2>
-		<div class="col-sm-8 col-sm-offset-2">
-			<div class="row" id="gridcontainer">
-				<?php
-				$counter = 1; //start counter
+<div class="pop">
+	<div class="pop-in">
+		<div class="container-fluid">
+			<div class="row">
+				<h2 class="text-center">Pop</h2>
+				<div class="col-sm-8 col-sm-offset-2">
+					<div class="row" id="gridcontainer">
+						<?php
+						$counter = 1; //start counter
 
-				$grids = 3; //Grids per row
+						$grids = 3; //Grids per row
 
-				global $query_string; //Need this to make pagination work
-
-
-				/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
-				query_posts($query_string . '&ignore_sticky_posts=0&posts_per_page=6');
+						global $query_string; //Need this to make pagination work
 
 
-				if(have_posts()) :	while(have_posts()) :  the_post(); 
-				?>
-				<?php
-				//Show the left hand side column
-				if($counter == 1) :
-				?>
-				<div class="col-sm-4">
-					<div class="postimage">
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+						/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
+						query_posts($query_string . '&ignore_sticky_posts=0&posts_per_page=6');
+
+
+						if(have_posts()) :	while(have_posts()) :  the_post(); 
+						?>
+						<?php
+						//Show the left hand side column
+						if($counter == 1) :
+						?>
+						<div class="col-sm-4">
+							<div class="postimage">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+							</div>
+			                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
+			                <p><?php the_time(get_option('date_format')) ?></p>
+			                <p>By <?php the_author_posts_link(); ?></p>
+						</div>
+						<?php
+						$counter = 0;
+						endif;
+						?>
+						<?php
+						//Show the left hand side column
+						if($counter == 1) :
+						?>
+						<div class="col-sm-4">
+							<div class="postimage">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+							</div>
+			                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+			                <p><?php the_time(get_option('date_format')) ?></p>
+			                <p>By <?php the_author_posts_link(); ?></p>
+						</div>
+						<?php
+						$counter = 0;
+						endif;
+						?>
+						<?php
+						//Show the left hand side column
+						if($counter == 1) :
+						?>
+						<div class="col-sm-4">
+							<div class="postimage">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+							</div>
+			                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+			                <p><?php the_time(get_option('date_format')) ?></p>
+			                <p>By <?php the_author_posts_link(); ?></p>
+						</div>
+						<div class="clear"></div>
+						<?php
+						$counter = 0;
+						endif;
+						?>
+						<?php
+						$counter++;
+						endwhile;
+						//Pagination can go here if you want it.
+						endif;
+						?>
 					</div>
-	                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-	                <p><?php the_time(get_option('date_format')) ?></p>
-	                <p>By <?php the_author_posts_link(); ?></p>
 				</div>
-				<?php
-				$counter = 0;
-				endif;
-				?>
-				<?php
-				//Show the left hand side column
-				if($counter == 1) :
-				?>
-				<div class="col-sm-4">
-					<div class="postimage">
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-					</div>
-	                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-	                <p><?php the_time(get_option('date_format')) ?></p>
-	                <p>By <?php the_author_posts_link(); ?></p>
-				</div>
-				<?php
-				$counter = 0;
-				endif;
-				?>
-				<?php
-				//Show the left hand side column
-				if($counter == 1) :
-				?>
-				<div class="col-sm-4">
-					<div class="postimage">
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-					</div>
-	                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-	                <p><?php the_time(get_option('date_format')) ?></p>
-	                <p>By <?php the_author_posts_link(); ?></p>
-				</div>
-				<div class="clear"></div>
-				<?php
-				$counter = 0;
-				endif;
-				?>
-				<?php
-				$counter++;
-				endwhile;
-				//Pagination can go here if you want it.
-				endif;
-				?>
+			</div>
+			<div class="row">
+				<div class="spacer20"></div>
+				<p class="text-center"><a href="<?php get_category_link(); ?>"><button>Read More</button></a></p>
 			</div>
 		</div>
-		<p><a class="text-center" href="<?php get_category_link(); ?>"><button>Read More</button></a></p>
-	</div>
 	</div>
 </div>
 
 <!-- STYLE SECTION -->
 
-<div class="style container-fluid">
-<div class="style-in">
-	<div class="row">
-		<div class="row-same-height">
-			<h2 class="text-center">Style</h2>
-			<div class="col-sm-6 col-sm-offset-2">
-				<div class="">
-					<?php echo do_shortcode( '[new_royalslider id="7"]' ); ?>
-					<a class="pull-right" href="<?php get_category_link(); ?>"><button>Read More</button></a>
-					<div class="spacer40"></div>
+<div class="style">
+	<div class="style-in">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="spacer40"></div>
+				<div class="col-sm-6 col-sm-offset-2">
+					<div>
+						<h2>Style</h2>
+						<?php echo do_shortcode( '[new_royalslider id="7"]' ); ?>
+						<a class="pull-right" href="<?php get_category_link(); ?>"><button>Read More</button></a>
+						<div class="spacer40"></div>
+					</div>
+					<hr>
+					<div class="beauty">
+					<h2>Beauty</h2>
+						<?php
+						$counter = 1; //start counter
+
+						$grids = 3; //Grids per row
+
+						global $query_string; //Need this to make pagination work
+
+
+						/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
+						query_posts($query_string . '&ignore_sticky_posts=0&posts_per_page=6');
+
+
+						if(have_posts()) :	while(have_posts()) :  the_post(); 
+						?>
+						<?php
+						//Show the left hand side column
+						if($counter == 1) :
+						?>
+						<div class="col-sm-4">
+							<div class="postimage">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+							</div>
+			                <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
+			                <p><?php the_time(get_option('date_format')) ?></p>
+		                	<p>By <?php the_author_posts_link(); ?></p>
+						</div>
+						<?php
+						$counter = 0;
+						endif;
+						?>
+						<?php
+						//Show the left hand side column
+						if($counter == 1) :
+						?>
+						<div class="col-sm-4">
+							<div class="postimage">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+							</div>
+			                <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
+			                <p><?php the_time(get_option('date_format')) ?></p>
+		                	<p>By <?php the_author_posts_link(); ?></p>
+						</div>
+						<?php
+						$counter = 0;
+						endif;
+						?>
+						<?php
+						//Show the left hand side column
+						if($counter == 1) :
+						?>
+						<div class="col-sm-4">
+							<div class="postimage">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+							</div>
+			                <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
+			                <p><?php the_time(get_option('date_format')) ?></p>
+		                	<p>By <?php the_author_posts_link(); ?></p>
+						</div>
+						<div class="clear"></div>
+						<?php
+						$counter = 0;
+						endif;
+						?>
+						<?php
+						$counter++;
+						endwhile;
+						//Pagination can go here if you want it.
+						endif;
+						?>
+						</div>
 				</div>
-				<hr>
-				<div class="beauty">
-				<h2>Beauty</h2>
-					<?php
-					$counter = 1; //start counter
-
-					$grids = 3; //Grids per row
-
-					global $query_string; //Need this to make pagination work
-
-
-					/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
-					query_posts($query_string . '&ignore_sticky_posts=0&posts_per_page=6');
-
-
-					if(have_posts()) :	while(have_posts()) :  the_post(); 
-					?>
-					<?php
-					//Show the left hand side column
-					if($counter == 1) :
-					?>
-					<div class="col-sm-4">
-						<div class="postimage">
-							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+				<div class="col-sm-2">
+					<div class="spacer20"></div>
+					<div class="darlings text-center">
+						<div class="brand"></div>
+						<h2 class="justify">Darlings</h2>
+						<?php
+						$postslist = get_posts('numberposts=4&order=DESC&orderby=date&offset=0');
+						foreach ($postslist as $post) :
+						setup_postdata($post);
+						?>
+						<div class="entry">
+						<?php the_post_thumbnail('thumbnail'); ?>
+						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 						</div>
-		                <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-		                <p><?php the_time(get_option('date_format')) ?></p>
-	                	<p>By <?php the_author_posts_link(); ?></p>
+						<?php endforeach; ?>
 					</div>
-					<?php
-					$counter = 0;
-					endif;
-					?>
-					<?php
-					//Show the left hand side column
-					if($counter == 1) :
-					?>
-					<div class="col-sm-4">
-						<div class="postimage">
-							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-						</div>
-		                <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-		                <p><?php the_time(get_option('date_format')) ?></p>
-	                	<p>By <?php the_author_posts_link(); ?></p>
-					</div>
-					<?php
-					$counter = 0;
-					endif;
-					?>
-					<?php
-					//Show the left hand side column
-					if($counter == 1) :
-					?>
-					<div class="col-sm-4">
-						<div class="postimage">
-							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-						</div>
-		                <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-		                <p><?php the_time(get_option('date_format')) ?></p>
-	                	<p>By <?php the_author_posts_link(); ?></p>
-					</div>
-					<div class="clear"></div>
-					<?php
-					$counter = 0;
-					endif;
-					?>
-					<?php
-					$counter++;
-					endwhile;
-					//Pagination can go here if you want it.
-					endif;
-					?>
-					</div>
-			</div>
-			<div class="darlings col-sm-2 text-center">
-				<div class="brand"></div>
-				<h2 class="justify">Darlings</h2>
-					<?php
-					$postslist = get_posts('numberposts=4&order=DESC&orderby=date&offset=0');
-					foreach ($postslist as $post) :
-					setup_postdata($post);
-					?>
-					<div class="entry">
-					<?php the_post_thumbnail('thumbnail'); ?>
-					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-					</div>
-					<?php endforeach; ?>
-			</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-</div>
 
 <!-- COVER STORIES -->
 
-<div class="cover-stories container-fluid">
-	<div class="row">
-		<div class="col-sm-12">
-			<div class="cover-title"></div>
-			<?php echo do_shortcode( '[new_royalslider id="6"]' ); ?>
+<div class="cover-stories">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="nopad col-sm-12">
+				<div class="cover-title"></div>
+				<?php echo do_shortcode( '[new_royalslider id="8"]' ); ?>
+			</div>
 		</div>
 	</div>
 </div>
@@ -302,7 +314,7 @@
 <div class="kittens container-fluid">
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-3">
-			<div class="kitten-logo">
+			<div class="kitten-logo" style="-webkit-transform: scale(0.4);">
 				<img src="<?php bloginfo('template_url'); ?>/images/kitten-logo.png">
 			</div>
 			<h3 class="text-center">Finally, a talent agency for the mobile + social world.</h3>

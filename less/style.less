@@ -86,9 +86,22 @@ Version: 1.0.1
 	transition: all 0.3s ease-in-out;
 }
 
+.spacer20 {
+	display: block;
+	height: 20px;
+}
+
 .spacer40 {
 	display: block;
 	height: 40px;
+}
+
+.nopad {
+	padding: 0;
+}
+
+.nomarg {
+	margin: 0;
 }
 
 .heroGradient {
@@ -103,12 +116,12 @@ Version: 1.0.1
 }
 
 .heroGradientFade {
-	background: -moz-linear-gradient(-45deg,  rgba(251,176,64,0.5) 0%, rgba(158,31,99,0.5) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(251,176,64,0.5)), color-stop(100%,rgba(158,31,99,0.5))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(-45deg,  rgba(251,176,64,0.5) 0%,rgba(158,31,99,0.5) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(-45deg,  rgba(251,176,64,0.5) 0%,rgba(158,31,99,0.5) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(-45deg,  rgba(251,176,64,0.5) 0%,rgba(158,31,99,0.5) 100%); /* IE10+ */
-	background: linear-gradient(135deg,  rgba(251,176,64,0.5) 0%,rgba(158,31,99,0.5) 100%); /* W3C */
+	background: -moz-linear-gradient(-45deg,  rgba(251,176,64,0.7) 0%, rgba(158,31,99,0.7) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(251,176,64,0.7)), color-stop(100%,rgba(158,31,99,0.7))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  rgba(251,176,64,0.7) 0%,rgba(158,31,99,0.7) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  rgba(251,176,64,0.7) 0%,rgba(158,31,99,0.7) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  rgba(251,176,64,0.7) 0%,rgba(158,31,99,0.7) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(251,176,64,0.7) 0%,rgba(158,31,99,0.7) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80fbb040', endColorstr='#809e1f63',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -239,6 +252,12 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
 	text-decoration: none;
 	.transition;
 }
+
+h1 {margin: 20px;}
+h2 {margin: 10px;}
+h3 {margin: 5px;}
+h4 {margin: 5px 0px 0px 0px}
+h5 {margin: 0px;}
 
 figure.hammy-responsive {
 
@@ -428,8 +447,6 @@ figure.hammy-responsive {
 }
 
 .sex-advice {
-	padding: 0px;
-	margin: 0px;
 	background: url(images/symphony.png) repeat;
 }
 
@@ -447,10 +464,12 @@ figure.hammy-responsive {
 #gridcontainer .postimage {margin: 0 0 10px 0;}
 
 .pop {
-	padding: 0px;
-	margin: 0px;
 	background: url(images/kindajean.png) repeat;
+	color: white;
 }
+
+.pop a {color:white;}
+.pop a:hover {color:@pink;}
 
 .pop-in {
 	padding: 0px 0px 40px 0px;
@@ -458,8 +477,6 @@ figure.hammy-responsive {
 }
 
 .style {
-	padding: 0px;
-	margin: 0px;
 	background: url(images/greyfloral.png) repeat;
 }
 
@@ -474,8 +491,7 @@ figure.hammy-responsive {
 }
 
 .cover-stories {
-	padding: 0px;
-	margin: 0px;
+	padding: 0px 0px 40px 0px;
 }
 
 .cover-title {
