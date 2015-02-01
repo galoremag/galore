@@ -167,9 +167,9 @@
 	width: 96px;
 	height: 72px;
 }
-.rsGalore .rsThumb img {
+.rsGalore .rsThumb img, img.rsImg {
 	width: 100%;
-	height: 100%;
+	height: auto;
 }
 .rsGalore .rsThumb.rsNavSelected {
 	background: #02874a;
