@@ -66,6 +66,7 @@ Version: 1.0.1
 // Google fonts
 //@import url(https://fonts.googleapis.com/css?family=Roboto:300,500|Open+Sans:700);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic);
 
 // Your theme files 
 //@import "_global.less";
@@ -79,8 +80,15 @@ Version: 1.0.1
 @pink : #E81B8E;
 
 .transition {
-	-webkit-transition: 1s all easeinout;
-	transition: 1s all easeinout;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.spacer40 {
+	display: block;
+	height: 40px;
 }
 
 .heroGradient {
@@ -146,6 +154,16 @@ Version: 1.0.1
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80abdff6', endColorstr='#80ef95ad',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+.yellowGlowGradient {
+	background: -moz-linear-gradient(-45deg,  rgba(255,187,50,0.33) 0%, rgba(255,187,50,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,187,50,0.33)), color-stop(100%,rgba(255,187,50,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  rgba(255,187,50,0.33) 0%,rgba(255,187,50,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  rgba(255,187,50,0.33) 0%,rgba(255,187,50,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  rgba(255,187,50,0.33) 0%,rgba(255,187,50,0) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(255,187,50,0.33) 0%,rgba(255,187,50,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54ffbb32', endColorstr='#00ffbb32',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
 .footerGradient {
 	background: #8e5465; /* Old browsers */
 	background: -moz-linear-gradient(left,  #8e5465 0%, #638493 100%); /* FF3.6+ */
@@ -173,13 +191,31 @@ Version: 1.0.1
   }
 }
 
-a {opacity: 0.7}
-a:hover {opacity: 1}
+img {
+	width: 100%;
+	height: auto;
+}
+
+a {opacity: 0.7;.transition}
+a:hover {opacity: 1;.transition}
+
+a button {
+	border-radius: 5px;
+	border: 0px;
+	background: @pink;
+	opacity: 0.9;
+	color: white;
+	.transition;
+}
+
+a:hover button {
+	opacity: 1;
+}
 
 h1 {font-size: 50px !important;letter-spacing: -3px;}
 
 h1, h2, h3 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: @pink;
@@ -206,6 +242,15 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
 
 figure.hammy-responsive {
 
+}
+
+.brand {
+	width: 180px;
+	height: 215px;
+	overflow: visible;
+	background: url(images/galore_logo.png) no-repeat;
+	background-size: 180px auto;
+	margin-bottom: -100px;
 }
 
 .top-social {
@@ -276,7 +321,7 @@ figure.hammy-responsive {
 .navbar-default .navbar-nav > li > a {
 	color: white;
 	text-transform: uppercase;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-weight: bold;
 	-webkit-transition: 1s all easeinout;
 }
@@ -380,7 +425,7 @@ figure.hammy-responsive {
 }
 
 .sex-advice-in {
-	padding: 140px 0px 80px 0px;
+	padding: 0px 0px 80px 0px;
 	.bluePinkGradientFade;
 	width: 100%;
 	height: 100%;
@@ -391,6 +436,46 @@ figure.hammy-responsive {
 #gridcontainer .griditemleft {float: left; width: 278px; margin: 0 40px 40px 0;}
 #gridcontainer .griditemright {float: left; width: 278px;}
 #gridcontainer .postimage {margin: 0 0 10px 0;}
+
+.pop {
+	padding: 0px;
+	margin: 0px;
+	background: url(images/kindajean.png) repeat;
+}
+
+.pop-in {
+	padding: 0px 0px 40px 0px;
+	background: rgba(0,0,0,0.8);
+}
+
+.style {
+	padding: 0px;
+	margin: 0px;
+	background: url(images/greyfloral.png) repeat;
+}
+
+.style-in {
+	padding: 0px 0px 40px 0px;
+	.yellowGlowGradient;
+}
+
+.darlings {
+	padding: 10px;
+	.bluePinkGradient;
+}
+
+.cover-stories {
+	padding: 0px;
+	margin: 0px;
+}
+
+.cover-title {
+	background: url(images/cover-stories.png) repeat;
+}
+
+footer {
+	.footerGradient;
+}
 
 /*== Media Queries ==*/
 
