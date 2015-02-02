@@ -27,6 +27,33 @@
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
 
+		<script type="text/javascript">
+			document.getElementById("scrollbox").addEventListener('touchstart', function(event){});
+		</script>
 		
 	</head>
 	<body <?php body_class(); ?>>
+
+		<div id="fb-root"></div>
+		<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '341699539354957',
+		      xfbml      : true,
+		      version    : 'v2.2'
+		    });
+		  };
+
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+
+		</script>
+
+		<script>
+		window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+		</script>

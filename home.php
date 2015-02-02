@@ -25,33 +25,32 @@
 	</div>
 </div>
 </div>
-<div class="latest container-fluid">
-	<h2 class="text-center"><span>The</span> Latest</h2>
-	<div class="row">
-		<div class="col-sm-12">
-			<?php echo do_shortcode('[carousel-horizontal-posts-content-slider]'); ?>
+<div class="latest">
+	<div class="container-fluid">
+		<h2 class="text-center"><span>The</span> Latest</h2>
+		<div class="row">
+			<div class="col-sm-12">
+				<?php echo do_shortcode('[carousel-horizontal-posts-content-slider]'); ?>
+			</div>
 		</div>
-		<!-- <div id="latest" class="col-sm-12">
-			<div class="horizontal">
-			    <div class="table">
-			    	<?php
-						$query = new WP_Query( array(
-						// 'category__not_in' => array(2335, 5, 3156, 8),
-						'category_name' => 'latest',
-						// 'post__not_in'  => get_option( 'sticky_posts' ),
-						// 'ignore_sticky_posts' => 0,
-						'showposts' => '15'
-						) ); ?>
-						<?php if ( $query->have_posts() ) : ?>
-						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-			        <tr>
-			            <?php get_template_part( 'includes/homepage-entries' ); ?>
-			        </tr>
-			        <?php endwhile; ?>
-					<?php wp_reset_postdata(); endif; ?>
-			    </div>
+		<!-- <div id="latest-container" class="row">
+			<div id="latest">
+		    	<?php
+				$postslist = get_posts('numberposts=12&order=DESC&orderby=date&offset=0');
+				foreach ($postslist as $post) :
+				setup_postdata($post);
+				?>
+				<div class="latest-entry">
+				<?php the_post_thumbnail('thumbnail'); ?>
+				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+				</div>
+				<?php endforeach; ?>
 			</div>
 		</div> -->
+
+		<div class="row">
+			<p class="readmore text-center"><a href="<?php get_category_link(); ?>"><button>Read More</button></a></p>
+		</div>
 	</div>
 </div>
 
@@ -70,11 +69,15 @@
 						setup_postdata($post);
 						?>
 						<div class="entry home-chunk">
-						<?php the_post_thumbnail('large'); ?>
-						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						<p><?php the_time(get_option('date_format')) ?></p>
-						<p>By <?php the_author_posts_link(); ?></p>
-						<?php the_excerpt(); ?>
+							<?php the_post_thumbnail('large'); ?>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							<p><?php the_time(get_option('date_format')) ?></p>
+							<p>By <?php the_author_posts_link(); ?></p>
+							<?php the_excerpt(); ?>
+							<ul class="post-social">
+								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul>
 						</div>
 						<?php endforeach; ?>
 					</div>
@@ -85,11 +88,15 @@
 						setup_postdata($post);
 						?>
 						<div class="entry">
-						<?php the_post_thumbnail('thumbnail'); ?>
-						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-						<p><?php the_time(get_option('date_format')) ?></p>
-						<!-- <p><?php the_excerpt(10); ?></p> -->
-						<p>By <?php the_author_posts_link(); ?></p>
+							<?php the_post_thumbnail('thumbnail'); ?>
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<p><?php the_time(get_option('date_format')) ?></p>
+							<!-- <p><?php the_excerpt(10); ?></p> -->
+							<p>By <?php the_author_posts_link(); ?></p>
+							<ul class="post-social">
+								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul>
 						</div>
 						<?php endforeach; ?>
 					</div>
@@ -133,6 +140,10 @@
 			                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
 			                <p><?php the_time(get_option('date_format')) ?></p>
 			                <p>By <?php the_author_posts_link(); ?></p>
+			                <ul class="post-social">
+								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul>
 						</div>
 						<?php
 						$counter = 0;
@@ -199,6 +210,7 @@
 					<div>
 						<h2>Style</h2>
 						<?php echo do_shortcode( '[new_royalslider id="7"]' ); ?>
+						<div class="spacer20"></div>
 						<a class="pull-right" href="<?php get_category_link(); ?>"><button>Read More</button></a>
 						<div class="spacer40"></div>
 					</div>
@@ -291,6 +303,10 @@
 						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 						</div>
 						<?php endforeach; ?>
+						<div class="row">
+							<div class="spacer20"></div>
+							<p class="text-center"><a href="<?php get_category_link(); ?>"><button>Read More</button></a></p>
+						</div>
 					</div>
 				</div>
 			</div>

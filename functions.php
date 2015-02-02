@@ -175,3 +175,11 @@
 	    return $slides; 
 	}
 	add_filter('new_rs_slides_filter', 'add_additional_posts_to_slider', 10, 3);
+
+	/** Add Social Sharing Links on Single Posts **/
+	add_action('genesis_after_entry', 'include_social', 9);
+
+	function include_social() {
+		if ( is_single() )
+	require(CHILD_DIR.'/social.php');
+	}

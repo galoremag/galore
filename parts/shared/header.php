@@ -1,17 +1,4 @@
 <header>
-	<div class="container">
-		<div class="row">
-			<div class="top-social col-sm-2 col-sm-offset-10">
-				<ul class="tab">
-					<li><a href="/"><i class="fa fa-tumblr"></i></a></li>
-					<li><a href="/"><i class="fa fa-instagram"></i></a></li>
-					<li><a href="/"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="/"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="/"><i class="fa fa-youtube"></i></a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
 	
 	<div class="container-fluid">
 		<!-- Fixed navbar -->
@@ -28,6 +15,13 @@
 		    <div class="main-cats navbar-collapse collapse">
 				<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'navbar-collapse collapse', 'items_wrap' => ' <div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">%3$s  </ul>
+		    	<ul class="top-social navbar-right tab">
+		    		<li><a href="/"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="/"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="/"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="/"><i class="fa fa-tumblr"></i></a></li>
+					<li><a href="/"><i class="fa fa-youtube-play"></i></a></li>
+				</ul>
 		    </div><!--/.nav-collapse -->' ) ); ?>
 		</nav>
 	</div>
