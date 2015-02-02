@@ -425,27 +425,27 @@ ul.top-social li a:hover {color:@pink;}
 /*  This container element gives us the scrollbars we want.  */
 
 /*#latest-container {
-	width: inherit !important;
-	overflow-x: hidden !important;
 }
 
 #latest {
-	width: 6000px;
+	width: 1000px;
 	white-space: nowrap;
 	overflow-y: hidden;
 	overflow-x: scroll;
+	border: 1px solid white;
 	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: auto;
 	padding: 1rem;
-	height: 350px;
+	height: 300px;
+	position: relative;
 }
 
-#latest .latest-entry {
+#latest-container .latest-entry {
 	display: inline;
 	width: 280px;
 	height: auto;
 	float: left;
 	position: relative;
-	display: visible;
 }*/
 
 .readmore {}
@@ -468,6 +468,7 @@ ul.post-social {
 ul.post-social li {
 	float: left;
 	margin: 0px 20px 0px 0px;
+	height: 40px;
 }
 
 ul.post-social li a {
@@ -499,11 +500,15 @@ ul.post-social li a:hover {
 	height: 100%;
 }
 
-#gridcontainer {margin: 20px 0; width: 100%; }
-#gridcontainer h2 a {color: #77787a; font-size: 13px;}
-#gridcontainer .griditemleft {float: left; width: 278px; margin: 0 40px 40px 0;}
-#gridcontainer .griditemright {float: left; width: 278px;}
-#gridcontainer .postimage {margin: 0 0 10px 0;}
+#popgrid {margin: 20px 0; width: 100%; }
+#popgrid h2 a {color: #77787a; font-size: 13px;}
+#popgrid .griditemleft {float: left; width: 278px; margin: 0 40px 40px 0;}
+#popgrid .griditemright {float: left; width: 278px;}
+#popgrid .postimage {margin: 0 0 10px 0;}
+
+#popgrid .entry {
+	display: table-cell;
+}
 
 .pop {
 	background: url(images/kindajean.png) repeat;
@@ -530,6 +535,11 @@ ul.post-social li a:hover {
 .darlings {
 	padding: 10px;
 	.bluePinkGradient;
+}
+
+.darlings .brand {
+	transform: scale(0.6);
+	-webkit-transform: scale(0.6);
 }
 
 .cover-stories {

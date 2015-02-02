@@ -66,14 +66,22 @@
 	cursor: pointer;	
 	background: url('rs-galore.png');
 
-	background-color: #000;
-	background-color: rgba(0,0,0,0.75);
-	*background-color: #000;
+	background-color: rgba(255,255,255,0.75);
 	
 	border-radius: 50%;
+	box-shadow: 0px 0px 5px rgba(255,0,50, 0.3);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 .rsGalore .rsArrowIcn:hover {
-	background-color: rgba(0,0,0,0.9);
+	background-color: rgba(255,255,255,0.9);
+	box-shadow: 0px 0px 5px rgba(255,0,50, 7);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .rsGalore.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }

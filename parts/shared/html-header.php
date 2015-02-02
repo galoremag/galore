@@ -28,7 +28,7 @@
 		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
 
 		<script type="text/javascript">
-			document.getElementById("scrollbox").addEventListener('touchstart', function(event){});
+			$('#latest').on('touchstart', function(event){});
 		</script>
 		
 	</head>
