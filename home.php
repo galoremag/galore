@@ -19,7 +19,7 @@
 	<div class="container">
 		<div class="row-fluid">
 			<div class="col-sm-10 col-sm-offset-1">
-				<?php echo do_shortcode( '[new_royalslider id="6"]' ); ?>
+				<?php echo do_shortcode( '[new_royalslider id="1"]' ); ?>
 			</div>
 		</div>
 	</div>
@@ -222,7 +222,7 @@
 			<div class="row-fluid">
 				<div class="col-sm-5 col-sm-offset-2">
 					<div>
-						<?php echo do_shortcode( '[new_royalslider id="7"]' ); ?>
+						<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
 						<div class="spacer20"></div>
 						<a class="pull-right" href="<?php get_category_link(); ?>"><button>Read More</button></a>
 						<div class="spacer40"></div>
@@ -336,7 +336,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="nopad col-sm-12">
-				<?php echo do_shortcode( '[new_royalslider id="8"]' ); ?>
+				<?php echo do_shortcode( '[new_royalslider id="3"]' ); ?>
 			</div>
 		</div>
 	</div>
