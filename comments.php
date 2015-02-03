@@ -43,7 +43,7 @@
 		elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
 	
-	<p>Comments are closed</p>
+	<p style="display:none;">Comments are closed</p>
 	
 	<?php endif; ?>
 

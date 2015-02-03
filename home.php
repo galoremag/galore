@@ -17,7 +17,7 @@
 <div class="jumbotron">
 <div class="jumbotron-in">
 	<div class="container">
-		<div class="row">
+		<div class="row-fluid">
 			<div class="col-sm-10 col-sm-offset-1">
 				<?php echo do_shortcode( '[new_royalslider id="6"]' ); ?>
 			</div>
@@ -28,12 +28,12 @@
 <div class="latest">
 	<div class="container-fluid">
 		<h2 class="text-center"><span>The</span> Latest</h2>
-		<div class="row">
+		<div class="row-fluid">
 			<div class="col-sm-12">
 				<?php echo do_shortcode('[carousel-horizontal-posts-content-slider]'); ?>
 			</div>
 		</div>
-		<!-- <div id="latest-container" class="row">
+		<!-- <div id="latest-container" class="row-fluid">
 			<table>
 				<tbody>
 				    <tr>
@@ -53,22 +53,22 @@
 		</div> -->
 	</div>
 
-	<div class="row">
+	<div class="row-fluid">
 		<p class="readmore text-center"><a href="<?php get_category_link(); ?>"><button>Read More</button></a></p>
 	</div>
 </div>
 
-<!-- SEX + ADVICE SECTION -->
+<!-- SEX + DATING SECTION -->
 
-<div class="sex-advice">
-	<div class="sex-advice-in">
+<div class="sex-dating">
+	<div class="sex-dating-in">
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row-fluid">
 				<div class="col-sm-8 col-sm-offset-2">
-					<h2><span>Sex</span> + <span>Advice</span> <i class="fa fa-heart"></i></h2>
+					<h2>Sex <span>+</span> Advice <span><i class="fa fa-heart"></i></span></h2>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row-fluid">
 				<div class="col-sm-6 col-sm-offset-2">
 					<?php
 					$postslist = get_posts('numberposts=1&order=DESC&orderby=date');
@@ -117,14 +117,14 @@
 <div class="pop">
 	<div class="pop-in">
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row-fluid">
 				<div class="col-sm-8 col-sm-offset-2">
-					<h2>Pop <span><i class="fa fa-flash"></i></span></h2>
-					<div class="row" id="popgrid">
+					<h2><span>Pop</span> <i class="fa fa-flash"></i></h2>
+					<div class="row-fluid post-grid">
 						<?php
 						$counter = 1; //start counter
 
-						$grids = 3; //Grids per row
+						$grids = 3; //Grids per row-fluid
 
 						global $query_string; //Need this to make pagination work
 
@@ -199,9 +199,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="spacer20"></div>
-				<p class="text-center"><a href="<?php get_category_link(); ?>"><button>Read More</button></a></p>
+			<div class="row-fluid">
+				<div class="col-sm-12">
+					<div class="spacer20"></div>
+					<p class="text-center"><a href="<?php get_category_link(); ?>"><button>Read More</button></a></p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -212,23 +214,26 @@
 <div class="style">
 	<div class="style-in">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="spacer40"></div>
-				<div class="col-sm-6 col-sm-offset-2">
+			<div class="row-fluid">
+				<div class="col-sm-8 col-sm-offset-2">
+					<h2>Style <span><i class="fa fa-scissors"></i></span></h2>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="col-sm-5 col-sm-offset-2">
 					<div>
-						<h2>Style <span><i class="fa fa-scissors"></i></span></h2>
-						<?php echo do_shortcode( '[new_royalslider id="8"]' ); ?>
+						<?php echo do_shortcode( '[new_royalslider id="7"]' ); ?>
 						<div class="spacer20"></div>
 						<a class="pull-right" href="<?php get_category_link(); ?>"><button>Read More</button></a>
 						<div class="spacer40"></div>
 					</div>
 					<hr>
-					<div class="beauty">
-					<h2>Beauty <span><i class="fa fa-diamond"></i></span></h2>
+					<h2>Beauty <span><i class="fa fa-bomb"></i></span></h2>
+					<div class="post-grid">
 						<?php
 						$counter = 1; //start counter
 
-						$grids = 3; //Grids per row
+						$grids = 3; //Grids per row-fluid
 
 						global $query_string; //Need this to make pagination work
 
@@ -243,7 +248,7 @@
 						//Show the left hand side column
 						if($counter == 1) :
 						?>
-						<div class="col-sm-4">
+						<div class="entry col-sm-4">
 							<div class="postimage">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 							</div>
@@ -259,7 +264,7 @@
 						//Show the left hand side column
 						if($counter == 1) :
 						?>
-						<div class="col-sm-4">
+						<div class="entry col-sm-4">
 							<div class="postimage">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 							</div>
@@ -275,7 +280,7 @@
 						//Show the left hand side column
 						if($counter == 1) :
 						?>
-						<div class="col-sm-4">
+						<div class="entry col-sm-4">
 							<div class="postimage">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 							</div>
@@ -294,24 +299,23 @@
 						//Pagination can go here if you want it.
 						endif;
 						?>
-						</div>
+					</div>
 				</div>
-				<div class="col-sm-2">
-					<div class="spacer20"></div>
-					<div class="darlings text-center">
+				<div class="col-sm-3">
+					<div class="darlings">
 						<div class="brand"></div>
-						<h2 class="justify">Darlings</h2>
+						<h2 class="text-center"><span>Darlings</span></h2>
 						<?php
 						$postslist = get_posts('numberposts=4&order=DESC&orderby=date&offset=0');
 						foreach ($postslist as $post) :
 						setup_postdata($post);
 						?>
-						<div class="entry">
+						<div class="entry text-left">
 						<?php the_post_thumbnail('thumbnail'); ?>
 						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 						</div>
 						<?php endforeach; ?>
-						<div class="row">
+						<div class="row-fluid">
 							<div class="spacer20"></div>
 							<p class="text-center"><a href="<?php get_category_link(); ?>"><button>Read More</button></a></p>
 						</div>
@@ -324,19 +328,22 @@
 
 <!-- COVER STORIES -->
 
+<div id="cover-title">
+	<img src="<?php bloginfo('template_url'); ?>/images/cover-stories.png">
+</div>
+
 <div class="cover-stories">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="nopad col-sm-12">
-				<div class="cover-title"></div>
 				<?php echo do_shortcode( '[new_royalslider id="8"]' ); ?>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="kittens container-fluid">
-	<div class="row">
+<!-- <div class="kittens container-fluid">
+	<div class="row-fluid">
 		<div class="col-sm-6 col-sm-offset-3">
 			<div class="kitten-logo" style="-webkit-transform: scale(0.4);">
 				<img src="<?php bloginfo('template_url'); ?>/images/kitten-logo.png">
@@ -348,6 +355,6 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>

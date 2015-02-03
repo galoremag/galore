@@ -64,9 +64,10 @@ Version: 1.0.1
 @fa-font-path: "fonts"; // Font Awesome font directory override
 
 // Google fonts
-//@import url(https://fonts.googleapis.com/css?family=Roboto:300,500|Open+Sans:700);
+@import url(http://fonts.googleapis.com/css?family=Cabin:700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
 
 // Your theme files 
 //@import "_global.less";
@@ -78,6 +79,18 @@ Version: 1.0.1
 /*  VARIABLES & MIXINS  */
 
 @pink : #E81B8E;
+
+.font1 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.font2 {
+	font-family: 'Cabin', sans-serif;
+}
+
+.font3 {
+	font-family: 'Karla', sans-serif;
+}
 
 .transition {
 	-webkit-transition: all 0.3s ease-in-out;
@@ -102,6 +115,33 @@ Version: 1.0.1
 
 .nomarg {
 	margin: 0;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
 }
 
 .heroGradient {
@@ -168,13 +208,34 @@ Version: 1.0.1
 }
 
 .yellowGlowGradient {
-	background: -moz-linear-gradient(-45deg,  rgba(255,187,50,0.33) 0%, rgba(255,187,50,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,187,50,0.33)), color-stop(100%,rgba(255,187,50,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(-45deg,  rgba(255,187,50,0.33) 0%,rgba(255,187,50,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(-45deg,  rgba(255,187,50,0.33) 0%,rgba(255,187,50,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(-45deg,  rgba(255,187,50,0.33) 0%,rgba(255,187,50,0) 100%); /* IE10+ */
-	background: linear-gradient(135deg,  rgba(255,187,50,0.33) 0%,rgba(255,187,50,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54ffbb32', endColorstr='#00ffbb32',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background: -moz-linear-gradient(-45deg,  rgba(254,252,234,0.5) 0%, rgba(241,218,54,0.8) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(254,252,234,0.5)), color-stop(100%,rgba(241,218,54,0.8))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  rgba(254,252,234,0.5) 0%,rgba(241,218,54,0.8) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  rgba(254,252,234,0.5) 0%,rgba(241,218,54,0.8) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  rgba(254,252,234,0.5) 0%,rgba(241,218,54,0.8) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(254,252,234,0.5) 0%,rgba(241,218,54,0.8) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80fefcea', endColorstr='#ccf1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.greyGradientFade {
+	background: -moz-linear-gradient(-45deg,  rgba(255,255,255,0.75) 0%, rgba(229,229,229,0.45) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0.75)), color-stop(100%,rgba(229,229,229,0.45))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  rgba(255,255,255,0.75) 0%,rgba(229,229,229,0.45) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  rgba(255,255,255,0.75) 0%,rgba(229,229,229,0.45) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  rgba(255,255,255,0.75) 0%,rgba(229,229,229,0.45) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(255,255,255,0.75) 0%,rgba(229,229,229,0.45) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfffffff', endColorstr='#73e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.greyLineGradient {
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(243,243,243,1)), color-stop(51%,rgba(237,237,237,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .footerGradient {
@@ -186,6 +247,16 @@ Version: 1.0.1
 	background: -ms-linear-gradient(left,  #8e5465 0%,#638493 100%); /* IE10+ */
 	background: linear-gradient(to right,  #8e5465 0%,#638493 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e5465', endColorstr='#638493',GradientType=1 ); /* IE6-9 */
+}
+
+.purpleGradientFade {
+	background: -moz-linear-gradient(-45deg,  rgba(229,4,177,0.5) 0%, rgba(109,0,25,0.75) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(229,4,177,0.5)), color-stop(100%,rgba(109,0,25,0.75))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  rgba(229,4,177,0.5) 0%,rgba(109,0,25,0.75) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  rgba(229,4,177,0.5) 0%,rgba(109,0,25,0.75) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  rgba(229,4,177,0.5) 0%,rgba(109,0,25,0.75) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(229,4,177,0.5) 0%,rgba(109,0,25,0.75) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80e504b1', endColorstr='#bf6d0019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 /*== Compatibility ==*/
@@ -223,8 +294,13 @@ img {
 	height: auto;
 }
 
+ul, ol {
+	list-style-type: none;
+	padding: 0px;
+}
+
 a {opacity: 0.7;.transition; color: @pink;}
-a:hover {opacity: 1;.transition; color: @pink;}
+a:hover {text-decoration: none; opacity: 1;.transition; color: @pink;}
 a:focus {color: @pink; outline: 0px; text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);}
 
 a button {
@@ -244,15 +320,27 @@ a:hover button {
 
 hr {
 	border-top: 1px dotted fade(@pink, 30%);
+	width: 100%;
+}
+
+p {
+	font-weight: normal;
+	.font3;
 }
 
 h1 {font-size: 50px !important;letter-spacing: -3px;}
 
-h1, h2, h3 {
-	font-family: 'Ubuntu', sans-serif;
+h1, h2 {
+	.font1;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: @pink;
+	margin: 10px 0px !important;
+}
+
+h3, h4 {
+	.font2;
+	font-weight: bold;
+	margin: 10px 0px !important;
 }
 
 h1 span, h2 span, h3 span {
@@ -262,8 +350,7 @@ h1 span, h2 span, h3 span {
 }
 
 h1 a, h2 a, h3 a, h4 a {
-	color: @pink;
-	opacity: 0.66;
+	color: black;
 	.transition;
 }
 
@@ -286,6 +373,51 @@ figure.hammy-responsive {
 
 body {
 	overflow-x: hidden;
+	.font3;
+	padding: 0px 0 0 0;
+}
+
+#global-container {
+}
+
+#global-inner.style {
+	.bluePinkGradientFade;
+	padding: 100px 0px 0px 0px;
+}
+
+#global-inner.beauty {
+	.greyGradientFade;
+	padding: 100px 0px 0px 0px;
+}
+
+#global-inner.author {
+	.greyLineGradient;
+	padding: 100px 0px 0px 0px;
+}
+
+#global-inner.sex-dating {
+	.bluePinkGradientFade;
+	padding: 100px 0px 0px 0px;
+}
+
+#global-inner.pop {
+	.purpleGradientFade;
+	padding: 100px 0px 0px 0px;
+}
+
+#global-inner.error404 {
+	background: url(images/giftly.png) repeat;
+	padding: 100px 0px 0px 0px;
+}
+
+#global-inner.fitness {
+	.yellowGlowGradient;
+	padding: 100px 0px 0px 0px;
+}
+
+#global-inner.home {
+	padding: 0px 0px 0px 0px;
+	background: white;
 }
 
 .brand {
@@ -304,6 +436,15 @@ body {
 	background: url(images/galore-logo-white.png) no-repeat;
 	background-size: 180px auto;
 	margin-bottom: -100px;
+}
+
+.brand-g-white {
+	width: 60px;
+	height: 145px;
+	overflow: visible;
+	background: url(images/icon-white.png) no-repeat;
+	background-size: 60px auto;
+	margin-bottom: -40px;
 }
 
 .top-social {
@@ -359,7 +500,7 @@ ul.top-social li a:hover {color:@pink;}
 .navbar-default .navbar-nav > li > a {
 	color: white;
 	text-transform: uppercase;
-	font-family: 'Ubuntu', sans-serif;
+	.font1;
 	font-weight: bold;
 	-webkit-transition: 1s all easeinout;
 }
@@ -369,14 +510,30 @@ ul.top-social li a:hover {color:@pink;}
 	-webkit-transition: 1s all easeinout;
 }
 
+.navbar-default .navbar-right > li > a {
+	color: white;
+	text-transform: uppercase;
+	.font1;
+	font-weight: bold;
+	-webkit-transition: 1s all easeinout;
+}
+
+.navbar-default .navbar-right > li > a:hover {
+	color: @pink;
+	-webkit-transition: 1s all easeinout;
+	text-decoration: none;
+}
+
 .jumbotron {
+	position: relative;
+	top: 0px;
 	padding: 0px;
 	margin: 0px;
-	background: url(images/greyfloral.png) repeat;
+	background: url(images/greyfloral.png) fixed repeat;
 }
 
 .jumbotron-in {
-	padding: 140px 0px 80px 0px;
+	padding: 160px 0px 80px 0px;
 	.heroGradientFade;
 	width: 100%;
 	height: 100%;
@@ -439,16 +596,24 @@ ul.top-social li a:hover {color:@pink;}
 	height: 300px;
 	position: relative;
 }
+*/
 
-#latest-container .latest-entry {
+.latest-entry {
 	display: inline;
-	width: 280px;
-	height: auto;
 	float: left;
 	position: relative;
-}*/
+}
 
 .readmore {}
+
+#content {
+	padding: 10px 20px;
+	background: ghostwhite;
+}
+
+.pop #content {
+	background: black;
+}
 
 .entry {
 	padding-bottom: 20px;
@@ -489,51 +654,98 @@ ul.post-social li a:hover {
 	padding: 20px 0px 20px 0px;
 }
 
-.sex-advice {
-	background: url(images/symphony.png) repeat;
+.latest h1, .latest h2 {
+	color: @pink;
 }
 
-.sex-advice-in {
+.sex-dating {
+	background: url(images/symphony.png) fixed repeat;
+}
+
+.sex-dating-in {
 	padding: 40px 0px 80px 0px;
 	.bluePinkGradientFade;
 	width: 100%;
 	height: 100%;
 }
 
-#popgrid {margin: 20px 0; width: 100%; }
-#popgrid h2 a {color: #77787a; font-size: 13px;}
-#popgrid .griditemleft {float: left; width: 278px; margin: 0 40px 40px 0;}
-#popgrid .griditemright {float: left; width: 278px;}
-#popgrid .postimage {margin: 0 0 10px 0;}
+.sex-dating h1, .sex-dating h2 {
+	color: @pink;
+}
 
-#popgrid .entry {
+.post-grid {
+	margin-left: -15px;
+	margin-right: -15px;
+	display: table;
+}
+
+.post-grid h2 a {color: #77787a; font-size: 13px;}
+.post-grid .griditemleft {float: left; width: 278px; margin: 0 40px 40px 0;}
+.post-grid .griditemright {float: left; width: 278px;}
+.post-grid .postimage {margin: 0 0 10px 0;}
+
+.post-grid .entry {
 	display: table-cell;
+	height: 310px;
+}
+
+.style .post-grid .entry {
+	display: table-cell;
+	height: 240px;
 }
 
 .pop {
-	background: url(images/kindajean.png) repeat;
+	background: url(images/kindajean.png) fixed repeat;
 	color: white;
 }
-
-.pop a {color:white;}
-.pop a:hover {color:@pink;}
 
 .pop-in {
 	padding: 20px 0px 40px 0px;
 	background: rgba(0,0,0,0.8);
 }
 
+.pop a {color:white;}
+.pop a:hover {color:@pink;}
+
+.category-pop a {color: @pink;}
+.category-pop a:hover {color: lighten(@pink, 10%);}
+
+.pop h1, .pop h2 {
+	color: @pink;
+}
+
 .style {
-	background: url(images/greyfloral.png) repeat;
+	background: url(images/greyfloral.png) fixed repeat;
 }
 
 .style-in {
 	padding: 20px 0px 40px 0px;
-	.yellowGlowGradient;
+	.greyGradientFade;
+}
+
+.style h1, .style h2 {
+	color: @pink;
+}
+
+.beauty {
+	background: url(images/pic-wall.jpg) fixed repeat;
+}
+
+.beauty-in {
+	padding: 20px 0px 40px 0px;
+	.bluePinkGradientFade;
+}
+
+.beauty h1, .beauty h2 {
+	color: @pink;
+}
+
+.fitness {
+	background: url(images/food.png) repeat;
 }
 
 .darlings {
-	padding: 10px;
+	padding: 20px;
 	.bluePinkGradient;
 }
 
@@ -543,23 +755,73 @@ ul.post-social li a:hover {
 }
 
 .cover-stories {
-	padding: 0px 0px 40px 0px;
+	padding: 0px;
 }
 
-.cover-title {
-	background: url(images/cover-stories.png) repeat;
+#cover-title {
+	display: block;
+	position: relative;
+	top: -20px;
+	transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	width: 200px;
+	height: auto;
+	background: url(images/cover-stories.png) no-repeat;
+	background-size: 200px auto;
+	margin: -20px 0px -100px 0px;
+	left: 80px;
+	z-index: 9;
 }
 
-.kitten-logo {
+.archive .archive-thumb {
+	height: 150px;
+	overflow: hidden;
 }
 
-.kitten-girls {
+li.related-post {
+	width: 200px;
+	float: left;
+	display: table-cell;
 }
 
 footer {
 	padding-top: 40px;
 	.footerGradient;
 	color: white;
+	.font2;
+}
+
+.menu-footer-container {
+	text-align: center;
+}
+
+ul#menu-footer {
+	list-style-type: none;
+	margin: 0 auto;
+	display: table;
+}
+
+ul#menu-footer li {
+	float: left;
+	margin: 0px 10px;
+}
+
+ul#menu-footer li:first-child {
+	margin-left: 0px;
+}
+
+ul#menu-footer li:last-child {
+	margin-right: 0px;
+}
+
+ul#menu-footer li a {
+	color: white;
+	opacity: 0.7;
+}
+
+ul#menu-footer li a:hover {
+	color: white;
+	opacity: 1;
 }
 
 .legal {

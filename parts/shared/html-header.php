@@ -32,7 +32,7 @@
 		</script>
 		
 	</head>
-	<body <?php body_class(); ?>>
+	<body>
 
 		<div id="fb-root"></div>
 		<script>

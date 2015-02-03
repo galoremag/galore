@@ -21,9 +21,13 @@
 					<li><a href="/"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="/"><i class="fa fa-tumblr"></i></a></li>
 					<li><a href="/"><i class="fa fa-youtube-play"></i></a></li>
+					<li class=""><a href="">SHOP</a></li>
 				</ul>
 		    </div><!--/.nav-collapse -->' ) ); ?>
 		</nav>
 	</div>
 
 </header>
+
+<div id="global-container" <?php body_class(); ?>>
+	<div id="global-inner" <?php body_class(); ?>>

@@ -118,6 +118,8 @@
 	    }
 	}
 
+	// ADD MENU SUPPORT
+
 	function register_my_menus() {
 	  register_nav_menus(
 	    array(
@@ -128,7 +130,11 @@
 	}
 	add_action( 'init', 'register_my_menus' );
 
+	// HIDE ADMIN BAR on FRONTEND
+
 	add_filter('show_admin_bar', '__return_false');
+
+	// ADD ROYAL SLIDER THEME
 
 	add_filter('new_royalslider_skins', 'new_royalslider_add_custom_skin', 10, 2);
 	function new_royalslider_add_custom_skin($skins) {
@@ -183,3 +189,14 @@
 		if ( is_single() )
 	require(CHILD_DIR.'/social.php');
 	}
+
+	// add category nicenames in body and post class
+	function category_id_class( $classes ) {
+		global $post;
+		foreach ( ( get_the_category( $post->ID ) ) as $category ) {
+			$classes[] = $category->category_nicename;
+		}
+		return $classes;
+	}
+	add_filter( 'post_class', 'category_id_class' );
+	add_filter( 'body_class', 'category_id_class' );
