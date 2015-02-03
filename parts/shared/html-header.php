@@ -27,9 +27,6 @@
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
 
-		<script type="text/javascript">
-			$('#latest').on('touchstart', function(event){});
-		</script>
 		
 	</head>
 	<body>
