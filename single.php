@@ -81,7 +81,7 @@
 			</ul> -->
 
 			<div id="related-posts" class="row-fluid">
-				<table>
+				<!-- <table>
 					<tbody>
 					    <tr>
 					    	<?php
@@ -98,7 +98,13 @@
 					    	<?php endforeach; ?>
 					    </tr>
 					</tbody>
-				</table>
+				</table> -->
+
+				<?php 
+				$cat = get_category( get_query_var( 'cat' ) );
+				$category = $cat->slug;
+				echo do_shortcode('[ajax_load_more category="'.$category.'"]');
+				?>
 			</div>
 		</div>
 	</div>

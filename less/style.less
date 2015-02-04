@@ -109,12 +109,36 @@ Version: 1.0.1
 	height: 40px;
 }
 
+.padtop10 {
+	padding-top: 10px;
+}
+
 .nopad {
 	padding: 0;
 }
 
 .nomarg {
 	margin: 0;
+}
+
+.nopadtop {
+	padding-top: 0px;
+}
+
+.nopadbot {
+	padding-bottom: 0px;
+}
+
+.nopadleft {
+	padding-left: 0px;
+}
+
+.nopadright {
+	padding-right: 0px
+}
+
+.nomartop {
+	margin-top: 0px !important;
 }
 
 /**
@@ -598,6 +622,10 @@ ul.top-social li a:hover {color:@pink;}
 }
 */
 
+.latest {
+	background: white;
+}
+
 .latest-entry {
 	display: inline;
 	float: left;
@@ -825,14 +853,15 @@ ul#menu-footer li a:hover {
 }
 
 .alm-listing li {
-	padding: 0px 30px;
+	padding: 0px;
 }
 
 .alm-listing li img {
-	float: left;
-	width: 200px;
-	position: inherit;
-	margin: 10px 20px 60px 0px;
+	position: relative;
+}
+
+.alm-listing li a {
+	color: @pink;
 }
 
 button.alm-load-more-btn {
@@ -841,7 +870,7 @@ button.alm-load-more-btn {
 
 button.alm-load-more-btn:before, 
 button.alm-load-more-btn.done:before {
-	background: url(preloaders/preloader-white.gif) no-repeat center center !important;
+	background: url(preloaders/preloader-pink.gif) no-repeat center center !important;
 }
 
 .legal {

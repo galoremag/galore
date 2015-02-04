@@ -54,7 +54,7 @@
 	</div>
 
 	<div class="row-fluid">
-		<p class="readmore text-center"><a href="<?php get_category_link(); ?>"><button>Read More</button></a></p>
+		<p class="readmore text-center"><a href="<?php get_category_link(); ?>">Read More</a></p>
 	</div>
 </div>
 
@@ -202,7 +202,7 @@
 			<div class="row-fluid">
 				<div class="col-sm-12">
 					<div class="spacer20"></div>
-					<p class="text-center"><a href="<?php get_category_link(); ?>"><button>Read More</button></a></p>
+					<p class="text-center"><a href="<?php get_category_link(); ?>">Read More</a></p>
 				</div>
 			</div>
 		</div>
@@ -224,7 +224,7 @@
 					<div>
 						<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
 						<div class="spacer20"></div>
-						<a class="pull-right" href="<?php get_category_link(); ?>"><button>Read More</button></a>
+						<a class="pull-right" href="<?php get_category_link(); ?>">Read More</a>
 						<div class="spacer40"></div>
 					</div>
 					<hr>
@@ -299,6 +299,7 @@
 						//Pagination can go here if you want it.
 						endif;
 						?>
+						<p class="text-center"><a href="<?php get_category_link(); ?>">Read More</a></p>
 					</div>
 				</div>
 				<div class="col-sm-3">
