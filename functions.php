@@ -114,7 +114,7 @@
 
 	function posts_custom_columns($column_name, $id){
 	        if($column_name === 'riv_post_thumbs'){
-	        echo the_post_thumbnail( 'featured-thumbnail' );
+	        echo the_post_thumbnail( 'thumbnail' );
 	    }
 	}
 
@@ -191,12 +191,11 @@
 	}
 
 	// add category nicenames in body and post class
-	function category_id_class( $classes ) {
-		global $post;
-		foreach ( ( get_the_category( $post->ID ) ) as $category ) {
-			$classes[] = $category->category_nicename;
-		}
-		return $classes;
+	function add_category_name($classes = '') {
+	   if(is_single()) {
+	      $category = get_the_category();
+	      $classes[] = 'category-'.$category[0]->slug; 
+	   }
+	   return $classes;
 	}
-	add_filter( 'post_class', 'category_id_class' );
-	add_filter( 'body_class', 'category_id_class' );
+	add_filter('body_class','add_category_name');

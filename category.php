@@ -33,7 +33,7 @@
 					</div>
 					<div class="nopad col-sm-4">
 						<div class="thumbnail">
-							<?php the_post_thumbnail('large', 300, 150); ?>
+							<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large', 300, 150); ?></a>
 						</div>
 					</div>
 					</article>

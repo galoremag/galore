@@ -311,8 +311,10 @@
 						setup_postdata($post);
 						?>
 						<div class="entry text-left">
-						<?php the_post_thumbnail('thumbnail'); ?>
-						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+							<a href="<?php the_permalink(); ?>">
+								<?php the_post_thumbnail('thumbnail'); ?>
+								<h4><?php the_title(); ?></h4>
+							</a>
 						</div>
 						<?php endforeach; ?>
 						<div class="row-fluid">
