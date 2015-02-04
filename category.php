@@ -44,10 +44,10 @@
 			<?php else: ?>
 			<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
 			<?php endif; ?>
-			<div class="post-nav">
+			<div id="post-nav">
 				<ul>
-					<li class="page-left alignleft pull-left"><?php previous_posts_link( '<h4><i class="fa fa-chevron-left"></i> &nbsp; PREV</h4>' ); ?></li>
-					<li class="page-right alignright pull-right"><?php next_posts_link( '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>', '' ); ?></li>
+					<li id="page-left" class="alignleft pull-left"><?php previous_posts_link( '<h4><i class="fa fa-chevron-left"></i> &nbsp; PREV</h4>' ); ?></li>
+					<li id="page-right" class="alignright pull-right"><?php next_posts_link( '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>', '' ); ?></li>
 				</ul>
 			</div>
 			<div class="spacer40"></div>
