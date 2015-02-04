@@ -27,9 +27,18 @@
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
 
+		<script type="text/javascript">
+
+		( function( $ ) {
+		    $( document.body ).on( 'post-load', function () {
+		        // New posts have been added to the page.
+		    } );
+		} )( jQuery );
+
+		</script>
 		
 	</head>
-	<body>
+	<body <?php body_class(); ?>>
 
 		<div id="fb-root"></div>
 		<script>
