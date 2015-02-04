@@ -45,6 +45,7 @@
 			<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
 			<?php endif; ?>
 
+			<h2>Related Articles</h2>
 			<?php 
 			$cat = get_category( get_query_var( 'cat' ) );
 			$category = $cat->slug;
