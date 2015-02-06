@@ -36,6 +36,16 @@
 		} )( jQuery );
 
 		</script>
+
+		<script type="text/javascript">
+			$(window).scroll(function() {
+			  if ($(document).scrollTop() > 50) {
+			    $('nav').addClass('shrink');
+			  } else {
+			    $('nav').removeClass('shrink');
+			  }
+			});
+		</script>
 		
 	</head>
 	<body>
