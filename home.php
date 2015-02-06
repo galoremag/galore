@@ -71,7 +71,7 @@
 			<div class="row-fluid">
 				<div class="col-sm-6 col-sm-offset-2">
 					<?php
-					$postslist = get_posts('numberposts=1&order=DESC&orderby=date');
+					$postslist = get_posts('category_name=sex-dating&numberposts=1&order=DESC&orderby=date');
 					foreach ($postslist as $post) :
 					setup_postdata($post);
 					?>
@@ -90,7 +90,7 @@
 				</div>
 				<div class="col-sm-2">
 					<?php
-					$postslist = get_posts('numberposts=2&order=DESC&orderby=date&offset=1');
+					$postslist = get_posts('category_name=sex-dating&numberposts=2&order=DESC&orderby=date&offset=1');
 					foreach ($postslist as $post) :
 					setup_postdata($post);
 					?>
@@ -239,7 +239,7 @@
 
 
 						/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
-						query_posts($query_string . '&ignore_sticky_posts=0&posts_per_page=6');
+						query_posts($query_string . 'category_name=style&ignore_sticky_posts=0&posts_per_page=6');
 
 
 						if(have_posts()) :	while(have_posts()) :  the_post(); 
@@ -307,7 +307,7 @@
 						<div class="brand"></div>
 						<h2 class="text-center"><span>Darlings</span></h2>
 						<?php
-						$postslist = get_posts('numberposts=4&order=DESC&orderby=date&offset=0');
+						$postslist = get_posts('category_name=darlings&numberposts=4&order=DESC&orderby=date&offset=0');
 						foreach ($postslist as $post) :
 						setup_postdata($post);
 						?>
