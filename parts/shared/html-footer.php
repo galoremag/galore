@@ -11,6 +11,18 @@
 		}
 	</script>
 
+	<!-- NAVBAR SHRINKING -->
+
+	<script type="text/javascript">
+		$(window).scroll(function() {
+		  if ($(document).scrollTop() > 50) {
+		    $('nav').addClass('shrink');
+		  } else {
+		    $('nav').removeClass('shrink');
+		  }
+		});
+	</script>
+
 	<?php wp_footer(); ?>
 	</body>
 </html>
