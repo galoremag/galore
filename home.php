@@ -307,7 +307,7 @@
 						<div class="brand"></div>
 						<h2 class="text-center"><span>Darlings</span></h2>
 						<?php
-						$postslist = get_posts('category_name=darlings&numberposts=4&order=DESC&orderby=date&offset=0');
+						$postslist = get_posts('tag_name=darlings&numberposts=4&order=DESC&orderby=date&offset=0');
 						foreach ($postslist as $post) :
 						setup_postdata($post);
 						?>
