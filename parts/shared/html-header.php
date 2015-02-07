@@ -40,7 +40,7 @@
 		<!-- NAVBAR SHRINKING -->
 
 		<script type="text/javascript">
-			$(window).scroll(function() {
+			jQuery(window).scroll(function() {
 			  if ($(document).scrollTop() > 50) {
 			    $('nav').addClass('shrink');
 			  } else {
