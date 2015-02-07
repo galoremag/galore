@@ -37,6 +37,8 @@
 
 		</script>
 
+		<!-- NAVBAR SHRINKING -->
+
 		<script type="text/javascript">
 			$(window).scroll(function() {
 			  if ($(document).scrollTop() > 50) {
