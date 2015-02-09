@@ -54,7 +54,7 @@
 	</div>
 
 	<div class="row-fluid">
-		<p class="readmore text-center"><a href="<?php get_category_link(); ?>">Read More</a></p>
+		<p class="readmore text-center"><a href="<?php bloginfo('url'); ?>/the-latest"><button>All Recent Stories</button></a></p>
 	</div>
 </div>
 
