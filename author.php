@@ -50,10 +50,9 @@
 				<hr>
 			<?php endwhile; ?>
 
-			<?php 
-			$auth = get_the_author_meta( get_query_var( 'cat' ) );
-			$author = $auth->slug;
-			echo do_shortcode('[ajax_load_more category="'.$author.'"]');
+			<?php
+			$author = get_the_author_meta('ID', get_query_var('author'));
+			echo do_shortcode('[ajax_load_more author="'.$author.'"]');
 			?>
 			</ol>
 
