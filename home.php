@@ -329,9 +329,9 @@
 	</div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid nopad">
 	<div class="row-fluid">
-		<div id="content" class="col-sm-8 col-sm-offset-2">
+		<div id="content" class="col-sm-8">
 			<?php if ( have_posts() ): ?>
 			<h2>Hot <span>Stories</span> <i class="fa fa-diamond"></i></h2>
 			<hr>
@@ -349,7 +349,7 @@
 							<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> • By <?php the_author_posts_link(); ?>
 							<div class="padtop10"></div>
 							<?php the_excerpt(); ?>
-							<a href="<?php esc_url( the_permalink() ); ?>">Read Story</a>
+							<a href="<?php esc_url( the_permalink() ); ?>"><button>Read Story</button></a>
 							<ul class="post-social pull-right">
 								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
@@ -377,6 +377,29 @@
 				</ul>
 			</div> -->
 			<div class="spacer40"></div>
+		</div>
+		<div id="kitten-anchor"></div>
+		<div class="col-sm-4 nopad">
+			<div id="kitten-posts">
+				<div class="brand"></div>
+				<h2 class="text-center">Models</h2>
+				<?php
+				$postslist = get_posts('tag_name=kitten&numberposts=3&order=DESC&orderby=rand&offset=0');
+				foreach ($postslist as $post) :
+				setup_postdata($post);
+				?>
+				<div class="entry text-left">
+					<a href="<?php the_permalink(); ?>">
+						<?php the_post_thumbnail('thumbnail'); ?>
+						<h4><?php the_title(); ?></h4>
+					</a>
+				</div>
+				<?php endforeach; ?>
+				<div class="row-fluid">
+					<div class="spacer20"></div>
+					<p class="text-center"><a href="<?php get_category_link(); ?>"><button>Read More</button></a></p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

@@ -29,20 +29,21 @@
 			<?php rewind_posts(); while ( have_posts() ) : the_post(); ?>
 				<li>
 					<article class="row-fluid">
-						<div class="nopad col-sm-8">
+						<div class="nopad col-sm-4">
+							<div class="catlinks"><?php the_category(); ?></div>
+							<div class="thumbnail">
+								<?php the_post_thumbnail('large', 300, 150); ?>
+							</div>
+						</div>
+						<div class="col-sm-8">
 							<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-							<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
+							<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time>
 							<?php the_excerpt(); ?>
 							<a href="<?php esc_url( the_permalink() ); ?>"><button>Read Story</button></a>
 							<ul class="post-social pull-right">
 								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
 							</ul>
-						</div>
-						<div class="nopad col-sm-4">
-							<div class="thumbnail">
-								<?php the_post_thumbnail('large', 300, 150); ?>
-							</div>
 						</div>
 					</article>
 				</li>

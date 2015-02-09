@@ -295,6 +295,16 @@ Version: 1.0.1
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e5465', endColorstr='#638493',GradientType=1 ); /* IE6-9 */
 }
 
+.purpleGradient {
+	background: -moz-linear-gradient(-45deg,  rgba(229,4,177,1) 0%, rgba(109,0,25,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(229,4,177,1)), color-stop(100%,rgba(109,0,25,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  rgba(229,4,177,1) 0%,rgba(109,0,25,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  rgba(229,4,177,1) 0%,rgba(109,0,25,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  rgba(229,4,177,1) 0%,rgba(109,0,25,1) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(229,4,177,1) 0%,rgba(109,0,25,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80e504b1', endColorstr='#bf6d0019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
 .purpleGradientFade {
 	background: -moz-linear-gradient(-45deg,  rgba(229,4,177,0.5) 0%, rgba(109,0,25,0.75) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(229,4,177,0.5)), color-stop(100%,rgba(109,0,25,0.75))); /* Chrome,Safari4+ */
@@ -378,12 +388,14 @@ h1 {font-size: 50px !important;letter-spacing: -3px;}
 
 h1, h2 {
 	.font1;
+	color: @pink;
 	font-weight: bold;
 	text-transform: uppercase;
 	margin: 10px 0px !important;
 }
 
 h3, h4 {
+	color: @pink;
 	.font2;
 	font-weight: bold;
 	margin: 10px 0px !important;
@@ -668,7 +680,8 @@ nav.shrink ul.nav {
 }
 
 .jumbotron .rsGalore {
-	border: 5px solid white;
+	border: 8px solid white;
+	box-shadow: 1px 1px 5px rgba(255,0,50,0.2);
 }
 
 .rsGalore .rsTags {
@@ -870,13 +883,20 @@ ul.post-social li a:hover {
 
 .darlings {
 	padding: 20px;
-	.bluePinkGradient;
+	.purpleGradientFade;
 }
 
 .darlings .brand {
 	transform: scale(0.6);
 	-webkit-transform: scale(0.6);
+	transform-origin: top center;
+	-webkit-transform-origin: top center;
+	background: url(images/galore-logo-white.png) center center no-repeat;
+	margin: 0 auto -150px auto;
+	background-size: cover;
 }
+
+.darlings a h4 {color:white;}
 
 .cover-stories {
 	padding: 0px;
@@ -897,6 +917,25 @@ ul.post-social li a:hover {
 	z-index: 9;
 }
 
+#kitten-posts {
+	padding: 20px;
+	.bluePinkGradient;
+}
+
+/*#kitten-posts.sticky {
+	top: 50px;
+	position: fixed;
+}*/
+
+#kitten-posts .brand {
+	background: url(images/kitten-logo-white.png) center center no-repeat;
+	display: block;
+	transform: scale(0.5);
+	-webkit-transform: scale(0.5);
+	margin: 0 auto;
+	background-size: cover;
+}
+
 .archive .archive-thumb {
 	height: 150px;
 	overflow: hidden;
@@ -907,6 +946,17 @@ li.related-post {
 	float: left;
 	display: table-cell;
 }
+
+div.catlinks {
+	position: absolute;
+	background: @pink;
+	color: white;
+	padding: 3px 8px;
+	top: 13px;
+	left: -5px;
+}
+
+div.catlinks a {color:white;}
 
 #footer-trigger {
 	position: fixed;
