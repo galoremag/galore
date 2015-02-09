@@ -11,6 +11,12 @@
 		}
 	</script>
 
+	<script type="text/javascript">
+		$('#footer-trigger').hover(function() {
+			$('footer').css('bottom: 0px;');
+		});
+	</script>
+
 	<?php wp_footer(); ?>
 	</body>
 </html>

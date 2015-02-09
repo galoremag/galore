@@ -233,13 +233,13 @@
 						<?php
 						$counter = 1; //start counter
 
-						$grids = 3; //Grids per row-fluid
+						$grids = 2; //Grids per row-fluid
 
 						global $query_string; //Need this to make pagination work
 
 
 						/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
-						query_posts($query_string . 'category_name=style&ignore_sticky_posts=0&posts_per_page=6');
+						query_posts($query_string . 'category_name=style&ignore_sticky_posts=0&posts_per_page=4');
 
 
 						if(have_posts()) :	while(have_posts()) :  the_post(); 
@@ -248,7 +248,7 @@
 						//Show the left hand side column
 						if($counter == 1) :
 						?>
-						<div class="entry col-sm-4">
+						<div class="entry col-sm-6">
 							<div class="postimage">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 							</div>
@@ -264,23 +264,7 @@
 						//Show the left hand side column
 						if($counter == 1) :
 						?>
-						<div class="entry col-sm-4">
-							<div class="postimage">
-								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-							</div>
-			                <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-			                <p><?php the_time(get_option('date_format')) ?></p>
-		                	<p>By <?php the_author_posts_link(); ?></p>
-						</div>
-						<?php
-						$counter = 0;
-						endif;
-						?>
-						<?php
-						//Show the left hand side column
-						if($counter == 1) :
-						?>
-						<div class="entry col-sm-4">
+						<div class="entry col-sm-6">
 							<div class="postimage">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 							</div>
