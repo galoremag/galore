@@ -321,7 +321,7 @@
 
 <div class="cover-stories">
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row-fluid">
 			<div class="nopad col-sm-12">
 				<?php echo do_shortcode( '[new_royalslider id="3"]' ); ?>
 			</div>
