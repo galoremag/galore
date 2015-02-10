@@ -24,7 +24,7 @@
 					<!-- <?php get_search_form(); ?> -->
 					<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
 						<label class="form-group">
-							<input type="search" class="form-control" placeholder="<?php echo esc_attr_x( 'Start hunting', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+							<input type="search" class="form-control" placeholder="<?php echo esc_attr_x( 'story, person, etc.', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
 						</label>
 						<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 					</form>

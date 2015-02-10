@@ -5,14 +5,15 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
 		  <div class="container">
 		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		      	<span class="sr-only">Toggle navigation</span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
 		      <a class="navbar-brand" href="<?php bloginfo('url') ?>"><span><?php bloginfo('name') ?></span></a>
 		    </div>
-		    <div class="main-cats navbar-collapse collapse">
+		    <div id="sitemenu" class="main-cats navbar-collapse collapse">
 				<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'navbar-collapse collapse', 'items_wrap' => ' <div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">%3$s  </ul>
 		    	<ul class="top-social navbar-right tab">

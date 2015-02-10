@@ -102,6 +102,8 @@
 		<?php endif;
 	}
 
+	// BOOTSTRAP
+
 	// ADD POST THUMBNAIL TO ADMIN COLUMN
 
 	add_filter('manage_posts_columns', 'posts_columns', 5);

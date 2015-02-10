@@ -17,6 +17,9 @@
 
 			<?php
 			global $query_string;
+			global $wp_query;
+			
+			$total_results = $wp_query->found_posts;
 
 			$query_args = explode("&", $query_string);
 			$search_query = array();
@@ -29,7 +32,7 @@
 			$search = new WP_Query($search_query);
 			
 			if ( have_posts() ): ?>
-			<h2><span>Search Results for '</span><?php echo get_search_query(); ?><span>'</span></h2>	
+			<h2><span><?php $num = $wp_query->post_count; if (have_posts()) : echo $num; endif;?> Results for '</span><?php echo get_search_query(); ?><span>'</span></h2>	
 			<hr>
 			<ol>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -53,10 +56,10 @@
 						</div>
 					</article>
 				</li>
-				<p class="text-center">...and that's all she wrote</p>
 				<hr>
 			<?php endwhile; ?>
 			</ol>
+			<p class="text-center">That's everything with "</span><?php echo get_search_query(); ?>" in it.</p>
 			<?php else: ?>
 			<h3 class="text-center"><span>Nothing found with '</span><?php echo get_search_query(); ?><span>' in it.</span></h3>
 			<?php endif; ?>

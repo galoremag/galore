@@ -23,6 +23,9 @@
 		<!-- If you already have jQuery on your page, you shouldn't include it second time. -->
 		<script src='<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery-1.7.2.min.js'></script>
 
+		<!-- BOOSTRAP -->
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
 		<!-- Main slider JS script file --> 
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
