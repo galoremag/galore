@@ -90,6 +90,7 @@ Version: 1.0.1
 
 .font3 {
 	font-family: 'Karla', sans-serif;
+	font-weight: 400 !important;
 }
 
 .transition {
@@ -384,7 +385,7 @@ p {
 	.font3;
 }
 
-h1 {font-size: 50px !important;letter-spacing: -3px;}
+h1 {font-size: 40px;letter-spacing: -3px;}
 
 h1, h2 {
 	.font1;
@@ -396,7 +397,7 @@ h1, h2 {
 
 h3, h4 {
 	color: @pink;
-	.font2;
+	.font3;
 	font-weight: bold;
 	margin: 10px 0px !important;
 }
@@ -616,6 +617,7 @@ ul.top-social li a:hover {color:@pink;}
 	overflow: visible;
 	background: url(images/galore-logo.png) no-repeat;
 	background-size: 180px auto;
+	opacity: 1;
 }
 
 .navbar-brand span {
@@ -673,6 +675,10 @@ nav.shrink ul.nav {
 	padding: 0px;
 	margin: 0px;
 	background: url(images/greyfloral.png) fixed repeat;
+}
+
+.jumbotron h1 {
+	font: 40px !important;
 }
 
 .jumbotron-in {
@@ -750,6 +756,15 @@ nav.shrink ul.nav {
 	display: inline;
 	float: left;
 	position: relative;
+	.font3;
+}
+
+.latest-slider span.chpcs_title {
+	.font3;
+	font-size: 18px;
+	line-height: 18px;
+	margin: 5px 0px;
+	letter-spacing: -0.5px;
 }
 
 .readmore {}
@@ -857,9 +872,14 @@ ul.post-social li a:hover {
 	height: 310px;
 }
 
+.post-grid .postimage {
+	max-height: 200px;
+	overflow: hidden;
+}
+
 .style .post-grid .entry {
 	display: table-cell;
-	height: 240px;
+	height: 300px;
 }
 
 .pop {
@@ -1041,7 +1061,7 @@ footer {
 	padding: 10px;
 	.footerGradient;
 	color: white;
-	.font2;
+	.font3;
 	.transition;
 }
 
@@ -1129,6 +1149,7 @@ button.alm-load-more-btn.done:before {
 	height: 30px;
 	padding: 5px 10px;
 	color: white;
+	.font3;
 }
 
 .search-submit {

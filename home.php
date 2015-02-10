@@ -64,12 +64,12 @@
 	<div class="sex-dating-in">
 		<div class="container-fluid">
 			<div class="row-fluid">
-				<div class="col-sm-8 col-sm-offset-2">
+				<div class="col-sm-10 col-sm-offset-1">
 					<h2>Sex <span>+</span> Advice <span><i class="fa fa-heart"></i></span></h2>
 				</div>
 			</div>
 			<div class="row-fluid">
-				<div class="col-sm-6 col-sm-offset-2">
+				<div class="col-sm-7 col-sm-offset-1">
 					<?php
 					$postslist = get_posts('category_name=sex-dating&numberposts=1&order=DESC&orderby=date');
 					foreach ($postslist as $post) :
@@ -88,7 +88,7 @@
 					</div>
 					<?php endforeach; ?>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-3">
 					<?php
 					$postslist = get_posts('category_name=sex-dating&numberposts=2&order=DESC&orderby=date&offset=1');
 					foreach ($postslist as $post) :
@@ -118,19 +118,19 @@
 	<div class="pop-in">
 		<div class="container-fluid">
 			<div class="row-fluid">
-				<div class="col-sm-8 col-sm-offset-2">
+				<div class="col-sm-10 col-sm-offset-1">
 					<h2><span>Pop</span> <i class="fa fa-flash"></i></h2>
 					<div class="row-fluid post-grid">
 						<?php
 						$counter = 1; //start counter
 
-						$grids = 3; //Grids per row-fluid
+						$grids = 2; //Grids per row-fluid
 
 						global $query_string; //Need this to make pagination work
 
 
 						/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
-						query_posts($query_string . '&ignore_sticky_posts=0&posts_per_page=6');
+						query_posts($query_string . '&ignore_sticky_posts=0&posts_per_page=4');
 
 
 						if(have_posts()) :	while(have_posts()) :  the_post(); 
@@ -139,14 +139,15 @@
 						//Show the left hand side column
 						if($counter == 1) :
 						?>
-						<div class="col-sm-4">
+						<div class="col-sm-6">
 							<div class="entry">
 								<div class="postimage">
-									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
 								</div>
 				                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
 				                <p><?php the_time(get_option('date_format')) ?></p>
 				                <p>By <?php the_author_posts_link(); ?></p>
+				                <?php echo get_the_popular_excerpt(); ?>
 				                <ul class="post-social">
 									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 									<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
@@ -161,29 +162,18 @@
 						//Show the left hand side column
 						if($counter == 1) :
 						?>
-						<div class="col-sm-4">
+						<div class="col-sm-6">
 							<div class="postimage">
-								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
 							</div>
 			                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 			                <p><?php the_time(get_option('date_format')) ?></p>
 			                <p>By <?php the_author_posts_link(); ?></p>
-						</div>
-						<?php
-						$counter = 0;
-						endif;
-						?>
-						<?php
-						//Show the left hand side column
-						if($counter == 1) :
-						?>
-						<div class="col-sm-4">
-							<div class="postimage">
-								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-							</div>
-			                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-			                <p><?php the_time(get_option('date_format')) ?></p>
-			                <p>By <?php the_author_posts_link(); ?></p>
+			                <?php echo get_the_popular_excerpt(); ?>
+			                <ul class="post-social">
+								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul>
 						</div>
 						<div class="clear"></div>
 						<?php
@@ -202,7 +192,7 @@
 			<div class="row-fluid">
 				<div class="col-sm-12">
 					<div class="spacer20"></div>
-					<p class="text-center"><a href="<?php get_category_link(); ?>">Read More</a></p>
+					<p class="text-center"><a href="<?php get_category_by_slug('pop'); ?>">Read More</a></p>
 				</div>
 			</div>
 		</div>
@@ -215,12 +205,12 @@
 	<div class="style-in">
 		<div class="container-fluid">
 			<div class="row-fluid">
-				<div class="col-sm-8 col-sm-offset-2">
+				<div class="col-sm-10 col-sm-offset-1">
 					<h2>Style <span><i class="fa fa-scissors"></i></span></h2>
 				</div>
 			</div>
 			<div class="row-fluid">
-				<div class="col-sm-5 col-sm-offset-2">
+				<div class="col-sm-7 col-sm-offset-1">
 					<div>
 						<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
 						<div class="spacer20"></div>
@@ -365,9 +355,7 @@
 			<?php endif; ?>
 
 			<?php 
-			$cat = get_category( get_query_var( 'cat' ) );
-			$category = $cat->slug;
-			echo do_shortcode('[ajax_load_more category="'.$category.'"]');
+			echo do_shortcode('[ajax_load_more post_type="post" orderby="date" offset="4"]');
 			?>
 
 			<!-- <div id="post-nav">

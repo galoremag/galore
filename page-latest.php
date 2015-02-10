@@ -52,9 +52,7 @@
 			<?php endif; ?>
 
 			<?php 
-			$cat = get_category( get_query_var( 'cat' ) );
-			$category = $cat->slug;
-			echo do_shortcode('[ajax_load_more category="'.$category.'"]');
+			echo do_shortcode('[ajax_load_more post_type="post" orderby="date" offset="4"]');
 			?>
 
 			<!-- <div id="post-nav">
