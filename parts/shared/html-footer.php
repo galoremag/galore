@@ -16,6 +16,10 @@
 			$('footer').css('bottom: 0px;');
 		});
 
+		$('.footbut a.brand-white-sm').click(function() {
+			$('footer').css('bottom: 0px;');
+		}):
+
 		// function sticky_relocate() {
 		// 	var window_top = $(window).scrollTop();
 		// 	var div_top = $('#kitten-anchor').offset().top;

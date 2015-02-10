@@ -538,6 +538,17 @@ body {
 	background: white;
 }
 
+#global-container.search {
+	background: url(images/greyfloral.png) repeat;
+	background-attachment: fixed;
+}
+
+#global-inner.search {
+	.heroGradientFade;
+	background-attachment: fixed;
+	padding: 100px 0px 0px 0px;
+}
+
 .brand {
 	width: 180px;
 	height: 215px;
@@ -958,6 +969,34 @@ div.catlinks {
 
 div.catlinks a {color:white;}
 
+.footbut {
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	border-radius: 50%;
+	background: @pink;
+	overflow: visible;
+}
+
+.footbut:hover {
+	background: darken(@pink, 10%);
+}
+
+.footbut a.brand-white-sm {
+	-webkit-transform: scale(0.6);
+	transform: scale(0.6);
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+	display: block;
+	width:35px;
+	height: 80px;
+	background: url(images/icon-white-sm.png) no-repeat;
+	background-size: 35px 80px;
+	opacity: 1;
+}
+
 #footer-trigger {
 	position: fixed;
 	display: block;
@@ -996,7 +1035,7 @@ footer .brand-white-sm {
 	height: 80px;
 	background: url(images/icon-white-sm.png) no-repeat;
 	background-size: 35px 80px;
-	margin-right: 20px;
+	margin: 0px 5px 0px -20px;
 }
 
 .menu-footer-container {
@@ -1062,6 +1101,31 @@ button.alm-load-more-btn:hover {
 button.alm-load-more-btn:before, 
 button.alm-load-more-btn.done:before {
 	background: url(preloaders/preloader-pink.gif) no-repeat center center !important;
+}
+
+#site-search .form-control {
+	.greyGradientFade;
+	border: 0px;
+	height: 30px;
+	padding: 5px 10px;
+	color: white;
+}
+
+.search-submit {
+	border-radius: 5px;
+	border: 0px;
+	background: @pink;
+	opacity: 0.9;
+	color: white;
+	.transition;
+	padding: 8px 15px;
+	text-transform: uppercase;
+	height: 30px;
+	padding: 5px 10px;
+}
+
+.search-submit:hover {
+	opacity: 1;
 }
 
 /*== Media Queries ==*/

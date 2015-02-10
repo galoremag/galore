@@ -193,8 +193,14 @@
 	// add category nicenames in body and post class
 	function category_id_class( $classes ) {
 		global $post;
-		foreach ( ( get_the_category( $post->ID ) ) as $category ) {
-			$classes[] = $category->category_nicename;
+		if ( have_posts() ) {
+			global $post;
+			foreach ( ( get_the_category( $post->ID ) ) as $category ) {
+				$classes[] = $category->category_nicename;
+			}
+			return $classes;
+		} else {
+			$classes[] = 'search-no-results';
 		}
 		return $classes;
 	}

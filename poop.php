@@ -14,21 +14,7 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div id="content" class="col-sm-8 col-sm-offset-2">
-
-			<?php
-			global $query_string;
-
-			$query_args = explode("&", $query_string);
-			$search_query = array();
-
-			foreach($query_args as $key => $string) {
-				$query_split = explode("=", $string);
-				$search_query[$query_split[0]] = urldecode($query_split[1]);
-			} // foreach
-
-			$search = new WP_Query($search_query);
-			
-			if ( have_posts() ): ?>
+			<?php if ( have_posts() ): ?>
 			<h2><span>Search Results for '</span><?php echo get_search_query(); ?><span>'</span></h2>	
 			<hr>
 			<ol>
@@ -58,7 +44,7 @@
 			<?php endwhile; ?>
 			</ol>
 			<?php else: ?>
-			<h3 class="text-center"><span>Nothing found with '</span><?php echo get_search_query(); ?><span>' in it.</span></h3>
+			<h2>No results found for '<?php echo get_search_query(); ?>'</h2>
 			<?php endif; ?>
 
 			<h2 class="text-center pad20">Recent Stories</h2>
