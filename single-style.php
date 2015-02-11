@@ -25,9 +25,12 @@
 					</ul>
 				</div>
 				<h3><?php the_title(); ?></h3>
+
 				<p>By <?php the_author_posts_link(); ?></p>
 
 				<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time>
+				<div class="spacer20"></div>
+					<?php the_post_thumbnail('large'); ?>
 				<div class="spacer20"></div>
 				<?php the_content(); ?>			
 
@@ -37,7 +40,7 @@
 				<?php the_author_meta( 'description' ); ?>
 				<?php endif; ?>
 
-				<ul id="post-social" class="post-social">
+				<ul id="post-social" class="hidden-sm post-social">
 					<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
 				</ul>
@@ -111,9 +114,7 @@
 				</table> -->
 
 				<?php 
-				$cat = get_category( get_query_var( 'cat' ) );
-				$category = $cat->slug;
-				echo do_shortcode('[ajax_load_more category="'.$category.'"]');
+				echo do_shortcode('[ajax_load_more category="style"]');
 				?>
 			</div>
 		</div>

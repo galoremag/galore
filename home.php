@@ -1,29 +1,19 @@
 <?php
 /**
-* The main template file
-* This is the most generic template file in a WordPress theme
-* and one of the two required files for a theme (the other being style.css).
-* It is used to display a page when nothing more specific matches a query.
-* E.g., it puts together the home page when no home.php file
-*
-* Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
-*
-	* @package 	WordPress
-	* @subpackage 	Starkers
-		* @since 		Starkers 4.0
+* Template: Home
 */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <div class="jumbotron">
-<div class="jumbotron-in">
-	<div class="container">
-		<div class="row-fluid">
-			<div class="col-sm-10 col-sm-offset-1">
-				<?php echo do_shortcode( '[new_royalslider id="1"]' ); ?>
+	<div class="jumbotron-in">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="col-sm-10 col-sm-offset-1">
+					<?php echo do_shortcode( '[new_royalslider id="1"]' ); ?>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 </div>
 <div class="latest-slider">
 	<div class="container-fluid">
@@ -108,6 +98,12 @@
 					<?php endforeach; ?>
 				</div>
 			</div>
+			<div class="row-fluid">
+				<div class="col-sm-12">
+					<div class="spacer20"></div>
+					<p class="text-center"><a href="<?php bloginfo('url'); ?>/sex-dating">See More in Pop</a></p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -130,7 +126,7 @@
 
 
 						/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
-						query_posts($query_string . '&ignore_sticky_posts=0&posts_per_page=4');
+						query_posts($query_string . 'category_name=pop&ignore_sticky_posts=0&posts_per_page=4');
 
 
 						if(have_posts()) :	while(have_posts()) :  the_post(); 
@@ -192,7 +188,7 @@
 			<div class="row-fluid">
 				<div class="col-sm-12">
 					<div class="spacer20"></div>
-					<p class="text-center"><a href="<?php get_category_by_slug('pop'); ?>">Read More</a></p>
+					<p class="text-center"><a href="<?php bloginfo('url'); ?>/pop">See More in Pop</a></p>
 				</div>
 			</div>
 		</div>
@@ -214,12 +210,12 @@
 					<div>
 						<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
 						<div class="spacer20"></div>
-						<a class="pull-right" href="<?php get_category_link(); ?>">Read More</a>
+						<a class="pull-right" href="<?php bloginfo('url'); ?>/style">See More in Style</a>
 						<div class="spacer40"></div>
 					</div>
 					<hr>
 					<h2>Beauty <span><i class="fa fa-bomb"></i></span></h2>
-					<div class="post-grid">
+					<div class="row-fluid post-grid">
 						<?php
 						$counter = 1; //start counter
 
@@ -229,7 +225,7 @@
 
 
 						/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
-						query_posts($query_string . 'category_name=style&ignore_sticky_posts=0&posts_per_page=4');
+						query_posts($query_string . 'category_name=beauty&ignore_sticky_posts=0&posts_per_page=4');
 
 
 						if(have_posts()) :	while(have_posts()) :  the_post(); 
@@ -238,13 +234,19 @@
 						//Show the left hand side column
 						if($counter == 1) :
 						?>
-						<div class="entry col-sm-6">
-							<div class="postimage">
-								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+						<div class="col-sm-6">
+							<div class="entry">
+								<div class="postimage">
+									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
+								</div>
+				                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
+				                <p><?php the_time(get_option('date_format')) ?></p>
+				                <p>By <?php the_author_posts_link(); ?></p>
+				                <ul class="post-social">
+									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+								</ul>
 							</div>
-			                <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-			                <p><?php the_time(get_option('date_format')) ?></p>
-		                	<p>By <?php the_author_posts_link(); ?></p>
 						</div>
 						<?php
 						$counter = 0;
@@ -254,13 +256,17 @@
 						//Show the left hand side column
 						if($counter == 1) :
 						?>
-						<div class="entry col-sm-6">
+						<div class="col-sm-6">
 							<div class="postimage">
-								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
 							</div>
-			                <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
+			                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 			                <p><?php the_time(get_option('date_format')) ?></p>
-		                	<p>By <?php the_author_posts_link(); ?></p>
+			                <p>By <?php the_author_posts_link(); ?></p>
+			                <ul class="post-social">
+								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul>
 						</div>
 						<div class="clear"></div>
 						<?php
@@ -273,7 +279,6 @@
 						//Pagination can go here if you want it.
 						endif;
 						?>
-						<p class="text-center"><a href="<?php get_category_link(); ?>">Read More</a></p>
 					</div>
 				</div>
 				<div class="col-sm-3">
@@ -294,7 +299,7 @@
 						<?php endforeach; ?>
 						<div class="row-fluid">
 							<div class="spacer20"></div>
-							<p class="text-center"><a href="<?php get_category_link(); ?>"><button>Read More</button></a></p>
+							<p class="text-center"><a href="<?php echo get_tag_link($tag_id); ?>"><button>Read More</button></a></p>
 						</div>
 					</div>
 				</div>
@@ -385,7 +390,7 @@
 				<?php endforeach; ?>
 				<div class="row-fluid">
 					<div class="spacer20"></div>
-					<p class="text-center"><a href="<?php get_category_link(); ?>"><button>Read More</button></a></p>
+					<p class="text-center"><a href="<?php echo get_tag_link('kitten'); ?>"><button>Read More</button></a></p>
 				</div>
 			</div>
 		</div>

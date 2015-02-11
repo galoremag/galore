@@ -360,7 +360,7 @@ a {opacity: 0.7;.transition; color: @pink;}
 a:hover {text-decoration: none; opacity: 1;.transition; color: @pink;}
 a:focus {color: @pink; outline: 0px; text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);}
 
-a button {
+a button, .btn {
 	border-radius: 5px;
 	border: 0px;
 	background: @pink;
@@ -371,8 +371,17 @@ a button {
 	text-transform: uppercase;
 }
 
-a:hover button {
+a:hover button, .btn:hover {
 	opacity: 1;
+	color: white;
+}
+
+.btn-bp {.bluePinkGradient;opacity: 0.8;}
+
+.btn-bp:hover {.bluePinkGradient;opacity: 1;}
+
+.opacity1 {
+	opacity: 1 !important;
 }
 
 hr {
@@ -587,8 +596,6 @@ ul.top-social {
 	margin-bottom: 0px;
 }
 
-/*  COLORS PINK > BLUE #ef95ad 0%, #abdff6  */
-
 ul.top-social li {
 	float: left;
 	margin: 0px 10px;
@@ -713,7 +720,7 @@ nav.shrink ul.nav {
 	background: @pink;
 }
 
-.rsGalore .rsTags a { color: fade(white,50%); }
+.rsGalore .rsTags a { color: fade(white,80%); }
 .rsGalore .rsTags a:hover { color: white; }
 
 .rsGalore .rsText {
@@ -835,6 +842,12 @@ ul.post-social li a:hover {
 
 .single ul#post-social li:first-child {
 	margin-bottom: 10px;
+}
+
+.single img.img-left {
+	float: left;
+	width: 50%;
+	margin: 10px 40px 10px 0px;
 }
 
 .latest-slider {
@@ -1172,6 +1185,51 @@ button.alm-load-more-btn.done:before {
 
 .search-submit:hover {
 	opacity: 1;
+}
+
+/*  NEWSLETTER SIGNUP MODAL  */
+
+#signupButton {
+	cursor: pointer;
+}
+
+.modal {
+
+}
+
+.modal-open .modal {
+	z-index: 9999;
+}
+
+.modal-content {
+	background: @pink;
+	color: white;
+	padding: 0 40px 20px 40px;
+}
+
+.model-content h1 {
+	color: white;
+}
+
+.model-content .modal-header {
+	border: 0px !important;
+}
+
+.modal-header {
+	height: 80px;
+	border: 0px;
+}
+
+.modal-header .close {
+	margin: 30px 0px 0px 0px;
+}
+
+.modal-body button {
+	padding: 5px 20px;
+}
+
+.form-control {
+	color: fade(@pink, 80%);
 }
 
 /*== Media Queries ==*/

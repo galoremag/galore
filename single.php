@@ -5,7 +5,7 @@ if ( in_category('style') ) {
   include(TEMPLATEPATH . '/single-style.php'); }
 elseif ( in_category('beauty') ) {
     include(TEMPLATEPATH . '/single-default.php'); }
-elseif ( in_category('sex-advice') ) {
+elseif ( in_category('sex-dating') ) {
     include(TEMPLATEPATH . '/single-default.php'); }
 elseif ( in_category('fitness') ) {
     include(TEMPLATEPATH . '/single-default.php'); }

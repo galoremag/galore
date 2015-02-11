@@ -17,6 +17,7 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'navbar-collapse collapse', 'items_wrap' => ' <div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">%3$s  </ul>
 		    	<ul class="top-social navbar-right tab">
+		    		<li><a id="signupButton" data-toggle="modal" data-target="#myModal" href="#"><i class="fa fa-inbox"></i></a></li>
 		    		<li><a href="/"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="/"><i class="fa fa-instagram"></i></a></li>
 					<li><a href="/"><i class="fa fa-twitter"></i></a></li>
