@@ -184,24 +184,6 @@
 	}
 	add_filter('new_rs_slides_filter', 'add_additional_posts_to_slider', 10, 3);
 
-	// MOST RECENT POSTS FROM TAG COVER STORIES
-
-	function add_additional_posts_to_slider($slides, $options, $type) {
-    $args = array(
-        'post_type' => 'post',
-        'orderby' => 'date',
-	    'tag' => 'cover-stories'
-    );
-    $query = new WP_Query($args);
-    
-    $additiona_slides = (array)$query->posts;
-    if( is_array($additiona_slides) ) {
-        $slides = array_merge($slides, $additiona_slides);
-    }
-    return $slides; // slides is array of WP Post objects that will be displayed in slider
-	}
-	add_filter('new_rs_slides_filter', 'add_additional_posts_to_slider', 10, 3);
-
 	/** Add Social Sharing Links on Single Posts **/
 	add_action('genesis_after_entry', 'include_social', 9);
 
