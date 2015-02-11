@@ -13,6 +13,13 @@
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico"/>
 		<?php wp_head(); ?>
 
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
 		<!-- basic stylesheet -->
 		<link rel="stylesheet" href="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/royalslider.css">
 
@@ -23,12 +30,11 @@
 		<!-- If you already have jQuery on your page, you shouldn't include it second time. -->
 		<script src='<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery-1.7.2.min.js'></script>
 
-		<!-- BOOSTRAP -->
-		<script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
 		<!-- Main slider JS script file --> 
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
+
+		<script src="<?php echo content_url(); ?>/themes/galore/js/bootstrap-collapse.js"></script>
 
 		<script type="text/javascript">
 

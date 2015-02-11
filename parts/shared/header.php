@@ -1,32 +1,49 @@
 <header>
 	
 	<div class="container-fluid">
+
+
 		<!-- Fixed navbar -->
-		<nav class="navbar navbar-default navbar-fixed-top">
-		  <div class="container">
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-		      	<span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="<?php bloginfo('url') ?>"><span><?php bloginfo('name') ?></span></a>
-		    </div>
-		    <div id="sitemenu" class="main-cats navbar-collapse collapse">
-				<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'navbar-collapse collapse', 'items_wrap' => ' <div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">%3$s  </ul>
-		    	<ul class="top-social navbar-right tab">
-		    		<li><a id="signupButton" data-toggle="modal" data-target="#myModal" href="#"><i class="fa fa-inbox"></i></a></li>
-		    		<li><a href="/"><i class="fa fa-facebook"></i></a></li>
+	    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <i class="fa fa-arrow-down"></i>
+	          </button>
+	          <a class="navbar-brand" href="#"></a>
+	        </div>
+	        <div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="<?php bloginfo('url'); ?>/style">Style</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/beauty">Beauty</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/sex-dating">Sex + Dating</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/fitness">Fitness</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/pop">Pop</a></li>
+					<!-- <li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+					  <ul class="dropdown-menu" role="menu">
+					    <li><a href="#">Action</a></li>
+					    <li><a href="#">Another action</a></li>
+					    <li><a href="#">Something else here</a></li>
+					    <li class="divider"></li>
+					    <li class="dropdown-header">Nav header</li>
+					    <li><a href="#">Separated link</a></li>
+					    <li><a href="#">One more separated link</a></li>
+					  </ul>
+					</li> -->
+				</ul>
+				<ul class="top-social navbar-right tab">
+					<li><a id="signupButton" data-toggle="modal" data-target="#myModal" href="#"><i class="fa fa-inbox"></i></a></li>
+					<li><a href="/"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="/"><i class="fa fa-instagram"></i></a></li>
 					<li><a href="/"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="/"><i class="fa fa-tumblr"></i></a></li>
 					<li><a href="/"><i class="fa fa-youtube-play"></i></a></li>
-					<li class=""><a href="">SHOP</a></li>
+				<li class=""><a href="">SHOP</a></li>
 				</ul>
-		    </div><!--/.nav-collapse -->' ) ); ?>
-		</nav>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </nav>
 	</div>
 
 </header>

@@ -26,6 +26,12 @@
 		}
 	</script>
 
+	<script>
+	$(document).on('click',function(){
+	$('.collapse').collapse('hide');
+	})
+	</script>
+
 	<script type="text/javascript">
 		$('#footer-trigger').hover(function() {
 			$('footer').css('bottom: 0px;');

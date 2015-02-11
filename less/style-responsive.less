@@ -1,6 +1,13 @@
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
+/*  MEDIA QUERIES  */
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 	.jumbotron h1 {
@@ -12,16 +19,16 @@
 	}
 }
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) {
-	figure.hammy-responsive {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
 
-	}
 }
 
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) {
-	figure.hammy-responsive {
-		
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+	#navbar {
+		margin: auto;
 	}
 }
