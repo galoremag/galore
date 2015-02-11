@@ -22,6 +22,10 @@
 			</div>
 
 			<div class="spacer40"></div>
+			<h2 class="text-center">Hot <span>Stories</span></h2>
+			<?php 
+			echo do_shortcode('[ajax_load_more post_type="post" orderby="date" offset="4"]');
+			?>
 		</div>
 	</div>
 </div>
