@@ -55,7 +55,7 @@
 		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="col-sm-10 col-sm-offset-1">
-					<h2>Sex <span>+</span> Advice <span><i class="fa fa-heart"></i></span></h2>
+					<h2>Sex <span>+</span> Dating <span><i class="fa fa-heart"></i></span></h2>
 				</div>
 			</div>
 			<div class="row-fluid">
