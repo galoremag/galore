@@ -101,7 +101,7 @@
 			<div class="row-fluid">
 				<div class="col-sm-12">
 					<div class="spacer20"></div>
-					<p class="text-center"><a href="<?php bloginfo('url'); ?>/sex-dating">See More in Pop</a></p>
+					<p class="text-center"><a href="<?php bloginfo('url'); ?>/sex-dating">See More in Sex + Dating</a></p>
 				</div>
 			</div>
 		</div>

@@ -193,7 +193,7 @@
 	    $args = array(
 	        'posts_per_page' => 3,
 	        'orderby' => 'date',
-			'tag' => 'cover-stories'
+			'tag' => 'Cover Stories'
 	    );
 	    $query = new WP_Query($args);
 	    $slides = array_merge($slides,  (array)$query->posts); // merge queried data
@@ -202,7 +202,7 @@
 	    $args = array(
 	        'posts_per_page' => 3,
 	        'orderby' => 'date',
-	        'tag' => 'cover-stories'
+	        'tag' => 'Cover Stories'
 	    );
 	    $query = new WP_Query($args);
 	    $slides = array_merge($slides, (array)$query->posts); // merge queried data
