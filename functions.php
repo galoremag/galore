@@ -187,29 +187,18 @@
 	// MOST RECENT POSTS FROM TAG COVER STORIES
 
 	function add_additional_posts_to_slider($slides, $options, $type) {
-	    if( $options['id'] !== 3 ) { return $slides; }
-	    
-	    $slides = array();
-	   
-	    // Query #1 parameters  https://gist.github.com/luetkemj/2023628
-	    $args = array(
-	        'posts_per_page' => 3,
-	        'orderby' => 'date',
-			'tag' => 'cover-stories'
-	    );
-	    $query = new WP_Query($args);
-	    $slides = array_merge($slides,  (array)$query->posts); // merge queried data
-
-	    // Query #2 parameters 
-	    $args = array(
-	        'posts_per_page' => 3,
-	        'orderby' => 'date',
-	        'tag' => 'cover-stories'
-	    );
-	    $query = new WP_Query($args);
-	    $slides = array_merge($slides, (array)$query->posts); // merge queried data
-
-	    return $slides; 
+    $args = array(
+        'post_type' => 'post',
+        'orderby' => 'date',
+	    'tag' => 'cover-stories'
+    );
+    $query = new WP_Query($args);
+    
+    $additiona_slides = (array)$query->posts;
+    if( is_array($additiona_slides) ) {
+        $slides = array_merge($slides, $additiona_slides);
+    }
+    return $slides; // slides is array of WP Post objects that will be displayed in slider
 	}
 	add_filter('new_rs_slides_filter', 'add_additional_posts_to_slider', 10, 3);
 
