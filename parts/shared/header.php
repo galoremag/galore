@@ -10,7 +10,7 @@
 	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 	            <i class="fa fa-arrow-down"></i>
 	          </button>
-	          <a class="navbar-brand" href="#"></a>
+	          <a class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
