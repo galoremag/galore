@@ -32,6 +32,9 @@
 
 		<script src="<?php echo content_url(); ?>/themes/galore/js/bootstrap-collapse.js"></script>
 
+		<!-- REMOVE THE TAP DELAY -->
+		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/fastclick.js'></script>
+
 		<script type="text/javascript">
 
 		( function( $ ) {
@@ -54,6 +57,12 @@
 			  }
 			});
 		});
+		</script>
+
+		<script type="text/javascript">
+			$(function() {
+				FastClick.attach(document.body);
+			});
 		</script>
 		
 	</head>
