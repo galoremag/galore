@@ -209,6 +209,17 @@
 	add_filter( 'post_class', 'category_id_class' );
 	add_filter( 'body_class', 'category_id_class' );
 
+	// ADD PAGE TO BODY CLASS
+
+	function add_slug_body_class( $classes ) {
+	global $post;
+	if ( isset( $post ) ) {
+	$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	return $classes;
+	}
+	add_filter( 'body_class', 'add_slug_body_class' );
+
 	// GET VIEW COUNT OF POSTS - ADD AS CUSTOM FIELD
 
 	function wpb_set_post_views($postID) {
