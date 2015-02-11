@@ -15,7 +15,7 @@
 		</div>
 	</div>
 </div>
-<div class="latest-slider">
+<div id="latest" class="latest-slider">
 	<div class="container-fluid">
 		<h2 class="text-center"><span>The</span> Latest</h2>
 		<div class="row-fluid">
