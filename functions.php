@@ -158,7 +158,7 @@
 	// MOST RECENT POSTS FROM TAG 'FEATURED'
 
 	function add_additional_posts_to_slider($slides, $options, $type) {
-	    if( $options['id'] !== 6 ) { return $slides; }
+	    if( $options['id'] !== 4 ) { return $slides; }
 	    
 	    $slides = array();
 	   

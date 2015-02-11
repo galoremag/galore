@@ -9,7 +9,7 @@
 		<div class="container">
 			<div class="row-fluid">
 				<div class="col-sm-10 col-sm-offset-1">
-					<?php echo do_shortcode( '[new_royalslider id="1"]' ); ?>
+					<?php echo do_shortcode( '[new_royalslider id="4"]' ); ?>
 				</div>
 			</div>
 		</div>
@@ -85,7 +85,7 @@
 					setup_postdata($post);
 					?>
 					<div class="entry">
-						<?php the_post_thumbnail('thumbnail'); ?>
+						<?php the_post_thumbnail('medium'); ?>
 						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 						<p><?php the_time(get_option('date_format')) ?></p>
 						<!-- <p><?php the_excerpt(10); ?></p> -->
@@ -315,7 +315,7 @@
 </div>
 
 <div class="cover-stories">
-	<div class="container-fluid">
+	<div class="container-fluid nopad">
 		<div class="row-fluid">
 			<div class="nopad col-sm-12">
 				<?php echo do_shortcode( '[new_royalslider id="3"]' ); ?>
@@ -338,7 +338,7 @@
 				?>
 				<div class="entry text-left">
 					<a href="<?php the_permalink(); ?>">
-						<?php the_post_thumbnail('thumbnail'); ?>
+						<?php the_post_thumbnail('medium'); ?>
 						<h4><?php the_title(); ?></h4>
 					</a>
 				</div>

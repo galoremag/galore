@@ -39,19 +39,6 @@
 
 		$('.footbut a.brand-white-sm').click(function() {
 			$('footer').css('bottom: 0px;');
-		}):
-
-		function sticky_relocate() {
-			var window_top = $(window).scrollTop();
-			var div_top = $('#social-anchor').offset().top;
-			if (window_top > div_top)
-				$('#post-social').addClass('sticky')
-			else
-				$('#post-social').removeClass('sticky');
-			}
-			$(function() {
-				$(window).scroll(sticky_relocate);
-			sticky_relocate();
 		});
 	</script>
 
