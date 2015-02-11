@@ -17,9 +17,18 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<h2><?php the_title(); ?></h2>
-<?php the_content(); ?>
-<?php comments_template( '', true ); ?>
+
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div id="content" class="col-sm-8 col-sm-offset-2">
+			<h2><?php the_title(); ?></h2>
+			<hr>
+			<?php the_content(); ?>
+		</div>
+	</div>
+</div>
+
 <?php endwhile; ?>
+
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
