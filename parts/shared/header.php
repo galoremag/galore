@@ -14,11 +14,11 @@
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="<?php bloginfo('url'); ?>/style">Style</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/beauty">Beauty</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/sex-dating">Sex + Dating</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/fitness">Fitness</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/pop">Pop</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/style">Style</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/beauty">Beauty</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/sex-dating">Sex + Dating</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/fitness">Fitness</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/pop">Pop</a></li>
 					<!-- <li class="dropdown">
 					  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
 					  <ul class="dropdown-menu" role="menu">
