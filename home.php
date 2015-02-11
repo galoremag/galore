@@ -326,7 +326,7 @@
 
 <div class="container-fluid nopad">
 	<div class="row-fluid">
-		<div id="kitten-anchor"></div>
+<!-- 		<div id="kitten-anchor"></div>
 		<div class="col-sm-4 nopad">
 			<div id="kitten-posts">
 				<div class="brand"></div>
@@ -348,8 +348,8 @@
 					<p class="text-center"><a href="<?php echo get_tag_link('kitten'); ?>"><button>Read More</button></a></p>
 				</div>
 			</div>
-		</div>
-		<div id="content" class="col-sm-8">
+		</div> -->
+		<div id="content" class="col-sm-10 col-sm-offset-1">
 			<?php if ( have_posts() ): ?>
 			<h2>Hot <span>Stories</span> <i class="fa fa-diamond"></i></h2>
 			<hr>
