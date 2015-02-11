@@ -31,11 +31,9 @@
 				
 				<div class="spacer20"></div>
 
-				<?php the_post_thumbnail('large'); ?>
-				
-				<div class="spacer20"></div>
-
 				<?php the_content(); ?>			
+
+				<div class="spacer20"></div>
 
 				<?php if ( get_the_author_meta( 'description' ) ) : ?>
 				<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>

@@ -30,9 +30,10 @@
 
 				<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time>
 				<div class="spacer20"></div>
-					<?php the_post_thumbnail('large'); ?>
-				<div class="spacer20"></div>
+
 				<?php the_content(); ?>			
+
+				<div class="spacer20"></div>	
 
 				<?php if ( get_the_author_meta( 'description' ) ) : ?>
 				<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
@@ -114,7 +115,9 @@
 				</table> -->
 
 				<?php 
-				echo do_shortcode('[ajax_load_more category="style"]');
+				$cat = get_category( get_query_var( 'cat' ) );
+				$category = $cat->slug;
+				echo do_shortcode('[ajax_load_more category="'.$category.'"]');
 				?>
 			</div>
 		</div>

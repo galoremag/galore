@@ -39,7 +39,7 @@
 					<li><a href="/"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="/"><i class="fa fa-tumblr"></i></a></li>
 					<li><a href="/"><i class="fa fa-youtube-play"></i></a></li>
-				<li class=""><a href="">SHOP</a></li>
+				<li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li>
 				</ul>
 	        </div><!--/.nav-collapse -->
 	      </div>

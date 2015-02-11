@@ -101,7 +101,7 @@
 			<div class="row-fluid">
 				<div class="col-sm-12">
 					<div class="spacer20"></div>
-					<p class="text-center"><a href="<?php bloginfo('url'); ?>/sex-dating">See More in Sex + Dating</a></p>
+					<p class="text-center"><a href="<?php bloginfo('url'); ?>/sex-dating"><button>See More <i class="fa fa-chevron-right"></i></button></a></p>
 				</div>
 			</div>
 		</div>
