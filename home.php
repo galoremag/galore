@@ -138,7 +138,7 @@
 						<div class="col-sm-6">
 							<div class="entry">
 								<div class="postimage">
-									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
+									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 								</div>
 				                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
 				                <p><?php the_time(get_option('date_format')) ?></p>
@@ -160,7 +160,7 @@
 						?>
 						<div class="col-sm-6">
 							<div class="postimage">
-								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 							</div>
 			                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 			                <p><?php the_time(get_option('date_format')) ?></p>
@@ -237,7 +237,7 @@
 						<div class="col-sm-6">
 							<div class="entry">
 								<div class="postimage">
-									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
+									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 								</div>
 				                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
 				                <p><?php the_time(get_option('date_format')) ?></p>
@@ -258,7 +258,7 @@
 						?>
 						<div class="col-sm-6">
 							<div class="postimage">
-								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 							</div>
 			                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 			                <p><?php the_time(get_option('date_format')) ?></p>
@@ -292,7 +292,7 @@
 						?>
 						<div class="entry text-left">
 							<a href="<?php the_permalink(); ?>">
-								<?php the_post_thumbnail('thumbnail'); ?>
+								<?php the_post_thumbnail('medium'); ?>
 								<h4><?php the_title(); ?></h4>
 							</a>
 						</div>
@@ -359,7 +359,7 @@
 					<article class="row-fluid">
 						<div class="nopad col-sm-4">
 							<div class="thumbnail">
-								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large', 300, 150); ?></a>
+								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large'); ?></a>
 							</div>
 						</div>
 						<div class="nopadright col-sm-8">
