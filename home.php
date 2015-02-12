@@ -120,13 +120,13 @@
 							<?php
 							$counter = 1; //start counter
 
-							$grids = 2; //Grids per row-fluid
+							$grids = 3; //Grids per row-fluid
 
 							global $query_string; //Need this to make pagination work
 
 
 							/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
-							query_posts($query_string . 'category_name=pop&ignore_sticky_posts=0&posts_per_page=4');
+							query_posts($query_string . 'category_name=pop&ignore_sticky_posts=0&posts_per_page=9');
 
 
 							if(have_posts()) :	while(have_posts()) :  the_post(); 
@@ -135,7 +135,7 @@
 							//Show the left hand side column
 							if($counter == 1) :
 							?>
-							<div class="col-sm-6">
+							<div class="col-sm-4">
 								<div class="entry">
 									<div class="postimage">
 										<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
@@ -158,7 +158,34 @@
 							//Show the left hand side column
 							if($counter == 1) :
 							?>
-							<div class="col-sm-6">
+							<?php
+							//Show the left hand side column
+							if($counter == 1) :
+							?>
+							<div class="col-sm-4">
+								<div class="entry">
+									<div class="postimage">
+										<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+									</div>
+					                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
+					                <p><?php the_time(get_option('date_format')) ?></p>
+					                <p>By <?php the_author_posts_link(); ?></p>
+					                <?php echo get_the_popular_excerpt(); ?>
+					                <ul class="post-social">
+										<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<?php
+							$counter = 0;
+							endif;
+							?>
+							<?php
+							//Show the left hand side column
+							if($counter == 1) :
+							?>
+							<div class="col-sm-4">
 								<div class="postimage">
 									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 								</div>
