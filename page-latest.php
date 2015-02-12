@@ -52,7 +52,7 @@
 			<?php endif; ?>
 
 			<?php 
-			echo do_shortcode('[ajax_load_more post_type="post" orderby="date" offset="4"]');
+			echo do_shortcode('[ajax_load_more post_type="post" button_label="More Posts"]');
 			?>
 
 			<!-- <div id="post-nav">
