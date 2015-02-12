@@ -34,11 +34,11 @@
 				</ul>
 				<ul class="top-social navbar-right tab">
 					<li><a id="signupButton" data-toggle="modal" data-target="#myModal" href="#"><i class="fa fa-inbox"></i></a></li>
-					<li><a href="/"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="/"><i class="fa fa-instagram"></i></a></li>
-					<li><a href="/"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="/"><i class="fa fa-tumblr"></i></a></li>
-					<li><a href="/"><i class="fa fa-youtube-play"></i></a></li>
+					<li><a href="https://www.facebook.com/galoremag"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="http://instagram.com/kittengalore/"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="https://twitter.com/thegaloremag"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="http://princeandjacob.tumblr.com/"><i class="fa fa-tumblr"></i></a></li>
+					<li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g"><i class="fa fa-youtube-play"></i></a></li>
 				<li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li>
 				</ul>
 	        </div><!--/.nav-collapse -->
