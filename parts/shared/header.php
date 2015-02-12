@@ -12,7 +12,7 @@
 	          </button>
 	          <a class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
 	        </div>
-	        <div id="navbar" class="collapse">
+	        <div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li><a href="<?php bloginfo('url'); ?>/category/style">Style</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/beauty">Beauty</a></li>
