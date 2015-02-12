@@ -7,12 +7,12 @@
 	    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	      <div class="container">
 	        <div class="navbar-header">
-	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-cats" aria-expanded="false" aria-controls="navbar">
 	            <i class="fa fa-arrow-down"></i>
 	          </button>
 	          <a class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
 	        </div>
-	        <div id="navbar" class="navbar-collapse collapse">
+	        <div id="main-cats" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li><a href="<?php bloginfo('url'); ?>/category/style">Style</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/beauty">Beauty</a></li>
