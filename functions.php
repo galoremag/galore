@@ -260,3 +260,6 @@
 	$excerpt = $excerpt.'... ';
 	return $excerpt;
 	}
+
+	// Disable auto-embeds for WordPress >= v3.5
+	remove_filter( 'the_content', array( $GLOBALS['wp_embed'], 'autoembed' ), 8 );
