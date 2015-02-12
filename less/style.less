@@ -103,51 +103,61 @@ Version: 1.0.1
 .spacer20 {
 	display: block;
 	height: 20px;
+	width: 100%;
 }
 
 .spacer40 {
 	display: block;
+	width: 100%;
 	height: 40px;
 }
 
 .pad5 {
-	padding: 5px;
+	padding: 5px !important;
 }
 
 .pad10 {
-	padding: 10px;
+	padding: 10px !important;
 }
 
 .pad20 {
-	padding: 20px;
+	padding: 20px !important;
 }
 
 .padtop10 {
-	padding-top: 10px;
+	padding-top: 10px !important;
+}
+
+.horPad10 {
+	padding: 0px 10px !important;
+}
+
+.verPad10 {
+	padding: 10px 0px !important;
 }
 
 .nopad {
-	padding: 0;
+	padding: 0 !important;
 }
 
 .nomarg {
-	margin: 0;
+	margin: 0 !important;
 }
 
 .nopadtop {
-	padding-top: 0px;
+	padding-top: 0px !important;
 }
 
 .nopadbot {
-	padding-bottom: 0px;
+	padding-bottom: 0px !important;
 }
 
 .nopadleft {
-	padding-left: 0px;
+	padding-left: 0px !important;
 }
 
 .nopadright {
-	padding-right: 0px
+	padding-right: 0px !important;
 }
 
 .nomartop {
@@ -653,7 +663,7 @@ ul.top-social li a:hover {color:@pink;}
 	position: absolute;
 	top: -40px;
 	width: 180px;
-	height: 215px !important;
+	height: 215px;
 	overflow: visible;
 	background: url(images/galore-logo.png) no-repeat;
 	background-size: 180px auto;
@@ -967,6 +977,11 @@ ul.post-social li a:hover {
 	height: 310px;
 }
 
+.style .postimage {
+	height: 140px;
+	overflow: hidden;
+}
+
 .pop {
 	background: url(images/kindajean.png) fixed repeat;
 	color: white;
@@ -1132,10 +1147,10 @@ div.catlinks a {color:white;}
 	bottom: 0px;
 }
 
-#footer-trigger:hover footer {
+/*#footer-trigger:hover footer {
 	bottom: 0px;
 	.transition;
-}
+}*/
 
 footer {
 	position: fixed;
@@ -1236,6 +1251,7 @@ button.alm-load-more-btn.done:before {
 	padding: 5px 10px;
 	color: white;
 	.font3;
+	margin-right: 5px;
 }
 
 .search-submit {
@@ -1387,6 +1403,35 @@ button.alm-load-more-btn.done:before {
 }
 
 @media only screen and (max-width: 767px) {
+	.navbar-brand {
+		position: absolute;
+		top: -16px;
+		width: 140px;
+		height: 100px;
+		overflow: visible;
+		background: url(images/galore-logo-short-straight.png) no-repeat;
+		background-size: 140px auto;
+		opacity: 1;
+		z-index: 999;
+		display: inline-block;
+		margin: 0 auto;
+		margin-left:-70px;
+		left: 50%;
+		.transition;
+	}
+
+	nav.shrink .navbar-brand {
+		-webkit-transform: scale(0.7);
+		transform: scale(0.7);
+		top: -12px;
+		.transition;
+	}
+	nav.shrink ul.nav {
+		margin-left: 0px;
+	}
+	.navbar-nav {
+		margin:40px auto;
+	}
 	.jumbotron h1 {
 		font-size: 40px;
 	}
@@ -1405,11 +1450,11 @@ button.alm-load-more-btn.done:before {
 	}
 
 	#navbar.navbar-collapse.in.collapse {
-		height: 100%;
+		height: 400px;
 	}
 
 	.navbar-collapse.in ul.top-social {
-		margin: 40px 0px 100% 0px !important;
+		margin: 0px 0px 4px 0px !important;
 		padding: 0px !important;
 	}
 	#footer-trigger {

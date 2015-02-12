@@ -198,22 +198,28 @@
 <!-- STYLE SECTION -->
 
 <div class="style">
-	<div class="style-in">
-		<div class="container-fluid">
+	<div class="style-in nopad">
+		<div class="container-fluid nopad">
 			<div class="row-fluid">
-				<div class="col-sm-10 col-sm-offset-1">
-					<h2>Style <span><i class="fa fa-scissors"></i></span></h2>
-				</div>
-			</div>
-			<div class="row-fluid">
-				<div class="col-sm-7 col-sm-offset-1">
-					<div>
-						<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
-						<div class="spacer20"></div>
-						<a class="pull-right" href="<?php bloginfo('url'); ?>/style">See More in Style</a>
-						<div class="spacer40"></div>
+				<div class="col-sm-7 col-sm-offset-1 pad20">
+					<div class="row-fluid">
+						<div class="col-sm-12">
+							<h2>Style <span><i class="fa fa-scissors"></i></span></h2>
+						</div>
 					</div>
-					<hr>
+					<div class="row-fluid">
+						<div class="col-sm-12 nopadLeft">
+						<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
+						</div>
+					</div>
+					<div class="row-fluid">
+						<div class="col-sm-12 spacer40"></div>
+						<div class="col-sm-12">
+							<a class="pull-right" href="<?php bloginfo('url'); ?>/category/style"><button>See More</button></a>
+						</div>
+						<div class="col-sm-12 spacer40"></div>
+						<hr>
+					</div>
 					<h2>Beauty <span><i class="fa fa-bomb"></i></span></h2>
 					<div class="row-fluid post-grid">
 						<?php
@@ -281,12 +287,12 @@
 						?>
 					</div>
 				</div>
-				<div class="col-sm-3">
-					<div class="darlings">
+				<div class="col-sm-4 nopad">
+					<div class="darlings pad20">
 						<div class="brand"></div>
-						<h2 class="text-center"><span>Darlings</span></h2>
+						<h1 class="text-center"><span>Models</span></h2>
 						<?php
-						$postslist = get_posts('tag_name=darlings&numberposts=4&order=DESC&orderby=date&offset=0');
+						$postslist = get_posts('category_name=models&numberposts=4&order=DESC&orderby=date&offset=0');
 						foreach ($postslist as $post) :
 						setup_postdata($post);
 						?>
@@ -299,7 +305,7 @@
 						<?php endforeach; ?>
 						<div class="row-fluid">
 							<div class="spacer20"></div>
-							<p class="text-center"><a href="<?php echo get_tag_link($tag_id); ?>"><button>Read More</button></a></p>
+							<p class="text-center"><a href="<?php bloginfo('url'); ?>/tag/darling"><button>Read More</button></a></p>
 						</div>
 					</div>
 				</div>
@@ -351,7 +357,7 @@
 		</div> -->
 		<div id="content" class="col-sm-10 col-sm-offset-1">
 			<?php if ( have_posts() ): ?>
-			<h2>Hot <span>Stories</span> <i class="fa fa-diamond"></i></h2>
+			<h2>Latest <span>Stories</span> <i class="fa fa-diamond"></i></h2>
 			<hr>
 			<ol>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -383,7 +389,7 @@
 			<?php endif; ?>
 
 			<?php 
-			echo do_shortcode('[ajax_load_more post_type="post" orderby="date" offset="4"]');
+			echo do_shortcode('[ajax_load_more post_type="post" button_label="More Posts" offset="12"]');
 			?>
 
 			<!-- <div id="post-nav">

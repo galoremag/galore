@@ -3,12 +3,12 @@
 	
 	<div id="footer-trigger">
 		<div class="footbut">
-			<a class="brand-white-sm" href="#"></a>
+			<a id="footer-open" class="brand-white-sm" href="#"></a>
 		</div>
 		<footer>
 			<div class="container-fluid">
 				<div class="pull-left">
-					<a class="brand-white-sm" href="#"></a>
+					<a id="footer-close" class="brand-white-sm" href="#"></a>
 				</div>
 	<!-- 			<div class="pad5 pull-left">
 					<ul class="legal">
