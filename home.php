@@ -387,6 +387,7 @@
 					<li class="post">
 						<article class="row-fluid">
 							<div class="nopad col-sm-4">
+								<div class="catlinks"><?php the_category(); ?></div>
 								<div class="thumbnail">
 									<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large'); ?></a>
 								</div>
@@ -412,7 +413,7 @@
 				<?php endif; ?>
 
 				<?php 
-				echo do_shortcode('[ajax_load_more post_type="post" category__not_in="2131" button_label="More Posts"]');
+				echo do_shortcode('[ajax_load_more post_type="post" category__not_in="mag, models" button_label="More Posts"]');
 				?>
 
 				<!-- <div id="post-nav">
