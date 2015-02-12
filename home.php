@@ -158,10 +158,6 @@
 							//Show the left hand side column
 							if($counter == 1) :
 							?>
-							<?php
-							//Show the left hand side column
-							if($counter == 1) :
-							?>
 							<div class="col-sm-4">
 								<div class="entry">
 									<div class="postimage">
