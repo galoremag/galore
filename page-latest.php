@@ -52,7 +52,7 @@
 			<?php endif; ?>
 
 			<?php 
-			echo do_shortcode('[ajax_load_more post_type="post" button_label="More Posts"]');
+			echo do_shortcode('[ajax_load_more post_type="post" category="beauty,fitness,tv,mag,models,parties,pop,sex-dating,style" button_label="More Posts"]');
 			?>
 
 			<!-- <div id="post-nav">
