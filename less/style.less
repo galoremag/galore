@@ -79,6 +79,7 @@ Version: 1.0.1
 /*  VARIABLES & MIXINS  */
 
 @pink : #E81B8E;
+@bigwhite : antiquewhite;
 
 .font1 {
 	font-family: 'Montserrat', sans-serif;
@@ -623,6 +624,17 @@ body {
 	padding: 100px 0px 0px 0px;
 }
 
+#global-container.single {
+	background: url(images/giftly.png) repeat;
+	background-attachment: fixed;
+}
+
+#global-inner.single {
+	.yellowBlueGradientFade;
+	background-attachment: fixed;
+	padding: 100px 0px 0px 0px;
+}
+
 .brand {
 	width: 180px;
 	height: 215px;
@@ -800,11 +812,11 @@ nav.shrink ul.nav {
 }
 
 .jumbotron .rsGalore .rsText p, .jumbotron .rsGalore .rsText h3 {
-	color: white !important;
+	color: @bigwhite !important;
 }
 
-.rsText h3 a {color: white !important;}
-.rsText h3 a:visited {color: white !important;}
+.rsText h3 a {color: @bigwhite !important;}
+.rsText h3 a:visited {color: @bigwhite !important;}
 .rsText h3 a:hover {color: @pink;}
 
 .rsGalore .rsTags {
@@ -815,8 +827,8 @@ nav.shrink ul.nav {
 	background: @pink;
 }
 
-.rsGalore .rsTags a { color: fade(white,80%); }
-.rsGalore .rsTags a:hover { color: white; }
+.rsGalore .rsTags a { color: fade(@bigwhite,70%); }
+.rsGalore .rsTags a:hover { color: @bigwhite; }
 
 .rsGalore .rsText {
 	position: absolute;
@@ -929,7 +941,7 @@ ul.post-social li a:hover {
 	padding: 10px;
 	right: 0px;
 	margin: -45px 0 0 0;
-	background: aliceblue;
+	background: @bigwhite;
 	box-shadow: 1px 1px 5px rgba(255,0,50,0.3);
 }
 
