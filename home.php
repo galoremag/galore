@@ -188,7 +188,7 @@
 			<div class="row-fluid">
 				<div class="col-sm-12">
 					<div class="spacer20"></div>
-					<p class="text-center"><a href="<?php bloginfo('url'); ?>/pop">See More in Pop</a></p>
+					<p class="text-center"><a href="<?php bloginfo('url'); ?>/pop"><button>See More <i class="fa fa-chevron-right"></i></button></a></p>
 				</div>
 			</div>
 		</div>
@@ -208,7 +208,7 @@
 						</div>
 					</div>
 					<div class="row-fluid">
-						<div class="col-sm-12 nopadLeft">
+						<div class="col-sm-12 nopad">
 						<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
 						</div>
 					</div>
