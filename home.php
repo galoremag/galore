@@ -305,7 +305,7 @@
 						<?php endforeach; ?>
 						<div class="row-fluid">
 							<div class="spacer20"></div>
-							<p class="text-center"><a href="<?php bloginfo('url'); ?>/tag/darling"><button>Read More</button></a></p>
+							<p class="text-center"><a href="<?php bloginfo('url'); ?>/category/models"><button>Read More</button></a></p>
 						</div>
 					</div>
 				</div>
