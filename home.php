@@ -290,7 +290,7 @@
 				<div class="col-sm-4 nopad">
 					<div class="darlings pad20">
 						<div class="brand"></div>
-						<h1 class="text-center"><span>Models</span></h2>
+						<h1 class="text-center"><span>Girls</span></h1>
 						<?php
 						$postslist = get_posts('category_name=models&numberposts=4&order=DESC&orderby=date&offset=0');
 						foreach ($postslist as $post) :

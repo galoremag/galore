@@ -7,6 +7,10 @@
             </div>
             <div class="modal-body">
                 <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
+                <p class="text-center">
+                    Wanna get stories in your inbox? How about invites to cool parties?
+                </p>
+                <h2 class="text-center"><span>Get On The List</span></h2>
                 <form action="http://galoremag.createsend.com/t/i/s/tjcj/" method="post">
                     <div class="form-group">
                         <input class="form-control" id="fieldName" name="cm-name" type="text" />

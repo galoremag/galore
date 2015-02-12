@@ -748,10 +748,14 @@ nav.shrink ul.nav {
 	background: @pink;
 	border: 0px;
 	padding: 6px 10px;
+	opacity: 0.5;
+	.transition;
 }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
 	background: darken(@pink, 10%) !important;
+	opacity: 1;
+	.transition;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -1310,11 +1314,7 @@ button.alm-load-more-btn.done:before {
 	cursor: pointer;
 }
 
-.modal {
-
-}
-
-.modal-open .modal {
+.modal.in .modal-dialog {
 	z-index: 9999;
 }
 
@@ -1499,7 +1499,7 @@ button.alm-load-more-btn.done:before {
 		.yellowBlueGradientFade;
 	}
 
-	.style .rsGalore h1 {
+	.style .rsGalore h2 span {
 		font-size: 24px;
 	}
 
