@@ -389,7 +389,7 @@
 			<?php endif; ?>
 
 			<?php 
-			echo do_shortcode('[ajax_load_more post_type="post" button_label="More Posts" offset="12"]');
+			echo do_shortcode('[ajax_load_more post_type="post" category__not_in="2131" button_label="More Posts"]');
 			?>
 
 			<!-- <div id="post-nav">
