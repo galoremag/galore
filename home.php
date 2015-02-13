@@ -18,11 +18,11 @@
 <div id="latest" class="latest-slider">
 	<div class="container-fluid">
 		<h2 class="text-center"><span>The</span> Latest</h2>
-		<div class="row-fluid">
+		<!-- <div class="row-fluid">
 			<div class="col-sm-12">
 				<?php echo do_shortcode('[carousel-horizontal-posts-content-slider]'); ?>
 			</div>
-		</div>
+		</div> -->
 		<!-- <div id="latest-container" class="row-fluid">
 			<table>
 				<tbody>
@@ -42,10 +42,48 @@
 			</table>
 		</div> -->
 	</div>
+	
+	<!-- touch Swipe -->
 
+	<!-- <div class="bp-touchSwipe">
+	  <div class="bp-touchSwipe_inner">
+	  	<?php
+			$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0');
+			foreach ($postslist as $post) :
+			setup_postdata($post);
+		?>
+	    <div class="bp-inner_item">
+    		<?php the_post_thumbnail('thumbnail'); ?>
+			<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
+			<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time>
+			<p>By <?php the_author_posts_link(); ?></p>
+			<p><?php echo substr(get_the_excerpt(), 0,100); ?></p>
+	    </div>
+	    <?php endforeach; ?>
+	  </div>
+	  <div class="pull-left"><a id="slideLeft" href="#"><i class="fa fa-chevron-left"></i></a></div>
+	  <div class="pull-right"><a id="slideRight" href="#"><i class="fa fa-chevron-right"></i></a></div>
+	</div>
 	<div class="row-fluid">
 		<p class="readmore text-center"><a href="<?php bloginfo('url'); ?>/the-latest"><button>All Recent Stories</button></a></p>
+	</div> -->
+
+	<div id="glides">
+		<?php
+			$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0');
+			foreach ($postslist as $post) :
+			setup_postdata($post);
+		?>
+		<div class="glide">
+			<?php the_post_thumbnail('thumbnail'); ?>
+			<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
+			<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time>
+			<p>By <?php the_author_posts_link(); ?></p>
+			<p><?php echo substr(get_the_excerpt(), 0,100); ?></p>
+		</div>
+		<?php endforeach; ?>
 	</div>
+
 </div>
 
 <!-- SEX + DATING SECTION -->

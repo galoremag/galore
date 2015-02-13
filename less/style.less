@@ -894,7 +894,7 @@ nav.shrink ul.nav {
 */
 
 #latest {
-	display: none !important;
+	/*display: none !important;*/
 }
 
 .latest-slider {
@@ -914,6 +914,79 @@ nav.shrink ul.nav {
 	line-height: 18px;
 	margin: 5px 0px;
 	letter-spacing: -0.5px;
+}
+
+/* CUSTOM SLIDER */
+
+.bp-touchSwipe {
+  overflow: hidden;
+  position: relative;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+.bp-touchSwipe:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.bp-touchSwipe,
+.bp-touchSwipe .bp-touchSwipe_inner,
+.bp-touchSwipe .bp-inner_item {
+  height: 400px;
+}
+
+.bp-touchSwipe .bp-touchSwipe_inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  -moz-transition: all, 1s, ease;
+  -o-transition: all, 1s, ease;
+  -webkit-transition: all, 1s, ease;
+  transition: all, 1s, ease;
+}
+
+.bp-touchSwipe .bp-inner_item {
+  width: 320px;
+  float: left;
+}
+
+.bp-touchSwipe .bp-inner_item p {
+	padding: 10px
+}
+
+#latest {
+	height: 300px !important;
+	overflow-x: scroll !important;
+}
+
+#glides {
+  width: 100%; height: 100%;
+  white-space: nowrap;
+  font-size: 0;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.glide {
+  width: 200px; height: 100%;
+  display: inline-block;
+  background-size: cover;
+}
+
+.animate {
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 }
 
 .readmore {}
@@ -1524,6 +1597,28 @@ button.alm-load-more-btn.done:before {
 		margin: 0px !important;
 		border: 0px !important;
 		.transition;
+	}
+	.bp-touchSwipe,
+	.bp-touchSwipe .bp-touchSwipe_inner,
+	.bp-touchSwipe .bp-inner_item {
+	  height: 220px;
+	}
+
+	.bp-touchSwipe .bp-touchSwipe_inner {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  margin: 0;
+	  padding: 0;
+	  -moz-transition: all, 0.1s, ease;
+	  -o-transition: all, 0.1s, ease;
+	  -webkit-transition: all, 0.1s, ease;
+	  transition: all, 0.1s, ease;
+	}
+
+	.bp-touchSwipe .bp-inner_item {
+	  width: 320px;
+	  float: left;
 	}
 
 	ul.top-social {
