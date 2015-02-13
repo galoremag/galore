@@ -20,6 +20,9 @@
 		<!-- skin stylesheet (change it if you use another) -->
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/rs-galore-skin/rs-galore.css"> 
 
+		<!-- Perfect Scrollbar CSS -->
+		<link rel='stylesheet' href='<?php echo get_stylesheet_directory_uri(); ?>/node_modules/perfect-scrollbar/min/perfect-scrollbar.min.css' />
+
 		<!-- Plugin requires jQuery 1.8+  -->
 		<!-- If you already have jQuery on your page, you shouldn't include it second time. -->
 		<script src='<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery-1.7.2.min.js'></script>
@@ -29,6 +32,9 @@
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 		<?php wp_head(); ?>
+
+		<!-- Perfect Scrollbar JS -->
+		<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/node_modules/perfect-scrollbar/min/perfect-scrollbar.min.js'></script>
 
 		<!-- Main slider JS script file --> 
 		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/site.js'></script>

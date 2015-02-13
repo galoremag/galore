@@ -106,5 +106,7 @@
 		//   }
 		// });
 
+		$('#glides').perfectScrollbar();
+
 	});
 
