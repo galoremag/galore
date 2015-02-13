@@ -14,11 +14,11 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div id="content" class="col-sm-8 col-sm-offset-2">
-			<?php query_posts('posts_per_page=4&offset=4'); ?>
-			<?php if ( have_posts() ): ?>
 			<h2><?php echo single_cat_title( '', false ); ?></h2>
 			<hr>
 			<ol>
+			<?php query_posts('posts_per_page=4&offset=4'); ?>
+			<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<li class="post">
 					<article class="row-fluid">
