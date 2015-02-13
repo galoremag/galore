@@ -309,6 +309,9 @@
 							endif;
 							?>
 						</div>
+						<div class="row-fluid">
+							<p class="text-center"><a href="<?php bloginfo('url'); ?>/category/beauty"><button>Read More</button></a></p>
+						</div>
 					</div>
 					<div class="col-sm-4 nopad">
 						<div class="darlings pad20">
