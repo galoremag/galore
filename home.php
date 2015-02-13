@@ -309,7 +309,7 @@
 					<div class="col-sm-4 nopad">
 						<div class="darlings pad20">
 							<div class="brand"></div>
-							<h1 class="text-center"><span>Girls</span></h1>
+							<h1 class="text-center"><span>Darlings</span></h1>
 							<?php
 							$postslist = get_posts('category_name=models&numberposts=4&order=DESC&orderby=date&offset=0');
 							foreach ($postslist as $post) :
@@ -375,10 +375,11 @@
 				</div>
 			</div> -->
 			<div id="content" class="col-sm-10 col-sm-offset-1">
-				<?php if ( have_posts() ): ?>
 				<h2>Latest <span>Stories</span> <i class="fa fa-diamond"></i></h2>
 				<hr>
 				<ol>
+				<?php query_posts($query_string . 'posts_per_page=4'); ?>
+				<?php if ( have_posts() ): ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<li class="post">
 						<article class="row-fluid">
@@ -409,7 +410,7 @@
 				<?php endif; ?>
 
 				<?php 
-				echo do_shortcode('[ajax_load_more post_type="post" category__not_in="mag, models" button_label="More Posts"]');
+				echo do_shortcode('[ajax_load_more post_type="post" category__not_in="mag, models" button_label="More Posts" offset="4"]');
 				?>
 
 				<!-- <div id="post-nav">
