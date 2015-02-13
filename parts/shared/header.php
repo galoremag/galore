@@ -14,11 +14,11 @@
 	        </div>
 	        <div id="main-cats" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="<?php bloginfo('url'); ?>/category/style" target="_blank">Style</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/beauty" target="_blank">Beauty</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" target="_blank">Sex + Dating</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/fitness" target="_blank">Fitness</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/pop" target="_blank">Pop</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/style">Style</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/beauty">Beauty</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/sex-dating">Sex + Dating</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/fitness">Fitness</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/pop">Pop</a></li>
 					<!-- <li class="dropdown">
 					  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
 					  <ul class="dropdown-menu" role="menu">
@@ -34,11 +34,11 @@
 				</ul>
 				<ul class="top-social navbar-right tab">
 					<li><a id="signupButton" data-toggle="modal" data-target="#myModal" href="#"><i class="fa fa-inbox"></i></a></li>
-					<li><a href="https://www.facebook.com/galoremag"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="http://instagram.com/kittengalore/"><i class="fa fa-instagram"></i></a></li>
-					<li><a href="https://twitter.com/thegaloremag"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="http://princeandjacob.tumblr.com/"><i class="fa fa-tumblr"></i></a></li>
-					<li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g"><i class="fa fa-youtube-play"></i></a></li>
+					<li><a href="https://www.facebook.com/galoremag" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="http://instagram.com/kittengalore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+					<li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
 				<li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li>
 				</ul>
 	        </div><!--/.nav-collapse -->
