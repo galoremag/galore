@@ -14,6 +14,7 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div id="content" class="col-sm-8 col-sm-offset-2">
+			<?php query_posts($query_string . 'posts_per_page=4&offset=4'); ?>
 			<?php if ( have_posts() ): ?>
 			<h2><?php echo single_cat_title( '', false ); ?></h2>
 			<hr>
