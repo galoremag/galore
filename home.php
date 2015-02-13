@@ -16,7 +16,7 @@
 	</div>
 </div>
 
-<h2 class="text-center"><span>The</span> Latest</h2>
+<h2 class="text-center verPad20"><span>The</span> Latest</h2>
 <div id="latest">
 
 	<div id="glides">
@@ -32,11 +32,13 @@
 			<p><?php echo substr(get_the_excerpt(), 0,100); ?></p>
 		</div>
 		<?php endforeach; ?>
-		<div class="glide">
-			<a href="#"><button>More Stories &nbsp;<i class="fa fa-chevron-right"></i></button></a>
-		</div>
 	</div>
+</div>
 
+<div class="text-center">
+	<div class="spacer20"></div>
+	<a class="centerBlock" href="#"><button>More Stories &nbsp;<i class="fa fa-chevron-right"></i></button></a>
+	<div class="spacer20"></div>
 </div>
 
 <!-- SEX + DATING SECTION -->
