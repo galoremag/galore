@@ -49,89 +49,62 @@
 		// CUSTOM SLIDER  //
 		//////////////////////
 
-		$(function () {
-		    $(".bp-touchSwipe").each(function () {
-		        function e() {
-		            a.find(".bp-touchSwipe_inner").css({
-		                width: a.find(".bp-inner_item").length * a.find(".bp-inner_item").width()
-		            })
-		        }
-		        var a = $(this);
-		        e();
-		        window.onresize = e;
-		        a.find(".bp-touchSwipe_inner").width() > a.width() && a.swipe({
-		            swipeStatus: function (f, c, b, d, e, g) {
-		                f = parseInt(a.find(".bp-touchSwipe_inner").css("left"));
-		                d = a.find(".bp-inner_item");
-		                d.last().position();
-		                d.last().width();
-		                a.width();
-		                b = "left" == b ? -1 : 1;
-		                "end" == c && (-1 == b ? (c = f + b * d.width(), b = -a.find(".bp-touchSwipe_inner").width() + a.innerWidth(), a.find(".bp-touchSwipe_inner").css("left", Math.max(c, b))) : 1 == b && (c = f + b * d.width(), a.find(".bp-touchSwipe_inner").css("left", Math.min(0, c))))
-		            },
-		            threshold: 0,
-		            maxTimeThreshold: 5E3,
-		            fingers: "all"
-		        })
-		    })
-		});
+		// function reSize($target){
+	 //        $target.css('width', $(window).width()+'px');
+	 //    }
+  //       $(window).bind('resize', reSize($('#latest')));
+  //       $(window).trigger('resize');
 
-		function reSize($target){
-	        $target.css('width', $(window).width()+'px');
-	    }
-        $(window).bind('resize', reSize($('#latest')));
-        $(window).trigger('resize');
+  //       $(function () {
+		//   var sliding = startClientX = startPixelOffset = pixelOffset = currentSlide = 0,
+		//   slideCount = $('.slide').length;
 
-        $(function () {
-		  var sliding = startClientX = startPixelOffset = pixelOffset = currentSlide = 0,
-		  slideCount = $('.slide').length;
+		// $('#latest').live('mousedown touchstart', slideStart);
+		// $('#latest').live('mouseup touchend', slideEnd);
+		// $('#latest').live('mousemove touchmove', slide);
 
-		$('#latest').live('mousedown touchstart', slideStart);
-		$('#latest').live('mouseup touchend', slideEnd);
-		$('#latest').live('mousemove touchmove', slide);
+		// function slideStart(event) {
+		//     if (event.originalEvent.touches)
+		//       event = event.originalEvent.touches[0];
+		//     if (sliding == 0) {
+		//       sliding = 1;
+		//       startClientX = event.clientX;
+		//     }
+		//   }
 
-		function slideStart(event) {
-		    if (event.originalEvent.touches)
-		      event = event.originalEvent.touches[0];
-		    if (sliding == 0) {
-		      sliding = 1;
-		      startClientX = event.clientX;
-		    }
-		  }
+		// function slide(event) {
+		//     event.preventDefault();
+		//     if (event.originalEvent.touches)
+		// 		event = event.originalEvent.touches[0];
+		// 		var deltaSlide = event.clientX - startClientX;
 
-		 function slide(event) {
-		    event.preventDefault();
-		    if (event.originalEvent.touches)
-		      event = event.originalEvent.touches[0];
-		     var deltaSlide = event.clientX - startClientX;
+		// if (sliding == 1 && deltaSlide != 0) {
+		//       sliding = 2;
+		//       startPixelOffset = pixelOffset;
+		//     }
 
-		if (sliding == 1 && deltaSlide != 0) {
-		      sliding = 2;
-		      startPixelOffset = pixelOffset;
-		    }
+		// if (sliding == 2) {
+		//       var touchPixelRatio = 1;
+		//       if ((currentSlide == 0 && event.clientX > startClientX) ||
+		//           (currentSlide == slideCount - 1 && event.clientX < startClientX))
+		//         touchPixelRatio = 3;
+		//       pixelOffset = startPixelOffset + deltaSlide / touchPixelRatio;
+		//       $('#glides').css('transform', 'translate3d(' + pixelOffset + 'px,0,0)').removeClass();
+		//     }
+		//   }
 
-		if (sliding == 2) {
-		      var touchPixelRatio = 1;
-		      if ((currentSlide == 0 && event.clientX > startClientX) ||
-		          (currentSlide == slideCount - 1 && event.clientX < startClientX))
-		        touchPixelRatio = 3;
-		      pixelOffset = startPixelOffset + deltaSlide / touchPixelRatio;
-		      $('#glides').css('transform', 'translate3d(' + pixelOffset + 'px,0,0)').removeClass();
-		    }
-		  }
-
-		function slideEnd(event) {
-		    if (sliding == 2) {
-		      sliding = 0;
-		      currentSlide = pixelOffset < startPixelOffset ? currentSlide + 1 : currentSlide - 1;
-		      currentSlide = Math.min(Math.max(currentSlide, 0), slideCount - 1);
-		      pixelOffset = currentSlide * -$('#glides').width();
-		      $('#temp').remove();
-		      $('<style id="temp">#glides.animate{transform:translate3d(' + pixelOffset + 'px,0,0)}</style>').appendTo('head');
-		      $('#glides').addClass('animate').css('transform', '');
-		    }
-		  }
-		});
+		// function slideEnd(event) {
+		//     if (sliding == 2) {
+		//       sliding = 0;
+		//       currentSlide = pixelOffset < startPixelOffset ? currentSlide + 1 : currentSlide - 1;
+		//       currentSlide = Math.min(Math.max(currentSlide, 0), slideCount - 1);
+		//       pixelOffset = currentSlide * -$('#glides').width();
+		//       $('#temp').remove();
+		//       $('<style id="temp">#glides.animate{transform:translate3d(' + pixelOffset + 'px,0,0)}</style>').appendTo('head');
+		//       $('#glides').addClass('animate').css('transform', '');
+		//     }
+		//   }
+		// });
 
 	});
 

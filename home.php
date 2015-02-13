@@ -15,9 +15,10 @@
 		</div>
 	</div>
 </div>
+
+<h2 class="text-center"><span>The</span> Latest</h2>
 <div id="latest" class="latest-slider">
 	<div class="container-fluid">
-		<h2 class="text-center"><span>The</span> Latest</h2>
 		<!-- <div class="row-fluid">
 			<div class="col-sm-12">
 				<?php echo do_shortcode('[carousel-horizontal-posts-content-slider]'); ?>
@@ -77,11 +78,13 @@
 		<div class="glide">
 			<?php the_post_thumbnail('thumbnail'); ?>
 			<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
-			<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time>
-			<p>By <?php the_author_posts_link(); ?></p>
+			<p><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time(); ?></time> • By <?php the_author_posts_link(); ?></p>
 			<p><?php echo substr(get_the_excerpt(), 0,100); ?></p>
 		</div>
 		<?php endforeach; ?>
+		<div class="glide">
+			<a href="#"><button>More Stories &nbsp;<i class="fa fa-chevron-right"></i></button></a>
+		</div>
 	</div>
 
 </div>
