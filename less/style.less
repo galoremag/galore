@@ -136,6 +136,9 @@ Version: 1.0.1
 .verPad10 {
 	padding: 10px 0px !important;
 }
+.verPad20 {
+	padding: 20px 0px !important;
+}
 
 .nopad {
 	padding: 0 !important;
@@ -408,6 +411,11 @@ a button, .btn {
 a:hover button, .btn:hover {
 	opacity: 1;
 	color: white;
+}
+
+.centerBlock {
+	display: inline-block;
+	margin: 0 auto;
 }
 
 .btn-bp {.bluePinkGradient;opacity: 0.8;}
@@ -874,46 +882,40 @@ nav.shrink ul.nav {
 	display: none !important;
 }
 
-/*  This container element gives us the scrollbars we want.  */
-
-/*#latest-container {
-}
+/* CUSTOM SLIDER */
 
 #latest {
-	width: 1000px;
-	white-space: nowrap;
-	overflow-y: hidden;
-	overflow-x: scroll;
-	border: 1px solid white;
-	-webkit-overflow-scrolling: touch;
-	overflow-scrolling: auto;
-	padding: 1rem;
-	height: 300px;
-	position: relative;
-}
-*/
-
-#latest {
-	display: none !important;
+	height: 320px !important;
+	overflow-x: scroll !important;
 }
 
-.latest-slider {
-	background: #fff;
+#glides {
+  width: 100%; height: 100%;
+  white-space: nowrap;
+  font-size: 0;
+  padding: 0 10px;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 
-.latest-entry {
-	display: inline;
-	float: left;
-	position: relative;
-	.font3;
+.glide {
+  width: 200px; height: 250px;
+  margin: 0 5px;
+  display: inline-table;
+  background-size: cover;
+  white-space: normal;
+  font-size: 12px;
 }
 
-.latest-slider span.chpcs_title {
-	.font3;
-	font-size: 18px;
-	line-height: 18px;
-	margin: 5px 0px;
-	letter-spacing: -0.5px;
+.animate {
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -ms-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 }
 
 .readmore {}
@@ -986,14 +988,6 @@ ul.post-social li a:hover {
 	float: left;
 	width: 50%;
 	margin: 10px 40px 10px 0px;
-}
-
-.latest-slider {
-	padding: 20px 0px 20px 0px;
-}
-
-.latest-slider h1, .latest-slider h2 {
-	color: @pink;
 }
 
 #home-container .sex-dating {
@@ -1524,6 +1518,28 @@ button.alm-load-more-btn.done:before {
 		margin: 0px !important;
 		border: 0px !important;
 		.transition;
+	}
+	.bp-touchSwipe,
+	.bp-touchSwipe .bp-touchSwipe_inner,
+	.bp-touchSwipe .bp-inner_item {
+	  height: 220px;
+	}
+
+	.bp-touchSwipe .bp-touchSwipe_inner {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  margin: 0;
+	  padding: 0;
+	  -moz-transition: all, 0.1s, ease;
+	  -o-transition: all, 0.1s, ease;
+	  -webkit-transition: all, 0.1s, ease;
+	  transition: all, 0.1s, ease;
+	}
+
+	.bp-touchSwipe .bp-inner_item {
+	  width: 320px;
+	  float: left;
 	}
 
 	ul.top-social {
