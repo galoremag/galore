@@ -378,7 +378,7 @@
 				<h2>Latest <span>Stories</span> <i class="fa fa-diamond"></i></h2>
 				<hr>
 				<ol>
-				<?php query_posts($query_string . 'posts_per_page=4'); ?>
+				<?php query_posts($query_string . 'posts_per_page=4&offset=8'); ?>
 				<?php if ( have_posts() ): ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<li class="post">
@@ -410,7 +410,7 @@
 				<?php endif; ?>
 
 				<?php 
-				echo do_shortcode('[ajax_load_more post_type="post" category__not_in="mag, models" button_label="More Posts" offset="4"]');
+				echo do_shortcode('[ajax_load_more post_type="post" category__not_in="mag, models" button_label="More Posts" offset="12"]');
 				?>
 
 				<!-- <div id="post-nav">
