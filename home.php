@@ -17,57 +17,7 @@
 </div>
 
 <h2 class="text-center"><span>The</span> Latest</h2>
-<div id="latest" class="latest-slider">
-	<div class="container-fluid">
-		<!-- <div class="row-fluid">
-			<div class="col-sm-12">
-				<?php echo do_shortcode('[carousel-horizontal-posts-content-slider]'); ?>
-			</div>
-		</div> -->
-		<!-- <div id="latest-container" class="row-fluid">
-			<table>
-				<tbody>
-				    <tr>
-				    	<?php
-						$postslist = get_posts('numberposts=12&order=DESC&orderby=date&offset=0');
-						foreach ($postslist as $post) :
-						setup_postdata($post);
-						?>
-				    	<td class="latest-entry">
-				    		<?php the_post_thumbnail('thumbnail'); ?>
-							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-				    	</td>
-				    	<?php endforeach; ?>
-				    </tr>
-				</tbody>
-			</table>
-		</div> -->
-	</div>
-	
-	<!-- touch Swipe -->
-
-	<!-- <div class="bp-touchSwipe">
-	  <div class="bp-touchSwipe_inner">
-	  	<?php
-			$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0');
-			foreach ($postslist as $post) :
-			setup_postdata($post);
-		?>
-	    <div class="bp-inner_item">
-    		<?php the_post_thumbnail('thumbnail'); ?>
-			<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
-			<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time>
-			<p>By <?php the_author_posts_link(); ?></p>
-			<p><?php echo substr(get_the_excerpt(), 0,100); ?></p>
-	    </div>
-	    <?php endforeach; ?>
-	  </div>
-	  <div class="pull-left"><a id="slideLeft" href="#"><i class="fa fa-chevron-left"></i></a></div>
-	  <div class="pull-right"><a id="slideRight" href="#"><i class="fa fa-chevron-right"></i></a></div>
-	</div>
-	<div class="row-fluid">
-		<p class="readmore text-center"><a href="<?php bloginfo('url'); ?>/the-latest"><button>All Recent Stories</button></a></p>
-	</div> -->
+<div id="latest">
 
 	<div id="glides">
 		<?php
