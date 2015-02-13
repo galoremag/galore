@@ -23,7 +23,7 @@
 					<article class="row-fluid">
 						<div class="nopad col-sm-4">
 							<div class="thumbnail">
-								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large', 300, 150); ?></a>
+								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large'); ?></a>
 							</div>
 						</div>
 						<div class="nopadright col-sm-8">
@@ -49,7 +49,7 @@
 			<?php 
 			$cat = get_category( get_query_var( 'cat' ) );
 			$category = $cat->slug;
-			echo do_shortcode('[ajax_load_more category="'.$category.'"]');
+			echo do_shortcode('[ajax_load_more category="'.$category.'" offset="12"]');
 			?>
 
 			<!-- <div id="post-nav">
