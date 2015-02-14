@@ -27,7 +27,7 @@
 		
 		$('.navbar-toggle').click(function(){
 			event.preventDefault();
-			$(this).css('-webkit-transform: rotate(90deg);');
+			// $(this).css('-webkit-transform: rotate(90deg);');
 			$('.collapse').collapse('hide');
 		})
 
