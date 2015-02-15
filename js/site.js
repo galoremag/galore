@@ -25,10 +25,14 @@
 		// Bootstrap Collapse   //
 		//////////////////////////
 		
-		$('.navbar-toggle').click(function(){
-			event.preventDefault();
-			// $(this).css('-webkit-transform: rotate(90deg);');
-			$('.collapse').collapse('hide');
+		// $('.navbar-toggle').click(function(){
+		// 	event.preventDefault();
+		// 	// $(this).css('-webkit-transform: rotate(90deg);');
+		// 	$('.collapse').collapse('hide');
+		// });
+		
+		$('.nav-collapse a[data-toggle]').click(function() {
+		  $('.nav-collapse').css('height', '100%');
 		});
 
 		/////////////////////

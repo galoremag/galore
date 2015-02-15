@@ -45,7 +45,7 @@
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
 
-		<script src="<?php echo content_url(); ?>/themes/galore/js/bootstrap-collapse.js"></script>
+		
 
 		<!-- REMOVE THE TAP DELAY -->
 		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/fastclick.js'></script>
