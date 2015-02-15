@@ -17,7 +17,7 @@
 			<h2><?php echo single_cat_title( '', false ); ?></h2>
 			<hr>
 			<ol>
-			<?php query_posts('posts_per_page=4&offset=4'); ?>
+			<?php query_posts('category_name=beauty&posts_per_page=4&offset=4'); ?>
 			<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<li class="post">
