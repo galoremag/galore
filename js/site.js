@@ -29,7 +29,7 @@
 			event.preventDefault();
 			// $(this).css('-webkit-transform: rotate(90deg);');
 			$('.collapse').collapse('hide');
-		})
+		});
 
 		/////////////////////
 		// Footer Opener //
