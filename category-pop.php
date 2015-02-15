@@ -17,7 +17,7 @@
 			<h2><?php echo single_cat_title( '', false ); ?></h2>
 			<hr>
 			<ol>
-			<?php query_posts('category_name=pop&posts_per_page=4&offset=4'); ?>
+			<?php query_posts('category_name=pop&posts_per_page=4&offset=0'); ?>
 			<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<li class="post">
@@ -48,9 +48,7 @@
 			<?php endif; ?>
 
 			<?php 
-			$cat = get_category( get_query_var( 'cat' ) );
-			$category = $cat->slug;
-			echo do_shortcode('[ajax_load_more category="'.$category.'" offset="5"]');
+			echo do_shortcode('[ajax_load_more category="pop" offset="5"]');
 			?>
 
 			<!-- <div id="post-nav">
