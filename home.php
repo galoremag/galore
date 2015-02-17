@@ -136,7 +136,6 @@
 					                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
 					                <p><?php the_time(get_option('date_format')) ?></p>
 					                <p>By <?php the_author_posts_link(); ?></p>
-					                <p><?php echo get_the_popular_excerpt(); ?></p>
 					                <ul class="post-social">
 										<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 										<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
@@ -159,7 +158,6 @@
 					                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
 					                <p><?php the_time(get_option('date_format')) ?></p>
 					                <p>By <?php the_author_posts_link(); ?></p>
-					                <p><?php echo get_the_popular_excerpt(); ?></p>
 					                <ul class="post-social">
 										<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 										<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
@@ -181,7 +179,6 @@
 				                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 				                <p><?php the_time(get_option('date_format')) ?></p>
 				                <p>By <?php the_author_posts_link(); ?></p>
-				                <p><?php echo get_the_popular_excerpt(); ?></p>
 				                <ul class="post-social">
 									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 									<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
