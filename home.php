@@ -59,7 +59,7 @@
 						setup_postdata($post);
 						?>
 						<div class="entry home-chunk">
-							<?php the_post_thumbnail('large'); ?>
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
 							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 							<p><?php the_time(get_option('date_format')) ?></p>
 							<p>By <?php the_author_posts_link(); ?></p>
@@ -78,7 +78,7 @@
 						setup_postdata($post);
 						?>
 						<div class="entry">
-							<?php the_post_thumbnail('medium'); ?>
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 							<p><?php the_time(get_option('date_format')) ?></p>
 							<!-- <p><?php the_excerpt(10); ?></p> -->
