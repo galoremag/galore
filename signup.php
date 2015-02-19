@@ -8,7 +8,7 @@
             <div class="modal-body">
                 <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
                 <p class="text-center">
-                    Wanna get stories in your inbox? How about invites to cool parties?
+                    Get Galore updates right in your inbox.
                 </p>
                 <h2 class="text-center"><span>Get On The List</span></h2>
                 <form action="http://galoremag.createsend.com/t/i/s/tjcj/" method="post">

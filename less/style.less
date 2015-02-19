@@ -7,17 +7,17 @@ Description: 2015 Digital GaloreMag.com
 Version: 1.0.1
 */
 
-// Bootstrap imports
+/* Bootstrap imports */
 
-// Core variables and mixins
+/* Core variables and mixins */
 @import "../bower_components/bootstrap/less/variables.less";
 @import "../bower_components/bootstrap/less/mixins.less";
 
-// Reset
+/* Reset */
 @import "../bower_components/bootstrap/less/normalize.less";
 @import "../bower_components/bootstrap/less/print.less";
 
-// Core CSS
+/* Core CSS */
 @import "../bower_components/bootstrap/less/scaffolding.less";
 @import "../bower_components/bootstrap/less/type.less";
 @import "../bower_components/bootstrap/less/code.less";
@@ -26,7 +26,7 @@ Version: 1.0.1
 @import "../bower_components/bootstrap/less/forms.less";
 @import "../bower_components/bootstrap/less/buttons.less";
 
-// Components
+/* Components */
 @import "../bower_components/bootstrap/less/component-animations.less";
 @import "../bower_components/bootstrap/less/glyphicons.less";
 @import "../bower_components/bootstrap/less/dropdowns.less";
@@ -49,27 +49,27 @@ Version: 1.0.1
 @import "../bower_components/bootstrap/less/wells.less";
 @import "../bower_components/bootstrap/less/close.less";
 
-// Components w/ JavaScript
+/* Components w/ JavaScript */
 @import "../bower_components/bootstrap/less/modals.less";
 @import "../bower_components/bootstrap/less/tooltip.less";
 @import "../bower_components/bootstrap/less/popovers.less";
 @import "../bower_components/bootstrap/less/carousel.less";
 
-// Utility classes
+/* Utility classes */
 @import "../bower_components/bootstrap/less/utilities.less";
 @import "../bower_components/bootstrap/less/responsive-utilities.less";
 
-// Font Awesome icons
+/* Font Awesome icons */
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @fa-font-path: "fonts"; // Font Awesome font directory override
 
-// Google fonts
+/* Google fonts */
 @import url(//fonts.googleapis.com/css?family=Cabin:700,700italic);
 @import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic);
 @import url(//fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
 
-// Your theme files 
+/* Your theme files */
 //@import "_global.less";
 //@import "_header.less";
 //@import "_content.less";
@@ -600,6 +600,24 @@ body {
 	padding: 100px 0px 0px 0px;
 }
 
+/* PARTIES BACKGROUND */
+
+#global-container.parties {
+	background: url(images/subtle_white_feathers.png);
+}
+
+#global-inner.category-parties {
+	.purpleGradientFade;
+	background-attachment: fixed;
+	padding: 100px 0px 0px 0px;
+}
+
+#global-inner.parties {
+	.purpleGradientFade;
+	background-attachment: fixed;
+	padding: 100px 0px 0px 0px;
+}
+
 /* ERROR 404 BACKGROUND */
 
 #global-inner.error404 {
@@ -653,6 +671,8 @@ body {
 	padding: 100px 0px 0px 0px;
 }
 
+/* ABOUT BACKGROUND */
+
 #global-container.page-about {
 	background: url(images/greyfloral.png) repeat;
 	background-attachment: fixed;
@@ -663,6 +683,8 @@ body {
 	background-attachment: fixed;
 	padding: 100px 0px 0px 0px;
 }
+
+/* LEGAL BACKGROUND */
 
 #global-container.page-legal {
 	background: url(images/greyfloral.png) repeat;
@@ -675,6 +697,8 @@ body {
 	padding: 100px 0px 0px 0px;
 }
 
+/* CONTACT BACKGROUND */
+
 #global-container.page-contact {
 	background: url(images/greyfloral.png) repeat;
 	background-attachment: fixed;
@@ -686,6 +710,8 @@ body {
 	padding: 100px 0px 0px 0px;
 }
 
+/* TAG BACKGROUND */
+
 #global-container.tag {
 	background: url(images/kindajean.png) repeat;
 	background-attachment: fixed;
@@ -696,6 +722,8 @@ body {
 	background-attachment: fixed;
 	padding: 100px 0px 0px 0px;
 }
+
+/* MODELS BACKGROUND */
 
 #global-container.models {
 	background: url(images/kindajean.png) repeat;
@@ -714,12 +742,14 @@ body {
 	padding: 100px 0px 0px 0px;
 }
 
-#global-inner.archive { 
-	min-height: 1200px;
-}
-
 .models {
 	background: url(images/giftly.png) repeat;
+}
+
+/* ARCHIVE BACKGROUND */
+
+#global-inner.archive { 
+	min-height: 1200px;
 }
 
 .brand {
@@ -1660,6 +1690,31 @@ button.alm-load-more-btn.done:before {
 	div#site-search {
 		float: left !important;
 		margin: 10px 0;
+	}
+}
+
+/* RETINA STUFF */
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+	#global-container.parties {
+		background: url(images/subtle_white_feathers_@2x.png);
+	}
+	#global-container.the-latest,
+	#global-container.style,
+	#global-container.beauty,
+	#global-container.search,
+	#global-container.page-about,
+	#global-container.page-legal,
+	.jumbotron,
+	.style,
+	.beauty {
+		background: url(images/greyfloral_@2x.png) repeat;
+	}
+	#global-container.pop,
+	#global-container.tag,
+	#global-container.models,
+	.pop {
+		background: url(images/kindajean_@2x.png);
 	}
 }
 
