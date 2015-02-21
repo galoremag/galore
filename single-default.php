@@ -1,22 +1,19 @@
 <?php
 /**
- * The Template for displaying all single posts
- *
- * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
- *
- * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
- */
+* The Template for displaying all single posts
+*
+* Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
+*
+	* @package 	WordPress
+	* @subpackage 	Starkers
+		* @since 		Starkers 4.0
+*/
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div id="content" class="col-sm-8 col-sm-offset-2">
-
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
 			<article>
 				<div id="social-links">
 					<ul id="post-social" class="post-social">
@@ -26,29 +23,25 @@
 				</div>
 				<h3><?php the_title(); ?></h3>
 				<p>By <?php the_author_posts_link(); ?></p>
-
-				<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-				
+				<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time>
 				<div class="spacer20"></div>
-
-				<?php the_content(); ?>			
-
+				<?php the_content(); ?>
 				<div class="spacer20"></div>
-
 				<?php if ( get_the_author_meta( 'description' ) ) : ?>
 				<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
 				<h3>About <?php echo get_the_author() ; ?></h3>
 				<?php the_author_meta( 'description' ); ?>
 				<?php endif; ?>
-
+				<ul id="post-social" class="hidden-sm post-social">
+					<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+				</ul>
 				<?php comments_template( '', true ); ?>
-
 			</article>
 			<?php endwhile; ?>
-
 			<hr>
 			<h2 class="text-center">Similar Stories</h2>
-<!-- 			<ul>
+			<!-- 			<ul>
 				<?php
 				//for use in the loop, list 5 post titles related to first tag on current post
 				$tags = wp_get_post_tags($post->ID);
@@ -80,7 +73,6 @@
 					</article>
 				</li>
 				<hr>
-
 				<?php
 				endwhile;
 				}
@@ -88,28 +80,26 @@
 				}
 				?>
 			</ul> -->
-
 			<div id="related-posts" class="row-fluid">
 				<!-- <table>
-					<tbody>
-					    <tr>
-					    	<?php
-							$postslist = get_posts('numberposts=3&order=DESC&orderby=date&offset=0');
-							foreach ($postslist as $post) :
-							setup_postdata($post);
+						<tbody>
+							<tr>
+							<?php
+								$postslist = get_posts('numberposts=3&order=DESC&orderby=date&offset=0');
+								foreach ($postslist as $post) :
+								setup_postdata($post);
 							?>
-					    	<td class="latest-entry col-sm-4">
-					    		<a href="<?php the_permalink(); ?>">
-						    		<?php the_post_thumbnail('thumbnail'); ?>
+							<td class="latest-entry col-sm-4">
+								<a href="<?php the_permalink(); ?>">
+									<?php the_post_thumbnail('thumbnail'); ?>
 									<h4><?php the_title(); ?></h4>
 								</a>
-					    	</td>
-					    	<?php endforeach; ?>
-					    </tr>
+							</td>
+							<?php endforeach; ?>
+						</tr>
 					</tbody>
 				</table> -->
-
-				<?php 
+				<?php
 				$cat = get_category( get_query_var( 'cat' ) );
 				$category = $cat->slug;
 				echo do_shortcode('[ajax_load_more category="'.$category.'" post__not_in="'.$post->ID.'"]');
@@ -118,5 +108,4 @@
 		</div>
 	</div>
 </div>
-
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
