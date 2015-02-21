@@ -27,7 +27,7 @@
 				<h3><?php the_title(); ?></h3>
 				<p>By <?php the_author_posts_link(); ?></p>
 
-				<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
+				<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
 				
 				<div class="spacer20"></div>
 

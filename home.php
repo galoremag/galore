@@ -28,7 +28,7 @@
 		<div class="glide">
 			<?php the_post_thumbnail('thumbnail'); ?>
 			<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
-			<p><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time(); ?></time> • By <?php the_author_posts_link(); ?></p>
+			<p><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> • By <?php the_author_posts_link(); ?></p>
 			<p><?php echo substr(get_the_excerpt(), 0,100); ?></p>
 		</div>
 		<?php endforeach; ?>
@@ -37,7 +37,7 @@
 
 <div class="text-center">
 	<div class="spacer20"></div>
-	<a class="centerBlock" href="#"><button>More Stories &nbsp;<i class="fa fa-chevron-right"></i></button></a>
+	<a class="btn centerBlock" href="#">More Stories &nbsp;<i class="fa fa-chevron-right"></i></a>
 	<div class="spacer20"></div>
 </div>
 
@@ -61,7 +61,7 @@
 						<div class="entry home-chunk">
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
 							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-							<p><?php the_time(get_option('date_format')) ?></p>
+							<p><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time></p>
 							<p>By <?php the_author_posts_link(); ?></p>
 							<?php the_excerpt(); ?>
 							<ul class="post-social">
@@ -80,7 +80,7 @@
 						<div class="entry">
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-							<p><?php the_time(get_option('date_format')) ?></p>
+							<p><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time></p>
 							<!-- <p><?php the_excerpt(10); ?></p> -->
 							<p>By <?php the_author_posts_link(); ?></p>
 							<ul class="post-social">
@@ -94,7 +94,7 @@
 				<div class="row-fluid">
 					<div class="col-sm-12">
 						<div class="spacer20"></div>
-						<p class="text-center"><a href="<?php bloginfo('url'); ?>/category/sex-dating"><button>See More <i class="fa fa-chevron-right"></i></button></a></p>
+						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating">See More <i class="fa fa-chevron-right"></i></a></p>
 					</div>
 				</div>
 			</div>
@@ -134,7 +134,7 @@
 										<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
 									</div>
 					                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
-					                <p><?php the_time(get_option('date_format')) ?></p>
+					                <p><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time></p>
 					                <p>By <?php the_author_posts_link(); ?></p>
 					                <ul class="post-social">
 										<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
@@ -156,7 +156,7 @@
 										<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
 									</div>
 					                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
-					                <p><?php the_time(get_option('date_format')) ?></p>
+					                <p><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time></p>
 					                <p>By <?php the_author_posts_link(); ?></p>
 					                <ul class="post-social">
 										<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
@@ -177,7 +177,7 @@
 									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
 								</div>
 				                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-				                <p><?php the_time(get_option('date_format')) ?></p>
+				                <p><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time></p>
 				                <p>By <?php the_author_posts_link(); ?></p>
 				                <ul class="post-social">
 									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
@@ -201,7 +201,7 @@
 				<div class="row-fluid">
 					<div class="col-sm-12">
 						<div class="spacer20"></div>
-						<p class="text-center"><a href="<?php bloginfo('url'); ?>/category/pop"><button>See More <i class="fa fa-chevron-right"></i></button></a></p>
+						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/pop">See More <i class="fa fa-chevron-right"></i></a></p>
 					</div>
 				</div>
 			</div>
@@ -228,7 +228,7 @@
 						<div class="row-fluid">
 							<div class="col-sm-12 spacer40"></div>
 							<div class="col-sm-12">
-								<a class="pull-right" href="<?php bloginfo('url'); ?>/category/style"><button>See More</button></a>
+								<a class="btn pull-right" href="<?php bloginfo('url'); ?>/category/style">See More</a>
 							</div>
 							<div class="col-sm-12 spacer40"></div>
 							<hr>
@@ -259,7 +259,7 @@
 										<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 									</div>
 					                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
-					                <p><?php the_time(get_option('date_format')) ?></p>
+					                <p><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time></p>
 					                <p>By <?php the_author_posts_link(); ?></p>
 					                <ul class="post-social">
 										<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
@@ -280,7 +280,7 @@
 									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 								</div>
 				                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-				                <p><?php the_time(get_option('date_format')) ?></p>
+				                <p><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time></p>
 				                <p>By <?php the_author_posts_link(); ?></p>
 				                <ul class="post-social">
 									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
@@ -300,7 +300,7 @@
 							?>
 						</div>
 						<div class="row-fluid">
-							<p class="text-center"><a href="<?php bloginfo('url'); ?>/category/beauty"><button>Read More</button></a></p>
+							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/beauty">Read More</a></p>
 						</div>
 					</div>
 					<div class="col-sm-4 nopad">
@@ -321,7 +321,7 @@
 							<?php endforeach; ?>
 							<div class="row-fluid">
 								<div class="spacer20"></div>
-								<p class="text-center"><a href="<?php bloginfo('url'); ?>/category/models"><button>Read More</button></a></p>
+								<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/models">Read More</a></p>
 							</div>
 						</div>
 					</div>
@@ -367,7 +367,7 @@
 					<?php endforeach; ?>
 					<div class="row-fluid">
 						<div class="spacer20"></div>
-						<p class="text-center"><a href="<?php echo get_tag_link('kitten'); ?>"><button>Read More</button></a></p>
+						<p class="text-center"><a class="btn" href="<?php echo get_tag_link('kitten'); ?>">Read More</a></p>
 					</div>
 				</div>
 			</div> -->
@@ -388,10 +388,10 @@
 							</div>
 							<div class="nopadright col-sm-8">
 								<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-								<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> • By <?php the_author_posts_link(); ?>
+								<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_date(); ?> <?php the_time(); ?></time> • By <?php the_author_posts_link(); ?>
 								<div class="padtop10"></div>
 								<p><?php the_excerpt(); ?></p>
-								<a href="<?php esc_url( the_permalink() ); ?>"><button>Read Story</button></a>
+								<a href="<?php esc_url( the_permalink() ); ?>">Read Story</a>
 								<ul class="post-social pull-right">
 									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 									<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>

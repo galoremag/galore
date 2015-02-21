@@ -37,7 +37,7 @@
 						</div>
 						<div class="col-sm-8">
 							<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-							<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time>
+							<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_date(); ?> <?php the_time(); ?></time>
 							<p>By <?php the_author_posts_link(); ?></p>
 							<?php the_excerpt(); ?>
 							<a href="<?php esc_url( the_permalink() ); ?>"><button>Read Story</button></a>

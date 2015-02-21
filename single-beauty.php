@@ -23,7 +23,7 @@
 				</div>
 				<h3><?php the_title(); ?></h3>
 				<p>By <?php the_author_posts_link(); ?></p>
-				<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
+				<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
 				
 				<div class="spacer20"></div>
 				<?php the_post_thumbnail('large'); ?>
@@ -64,7 +64,7 @@
 						<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 						<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
 						<?php the_excerpt(); ?>
-						<a href="<?php esc_url( the_permalink() ); ?>"><button>Read Story</button></a>
+						<a href="<?php esc_url( the_permalink() ); ?>">Read Story</a>
 						<ul class="post-social pull-right">
 							<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
