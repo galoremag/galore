@@ -26,7 +26,7 @@
 			setup_postdata($post);
 		?>
 		<div class="glide">
-			<?php the_post_thumbnail('thumbnail'); ?>
+			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 			<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
 			<p><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> • By <?php the_author_posts_link(); ?></p>
 			<p><?php echo substr(get_the_excerpt(), 0,100); ?></p>
