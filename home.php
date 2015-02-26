@@ -39,7 +39,7 @@
 
 <div class="text-center">
 	<div class="spacer20"></div>
-	<a class="btn centerBlock" href="the-latest">More Newness &nbsp;<i class="fa fa-chevron-right"></i></a>
+	<a class="btn centerBlock" href="the-latest">More Stories &nbsp;<i class="fa fa-chevron-right"></i></a>
 	<div class="spacer20"></div>
 </div>
 
