@@ -39,7 +39,7 @@
 
 <div class="text-center">
 	<div class="spacer20"></div>
-	<a class="btn centerBlock" href="#">More Stories &nbsp;<i class="fa fa-chevron-right"></i></a>
+	<a class="btn centerBlock" href="the-latest">More Newness &nbsp;<i class="fa fa-chevron-right"></i></a>
 	<div class="spacer20"></div>
 </div>
 
@@ -96,7 +96,7 @@
 				<div class="row-fluid">
 					<div class="col-sm-12">
 						<div class="spacer20"></div>
-						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating">See More <i class="fa fa-chevron-right"></i></a></p>
+						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> Sex + Dating <i class="fa fa-heart"></i></a></p>
 					</div>
 				</div>
 			</div>
@@ -118,7 +118,6 @@
 							$grids = 3; //Grids per row-fluid
 
 							global $query_string; //Need this to make pagination work
-
 
 							/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
 							query_posts($query_string . 'category_name=pop&ignore_sticky_posts=0&posts_per_page=6');
@@ -203,7 +202,7 @@
 				<div class="row-fluid">
 					<div class="col-sm-12">
 						<div class="spacer20"></div>
-						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/pop">See More <i class="fa fa-chevron-right"></i></a></p>
+						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/pop"><i class="fa fa-flash"></i> More Pop <i class="fa fa-flash"></i></a></p>
 					</div>
 				</div>
 			</div>
@@ -219,8 +218,9 @@
 					<div class="col-sm-7 col-sm-offset-1 pad20">
 						<div class="row-fluid">
 							<div class="col-sm-12">
-								<h2>Style <span><i class="fa fa-scissors"></i></span></h2>
+								<h2 class="text-center">Style <span>+</span> Beauty <span><i class="fa fa-scissors"></i></span></h2>
 							</div>
+							<div class="col-sm-12 spacer20"></div>
 						</div>
 						<div class="row-fluid">
 							<div class="col-sm-12 nopad">
@@ -229,13 +229,7 @@
 						</div>
 						<div class="row-fluid">
 							<div class="col-sm-12 spacer40"></div>
-							<div class="col-sm-12">
-								<a class="btn pull-right" href="<?php bloginfo('url'); ?>/category/style">See More</a>
-							</div>
-							<div class="col-sm-12 spacer40"></div>
-							<hr>
 						</div>
-						<h2>Beauty <span><i class="fa fa-bomb"></i></span></h2>
 						<div class="row-fluid post-grid">
 							<?php
 							$counter = 1; //start counter
@@ -246,7 +240,7 @@
 
 
 							/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
-							query_posts($query_string . 'category_name=beauty&ignore_sticky_posts=0&posts_per_page=4');
+							query_posts($query_string . 'category_name=beauty,style&ignore_sticky_posts=0&posts_per_page=4');
 
 
 							if(have_posts()) :	while(have_posts()) :  the_post(); 
@@ -302,7 +296,7 @@
 							?>
 						</div>
 						<div class="row-fluid">
-							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/beauty">Read More</a></p>
+							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/beauty"><i class="fa fa-scissors"></i> Beauty + Style <i class="fa fa-scissors"></i></a></p>
 						</div>
 					</div>
 					<div class="col-sm-4 nopad">
@@ -323,7 +317,7 @@
 							<?php endforeach; ?>
 							<div class="row-fluid">
 								<div class="spacer20"></div>
-								<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/models">Read More</a></p>
+								<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/models">More Darlings <i class="fa fa-bomb"></i></a></p>
 							</div>
 						</div>
 					</div>
@@ -374,10 +368,10 @@
 				</div>
 			</div> -->
 			<div id="content" class="col-sm-10 col-sm-offset-1">
-				<h2>Latest <span>Stories</span> <i class="fa fa-diamond"></i></h2>
+				<h2 class="text-center"><i class="fa fa-diamond"></i> All <span>Stories</span> <i class="fa fa-diamond"></i></h2>
 				<hr>
 				<ol>
-				<?php query_posts($query_string . 'posts_per_page=4&offset=8'); ?>
+				<?php query_posts($query_string . 'posts_per_page=4&offset=24'); ?>
 				<?php if ( have_posts() ): ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<li class="post">
