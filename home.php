@@ -16,22 +16,24 @@
 	</div>
 </div>
 
-<h2 class="text-center verPad20"><span>The</span> Latest</h2>
-<div id="latest">
+<div id="latest-container">
+	<h2 class="text-center verPad20"><span>The</span> Latest</h2>
+	<div id="latest">
 
-	<div id="glides">
-		<?php
-			$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0');
-			foreach ($postslist as $post) :
-			setup_postdata($post);
-		?>
-		<div class="glide">
-			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-			<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
-			<p><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> • By <?php the_author_posts_link(); ?></p>
-			<p><?php echo substr(get_the_excerpt(), 0,100); ?></p>
+		<div id="glides">
+			<?php
+				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0');
+				foreach ($postslist as $post) :
+				setup_postdata($post);
+			?>
+			<div class="glide">
+				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+				<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
+				<p><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> • By <?php the_author_posts_link(); ?></p>
+				<p><?php echo substr(get_the_excerpt(), 0,100); ?></p>
+			</div>
+			<?php endforeach; ?>
 		</div>
-		<?php endforeach; ?>
 	</div>
 </div>
 

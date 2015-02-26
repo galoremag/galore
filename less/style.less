@@ -525,7 +525,7 @@ body {
 /* STYLE BACKGROUND */
 
 #global-container.style {
-	background: url(images/greyfloral.png);
+	background: url(images/pinstriped_suit.png);
 }
 
 #global-inner.category-style {
@@ -627,13 +627,12 @@ body {
 }
 
 #global-inner.category-fitness {
-	.bluePinkGradientFade;
 	background-attachment: fixed;
 	padding: 100px 0px 0px 0px;
 }
 
 #global-inner.fitness {
-	.bluePinkGradientFade;
+	.yellowBlueGradientFade;
 	background-attachment: fixed;
 	padding: 100px 0px 0px 0px;
 }
@@ -655,7 +654,7 @@ body {
 #global-inner.home {
 	padding: 0px 0px 0px 0px !important;
 	/*background: white;*/
-	background: antiquewhite;
+	background: antiquewhite !important;
 }
 
 /* SEARCH PAGE */
@@ -1088,7 +1087,8 @@ ul.post-social li a:hover {
 }
 
 #home-container .sex-dating {
-	background: url(images/symphony.png) fixed repeat !important;
+	background: url(images/symphony.png) repeat !important;
+	background-position: fixed !important;
 }
 
 #home-container .sex-dating-in {
@@ -1096,6 +1096,7 @@ ul.post-social li a:hover {
 	.bluePinkGradientFade;
 	width: 100%;
 	height: 100%;
+	background-position: fixed !important;
 }
 
 .sex-dating h1, .sex-dating h2 {
@@ -1133,7 +1134,8 @@ ul.post-social li a:hover {
 }
 
 .pop {
-	background: url(images/kindajean.png) fixed repeat;
+	background: url(images/kindajean.png) repeat;
+	background-position: fixed !important;
 }
 
 .pop-in {
@@ -1157,7 +1159,8 @@ ul.post-social li a:hover {
 .pop-in .post-grid .entry a:hover {color:@pink;}
 
 .style {
-	background: url(images/greyfloral.png) fixed repeat;
+	background: url(images/greyfloral.png) repeat;
+	background-position: fixed !important;
 }
 
 .style-in {
@@ -1166,11 +1169,13 @@ ul.post-social li a:hover {
 }
 
 .beauty {
-	background: url(images/greyfloral.jpg) fixed repeat;
+	background: url(images/greyfloral.jpg) repeat;
+	background-position: fixed !important;
 }
 
 .sex-dating {
-	background: url(images/pic-wall.jpg) fixed repeat;
+	background: url(images/pic-wall.jpg) repeat;
+	background-position: fixed !important;
 }
 
 .beauty-in {
@@ -1184,11 +1189,13 @@ ul.post-social li a:hover {
 
 .fitness {
 	background: url(images/food.png) repeat;
+	background-position: fixed !important;
 }
 
 .darlings {
 	padding: 20px;
 	.purpleGradientFade;
+	background-position: fixed !important;
 }
 
 .darlings .brand {
@@ -1694,7 +1701,7 @@ button.alm-load-more-btn.done:before {
 
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
 	#global-container.parties {
-		background: url(images/subtle_white_feathers_@2X.png);
+		background-image: url(images/subtle_white_feathers_@2X.png);
 	}
 	#global-container.the-latest,
 	#global-container.style,
@@ -1703,15 +1710,23 @@ button.alm-load-more-btn.done:before {
 	#global-container.page-about,
 	#global-container.page-legal,
 	.jumbotron,
-	.style,
 	.beauty {
-		background: url(images/greyfloral_@2X.png) repeat;
+		background-image: url(images/greyfloral_@2X.png) repeat;
+		background-size: 150px 124px;
+	}
+	.style {
+		background-image: url(images/pinstriped_suit_@2X.png) repeat;
+		background-size: 400px 333px;
+	}
+	.fitness {
+		background-size: 150px 150px;
 	}
 	#global-container.pop,
 	#global-container.tag,
 	#global-container.models,
 	.pop {
-		background: url(images/kindajean_@2X.png);
+		background-image: url(images/kindajean_@2X.png);
+		background-size: 147px 147px;
 	}
 }
 
