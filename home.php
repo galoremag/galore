@@ -30,7 +30,6 @@
 				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 				<a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
 				<p><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> • By <?php the_author_posts_link(); ?></p>
-				<p><?php echo substr(get_the_excerpt(), 0,100); ?></p>
 			</div>
 			<?php endforeach; ?>
 		</div>
@@ -96,7 +95,7 @@
 				<div class="row-fluid">
 					<div class="col-sm-12">
 						<div class="spacer20"></div>
-						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> &nbsp; Sex + Dating &nbsp;<i class="fa fa-heart"></i></a></p>
+						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> &nbsp; Lets Hook Up &nbsp;<i class="fa fa-heart"></i></a></p>
 					</div>
 				</div>
 			</div>
@@ -110,7 +109,8 @@
 			<div class="container-fluid">
 				<div class="row-fluid">
 					<div class="col-sm-10 col-sm-offset-1">
-						<h2><span>Pop</span> <i class="fa fa-flash"></i></h2>
+						<h2><span>Guilty Pleasure</span> <i class="fa fa-diamond"></i></h2>
+						<h3>Best of Pop Culture</h3>
 						<div class="spacer20"></div>
 						<div class="row-fluid post-grid">
 							<?php
@@ -218,7 +218,7 @@
 				<div class="row-fluid">
 					<div class="col-sm-7 col-sm-offset-1 pad20">
 						<div class="row-fluid">
-							<div class="col-sm-12">
+							<div class="col-sm-12 nopad">
 								<h2>Style <span>+</span> Beauty <span><i class="fa fa-scissors"></i></span></h2>
 							</div>
 							<div class="col-sm-12 spacer20"></div>
