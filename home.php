@@ -17,7 +17,7 @@
 </div>
 
 <div id="latest-container">
-	<h2 class="text-center verPad20"><span>The</span> Latest</h2>
+	<h2 class="text-center verPad20"><i class="fa fa-flash"></i> <span>New</span> Shit <span><i class="fa fa-flash"></i></span></h2>
 	<div id="latest">
 
 		<div id="glides">
@@ -39,7 +39,7 @@
 
 <div class="text-center">
 	<div class="spacer20"></div>
-	<a class="btn centerBlock" href="the-latest">More Stories &nbsp;<i class="fa fa-chevron-right"></i></a>
+	<a class="btn centerBlock" href="the-latest">Get Crazy &nbsp;<i class="fa fa-bomb"></i></a>
 	<div class="spacer20"></div>
 </div>
 
@@ -96,7 +96,7 @@
 				<div class="row-fluid">
 					<div class="col-sm-12">
 						<div class="spacer20"></div>
-						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> Sex + Dating <i class="fa fa-heart"></i></a></p>
+						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> &nbsp; Sex + Dating &nbsp;<i class="fa fa-heart"></i></a></p>
 					</div>
 				</div>
 			</div>
@@ -111,6 +111,7 @@
 				<div class="row-fluid">
 					<div class="col-sm-10 col-sm-offset-1">
 						<h2><span>Pop</span> <i class="fa fa-flash"></i></h2>
+						<div class="spacer20"></div>
 						<div class="row-fluid post-grid">
 							<?php
 							$counter = 1; //start counter
@@ -202,7 +203,7 @@
 				<div class="row-fluid">
 					<div class="col-sm-12">
 						<div class="spacer20"></div>
-						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/pop"><i class="fa fa-flash"></i> More Pop <i class="fa fa-flash"></i></a></p>
+						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/pop"><i class="fa fa-flash"></i>&nbsp; Make It Pop &nbsp;<i class="fa fa-flash"></i></a></p>
 					</div>
 				</div>
 			</div>
@@ -218,7 +219,7 @@
 					<div class="col-sm-7 col-sm-offset-1 pad20">
 						<div class="row-fluid">
 							<div class="col-sm-12">
-								<h2 class="text-center">Style <span>+</span> Beauty <span><i class="fa fa-scissors"></i></span></h2>
+								<h2>Style <span>+</span> Beauty <span><i class="fa fa-scissors"></i></span></h2>
 							</div>
 							<div class="col-sm-12 spacer20"></div>
 						</div>
@@ -296,7 +297,7 @@
 							?>
 						</div>
 						<div class="row-fluid">
-							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/beauty"><i class="fa fa-scissors"></i> Beauty + Style <i class="fa fa-scissors"></i></a></p>
+							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/beauty"><i class="fa fa-scissors"></i>&nbsp; Beauty + Style &nbsp;<i class="fa fa-scissors"></i></a></p>
 						</div>
 					</div>
 					<div class="col-sm-4 nopad">
