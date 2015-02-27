@@ -309,10 +309,10 @@
 							setup_postdata($post);
 							?>
 							<div class="entry text-left">
-								<a href="<?php the_permalink(); ?>">
-									<?php the_post_thumbnail('medium'); ?>
-									<h4><?php the_title(); ?></h4>
-								</a>
+								<div class="postimage">
+									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
+								</div>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
 							</div>
 							<?php endforeach; ?>
 							<div class="row-fluid">
