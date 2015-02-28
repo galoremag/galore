@@ -462,9 +462,11 @@ h3, h4 {
 }
 
 h1 span, h2 span, h3 span {
-	-webkit-text-fill-color: white;
+	/*-webkit-text-fill-color: white;
 	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: @pink;
+	-webkit-text-stroke-color: @pink;*/
+	color: white !important;
+	text-shadow: 1px 1px 0 @pink, -1px -1px 0 @pink, 1px -1px 0 @pink, -1px 1px 0 @pink, 0px 0px 0px @pink;
 }
 
 h1 a, h2 a, h3 a, h4 a {
