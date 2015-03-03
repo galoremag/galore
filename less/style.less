@@ -1048,13 +1048,18 @@ nav.shrink ul.nav {
 
 ul.post-social {
 	list-style-type: none;
-	margin: 20px 0px 20px 0px;
+	margin: 0px 0px 20px 0px;
 	padding: 0px;
 }
 
 ul.post-social li {
+	float: right;
 	margin: 0px 20px 0px 0px;
 	height: 40px;
+/*	transform: scale(2);
+	-o-transform: scale(2);
+	-moz-transform: scale(2);
+	-webkit-transform: scale(2);*/
 }
 
 ul.post-social li a {
@@ -1065,10 +1070,13 @@ ul.post-social li a {
 	padding: 5px 10px;
 	width: 30px;
 	height: 30px;
+	box-shadow: 1px 1px 0px rgba(255,255,0,1);
+	opacity:0.5;
 }
 
 ul.post-social li a:hover {
 	color: white;
+	opacity:1;
 }
 
 .single ul.single-social {
@@ -1099,6 +1107,7 @@ ul.post-social li a:hover {
 	color: white;
 	display: block;
 	padding: 8px 16px;
+	box-shadow: 1px 1px 0px rgba(255,255,0,1);
 }
 
 .single ul.single-social li a h4 {
@@ -1131,6 +1140,7 @@ ul.post-social li a:hover {
 
 .sex-dating h1, .sex-dating h2 {
 	color: @pink;
+	text-shadow: 1px 1px 0px rgba(255,255,0,1);
 }
 
 .post-grid {
@@ -1220,6 +1230,7 @@ ul.post-social li a:hover {
 
 .beauty h1, .beauty h2 {
 	color: @pink;
+	text-shadow: 1px 1px 0px rgba(255,255,0,1);
 }
 
 .fitness {
@@ -1318,6 +1329,7 @@ div.catlinks a {color:white;}
 	bottom: 10px;
 	border-radius: 50%;
 	border: 2px solid white;
+	background: @pink;
 	overflow: visible;
 	.transition;
 }
@@ -1351,13 +1363,13 @@ div.catlinks a {color:white;}
 	left: 0px;
 	height: 50px;
 	bottom: 0px;
-	display: none;
+	display: block;
 }
 
-/*#footer-trigger:hover footer {
+#footer-trigger:hover footer {
 	bottom: 0px;
 	.transition;
-}*/
+}
 
 footer {
 	position: fixed;
@@ -1447,6 +1459,7 @@ ul#menu-footer-menu li a:hover {
 
 button.alm-load-more-btn {
 	background: fade(@pink, 75%);
+	box-shadow: 1px 1px 0px rgba(255,255,0,1);
 }
 
 button.alm-load-more-btn:hover {
@@ -1472,6 +1485,7 @@ button.alm-load-more-btn.done:before {
 	border-radius: 5px;
 	border: 0px;
 	background: @pink;
+	box-shadow: 1px 1px 0px rgba(255,255,0,1);
 	opacity: 0.9;
 	color: white;
 	.transition;
@@ -1499,6 +1513,7 @@ button.alm-load-more-btn.done:before {
 	background: @pink;
 	color: white;
 	padding: 0 40px 20px 40px;
+	box-shadow: 1px 1px 0px rgba(255,255,0,1);
 }
 
 .model-content h1 {
@@ -1525,6 +1540,7 @@ button.alm-load-more-btn.done:before {
 .modal .form-control {
 	.greyGradientFade;
 	color: @pink !important;
+	box-shadow: 1px 1px 0px rgba(255,255,0,1);
 }
 
 /*  MEDIA QUERIES  */
@@ -1590,6 +1606,7 @@ button.alm-load-more-btn.done:before {
 		right: 0px;
 		padding: 5px 10px;
 		background: fade(@pink, 80%);
+		box-shadow: 1px 1px 0px rgba(255,255,0,1);
 		z-index: 9999;
 	}
 	.rsGalore .rsExcerpt {
@@ -1725,6 +1742,7 @@ button.alm-load-more-btn.done:before {
 
 	.style h1, .style h2 {
 		color: @pink;
+		box-shadow: 1px 1px 0px rgba(255,255,0,1);
 	}
 
 	#cover-title {
@@ -1756,7 +1774,7 @@ button.alm-load-more-btn.done:before {
 		display: none;
 	}
 	#footer-trigger {
-		display: none !important;
+		display: block !important;
 	}
 	footer {
 		bottom: -100px;
