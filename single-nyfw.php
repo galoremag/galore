@@ -35,7 +35,10 @@ Description: This part is optional, but helpful for describing the Post Template
 				<h3>About <?php echo get_the_author() ; ?></h3>
 				<?php the_author_meta( 'description' ); ?>
 				<?php endif; ?>
-
+				<ul id="post-social" class="hidden-sm post-social">
+					<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i> &nbsp;<h4 class="nomarg">Share on Facebook</h4></a></li>
+					<li><h4><?php the_title(); ?></h4></li>
+				</ul>
 				<?php comments_template( '', true ); ?>
 
 			</article>
