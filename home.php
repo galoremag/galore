@@ -38,7 +38,7 @@
 
 <div class="text-center">
 	<div class="spacer20"></div>
-	<a class="btn centerBlock" href="the-latest">Get Crazy &nbsp;<i class="fa fa-bomb"></i></a>
+	<a class="btn centerBlock" href="the-latest"><i class="fa fa-bomb"></i>&nbsp; Go Crazy &nbsp;<i class="fa fa-bomb"></i></a>
 	<div class="spacer20"></div>
 </div>
 
@@ -109,7 +109,7 @@
 			<div class="container-fluid">
 				<div class="row-fluid">
 					<div class="col-sm-10 col-sm-offset-1">
-						<h2><span>Guilty Pleasure</span> <i class="fa fa-diamond"></i></h2>
+						<h2><span>Guilty</span> Pleasure <span><i class="fa fa-star"></i></span></h2>
 						<h3>Best of Pop Culture</h3>
 						<div class="spacer20"></div>
 						<div class="row-fluid post-grid">
