@@ -241,7 +241,7 @@
 
 
 							/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
-							query_posts($query_string . 'category_name=beauty,style&ignore_sticky_posts=0&posts_per_page=4');
+							query_posts($query_string . 'category_name=beauty,style&ignore_sticky_posts=0&posts_per_page=4&offset=3');
 
 
 							if(have_posts()) :	while(have_posts()) :  the_post(); 
