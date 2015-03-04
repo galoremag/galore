@@ -10,13 +10,6 @@
 				<div class="pull-left">
 					<a id="footer-close" class="brand-white-sm" href="#"></a>
 				</div>
-	<!-- 			<div class="pad5 pull-left">
-					<ul class="legal">
-						<li>
-							<p>&copy; <?php echo date("Y"); ?> Galore Media.</p>
-						</li>
-					</ul>
-				</div> -->
 				<div class="pad5 pull-left">
 					<?php wp_nav_menu( array('theme_location' => 'footer-menu')); ?>
 				</div>

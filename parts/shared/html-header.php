@@ -39,9 +39,6 @@
 		<!-- Main slider JS script file --> 
 		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/site.js'></script>
 
-		<script type="text/javascript" src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-		<script type="text/javascript" src="//db.tt/2utAluo3"></script>
-
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
 
