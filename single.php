@@ -2,15 +2,17 @@
 // http://wordpresshero.com/tricks/different-single-post-pages-in-wordpress.html/
 
 if ( in_category('style') ) {
-  include(TEMPLATEPATH . '/single-style.php'); }
+  	include(TEMPLATEPATH . '/single-style.php'); }
 elseif ( in_category('beauty') ) {
-    include(TEMPLATEPATH . '/single-default.php'); }
+    include(TEMPLATEPATH . '/single-beauty.php'); }
 elseif ( in_category('sex-dating') ) {
-    include(TEMPLATEPATH . '/single-default.php'); }
+    include(TEMPLATEPATH . '/single-sex-dating.php'); }
 elseif ( in_category('fitness') ) {
-    include(TEMPLATEPATH . '/single-default.php'); }
+    include(TEMPLATEPATH . '/single-fitness.php'); }
 elseif ( in_category('pop') ) {
-    include(TEMPLATEPATH . '/single-default.php'); }
+    include(TEMPLATEPATH . '/single-pop.php'); }
+elseif ( in_category('nyfw') ) {
+    include(TEMPLATEPATH . '/single-nyfw.php'); }
 else {
     include(TEMPLATEPATH . '/single-default.php');
   }

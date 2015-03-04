@@ -44,64 +44,9 @@
 			<?php endwhile; ?>
 			<hr>
 			<h2 class="text-center">Similar Stories</h2>
-			<!-- 			<ul>
-				<?php
-				//for use in the loop, list 5 post titles related to first tag on current post
-				$tags = wp_get_post_tags($post->ID);
-				if ($tags) {
-				$first_tag = $tags[0]->term_id;
-				$args=array(
-				'tag__in' => array($first_tag),
-				'post__not_in' => array($post->ID),
-				'posts_per_page'=>5,
-				'ignore_sticky_posts'=>1
-				);
-				$my_query = new WP_Query($args);
-				if( $my_query->have_posts() ) {
-				while ($my_query->have_posts()) : $my_query->the_post(); ?>
-				
-				<li class="related-post">
-					<article>
-						<div class="thumbnail">
-							<?php the_post_thumbnail('large'); ?>
-						</div>
-						<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-						<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-						<?php the_excerpt(); ?>
-						<a href="<?php esc_url( the_permalink() ); ?>">Read Story</a>
-						<ul class="post-social pull-right">
-							<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-						</ul>
-					</article>
-				</li>
-				<hr>
-				<?php
-				endwhile;
-				}
-				wp_reset_query();
-				}
-				?>
-			</ul> -->
+
 			<div id="related-posts" class="row-fluid">
-				<!-- <table>
-						<tbody>
-							<tr>
-							<?php
-								$postslist = get_posts('numberposts=3&order=DESC&orderby=date&offset=0');
-								foreach ($postslist as $post) :
-								setup_postdata($post);
-							?>
-							<td class="latest-entry col-sm-4">
-								<a href="<?php the_permalink(); ?>">
-									<?php the_post_thumbnail('thumbnail'); ?>
-									<h4><?php the_title(); ?></h4>
-								</a>
-							</td>
-							<?php endforeach; ?>
-						</tr>
-					</tbody>
-				</table> -->
+
 				<?php 
 				echo do_shortcode('[ajax_load_more post_type="post" category="beauty" posts_per_page="4" scroll="false" destroy_after="1"]');
 				?>
