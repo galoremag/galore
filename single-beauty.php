@@ -103,9 +103,9 @@
 					</tbody>
 				</table> -->
 				<?php 
-				echo do_shortcode('[ajax_load_more category="beauty" posts_per_page="4"]');
+				echo do_shortcode('[ajax_load_more post_type="post" category="beauty" posts_per_page="4" scroll="false" destroy_after="1"]');
 				?>
-				<?php echo do_shortcode('[ajax_load_more repeater="template_1" post_type="post" category="beauty" posts_per_page="1" max_pages="0" transition="fade" button_label="Another Story"]'); ?>
+				<?php echo do_shortcode('[ajax_load_more seo="true" repeater="template_1" post_type="post" category="beauty" max_pages="1" scroll="false" transition="fade" button_label="Another Post"]'); ?>
 			</div>
 		</div>
 	</div>
