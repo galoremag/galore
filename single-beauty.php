@@ -103,8 +103,9 @@
 					</tbody>
 				</table> -->
 				<?php 
-				echo do_shortcode('[ajax_load_more category="beauty"]');
+				echo do_shortcode('[ajax_load_more category="beauty" posts_per_page="4"]');
 				?>
+				<?php echo do_shortcode('[ajax_load_more repeater="template_1" post_type="post" category="beauty" posts_per_page="1" max_pages="0" transition="fade" button_label="Another Story"]'); ?>
 			</div>
 		</div>
 	</div>
