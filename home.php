@@ -369,7 +369,7 @@
 				</div>
 			</div> -->
 			<div id="content" class="col-sm-10 col-sm-offset-1">
-				<h2 class="text-center"><i class="fa fa-diamond"></i> All <span>Stories</span> <i class="fa fa-diamond"></i></h2>
+				<h2 class="text-center"><i class="fa fa-diamond"></i> Gimme <span>More</span> <i class="fa fa-diamond"></i></h2>
 				<hr>
 				<ol>
 				<?php query_posts($query_string . 'posts_per_page=4&offset=24'); ?>
