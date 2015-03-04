@@ -40,7 +40,7 @@
 			</article>
 			<?php endwhile; ?>
 			<hr>
-			<h2 class="text-center">More Cool Stuff</h2>
+			<h2 class="text-center">Gimme <span>More</span></h2>
 			
 			<div id="related-posts" class="row-fluid">
 				<?php
