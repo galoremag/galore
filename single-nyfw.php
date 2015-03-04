@@ -45,7 +45,7 @@ Description: This part is optional, but helpful for describing the Post Template
 			<?php endwhile; ?>
 
 			<hr>
-			<h2 class="text-center">Gimme More <span>NYFW</span></h2>
+			<h2 class="text-center">Gimme <span>More</span> NYFW <i class="fa fa-neuter"></i></h2>
 
 			<div id="related-posts" class="row-fluid">
 				<?php 

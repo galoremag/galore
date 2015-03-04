@@ -43,14 +43,12 @@
 			</article>
 			<?php endwhile; ?>
 			<hr>
-			<h2 class="text-center">Similar Stories</h2>
+			<h2 class="text-center">Gimme <span>More</span> Beauty <span><i class="fa fa-bomb"></i></span></h2>
 
 			<div id="related-posts" class="row-fluid">
-
 				<?php 
-				echo do_shortcode('[ajax_load_more post_type="post" category="beauty" posts_per_page="4" scroll="false" destroy_after="1"]');
+				echo do_shortcode('[ajax_load_more category="beauty" post__not_in="'.$post->ID.'"]');
 				?>
-				<?php echo do_shortcode('[ajax_load_more seo="true" repeater="template_1" post_type="post" category="beauty" max_pages="1" scroll="false" transition="fade" button_label="Another Post"]'); ?>
 			</div>
 		</div>
 	</div>
