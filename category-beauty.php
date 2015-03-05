@@ -30,7 +30,7 @@
 						</div>
 						<div class="nopadright col-sm-8">
 							<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-							<p><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> • By <?php the_author_posts_link(); ?></p>
+							<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 							<p><?php the_excerpt(); ?></p>
 							<a href="<?php esc_url( the_permalink() ); ?>">Read Story</a>
 							<ul class="post-social pull-right">
@@ -51,12 +51,6 @@
 			echo do_shortcode('[ajax_load_more category="beauty" offset="5"]');
 			?>
 
-			<!-- <div id="post-nav">
-				<ul>
-					<li id="page-left" class="alignleft pull-left"><?php previous_posts_link( '<h4><i class="fa fa-chevron-left"></i> &nbsp; PREV</h4>' ); ?></li>
-					<li id="page-right" class="alignright pull-right"><?php next_posts_link( '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>', '' ); ?></li>
-				</ul>
-			</div> -->
 			<div class="spacer40"></div>
 		</div>
 	</div>
