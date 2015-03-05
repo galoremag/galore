@@ -1709,18 +1709,6 @@ button.alm-load-more-btn.done:before {
 	color: @pink !important;
 }
 
-figure.hammy-responsive {
-	display: table !important;
-	width: 100% !important;
-	text-align: center !important;
-}
-
-figure.hammy-responsive img.picHalfCenter {
-	margin: 0 auto !important;
-	width: 60% !important;
-	display: table-cell !important;
-}
-
 time {
 	.font2;
 }
@@ -1734,17 +1722,24 @@ time {
 /* Large screens ----------- */
 @media only screen and (min-width : 1824px) {
 /* Styles */
-	
 	#cover-stories .rsGalore h1 {
 		font-size: 60px !important;
 	}
-
 }
 
 /* Tablets and up (768px and up) */
 @media (min-width: 768px) {
+	
 	figure.hammy-responsive {
+		display: table !important;
+		width: 60% !important;
+		text-align: center !important;
+		margin: 0 auto !important;
+	}
 
+	figure.hammy-responsive img.picHalfCenter {
+		margin: 0 auto !important;
+		display: table-cell !important;
 	}
 }
 
