@@ -31,7 +31,6 @@
 						<div class="nopadright col-sm-8">
 							<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 							<p><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> • By <?php the_author_posts_link(); ?></p>
-							<div class="padtop10"></div>
 							<p><?php the_excerpt(); ?></p>
 							<a href="<?php esc_url( the_permalink() ); ?>">Read Story</a>
 							<ul class="post-social pull-right">

@@ -68,6 +68,8 @@ Version: 1.0.1
 @import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic);
 @import url(//fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Cherry+Swash:400,700);
+@import url(http://fonts.googleapis.com/css?family=Corben:400,700);
 
 /* Your theme files */
 //@import "_global.less";
@@ -81,6 +83,10 @@ Version: 1.0.1
 @pink : #E81B8E;
 @bigwhite : antiquewhite;
 
+.pink {
+	color: @pink !important;
+}
+
 .font1 {
 	font-family: 'Montserrat', sans-serif;
 }
@@ -90,8 +96,12 @@ Version: 1.0.1
 }
 
 .font3 {
-	font-family: 'Karla', sans-serif;
+	font-family: 'Corben', sans-serif;
 	font-weight: 400 !important;
+}
+
+p {
+	font-family: 'Cherry Swash', cursive;
 }
 
 .transition {
@@ -394,6 +404,7 @@ ul, ol {
 }
 
 a {
+	.font2;
 	.transition;
 	color: @pink;
 }
@@ -401,6 +412,7 @@ a:hover {text-decoration: none; opacity: 1;.transition; color: @pink;}
 a:focus {color: @pink; outline: 0px; text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);}
 
 a.btn {
+	.font2;
 	border-radius: 5px;
 	border: 0px;
 	background: @pink;
@@ -412,6 +424,7 @@ a.btn {
 }
 
 a.btn:hover {
+	.font2;
 	opacity: 1;
 	color: white;
 }
@@ -421,9 +434,9 @@ a.btn:hover {
 	margin: 0 auto;
 }
 
-.btn-bp {.bluePinkGradient;opacity: 0.7;}
+.btn-bp {.bluePinkGradient;opacity: 0.7;.font2;}
 
-.btn-bp:hover {.bluePinkGradient;opacity: 1;}
+.btn-bp:hover {.bluePinkGradient;opacity: 1;.font2;}
 
 .opacity07 {
 	opacity: 0.7 !important;
@@ -458,7 +471,14 @@ h1, h2 {
 	margin: 10px 0px !important;
 }
 
-h3, h4 {
+h3 {
+	color: @pink;
+	.font2;
+	font-weight: bold;
+	margin: 10px 0px !important;
+}
+
+h4 {
 	color: @pink;
 	.font3;
 	font-weight: bold;
@@ -1039,6 +1059,9 @@ nav.shrink ul.nav {
 
 .entry {
 	padding-bottom: 20px;
+	font-size: 16px;
+	letter-spacing: 0.2px;
+	line-height: 1.45;
 }
 
 .home-chunk img {
@@ -1102,6 +1125,7 @@ ul.post-social li a:hover {
 }
 
 .single ul.single-social li a {
+	.font2;
 	border-radius: 7px;
 	background: @pink;
 	color: white;
@@ -1111,6 +1135,7 @@ ul.post-social li a:hover {
 }
 
 .single ul.single-social li a h4 {
+	.font2;
 	color: white;
 	display: inline;
 }
@@ -1172,6 +1197,10 @@ ul.post-social li a:hover {
 .darlings .postimage {
 	height: 200px !important;
 	overflow: hidden;
+}
+
+.darlings h3,.darlings h4 {
+	color: white;
 }
 
 .style h1, .style h2 {
@@ -1321,10 +1350,11 @@ div.catlinks {
 }
 
 div.catlinks li {
+	.font2;
 	margin: 0px;
 }
 
-div.catlinks li a {color:white !important;}
+div.catlinks li a {color:white !important;.font2;}
 
 .footbut {
 	width: 32px;
@@ -1466,11 +1496,13 @@ ul#menu-footer-menu li a:hover {
 }
 
 button.alm-load-more-btn {
+	.font2;
 	background: fade(@pink, 75%);
 	box-shadow: 1px 1px 0px rgba(255,255,0,1);
 }
 
 button.alm-load-more-btn:hover {
+	.font2;
 	background: @pink;
 }
 
@@ -1560,6 +1592,14 @@ figure.hammy-responsive img.picHalfCenter {
 	margin: 0 auto !important;
 	width: 60% !important;
 	display: table-cell !important;
+}
+
+time {
+	.font2;
+}
+
+.byline {
+	.font2 !important;
 }
 
 /*  MEDIA QUERIES  */
