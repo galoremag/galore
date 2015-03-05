@@ -404,7 +404,7 @@
 				<?php endif; ?>
 
 				<?php 
-				echo do_shortcode('[ajax_load_more post_type="post" category__not_in="mag, models" button_label="More Posts" offset="12"]');
+				echo do_shortcode('[ajax_load_more category__not_in="mag,models" button_label="More Posts" offset="12"]');
 				?>
 
 				<!-- <div id="post-nav">
