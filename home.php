@@ -246,6 +246,7 @@
 							?>
 							<div class="col-sm-6">
 								<div class="entry">
+									<div class="catlinks"><?php the_category(); ?></div>
 									<div class="postimage">
 										<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 									</div>
@@ -266,6 +267,7 @@
 							if($counter == 1) :
 							?>
 							<div class="col-sm-6">
+								<div class="catlinks"><?php the_category(); ?></div>
 								<div class="postimage">
 									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 								</div>
