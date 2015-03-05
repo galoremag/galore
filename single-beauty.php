@@ -26,9 +26,6 @@
 				<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
 				
 				<div class="spacer20"></div>
-				<?php the_post_thumbnail('large'); ?>
-				
-				<div class="spacer20"></div>
 				<?php the_content(); ?>
 				<?php if ( get_the_author_meta( 'description' ) ) : ?>
 				<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>

@@ -38,15 +38,16 @@
 				</ul>
 				<?php comments_template( '', true ); ?>
 			</article>
-			<?php endwhile; ?>
 			<hr>
 			<h2 class="text-center">Gimme <span>More</span> Style <span><i class="fa fa-scissors"></i></span></h2>
 
 			<div id="related-posts" class="row-fluid">
 				<?php 
-				echo do_shortcode('[ajax_load_more category="style" post__not_in="'.$post->ID.'"]');
+				$id = get_the_ID();
+				echo do_shortcode('[ajax_load_more category="style" post__not_in="'.$id.'"]');
 				?>
 			</div>
+			<?php endwhile; ?>
 		</div>
 	</div>
 </div>

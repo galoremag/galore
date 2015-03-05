@@ -28,11 +28,7 @@
 				<p>By <?php the_author_posts_link(); ?></p>
 
 				<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-				
-				<div class="spacer20"></div>
 
-				<?php the_post_thumbnail('large'); ?>
-				
 				<div class="spacer20"></div>
 
 				<?php the_content(); ?>			
@@ -52,7 +48,7 @@
 			<?php endwhile; ?>
 
 			<hr>
-			<h2 class="text-center">Gimme <span>More</span> Sex <span>+</span> Dating <i class="fa fa-heart"></i></span></h2>
+			<h2 class="text-center">Gimme <span>More</span> Sex <span>+</span> Dating <span><i class="fa fa-heart"></i></span></span></h2>
 
 			<div id="related-posts" class="row-fluid">
 				<?php 

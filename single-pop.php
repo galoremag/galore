@@ -31,10 +31,6 @@
 				
 				<div class="spacer20"></div>
 
-				<?php the_post_thumbnail('large'); ?>
-				
-				<div class="spacer20"></div>
-
 				<?php the_content(); ?>			
 
 				<?php if ( get_the_author_meta( 'description' ) ) : ?>
