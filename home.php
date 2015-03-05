@@ -99,7 +99,7 @@
 				<div class="row-fluid">
 					<div class="col-sm-12">
 						<div class="spacer20"></div>
-						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> &nbsp; Lets Hook Up &nbsp;<i class="fa fa-heart"></i></a></p>
+						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> &nbsp; Hook It Up &nbsp;<i class="fa fa-heart"></i></a></p>
 					</div>
 				</div>
 			</div>
@@ -298,7 +298,7 @@
 							?>
 						</div>
 						<div class="row-fluid">
-							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/beauty"><i class="fa fa-scissors"></i>&nbsp; Beauty + Style &nbsp;<i class="fa fa-scissors"></i></a></p>
+							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/beauty"><i class="fa fa-scissors"></i>&nbsp; Get Glam &nbsp;<i class="fa fa-scissors"></i></a></p>
 						</div>
 					</div>
 					<div class="col-sm-4 nopad">
@@ -319,7 +319,7 @@
 							<?php endforeach; ?>
 							<div class="row-fluid">
 								<div class="spacer20"></div>
-								<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/models">More Darlings <i class="fa fa-bomb"></i></a></p>
+								<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/models"><i class="fa fa-bomb"></i> Bombshells <i class="fa fa-bomb"></i></a></p>
 							</div>
 						</div>
 					</div>
