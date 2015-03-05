@@ -70,6 +70,7 @@ Version: 1.0.1
 @import url(//fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Cherry+Swash:400,700);
 @import url(http://fonts.googleapis.com/css?family=Corben:400,700);
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
 
 /* Your theme files */
 //@import "_global.less";
@@ -98,6 +99,10 @@ Version: 1.0.1
 .font3 {
 	font-family: 'Corben', sans-serif;
 	font-weight: 400 !important;
+}
+
+.font4 {
+	font-family: 'Libre Baskerville', serif;
 }
 
 p {
@@ -1189,6 +1194,96 @@ ul.post-social li a:hover {
 .post-grid .postimage {
 	height: 160px !important;
 	overflow: hidden;
+}
+
+/* STYLE SECTION HOMEPAGE */
+
+.rsContent .GaloreDarkBox {
+	.font4;
+    color: #fff;
+    padding: 15px;
+    margin: 20px;
+}
+
+.rsContent .GaloreLightBox {
+	.font4;
+    color: #fff;
+    padding: 15px;
+    margin: 20px;
+}
+
+.rsContent .DarkText {
+	.font4;
+    color: #000;
+    padding: 15px;
+    margin: 20px;
+}
+
+.rsContent .LightText {
+	.font4;
+    color: #fff !important;
+    padding: 15px;
+    margin: 20px;
+}
+
+.rsContent .LightText p {
+    color: white !important;
+}
+
+.rsContent .DarkTextRight {
+	.font4;
+    color: #000;
+    padding: 15px;
+    margin: 20px;
+    text-align: right;
+}
+
+.rsContent .LightTextRight {
+	.font4;
+    padding: 15px;
+    margin: 20px;
+    text-align: right;
+}
+
+.rsContent .LightTextRight p, .rsContent .LightTextRight h3 {
+    color: #fff !important;
+}
+
+.rsContent .LightTextRight h1, .rsContent .DarkTextRight h1 {
+    text-align: right;
+}
+
+.rsContent .rsABlock button, .rsContent .rsSBlock button {
+    width: 150px !important;
+    background: black;
+    color: #fff;
+    font-family: 'ProximaNovaBold', sans-serif;
+    padding: 10px 35px !important;
+    margin: 20px 0px 0px 0px !important;
+    position: relative !important;
+    top: 20px !important;
+    border-radius: 5px;
+    border: none;
+}
+
+.rsContent  .rsABlock button:hover, .rsContent  .rsSBlock button:hover {background: @pink !important; color: white !important;}
+
+.rsContent h1 {font-size: 72px;text-transform: uppercase;font-style: italic;}
+
+.rsContent h2 {font-size: 60px;text-transform: uppercase;font-style: italic;}
+
+.rsContent h3 {font-size: 46px;text-transform: uppercase;font-style: italic;}
+
+.rsContent h4 {font-size: 32px;text-transform: uppercase;font-style: italic;}
+
+.rsGalore .rsGCaption {
+    bottom: 0px;
+    left: 0px;
+    padding: 15px;
+    border-radius: 0px;
+    font-size: 18px !important;
+    font-style: italic;
+    .font4;
 }
 
 .style .post-grid .entry {

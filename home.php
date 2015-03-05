@@ -219,7 +219,7 @@
 						</div>
 						<div class="row-fluid">
 							<div class="col-sm-12 nopad">
-							<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
+							<?php echo do_shortcode( '[new_royalslider id="5"]' ); ?>
 							</div>
 						</div>
 						<div class="row-fluid">
