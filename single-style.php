@@ -21,7 +21,7 @@
 						<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
 					</ul>
 				</div>
-				<h3><?php the_title(); ?></h3>
+				<h2><?php the_title(); ?></h2>
 				<p class="byline"><i class="fa fa-scissors"></i> <time datetime="<?php the_time( 'Y-m-d' ); ?>">Posted on <?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> By <?php the_author_posts_link(); ?></p>
 				<div class="spacer20"></div>
 				<?php the_content(); ?>
