@@ -4,6 +4,6 @@
     "bootstrap": "3.2.*",
     "font-awesome": "4.2.*",
     "jquery": "1.11.*",
-    "fontawesome": "~4.3.0"
+    "fontawesome": "4.3.0"
   }
 }
