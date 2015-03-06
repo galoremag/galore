@@ -25,9 +25,8 @@
 					</ul>
 				</div>
 				<h3><?php the_title(); ?></h3>
-				<p>By <?php the_author_posts_link(); ?></p>
 
-				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				<p class="byline"><i class="fa fa-star"></i> <time datetime="<?php the_time( 'Y-m-d' ); ?>">Posted on <?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> By <?php the_author_posts_link(); ?></p>
 				
 				<div class="spacer20"></div>
 
