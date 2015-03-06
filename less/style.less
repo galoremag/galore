@@ -874,6 +874,8 @@ nav.shrink {
 }
 
 nav.shrink .navbar-brand {
+	background: url(images/galore-logo-white.png) no-repeat;
+	background-size: 180px auto;
 	-webkit-transform: scale(0.5);
 	-moz-transform: scale(0.5);
 	-o-transform: scale(0.5);
@@ -1784,7 +1786,7 @@ time {
 @media only screen and (min-width : 1824px) {
 /* Styles */
 	#cover-stories .rsGalore h1 {
-		font-size: 60px !important;
+		font-size: 85px !important;
 	}
 }
 
@@ -1792,9 +1794,9 @@ time {
 @media (min-width: 768px) {
 	
 	figure.hammy-responsive {
-		display: table !important;
-		width: 60% !important;
-		text-align: center !important;
+		display: table;
+		width: 60%;
+		text-align: center;
 		margin: 20px auto !important;
 	}
 }
@@ -1855,8 +1857,6 @@ time {
 		bottom: 0px !important;
 		left: 0px;
 		width:100%;
-		padding: 5px 8px !important;
-
 	}
 	.rsGalore .rsText h1, .rsGalore .rsText h2, .rsGalore .rsText h3 {
 		
@@ -1886,6 +1886,9 @@ time {
 	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
 		display: none;
 	}
+	figure.hammy-responsive {
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -1912,6 +1915,8 @@ time {
 	}
 
 	nav.shrink .navbar-brand {
+		background: url(images/galore-logo-short-straight-white.png) no-repeat;
+		background-size: 140px auto;
 		-webkit-transform: scale(0.7);
 		-moz-transform: scale(0.7);
 		-o-transform: scale(0.7);
@@ -1973,20 +1978,23 @@ time {
 		text-align: center;
 	}
 
-	.style .rsGalore {
-		height: 240px !important;
+	.home-style .rsGalore {
+		height: 320px !important;
+		margin-left: -20px;
+		margin-right: -20px;
+		width: auto !important;
 	}
 
-	.style .rsGalore .rsText {
+	.home-style .rsGalore .rsText {
+		padding: 0;
+	}
+
+	.home-style .rsGalore .rsText h2 {
 		.yellowBlueGradientFade;
-	}
-
-	.style .rsGalore h2 span {
-		font-size: 24px;
-	}
-
-	.style h1, .style h2 {
+		font-size: 18px;
+		line-height: 19px;
 		color: @pink;
+		padding: 10px;
 		text-shadow: 1px 1px 0px rgba(255,255,0,1);
 	}
 
@@ -2024,7 +2032,12 @@ time {
 	footer {
 		bottom: -100px;
 		height: 100px;
-
+	}
+	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
+		display: none;
+	}
+	.thumbnail {
+		width: 100%;
 	}
 	div#site-search {
 		float: left !important;
