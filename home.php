@@ -390,7 +390,6 @@
 							</div>
 						</article>
 					</li>
-					<hr>
 				<?php endwhile; ?>
 				</ol>
 				<?php else: ?>
