@@ -112,5 +112,15 @@
 
 		$('#glides').perfectScrollbar();
 
+		var distance = $('#stickHead').offset().top,
+		    $window = $(window);
+
+		$window.scroll(function() {
+		    if ( $window.scrollTop() >= distance ) {
+		        // Your div has reached the top
+		        $(this) += "stuckHead";
+		    }
+		});
+
 	});
 
