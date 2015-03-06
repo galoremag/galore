@@ -45,7 +45,7 @@
 				<?php
 				$cat = get_category( get_query_var( 'cat' ) );
 				$category = $cat->slug;
-				echo do_shortcode('[ajax_load_more category="'.$category.'" post__not_in="'.$post->ID.'"]');
+				echo do_shortcode('[ajax_load_more category="'.$category.'" post__not_in="'.$post->ID.'" button_label="More Shit"]');
 				?>
 			</div>
 		</div>

@@ -33,10 +33,10 @@
 						</div>
 						<div class="nopadright col-sm-8">
 							<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-							<p><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_date(); ?> <?php the_time(); ?></time> • By <?php the_author_posts_link(); ?></p>p
+							<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_date(); ?> <?php the_time(); ?></time> • By <?php the_author_posts_link(); ?>
 							<div class="padtop10"></div>
-							<p><?php the_excerpt(); ?></p>
-							<a href="<?php esc_url( the_permalink() ); ?>">Read Story</a>
+							<?php the_excerpt(); ?>
+							<a href="<?php esc_url( the_permalink() ); ?>">Full Story <i class="fa fa-mars"></i></a>
 							<ul class="post-social pull-right">
 								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
@@ -52,7 +52,7 @@
 			<?php endif; ?>
 
 			<?php 
-			echo do_shortcode('[ajax_load_more post_type="post" category="beauty,fitness,tv,mag,models,parties,pop,sex-dating,style" button_label="More Posts"]');
+			echo do_shortcode('[ajax_load_more post_type="post" category="beauty,fitness,tv,mag,models,parties,pop,sex-dating,style" button_label="More Shit"]');
 			?>
 
 			<!-- <div id="post-nav">

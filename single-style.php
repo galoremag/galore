@@ -43,7 +43,7 @@
 			<div id="related-posts" class="row-fluid">
 				<?php 
 				$id = get_the_ID();
-				echo do_shortcode('[ajax_load_more category="style" post__not_in="'.$id.'"]');
+				echo do_shortcode('[ajax_load_more category="style" post__not_in="'.$id.'" button_label="More Shit"]');
 				?>
 			</div>
 			<?php endwhile; ?>

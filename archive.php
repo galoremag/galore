@@ -35,6 +35,7 @@
 				<li class="post">
 					<article class="row-fluid">
 						<div class="nopad col-sm-4">
+							<div class="catlinks"><?php the_category(); ?></div>
 							<div class="thumbnail">
 								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large', 300, 150); ?></a>
 							</div>
@@ -44,7 +45,7 @@
 							<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_date(); ?> <?php the_time(); ?></time> • By <?php the_author_posts_link(); ?>
 							<div class="padtop10"></div>
 							<?php the_excerpt(); ?>
-							<a href="<?php esc_url( the_permalink() ); ?>">Read Story</a>
+							<a href="<?php esc_url( the_permalink() ); ?>">Full Story <i class="fa fa-mars"></i></a>
 							<ul class="post-social pull-right">
 								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>

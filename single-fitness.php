@@ -52,7 +52,7 @@
 
 			<div id="related-posts" class="row-fluid">
 				<?php 
-				echo do_shortcode('[ajax_load_more category="fitness" post__not_in="'.$post->ID.'"]');
+				echo do_shortcode('[ajax_load_more category="fitness" post__not_in="'.$post->ID.'" button_label="More Shit"]');
 				?>
 			</div>
 		</div>

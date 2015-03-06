@@ -16,7 +16,7 @@
 		<div id="content" class="col-sm-8 col-sm-offset-2">
 			<?php if ( have_posts() ): the_post(); ?>
 
-			<h3>Stories by <?php echo get_the_author() ; ?></h3>
+			<h3>Stories by <span><?php echo get_the_author() ; ?></span></h3>
 			<hr>
 
 			<?php if ( get_the_author_meta( 'description' ) ) : ?>
@@ -35,12 +35,12 @@
 								<?php the_post_thumbnail('large', 300, 150); ?>
 							</div>
 						</div>
-						<div class="col-sm-8">
-							<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-							<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_date(); ?> <?php the_time(); ?></time>
-							<p>By <?php the_author_posts_link(); ?></p>
+						<div class="nopadright col-sm-8">
+							<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+							<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_date(); ?> <?php the_time(); ?></time> • By <?php the_author_posts_link(); ?>
+							<div class="padtop10"></div>
 							<?php the_excerpt(); ?>
-							<a href="<?php esc_url( the_permalink() ); ?>"><button>Read Story</button></a>
+							<a href="<?php esc_url( the_permalink() ); ?>">Full Story <i class="fa fa-mars"></i></a>
 							<ul class="post-social pull-right">
 								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
