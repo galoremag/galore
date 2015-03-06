@@ -105,12 +105,17 @@ Version: 1.0.1
 	font-family: 'Libre Baskerville', serif;
 }
 
-p {
+.font5 {
 	font-family: 'Cherry Swash', cursive;
+}
+
+p {
+	.font4;
 	font-size: 12px;
 	margin: 0;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.3px;
 	line-height: 16px;
+	font-weight: normal;
 }
 
 .transition {
@@ -122,6 +127,12 @@ p {
 
 .center {
 	margin: 0 auto !important;
+}
+
+.spacer10 {
+	display: block;
+	height: 10px;
+	width: 100%;
 }
 
 .spacer20 {
@@ -467,11 +478,6 @@ a.btn:hover {
 hr {
 	border-top: 1px dotted fade(@pink, 30%);
 	width: 100%;
-}
-
-p {
-	font-weight: normal;
-	.font3;
 }
 
 h1 {font-size: 40px;letter-spacing: -3px;}
@@ -1491,12 +1497,12 @@ div.catlinks li {
 
 div.catlinks li a {color:white !important;.font2;}
 
-p.excerpt {
-	font-size: 14px;
+div.excerpt p {
+	font-size: 15px;
 }
 
 article p {
-	font-size: 16px;
+	font-size: 17px;
 	line-height: 18px;
 }
 
@@ -1625,7 +1631,7 @@ ul#menu-footer-menu li a:hover {
 
 .alm-listing li {
 	padding: 0px;
-	overflow: hidden;
+	overflow: visible;
 }
 
 .alm-listing li img {
