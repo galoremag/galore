@@ -1057,7 +1057,7 @@ nav.shrink ul.nav {
 }
 
 .glide {
-  width: 200px; height: 260px;
+  width: 200px; height: 230px;
   margin: 0 5px;
   display: inline-table !important;
   background-size: cover;
@@ -1118,6 +1118,7 @@ ul.post-social li {
 	float: right;
 	margin: 0px 20px 0px 0px;
 	height: 40px;
+	width: auto;
 /*	transform: scale(2);
 	-o-transform: scale(2);
 	-moz-transform: scale(2);
@@ -1484,6 +1485,10 @@ div.catlinks {
 	z-index: 9;
 }
 
+div.post-grid div.catlinks {
+	left: 5px;
+}
+
 div.catlinks ul.post-categories {
 	margin: 0;
 }
@@ -1506,7 +1511,10 @@ article p {
 	margin: 10px 0;
 }
 
-
+.wp-caption-text {
+	text-align: center;
+	font-size: 10px;
+}
 
 h2.stuckHead {
 	position: fixed;
@@ -1836,6 +1844,7 @@ time {
 		/*-webkit-text-stroke-width: 0px !important;
 		-webkit-text-fill-color: @pink !important;
 		color: @pink !important;*/
+		text-shadow: 1px 1px 0 @pink, -1px -1px 0 @pink, 1px -1px 0 @pink, -1px 1px 0 @pink, 0px 0px 0px @pink;
 	}
 	.rsGalore .rsText p {
 		display: none;
