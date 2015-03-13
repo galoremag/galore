@@ -77,7 +77,7 @@
 						//Implode the posts and set a variable to pass to our exclude param.
 						$postsNotIn = implode(",", $post_ids);
 					}
-					echo do_shortcode('[ajax_load_more orderby="rand" transition="fade" exclude="'.$postsNotIn.'" posts_per_page="3" scroll="true" button_label="Load More Beauty Stories"]');
+					echo do_shortcode('[ajax_load_more orderby="rand" category="beauty" exclude="'.$postsNotIn.'" button_label="More Shit"]');
 			    ?>
 			</ul>
 		</div>
