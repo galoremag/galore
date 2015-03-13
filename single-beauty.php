@@ -42,11 +42,44 @@
 			<hr>
 			<h2 class="text-center">Gimme <span>More</span> Beauty <span><i class="fa fa-bomb"></i></span></h2>
 
-			<div id="related-posts" class="row-fluid">
-				<?php 
-				echo do_shortcode('[ajax_load_more category="beauty" post__not_in="'.$post->ID.'" button_label="More Shit"]');
-				?>
-			</div>
+			<ul id="related-posts" class="row-fluid">
+				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'date' ) ); ?>
+				<?php while ( $loop->have_posts() ) : $loop->the_post(); $post_ids[] = get_the_ID(); ?>
+
+			    <li class="post">
+					<article class="row-fluid">
+						<div class="nopad col-sm-4">
+							<div class="catlinks"><?php the_category(); ?></div>
+							<div class="thumbnail">
+								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large'); ?></a>
+							</div>
+						</div>
+						<div class="nopadright col-sm-8">
+							<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+							<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+
+							<div class="excerpt"><?php the_excerpt(); ?></div>
+
+							<p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Full Story <i class="fa fa-mars"></i></a></p>
+							<ul class="post-social pull-right">
+								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul>
+						</div>
+					</article>
+				</li>
+				<hr>
+
+			    <?php endwhile; wp_reset_query(); ?>
+
+			    <?php
+					if($post_ids){
+						//Implode the posts and set a variable to pass to our exclude param.
+						$postsNotIn = implode(",", $post_ids);
+					}
+					echo do_shortcode('[ajax_load_more orderby="rand" transition="fade" exclude="'.$postsNotIn.'" posts_per_page="3" scroll="true" button_label="Load More Beauty Stories"]');
+			    ?>
+			</ul>
 		</div>
 	</div>
 </div>
