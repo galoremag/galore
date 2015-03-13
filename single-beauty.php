@@ -43,7 +43,7 @@
 			<h2 class="text-center">Gimme <span>More</span> Beauty <span><i class="fa fa-bomb"></i></span></h2>
 
 			<ul id="related-posts" class="row-fluid">
-				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'date' ) ); ?>
+				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'rand' ) ); ?>
 				<?php while ( $loop->have_posts() ) : $loop->the_post(); $post_ids[] = get_the_ID(); ?>
 
 			    <li class="post">
