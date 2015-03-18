@@ -7,7 +7,7 @@
 		</div>
 		<footer>
 			<div class="container-fluid">
-				<div class="pull-left">
+				<div class="footer-icon pull-left">
 					<a id="footer-close" class="brand-white-sm" href="#"></a>
 				</div>
 				<div class="pad5 pull-left">
