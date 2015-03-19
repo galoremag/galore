@@ -40,7 +40,6 @@
 								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
 							</ul>
 						</div>
-						</div>
 					</article>
 				</li>
 				<hr>

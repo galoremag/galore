@@ -364,7 +364,7 @@
 			<div id="content" class="col-sm-10 col-sm-offset-1">
 				<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> Gimme <span>More</span> <i class="fa fa-diamond"></i></h2>
 				<hr>
-				<ol>
+<!-- 				<ol>
 				<?php query_posts($query_string . 'posts_per_page=4&offset=24'); ?>
 				<?php if ( have_posts() ): ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -379,9 +379,9 @@
 							<div class="nopadright col-sm-8">
 								<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 								<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-								<div class="padtop10"></div>
+
 								<div class="excerpt"><?php the_excerpt(); ?></div>
-								<div class="spacer10"></div>
+
 								<p class="pull-left"><a class="pull-left" href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
 								<ul class="post-social pull-right">
 									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
@@ -395,9 +395,9 @@
 				<?php else: ?>
 				<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
 				<?php endif; ?>
-
+ -->
 				<?php 
-				echo do_shortcode('[ajax_load_more category__not_in="mag,models" button_label="More Shit" offset="32"]');
+				echo do_shortcode('[ajax_load_more button_label="More Shit" offset="32"]');
 				?>
 
 				<div class="spacer40"></div>
