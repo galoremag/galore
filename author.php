@@ -57,7 +57,7 @@
 
 			<?php
 			$author = get_the_author_meta('ID', get_query_var('author'));
-			echo do_shortcode('[ajax_load_more author="'.$author.'"]');
+			echo do_shortcode('[ajax_load_more author="'.$author.'" offset="4"]');
 			?>
 			</ol>
 
