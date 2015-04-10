@@ -37,16 +37,22 @@
 				</ul>
 				<?php comments_template( '', true ); ?>
 			</article>
+			<?php endwhile; ?>
+
 			<hr>
 			<h2 class="text-center">Gimme <span>More</span> Style <span><i class="fa fa-scissors"></i></span></h2>
 
-			<div id="related-posts" class="row-fluid">
-				<?php 
-				$id = get_the_ID();
-				echo do_shortcode('[ajax_load_more category="style" post__not_in="'.$id.'" button_label="More Shit"]');
-				?>
-			</div>
-			<?php endwhile; ?>
+			<ul id="related-posts" class="row-fluid">
+				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'rand' ) ); ?>
+
+			    <?php
+					if($post_ids){
+						//Implode the posts and set a variable to pass to our exclude param.
+						$postsNotIn = implode(",", $post_ids);
+					}
+					echo do_shortcode('[ajax_load_more orderby="rand" category="style" exclude="'.$postsNotIn.'" button_label="More Shit"]');
+			    ?>
+			</ul>
 		</div>
 	</div>
 </div>

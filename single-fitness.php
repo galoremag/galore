@@ -49,11 +49,17 @@
 			<hr>
 			<h2 class="text-center">Gimme <span>More</span> Fitness <span><i class="fa fa-heartbeat"></i></span></h2>
 
-			<div id="related-posts" class="row-fluid">
-				<?php 
-				echo do_shortcode('[ajax_load_more category="fitness" post__not_in="'.$post->ID.'" button_label="More Shit"]');
-				?>
-			</div>
+			<ul id="related-posts" class="row-fluid">
+				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'rand' ) ); ?>
+
+			    <?php
+					if($post_ids){
+						//Implode the posts and set a variable to pass to our exclude param.
+						$postsNotIn = implode(",", $post_ids);
+					}
+					echo do_shortcode('[ajax_load_more orderby="rand" category="fitness" exclude="'.$postsNotIn.'" button_label="More Shit"]');
+			    ?>
+			</ul>
 		</div>
 	</div>
 </div>

@@ -473,6 +473,9 @@ a.btn:hover {
 .thumbnail {
 	max-height: 200px !important;
 	overflow: hidden !important;
+	border: 0px;
+	padding: 5px;
+	background: transparent;
 }
 
 hr {
@@ -989,7 +992,7 @@ nav.shrink ul.nav {
 
 .jumbotron .rsGalore .rsText {
 	padding: 0px 20px;
-
+	z-index: 1;
 }
 
 .jumbotron .rsGalore .rsText p, .jumbotron .rsGalore .rsText h3 {
@@ -1057,7 +1060,7 @@ nav.shrink ul.nav {
 }
 
 .glide {
-  width: 200px; height: 260px;
+  width: 200px; height: 230px;
   margin: 0 5px;
   display: inline-table !important;
   background-size: cover;
@@ -1093,7 +1096,7 @@ nav.shrink ul.nav {
 }
 
 .pop #content {
-	background: black;
+	background: #2B2B2B;
 }
 
 .entry {
@@ -1103,7 +1106,7 @@ nav.shrink ul.nav {
 	line-height: 1.45 !important;
 }
 
-.home-chunk img {
+.home-sex-dating img {
 	width: 100%;
 	height: auto;
 }
@@ -1118,6 +1121,7 @@ ul.post-social li {
 	float: right;
 	margin: 0px 20px 0px 0px;
 	height: 40px;
+	width: auto;
 /*	transform: scale(2);
 	-o-transform: scale(2);
 	-moz-transform: scale(2);
@@ -1480,8 +1484,12 @@ div.catlinks {
 	color: white;
 	padding: 3px 8px;
 	top: 13px;
-	left: -5px;
+	left: 0px;
 	z-index: 9;
+}
+
+div.post-grid div.catlinks {
+	left: 5px;
 }
 
 div.catlinks ul.post-categories {
@@ -1506,7 +1514,10 @@ article p {
 	margin: 10px 0;
 }
 
-
+.wp-caption-text {
+	text-align: center;
+	font-size: 10px;
+}
 
 h2.stuckHead {
 	position: fixed;
@@ -1654,7 +1665,6 @@ ul#menu-footer-menu li a:hover, ul#menu-footer li a:hover {
 
 .alm-listing li {
 	padding: 0px;
-	overflow: visible;
 	width: 100%;
 	width: -moz-available;
 }
@@ -1824,10 +1834,13 @@ time {
 		padding: 0px !important;
 	}
 	.jumbotron .rsGalore {
-		height: 222px !important;
+		height: 242px !important;
 		/*-webkit-transform: rotate(0deg);
 		transform: rotate(0deg);*/
 		border: 0px;
+	}
+	.jumbotron .rsGalore .rsText {
+		padding: 20px;
 	}
 	.rsGalore h1 {
 		font-size:24px !important;
@@ -1836,6 +1849,7 @@ time {
 		/*-webkit-text-stroke-width: 0px !important;
 		-webkit-text-fill-color: @pink !important;
 		color: @pink !important;*/
+		text-shadow: 1px 1px 0 @pink, -1px -1px 0 @pink, 1px -1px 0 @pink, -1px 1px 0 @pink, 0px 0px 0px @pink;
 	}
 	.rsGalore .rsText p {
 		display: none;
@@ -1861,11 +1875,8 @@ time {
 	.rsGalore .rsText h1, .rsGalore .rsText h2, .rsGalore .rsText h3 {
 		
 	}
-	.chpcs_image_carousel .chpcs_prev {
-		left: -20px !important;
-	}
-	.chpcs_image_carousel .chpcs_next {
-		right: -20px !important;
+	.home-sex-dating .excerpt {
+		display: none;
 	}
 	#cover-title {
 		-webkit-transform: scale(0.5);
@@ -1878,6 +1889,9 @@ time {
 		transform-origin: top left;
 		top: -10px;
 	}
+	footer div.footer-icon {
+		display: none !important;
+	}
 }
 
 /* Smartphones (portrait) ----------- */
@@ -1886,8 +1900,14 @@ time {
 	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
 		display: none;
 	}
+	.home-sex-dating .excerpt {
+		display: none;
+	}
 	figure.hammy-responsive {
 		width: 100%;
+	}
+	footer div.footer-icon {
+		display: none !important;
 	}
 }
 
@@ -1985,20 +2005,26 @@ time {
 		width: auto !important;
 	}
 
-	.home-style .rsGalore .rsText {
+	.home-style .rsGalore .rsText, .home-style .rsGalore .rsBlock, .home-style .rsGalore .rsABlock {
 		padding: 0;
+		margin: 0;
+		width: 100% !important;
+		height: auto !important;
+		left: 0 !important;
+		bottom: 0 !important;
 	}
 
-	.home-style .rsGalore .rsText h2 {
+	.home-style .rsGalore .rsText h2, .home-style .rsGalore .rsABlock h2, .home-style .rsGalore .rsBlock h2 {
 		.yellowBlueGradientFade;
 		font-size: 18px;
 		line-height: 19px;
 		color: @pink;
 		padding: 10px;
+		margin: 0 !important;
 		text-shadow: 1px 1px 0px rgba(255,255,0,1);
 	}
 
-	.home-style .rsGalore .rsText .btn {
+	.home-style .rsGalore .rsText .btn, .home-style .rsGalore .rsABlock .btn, .home-style .rsGalore .rsBlock .btn {
 		display: none;
 	}
 
@@ -2037,8 +2063,14 @@ time {
 		bottom: -100px;
 		height: 100px;
 	}
+	footer div.footer-icon {
+		display: none !important;
+	}
 	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
-		display: none;
+		display: none !important;
+	}
+	ul#menu-footer-menu li:last-child, ul#menu-footer li:last-child {
+		display: none !important;
 	}
 	.thumbnail {
 		width: 100%;
