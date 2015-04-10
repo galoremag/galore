@@ -7,7 +7,7 @@ module.exports = (grunt) ->
       fonts:
         files: [
           expand: true
-          cwd: 'bower_components/font-awesome/fonts'
+          cwd: 'bower_components/fontawesome/fonts'
           src: ['**/*']
           dest: 'fonts'
         ]
