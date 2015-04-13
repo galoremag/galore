@@ -76,6 +76,19 @@
 				FastClick.attach(document.body);
 			});
 		</script>
+
+		<!-- PERFORMANCE MONITORING -->
+		<script>
+		var _prum = [['id', '55284752abe53d0d1f35d79a'],
+		             ['mark', 'firstbyte', (new Date()).getTime()]];
+		(function() {
+		    var s = document.getElementsByTagName('script')[0]
+		      , p = document.createElement('script');
+		    p.async = 'async';
+		    p.src = '//rum-static.pingdom.net/prum.min.js';
+		    s.parentNode.insertBefore(p, s);
+		})();
+		</script>
 		
 	</head>
 	<body>
