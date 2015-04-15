@@ -264,8 +264,8 @@
 	// Disable auto-embeds for WordPress >= v3.5
 	remove_filter( 'the_content', array( $GLOBALS['wp_embed'], 'autoembed' ), 8 );
 
-	// update_option('siteurl','http://rwcc-fr6s.accessdomain.com/');
- //    update_option('home','http://rwcc-fr6s.accessdomain.com/');
+	update_option('siteurl','http://galoremag.com/');
+    update_option('home','http://galoremag.com/');
 
     function wpb_imagelink_setup() {
 	$image_set = get_option( 'image_default_link_type' );
