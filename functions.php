@@ -275,3 +275,10 @@
 	}
 	}
 	add_action('admin_init', 'wpb_imagelink_setup', 10);
+
+	// TV Redirect
+	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+	if (strpos($url,'tv/') !== false) {
+	    wp_redirect( 'http://tv.galoremag.com', 301 ); exit;
+	}
