@@ -61,4 +61,4 @@ Description: This part is optional, but helpful for describing the Post Template
 	</div>
 </div>
 
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+<?php //Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
