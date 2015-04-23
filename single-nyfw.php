@@ -47,18 +47,18 @@ Description: This part is optional, but helpful for describing the Post Template
 			<h2 class="text-center">Gimme <span>More</span> NYFW <i class="fa fa-neuter"></i></h2>
 
 			<ul id="related-posts" class="row-fluid">
-				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'rand' ) ); ?>
+				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'date' ) ); ?>
 
 			    <?php
 					if($post_ids){
 						//Implode the posts and set a variable to pass to our exclude param.
 						$postsNotIn = implode(",", $post_ids);
 					}
-					echo do_shortcode('[ajax_load_more orderby="rand" category="nyfw" exclude="'.$postsNotIn.'" button_label="More Shit"]');
+					echo do_shortcode('[ajax_load_more orderby="date" category="nyfw" exclude="'.$postsNotIn.'" button_label="More Shit"]');
 			    ?>
 			</ul>
 		</div>
 	</div>
 </div>
 
-<?php //Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
