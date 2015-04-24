@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Tag Archive pages
+ * The template for displaying Category Archive pages
  *
  * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
@@ -23,7 +23,7 @@
 				<li class="post">
 					<article class="row-fluid">
 						<div class="nopad col-sm-4">
-							<div class="catlinks"><?php the_tag(); ?></div>
+							<div class="catlinks"><?php the_tags(); ?></div>
 							<div class="thumbnail">
 								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large'); ?></a>
 							</div>
