@@ -50,7 +50,7 @@
 			<?php endif; ?>
 
 			<?php 
-			$tag = get_tag( get_query_var( 'tag' ) );
+			$tag = get_the_tags( get_query_var( 'tag' ) );
 			$tags = $tag->slug;
 			echo do_shortcode('[ajax_load_more tag="'.$tags.'" offset="4"]');
 			?>
