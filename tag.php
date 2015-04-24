@@ -23,10 +23,11 @@
 				<li class="post">
 					<article class="row-fluid">
 						<div class="nopad col-sm-4">
-							<div class="catlinks"><?php the_tags(); ?></div>
+							<div class="catlinks"><?php the_category(); ?></div>
 							<div class="thumbnail">
 								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large'); ?></a>
 							</div>
+							<div class="taglinks"><?php the_tags(); ?></div>
 						</div>
 						<div class="nopadright col-sm-8">
 							<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
@@ -51,8 +52,8 @@
 
 			<?php 
 			$tag = get_tag( get_query_var( 'tag' ) );
-			$category = $tag->slug;
-			echo do_shortcode('[ajax_load_more tag="'.$tag.'" offset="4"]');
+			$tags = $tag->slug;
+			echo do_shortcode('[ajax_load_more tag="'.$tags.'" offset="4"]');
 			?>
 
 			<!-- <div id="post-nav">
