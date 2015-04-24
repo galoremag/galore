@@ -285,14 +285,14 @@
 
 	// Add external pages to sitemap
 	
-	add_filter('bwp_gxs_external_pages', 'my_external_sitemap');
+	// add_filter('bwp_gxs_external_pages', 'my_external_sitemap');
  
-	function my_external_sitemap()
-	{
-	    $external_pages = array(
-	        array('location' => home_url('http://tv.galoremag.com'), 'lastmod' => . date("Y/m/d") ., 'priority' => '1.0'),
-	        array('location' => home_url('http://galoremag.com/kitten'), 'lastmod' => . date("Y/m/d") ., 'priority' => '1.0')
-	        // repeat this for any other pages you would like to add
-	    );
-	    return $external_pages;
-	}
+	// function my_external_sitemap()
+	// {
+	//     $external_pages = array(
+	//         array('location' => home_url('http://tv.galoremag.com'), 'lastmod' => . date("Y/m/d") ., 'priority' => '1.0'),
+	//         array('location' => home_url('http://galoremag.com/kitten'), 'lastmod' => . date("Y/m/d") ., 'priority' => '1.0')
+	//         // repeat this for any other pages you would like to add
+	//     );
+	//     return $external_pages;
+	// }
