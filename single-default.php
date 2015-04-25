@@ -42,14 +42,14 @@
 			<hr>
 			
 			<ul id="related-posts" class="row-fluid">
-				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 1, 'orderby' => 'date' ) ); ?>
+				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 1, 'orderby' => 'rand' ) ); ?>
 
 			    <?php
 					if($post_ids){
 						//Implode the posts and set a variable to pass to our exclude param.
 						$postsNotIn = implode(",", $post_ids);
 					}
-					echo do_shortcode('[ajax_load_more orderby="date" exclude="'.$postsNotIn.'" button_label="More Shit"]');
+					echo do_shortcode('[ajax_load_more orderby="rand" exclude="'.$postsNotIn.'" button_label="More Shit"]');
 			    ?>
 			</ul>
 		</div>
