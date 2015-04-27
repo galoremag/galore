@@ -5,7 +5,16 @@
 <!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]--> 
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 	<head>
-		<title><?php wp_title(); ?> | <?php bloginfo( 'name' ); ?></title>
+		<?php
+		if (is_home()) {
+		    $blog_title = get_bloginfo('name') . " | " . get_bloginfo('description');
+		} else {
+			$blog_title = get_the_title() . " | " . get_bloginfo('name');
+		}
+		?>
+		<title>
+		<?php echo $blog_title; ?>
+		</title>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"><!-- Remove if you're not building a responsive site. (But then why would you do such a thing?) -->
@@ -93,6 +102,7 @@
 	</head>
 	<body>
 
+		<!-- Google Analytics -->
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -102,6 +112,17 @@
 			ga('create', 'UA-36901236-1', 'auto');
 			ga('send', 'pageview');
 		</script>
+
+		<!-- Google Tag Manager -->
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P5KW4R"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-P5KW4R');</script>
+		<!-- End Google Tag Manager -->
+
 
 		<div id="fb-root"></div>
 		<script>
