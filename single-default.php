@@ -40,16 +40,16 @@
 			</article>
 			<?php endwhile; ?>
 			<hr>
-			
+			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
-				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 1, 'orderby' => 'rand' ) ); ?>
+				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'date' ) ); ?>
 
 			    <?php
-					if($post_ids){
-						//Implode the posts and set a variable to pass to our exclude param.
-						$postsNotIn = implode(",", $post_ids);
-					}
-					echo do_shortcode('[ajax_load_more orderby="rand" exclude="'.$postsNotIn.'" button_label="More Shit"]');
+					// if($post_ids){
+					// 	//Implode the posts and set a variable to pass to our exclude param.
+					// 	$postsNotIn = implode(",", $post_ids);
+					// }
+					echo do_shortcode('[ajax_load_more orderby="date" exclude="'.$wp_query->post->ID.'" button_label="More Beauty Shit"]');
 			    ?>
 			</ul>
 		</div>
