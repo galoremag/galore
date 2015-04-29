@@ -1,6 +1,27 @@
 
 	jQuery(document).ready(function($) {
 
+		$(function() {
+			FastClick.attach(document.body);
+		});
+
+		// IDK What This Is
+		( function( $ ) {
+		    $( document.body ).on( 'post-load', function () {
+		        // New posts have been added to the page.
+
+		    } );
+		} )( jQuery );
+
+		// Navbar Shrinking On Scroll
+		$(window).scroll(function() {
+		  if ($(document).scrollTop() > 50) {
+		    $('nav').addClass('shrink');
+		  } else {
+		    $('nav').removeClass('shrink');
+		  }
+		});
+
 		/////////////////////
 		// Signup Modal  //
 		/////////////////////

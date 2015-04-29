@@ -53,36 +53,6 @@
 		<!-- REMOVE THE TAP DELAY -->
 		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/fastclick.js'></script>
 
-		<script type="text/javascript">
-
-		( function( $ ) {
-		    $( document.body ).on( 'post-load', function () {
-		        // New posts have been added to the page.
-		    } );
-		} )( jQuery );
-
-		</script>
-
-		<!-- NAVBAR SHRINKING -->
-
-		<script type="text/javascript">
-		jQuery(document).ready(function ($) {
-			$(window).scroll(function() {
-			  if ($(document).scrollTop() > 50) {
-			    $('nav').addClass('shrink');
-			  } else {
-			    $('nav').removeClass('shrink');
-			  }
-			});
-		});
-		</script>
-
-		<script type="text/javascript">
-			$(function() {
-				FastClick.attach(document.body);
-			});
-		</script>
-
 		<!-- PERFORMANCE MONITORING -->
 		<script>
 		var _prum = [['id', '55284752abe53d0d1f35d79a'],
@@ -127,6 +97,29 @@
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
 
+		</script>
+
+		<script type="text/javascript">
+            var count = 2;
+            $(window).scroll(function(){
+                if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+                   loadArticle(count);
+                   count++;
+                }
+            }); 
+ 
+            function loadArticle(pageNumber){    
+                $.ajax({
+                    url: "<?php bloginfo('wpurl') ?>/wp-admin/admin-ajax.php",
+                    type:'POST',
+                    data: "action=infinite_scroll&page_no="+ pageNumber + '&loop_file=loop', 
+                    success: function(html){
+                        $("#single-content").append(html);   // This will be the div where our content will be loaded
+                        // window.history.pushState("object or string", "Title", "<?php global $post; echo $post->name; ?>");
+                    }
+                });
+                return false;
+            }
 		</script>
 
 		<script>
