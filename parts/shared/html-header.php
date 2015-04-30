@@ -115,7 +115,7 @@
                     data: "action=infinite_scroll&page_no="+ pageNumber + '&loop_file=loop', 
                     success: function(html){
                         $("#single-content").append(html);   // This will be the div where our content will be loaded
-                        // window.history.pushState("object or string", "Title", "<?php global $post; echo $post->name; ?>");
+                        window.history.pushState("object", "Title", "<?php global $post; echo $post->ID; ?>");
                     }
                 });
                 return false;
