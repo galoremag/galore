@@ -299,12 +299,12 @@
 	add_action('wp_ajax_nopriv_infinite_scroll', 'wp_infinitepaginate');    // if user not logged in
 	
 	// Get The Current Post's Slug
-	function get_the_slug() {
-		global $post;
-		if ( is_single() || is_page() ) {
-			return $post->post_name;
-		}
-		else {
-			return "";
-		}
-	}
+	// function get_the_slug() {
+	// 	global $post;
+	// 	if ( is_single() || is_page() ) {
+	// 		return $post->post_name;
+	// 	}
+	// 	else {
+	// 		return "";
+	// 	}
+	// }

@@ -46,9 +46,7 @@
 		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/site.js'></script>
 
 		<!-- Create it with slider online build tool for better performance. -->
-		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
-
-		
+		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>		
 
 		<!-- REMOVE THE TAP DELAY -->
 		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/fastclick.js'></script>
@@ -100,6 +98,17 @@
 		</script>
 
 		<script type="text/javascript">
+			function isInView(elem) {
+
+			    var docViewTop = $(window).scrollTop();
+			    var docViewBottom = docViewTop + $(window).height();
+
+			    var elemTop = $(elem).offset().top;
+			    var elemBottom = elemTop + $(elem).height();
+
+			    return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom));
+			}
+
             var count = 2;
             $(window).scroll(function(){
                 if  ($(window).scrollTop() == $(document).height() - $(window).height()){
@@ -114,8 +123,8 @@
                     type:'POST',
                     data: "action=infinite_scroll&page_no="+ pageNumber + '&loop_file=loop', 
                     success: function(html){
-                        $("#single-content").append(html);   // This will be the div where our content will be loaded
-                        window.history.pushState("object", "Title", "<?php global $post; echo $post->ID; ?>");
+                        $("#single-content").append(html) && addClass('active');   // This will be the div where our content will be loaded
+                        // window.history.pushState("object", "Title", "<?php global $post; echo $post->ID; ?>");
                     }
                 });
                 return false;

@@ -77,11 +77,11 @@
 			no_more_results_id = '#no-more-results',
 			no_more_results = false,
 
-		// Create blank variables
+			// Create blank variables
 			article_divs, article_id, $article, comment_id, gpt_slot, minimum_scroll_time, new_html,
 			new_sidebar, new_title, new_url, new_id, new_page_url, new_author, new_channel, new_style, now, post_article, scroll, sidebar_id, slot, the_top, sidebar_display_on_resize, scrollTimer;
 
-		// Create the infinite loading div
+			// Create the infinite loading div
 		$('<div/>', { id: single_infinite_loading } )
 			.insertAfter( main_container );
 

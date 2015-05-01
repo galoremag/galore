@@ -14,7 +14,6 @@
 	<div class="row-fluid">
 		<div id="single-content" class="col-sm-8 col-sm-offset-2">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-			<div class="article-wrap">
 				<article>
 					<div id="social-links">
 						<ul id="post-social" class="post-social">
@@ -36,13 +35,17 @@
 					<ul class="hidden-sm single-social">
 						<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i> &nbsp;<h4 class="nomarg">Share on Facebook</h4></a></li>
 						<li><h4 class="social-title"><?php the_title(); ?></h4></li>
+						<ul id="post-social" class="pull-right post-social">
+							<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+						</ul>
 					</ul>
 					<?php comments_template( '', true ); ?>
+					<p id="slug-<?php the_ID(); ?>" class="hidden slug"><?php the_permalink(); ?></p>
 				</article>
-			</div>
 			<?php endwhile; ?>
-			<hr>
 			<div class="spacer20"></div>
+			<hr>
 		</div>
 	</div>
 </div>
