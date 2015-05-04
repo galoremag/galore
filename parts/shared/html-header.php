@@ -5,6 +5,7 @@
 <!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]--> 
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 	<head>
+		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
 		<?php
 		if (is_home()) {
 		    $blog_title = get_bloginfo('name') . " | " . get_bloginfo('description');
