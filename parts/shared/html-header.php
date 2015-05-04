@@ -51,6 +51,9 @@
 		<!-- REMOVE THE TAP DELAY -->
 		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/fastclick.js'></script>
 
+		<!-- Infinite Single Post Scrolling -->
+		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/infinite-single.js'></script>
+
 		<!-- PERFORMANCE MONITORING -->
 		<script>
 		var _prum = [['id', '55284752abe53d0d1f35d79a'],

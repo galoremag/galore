@@ -20,18 +20,19 @@
 			scroll_detection = false,
 
 			// Determine the page offset from the top of the window
-			page_sidebar_offset = $( '#secondary' ).position().left,
+			page_sidebar_offset = $( '#related' ).position().left,
 
 			// Create a placeholder for our scroll timer this will help prevent bloating the dom with scroll requests for our pushstate
 			scroll_time, last_scroll_time = 0,
 
 			// The main selector for all articles on single post
-			articles_selector = '#single-content article',
+			articles_selector = '#single-content article.post',
 
 			// To parse facebook comments we are wrapping this in this div for now
+			// Galore uses Disqus tho, so we are just using this wrapping for shits and giggles
 			article_wrap = 'article-wrap',
 
-			article_last_active = 'single-content article.active:visible',
+			article_last_active = '#single-content article.post.active:visible',
 
 			// Determine the first post on page load
 			first_article = $( articles_selector + ':first' ),
@@ -46,7 +47,8 @@
 			before_date = first_article.data( 'date' ),
 
 			// Define the infinite loading container
-			single_infinite_loading = 'single-infinite-loading',
+			// NO LOADER YET
+			// single_infinite_loading = 'single-infinite-loading',
 
 			// Set an active class for the current post that's in the spotlight
 			active_post_class = 'active',
@@ -59,10 +61,11 @@
 
 			load_status = 'load',
 
-			sticky_selector = '.single #secondary',
+			sticky_selector = '.single #related',
 
 			// Facebook comments id that we will append the post id to to show hide the comments
-			facebook_comments_id = '#facebook-comments-box-',
+			// NO FACEBOOK COMMENTS
+			// facebook_comments_id = '#facebook-comments-box-',
 
 			// Define the width for the sidebar so that it doesn't get confused and display improperly
 			sticky_width = $( sticky_selector ).width(),
@@ -89,7 +92,7 @@
 		if ( '0' === infiniteSingle.is_mobile && 768 < $( window ).width() ) {
 			$( '.' + article_wrap )
 				.first()
-				.css( 'min-height', $( '#secondary' ).outerHeight() + 'px' );
+				.css( 'min-height', $( '#related' ).outerHeight() + 'px' );
 		}
 
 		// pre-load the first article on page load if it's the first page load
@@ -104,7 +107,7 @@
 			} else {
 				sidebar_display_on_resize = 'block';
 			}
-			page_sidebar_offset = $( '#secondary' ).position().left;
+			page_sidebar_offset = $( '#related' ).position().left;
 
 			$( 'div[id^=infinite-single-sidebar-]' ).css( {
 				'left': parseInt( page_sidebar_offset, 10 ) + 'px',

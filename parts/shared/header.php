@@ -1,4 +1,4 @@
-<header>
+<header id="masthead">
 	
 	<div class="container-fluid">
 		<!-- Fixed navbar -->

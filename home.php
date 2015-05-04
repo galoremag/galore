@@ -49,8 +49,10 @@
 	<div class="spacer20"></div>
 </div>
 
-<!-- SEX + DATING SECTION -->
 <div id="home-container">
+
+	<!-- SEX + DATING SECTION -->
+
 	<div class="sex-dating">
 		<div class="sex-dating-in">
 			<div class="container-fluid">
@@ -128,14 +130,13 @@
 
 							$grids = 3; //Grids per row-fluid
 
-							/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
 							query_posts($query_string . 'category_name=pop&ignore_sticky_posts=0&posts_per_page=6');
 
 
 							if(have_posts()) :	while(have_posts()) :  the_post(); 
 							?>
 							<?php
-							//Show the left hand side column
+							// Show the left hand side column
 							if($counter == 1) :
 							?>
 							<div class="col-sm-4">
@@ -158,7 +159,7 @@
 							endif;
 							?>
 							<?php
-							//Show the left hand side column
+							// Show the left hand side column
 							if($counter == 1) :
 							?>
 							<div class="col-sm-4">
@@ -181,7 +182,7 @@
 							endif;
 							?>
 							<?php
-							//Show the left hand side column
+							// Show the left hand side column
 							if($counter == 1) :
 							?>
 							<div class="col-sm-4">
@@ -205,7 +206,7 @@
 							<?php
 							$counter++;
 							endwhile;
-							//Pagination can go here if you want it.
+							// Pagination can go here if you want it.
 							endif;
 							?>
 						</div>
@@ -259,7 +260,7 @@
 
 							if(have_posts()) :	while($bsQuery->have_posts()) :  $bsQuery->the_post(); 
 
-							//Show the left hand side column
+							// Show the left hand side column
 							if($counter == 1) :
 							?>
 							<div class="col-sm-6">
@@ -283,7 +284,7 @@
 							endif;
 							?>
 							<?php
-							//Show the left hand side column
+							// Show the left hand side column
 							if($counter == 1) :
 							?>
 							<div class="col-sm-6">
@@ -308,7 +309,7 @@
 							<?php
 							$counter++;
 							endwhile;
-							//Pagination can go here if you want it.
+							// Pagination can go here if you want it.
 							endif;
 							?>
 						</div>
@@ -359,43 +360,14 @@
 		</div>
 	</div>
 
+	<!-- More Stories / Bottom of Home -->
+
 	<div class="container-fluid nopad">
 		<div class="row-fluid">
 			<div id="content" class="col-sm-10 col-sm-offset-1">
 				<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> Gimme <span>More</span> <i class="fa fa-diamond"></i></h2>
 				<hr>
-<!-- 				<ol>
-				<?php query_posts($query_string . 'posts_per_page=4&offset=24'); ?>
-				<?php if ( have_posts() ): ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<li class="post">
-						<article class="row-fluid">
-							<div class="nopad col-sm-4">
-								<div class="catlinks"><?php the_category(); ?></div>
-								<div class="thumbnail">
-									<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large'); ?></a>
-								</div>
-							</div>
-							<div class="nopadright col-sm-8">
-								<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-								<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 
-								<div class="excerpt"><?php the_excerpt(); ?></div>
-
-								<p class="pull-left"><a class="pull-left" href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
-								<ul class="post-social pull-right">
-									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-								</ul>
-							</div>
-						</article>
-					</li>
-				<?php endwhile; ?>
-				</ol>
-				<?php else: ?>
-				<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
-				<?php endif; ?>
- -->
 				<?php 
 				echo do_shortcode('[ajax_load_more button_label="More Shit" offset="32"]');
 				?>
@@ -405,20 +377,5 @@
 		</div>
 	</div>
 </div>
-
-<!-- <div class="kittens container-fluid">
-	<div class="row-fluid">
-		<div class="col-sm-6 col-sm-offset-3">
-			<div class="kitten-logo" style="-webkit-transform: scale(0.4);">
-				<img src="<?php bloginfo('template_url'); ?>/images/kitten-logo.png">
-			</div>
-			<h3 class="text-center">Finally, a talent agency for the mobile + social world.</h3>
-			<p class="text-center">See our full roster of girls <a href="/kitten">here</a>.</p>
-			<div class="kitten-girls">
-				<img src="<?php bloginfo('template_url'); ?>/images/kittens/kittens.png">
-			</div>
-		</div>
-	</div>
-</div> -->
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>

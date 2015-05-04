@@ -12,9 +12,9 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div id="single-content" class="col-sm-8 col-sm-offset-2">
+		<div id="single-content" class="col-sm-8 col-sm-offset-1">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-				<article>
+				<article class="post">
 					<div id="social-links">
 						<ul id="post-social" class="post-social">
 							<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
@@ -43,10 +43,31 @@
 					<?php comments_template( '', true ); ?>
 					<p id="slug-<?php the_ID(); ?>" class="hidden slug"><?php the_permalink(); ?></p>
 				</article>
-			<?php endwhile; ?>
 			<div class="spacer20"></div>
 			<hr>
 		</div>
+		<div id="related" class="col-sm-2 well">
+			<h2>Trending Now</h2>
+			<?php
+			//for use in the loop, list 5 post titles related to first tag on current post
+			$tags = wp_get_post_tags($post->ID);
+			if ($tags) {
+			$first_tag = $tags[0]->term_id;
+			$args=array(
+			'tag__in' => array($first_tag),
+			'post__not_in' => array($post->ID),
+			'posts_per_page'=>5
+			);
+			$my_query = new WP_Query($args);
+			if( $my_query->have_posts() ) {
+			while ($my_query->have_posts()) : $my_query->the_post(); ?>
+			<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+			<?php the_post_thumbnail('large'); ?>
+			<?php the_title(); ?>
+			</a>
+			<?php endwhile; } wp_reset_query(); } ?>
+		</div>
+		<?php endwhile; ?>
 	</div>
 </div>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
