@@ -32,7 +32,7 @@
 		<!-- Plugin requires jQuery 1.8+  -->
 		<!-- If you already have jQuery on your page, you shouldn't include it second time. -->
 		<!-- <script src='<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery-1.7.2.min.js'></script> -->
-		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/bower_components/jquery/dist/jquery.min.js'></script>
+		<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/bower_components/jquery/dist/jquery.min.js'></script>
 
 		<!-- BOOSTRAP -->
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -43,16 +43,16 @@
 		<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/perfect-scrollbar.min.js'></script>
 
 		<!-- Main slider JS script file --> 
-		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/site.js'></script>
+		<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/site.js'></script>
 
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>		
 
 		<!-- REMOVE THE TAP DELAY -->
-		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/fastclick.js'></script>
+		<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/fastclick.js'></script>
 
 		<!-- Infinite Single Post Scrolling -->
-		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/infinite-single.js'></script>
+		<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/infinite-single.js'></script>
 
 		<!-- PERFORMANCE MONITORING -->
 		<script>
@@ -101,37 +101,45 @@
 		</script>
 
 		<script type="text/javascript">
-			function isInView(elem) {
+			// function isInView(elem) {
 
-			    var docViewTop = $(window).scrollTop();
-			    var docViewBottom = docViewTop + $(window).height();
+			//     var docViewTop = $(window).scrollTop();
+			//     var docViewBottom = docViewTop + $(window).height();
 
-			    var elemTop = $(elem).offset().top;
-			    var elemBottom = elemTop + $(elem).height();
+			//     var elemTop = $(elem).offset().top;
+			//     var elemBottom = elemTop + $(elem).height();
 
-			    return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom));
-			}
+			//     return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom));
+			// }
 
-            var count = 2;
-            $(window).scroll(function(){
-                if  ($(window).scrollTop() == $(document).height() - $(window).height()){
-                   loadArticle(count);
-                   count++;
-                }
-            }); 
+   //          var count = 2;
+   //          $(window).scroll(function(){
+   //              if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+   //                 loadArticle(count);
+   //                 count++;
+   //              }
+   //          }); 
  
-            function loadArticle(pageNumber){    
-                $.ajax({
-                    url: "<?php bloginfo('wpurl') ?>/wp-admin/admin-ajax.php",
-                    type:'POST',
-                    data: "action=infinite_scroll&page_no="+ pageNumber + '&loop_file=loop', 
-                    success: function(html){
-                        $("#single-content").append(html) && addClass('active');   // This will be the div where our content will be loaded
-                        // window.history.pushState("object", "Title", "<?php global $post; echo $post->ID; ?>");
-                    }
-                });
-                return false;
-            }
+   //          function loadArticle(pageNumber){    
+   //              $.ajax({
+   //                  url: "<?php bloginfo('wpurl') ?>/wp-admin/admin-ajax.php",
+   //                  type:'POST',
+   //                  data: "action=infinite_scroll&page_no="+ pageNumber + '&loop_file=loop', 
+   //                  success: function(html){
+   //                      $("#single-content").append(html) && addClass('active');   // This will be the div where our content will be loaded
+   //                      // window.history.pushState("object", "Title", "<?php global $post; echo $post->ID; ?>");
+   //                  }
+   //              });
+   //              return false;
+   //          }
+		</script>
+
+		<script type="text/javascript">
+
+		/* <![CDATA[ */
+		var infiniteSingle = {"admin_url":"http:\/\/localhost:8888/galore\/wp-admin\/admin-ajax.php","targeting":"singletest","is_mobile":"0","is_tablet":"0"};
+		/* ]]> */
+
 		</script>
 
 		<script>

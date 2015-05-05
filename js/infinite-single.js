@@ -1,3 +1,39 @@
+// // This is a lame and fragile way to add params to a URL but it works for now
+// // by annakata at http://stackoverflow.com/a/487049/169478
+// function responsive_add_query_arg( key, value, url ) {
+//     key = escape( key );
+// 	value = escape( value );
+
+//     var kvp = url.split( '&' ),
+// 		i = kvp.length,
+// 		x;
+
+// 	while(i--) {
+// 		x = kvp[i].split('=');
+
+// 		if ( x[0] == key ) {
+// 				x[1] = value;
+// 				kvp[i] = x.join( '=' );
+// 				break;
+// 		}
+// 	}
+
+//     if( i < 0 )
+// 		kvp[kvp.length] = [key,value].join( '=' );
+
+// 	url = kvp.shift();
+// 	if( -1 == url.indexOf( '?' ) && kvp.length )
+// 		url += '?';
+// 	else if ( kvp.length )
+// 		url += '&';
+
+//     url += kvp.join( '&' );
+
+// 	return url;
+// }
+// ;
+/*global console, infiniteSingle, FB, addthis, googletag, _gaq */
+
 /**
  * infinite-single.js
  *
@@ -26,13 +62,13 @@
 			scroll_time, last_scroll_time = 0,
 
 			// The main selector for all articles on single post
-			articles_selector = '#single-content article.post',
+			articles_selector = '#single-content article',
 
 			// To parse facebook comments we are wrapping this in this div for now
 			// Galore uses Disqus tho, so we are just using this wrapping for shits and giggles
 			article_wrap = 'article-wrap',
 
-			article_last_active = '#single-content article.post.active:visible',
+			article_last_active = 'single-content article.active:visible',
 
 			// Determine the first post on page load
 			first_article = $( articles_selector + ':first' ),
@@ -40,15 +76,14 @@
 			// Define the default current post id by getting the current post id for the first article on the page
 			current_post_id = first_article.data( 'post' ),
 
-			// Defines the primary channel to use in our query
-			primary_channel = first_article.data( 'primary-channel' ),
+			// Defines the primary category to use in our query
+			primary_category = first_article.data( 'primary-category' ),
 
 			// Defines the date range to use in our query
 			before_date = first_article.data( 'date' ),
 
 			// Define the infinite loading container
-			// NO LOADER YET
-			// single_infinite_loading = 'single-infinite-loading',
+			single_infinite_loading = 'single-infinite-loading',
 
 			// Set an active class for the current post that's in the spotlight
 			active_post_class = 'active',
@@ -70,8 +105,9 @@
 			// Define the width for the sidebar so that it doesn't get confused and display improperly
 			sticky_width = $( sticky_selector ).width(),
 
-			gpt_wildcard = '[id^=div-gpt-ad-]',
-			slot_name    = 'slot-name',
+			// AD SLOTS
+			// gpt_wildcard = '[id^=div-gpt-ad-]',
+			// slot_name    = 'slot-name',
 
 			// Setup an array that contains all posts already sent to Google Analytics
 			ga_sent = [current_post_id],
@@ -82,7 +118,7 @@
 
 			// Create blank variables
 			article_divs, article_id, $article, comment_id, gpt_slot, minimum_scroll_time, new_html,
-			new_sidebar, new_title, new_url, new_id, new_page_url, new_author, new_channel, new_style, now, post_article, scroll, sidebar_id, slot, the_top, sidebar_display_on_resize, scrollTimer;
+			new_sidebar, new_title, new_url, new_id, new_page_url, new_author, new_category, new_style, now, post_article, scroll, sidebar_id, slot, the_top, sidebar_display_on_resize, scrollTimer;
 
 			// Create the infinite loading div
 		$('<div/>', { id: single_infinite_loading } )
@@ -168,11 +204,11 @@
 		} );
 
 		// Push whatever we can to ga
-		function push_analytics( article_id, article_author, article_channel, article_style, article_title, article_url ) {
+		function push_analytics( article_id, article_author, article_category, article_style, article_title, article_url ) {
 			if ( -1 >= $.inArray( article_id, ga_sent ) ) {
 				_gaq.push( ['_setCustomVar', 1, 'contentId', '' + article_id + '', 3] );
 				_gaq.push( ["_setCustomVar", 2, 'author', '' + article_author + '', 3] );
-				_gaq.push( ['_setCustomVar', 3, 'Story Channel', '' + article_channel + '', 3] );
+				_gaq.push( ['_setCustomVar', 3, 'Story Category', '' + article_category + '', 3] );
 				_gaq.push( ['_setCustomVar', 4, 'post style', '' + article_style + '', 3] );
 				_gaq.push( ['_set', 'title', '' + article_title + ''] );
 				_gaq.push( ['_trackPageview', '' + article_url + ''] );
@@ -201,7 +237,7 @@
 			new_id = $( article_last_active ).last().data( 'post' );
 			new_page_url = $( article_last_active ).last().data( 'page-url' );
 			new_author = $( article_last_active ).last().data( 'author' );
-			new_channel = $( article_last_active ).last().data( 'primary-channel-name' );
+			new_category = $( article_last_active ).last().data( 'primary-category-name' );
 			new_style = $( article_last_active ).last().data( 'style' );
 
 			// Keep this from firing if the URL was already updated
@@ -214,7 +250,7 @@
 				window.history.pushState( null, null, new_url );
 
 				// Push Google Analytics for the new article
-				push_analytics( new_id, new_author, new_channel, new_style, new_title, new_page_url );
+				push_analytics( new_id, new_author, new_category, new_style, new_title, new_page_url );
 
 				// Refresh the addthis share bar that's inserted
 				addthis.layers.refresh();
@@ -240,7 +276,7 @@
 					action          : 'infinite_scroll',
 					current_post_id : current_post_id,
 					offset          : success_offset,
-					primary_channel : primary_channel,
+					primary_category : primary_category,
 					before_date     : before_date
 				},
 
@@ -340,19 +376,19 @@
 
 					//----- Start google ad slots -----
 					// Foreach ad injected lets find the slot name and the slot defined for gpt and render them
-					$.each( $( new_html ), function( i, html ) {
-						$( gpt_wildcard, html ).each( function() {
-							gpt_slot = $( this ).data( slot_name );
-							// Find and refresh the ads asap because this should take higher priority than the comments for the newly appended content
-							slot = googletag.defineSlot( gpt_slot, [300, 250], this.id ).addService( googletag.pubads().setTargeting( 'page_type', [ infiniteSingle.targeting ] ) );
+					// $.each( $( new_html ), function( i, html ) {
+					// 	$( gpt_wildcard, html ).each( function() {
+					// 		gpt_slot = $( this ).data( slot_name );
+					// 		// Find and refresh the ads asap because this should take higher priority than the comments for the newly appended content
+					// 		slot = googletag.defineSlot( gpt_slot, [300, 250], this.id ).addService( googletag.pubads().setTargeting( 'page_type', [ infiniteSingle.targeting ] ) );
 
-							// Display has to be called before
-							googletag.display( this.id );
+					// 		// Display has to be called before
+					// 		googletag.display( this.id );
 
-							// refresh and after the slot div is in the page.
-							googletag.pubads().refresh( [ slot ] );
-						} );
-					} );
+					// 		// refresh and after the slot div is in the page.
+					// 		googletag.pubads().refresh( [ slot ] );
+					// 	} );
+					// } );
 
 					//----- End Google ad slots ---
 
