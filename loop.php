@@ -24,5 +24,6 @@
 	</ul>
 	<?php comments_template( '', true ); ?>
 </article>
+
 <?php endwhile; ?>
 <hr>

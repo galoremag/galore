@@ -52,7 +52,7 @@
 		<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/fastclick.js'></script>
 
 		<!-- Infinite Single Post Scrolling -->
-		<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/infinite-single.js'></script>
+		<!-- <script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/infinite-single.js'></script> -->
 
 		<!-- PERFORMANCE MONITORING -->
 		<script>
@@ -112,33 +112,33 @@
 			//     return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom));
 			// }
 
-   //          var count = 2;
-   //          $(window).scroll(function(){
-   //              if  ($(window).scrollTop() == $(document).height() - $(window).height()){
-   //                 loadArticle(count);
-   //                 count++;
-   //              }
-   //          }); 
+            var count = 2;
+            $(window).scroll(function(){
+                if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+                   loadArticle(count);
+                   count++;
+                }
+            }); 
  
-   //          function loadArticle(pageNumber){    
-   //              $.ajax({
-   //                  url: "<?php bloginfo('wpurl') ?>/wp-admin/admin-ajax.php",
-   //                  type:'POST',
-   //                  data: "action=infinite_scroll&page_no="+ pageNumber + '&loop_file=loop', 
-   //                  success: function(html){
-   //                      $("#single-content").append(html) && addClass('active');   // This will be the div where our content will be loaded
-   //                      // window.history.pushState("object", "Title", "<?php global $post; echo $post->ID; ?>");
-   //                  }
-   //              });
-   //              return false;
-   //          }
+            function loadArticle(pageNumber){    
+                $.ajax({
+                    url: "<?php bloginfo('wpurl') ?>/wp-admin/admin-ajax.php",
+                    type:'POST',
+                    data: "action=infinite_scroll&page_no="+ pageNumber + '&loop_file=loop', 
+                    success: function(html){
+                        $("#single-content").append(html) && addClass('active');   // This will be the div where our content will be loaded
+                        // window.history.pushState("object", "Title", "<?php global $post; echo $post->ID; ?>");
+                    }
+                });
+                return false;
+            }
 		</script>
 
 		<script type="text/javascript">
 
-		/* <![CDATA[ */
-		var infiniteSingle = {"admin_url":"http:\/\/localhost:8888/galore\/wp-admin\/admin-ajax.php","targeting":"singletest","is_mobile":"0","is_tablet":"0"};
-		/* ]]> */
+		// /* <![CDATA[ */
+		// var infiniteSingle = {"admin_url":"http:\/\/localhost:8888/galore\/wp-admin\/admin-ajax.php","targeting":"singletest","is_mobile":"0","is_tablet":"0"};
+		// /* ]]> */
 
 		</script>
 
