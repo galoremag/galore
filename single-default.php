@@ -12,7 +12,7 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div id="single-content" class="col-sm-8 col-sm-offset-2">
+		<div id="single-content" class="col-sm-8 col-sm-offset-1">
 
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 

@@ -13,7 +13,7 @@
 
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div id="content" class="col-sm-8 col-sm-offset-2">
+		<div id="single-content" class="col-sm-8 col-sm-offset-2">
 
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
