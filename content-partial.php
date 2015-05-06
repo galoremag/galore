@@ -26,7 +26,6 @@
 				<div class="fb-like" data-href="http://galoremag.com" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
 			</ul>
 		</ul>
-		<!-- <?php comments_template( '', true ); ?> -->
 		<p id="slug-<?php the_ID(); ?>" class="hidden slug"><?php the_permalink(); ?></p>
 	</article>
 <?php endwhile; ?>
