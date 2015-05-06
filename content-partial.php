@@ -1,5 +1,5 @@
 <?php while ( have_posts() ) : the_post(); ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" class="post">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<p><i class="fa fa-scissors"></i> By <?php the_author_posts_link(); ?></p>

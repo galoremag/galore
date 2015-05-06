@@ -14,7 +14,7 @@
 	<div class="row-fluid">
 		<div id="single-content" class="col-lg-8 col-lg-offset-1">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article id="post-<?php the_ID(); ?>" class="post">
 
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 
