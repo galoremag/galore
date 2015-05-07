@@ -32,7 +32,7 @@ while ( have_posts() ) : the_post(); ?>
 				<div class="fb-like" data-href="http://galoremag.com" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
 			</ul>
 		</ul>
-		<p id="slug-<?php the_ID(); ?>" class="hidden slug"><?php the_permalink(); ?></p>
+		<?php comments_template( '', true ); ?>
 	</article>
 <?php endwhile; ?>
 <div class="spacer20"></div>
