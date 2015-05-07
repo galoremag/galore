@@ -23,16 +23,9 @@ while ( have_posts() ) : the_post(); ?>
 		<h3>About <?php echo get_the_author() ; ?></h3>
 		<?php the_author_meta( 'description' ); ?>
 		<?php endif; ?>
-		<ul class="hidden-sm single-social">
-			<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i> &nbsp;<h4 class="nomarg">Share on Facebook</h4></a></li>
-			<li><h4 class="social-title"><?php the_title(); ?></h4></li>
-			<ul id="post-social" class="pull-right post-social">
-				<!-- <li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-				<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li> -->
-				<div class="fb-like" data-href="http://galoremag.com" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
-			</ul>
-		</ul>
+
 		<?php comments_template( '', true ); ?>
+
 	</article>
 <?php endwhile; ?>
 <div class="spacer20"></div>

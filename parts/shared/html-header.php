@@ -29,6 +29,9 @@
 		<!-- Perfect Scrollbar CSS -->
 		<link rel='stylesheet' href='<?php echo get_stylesheet_directory_uri(); ?>/css/perfect-scrollbar.min.css' />
 
+		<!-- Inline Disqussions CSS -->
+		<link rel='stylesheet' href='<?php echo get_stylesheet_directory_uri(); ?>/css/inlineDisqussions.css' />
+
 		<!-- Plugin requires jQuery 1.8+  -->
 		<!-- If you already have jQuery on your page, you shouldn't include it second time. -->
 		<!-- <script src='<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery-1.7.2.min.js'></script> -->
@@ -50,6 +53,9 @@
 
 		<!-- REMOVE THE TAP DELAY -->
 		<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/fastclick.js'></script>
+
+		<!-- Inline Disqussions -->
+		<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/inlineDisqussions.js'></script>
 
 		<!-- PERFORMANCE MONITORING -->
 		<script>

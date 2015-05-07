@@ -1,5 +1,8 @@
+	disqus_shortname = 'galoremag';
 
 	jQuery(document).ready(function($) {
+
+		jQuery("#comments").inlineDisqussions();
 
 		$(function() {
 			FastClick.attach(document.body);
