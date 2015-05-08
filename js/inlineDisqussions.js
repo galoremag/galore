@@ -31,7 +31,7 @@ var disqus_url;
         displayCount: true,
         highlighted: false,
         position: 'right',
-        background: 'white',
+        background: 'transparent',
         maxWidth: 9999
       };
 

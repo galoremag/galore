@@ -36,6 +36,42 @@
 					
 					<?php comments_template( '', true ); ?>
 
+					<!--  RELATED POSTS BELOW CONTENT  -->
+
+					<ul class="related-single row-fluid">
+						<?php
+						//for use in the loop, list 5 post titles related to first tag on current post
+						$tags = wp_get_post_tags($post->ID);
+						if ($tags) {
+						$first_tag = $tags[0]->term_id;
+						$args=array(
+						'tag__in' => array($first_tag),
+						'post__not_in' => array($post->ID),
+						'posts_per_page'=>3
+						);
+						$my_query = new WP_Query($args);
+						if( $my_query->have_posts() ) {
+						while ($my_query->have_posts()) : $my_query->the_post(); ?>
+						<li class="pull-left col-sm-4">
+							<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+								<div class="thumbnail-md"><?php the_post_thumbnail('medium'); ?></div>
+								<h3><?php the_title(); ?></h3>
+							</a>
+						</li>
+						<?php endwhile; } wp_reset_query(); } ?>
+					</ul>
+
+					<!-- SOCIAL FOOTER  -->
+					<ul class="hidden-sm single-social">
+						<li><a id="fb-single" href="#" target="popup"><i class="fa fa-facebook"></i> &nbsp;<h4 class="nomarg">Share on Facebook</h4></a></li>
+						<li><h4 class="social-title"><?php the_title(); ?></h4></li>
+						<ul id="post-social" class="pull-right post-social">
+							<!-- <li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li> -->
+							<div class="fb-like" data-href="http://galoremag.com" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+						</ul>
+					</ul>
+
 				</article>
 			<?php endwhile; ?>
 			<div class="spacer20"></div>
@@ -47,7 +83,7 @@
 				<span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentyfifteen' ) . '</span>' ); ?></span>
 			</nav>
 		</div>
-		<div id="related" class="col-sm-2 well hidden-md">
+		<div id="related-sidebar" class="col-sm-2 well hidden-md">
 			<h2>Trending</h2>
 			<?php
 			//for use in the loop, list 5 post titles related to first tag on current post
@@ -57,14 +93,15 @@
 			$args=array(
 			'tag__in' => array($first_tag),
 			'post__not_in' => array($post->ID),
-			'posts_per_page'=>5
+			'posts_per_page'=>4
 			);
 			$my_query = new WP_Query($args);
 			if( $my_query->have_posts() ) {
 			while ($my_query->have_posts()) : $my_query->the_post(); ?>
 			<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-			<?php the_post_thumbnail('large'); ?>
-			<?php the_title(); ?>
+				<div class="thumbnail-md"><?php the_post_thumbnail('medium'); ?></div>
+				<h3 class="nomargbottom"><?php the_title(); ?></h3>
+				<p class="byline padbot10"><time datetime="<?php the_time( 'Y-m-d' ); ?>">By <?php the_author_posts_link(); ?></p>
 			</a>
 			<?php endwhile; } wp_reset_query(); } ?>
 		</div>

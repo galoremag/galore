@@ -147,6 +147,22 @@ p {
 	height: 40px;
 }
 
+/* MARGIN Overrides */
+
+.nomarg {
+	margin: 0 !important;
+}
+
+.nomargbottom {
+	margin-bottom: 0 !important;
+}
+
+.nomargtop {
+	margin-top: 0 !important;
+}
+
+/* PADDING Overrides */
+
 .pad5 {
 	padding: 5px !important;
 }
@@ -161,6 +177,10 @@ p {
 
 .padtop10 {
 	padding-top: 10px !important;
+}
+
+.padbot10 {
+	padding-bottom: 10px !important;
 }
 
 .horPad10 {
@@ -178,10 +198,6 @@ p {
 	padding: 0 !important;
 }
 
-.nomarg {
-	margin: 0 !important;
-}
-
 .nopadtop {
 	padding-top: 0px !important;
 }
@@ -196,10 +212,6 @@ p {
 
 .nopadright {
 	padding-right: 0px !important;
-}
-
-.nomartop {
-	margin-top: 0px !important;
 }
 
 /**
@@ -475,6 +487,13 @@ a.btn:hover {
 	overflow: hidden !important;
 	border: 0px;
 	padding: 5px;
+	background: transparent;
+}
+
+.thumbnail-md {
+	max-height: 120px !important;
+	overflow: hidden !important;
+	border: 0px;
 	background: transparent;
 }
 
@@ -1555,7 +1574,7 @@ h2.stuckHead {
 
 /* Sidebar on Single Articles */
 
-#related {
+#related-sidebar {
 	/*float: right;
 	overflow: hidden;
 	margin-top: 16px;
