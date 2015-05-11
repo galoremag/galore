@@ -34,32 +34,21 @@
 					<?php the_author_meta( 'description' ); ?>
 					<?php endif; ?>
 					
-					<?php comments_template( '', true ); ?>
+					<!-- DISQUS -->
+					<button id="comment_trigger">Comments</button>
+					<div id="comment_container">
+						<div id="disqus_thread"></div>
+					</div>
+
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 					<!--  RELATED POSTS BELOW CONTENT  -->
 
-					<ul class="related-single row-fluid">
-						<?php
-						//for use in the loop, list 5 post titles related to first tag on current post
-						$tags = wp_get_post_tags($post->ID);
-						if ($tags) {
-						$first_tag = $tags[0]->term_id;
-						$args=array(
-						'tag__in' => array($first_tag),
-						'post__not_in' => array($post->ID),
-						'posts_per_page'=>3
-						);
-						$my_query = new WP_Query($args);
-						if( $my_query->have_posts() ) {
-						while ($my_query->have_posts()) : $my_query->the_post(); ?>
-						<li class="pull-left col-sm-4">
-							<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-								<div class="thumbnail-md"><?php the_post_thumbnail('medium'); ?></div>
-								<h3><?php the_title(); ?></h3>
-							</a>
-						</li>
-						<?php endwhile; } wp_reset_query(); } ?>
-					</ul>
+					<!-- <ul class="related-single pull-left">
+						<?php 
+						echo do_shortcode('[ajax_load_more exclude="'. get_the_ID() .' posts_per_page="3" destroy_after="1"]'); 
+						?>
+					</ul> -->
 
 					<!-- SOCIAL FOOTER  -->
 					<ul class="hidden-sm single-social">

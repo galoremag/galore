@@ -40,6 +40,20 @@
 		<!-- BOOSTRAP -->
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
+		<!-- DISQUS TWEAK -->
+
+		<script type="text/javascript">
+			var disqus_shortname 	= 'galoremag';
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+		    (function() {
+		        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		    })();
+
+		</script>
+
 		<?php wp_head(); ?>
 
 		<!-- Perfect Scrollbar JS -->
@@ -53,6 +67,13 @@
 
 		<!-- REMOVE THE TAP DELAY -->
 		<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/fastclick.js'></script>
+
+		<!-- ScrollSpy -->
+		<!-- <script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/scrollspy.js'></script> -->
+
+		<!-- Infiniscroll -->
+		<!-- <script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/infiniscroll.js'></script> -->
+
 
 		<!-- Inline Disqussions -->
 		<!-- <script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/inlineDisqussions.js'></script> -->

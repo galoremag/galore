@@ -42,13 +42,14 @@
 
 				<ul class="related-single row-fluid">
 					<?php
-					//for use in the loop, list 5 post titles related to first tag on current post
-					$tags = wp_get_post_tags($post->ID);
+					//for use in the loop, list 3 post titles related to first tag on current post
+					$post = get_the_ID();
+					$tags = wp_get_post_tags($post);
 					if ($tags) {
 					$first_tag = $tags[0]->term_id;
 					$args=array(
 					'tag__in' => array($first_tag),
-					'post__not_in' => array($post->ID),
+					'post__not_in' => array($post),
 					'posts_per_page'=>3
 					);
 					$my_query = new WP_Query($args);
@@ -58,6 +59,7 @@
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 							<div class="thumbnail-md"><?php the_post_thumbnail('medium'); ?></div>
 							<h3><?php the_title(); ?></h3>
+							<time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y'); ?></time>
 						</a>
 					</li>
 					<?php endwhile; } wp_reset_query(); } ?>
