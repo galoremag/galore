@@ -41,7 +41,7 @@
 	
 	======================================================================================================================== */
 
-	add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer' );
+	add_action( 'wp_enqueue_scripts', 'script_enqueuer' );
 
 	add_filter( 'body_class', array( 'Starkers_Utilities', 'add_slug_to_body_class' ) );
 
@@ -68,11 +68,11 @@
 	 * @author Aaron Smulktis
 	 */
 
-	function starkers_script_enqueuer() {
+	function script_enqueuer() {
 		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ) );
 		wp_enqueue_script( 'site' );
 
-		wp_register_script( 'scrollspy', get_template_directory_uri(). '/js/scrollspy.js', array('jquery'), null, true );
+		wp_register_script( 'scrollspy', get_template_directory_uri(). '/js/scrollspy.min.js', array('jquery'), null, true );
 
 		wp_register_script( 'history' , get_template_directory_uri(). '/js/jquery.history.js', array('jquery'), null, true );
 

@@ -27,13 +27,14 @@ while ( have_posts() ) : the_post(); ?>
 		<!-- DISQUS -->
 		<button id="commentTrigger">Comments</button>
 		<div id="comment_container">
-			<div id="disqus_thread"></div>
+			<!-- <div id="disqus_thread"></div> -->
 		</div>
 
 		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 	</article>
 <?php endwhile; ?>
+
 <div class="spacer20"></div>
 <!-- <hr> -->
 <nav class="navigation post-navigation" role="navigation">

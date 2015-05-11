@@ -1,25 +1,25 @@
-var commentTrigger = $('#commentTrigger');
+var commentTrigger = jQuery('button#comment_trigger');
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function(jQuery) {
 
-	$(function() {
+	jQuery(function() {
 		FastClick.attach(document.body);
 	});
 
 	// IDK What This Is
-	( function( $ ) {
-	    $( document.body ).on( 'post-load', function () {
-	        // New posts have been added to the page.
+	// ( function( jQuery ) {
+	//     jQuery( document.body ).on( 'post-load', function () {
+	//         // New posts have been added to the page.
 
-	    } );
-	} )( jQuery );
+	//     } );
+	// } )( jQuery );
 
 	// Navbar Shrinking On Scroll
-	$(window).scroll(function() {
-	  if ($(document).scrollTop() > 50) {
-	    $('nav').addClass('shrink');
+	jQuery(window).scroll(function() {
+	  if (jQuery(document).scrollTop() > 50) {
+	    jQuery('nav').addClass('shrink');
 	  } else {
-	    $('nav').removeClass('shrink');
+	    jQuery('nav').removeClass('shrink');
 	  }
 	});
 
@@ -27,8 +27,8 @@ jQuery(document).ready(function($) {
 	// Signup Modal  //
 	/////////////////////
 
-	$('div#myModal').on('shown.bs.modal', function () {
-		$('#CenterSignup').focus();
+	jQuery('div#myModal').on('shown.bs.modal', function () {
+		jQuery('#CenterSignup').focus();
 	});
 
 	// Detect User Agent
@@ -47,35 +47,34 @@ jQuery(document).ready(function($) {
 	// Bootstrap Collapse   //
 	//////////////////////////
 	
-	$('.nav-collapse a[data-toggle]').click(function() {
-	  $('.nav-collapse').css('height', '100%');
+	jQuery('.nav-collapse a[data-toggle]').click(function() {
+	  jQuery('.nav-collapse').css('height', '100%');
 	});
 
 	/////////////////////
 	// Footer Opener //
 	/////////////////////
 
-	$('#footer-open').click(function(event) {
+	jQuery('#footer-open').click(function(event) {
 		event.preventDefault();
-		$('footer').css('bottom: 0px;');
+		jQuery('footer').css('bottom: 0px;');
 	});
 
-	$('#footer-close').click(function(event) {
+	jQuery('#footer-close').click(function(event) {
 		event.preventDefault();
-		$('footer').css('bottom: -50px;');
+		jQuery('footer').css('bottom: -50px;');
 	});
 
-	$('#glides').perfectScrollbar();
+	jQuery('#glides').perfectScrollbar();
 
 	// Open Comments
-	$(commentTrigger).click(function() {
-		var this_url = $('a[rel="prev"]').attr('href');
-		var this_title = $('a[rel="prev"]').attr('data-title');
+	jQuery(commentTrigger).on('click', function() {
+		var this_url = jQuery('a[rel="prev"]').attr('href');
+		var this_title = jQuery('a[rel="prev"]').attr('data-title');
 		var this_id = '<?php get_page_by_title('+ this_title +'); ?>';
-		var commentTrigger = $('#commentTrigger');
 		var disqus_shortname 	= 'galoremag';
 
-		$('#comments_container').html('<div id="disqus_thread"></div>');
+		jQuery('#comments_container').html('<div id="disqus_thread"></div>');
 			
 		/* * * DON'T EDIT BELOW THIS LINE * * */
 	    (function() {
@@ -85,7 +84,7 @@ jQuery(document).ready(function($) {
 	    })();
 
 	    /* * * Disqus Reset Function * * */
-	    function reset(next_id, next_url, next_title) {
+	    function reset (next_id, next_url, next_title) {
 	        DISQUS.reset({
 	            reload: true,
 	            config: function () {

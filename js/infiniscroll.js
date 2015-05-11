@@ -71,13 +71,13 @@ function changeURL() {
 
 }
 
-function updategoogle_analytics() {
-	if( typeof ga === 'undefined' ) {
-		return;
-	}
+// function updategoogle_analytics() {
+// 	if( typeof ga === 'undefined' ) {
+// 		return;
+// 	}
 
-	ga('send', 'pageview', window.location.pathname);
-}
+// 	ga('send', 'pageview', window.location.pathname);
+// }
 
 function auto_load_next_post() {
 	// Grab the url for the next post

@@ -37,7 +37,7 @@
 					<!-- DISQUS -->
 					<button id="comment_trigger">Comments</button>
 					<div id="comment_container">
-						<div id="disqus_thread"></div>
+						<!-- <div id="disqus_thread"></div> -->
 					</div>
 
 					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
