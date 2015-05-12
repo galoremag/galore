@@ -35,9 +35,9 @@
 					<?php endif; ?>
 					
 					<!-- DISQUS -->
-					<button id="comment_trigger">Comments</button>
-					<div id="comment_container">
-						<!-- <div id="disqus_thread"></div> -->
+					<button id="comments_trigger">Comments</button>
+					<div id="comments_container_<?php the_ID(); ?>">
+
 					</div>
 
 					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>

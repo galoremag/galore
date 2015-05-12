@@ -46,7 +46,40 @@ function initialise_History() {
 	});
 }
 
+function initialise_Comments() {
+	// Open Comments
+	var this_url = jQuery('a[rel="prev"]').attr('href');
+	var this_title = jQuery('a[rel="prev"]').attr('data-title');
+	var this_id = '<?php get_page_by_title('+ this_title +'); ?>';
+	var disqus_shortname 	= 'galoremag';
+	var commentsContainerID = jQuery('#comments_container').text();
+	var commentsContainerHTML = '#comments_container_' + commentsContainerID;
+
+	jQuery(commentsContainerHTML).html('<div id="disqus_thread"></div>');
+		
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * Disqus Reset Function * * */
+    function reset (this_id, this_url, this_title) {
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+                this.page.identifier = jQuery('#comments_container').text();
+                this.page.url = this_url;
+                this.page.title = this_title;
+            }
+        });
+    };
+
+}
+
 function changeURL() {
+	var _gaq = _gaq || [];
 	var el         = jQuery(this);
 	var this_url   = el.attr('data-url');
 	var this_title = el.attr('data-title');
@@ -69,6 +102,7 @@ function changeURL() {
 
 	auto_load_next_post();
 
+	initialise_Comments();
 }
 
 // function updategoogle_analytics() {
@@ -115,6 +149,7 @@ function auto_load_next_post() {
 
 		// need to set up ScrollSpy on new content
 		initialise_Scrollspy();
+
 	});
 
 }

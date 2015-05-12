@@ -42,10 +42,6 @@
 
 		<?php wp_head(); ?>
 
-
-		<!-- Inline Disqussions -->
-		<!-- <script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/inlineDisqussions.js'></script> -->
-
 		<!-- PERFORMANCE MONITORING -->
 		<script>
 		var _prum = [['id', '55284752abe53d0d1f35d79a'],
