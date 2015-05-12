@@ -34,7 +34,10 @@
 				<?php the_author_meta( 'description' ); ?>
 				<?php endif; ?>
 
-				<?php comments_template( '', true ); ?>
+				<!-- DISQUS -->
+				<button class="comments_trigger">Comments</button>
+				<div class="comments_container" id="comments_container_<?php the_ID(); ?>">
+				</div>
 				
 				<!--  RELATED POSTS BELOW CONTENT  -->
 
@@ -79,8 +82,6 @@
 			<div class="spacer20"></div>
 			<!-- <hr> -->
 			<nav class="navigation post-navigation" role="navigation">
-				<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'twentyfifteen' ); ?></h1>
-
 				<span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'twentyfifteen' ) . '</span> %title' ); ?></span>
 				<span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentyfifteen' ) . '</span>' ); ?></span>
 			</nav>

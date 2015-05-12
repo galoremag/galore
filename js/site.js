@@ -1,4 +1,5 @@
-var commentsTrigger = jQuery('button#comments_trigger');
+var disqus_shortname    = 'galoremag';
+var commentsContainer = jQuery('.comments_container');
 
 jQuery(document).ready(function(jQuery) {
 

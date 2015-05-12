@@ -73,9 +73,7 @@
 		wp_enqueue_script( 'site' );
 
 		wp_register_script( 'scrollspy', get_template_directory_uri(). '/js/scrollspy.min.js', array('jquery'), null, true );
-
 		wp_register_script( 'history' , get_template_directory_uri(). '/js/jquery.history.js', array('jquery'), null, true );
-
 		wp_register_script( 'infiniscroll', get_template_directory_uri(). '/js/infiniscroll.js', array('scrollspy'), null, true );
 
 		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );

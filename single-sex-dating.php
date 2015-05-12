@@ -36,7 +36,10 @@
 				<?php the_author_meta( 'description' ); ?>
 				<?php endif; ?>
 
-				<?php comments_template( '', true ); ?>
+				<!-- DISQUS -->
+				<button class="comments_trigger">Comments</button>
+				<div class="comments_container" id="comments_container_<?php the_ID(); ?>">
+				</div>
 
 				<!--  RELATED POSTS BELOW CONTENT  -->
 
