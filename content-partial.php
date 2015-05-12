@@ -27,10 +27,11 @@ while ( have_posts() ) : the_post(); ?>
 
 		<!-- DISQUS -->
 		<button class="comments_trigger">Comments</button>
-		<div class="comments_container" id="comments_container_<?php the_ID(); ?>"></div>
+		<?php comments_template( '', true ); ?>
+		<!-- <div class="comments_container" id="comments_container_<?php the_ID(); ?>"></div>
 
 		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
+ -->
 		<div class="spacer20"></div>
 
 	</article>
