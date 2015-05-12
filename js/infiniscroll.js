@@ -1,11 +1,10 @@
 // Variables
 var content_container   = jQuery('div#single-content');
 var nav_container       = jQuery('nav.post-navigation');
-var comments_container  = jQuery('div#disqus_thread');
+var comments_container  = jQuery('div.comments_container');
 var post_title_selector = jQuery('h1.entry-title');
 var curr_url            = window.location.href;
-
-var disqus_shortname    = 'galoremag';
+var post_id             = jQuery('div.post_id').text();
 
 jQuery.noConflict();
 
@@ -21,7 +20,7 @@ jQuery( document ).ready(function() {
     // 
     "use strict";
 
-    jQuery( content_container ).prepend( '<hr style="height: 0" class="post-divider" data-title="' + window.document.title + '" data-url="' + window.location.href + '"/>' );
+    jQuery( content_container ).prepend( '<hr style="height: 0" class="post-divider" data-id="' + post_id + '" data-title="' + window.document.title + '" data-url="' + window.location.href + '"/>' );
 
     initialise_Scrollspy();
 
@@ -40,7 +39,6 @@ function initialise_Scrollspy() {
     jQuery('.post-divider').on('scrollSpy:exit', changeURL ); 
     jQuery('.post-divider').on('scrollSpy:enter', changeURL );
     jQuery('.post-divider').scrollSpy();
-
 }
 
 function initialise_History() {
@@ -51,6 +49,30 @@ function initialise_History() {
         if ( State.url != curr_url ) {
             window.location.reload(State.url);
         }
+    });
+}
+
+function loadComments() {
+    var el         = jQuery(this);
+    var this_url   = jQuery('.post-divider').attr('data-url');
+    var this_title = jQuery('.post-divider').attr('data-title');
+    var disqus_shortname    = 'galoremag';
+
+    el.append('<div id="disqus_thread"></div>');
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    DISQUS.reset({
+      reload: true,
+      config: function () {  
+        this.page.identifier = this_title;  
+        this.page.url = this_url;
+      }
     });
 }
 
@@ -73,26 +95,6 @@ function changeURL() {
         jQuery( 'h4.social-title' ).text(this_title);
 
         updategoogle_analytics();
-
-        jQuery('#disqus_thread').remove();
-
-        scrollTop.append('<div id="disqus_thread"></div>');
-
-        // Disqus
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-
-        DISQUS.reset({
-          reload: true,
-          config: function () {  
-            this.page.identifier = this_title;  
-            this.page.url = this_url;
-          }
-        });
 
         // _gaq.push(['_setAccount', 'UA-36901236-1']);
         // _gaq.push(['_trackPageview', this_url])
@@ -141,11 +143,14 @@ function auto_load_next_post() {
 
         var post_html  = jQuery( '<hr class="post-divider" data-url="' + post_url + '"/>' + data );
         var post_title = post_html.find( post_title_selector );
+        var next_id    = post_html.find( post_id );
 
         jQuery( content_container ).append( post_html ); // Add next post
 
+        jQuery('div#comments_container_' + next_id.text()), function(){ loadComments(); }
+
         // get the HR element and add the data-title
-        jQuery( 'hr[data-url="' + post_url + '"]').attr( 'data-title' , post_title.text() ).css( 'display', 'inline-block' );
+        jQuery( 'hr[data-url="' + post_url + '"]').attr({ 'data-title' : post_title.text(), 'data-id' : next_id.text() }).css( 'display', 'inline-block' );
 
         // need to set up ScrollSpy on new content
         initialise_Scrollspy();

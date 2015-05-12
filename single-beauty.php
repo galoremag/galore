@@ -17,7 +17,7 @@
 				<article id="post-<?php the_ID(); ?>" class="post">
 
 					<h1 class="entry-title"><?php the_title(); ?></h1>
-					<div id="post_id" class="hidden"><?php the_ID(); ?></div>
+					<div class="hidden post_id"><?php the_ID(); ?></div>
 
 					<p class="byline"><i class="fa fa-bomb"></i> <time datetime="<?php the_time( 'Y-m-d' ); ?>">Posted on <?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> By <?php the_author_posts_link(); ?></p>
 					<?php edit_post_link('EDIT. THIS. PIECE.', '<p>', '</p>'); ?>
@@ -37,7 +37,19 @@
 					<!-- DISQUS -->
 					<button class="comments_trigger">Comments</button>
 					<div class="comments_container" id="comments_container_<?php the_ID(); ?>">
+						<div id="disqus_thread"></div>
 					</div>
+
+					<script type="text/javascript">
+						var disqus_shortname    = 'galoremag';
+
+						/* * * DON'T EDIT BELOW THIS LINE * * */
+				        (function() {
+				            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				        })();
+					</script>
 
 					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
