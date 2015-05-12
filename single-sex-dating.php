@@ -32,6 +32,7 @@
 
 				<?php the_content(); ?>			
 
+				<div class="spacer20"></div>
 				<?php if ( get_the_author_meta( 'description' ) ) : ?>
 				<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
 				<h3>About <?php echo get_the_author() ; ?></h3>
