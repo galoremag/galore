@@ -18,7 +18,18 @@
 		</title>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"><!-- Remove if you're not building a responsive site. (But then why would you do such a thing?) -->
+	  	
+	  	<meta name="description" content="GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative women in her 20's surrounding Style, Beauty, Pop, Sex + Dating and Fitness.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+		
+		<meta name="keywords" content="Galore, Galore Girls, girls, edgy, sexy, teens, teenager, pop culture, Justin Bieber, Nicki Minaj, Kanye West, entertainment">
+		<meta name="author" content="Galore Girl">
+
+		<!-- Pinterest Verification -->
+		<meta name="p:domain_verify" content="8c3f8aadea8dcff760f98a676ca9a2f7"/>
+
+		<link rel="author" href="https://plus.google.com/111766775974771084195"/>
+
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico"/>
 
