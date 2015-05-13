@@ -5,16 +5,33 @@
 <!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]--> 
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 	<head>
-		<title><?php wp_title(); ?> | <?php bloginfo( 'name' ); ?></title>
+		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+		<?php
+		if (is_home()) {
+		    $blog_title = get_bloginfo('name') . " | " . get_bloginfo('description');
+		} else {
+			$blog_title = get_the_title() . " | " . get_bloginfo('name');
+		}
+		?>
+		<title>
+		<?php echo $blog_title; ?>
+		</title>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"><!-- Remove if you're not building a responsive site. (But then why would you do such a thing?) -->
+	  	
+	  	<meta name="description" content="GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative women in her 20's surrounding Style, Beauty, Pop, Sex + Dating and Fitness.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+		
+		<meta name="keywords" content="Galore, Galore Girls, girls, edgy, sexy, teens, teenager, pop culture, Justin Bieber, Nicki Minaj, Kanye West, entertainment">
+		<meta name="author" content="Galore Girl">
 
 		<!-- Pinterest Verification -->
 		<meta name="p:domain_verify" content="8c3f8aadea8dcff760f98a676ca9a2f7"/>
 
+		<link rel="author" href="https://plus.google.com/111766775974771084195"/>
+
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico"/>
+		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico"/>
 
 		<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -80,19 +97,52 @@
 				FastClick.attach(document.body);
 			});
 		</script>
+
+		<!-- PERFORMANCE MONITORING -->
+		<script>
+		var _prum = [['id', '55284752abe53d0d1f35d79a'],
+		             ['mark', 'firstbyte', (new Date()).getTime()]];
+		(function() {
+		    var s = document.getElementsByTagName('script')[0]
+		      , p = document.createElement('script');
+		    p.async = 'async';
+		    p.src = '//rum-static.pingdom.net/prum.min.js';
+		    s.parentNode.insertBefore(p, s);
+		})();
+		</script>
 		
 	</head>
 	<body>
 
+		<!-- Google Analytics -->
 		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			ga('create', 'UA-36901236-1', 'auto');
-			ga('send', 'pageview');
+			// ga('create', 'UA-36901236-1', 'auto');
+			// ga('send', 'pageview');
 		</script>
+
+		<!-- Google Tag Manager -->
+		<noscript>
+		<!-- <iframe src="//www.googletagmanager.com/ns.html?id=GTM-P5KW4R"
+		height="0" width="0" style="display:none;visibility:hidden">
+		</iframe> -->
+		</noscript>
+		<script>
+		// (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		// new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		// j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		// '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		// })(window,document,'script','dataLayer','GTM-P5KW4R');
+		</script>
+		<!-- End Google Tag Manager -->
+
+		<!-- Google Tag Manager Plugin -->
+		<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
+
 
 		<div id="fb-root"></div>
 		<script>

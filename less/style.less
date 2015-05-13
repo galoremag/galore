@@ -503,7 +503,7 @@ h3 {
 
 h4 {
 	color: @pink;
-	.font3;
+	.font4;
 	font-weight: bold;
 	font-size: 18px;
 	margin: 10px 0px !important;
@@ -537,7 +537,7 @@ h5 {margin: 0px;}
 
 body {
 	overflow-x: hidden;
-	.font3;
+	.font4;
 	padding: 0px 0 0 0;
 }
 
@@ -1095,9 +1095,9 @@ nav.shrink ul.nav {
 	background: lavenderblush !important;
 }
 
-.pop #content {
+/*.pop #content {
 	background: #2B2B2B;
-}
+}*/
 
 .entry {
 	padding-bottom: 20px;
@@ -1181,6 +1181,11 @@ ul.post-social li a:hover {
 	box-shadow: 1px 1px 0px rgba(255,255,0,1);
 }
 
+.single img, .wp-caption {
+	width: 100% !important;
+	height: auto;
+}
+
 .single ul.single-social li a h4 {
 	.font2;
 	color: white;
@@ -1193,12 +1198,26 @@ ul.post-social li a:hover {
 	margin: 10px 40px 10px 0px;
 }
 
-.single.pop {
-	color: white;
+.single img.img-right {
+	float: right;
+	width: 50%;
+	margin: 10px 0px 10px 40px;
 }
+
+.single img.img-sm {
+	display: table;
+	width: 60%;
+	text-align: center;
+	margin: 20px auto !important;
+}
+
+/*.single.pop {
+	color: white;
+}*/
 
 #home-container .sex-dating {
 	background: url(images/symphony.png) fixed repeat !important;
+	background-size: 99px 99px;
 }
 
 #home-container .sex-dating-in {
@@ -1367,11 +1386,15 @@ ul.post-social li a:hover {
 	color: white;
 }
 
-.archive.pop p {
+/*.archive.pop p {
 	color: white;
-}
+}*/
 
-.archive.pop h3 a {
+/*.archive.pop h3 a {
+	color: white;
+}*/
+
+.pop .taglinks {
 	color: white;
 }
 
@@ -1599,7 +1622,7 @@ footer {
 	padding: 10px;
 	.footerGradient;
 	color: white;
-	.font3;
+	.font4;
 	.transition;
 	z-index: 99;
 }
@@ -1685,10 +1708,10 @@ ul#menu-footer-menu li a:hover, ul#menu-footer li a:hover {
 	margin-top: 0px !important;
 }
 
-.pop .alm-listing li h3 a {
+/*.pop .alm-listing li h3 a {
 	color: white;
 	margin-top: 0px !important;
-}
+}*/
 
 .alm-listing li h3 a:hover {
 	color: @pink;
@@ -1716,7 +1739,7 @@ button.alm-load-more-btn.done:before {
 	height: 30px;
 	padding: 5px 10px;
 	color: white;
-	.font3;
+	.font4;
 	margin-right: 5px;
 }
 
@@ -2116,6 +2139,10 @@ time {
 	.home-style {
 		background: url(images/greyfloral_@2X.png) repeat;
 		background-size: 150px 124px;
+	}
+	#home-container .sex-dating {
+		background: url(images/symphony_@2X.png) fixed repeat;
+		background-size: 129px 129px !important;
 	}
 }
 

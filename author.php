@@ -14,6 +14,9 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div id="content" class="col-sm-8 col-sm-offset-2">
+			<?php
+			$author = get_the_author_meta('ID', get_query_var('author'));
+			query_posts('posts_per_page=4&author='.$author.'&offset=0'); ?>
 			<?php if ( have_posts() ): the_post(); ?>
 
 			<h3>Stories by <span><?php echo get_the_author() ; ?></span></h3>
@@ -54,7 +57,7 @@
 
 			<?php
 			$author = get_the_author_meta('ID', get_query_var('author'));
-			echo do_shortcode('[ajax_load_more author="'.$author.'"]');
+			echo do_shortcode('[ajax_load_more author="'.$author.'" offset="4"]');
 			?>
 			</ol>
 

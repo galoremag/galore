@@ -22,7 +22,7 @@ Description: This part is optional, but helpful for describing the Post Template
 				<h2><?php the_title(); ?></h2>
 
 				<p class="byline"><i class="fa fa-flash"></i> <time datetime="<?php the_time( 'Y-m-d' ); ?>">Posted on <?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> By <?php the_author_posts_link(); ?></p>
-				
+				<?php edit_post_link('EDIT. THIS. PIECE.', '<p>', '</p>'); ?>
 				<div class="spacer20"></div>
 
 				<p class="text-center"><iframe src="https://vds.rightster.com/v/01yzm6yhx2qm6p?target=iframe&amp;autoplay=0&amp;show_title=1" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe></p>
@@ -45,16 +45,16 @@ Description: This part is optional, but helpful for describing the Post Template
 
 			<hr>
 			<h2 class="text-center">Gimme <span>More</span> NYFW <i class="fa fa-neuter"></i></h2>
-
+			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
-				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'rand' ) ); ?>
+				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'date' ) ); ?>
 
 			    <?php
-					if($post_ids){
-						//Implode the posts and set a variable to pass to our exclude param.
-						$postsNotIn = implode(",", $post_ids);
-					}
-					echo do_shortcode('[ajax_load_more orderby="rand" category="nyfw" exclude="'.$postsNotIn.'" button_label="More Shit"]');
+					// if($post_ids){
+					// 	//Implode the posts and set a variable to pass to our exclude param.
+					// 	$postsNotIn = implode(",", $post_ids);
+					// }
+					echo do_shortcode('[ajax_load_more orderby="date" category="nyfw" exclude="'.$wp_query->post->ID.'" button_label="More Shit"]');
 			    ?>
 			</ul>
 		</div>

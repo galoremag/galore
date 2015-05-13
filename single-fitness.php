@@ -27,11 +27,12 @@
 				<h2><?php the_title(); ?></h2>
 
 				<p class="byline"><i class="fa fa-heartbeat"></i> <time datetime="<?php the_time( 'Y-m-d' ); ?>">Posted on <?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> By <?php the_author_posts_link(); ?></p>
-
+				<?php edit_post_link('EDIT. THIS. PIECE.', '<p>', '</p>'); ?>
 				<div class="spacer20"></div>
 
 				<?php the_content(); ?>			
 
+				<div class="spacer20"></div>
 				<?php if ( get_the_author_meta( 'description' ) ) : ?>
 				<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
 				<h3>About <?php echo get_the_author() ; ?></h3>
@@ -48,16 +49,16 @@
 
 			<hr>
 			<h2 class="text-center">Gimme <span>More</span> Fitness <span><i class="fa fa-heartbeat"></i></span></h2>
-
+			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
-				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'rand' ) ); ?>
+				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'date' ) ); ?>
 
 			    <?php
-					if($post_ids){
-						//Implode the posts and set a variable to pass to our exclude param.
-						$postsNotIn = implode(",", $post_ids);
-					}
-					echo do_shortcode('[ajax_load_more orderby="rand" category="fitness" exclude="'.$postsNotIn.'" button_label="More Shit"]');
+					// if($post_ids){
+					// 	//Implode the posts and set a variable to pass to our exclude param.
+					// 	$postsNotIn = implode(",", $post_ids);
+					// }
+					echo do_shortcode('[ajax_load_more orderby="date" category="fitness" exclude="'.$wp_query->post->ID.'" button_label="More Fitness Shit"]');
 			    ?>
 			</ul>
 		</div>

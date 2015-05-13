@@ -263,3 +263,22 @@
 
 	// Disable auto-embeds for WordPress >= v3.5
 	remove_filter( 'the_content', array( $GLOBALS['wp_embed'], 'autoembed' ), 8 );
+
+	// update_option('siteurl','http://galoremag.com/');
+ 	// update_option('home','http://galoremag.com/');
+
+    function wpb_imagelink_setup() {
+	$image_set = get_option( 'image_default_link_type' );
+	
+	if ($image_set !== 'none') {
+		update_option('image_default_link_type', 'none');
+	}
+	}
+	add_action('admin_init', 'wpb_imagelink_setup', 10);
+
+	// TV Redirect
+	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+	if (strpos($url,'tv/') !== false) {
+	    wp_redirect( 'http://tv.galoremag.com', 301 ); exit;
+	}
