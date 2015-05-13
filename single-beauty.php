@@ -36,10 +36,7 @@
 					
 					<!-- DISQUS -->
 					<button class="comments_trigger">Comments</button>
-					
-					<?php comments_template( '', true ); ?>
-
-					<!-- <div class="comments_container" id="comments_container_<?php the_ID(); ?>">
+					<div class="comments_container" id="comments_container_<?php the_ID(); ?>">
 						<div id="disqus_thread"></div>
 					</div>
 
@@ -54,7 +51,7 @@
 				        })();
 					</script>
 
-					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 					<!--  RELATED POSTS BELOW CONTENT  -->
 

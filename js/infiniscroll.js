@@ -4,7 +4,8 @@ var nav_container       = jQuery('nav.post-navigation');
 var comments_container  = jQuery('div.comments_container');
 var post_title_selector = jQuery('h1.entry-title');
 var curr_url            = window.location.href;
-var post_id             = jQuery('div.post_id').text();
+var id_selector         = jQuery('div.post_id');
+var postComments        = jQuery('div.comments_container').attr('id');
 
 jQuery.noConflict();
 
@@ -20,7 +21,7 @@ jQuery( document ).ready(function() {
     // 
     "use strict";
 
-    jQuery( content_container ).prepend( '<hr style="height: 0" class="post-divider" data-id="' + post_id + '" data-title="' + window.document.title + '" data-url="' + window.location.href + '"/>' );
+    jQuery( content_container ).prepend( '<hr style="height: 0" class="post-divider" data-id="' + id_selector + '" data-title="' + window.document.title + '" data-url="' + window.location.href + '"/>' );
 
     initialise_Scrollspy();
 
@@ -52,6 +53,35 @@ function initialise_History() {
     });
 }
 
+function loadComments() {
+    if (window.DISQUS) {
+
+        jQuery('#disqus_thread').insertAfter(postComments); //append the HTML after the link
+
+       //if Disqus exists, call it's reset method with new parameters
+       DISQUS.reset({
+          reload: true,
+          config: function () {
+          this.page.identifier = post_title_selector;
+          this.page.url = curr_url;
+          }
+       });
+
+    } else {
+
+       //insert a wrapper in HTML after the relevant "show comments" link
+       jQuery('<div id="disqus_thread"></div>').insertAfter(postComments);
+       disqus_identifier = post_title_selector; //set the identifier argument
+       disqus_url = curr_url; //set the permalink argument
+
+       //append the Disqus embed script to HTML
+       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+       dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+       jQuery('head').append(dsq);
+
+    }
+}
+
 function changeURL() {
     // var _gaq = _gaq || [];
     var el         = jQuery(this);
@@ -71,6 +101,8 @@ function changeURL() {
         jQuery( 'h4.social-title' ).text(this_title);
 
         updategoogle_analytics();
+
+        loadComments();
 
         // _gaq.push(['_setAccount', 'UA-36901236-1']);
         // _gaq.push(['_trackPageview', this_url])
@@ -119,40 +151,12 @@ function auto_load_next_post() {
 
         var post_html  = jQuery( '<hr class="post-divider" data-url="' + post_url + '"/>' + data );
         var post_title = post_html.find( post_title_selector );
-        var next_id    = post_html.find( post_id );
-        var postComments = jQuery('div#comments_container_' + next_id.text());
+        var next_id    = post_html.find( id_selector );
 
         jQuery( content_container ).append( post_html ); // Add next post
-    
-        if (window.DISQUS) {
-
-            jQuery('#disqus_thread').insertAfter(postComments); //append the HTML after the link
-
-           //if Disqus exists, call it's reset method with new parameters
-           DISQUS.reset({
-              reload: true,
-              config: function () {
-              this.page.identifier = post_title;
-              this.page.url = np_url;
-              }
-           });
-
-        } else {
-
-           //insert a wrapper in HTML after the relevant "show comments" link
-           jQuery('<div id="disqus_thread"></div>').insertAfter(postComments);
-           disqus_identifier = post_title; //set the identifier argument
-           disqus_url = np_url; //set the permalink argument
-
-           //append the Disqus embed script to HTML
-           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-           dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-           jQuery('head').append(dsq);
-
-        }
 
         // get the HR element and add the data-title
-        jQuery( 'hr[data-url="' + post_url + '"]').attr({ 'data-title' : post_title.text(), 'data-id' : next_id.text() }).css( 'display', 'inline-block' );
+        jQuery( 'hr[data-url="' + post_url + '"]').attr({ 'data-title' : post_title_selector, 'data-id' : next_id }).css( 'display', 'inline-block' );
 
         // need to set up ScrollSpy on new content
         initialise_Scrollspy();

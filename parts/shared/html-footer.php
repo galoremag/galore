@@ -30,7 +30,7 @@
 	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/fastclick.js'></script>
 
 	<!-- Inline Disqussions -->
-	<!-- <script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/inlineDisqussions.js'></script> -->
+	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/inlineDisqussions.js'></script>
 
 	<!-- ScrollSpy -->
 	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/scrollspy.min.js'></script>
