@@ -72,6 +72,7 @@
 		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ) );
 		wp_enqueue_script( 'site' );
 
+		wp_register_script('perfectscrollbar', get_template_directory_uri(). '/js/perfect-scrollbar.min.js', array('jquery'), null, true);
 		wp_register_script( 'scrollspy', get_template_directory_uri(). '/js/scrollspy.min.js', array('jquery'), null, true );
 		wp_register_script( 'history' , get_template_directory_uri(). '/js/jquery.history.js', array('jquery'), null, true );
 		wp_register_script( 'infiniscroll', get_template_directory_uri(). '/js/infiniscroll.js', array('scrollspy'), null, true );
@@ -80,8 +81,13 @@
         wp_enqueue_style( 'screen' );
 	}
 
+	// Only load perfect scrollbar on the homepage
+	if (is_home()) {
+		wp_enqueue_script( 'perfectscrollbar' );
+	}
+
 	// Detect Single Post, and Load Infiniscroll Scripts
-	if ( is_singular() ) {
+	if (is_singular()) {
 		wp_enqueue_script( 'scrollspy' );
 		wp_enqueue_script( 'history' );
 		wp_enqueue_script( 'infiniscroll' );

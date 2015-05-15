@@ -16,13 +16,13 @@ jQuery(document).ready(function(jQuery) {
 	// } )( jQuery );
 
 	// Navbar Shrinking On Scroll
-	jQuery(window).scroll(function() {
-	  if (jQuery(document).scrollTop() > 50) {
-	    jQuery('nav').addClass('shrink');
-	  } else {
-	    jQuery('nav').removeClass('shrink');
-	  }
-	});
+	// jQuery(window).scroll(function() {
+	//   if (jQuery(document).scrollTop() > 50) {
+	//     jQuery('nav').addClass('shrink');
+	//   } else {
+	//     jQuery('nav').removeClass('shrink');
+	//   }
+	// });
 
 	/////////////////////
 	// Signup Modal  //
@@ -66,7 +66,9 @@ jQuery(document).ready(function(jQuery) {
 		jQuery('footer').css('bottom: -50px;');
 	});
 
-	jQuery('#glides').perfectScrollbar();
+	if (window.location.pathname == '/') {
+		jQuery('#glides').perfectScrollbar();
+	}
 
 });
 
