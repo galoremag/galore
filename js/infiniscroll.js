@@ -5,24 +5,22 @@ var comments_container  = jQuery('div.comments_container');
 var post_title_selector = jQuery('h1.entry-title');
 var curr_url            = window.location.href;
 var id_selector         = jQuery('div.post_id');
-var postComments        = jQuery('div.comments_container').attr('id');
+var postID              = jQuery('div.comments_container').attr('id');
+var postComments        = '#comments_container' + postID;
 
 jQuery.noConflict();
 
 jQuery( document ).ready(function() {
-    // Don't do this if looking for comments
-    // if ( window.location.href.indexOf( '#comments' ) > -1 ) {
-    //  return;
-    // }
-
-    // jQuery( comments_container ).remove(); // Remove Comments
-
-    // Add divider
-    // 
     "use strict";
-
-    jQuery( content_container ).prepend( '<hr style="height: 0" class="post-divider" data-id="' + id_selector + '" data-title="' + window.document.title + '" data-url="' + window.location.href + '"/>' );
-
+    
+    // you dont have to call jquery here again.  Its already a jquery object fro, the var
+  
+    jQuery( comments_container ).remove(); // Remove Comments
+    
+    // jQuery( content_container ).prepend( '<hr style="height: 0" class="post-divider" data-id="' + id_selector + '" data-title="' + window.document.title + '" data-url="' + window.location.href + '"/>' );
+    
+    content_container.prepend( '<hr style="height: 0" class="post-divider" data-id="' + id_selector + '" data-title="' + window.document.title + '" data-url="' + window.location.href + '"/>' );
+  
     initialise_Scrollspy();
 
     initialise_History();
@@ -53,19 +51,22 @@ function initialise_History() {
     });
 }
 
+
+// maybe pass the post id into this function and use it to select the correct container
+
 function loadComments() {
     if (window.DISQUS) {
 
-        jQuery('#disqus_thread').insertAfter(postComments); //append the HTML after the link
+        jQuery('<div id="disqus_thread"></div>').insertAfter(postComments); //append the HTML after the link
 
-       //if Disqus exists, call it's reset method with new parameters
-       DISQUS.reset({
-          reload: true,
-          config: function () {
-          this.page.identifier = post_title_selector;
-          this.page.url = curr_url;
-          }
-       });
+        //if Disqus exists, call it's reset method with new parameters
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+            this.page.identifier = post_ID;
+            this.page.url = curr_url;
+            }
+        });
 
     } else {
 
@@ -100,9 +101,9 @@ function changeURL() {
         window.document.title = this_title;
         jQuery( 'h4.social-title' ).text(this_title);
 
-        updategoogle_analytics();
+        // updategoogle_analytics();
 
-        loadComments();
+        // loadComments();
 
         // _gaq.push(['_setAccount', 'UA-36901236-1']);
         // _gaq.push(['_trackPageview', this_url])
@@ -112,13 +113,13 @@ function changeURL() {
 
 }
 
-function updategoogle_analytics() {
-    if( typeof ga === 'undefined' ) {
-        return;
-    }
+// function updategoogle_analytics() {
+//     if( typeof ga === 'undefined' ) {
+//         return;
+//     }
 
-    ga('send', 'pageview', window.location.pathname);
-}
+//     ga('send', 'pageview', window.location.pathname);
+// }
 
 function auto_load_next_post() {
     // Grab the url for the next post

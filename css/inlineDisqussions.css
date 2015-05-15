@@ -1,7 +1,7 @@
 .disqussion {
   padding: 5px 10px 10px;
-  position: absolute;
-  top: 0;
+  position: relative;
+  bottom: 0;
   left: 0;
   line-height: 16px;
   font-size: 13px;
@@ -51,11 +51,11 @@
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-.disqussion:hover a, .disqussion.hovered a {
+.disqussion:hover a, .disqussion.clicked a {
   opacity: 1;
   background: #999999;
 }
-.disqussion:hover a:after, .disqussion.hovered a:after {
+.disqussion:hover a:after, .disqussion.clicked a:after {
   border-top-color: #999999;
 }
 

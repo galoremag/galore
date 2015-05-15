@@ -40,7 +40,7 @@ var disqus_url;
 
       // Append #disqus_thread to body if it doesn't exist yet.
       if ($('#disqussions_wrapper').length === 0) {
-        $('<div id="disqussions_wrapper"></div>').appendTo($('body'));
+        $('<div id="disqussions_wrapper"></div>').appendTo($('#single-content'));
       }
       if ($('#disqus_thread').length === 0) {
         $('<div id="disqus_thread"></div>').appendTo('#disqussions_wrapper');
@@ -49,7 +49,7 @@ var disqus_url;
         mainThreadHandler();
       }
       if (settings.highlighted) {
-        $('<div id="disqussions_overlay"></div>').appendTo($('body'));
+        $('<div id="disqussions_overlay"></div>').appendTo($('#single-content'));
       }
 
       // Attach a discussion to each paragraph.
@@ -102,10 +102,19 @@ var disqus_url;
       'left': settings.position == 'right' ? node.offset().left + node.outerWidth() : node.offset().left - a.outerWidth()
     });
 
-    node.attr('data-disqus-identifier', identifier).mouseover(function() {
-        a.addClass("hovered");
-    }).mouseout(function() {
-        a.removeClass("hovered");
+    // node.attr('data-disqus-identifier', identifier).click(function() {
+    //   var clicks = 0;
+    //   if(clicks == 0) {
+    //     a.addClass("clicked");
+    //     ++clicks;
+    //   } else {
+    //     a.removeClass("clicked");
+    //     clicks--;
+    //   }
+    // }
+
+    node.attr('data-disqus-identifier', identifier).click(function() {
+        a.addClass("clicked");
     });
 
     // Load the relative discussion.
