@@ -33,10 +33,10 @@
 	<!-- <script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/inlineDisqussions.js'></script> -->
 
 	<!-- ScrollSpy -->
-	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/scrollspy.min.js'></script>
+	<!-- <script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/scrollspy.min.js'></script> -->
 
 	<!-- JS History -->
-	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/jquery.history.js'></script>
+	<!-- <script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/jquery.history.js'></script> -->
 
 	<!-- Infiniscroll -->
 	<!-- <script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/infiniscroll.js'></script> -->
