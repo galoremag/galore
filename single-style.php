@@ -14,33 +14,35 @@
 	<div class="row-fluid">
 		<div id="single-content" class="col-sm-8 col-sm-offset-1">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-			<article id="post-<?php the_ID(); ?>" class="post">
+				<article id="post-<?php the_ID(); ?>" class="post">
 
-				<h1 class="entry-title"><?php the_title(); ?></h1>
+					<h1 class="entry-title"><?php the_title(); ?></h1>
 
-				<p class="byline"><i class="fa fa-scissors"></i> <time datetime="<?php the_time( 'Y-m-d' ); ?>">Posted on <?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> By <?php the_author_posts_link(); ?></p>
-				<?php edit_post_link('EDIT. THIS. PIECE.', '<p>', '</p>'); ?>
-				
-				<div class="spacer20"></div>
-				<?php the_post_thumbnail('large'); ?>
-				<div class="spacer20"></div>
-				<?php the_content(); ?>
-				<div class="spacer20"></div>
+					<p class="byline"><i class="fa fa-scissors"></i> <time datetime="<?php the_time( 'Y-m-d' ); ?>">Posted on <?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> By <?php the_author_posts_link(); ?></p>
+					<?php edit_post_link('EDIT. THIS. PIECE.', '<p>', '</p>'); ?>
+					
+					<div class="spacer20"></div>
+					<?php the_post_thumbnail('large'); ?>
+					<div class="spacer20"></div>
+					<?php the_content(); ?>
+					<div class="spacer20"></div>
 
-				<?php if ( get_the_author_meta( 'description' ) ) : ?>
-				<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
-				<h3>About <?php echo get_the_author() ; ?></h3>
-				<?php the_author_meta( 'description' ); ?>
-				<?php endif; ?>
+					<?php if ( get_the_author_meta( 'description' ) ) : ?>
+					<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
+					<h3>About <?php echo get_the_author() ; ?></h3>
+					<?php the_author_meta( 'description' ); ?>
+					<?php endif; ?>
 
-				<!-- DISQUS -->
-				<button class="comments_trigger">Comments</button>
-				<div class="comments_container" id="comments_container_<?php the_ID(); ?>">
-				</div>
+					<!-- DISQUS -->
+					<?php comments_template(true); ?>
+					<!-- <button class="comments_trigger">Comments</button> -->
+					<!-- <div class="comments_container" id="comments_container_<?php the_ID(); ?>">
+						<div id="disqus_thread"></div>
+					</div> -->
 
-				<!--  RELATED POSTS BELOW CONTENT  -->
+					<!--  RELATED POSTS  -->
 
-				<ul class="related-single row-fluid">
+					<ul class="related-single row-fluid">
 					<?php
 					//for use in the loop, list 3 post titles related to first tag on current post
 					$post = get_the_ID();
@@ -63,20 +65,31 @@
 						</a>
 					</li>
 					<?php endwhile; } wp_reset_query(); } ?>
-				</ul>
-
-				<!-- SOCIAL FOOTER  -->
-				<ul class="hidden-sm single-social">
-					<li><a id="fb-single" href="#" target="popup"><i class="fa fa-facebook"></i> &nbsp;<h4 class="nomarg">Share on Facebook</h4></a></li>
-					<li><h4 class="social-title"><?php the_title(); ?></h4></li>
-					<ul id="post-social" class="pull-right post-social">
-						<!-- <li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li> -->
-						<div class="fb-like" data-href="http://galoremag.com" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
 					</ul>
-				</ul>
 
-			</article>
+					<!-- SOCIAL FOOTER  -->
+					<ul class="hidden-sm single-social">
+						<li><a id="fb-single" href="#" target="popup"><i class="fa fa-facebook"></i> &nbsp;<h4 class="nomarg">Share on Facebook</h4></a></li>
+						<li><h4 class="social-title"><?php the_title(); ?></h4></li>
+						<ul id="post-social" class="pull-right post-social">
+							<!-- <li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li> -->
+							<div class="fb-like" data-href="http://galoremag.com" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+						</ul>
+					</ul>
+
+					<!-- SOCIAL FOOTER  -->
+					<ul class="hidden-sm single-social">
+						<li><a id="fb-single" href="#" target="popup"><i class="fa fa-facebook"></i> &nbsp;<h4 class="nomarg">Share on Facebook</h4></a></li>
+						<li><h4 class="social-title"><?php the_title(); ?></h4></li>
+						<ul id="post-social" class="pull-right post-social">
+							<!-- <li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li> -->
+							<div class="fb-like" data-href="http://galoremag.com" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+						</ul>
+					</ul>
+
+				</article>
 			<?php endwhile; ?>
 			<div class="spacer20"></div>
 			<!-- <hr> -->
