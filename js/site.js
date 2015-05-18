@@ -12,14 +12,6 @@
 		// 	any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
 		// };
 
-		// function showModal() {
-		// 	if (isMobile.any()) {
-		// 		$('#myModal').modal('hide');
-		// 	} else if ($.cookie('newsletter') == null && window.location.pathname === "/" && $(document).scrollTop() > 50) {
-		// 		$('#myModal').modal('show');
-		// 		$.cookie('newsletter', '999');
-		// 	}
-		// }
 
 		$(function() {
 			FastClick.attach(document.body);
@@ -37,21 +29,12 @@
 		// Signup Modal  //
 		/////////////////////
 
-		// if ($.cookie('newsletter')) {
-		// 	$('#email-signup').hide();
-		// } else {
-		// 	$("#email-signup").fadeIn(500);
-	 //        $("#newsletterClose").click(function() {
-	 //            $("#email-signup").fadeOut(500);
-	 //            $.cookie('newsletter', true);
-	 //        });
-	 //    }
-
 	    $(window).scroll(function() {
 	    	if ($.cookie('newsletter')) {
 	    		$('#email-signup').hide();
 	    	} else if ($(document).scrollTop() > 150) {
 	    		$("#email-signup").fadeIn(500);
+	    		$('#fieldName').focus();
 		        $("#newsletterClose").click(function() {
 		            $("#email-signup").fadeOut(500);
 		            $.cookie('newsletter', 14);
@@ -59,9 +42,12 @@
 	    	}
 		});
 
-		// Set Focus
-		$('div#myModal').on('shown.bs.modal', function () {
-			$('#CenterSignup').focus();
+		$('#signupButton').on('click', function() {
+			$("#email-signup").fadeIn(500);
+    		$('#fieldName').focus();
+	        $("#newsletterClose").click(function() {
+	            $("#email-signup").fadeOut(500);
+	        });
 		});
 
 		// Detect User Agent
