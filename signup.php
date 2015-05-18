@@ -1,9 +1,9 @@
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></button>
+                <button id="newsletterClose" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></button>
             </div>
             <div class="modal-body">
                 <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
@@ -25,4 +25,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
