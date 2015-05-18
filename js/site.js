@@ -3,14 +3,14 @@
 
 		// Mobile Detection
 
-		var isMobile = {
-			Android: function() {return navigator.userAgent.match(/Android/i);},
-			BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},
-			iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
-			Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},
-			Windows: function() {return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);},
-			any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
-		};
+		// var isMobile = {
+		// 	Android: function() {return navigator.userAgent.match(/Android/i);},
+		// 	BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},
+		// 	iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
+		// 	Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},
+		// 	Windows: function() {return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);},
+		// 	any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
+		// };
 
 		// function showModal() {
 		// 	if (isMobile.any()) {
@@ -38,13 +38,26 @@
 		/////////////////////
 
 		// if ($.cookie('newsletter')) {
-		// 	$('#myModal').modal('hide');
+		// 	$('#email-signup').hide();
 		// } else {
+		// 	$("#email-signup").fadeIn(500);
 	 //        $("#newsletterClose").click(function() {
-	 //            $("#myModal").fadeOut(1000);
-	 //            $.cookie('newsletter', true);    
+	 //            $("#email-signup").fadeOut(500);
+	 //            $.cookie('newsletter', true);
 	 //        });
 	 //    }
+
+	    $(window).scroll(function() {
+	    	if ($.cookie('newsletter')) {
+	    		$('#email-signup').hide();
+	    	} else if ($(document).scrollTop() > 150) {
+	    		$("#email-signup").fadeIn(500);
+		        $("#newsletterClose").click(function() {
+		            $("#email-signup").fadeOut(500);
+		            $.cookie('newsletter', 14);
+		        });
+	    	}
+		});
 
 		// Set Focus
 		$('div#myModal').on('shown.bs.modal', function () {
