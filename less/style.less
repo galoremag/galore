@@ -1733,6 +1733,19 @@ button.alm-load-more-btn.done:before {
 	background: url(preloaders/preloader-pink.gif) no-repeat center center !important;
 }
 
+/* Newsletter Signup */
+
+#email-signup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	display: none;
+}
+
 #site-search .form-control {
 	.greyGradientFade;
 	border: 0px;
@@ -1768,7 +1781,11 @@ button.alm-load-more-btn.done:before {
 	cursor: pointer;
 }
 
-.modal.in .modal-dialog {
+.email-signup-dialog {
+	margin-top: 100px;
+}
+
+.email-signup.in .email-signup-dialog {
 	z-index: 9999;
 }
 
