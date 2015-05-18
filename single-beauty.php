@@ -16,7 +16,7 @@
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article>
 				<div id="social-links">
-					<ul id="post-social" class="post-social">
+					<ul id="post-social" class="post-social hidden-xs hidden-sm">
 						<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
 					</ul>
@@ -33,12 +33,12 @@
 				<h3>About <?php echo get_the_author() ; ?></h3>
 				<?php the_author_meta( 'description' ); ?>
 				<?php endif; ?>
-				<ul class="hidden-sm single-social">
+				<ul class="single-social">
 					<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i> &nbsp;<h4 class="nomarg">Share on Facebook</h4></a></li>
-					<li><h4 class="social-title"><?php the_title(); ?></h4></li>
-					<li class="pull-right">
-						<div class="fb-like" data-href="http://galoremag.com" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+					<li class="pad10 ">
+						<div class="fb-like hidden-xs hidden-sm " data-href="<?php the_permalink(); ?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
 					</li>
+					<li class="pull-right"><h4 class="social-title"><?php the_title(); ?></h4></li>
 				</ul>
 				<?php comments_template( '', true ); ?>
 			</article>
