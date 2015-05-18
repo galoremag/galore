@@ -35,6 +35,9 @@
 				<ul class="hidden-sm single-social">
 					<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i> &nbsp;<h4 class="nomarg">Share on Facebook</h4></a></li>
 					<li><h4 class="social-title"><?php the_title(); ?></h4></li>
+					<li class="pull-right">
+						<div class="fb-like" data-href="http://galoremag.com" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
+					</li>
 				</ul>
 				<?php comments_template( '', true ); ?>
 			</article>
