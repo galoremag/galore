@@ -45,7 +45,6 @@
 		<link rel='stylesheet' href='<?php echo get_stylesheet_directory_uri(); ?>/css/perfect-scrollbar.min.css' />
 
 		<!-- Plugin requires jQuery 1.8+  -->
-		<!-- If you already have jQuery on your page, you shouldn't include it second time. -->
 		<!-- <script src='<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery-1.7.2.min.js'></script> -->
 		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/bower_components/jquery/dist/jquery.min.js'></script>
 
@@ -57,16 +56,14 @@
 		<!-- Perfect Scrollbar JS -->
 		<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/perfect-scrollbar.min.js'></script>
 
-		<!-- Main slider JS script file --> 
-		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/site.js'></script>
-
 		<!-- Create it with slider online build tool for better performance. -->
-		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
-
-		
+		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>		
 
 		<!-- REMOVE THE TAP DELAY -->
 		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/fastclick.js'></script>
+
+		<!-- Main slider JS script file --> 
+		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/site.js'></script>
 
 		<script type="text/javascript">
 
@@ -76,26 +73,6 @@
 		    } );
 		} )( jQuery );
 
-		</script>
-
-		<!-- NAVBAR SHRINKING -->
-
-		<script type="text/javascript">
-		jQuery(document).ready(function ($) {
-			$(window).scroll(function() {
-			  if ($(document).scrollTop() > 50) {
-			    $('nav').addClass('shrink');
-			  } else {
-			    $('nav').removeClass('shrink');
-			  }
-			});
-		});
-		</script>
-
-		<script type="text/javascript">
-			$(function() {
-				FastClick.attach(document.body);
-			});
 		</script>
 
 		<!-- PERFORMANCE MONITORING -->
@@ -113,32 +90,6 @@
 		
 	</head>
 	<body>
-
-		<!-- Google Analytics -->
-		<script>
-			// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-			// ga('create', 'UA-36901236-1', 'auto');
-			// ga('send', 'pageview');
-		</script>
-
-		<!-- Google Tag Manager -->
-		<noscript>
-		<!-- <iframe src="//www.googletagmanager.com/ns.html?id=GTM-P5KW4R"
-		height="0" width="0" style="display:none;visibility:hidden">
-		</iframe> -->
-		</noscript>
-		<script>
-		// (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		// new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		// j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		// '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		// })(window,document,'script','dataLayer','GTM-P5KW4R');
-		</script>
-		<!-- End Google Tag Manager -->
 
 		<!-- Google Tag Manager Plugin -->
 		<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>

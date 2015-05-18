@@ -1,10 +1,65 @@
 
 	jQuery(document).ready(function($) {
 
+		// Mobile Detection
+
+		// var isMobile = {
+		// 	Android: function() {return navigator.userAgent.match(/Android/i);},
+		// 	BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},
+		// 	iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
+		// 	Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},
+		// 	Windows: function() {return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);},
+		// 	any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
+		// };
+
+		// function showModal() {
+		// 	if (isMobile.any()) {
+		// 		$('#myModal').modal('hide');
+		// 	} else if ($.cookie('newsletter') == null && window.location.pathname === "/" && $(document).scrollTop() > 50) {
+		// 		$('#myModal').modal('show');
+		// 		$.cookie('newsletter', '999');
+		// 	}
+		// }
+
+		$(function() {
+			FastClick.attach(document.body);
+		});
+
+		$(window).scroll(function() {
+			if ($(document).scrollTop() > 50) {
+				$('nav').addClass('shrink');
+			} else {
+				$('nav').removeClass('shrink');
+			}
+		});
+
 		/////////////////////
 		// Signup Modal  //
 		/////////////////////
 
+		// if ($.cookie('newsletter')) {
+		// 	$('#email-signup').hide();
+		// } else {
+		// 	$("#email-signup").fadeIn(500);
+	 //        $("#newsletterClose").click(function() {
+	 //            $("#email-signup").fadeOut(500);
+	 //            $.cookie('newsletter', true);
+	 //        });
+	 //    }
+
+	    $(window).scroll(function() {
+	    	if ($.cookie('newsletter')) {
+	    		$('#email-signup').hide();
+	    	} else if ($(document).scrollTop() > 150) {
+	    		$("#email-signup").fadeIn(500);
+		        $("#newsletterClose").click(function() {
+		            $("#email-signup").fadeOut(500);
+		            $.cookie('newsletter', 14);
+		        });
+	    	}
+		});
+
+		// Set Focus
 		$('div#myModal').on('shown.bs.modal', function () {
 			$('#CenterSignup').focus();
 		});
@@ -25,12 +80,6 @@
 		// Bootstrap Collapse   //
 		//////////////////////////
 		
-		// $('.navbar-toggle').click(function(){
-		// 	event.preventDefault();
-		// 	// $(this).css('-webkit-transform: rotate(90deg);');
-		// 	$('.collapse').collapse('hide');
-		// });
-		
 		$('.nav-collapse a[data-toggle]').click(function() {
 		  $('.nav-collapse').css('height', '100%');
 		});
@@ -49,68 +98,57 @@
 			$('footer').css('bottom: -50px;');
 		});
 
-		//////////////////////
-		// CUSTOM SLIDER  //
-		//////////////////////
-
-		// function reSize($target){
-	 //        $target.css('width', $(window).width()+'px');
-	 //    }
-  //       $(window).bind('resize', reSize($('#latest')));
-  //       $(window).trigger('resize');
-
-  //       $(function () {
-		//   var sliding = startClientX = startPixelOffset = pixelOffset = currentSlide = 0,
-		//   slideCount = $('.slide').length;
-
-		// $('#latest').live('mousedown touchstart', slideStart);
-		// $('#latest').live('mouseup touchend', slideEnd);
-		// $('#latest').live('mousemove touchmove', slide);
-
-		// function slideStart(event) {
-		//     if (event.originalEvent.touches)
-		//       event = event.originalEvent.touches[0];
-		//     if (sliding == 0) {
-		//       sliding = 1;
-		//       startClientX = event.clientX;
-		//     }
-		//   }
-
-		// function slide(event) {
-		//     event.preventDefault();
-		//     if (event.originalEvent.touches)
-		// 		event = event.originalEvent.touches[0];
-		// 		var deltaSlide = event.clientX - startClientX;
-
-		// if (sliding == 1 && deltaSlide != 0) {
-		//       sliding = 2;
-		//       startPixelOffset = pixelOffset;
-		//     }
-
-		// if (sliding == 2) {
-		//       var touchPixelRatio = 1;
-		//       if ((currentSlide == 0 && event.clientX > startClientX) ||
-		//           (currentSlide == slideCount - 1 && event.clientX < startClientX))
-		//         touchPixelRatio = 3;
-		//       pixelOffset = startPixelOffset + deltaSlide / touchPixelRatio;
-		//       $('#glides').css('transform', 'translate3d(' + pixelOffset + 'px,0,0)').removeClass();
-		//     }
-		//   }
-
-		// function slideEnd(event) {
-		//     if (sliding == 2) {
-		//       sliding = 0;
-		//       currentSlide = pixelOffset < startPixelOffset ? currentSlide + 1 : currentSlide - 1;
-		//       currentSlide = Math.min(Math.max(currentSlide, 0), slideCount - 1);
-		//       pixelOffset = currentSlide * -$('#glides').width();
-		//       $('#temp').remove();
-		//       $('<style id="temp">#glides.animate{transform:translate3d(' + pixelOffset + 'px,0,0)}</style>').appendTo('head');
-		//       $('#glides').addClass('animate').css('transform', '');
-		//     }
-		//   }
-		// });
-
 		$('#glides').perfectScrollbar();
+
+		// Recommendations on scroll
+	    // var isBusy = false,
+	    //     $active = $('.bottom-nav a.active'),
+	    //     category = $active.data('category'),
+	    //     body_post_id = $('body').data('post_id');
+
+	    // function processScroll() {
+	    //     var seen_post_ids = [];
+	    //     if (body_post_id) {
+	    //         seen_post_ids.push(body_post_id);
+	    //     }
+	    //     var $posts = $('.recs li');
+	    //     $posts.each(function(i, e) {
+	    //         var $e = $(e),
+	    //             e_data = $e.data('post_id');
+	    //         if (e_data) {
+	    //             seen_post_ids.push(e_data);
+	    //         }
+	    //     });
+
+	    //     $.ajax({
+	    //         url: endpoint_prefix + '/api/recs/recs/',
+	    //         data: {category: category,
+	    //                seen_post_ids: seen_post_ids.join(',')},
+	    //         dataType: 'jsonp',
+	    //         success: function(data) {
+	    //             if (!data || data.status != 'ok') {
+	    //                 return false;
+	    //             }
+	    //             $('.recs').append($("<div/>").html(data.message).text());
+	    //             setTimeout(function() {
+	    //                 isBusy = false;
+	    //             }, 1000);
+	    //         }
+	    //     });
+	    // }
+	    // if ($('body').hasClass('single')) {
+	    //     $.pagescroll({
+	    //         container: "body > .container",
+	    //         threshold: 1400,
+	    //         callback: function() {
+	    //             if (isBusy) {
+	    //                 return;
+	    //             }
+	    //             isBusy = true;
+	    //             processScroll();
+	    //         }
+	    //     });
+	    // }
 
 	});
 
