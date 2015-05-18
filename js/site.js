@@ -12,14 +12,14 @@
 			any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
 		};
 
-		// function showModal() {
-		// 	if (isMobile.any()) {
-		// 		$('#myModal').modal('hide');
-		// 	} else if ($.cookie('newsletter') == null && window.location.pathname === "/" && $(document).scrollTop() > 50) {
-		// 		$('#myModal').modal('show');
-		// 		$.cookie('newsletter', '999');
-		// 	}
-		// }
+		function showModal() {
+			if (isMobile.any()) {
+				$('#myModal').modal('hide');
+			} else if ($.cookie('newsletter') == null && window.location.pathname === "/" && $(document).scrollTop() > 50) {
+				$('#myModal').modal('show');
+				$.cookie('newsletter', '999');
+			}
+		}
 
 		$(function() {
 			FastClick.attach(document.body);
@@ -37,14 +37,14 @@
 		// Signup Modal  //
 		/////////////////////
 
-		// if ($.cookie('newsletter')) {
-		// 	$('#myModal').modal('hide');
-		// } else {
-	 //        $("#newsletterClose").click(function() {
-	 //            $("#myModal").fadeOut(1000);
-	 //            $.cookie('newsletter', true);    
-	 //        });
-	 //    }
+		if ($.cookie('newsletter')) {
+			$('#myModal').modal('hide');
+		} else {
+	        $("#newsletterClose").click(function() {
+	            $("#myModal").fadeOut(1000);
+	            $.cookie('newsletter', true);    
+	        });
+	    }
 
 		// Set Focus
 		$('div#myModal').on('shown.bs.modal', function () {

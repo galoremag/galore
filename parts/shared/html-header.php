@@ -48,9 +48,6 @@
 		<!-- <script src='<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery-1.7.2.min.js'></script> -->
 		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/bower_components/jquery/dist/jquery.min.js'></script>
 
-		<!-- jQuery Cookie -->
-		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/jquery.cookie.js'></script>
-
 		<!-- BOOSTRAP -->
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
