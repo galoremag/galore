@@ -19,7 +19,7 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	  	
-	  	<meta name="description" content="GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative women in her 20's surrounding Style, Beauty, Pop, Sex + Dating and Fitness.">
+	  	<meta name="description" content="GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative woman in her 20's surrounding Style, Beauty, Pop, Sex + Dating and Fitness.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
 		
 		<meta name="keywords" content="Galore, Galore Girls, girls, edgy, sexy, teens, teenager, pop culture, Justin Bieber, Nicki Minaj, Kanye West, entertainment">
