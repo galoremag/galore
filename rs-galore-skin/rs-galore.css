@@ -42,6 +42,7 @@
 	display: block;
 	cursor: pointer;
 	z-index: 21;
+	display: none;
 }
 .rsGalore.rsVer .rsArrow {
 	width: 100%;
