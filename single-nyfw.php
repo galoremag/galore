@@ -36,9 +36,9 @@ Description: This part is optional, but helpful for describing the Post Template
 				<?php endif; ?>
 				<ul class="single-social">
 					<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i> &nbsp;<h4 class="nomarg">Share on Facebook</h4></a></li>
-					<li class="pad10 ">
+					<!-- <li class="pad10 ">
 						<div class="fb-like hidden-xs hidden-sm" data-href="http://galoremag.com" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-					</li>
+					</li> -->
 					<li class="pull-right"><h4 class="social-title"><?php the_title(); ?></h4></li>
 				</ul>
 				<?php comments_template( '', true ); ?>
