@@ -151,7 +151,7 @@
 							<div class="brand"></div>
 							<h1 class="text-center"><span>Darlings</span></h1>
 							<?php
-							$args = array( 'post_type' => 'post', 'posts_per_page' => 4, 'tag' => 'darling', 'orderby' => 'date', 'order' => 'DESC' );
+							$args = array( 'tag' => 'darling', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC' );
 
 							$postslist = get_posts( $args );
 
