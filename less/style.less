@@ -82,6 +82,7 @@ Version: 1.0.1
 /*  VARIABLES & MIXINS  */
 
 @pink : #E81B8E;
+@salmon : #FA7470;
 @bigwhite : antiquewhite;
 
 .pink {
@@ -432,7 +433,7 @@ a {
 	.transition;
 	color: @pink;
 }
-a:hover {text-decoration: none; opacity: 1;.transition; color: @pink;}
+a:hover, a h1:hover, a:hover h1, a:hover h2, a:hover h3, a:hover h4, a h2:hover, a h3:hover, a h4:hover {text-decoration: none; opacity: 1;.transition; color: @pink;}
 a:focus {color: @pink; outline: 0px; text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);}
 
 a.btn {
@@ -487,14 +488,14 @@ h1 {font-size: 40px;letter-spacing: -3px;}
 
 h1, h2 {
 	.font1;
-	color: @pink;
+	color: black;
 	font-weight: bold;
 	text-transform: uppercase;
 	margin: 10px 0px !important;
 }
 
 h3 {
-	color: @pink;
+	color: black;
 	.font2;
 	font-weight: bold;
 	font-size: 22px;
@@ -502,7 +503,7 @@ h3 {
 }
 
 h4 {
-	color: @pink;
+	color: black;
 	.font4;
 	font-weight: bold;
 	font-size: 18px;
@@ -514,7 +515,7 @@ h1 span, h2 span, h3 span {
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: @pink;*/
 	color: white !important;
-	text-shadow: 1px 1px 0 @pink, -1px -1px 0 @pink, 1px -1px 0 @pink, -1px 1px 0 @pink, 0px 0px 0px @pink;
+	text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 0px 0px 0px black;
 }
 
 h1 a, h2 a, h3 a, h4 a {
@@ -701,8 +702,8 @@ body {
 
 #global-inner.home {
 	padding: 0px 0px 0px 0px !important;
-	/*background: white;*/
-	background: antiquewhite !important;
+	background: white;
+	/*background: antiquewhite !important;*/
 }
 
 /* EMAIL SIGNUP PAGE */
@@ -905,7 +906,7 @@ nav.shrink .navbar-brand {
 }
 
 nav.shrink ul.nav {
-	margin-left: -50px;
+	margin-left: -40px;
 }
 
 #main-cats {
@@ -1026,7 +1027,7 @@ nav.shrink ul.nav {
 	top: 20px;
 	right: 0px;
 	padding: 10px 15px;
-	background: @pink;
+	background: @salmon;
 	.font2;
 }
 
@@ -1036,8 +1037,17 @@ nav.shrink ul.nav {
 .rsGalore .rsText {
 	position: absolute;
 	text-align: right;
-	right: 40px;
-	bottom: 20px;
+	bottom: 0;
+	width: 100%;
+	right: 0;
+	padding: 40px;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 33%, rgba(0,0,0,0.33) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(33%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.33)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 33%,rgba(0,0,0,0.33) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 33%,rgba(0,0,0,0.33) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 33%,rgba(0,0,0,0.33) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 33%,rgba(0,0,0,0.33) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#54000000',GradientType=0 );
 }
 
 .rsGalore .rsButton {
@@ -1060,8 +1070,8 @@ nav.shrink ul.nav {
 
 /* CUSTOM SLIDER */
 
-.ps-container.ps-in-scrolling>.ps-scrollbar-x-rail {background-color: lighten(@pink, 80%);}
-.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x {background-color: @pink;}
+.ps-container.ps-in-scrolling>.ps-scrollbar-x-rail { background-color: lighten(@pink, 80%); }
+.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x { background-color: .heroGradientFade !important; }
 
 #glides {
   width: 100%; height: 100%;
@@ -1158,15 +1168,20 @@ ul.post-social li a {
 	background: @pink;
 	color: white !important;
 	display: block;
-	padding: 5px 10px;
+	padding: 4px 10px;
 	width: 30px;
 	height: 30px;
 	box-shadow: 1px 1px 0px rgba(255,255,0,1);
 	/*opacity:0.5;*/
 }
 
+ul.post-social li a i.fa-twitter {
+	margin-left: -2px;
+}
+
 ul.post-social li a:hover {
 	color: white;
+	background-color: darken(@pink, 20%);
 	/*opacity:1;*/
 }
 
@@ -1251,8 +1266,8 @@ ul.post-social li a:hover {
 
 .sex-dating h1, .sex-dating h2 {
 	/*color: @pink;*/
-	color: black;
-	text-shadow: 1px 1px 0px rgba(255,255,0,1);
+	/*color: black;*/
+	/*text-shadow: 1px 1px 0px rgba(255,255,0,1);*/
 }
 
 .post-grid {
@@ -1391,22 +1406,18 @@ ul.post-social li a:hover {
 	overflow: hidden;
 }
 
-.darlings h3,.darlings h4 {
-	color: white;
-}
-
 .style h1, .style h2 {
 	
 }
 
 .pop-in {
 	padding: 20px 0px 40px 0px;
-	background: rgba(0,0,0,0.8);
+	/*background: rgba(0,0,0,0.8);*/
 }
 
-.pop-in .post-grid .entry p {
+/*.pop-in .post-grid .entry p {
 	color: white;
-}
+}*/
 
 /*.archive.pop p {
 	color: white;
@@ -1420,8 +1431,8 @@ ul.post-social li a:hover {
 	color: white;
 }
 
-.pop-in .post-grid .entry a {color: white;}
-.pop-in .post-grid .entry a:hover {color:@pink;}
+.pop-in .post-grid .entry a {color: @pink;}
+.pop-in .post-grid .entry a:hover {color: darken(@pink, 20%);}
 
 .home-style {
 	background: url(images/greyfloral.png) fixed repeat !important;
@@ -1449,12 +1460,12 @@ ul.post-social li a:hover {
 .beauty h1, .beauty h2 {
 	/*color: @pink;*/
 	color: black;
-	text-shadow: 1px 1px 0px rgba(255,255,0,1);
+	/*text-shadow: 1px 1px 0px rgba(255,255,0,1);*/
 }
 
 .darlings {
 	padding: 20px;
-	.purpleGradientFade;
+	.greyLineGradient;
 	background-position: fixed !important;
 }
 
@@ -1467,12 +1478,10 @@ ul.post-social li a:hover {
 	-o-transform-origin: top center;
 	-moz-transform-origin: top center;
 	-webkit-transform-origin: top center;
-	background: url(images/galore-logo-white.png) center center no-repeat;
+	background: url(images/galore-logo.png) center center no-repeat;
 	margin: 0 auto -150px auto;
 	background-size: cover;
 }
-
-.darlings a h4 {color:white;}
 
 .cover-stories {
 	padding: 0px;
@@ -1526,7 +1535,7 @@ li.related-post {
 
 div.catlinks {
 	position: absolute;
-	background: @pink;
+	background: @salmon;
 	color: white;
 	padding: 3px 8px;
 	top: 13px;
@@ -1816,7 +1825,8 @@ button.alm-load-more-btn.done:before {
 	background: @pink;
 	color: white;
 	padding: 0 40px 20px 40px;
-	box-shadow: 1px 1px 0px rgba(255,255,0,1);
+	/*box-shadow: 1px 1px 0px rgba(255,255,0,1);*/
+	box-shadow: 0px 0px 15px rgba(250,100,100,1);
 	border-radius: 7px;
 }
 
@@ -1912,9 +1922,6 @@ time {
 		transform: rotate(0deg);*/
 		border: 0px;
 	}
-	.jumbotron .rsGalore .rsText {
-		padding: 20px;
-	}
 	.rsGalore h1 {
 		font-size:24px !important;
 	}
@@ -1922,7 +1929,7 @@ time {
 		/*-webkit-text-stroke-width: 0px !important;
 		-webkit-text-fill-color: @pink !important;
 		color: @pink !important;*/
-		text-shadow: 1px 1px 0 @pink, -1px -1px 0 @pink, 1px -1px 0 @pink, -1px 1px 0 @pink, 0px 0px 0px @pink;
+		text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 0px 0px 0px black;
 	}
 	.rsGalore .rsText p {
 		display: none;
@@ -1931,23 +1938,17 @@ time {
 		top: 10px;
 		right: 0px;
 		padding: 5px 10px;
-		background: fade(@pink, 80%);
+		background: fade(@salmon, 80%);
 		box-shadow: 1px 1px 0px rgba(255,255,0,1);
 		z-index: 9999;
 	}
 	.rsGalore .rsExcerpt {
 		display: none !important;
 	}
-	.rsGalore .rsText {
-		z-index: 9 !important;
-		text-align: left !important;
-		bottom: 0px !important;
-		left: 0px;
-		width:100%;
-	}
 	.rsGalore .rsText h1, .rsGalore .rsText h2, .rsGalore .rsText h3 {
 		
 	}
+
 	.home-sex-dating .excerpt {
 		display: none;
 	}
@@ -2018,7 +2019,7 @@ time {
 		.transition;
 	}
 	nav.shrink ul.nav {
-		margin-left: 0px;
+		margin-left: 20px;
 	}
 	.navbar-nav {
 		margin:40px auto;
@@ -2032,9 +2033,9 @@ time {
 		font-size: 40px;
 	}
 
-	.rsGalore .rsText h1, .rsGalore .rsText h2, .rsGalore .rsText h3 {
+	/*.rsGalore .rsText h1, .rsGalore .rsText h2, .rsGalore .rsText h3 {
 		margin: 0px !important;
-	}
+	}*/
 
 	#main-cats {
 		text-align: center;
@@ -2092,10 +2093,10 @@ time {
 		font-size: 18px;
 		line-height: 19px;
 		/*color: @pink;*/
-		color: black;
+		color: white;
 		padding: 10px;
 		margin: 0 !important;
-		text-shadow: 1px 1px 0px rgba(255,255,0,1);
+		/*text-shadow: 1px 1px 0px rgba(255,255,0,1);*/
 	}
 
 	.home-style .rsGalore .rsText .btn, .home-style .rsGalore .rsABlock .btn, .home-style .rsGalore .rsBlock .btn {
@@ -2183,13 +2184,13 @@ time {
 	.fitness {
 		background-size: 150px 150px;
 	}
-	#global-container.pop,
+	/*#global-container.pop,
 	#global-container.tag,
 	#global-container.models,
 	.pop {
 		background-image: url(images/kindajean_@2X.png);
 		background-size: 147px 147px;
-	}
+	}*/
 	.home-style {
 		background: url(images/greyfloral_@2X.png) repeat;
 		background-size: 150px 124px;
