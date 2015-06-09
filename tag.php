@@ -15,7 +15,7 @@
 	<div class="row-fluid">
 		<div id="content" class="col-sm-8 col-sm-offset-2">
 			<?php if ( have_posts() ): ?>
-			<h2>Tag: <?php echo single_tag_title( '', false ); ?></h2>
+			<h2><span>Tag </span><i class="fa fa-tag"></i> <?php echo single_tag_title( '', false ); ?></h2>
 			<hr>
 			<ol>
 			<?php while ( have_posts() ) : the_post(); ?>

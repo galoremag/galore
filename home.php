@@ -321,7 +321,7 @@
 							<div class="brand"></div>
 							<h1 class="text-center"><span>Darlings</span></h1>
 							<?php
-							$postslist = get_posts('category_name=models&numberposts=4&order=DESC&orderby=date&offset=0');
+							$postslist = get_posts('tag_name=darling&numberposts=4&order=DESC&orderby=date&offset=0');
 							foreach ($postslist as $post) :
 							setup_postdata($post);
 							?>
@@ -334,7 +334,7 @@
 							<?php endforeach; ?>
 							<div class="row-fluid">
 								<div class="spacer20"></div>
-								<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/models"><i class="fa fa-bomb"></i> Bombshells <i class="fa fa-bomb"></i></a></p>
+								<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/tag/darling"><i class="fa fa-bomb"></i> Bombshells <i class="fa fa-bomb"></i></a></p>
 							</div>
 						</div>
 					</div>
