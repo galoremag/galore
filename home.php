@@ -321,7 +321,7 @@
 							<div class="brand"></div>
 							<h1 class="text-center"><span>Darlings</span></h1>
 							<?php
-							$args = array( 'post_type' => 'post', 'tag_slug' => array('darling'), 'orderby' => 'date', 'order' => 'DESC' );
+							$args = array( 'post_type' => 'post', 'tag_slug_and' => array('darling'), 'orderby' => 'date', 'order' => 'DESC' );
 
 							$postslist = get_posts( $args );
 
