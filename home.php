@@ -321,8 +321,10 @@
 							<div class="brand"></div>
 							<h1 class="text-center"><span>Darlings</span></h1>
 							<?php
-							$postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
-							foreach ($postslist as $post) :
+							$darlinglist = query_posts( array( 'category__and' => array(5359,5198,11,3156,5360), 'tag' => 'darling', 'orderby' => 'date', 'order' => 'DESC' ) );
+
+							// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
+							foreach ($darlinglist as $post) :
 							setup_postdata($post);
 							?>
 							<div class="entry text-left">
