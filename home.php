@@ -49,63 +49,127 @@
 	<div class="spacer20"></div>
 </div> -->
 
-<!-- SEX + DATING SECTION -->
 <div id="home-container">
-	<div class="sex-dating">
-		<div class="sex-dating-in">
-			<div class="container-fluid">
+
+	<!-- STYLE SECTION -->
+
+	<div class="home-style">
+		<div class="home-style-in nopad">
+			<div class="container-fluid nopad">
 				<div class="row-fluid">
-					<div class="col-sm-10 col-sm-offset-1">
-						<h2>Sex <span>+</span> Dating <span><i class="fa fa-heart"></i></span></h2>
-					</div>
-				</div>
-				<div class="row-fluid">
-					<div class="col-sm-7 col-sm-offset-1">
-						<?php
-						$postslist = get_posts('category_name=sex-dating&numberposts=1&order=DESC&orderby=date');
-						foreach ($postslist as $post) :
-						setup_postdata($post);
-						?>
-						<div class="entry home-sex-dating">
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
-							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-							<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-							<div class="spacer10"></div>
-							<div class="excerpt"><?php the_excerpt(); ?></div>
-							<div class="spacer10"></div>
-							<p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
-							<!-- <ul class="post-social">
-								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-							</ul> -->
+					<div class="col-sm-7 col-sm-offset-1 pad20">
+						<div class="row-fluid">
+							<div class="col-sm-12 nopad">
+								<h2>Style <span>+</span> Beauty <span><i class="fa fa-scissors"></i></span></h2>
+							</div>
+							<div class="col-sm-12 spacer20"></div>
 						</div>
-						<?php endforeach; ?>
-					</div>
-					<div class="col-sm-3">
-						<?php
-						$postslist = get_posts('category_name=sex-dating&numberposts=2&order=DESC&orderby=date&offset=1');
-						foreach ($postslist as $post) :
-						setup_postdata($post);
-						?>
-						<div class="entry">
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
-							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-							<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-							<div class="spacer10"></div>
-							<p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
-							<!-- <ul class="post-social">
-								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-							</ul> -->
-							<div class="spacer10"></div>
+						<div class="row-fluid">
+							<div class="col-sm-12 nopad">
+							<?php echo do_shortcode( '[new_royalslider id="5"]' ); ?>
+							</div>
 						</div>
-						<?php endforeach; ?>
+						<div class="row-fluid">
+							<div class="col-sm-12 spacer40"></div>
+						</div>
+						<div class="row-fluid post-grid">
+							<?php
+							$counter = 1; //start counter
+
+							$grids = 2; //Grids per row-fluid
+
+							$args = array(
+								'category_name' => 'beauty,style',
+								'showposts' => 4,
+								'orderby' => 'date',
+								'post__in'  => get_option( 'sticky_posts' ),
+								'ignore_sticky_posts' => 4
+							);
+							$bsQuery = new WP_Query( $args );
+
+							if(have_posts()) :	while($bsQuery->have_posts()) :  $bsQuery->the_post(); 
+
+							//Show the left hand side column
+							if($counter == 1) :
+							?>
+							<div class="col-sm-6">
+								<div class="entry">
+									<div class="catlinks"><?php the_category(); ?></div>
+									<div class="postimage">
+										<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+									</div>
+					                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
+					                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+					                <div class="spacer10"></div>
+					                <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
+					                <!-- <ul class="post-social">
+										<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+									</ul> -->
+								</div>
+							</div>
+							<?php
+							$counter = 0;
+							endif;
+							?>
+							<?php
+							//Show the left hand side column
+							if($counter == 1) :
+							?>
+							<div class="col-sm-6">
+								<div class="catlinks"><?php the_category(); ?></div>
+								<div class="postimage">
+									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+								</div>
+				                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				                <div class="spacer10"></div>
+				                <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
+				                <!-- <ul class="post-social">
+									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+								</ul> -->
+							</div>
+							<div class="clear"></div>
+							<?php
+							$counter = 0;
+							endif;
+							?>
+							<?php
+							$counter++;
+							endwhile;
+							//Pagination can go here if you want it.
+							endif;
+							?>
+						</div>
+						<div class="row-fluid">
+							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/beauty"><i class="fa fa-scissors"></i>&nbsp; Get Glam &nbsp;<i class="fa fa-scissors"></i></a></p>
+						</div>
 					</div>
-				</div>
-				<div class="row-fluid">
-					<div class="col-sm-12">
-						<div class="spacer20"></div>
-						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> &nbsp; Hook It Up &nbsp;<i class="fa fa-heart"></i></a></p>
+					<div class="col-sm-4 nopad">
+						<div class="darlings pad20">
+							<div class="brand"></div>
+							<h1 class="text-center"><span>Darlings</span></h1>
+							<?php
+							$args = array( 'post_type' => 'post', 'posts_per_page' => 4, 'tag' => 'darling', 'orderby' => 'date', 'order' => 'DESC' );
+
+							$postslist = get_posts( $args );
+
+							// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
+							foreach ($postslist as $post) : setup_postdata($post);
+							?>
+							<div class="entry text-left">
+								<div class="postimage">
+									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
+								</div>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
+							</div>
+							<?php endforeach; ?>
+							<div class="row-fluid">
+								<div class="spacer20"></div>
+								<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/tag/darling"><i class="fa fa-bomb"></i> Bombshells <i class="fa fa-bomb"></i></a></p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -221,125 +285,63 @@
 		</div>
 	</div>
 
-	<!-- STYLE SECTION -->
+	<!-- SEX + DATING SECTION -->
 
-	<div class="home-style">
-		<div class="home-style-in nopad">
-			<div class="container-fluid nopad">
+	<div class="sex-dating">
+		<div class="sex-dating-in">
+			<div class="container-fluid">
 				<div class="row-fluid">
-					<div class="col-sm-7 col-sm-offset-1 pad20">
-						<div class="row-fluid">
-							<div class="col-sm-12 nopad">
-								<h2>Style <span>+</span> Beauty <span><i class="fa fa-scissors"></i></span></h2>
-							</div>
-							<div class="col-sm-12 spacer20"></div>
-						</div>
-						<div class="row-fluid">
-							<div class="col-sm-12 nopad">
-							<?php echo do_shortcode( '[new_royalslider id="5"]' ); ?>
-							</div>
-						</div>
-						<div class="row-fluid">
-							<div class="col-sm-12 spacer40"></div>
-						</div>
-						<div class="row-fluid post-grid">
-							<?php
-							$counter = 1; //start counter
-
-							$grids = 2; //Grids per row-fluid
-
-							$args = array(
-								'category_name' => 'beauty,style',
-								'showposts' => 4,
-								'orderby' => 'date',
-								'post__in'  => get_option( 'sticky_posts' ),
-								'ignore_sticky_posts' => 4
-							);
-							$bsQuery = new WP_Query( $args );
-
-							if(have_posts()) :	while($bsQuery->have_posts()) :  $bsQuery->the_post(); 
-
-							//Show the left hand side column
-							if($counter == 1) :
-							?>
-							<div class="col-sm-6">
-								<div class="entry">
-									<div class="catlinks"><?php the_category(); ?></div>
-									<div class="postimage">
-										<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
-									</div>
-					                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-					                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-					                <div class="spacer10"></div>
-					                <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
-					                <!-- <ul class="post-social">
-										<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-									</ul> -->
-								</div>
-							</div>
-							<?php
-							$counter = 0;
-							endif;
-							?>
-							<?php
-							//Show the left hand side column
-							if($counter == 1) :
-							?>
-							<div class="col-sm-6">
-								<div class="catlinks"><?php the_category(); ?></div>
-								<div class="postimage">
-									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
-								</div>
-				                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-				                <div class="spacer10"></div>
-				                <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
-				                <!-- <ul class="post-social">
-									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-								</ul> -->
-							</div>
-							<div class="clear"></div>
-							<?php
-							$counter = 0;
-							endif;
-							?>
-							<?php
-							$counter++;
-							endwhile;
-							//Pagination can go here if you want it.
-							endif;
-							?>
-						</div>
-						<div class="row-fluid">
-							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/beauty"><i class="fa fa-scissors"></i>&nbsp; Get Glam &nbsp;<i class="fa fa-scissors"></i></a></p>
-						</div>
+					<div class="col-sm-10 col-sm-offset-1">
+						<h2>Sex <span>+</span> Dating <span><i class="fa fa-heart"></i></span></h2>
 					</div>
-					<div class="col-sm-4 nopad">
-						<div class="darlings pad20">
-							<div class="brand"></div>
-							<h1 class="text-center"><span>Darlings</span></h1>
-							<?php
-							$args = array( 'post_type' => 'post', 'tag' => 'darling', 'orderby' => 'date', 'order' => 'DESC' );
-
-							$postslist = get_posts( $args );
-
-							// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
-							foreach ($postslist as $post) : setup_postdata($post);
-							?>
-							<div class="entry text-left">
-								<div class="postimage">
-									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
-								</div>
-								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-							</div>
-							<?php endforeach; ?>
-							<div class="row-fluid">
-								<div class="spacer20"></div>
-								<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/tag/darling"><i class="fa fa-bomb"></i> Bombshells <i class="fa fa-bomb"></i></a></p>
-							</div>
+				</div>
+				<div class="row-fluid">
+					<div class="col-sm-7 col-sm-offset-1">
+						<?php
+						$postslist = get_posts('category_name=sex-dating&numberposts=1&order=DESC&orderby=date');
+						foreach ($postslist as $post) :
+						setup_postdata($post);
+						?>
+						<div class="entry home-sex-dating">
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+							<div class="spacer10"></div>
+							<div class="excerpt"><?php the_excerpt(); ?></div>
+							<div class="spacer10"></div>
+							<p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
+							<!-- <ul class="post-social">
+								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul> -->
 						</div>
+						<?php endforeach; ?>
+					</div>
+					<div class="col-sm-3">
+						<?php
+						$postslist = get_posts('category_name=sex-dating&numberposts=2&order=DESC&orderby=date&offset=1');
+						foreach ($postslist as $post) :
+						setup_postdata($post);
+						?>
+						<div class="entry">
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+							<div class="spacer10"></div>
+							<p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
+							<!-- <ul class="post-social">
+								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul> -->
+							<div class="spacer10"></div>
+						</div>
+						<?php endforeach; ?>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="col-sm-12">
+						<div class="spacer20"></div>
+						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> &nbsp; Hook It Up &nbsp;<i class="fa fa-heart"></i></a></p>
 					</div>
 				</div>
 			</div>
