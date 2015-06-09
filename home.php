@@ -321,11 +321,12 @@
 							<div class="brand"></div>
 							<h1 class="text-center"><span>Darlings</span></h1>
 							<?php
-							$darlinglist = query_posts( array( 'category__and' => array(5359,5198,11,3156,5360), 'tag' => 'darling', 'orderby' => 'date', 'order' => 'DESC' ) );
+							$args = array( 'post_type' => 'post', 'tag_slug' => array('darling'), 'orderby' => 'date', 'order' => 'DESC' );
+
+							$postslist = get_posts( $args );
 
 							// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
-							foreach ($darlinglist as $post) :
-							setup_postdata($post);
+							foreach ($postslist as $post) : setup_postdata($post);
 							?>
 							<div class="entry text-left">
 								<div class="postimage">
