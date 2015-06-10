@@ -90,11 +90,11 @@ Version: 1.0.1
 }
 
 .font1 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'proxima-nova', sans-serif;
 }
 
 .font2 {
-	font-family: 'Cabin', sans-serif;
+	font-family: 'Karla', sans-serif;
 }
 
 .font3 {
@@ -115,12 +115,12 @@ li {
 }
 
 p {
-	.font4;
+	.font1;
 	text-rendering: geometricPrecision;
 	font-size: 18px;
 	line-height: 36px;
 	letter-spacing: 0.003em;
-	font-weight: 400;
+	font-weight: 100;
   	font-style: normal;
 }
 
@@ -163,6 +163,10 @@ p {
 
 .pad20 {
 	padding: 20px !important;
+}
+
+.pad40 {
+	padding: 3% !important
 }
 
 .padtop10 {
@@ -492,11 +496,11 @@ h1, h2 {
 	margin: 10px 0px !important;
 }
 
-h3 {
+h3, h3 a {
 	color: black;
-	.font2;
+	.font1;
 	font-weight: bold;
-	font-size: 22px;
+	font-size: 28px;
 	margin: 10px 0px !important;
 }
 
@@ -1129,8 +1133,14 @@ nav.shrink ul.nav {
 	background: white;
 }
 
-.sidebar {
+#sidebar {
 	background: @galwhite;
+}
+
+#sidebar.sticky {
+	position: fixed;
+    top: 50px;
+    right: 0px;
 }
 
 /*.pop #content {

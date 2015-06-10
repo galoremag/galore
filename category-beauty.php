@@ -13,12 +13,12 @@
 
 <div class="container-fluid nopad">
 	<div class="row-fluid">
-		<div class="col-sm-8 col-sm-offset-2 container-fixed nopad">
+		<div class="col-md-8 col-md-offset-2 container-fixed nopad">
 		<?php echo do_shortcode( '[new_royalslider id="6"]' ); ?>
 		</div>
 	</div>
 	<div class="row-fluid">
-		<div id="content" class="col-sm-9">
+		<div id="content" class="col-md-8 col-sm-12">
 			<h2 class="text-center"><span class="font1">The Latest in</span> <?php echo single_cat_title( '', false ); ?> <i class="fa fa-diamond"></i></h2>
 			<hr>
 			<ol>
@@ -63,7 +63,8 @@
 
 			<div class="spacer40"></div>
 		</div>
-		<div class="sidebar col-sm-3">
+		<div id="sidebar-anchor"></div>
+		<div id="sidebar" class="sidebar col-md-4 pad40 hidden-sm">
 			<h2>Trendy</h2>
 			<?php query_posts('category_name=beauty&posts_per_page=4&offset=4'); ?>
 			<?php if ( have_posts() ): ?>

@@ -53,6 +53,9 @@
 
 		<?php wp_head(); ?>
 
+		<script src="//use.typekit.net/uqi4yop.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+
 		<!-- Perfect Scrollbar JS -->
 		<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/perfect-scrollbar.min.js'></script>
 
