@@ -83,7 +83,7 @@ Version: 1.0.1
 
 @pink : #E81B8E;
 @salmon : #FA7470;
-@bigwhite : antiquewhite;
+@galwhite : antiquewhite;
 
 .pink {
 	color: @pink !important;
@@ -110,13 +110,18 @@ Version: 1.0.1
 	font-family: 'Cherry Swash', cursive;
 }
 
+li {
+	list-style-type: none;
+}
+
 p {
 	.font4;
-	font-size: 12px;
-	margin: 0;
-	letter-spacing: 0.3px;
-	line-height: 16px;
-	font-weight: normal;
+	text-rendering: geometricPrecision;
+	font-size: 18px;
+	line-height: 36px;
+	letter-spacing: 0.003em;
+	font-weight: 400;
+  	font-style: normal;
 }
 
 .transition {
@@ -461,11 +466,15 @@ a.btn:hover {
 }
 
 .thumbnail {
-	max-height: 200px !important;
+	/*max-height: 200px !important;*/
 	overflow: hidden !important;
 	border: 0px;
 	padding: 5px;
 	background: transparent;
+}
+
+.thumbnail a>img {
+	border-radius: 4px;
 }
 
 hr {
@@ -1115,6 +1124,10 @@ nav.shrink ul.nav {
 	background: white;
 }
 
+.sidebar {
+	background: @galwhite;
+}
+
 /*.pop #content {
 	background: #2B2B2B;
 }*/
@@ -1182,7 +1195,7 @@ ul.post-social li a:hover {
 	padding: 10px;
 	left: 0px;
 	margin: 0 0 0 0;
-	/*background: @bigwhite;*/
+	/*background: @galwhite;*/
 	background: white;
 	box-shadow: 1px 1px 5px rgba(255,0,50,0.3);
 }
@@ -1549,13 +1562,21 @@ div.catlinks li {
 div.catlinks li a {color:white !important;.font2;}
 
 div.excerpt p {
-	font-size: 15px;
-	line-height: 20px !important;
+	text-rendering: geometricPrecision;
+	font-size: 18px;
+	line-height: 32px;
+	letter-spacing: 0.003em;
+	font-weight: 400;
+  	font-style: normal;
 }
 
 article p {
-	font-size: 16px;
-	line-height: 22px;
+	text-rendering: geometricPrecision;
+	font-size: 18px;
+	line-height: 32px;
+	letter-spacing: 0.003em;
+	font-weight: 400;
+  	font-style: normal;
 	margin: 10px 0;
 }
 
@@ -1848,10 +1869,12 @@ button.alm-load-more-btn.done:before {
 
 time {
 	.font2;
+	font-size: 12px;
 }
 
 .byline {
 	.font2 !important;
+	font-size: 12px;
 }
 
 /* GiphyTV overrides */

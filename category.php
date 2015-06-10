@@ -15,6 +15,11 @@
 	<div class="row-fluid">
 		<div id="content" class="col-sm-8 col-sm-offset-2">
 			<h2><?php echo single_cat_title( '', false ); ?></h2>
+			<div class="row-fluid">
+				<div class="col-sm-12 nopad">
+				<?php echo do_shortcode( '[new_royalslider id="5"]' ); ?>
+				</div>
+			</div>
 			<hr>
 			<ol>
 			<?php query_posts('posts_per_page=4&offset=0'); ?>
