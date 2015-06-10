@@ -17,7 +17,7 @@
 </div>
 
 <div id="latest-container">
-	<a href="the-latest/"><h2 class="text-center verPad20"><i class="fa fa-flash"></i> <span>New</span> Shit <span><i class="fa fa-flash"></i></span></h2></a>
+	<h2 class="text-center verPad20"><a href="the-latest/"><i class="fa fa-flash"></i> <span>New</span> Shit <span><i class="fa fa-flash"></i></span></a></h2>
 	<div id="latest">
 
 		<div id="glides">
