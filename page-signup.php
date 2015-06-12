@@ -28,7 +28,7 @@ Template Name: Newsletter Signup
                     
                     <?php the_content(); ?>
 
-                    <h2 class="text-center"><span>Get On The List</span></h2>
+                    <h1 class="text-center">Get On The List</h1>
                     <form action="http://galoremag.createsend.com/t/i/s/tjcj/" method="post">
                         <div class="form-group">
                             <input placeholder="Name" class="form-control" id="fieldName" name="cm-name" type="text" required />

@@ -102,6 +102,30 @@
 
 		$('#glides').perfectScrollbar();
 
+		// $('#modal-nav-button').click(function() {
+		// 	$('.modal-nav').fadeIn(200);
+		// });
+
+		// $('.modal-nav-close').click(function() {
+		// 	$('.modal-nav').fadeOut(200);
+		// });
+
+		$("#newsletterClose").click(function() {
+            $("#email-signup").fadeOut(500);
+            $.cookie('newsletter', 14);
+        });
+
+		$('.hmbrgr').hmbrgr({
+		  width     : 13,
+		  height    : 11,
+		  barHeight : 1,
+		  barColor  : '#fff'
+		});
+
+		$('#nav-button').on('click', function(event) {        
+             $('.modal-nav').fadeToggle('show');
+        });
+
 		// Recommendations on scroll
 	    // var isBusy = false,
 	    //     $active = $('.bottom-nav a.active'),

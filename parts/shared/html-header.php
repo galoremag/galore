@@ -56,17 +56,12 @@
 		<script src="//use.typekit.net/uqi4yop.js"></script>
 		<script>try{Typekit.load();}catch(e){}</script>
 
-		<!-- Perfect Scrollbar JS -->
-		<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/perfect-scrollbar.min.js'></script>
+		<!-- Main slider JS script file --> 
+		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
 
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>		
 
-		<!-- REMOVE THE TAP DELAY -->
-		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/fastclick.js'></script>
-
-		<!-- Main slider JS script file --> 
-		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/js/site.js'></script>
 
 		<script type="text/javascript">
 

@@ -478,18 +478,15 @@
 *
 ****************/
 .rsGalore .rsGCaption {
-	position: absolute;
-	float: none;
-	bottom: 6px;
-	left: 6px;
+	position: relative;
 	text-align: left;
 
-	background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.75);
+	background: black;
 
 	color: #FFF;
-	padding: 2px 8px;
-	width: auto;
-	font-size: 12px;
-	border-radius: 2px;
+	padding: 20px;
+	width: 100%;
+	font-size: 32px;
+	font-family: 'proxima-nova-alt-condensed';
+	text-transform: uppercase;
 }

@@ -59,6 +59,10 @@ Version: 1.0.1
 @import "../bower_components/bootstrap/less/utilities.less";
 @import "../bower_components/bootstrap/less/responsive-utilities.less";
 
+/*@import "../less/base.less";
+@import "../less/lesshat.less";*/
+@import "../less/hmbrgr.less";
+
 /* Font Awesome icons */
 @import "../bower_components/fontawesome/less/font-awesome.less";
 @fa-font-path: "fonts"; // Font Awesome font directory override
@@ -81,7 +85,8 @@ Version: 1.0.1
 
 /*  VARIABLES & MIXINS  */
 
-@pink : #E81B8E;
+/*@pink : #E81B8E;*/
+@pink : #FA7470;
 @salmon : #FA7470;
 @galwhite : antiquewhite;
 
@@ -90,7 +95,7 @@ Version: 1.0.1
 }
 
 .font1 {
-	font-family: 'proxima-nova', sans-serif;
+	font-family: 'proxima-nova-alt-condensed', sans-serif;
 }
 
 .font2 {
@@ -103,7 +108,7 @@ Version: 1.0.1
 }
 
 .font4 {
-	font-family: 'Libre Baskerville', serif;
+	font-family: 'Georgia', serif;
 }
 
 .font5 {
@@ -115,7 +120,7 @@ li {
 }
 
 p {
-	.font1;
+	.font4;
 	text-rendering: geometricPrecision;
 	font-size: 18px;
 	line-height: 36px;
@@ -129,6 +134,15 @@ p {
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
+}
+
+.translate {
+	transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	perspective: 1000;
+	-webkit-perspective: 1000;
 }
 
 .center {
@@ -166,7 +180,7 @@ p {
 }
 
 .pad40 {
-	padding: 3% !important
+	padding: 40px !important
 }
 
 .padtop10 {
@@ -240,6 +254,7 @@ p {
 }
 
 .heroGradient {
+	background-attachment: fixed;
 	background: #fbb040; /* Old browsers */
 	background: -moz-linear-gradient(-45deg,  #fbb040 0%, #9e1f63 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#fbb040), color-stop(100%,#9e1f63)); /* Chrome,Safari4+ */
@@ -251,6 +266,7 @@ p {
 }
 
 .heroGradientFade {
+	background-attachment: fixed;
 	background: -moz-linear-gradient(-45deg,  rgba(251,176,64,0.7) 0%, rgba(158,31,99,0.7) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(251,176,64,0.7)), color-stop(100%,rgba(158,31,99,0.7))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(-45deg,  rgba(251,176,64,0.7) 0%,rgba(158,31,99,0.7) 100%); /* Chrome10+,Safari5.1+ */
@@ -261,6 +277,7 @@ p {
 }
 
 .pinkYellowFade {
+	background-attachment: fixed;
 	background: -moz-linear-gradient(-45deg,  rgba(158,31,99,0.7) 0%, rgba(251,176,64,0.7) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(158,31,99,0.7)), color-stop(100%,rgba(251,176,64,0.7))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(-45deg,  rgba(158,31,99,0.7) 0%,rgba(251,176,64,0.7) 100%); /* Chrome10+,Safari5.1+ */
@@ -271,6 +288,7 @@ p {
 }
 
 .pinkBlueGradient {
+	background-attachment: fixed;
 	background: #ef95ad; /* Old browsers */
 	background: -moz-linear-gradient(-45deg,  #ef95ad 0%, #abdff6 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ef95ad), color-stop(100%,#abdff6)); /* Chrome,Safari4+ */
@@ -282,6 +300,7 @@ p {
 }
 
 .pinkBlueGradientFade {
+	background-attachment: fixed;
 	background: -moz-linear-gradient(-45deg,  rgba(239,149,173,0.5) 0%, rgba(171,223,246,0.5) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(239,149,173,0.5)), color-stop(100%,rgba(171,223,246,0.5))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(-45deg,  rgba(239,149,173,0.5) 0%,rgba(171,223,246,0.5) 100%); /* Chrome10+,Safari5.1+ */
@@ -292,6 +311,7 @@ p {
 }
 
 .bluePinkGradient {
+	background-attachment: fixed;
 	background: #abdff6; /* Old browsers */
 	background: -moz-linear-gradient(-45deg,  #abdff6 0%, #ef95ad 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#abdff6), color-stop(100%,#ef95ad)); /* Chrome,Safari4+ */
@@ -303,6 +323,7 @@ p {
 }
 
 .bluePinkGradientFade {
+	background-attachment: fixed;
 	background: -moz-linear-gradient(-45deg,  rgba(171,223,246,0.5) 0%, rgba(239,149,173,0.5) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(171,223,246,0.5)), color-stop(100%,rgba(239,149,173,0.5))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(-45deg,  rgba(171,223,246,0.5) 0%,rgba(239,149,173,0.5) 100%); /* Chrome10+,Safari5.1+ */
@@ -313,6 +334,7 @@ p {
 }
 
 .yellowGlowGradient {
+	background-attachment: fixed;
 	background: -moz-linear-gradient(-45deg,  rgba(254,252,234,0.5) 0%, rgba(241,218,54,0.8) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(254,252,234,0.5)), color-stop(100%,rgba(241,218,54,0.8))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(-45deg,  rgba(254,252,234,0.5) 0%,rgba(241,218,54,0.8) 100%); /* Chrome10+,Safari5.1+ */
@@ -323,6 +345,7 @@ p {
 }
 
 .greyGradientFade {
+	background-attachment: fixed;
 	background: -moz-linear-gradient(-45deg,  rgba(255,255,255,0.75) 0%, rgba(229,229,229,0.45) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0.75)), color-stop(100%,rgba(229,229,229,0.45))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(-45deg,  rgba(255,255,255,0.75) 0%,rgba(229,229,229,0.45) 100%); /* Chrome10+,Safari5.1+ */
@@ -333,6 +356,7 @@ p {
 }
 
 .footerGradient {
+	background-attachment: fixed;
 	background: #8e5465; /* Old browsers */
 	background: -moz-linear-gradient(left,  #8e5465 0%, #638493 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#8e5465), color-stop(100%,#638493)); /* Chrome,Safari4+ */
@@ -344,6 +368,7 @@ p {
 }
 
 .purpleGradient {
+	background-attachment: fixed;
 	background: -moz-linear-gradient(-45deg,  rgba(229,4,177,1) 0%, rgba(109,0,25,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(229,4,177,1)), color-stop(100%,rgba(109,0,25,1))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(-45deg,  rgba(229,4,177,1) 0%,rgba(109,0,25,1) 100%); /* Chrome10+,Safari5.1+ */
@@ -354,6 +379,7 @@ p {
 }
 
 .purpleGradientFade {
+	background-attachment: fixed;
 	background: -moz-linear-gradient(-45deg,  rgba(229,4,177,0.5) 0%, rgba(109,0,25,0.75) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(229,4,177,0.5)), color-stop(100%,rgba(109,0,25,0.75))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(-45deg,  rgba(229,4,177,0.5) 0%,rgba(109,0,25,0.75) 100%); /* Chrome10+,Safari5.1+ */
@@ -364,6 +390,7 @@ p {
 }
 
 .yellowBlueGradient {
+	background-attachment: fixed;
 	background: rgb(250,255,221); /* Old browsers */
 	background: -moz-linear-gradient(-45deg,  rgba(250,255,221,1) 0%, rgba(210,235,249,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(250,255,221,1)), color-stop(100%,rgba(210,235,249,1))); /* Chrome,Safari4+ */
@@ -375,6 +402,7 @@ p {
 }
 
 .yellowBlueGradientFade {
+	background-attachment: fixed;
 	background: -moz-linear-gradient(-45deg,  rgba(250,255,221,0.7) 0%, rgba(210,235,249,0.7) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(250,255,221,0.7)), color-stop(100%,rgba(210,235,249,0.7))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(-45deg,  rgba(250,255,221,0.7) 0%,rgba(210,235,249,0.7) 100%); /* Chrome10+,Safari5.1+ */
@@ -432,7 +460,7 @@ a {
 	color: @pink;
 }
 a:hover, a h1:hover, a:hover h1, a:hover h2, a:hover h3, a:hover h4, a h2:hover, a h3:hover, a h4:hover {text-decoration: none; opacity: 1;.transition; color: @pink;}
-a:focus {color: @pink; outline: 0px; text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);}
+a:focus {text-decoration: none; color: @pink; outline: 0px; text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);}
 
 a.btn {
 	.font2;
@@ -450,6 +478,18 @@ a.btn:hover {
 	.font2;
 	opacity: 1;
 	color: white;
+}
+
+blockquote {
+	border-left: 0px;
+	margin: 20px -20px;
+	padding: 60px 80px;
+	background: url(images/greyfloral.png);
+}
+
+blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
+	-webkit-transform: rotate(-3deg);
+	/*color: @pink;*/
 }
 
 .centerBlock {
@@ -475,10 +515,11 @@ a.btn:hover {
 	border: 0px;
 	padding: 5px;
 	background: transparent;
+	border-radius: 0px;
 }
 
 .thumbnail a>img {
-	border-radius: 4px;
+	/*border-radius: 4px;*/
 }
 
 hr {
@@ -486,21 +527,27 @@ hr {
 	width: 100%;
 }
 
-h1 {font-size: 40px;letter-spacing: -3px;}
-
-h1, h2 {
+h1 {
 	.font1;
 	color: black;
 	font-weight: bold;
 	text-transform: uppercase;
+	font-size: 42px;
+	letter-spacing: 0.5px;
+	margin: 10px 0px !important;
+}
+
+h2 {
+	.font2;
+	color: black;
 	margin: 10px 0px !important;
 }
 
 h3, h3 a {
 	color: black;
-	.font1;
+	.font2;
 	font-weight: bold;
-	font-size: 28px;
+	font-size: 24px;
 	margin: 10px 0px !important;
 }
 
@@ -516,8 +563,8 @@ h1 span, h2 span, h3 span {
 	/*-webkit-text-fill-color: white;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: @pink;*/
-	color: white !important;
-	text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 0px 0px 0px black;
+	color: black;
+	/*text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 0px 0px 0px black;*/
 }
 
 h1 a, h2 a, h3 a, h4 a {
@@ -530,7 +577,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h1 a:hover span, h2 a:hover span
 	opacity: 1;
 	text-decoration: none;
 	.transition;
-	text-shadow-color: @pink;
+	/*text-shadow-color: @pink;*/
 }
 
 /*h1 a:hover span, h2 a:hover span, h3 a:hover span, h4 a:hover span {
@@ -553,25 +600,23 @@ body {
 }
 
 #global-container.single {
-	background: url(images/giftly.png) fixed repeat;
+	background: url(images/giftly.png) repeat;
 }
 
 #global-inner.single {
-	.yellowBlueGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	.heroGradientFade;
+	padding: 120px 0px 0px 0px;
 }
 
 /* THE LATEST BACKGROUND */
 
 #global-container.the-latest {
-	background: url(images/greyfloral.png) fixed repeat;
+	background: url(images/greyfloral.png) repeat;
 }
 
 #global-inner.the-latest {
 	.heroGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 /* STYLE BACKGROUND */
@@ -582,77 +627,67 @@ body {
 
 #global-inner.category-style {
 	.bluePinkGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 #global-inner.style {
 	.bluePinkGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 /* BEAUTY BACKGROUND */
 
 #global-container.beauty {
-	background: url(images/greyfloral.png) fixed repeat;
-
+	background: url(images/greyfloral.png) repeat;
 }
 
 #global-inner.category-beauty {
-	.yellowBlueGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	.heroGradientFade;
+	padding: 120px 0px 0px 0px;
 }
 
 #global-inner.beauty {
-	.yellowGlowGradient;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	.heroGradientFade;
+	padding: 120px 0px 0px 0px;
 }
 
 /* AUTHOR */
 
 #global-inner.author {
 	.purpleGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 /* SEX & DATING BACKGROUND */
 
 #global-container.sex-dating {
-	background: url(images/pic-wall.jpg) fixed repeat;
+	background: url(images/pic-wall.jpg) repeat;
 }
 
 #global-inner.category-sex-dating {
 	background: url(images/pic-wall.jpg) repeat;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 #global-inner.sex-dating {
-	.greyGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	.purpleGradientFade;
+	padding: 120px 0px 0px 0px;
 }
 
 /* POP BACKGROUND */
 
 #global-container.pop {
-	background: url(images/kindajean.png) fixed repeat;
+	background: url(images/kindajean.png) repeat;
 }
 
 #global-inner.category-pop {
 	.purpleGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 #global-inner.pop {
 	.purpleGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 /* PARTIES BACKGROUND */
@@ -663,48 +698,43 @@ body {
 
 #global-inner.category-parties {
 	.purpleGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 #global-inner.parties {
 	.purpleGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 /* ERROR 404 BACKGROUND */
 
 #global-container.error404 {
-	background: url(images/subtle_white_feathers.png) fixed repeat;
+	background: url(images/subtle_white_feathers.png) repeat;
 }
 
 #global-inner.error404 {
 	.purpleGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 #global-container.category-fitness {
-	background: url(images/food.png) fixed repeat;
+	background: url(images/food.png) repeat;
 }
 
 #global-inner.fitness {
-	.yellowBlueGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	.bluePinkGradientFade;
+	padding: 120px 0px 0px 0px;
 }
 
 /* LATEST BACKGROUND */
 
 #global-container.category-latest {
-	background: url(images/greyfloral.png) fixed repeat;
+	background: url(images/greyfloral.png) repeat;
 }
 
 #global-inner.latest {
-	.yellowGlowGradient;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	.heroGradientFade;
+	padding: 120px 0px 0px 0px;
 }
 
 #global-inner.home {
@@ -716,102 +746,88 @@ body {
 /* EMAIL SIGNUP PAGE */
 
 #global-container.signup {
-	background: url(images/greyfloral.png) fixed repeat;
+	background: url(images/greyfloral.png) repeat;
 }
 
 #global-inner.signup {
 	.heroGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 #global-inner .signup #content {
 	/*background: @pink;*/
-	padding: 100px 0px;
+	padding: 120px 0px;
 }
 
 /* SEARCH PAGE */
 
 #global-container.category-search {
 	background: url(images/greyfloral.png) repeat;
-	background-attachment: fixed;
 }
 
 #global-inner.search {
 	.heroGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 /* ABOUT BACKGROUND */
 
 #global-container.page-about {
 	background: url(images/greyfloral.png) repeat;
-	background-attachment: fixed;
 }
 
 #global-inner.page-about {
 	.heroGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 /* DMCA POLICY BACKGROUND */
 
 #global-container.dmca-policy {
 	background: url(images/greyfloral.png) repeat;
-	background-attachment: fixed;
 }
 
 #global-inner.dmca-policy {
 	.heroGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 /* CONTACT BACKGROUND */
 
 #global-container.page-contact {
 	background: url(images/greyfloral.png) repeat;
-	background-attachment: fixed;
 }
 
 #global-inner.page-contact {
 	.heroGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 /* TAG BACKGROUND */
 
 #global-container.tag {
 	background: url(images/kindajean.png) repeat;
-	background-attachment: fixed;
 }
 
 #global-inner.tag {
-	.yellowBlueGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	.heroGradientFade;
+	padding: 120px 0px 0px 0px;
 }
 
 /* MODELS BACKGROUND */
 
 #global-container.models {
 	background: url(images/kindajean.png) repeat;
-	background-attachment: fixed;
 }
 
 #global-inner.category-models {
 	.purpleGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 #global-inner.models {
 	.purpleGradientFade;
-	background-attachment: fixed;
-	padding: 100px 0px 0px 0px;
+	padding: 120px 0px 0px 0px;
 }
 
 .models {
@@ -872,9 +888,9 @@ ul.top-social li a:hover {color:@pink;}
 .navbar-default {
 	border: 0px;
 	overflow: visible;
-	.pinkBlueGradient;
-	margin-top: 50px;
-	box-shadow: 0px 2px 5px rgba(255, 0, 50, 0.2);
+	background: transparent;
+	.transition;
+	/*box-shadow: 0px 2px 5px rgba(255, 0, 50, 0.2);*/
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
@@ -883,41 +899,37 @@ ul.top-social li a:hover {color:@pink;}
 
 .navbar-brand {
 	position: absolute;
-	top: -40px;
+	top: 0px;
 	width: 180px;
 	height: 215px;
 	overflow: visible;
-	background: url(images/galore-logo.png) no-repeat;
+	background: url(images/galore-logo-white.png) no-repeat;
 	background-size: 180px auto;
 	opacity: 1;
 	z-index: 999;
-	margin-left: 0px;
+	left: 50%;
+	margin-left: -180px;
+	.transition;
 }
 
 .navbar-brand span {
 	display: none;
 }
 
-nav.shrink {
-	margin-top:0px;
-}
-
 nav.shrink .navbar-brand {
-	background: url(images/galore-logo-white.png) no-repeat;
+	background: url(images/galore-logo-short-straight-white.png) no-repeat;
 	background-size: 180px auto;
 	-webkit-transform: scale(0.5);
 	-moz-transform: scale(0.5);
 	-o-transform: scale(0.5);
 	transform: scale(0.5);
+	.transition;
 	top: -50px;
 }
 
-nav.shrink ul.nav {
-	margin-left: -40px;
-}
-
-#main-cats {
-	margin-left: 180px !important;
+.navbar-default.shrink {
+	background: black;
+	.transition;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -933,6 +945,7 @@ nav.shrink ul.nav {
 
 .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
 	.transition;
+	.translate;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
@@ -983,12 +996,99 @@ nav.shrink ul.nav {
 	text-decoration: none;
 }
 
+.nav-button {
+	border-radius: 50%;
+	background: @pink;
+	color: black;
+	border: 0px;
+	padding: 6px 10px;
+	opacity: 0.5;
+	margin: 10px 0px 0px 0px;
+	z-index: 9999;
+	.transition;
+}
+
+#nav-button {
+	color: white;
+}
+
+.nav-button:hover {
+	opacity: 1;
+	.transition;
+}
+
+.nav-button:focus {
+	outline: none;
+	border: none;
+}
+
+.modal-nav {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: black;
+	z-index: 999;
+	display: none;
+}
+
+.modal-nav-header {
+	padding: 20px;
+	color: white;
+	font-size: 24px;
+}
+
+.modal-nav-close {
+	cursor: pointer;
+}
+
+.hmbrgr {
+	position: relative;
+	display: inline-block;
+
+	span {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		background: #fff;
+		display: inline-block;
+	}
+
+	&.expand {
+		span {
+			&:nth-child(1) {
+				transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+			}
+
+			&:nth-child(3) {
+				transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+ul.modal-nav-menu {
+	padding-top: 100px;
+}
+
+ul.modal-nav-menu li {
+	list-style-type: none;
+	padding: 20px;
+	font-size: 42px;
+}
+
 .jumbotron {
 	position: relative;
 	top: 0px;
 	padding: 0px;
 	margin: 0px;
-	background: url(images/greyfloral.png) fixed repeat;
+	background: url(images/greyfloral.png) repeat;
+	.translate;
 }
 
 .jumbotron h1 {
@@ -996,7 +1096,7 @@ nav.shrink ul.nav {
 }
 
 .jumbotron-in {
-	padding: 160px 0px 80px 0px;
+	padding: 140px 0px 120px 0px;
 	.pinkYellowFade;
 	width: 100%;
 	height: 100%;
@@ -1134,11 +1234,12 @@ nav.shrink ul.nav {
 }
 
 #sidebar {
-	background: @galwhite;
+	background: lighten(@pink, 25%);
 }
 
 #sidebar.sticky {
 	position: fixed;
+	.translate;
     top: 50px;
     right: 0px;
 }
@@ -1203,9 +1304,10 @@ ul.post-social li a:hover {
 }
 
 .single ul.single-social {
-	z-index: 9999;
+	z-index: 999;
 	bottom: 0px;
 	position: fixed;
+	.translate;
 	width: 100%;
 	padding: 10px;
 	left: 0px;
@@ -1270,7 +1372,7 @@ ul.post-social li a:hover {
 }*/
 
 #home-container .sex-dating {
-	background: url(images/symphony.png) fixed repeat !important;
+	background: url(images/symphony.png) repeat !important;
 	background-size: 99px 99px;
 }
 
@@ -1279,7 +1381,6 @@ ul.post-social li a:hover {
 	.bluePinkGradientFade;
 	width: 100%;
 	height: 100%;
-	background-position: fixed !important;
 }
 
 .sex-dating h1, .sex-dating h2 {
@@ -1294,19 +1395,21 @@ ul.post-social li a:hover {
 	display: table;
 }
 
-.post-grid h2 a {color: #77787a; font-size: 13px;}
+/*.post-grid h2 a {color: #77787a; font-size: 13px;}
 .post-grid .griditemleft {float: left; width: 278px; margin: 0 40px 40px 0;}
 .post-grid .griditemright {float: left; width: 278px;}
-.post-grid .postimage {margin: 0 0 10px 0;}
+.post-grid .postimage {margin: 0 0 10px 0;}*/
 
 .post-grid .entry {
 	display: table-cell;
 	height: 350px;
 }
 
-.post-grid .postimage {
-	height: 160px !important;
+.post-grid a.postimage {
+	height: 200px !important;
 	overflow: hidden;
+	display: block;
+	/*border-radius: 4px;*/
 }
 
 /* STYLE SECTION HOMEPAGE */
@@ -1419,9 +1522,11 @@ ul.post-social li a:hover {
 	height: 340px;
 }
 
-.darlings .postimage {
+.darlings a.postimage {
 	height: 200px !important;
 	overflow: hidden;
+	display: block;
+	/*border-radius: 4px;*/
 }
 
 .style h1, .style h2 {
@@ -1453,7 +1558,7 @@ ul.post-social li a:hover {
 .pop-in .post-grid .entry a:hover {color: darken(@pink, 20%);}
 
 .home-style {
-	background: url(images/greyfloral.png) fixed repeat !important;
+	background: url(images/greyfloral.png) repeat;
 }
 
 .home-style-in {
@@ -1482,9 +1587,7 @@ ul.post-social li a:hover {
 }
 
 .darlings {
-	padding: 20px;
 	.yellowGlowGradient;
-	background-position: fixed !important;
 }
 
 .darlings .brand {
@@ -1602,6 +1705,7 @@ article p {
 
 h2.stuckHead {
 	position: fixed;
+	.translate;
 	top: 51px;
 	z-index: 9;
 	margin: 0 auto;
@@ -1652,6 +1756,7 @@ h2.stuckHead {
 
 #footer-trigger {
 	position: fixed;
+	.translate;
 	display: block;
 	width: 100%;
 	left: 0px;
@@ -1672,6 +1777,7 @@ h2.stuckHead {
 
 footer {
 	position: fixed;
+	.translate;
 	left: 0px;
 	bottom: -50px;
 	width: 100%;
@@ -1795,6 +1901,7 @@ button.alm-load-more-btn.done:before {
 
 #email-signup {
 	position: fixed;
+	.translate;
 	top: 0;
 	left: 0;
 	background: rgba(0,0,0,0.8);
@@ -1810,7 +1917,7 @@ button.alm-load-more-btn.done:before {
 	height: 30px;
 	padding: 5px 10px;
 	color: white;
-	.font4;
+	.font2;
 	margin-right: 5px;
 }
 
@@ -1917,8 +2024,9 @@ time {
 		text-align: center;
 		margin: 20px auto !important;
 	}
+
 	.navbar>.container-fluid .navbar-brand {
-		margin-left: 0px;
+		margin-left: -90px;
 	}
 }
 
@@ -1934,6 +2042,11 @@ time {
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	blockquote {
+		border-left: 0px;
+		margin: 20px -20px;
+		padding: 20px 40px;
+	}
 	.jumbotron-in {
 		padding-top: 100px !important;
 		padding-bottom: 0px !important
@@ -1957,7 +2070,8 @@ time {
 		/*-webkit-text-stroke-width: 0px !important;
 		-webkit-text-fill-color: @pink !important;
 		color: @pink !important;*/
-		text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 0px 0px 0px black;
+		color: black;
+		/*text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 0px 0px 0px black;*/
 	}
 	.rsGalore .rsText p {
 		display: none;
@@ -1975,6 +2089,10 @@ time {
 	}
 	.rsGalore .rsText h1, .rsGalore .rsText h2, .rsGalore .rsText h3 {
 		
+	}
+
+	.rsGalore .rsGCaption {
+		font-size: 24px;
 	}
 
 	.home-sex-dating .excerpt {
@@ -2011,6 +2129,12 @@ time {
 	footer div.footer-icon {
 		display: none !important;
 	}
+	.jumbotron .rsGalore {
+		height: 260px !important;
+	}
+	.rsGalore .rsGCaption {
+		font-size: 18px;
+	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -2025,7 +2149,7 @@ time {
 		width: 140px;
 		height: 100px;
 		overflow: visible;
-		background: url(images/galore-logo-short-straight.png) no-repeat;
+		background: url(images/galore-logo-short-straight-white.png) no-repeat;
 		background-size: 140px auto;
 		opacity: 1;
 		z-index: 999;
@@ -2046,8 +2170,8 @@ time {
 		top: -12px;
 		.transition;
 	}
-	nav.shrink ul.nav {
-		margin-left: 20px;
+	nav.shrink {
+		background: rgba(0,0,0,0.5) !important;
 	}
 	.navbar-nav {
 		margin:40px auto;
@@ -2121,7 +2245,7 @@ time {
 		font-size: 18px;
 		line-height: 19px;
 		/*color: @pink;*/
-		color: white;
+		color: black;
 		padding: 10px;
 		margin: 0 !important;
 		/*text-shadow: 1px 1px 0px rgba(255,255,0,1);*/
@@ -2190,6 +2314,9 @@ time {
 /* RETINA STUFF */
 
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+	blockquote {
+		background: url(images/greyfloral_@2X.png);
+	}
 	#global-container.parties {
 		background-image: url(images/subtle_white_feathers_@2X.png);
 	}
@@ -2224,7 +2351,7 @@ time {
 		background-size: 150px 124px;
 	}
 	#home-container .sex-dating {
-		background: url(images/symphony_@2X.png) fixed repeat;
+		background: url(images/symphony_@2X.png) repeat;
 		background-size: 129px 129px !important;
 	}
 }
