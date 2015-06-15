@@ -1004,11 +1004,12 @@ nav.shrink .navbar-brand {
 	background: @pink;
 	color: black;
 	border: 0px;
-	padding: 6px 10px;
+	padding: 6px 9px;
 	opacity: 0.5;
 	margin: 10px 0px 0px 0px;
 	z-index: 9999;
 	width: 33px;
+	border: 1px solid white;
 	.transition;
 }
 
@@ -1184,6 +1185,10 @@ ul.modal-nav-menu li {
 
 .ps-container.ps-in-scrolling>.ps-scrollbar-x-rail { background-color: lighten(@pink, 80%); }
 .ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x { background-color: .heroGradientFade !important; }
+
+#latest-container {
+	background: white;
+}
 
 #glides {
   width: 100%; height: 100%;
@@ -1720,7 +1725,7 @@ h2.stuckHead {
 	left: 10px;
 	bottom: 10px;
 	border-radius: 50%;
-	border: 2px solid white;
+	border: 1px solid white;
 	background: @pink;
 	overflow: visible;
 	z-index: 1001;
@@ -1894,8 +1899,8 @@ button.alm-load-more-btn.done:before {
 }
 
 #site-search .form-control {
+	border: 1px solid white;
 	background: @pink;
-	border: 0px;
 	height: 30px;
 	padding: 5px 10px;
 	color: white;

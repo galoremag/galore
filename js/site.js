@@ -102,8 +102,8 @@
         });
 
 		$('.hmbrgr').hmbrgr({
-		  width     : 13,
-		  height    : 11,
+		  width     : 15,
+		  height    : 9,
 		  barHeight : 1,
 		  barColor  : '#fff'
 		});
