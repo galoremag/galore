@@ -13,7 +13,7 @@
 
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div id="content" class="col-sm-10 col-sm-offset-1">
+		<div id="content" class="col-sm-8 col-sm-12">
 
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -66,6 +66,27 @@
 					echo do_shortcode('[ajax_load_more orderby="date" category="pop" exclude="'.$wp_query->post->ID.'" button_label="More Shit"]');
 			    ?>
 			</ul>
+		</div>
+		<div id="sidebar-anchor"></div>
+		<div id="sidebar" class="sidebar col-md-4 pad40 hidden-sm">
+			<h2>Trending</h2>
+			<?php query_posts('category_name=pop&posts_per_page=4&offset=4'); ?>
+			<?php if ( have_posts() ): ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<li class="post">
+					<article>
+						<div class="thumbnail">
+							<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
+						</div>
+						<h4 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
+						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+					</article>
+				</li>
+			<?php endwhile; ?>
+
+			<?php else: ?>
+			<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>
