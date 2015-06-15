@@ -4,16 +4,25 @@
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<div id="modal-nav-button" class="nav-button">
+					<div id="modal-nav-button" class="nav-button pull-left">
 						<a id="nav-button" href="#" class="hmbrgr"></a>
+					</div>
+					<div id="site-search" class="pull-left hidden-xs">
+						<!-- <?php get_search_form(); ?> -->
+						<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
+							<label class="form-group">
+								<input type="search" class="form-control" placeholder="<?php echo esc_attr_x( 'Search...', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+							</label>
+							<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+						</form>
 					</div>
 					<!-- <button id="modal-nav-button" type="button" class="nav-button">
 					<i class="fa fa-bars"></i>
 					</button> -->
 					<a class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
 				</div>
-				<div id="main-cats">
-					<ul class="top-social navbar-right tab hidden-sm">
+				<div>
+					<ul class="top-social navbar-right tab hidden-xs">
 						<li><a id="signupButton" href="#"><i class="fa fa-inbox"></i></a></li>
 						<li><a href="https://www.facebook.com/galoremag" target="_blank"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="http://instagram.com/kittengalore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
@@ -41,6 +50,15 @@
 			<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
 			<li><a href="<?php bloginfo('url'); ?>/category/fitness" title="Fitness">Fitness</a></li>
 			<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a></li>
+			<div id="site-search" class="visible-xs">
+				<!-- <?php get_search_form(); ?> -->
+				<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
+					<label class="form-group">
+						<input type="search" class="form-control" placeholder="<?php echo esc_attr_x( 'Search...', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+					</label>
+					<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+				</form>
+			</div>
 			<!-- <li><a href="//tv.galoremag.com" target="_blank">TV</a></li> -->
 			<!-- <li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>

@@ -17,6 +17,10 @@
 
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
+			<div class="single-featured-image">
+				<div class="catlinks"><?php the_category(); ?></div>
+				<?php the_post_thumbnail('large'); ?>
+			</div>
 			<article>
 				<div id="social-links">
 					<ul id="post-social" class="post-social hidden-xs hidden-sm">

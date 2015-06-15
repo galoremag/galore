@@ -8,7 +8,7 @@
 	<div class="jumbotron-in">
 		<div class="container">
 			<div class="row-fluid">
-				<div class="col-md-10 col-md-offset-1">
+				<div class="hero-slider col-md-10 col-md-offset-1">
 					<?php echo do_shortcode( '[new_royalslider id="4"]' ); ?>
 				</div>
 			</div>
@@ -57,7 +57,7 @@
 		<div class="home-style-in nopad">
 			<div class="container-fluid nopad">
 				<div class="row-fluid">
-					<div class="col-sm-8 pad40">
+					<div class="col-sm-8 beauty-style">
 						<div class="row-fluid">
 							<div class="col-sm-12 nopad">
 								<h2>Style <span>+</span> Beauty <span><i class="fa fa-scissors"></i></span></h2>
@@ -137,7 +137,7 @@
 							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/beauty"><i class="fa fa-scissors"></i>&nbsp; Get Glam &nbsp;<i class="fa fa-scissors"></i></a></p>
 						</div>
 					</div>
-					<div class="col-md-4 nopad">
+					<div class="col-sm-4 nopad">
 						<div class="darlings pad40">
 							<div class="brand"></div>
 							<h1 class="text-center"><span>Darlings</span></h1>

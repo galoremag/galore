@@ -96,6 +96,7 @@ Version: 1.0.1
 
 .font1 {
 	font-family: 'proxima-nova-alt-condensed', sans-serif;
+	text-transform: uppercase;
 }
 
 .font2 {
@@ -487,8 +488,10 @@ blockquote {
 	background: url(images/greyfloral.png);
 }
 
-blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
+blockquote p, blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
 	-webkit-transform: rotate(-3deg);
+	.font1;
+	font-size: 1.5em !important;
 	/*color: @pink;*/
 }
 
@@ -1005,6 +1008,7 @@ nav.shrink .navbar-brand {
 	opacity: 0.5;
 	margin: 10px 0px 0px 0px;
 	z-index: 9999;
+	width: 33px;
 	.transition;
 }
 
@@ -1029,6 +1033,7 @@ nav.shrink .navbar-brand {
 	background: black;
 	z-index: 999;
 	display: none;
+	overflow: scroll;
 }
 
 .modal-nav-header {
@@ -1220,7 +1225,7 @@ ul.modal-nav-menu li {
 }
 
 #content {
-	padding: 10px 20px 90px 20px;
+	padding: 20px 20px 90px 20px;
 	/*background: ghostwhite;*/
 	/*background: lavenderblush;*/
 	background: white;
@@ -1304,7 +1309,7 @@ ul.post-social li a:hover {
 }
 
 .single ul.single-social {
-	z-index: 999;
+	z-index: 1002;
 	bottom: 0px;
 	position: fixed;
 	.translate;
@@ -1365,6 +1370,12 @@ ul.post-social li a:hover {
 	width: 60%;
 	text-align: center;
 	margin: 20px auto !important;
+}
+
+.single .catlinks {
+	top: 35px;
+	left: auto;
+	padding: 5px 10px;
 }
 
 /*.single.pop {
@@ -1566,24 +1577,8 @@ ul.post-social li a:hover {
 	.greyGradientFade;
 }
 
-/*.beauty {
-	.yellowGlowGradient;
-}
-
-.category-sex-dating {
-	padding: 20px 0px 40px 0px;
-	.greyGradientFade;
-}
-
-.beauty-in {
-	padding: 20px 0px 40px 0px;
-	.yellowGlowGradient;
-}*/
-
-.beauty h1, .beauty h2 {
-	/*color: @pink;*/
-	color: black;
-	/*text-shadow: 1px 1px 0px rgba(255,255,0,1);*/
+.beauty-style {
+	padding: 40px;
 }
 
 .darlings {
@@ -1721,13 +1716,14 @@ h2.stuckHead {
 .footbut {
 	width: 32px;
 	height: 32px;
-	position: absolute;
+	position: fixed;
 	left: 10px;
 	bottom: 10px;
 	border-radius: 50%;
 	border: 2px solid white;
 	background: @pink;
 	overflow: visible;
+	z-index: 1001;
 	.transition;
 }
 
@@ -1754,27 +1750,6 @@ h2.stuckHead {
 	margin: -3px 0px 0px -3px;
 }
 
-#footer-trigger {
-	position: fixed;
-	.translate;
-	display: block;
-	width: 100%;
-	left: 0px;
-	height: 50px;
-	bottom: 0px;
-	display: block;
-	z-index: 99;
-}
-
-#footer-trigger:hover footer {
-	bottom: 0px;
-	.transition;
-}
-
-.single #footer-trigger {
-	display: none !important;
-}
-
 footer {
 	position: fixed;
 	.translate;
@@ -1783,29 +1758,17 @@ footer {
 	width: 100%;
 	height: 50px;
 	overflow: hidden;
-	padding: 10px;
+	padding: 10px 10px 10px 40px;
 	.footerGradient;
 	color: white;
 	.font4;
 	.transition;
-	z-index: 99;
+	z-index: 1000;
 }
 
-footer .brand-white-sm {
-	-webkit-transform: scale(0.6);
-	-moz-transform: scale(0.6);
-	-o-transform: scale(0.6);
-	transform: scale(0.6);
-	-webkit-transform-origin: top center;
-	-moz-transform-origin: top center;
-	-o-transform-origin: top center;
-	transform-origin: top center;
-	display: block;
-	width:35px;
-	height: 80px;
-	background: url(images/icon-white-sm.png) no-repeat;
-	background-size: 35px 80px;
-	margin: 0px 5px 0px -20px;
+footer.footerOn {
+	bottom: 0px;
+	.transition;
 }
 
 .menu-footer-container, .menu-footer-menu-container {
@@ -1820,7 +1783,7 @@ ul#menu-footer-menu, ul#menu-footer {
 
 ul#menu-footer-menu li, ul#menu-footer li {
 	float: left;
-	margin: 0px 10px;
+	margin: 0px 4px;
 }
 
 ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
@@ -1899,6 +1862,22 @@ button.alm-load-more-btn.done:before {
 
 /* Newsletter Signup */
 
+::-webkit-input-placeholder {
+   color: white !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white !important;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white !important;  
+}
+
+:-ms-input-placeholder {  
+   color: white !important;  
+}
+
 #email-signup {
 	position: fixed;
 	.translate;
@@ -1911,21 +1890,32 @@ button.alm-load-more-btn.done:before {
 	display: none;
 }
 
+#site-search .form-control placeholder {
+
+}
+
 #site-search .form-control {
-	.greyGradientFade;
+	background: @pink;
 	border: 0px;
 	height: 30px;
 	padding: 5px 10px;
 	color: white;
 	.font2;
-	margin-right: 5px;
+	margin: 10px 15px;
+	border-radius: 20px;
+	opacity: 0.5;
+}
+
+#site-search .form-control:hover, #site-search .form-control:focus {
+	background: @pink;
+	opacity: 1;
 }
 
 .search-submit {
-	border-radius: 5px;
+	border-radius: 50%;
 	border: 0px;
 	background: @pink;
-	box-shadow: 1px 1px 0px rgba(255,255,0,1);
+	box-shadow: 1px 1px 5px rgba(255,255,0,0.33);
 	opacity: 0.9;
 	color: white;
 	.transition;
@@ -1934,6 +1924,7 @@ button.alm-load-more-btn.done:before {
 	text-transform: uppercase;
 	height: 30px;
 	padding: 5px 10px;
+	display: none;
 }
 
 .search-submit:hover {
@@ -2037,11 +2028,24 @@ time {
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-
+	ul.post-social {
+		width: 100%;
+	}
+	ul.post-social li:first-child {
+		margin-right: 0px !important;
+	}
+	ul.post-social h4 {
+		float: right;
+		text-align: right;
+		width: 100%;
+	}
 }
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	.nopadright {
+		padding: 0px;
+	}
 	blockquote {
 		border-left: 0px;
 		margin: 20px -20px;
@@ -2049,16 +2053,16 @@ time {
 	}
 	.jumbotron-in {
 		padding-top: 100px !important;
-		padding-bottom: 0px !important
+		padding-bottom: 20px !important
 	}
 	.jumbotron-in .container {
-		padding: 0px !important;
+		padding: auto 0px !important;
 	}
 	.jumbotron-in .container  .col-sm-10 {
 		padding: 0px !important;
 	}
 	.jumbotron .rsGalore {
-		height: 242px !important;
+		height: 222px !important;
 		/*-webkit-transform: rotate(0deg);
 		transform: rotate(0deg);*/
 		border: 0px;
@@ -2109,6 +2113,17 @@ time {
 		transform-origin: top left;
 		top: -10px;
 	}
+	ul.post-social {
+		width: 100%;
+	}
+	ul.post-social li:first-child {
+		margin-right: 0px !important;
+	}
+	ul.post-social h4 {
+		float: right;
+		text-align: right;
+		width: 100%;
+	}
 	footer div.footer-icon {
 		display: none !important;
 	}
@@ -2117,6 +2132,9 @@ time {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
 /* Styles */
+	.nopadright {
+		padding: 0px;
+	}
 	.nav-button {
 		width: 33px;
 		padding: 8px 10px 5px 10px;
@@ -2124,10 +2142,24 @@ time {
 	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
 		display: none;
 	}
+	.hero-slider {
+		padding: 0px;
+	}
 	.home-sex-dating .excerpt {
 		display: none;
 	}
 	figure.hammy-responsive {
+		width: 100%;
+	}
+	ul.post-social {
+		width: 100%;
+	}
+	ul.post-social li:first-child {
+		margin-right: 0px !important;
+	}
+	ul.post-social h4 {
+		float: right;
+		text-align: right;
 		width: 100%;
 	}
 	footer div.footer-icon {
@@ -2149,7 +2181,7 @@ time {
 
 	.navbar-brand {
 		position: absolute;
-		top: -16px;
+		top: 15px;
 		width: 140px;
 		height: 100px;
 		overflow: visible;
@@ -2177,27 +2209,23 @@ time {
 	/*nav.shrink {
 		background: rgba(0,0,0,0.5) !important;
 	}*/
-	.navbar-nav {
-		margin:40px auto;
-	}
-	.navbar-toggle {
-		float: left;
-		left:10px;
-	}
-
-	.jumbotron h1 {
-		font-size: 40px;
-	}
-
 	/*.rsGalore .rsText h1, .rsGalore .rsText h2, .rsGalore .rsText h3 {
 		margin: 0px !important;
 	}*/
 
-	#main-cats {
-		text-align: center;
-		margin: 0px !important;
-		border: 0px !important;
-		.transition;
+	/*.pad20 {padding: 4% !important;}
+	.pad40 {padding: 2% !important;}*/
+	.nav-button {
+		width: 33px;
+		padding: 8px 10px 5px 10px;
+		margin: 8px 0 0 8px;
+	}
+	.modal-nav-menu {
+		padding-top: 60px;
+	}
+	ul.modal-nav-menu li {
+		padding: 15px;
+		font-size: 24px;
 	}
 	.bp-touchSwipe,
 	.bp-touchSwipe .bp-touchSwipe_inner,
@@ -2259,6 +2287,10 @@ time {
 		display: none;
 	}
 
+	.beauty-style {
+		padding: 20px;
+	}
+
 	#cover-title {
 		left: 20px;
 	}
@@ -2287,15 +2319,8 @@ time {
 	.single ul.single-social .social-title {
 		display: none;
 	}
-	#footer-trigger {
-		display: block !important;
-	}
 	footer {
-		bottom: -100px;
-		height: 100px;
-	}
-	footer div.footer-icon {
-		display: none !important;
+		padding-left: 25px;
 	}
 	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
 		display: none !important;
@@ -2305,10 +2330,6 @@ time {
 	}
 	.thumbnail {
 		width: 100%;
-	}
-	div#site-search {
-		float: left !important;
-		margin: 10px 0;
 	}
 	.email-signup-dialog {
 		margin-top: 20px;

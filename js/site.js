@@ -86,20 +86,6 @@
 		  $('.nav-collapse').css('height', '100%');
 		});
 
-		/////////////////////
-		// Footer Opener //
-		/////////////////////
-
-		$('#footer-open').click(function(event) {
-			event.preventDefault();
-			$('footer').css('bottom: 0px;');
-		});
-
-		$('#footer-close').click(function(event) {
-			event.preventDefault();
-			$('footer').css('bottom: -50px;');
-		});
-
 		$('#glides').perfectScrollbar();
 
 		// $('#modal-nav-button').click(function() {
@@ -122,8 +108,18 @@
 		  barColor  : '#fff'
 		});
 
+		// Nav Button
+
 		$('#nav-button').on('click', function(event) {        
              $('.modal-nav').fadeToggle('show');
+        });
+
+        /////////////////////
+		// Footer Opener //
+		/////////////////////
+
+		$('#footer-open').on('click', function(event) {
+            $('#footer').toggleClass('footerOn');
         });
 
 		// Recommendations on scroll
