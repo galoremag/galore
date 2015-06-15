@@ -66,7 +66,7 @@ Description: This part is optional, but helpful for describing the Post Template
 		</div>
 		<div id="sidebar-anchor"></div>
 		<div id="sidebar" class="sidebar col-md-4 pad40 hidden-sm">
-			<h2>Trending</h2>
+			<h2>Related</h2>
 			<?php query_posts('category_name=nyfw&posts_per_page=4&offset=4'); ?>
 			<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>

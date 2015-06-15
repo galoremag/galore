@@ -63,7 +63,7 @@
 		</div>
 		<div id="sidebar-anchor"></div>
 		<div id="sidebar" class="sidebar col-md-4 pad40 hidden-sm">
-			<h2>Trending</h2>
+			<h2>Related</h2>
 			<?php query_posts('post_type=post&posts_per_page=4&offset=4'); ?>
 			<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
