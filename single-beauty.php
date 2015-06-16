@@ -15,11 +15,11 @@
 		<div id="content" class="col-md-8 col-sm-12 container-fixed">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article>
-				<h1 class="font2"><?php the_title(); ?></h1>
 				<div class="single-featured-image">
 					<div class="catlinks"><?php the_category(); ?></div>
 					<?php the_post_thumbnail('large'); ?>
 				</div>
+				<h1><?php the_title(); ?></h1>
 				<div id="social-links">
 					<ul id="post-social" class="post-social hidden-xs hidden-sm">
 						<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
@@ -48,7 +48,7 @@
 			</article>
 			<?php endwhile; ?>
 			<hr>
-			<h2 class="text-center">Gimme <span>More</span> Beauty <span><i class="fa fa-bomb"></i></span></h2>
+			<h2 class="text-center">Gimme More <i class="fa fa-bomb"></i> <span>Beauty</span></h2>
 			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
 				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'date' ) ); ?>

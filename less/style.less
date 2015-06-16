@@ -500,9 +500,18 @@ blockquote p, blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
 	margin: 0 auto;
 }
 
-.btn-bp {.bluePinkGradient;opacity: 0.7;.font2;}
+.btn-bp {
+	background: @pink;
+	color: white;
+	opacity: 0.7;
+	.font2;
+}
 
-.btn-bp:hover {.bluePinkGradient;opacity: 1;.font2;}
+.btn-bp:hover {
+	opacity: 1;
+	color: white;
+	.font2;
+}
 
 .opacity07 {
 	opacity: 0.7 !important;
@@ -566,7 +575,7 @@ h1 span, h2 span, h3 span {
 	/*-webkit-text-fill-color: white;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: @pink;*/
-	color: black;
+	color: @pink;
 	/*text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 0px 0px 0px black;*/
 }
 
@@ -1004,7 +1013,7 @@ nav.shrink .navbar-brand {
 	background: @pink;
 	color: black;
 	border: 0px;
-	padding: 5px 8px;
+	padding: 5px 10px 5px 8px;
 	opacity: 0.5;
 	margin: 10px 0px 0px 0px;
 	z-index: 9999;
@@ -1381,11 +1390,10 @@ ul.post-social li a:hover {
 }
 
 .single div.catlinks {
-	top: 35px;
 	padding: 5px 10px;
 	background: @salmon;
 	color: white;
-	top: 150px;
+	top: 30px;
 	left: 10px;
 	z-index: 9;
 }
@@ -1991,6 +1999,7 @@ button.alm-load-more-btn.done:before {
 
 .email-signup-header .close {
 	margin: 30px 0px 0px 0px;
+	color: white;
 }
 
 .email-signup-body button {
@@ -2069,6 +2078,11 @@ time {
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	h1 {
+		font-size: 32px;
+		letter-spacing: 0px;
+		line-height: 1;
+	}
 	.nopadright {
 		padding: 0px;
 	}
@@ -2164,7 +2178,7 @@ time {
 	.nav-button {
 		width: 32px;
 		height: 32px;
-		padding: 8px 10px 5px 10px;
+		padding: 6px 10px 5px 8px;;
 	}
 	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
 		display: none;
@@ -2245,7 +2259,7 @@ time {
 	.nav-button {
 		width: 32px;
 		height: 32px;
-		padding: 8px 10px 5px 10px;
+		padding: 6px 10px 5px 8px;;
 		margin: 8px 0 0 8px;
 	}
 	ul.modal-nav-menu {
