@@ -60,7 +60,7 @@
 					<div class="col-sm-8 beauty-style">
 						<div class="row-fluid">
 							<div class="col-sm-12 nopad">
-								<h2>Style <span>+</span> Beauty <span><i class="fa fa-scissors"></i></span></h2>
+								<h2>Style + Beauty <i class="fa fa-scissors"></i></h2>
 							</div>
 							<div class="col-sm-12 spacer20"></div>
 						</div>
@@ -140,7 +140,7 @@
 					<div class="col-sm-4 nopad">
 						<div class="darlings pad40">
 							<div class="brand"></div>
-							<h1 class="text-center"><span>Darlings</span></h1>
+							<h1 class="text-center">Darlings</h1>
 							<?php
 							$args = array( 'tag' => 'darling', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC' );
 
@@ -172,7 +172,7 @@
 			<div class="container-fluid">
 				<div class="row-fluid">
 					<div class="col-sm-10 col-sm-offset-1">
-						<h2><span>Guilty</span> Pleasure <span><i class="fa fa-star"></i></span></h2>
+						<h2>Guilty Pleasure <i class="fa fa-star"></i></h2>
 						<h3>Best of Pop Culture</h3>
 						<div class="spacer20"></div>
 						<div class="row-fluid post-grid">
@@ -271,7 +271,7 @@
 			<div class="container-fluid">
 				<div class="row-fluid">
 					<div class="col-sm-10 col-sm-offset-1">
-						<h2>Sex <span>+</span> Dating <span><i class="fa fa-heart"></i></span></h2>
+						<h2>Sex + Dating <i class="fa fa-heart"></i></h2>
 					</div>
 				</div>
 				<div class="row-fluid">
@@ -346,7 +346,7 @@
 	<div class="container-fluid nopad">
 		<div class="row-fluid">
 			<div id="content" class="col-sm-10 col-sm-offset-1">
-				<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> More <span>Everything</span> <i class="fa fa-diamond"></i></h2>
+				<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> More Everything <i class="fa fa-diamond"></i></h2>
 				<hr>
 <!-- 				<ol>
 				<?php query_posts($query_string . 'posts_per_page=4&offset=24'); ?>
