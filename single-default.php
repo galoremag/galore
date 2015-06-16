@@ -10,22 +10,22 @@
 */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-<div class="container-fluid">
+<div class="container-fluid nopad">
 	<div class="row-fluid">
-		<div id="content" class="col-md-8 col-sm-12">
+		<div id="content" class="col-md-8 col-sm-12 container-fixed">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article>
+				<h1 class="font2"><?php the_title(); ?></h1>
+				<div class="single-featured-image">
+					<div class="catlinks"><?php the_category(); ?></div>
+					<?php the_post_thumbnail('large'); ?>
+				</div>
 				<div id="social-links">
 					<ul id="post-social" class="post-social hidden-xs hidden-sm">
 						<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
 					</ul>
 				</div>
-				<div class="single-featured-image">
-					<div class="catlinks"><?php the_category(); ?></div>
-					<?php the_post_thumbnail('large'); ?>
-				</div>
-				<h2><?php the_title(); ?></h2>
 				
 				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> By <?php the_author_posts_link(); ?></p>
 				<?php edit_post_link('EDIT. THIS. PIECE.', '<p>', '</p>'); ?>

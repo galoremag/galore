@@ -1004,11 +1004,12 @@ nav.shrink .navbar-brand {
 	background: @pink;
 	color: black;
 	border: 0px;
-	padding: 6px 9px;
+	padding: 5px 8px;
 	opacity: 0.5;
 	margin: 10px 0px 0px 0px;
 	z-index: 9999;
-	width: 33px;
+	width: 32px;
+	height: 32px;
 	border: 1px solid white;
 	.transition;
 }
@@ -1080,6 +1081,8 @@ nav.shrink .navbar-brand {
 
 ul.modal-nav-menu {
 	padding-top: 100px;
+	z-index: 1000;
+	position: relative;
 }
 
 ul.modal-nav-menu li {
@@ -1377,10 +1380,24 @@ ul.post-social li a:hover {
 	margin: 20px auto !important;
 }
 
-.single .catlinks {
+.single div.catlinks {
 	top: 35px;
-	left: auto;
 	padding: 5px 10px;
+	background: @salmon;
+	color: white;
+	top: 150px;
+	left: 10px;
+	z-index: 9;
+}
+
+.single div.catlinks li {
+	position: relative;
+	float: left;
+	margin-right: 10px
+}
+
+.single div.catlinks li:last-child {
+	margin: 0;
 }
 
 /*.single.pop {
@@ -1951,11 +1968,11 @@ button.alm-load-more-btn.done:before {
 }
 
 .email-signup-content {
-	background: @pink;
+	background: black;
 	color: white;
 	padding: 0 40px 20px 40px;
 	/*box-shadow: 1px 1px 0px rgba(255,255,0,1);*/
-	box-shadow: 0px 0px 15px rgba(250,100,100,1);
+	box-shadow: 0px 0px 20px rgba(250,100,100,0.3);
 	border-radius: 7px;
 }
 
@@ -1981,8 +1998,12 @@ button.alm-load-more-btn.done:before {
 }
 
 .email-signup .form-control {
-	.greyGradientFade;
+	background: @pink;
 	color: @pink !important;
+}
+
+.email-signup .form-control:hover, .email-signup .form-control:focus {
+	background: darken(@pink, 15%);
 }
 
 time {
@@ -2141,7 +2162,8 @@ time {
 		padding: 0px;
 	}
 	.nav-button {
-		width: 33px;
+		width: 32px;
+		height: 32px;
 		padding: 8px 10px 5px 10px;
 	}
 	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
@@ -2221,11 +2243,12 @@ time {
 	/*.pad20 {padding: 4% !important;}
 	.pad40 {padding: 2% !important;}*/
 	.nav-button {
-		width: 33px;
+		width: 32px;
+		height: 32px;
 		padding: 8px 10px 5px 10px;
 		margin: 8px 0 0 8px;
 	}
-	.modal-nav-menu {
+	ul.modal-nav-menu {
 		padding-top: 60px;
 	}
 	ul.modal-nav-menu li {

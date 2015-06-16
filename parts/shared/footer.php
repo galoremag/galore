@@ -24,7 +24,7 @@
 	            <div class="email-signup-body">
 	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
 	                <p class="text-center">
-	                    Get Galore updates right in your inbox.
+	                    Get updates right in your inbox.
 	                </p>
 	                <h1 class="text-center">Get On The List</h1>
 	                <form action="http://galoremag.createsend.com/t/i/s/tjcj/" method="post">
