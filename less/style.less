@@ -500,6 +500,18 @@ blockquote p, blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
 	margin: 0 auto;
 }
 
+.text-column-2 {
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+
+.text-column-3 {
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+
 .btn-bp {
 	background: @pink;
 	color: white;
@@ -530,9 +542,24 @@ blockquote p, blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
 	border-radius: 0px;
 }
 
-.thumbnail a>img {
-	/*border-radius: 4px;*/
+.photoswipe_gallery figure figcaption {
+	display: none;
 }
+
+.pswp__caption__center {
+	max-width: 100%;
+	margin: 0;
+}
+
+/*.half-width {
+	width: 50%;
+	margin: 10px;
+}
+
+.one-third-width {
+	width: 30%;
+	margin: 10px;
+}*/
 
 hr {
 	border-top: 1px dotted fade(@pink, 30%);
@@ -1360,8 +1387,9 @@ ul.post-social li a:hover {
 }
 
 .single img, .wp-caption {
-	width: 100% !important;
-	height: auto;
+	margin: 5px auto;
+	/*width: 100% !important;
+	height: auto;*/
 }
 
 .single ul.single-social li a h4 {
