@@ -22,7 +22,7 @@
 			<h2 class="text-center">The Latest in <span><?php echo single_cat_title( '', false ); ?></span> <i class="fa fa-heartbeat"></i></h2>
 			<hr>
 			<ol>
-			<?php query_posts('category_name=fitness&posts_per_page=4&offset=4'); ?>
+			<?php query_posts('category_name=fitness&posts_per_page=4&offset=4&ignore_sticky_posts=4'); ?>
 			<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<li class="post">
@@ -70,6 +70,7 @@
 			    $args = array(
 	                'post_type'    => 'post',
 	                'category_name'=> 'fitness',
+	                'ignore_sticky_posts'=> 'true',
 	                'numberposts'  => 4,
 	                'orderby'      => 'meta_value', 
 	                'meta_key'     => 'post_views_count',
