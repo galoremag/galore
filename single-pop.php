@@ -71,7 +71,7 @@
 			    $args = array(
 			                'post_type'    => 'post',
 			                'category'     => 'pop',
-			                'numberposts'  => 1,
+			                'numberposts'  => 4,
 			                'orderby'      => 'meta_value', 
 			                'meta_key'     => 'post_views_count',
 			                'order'        => 'DESC',
