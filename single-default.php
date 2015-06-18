@@ -65,7 +65,7 @@
 		</div>
 		<div id="sidebar-anchor"></div>
 		<div id="sidebar" class="sidebar col-md-4 pad40 hidden-sm">
-			<h2>Related</h2>
+			<h2>Trending</h2>
 			<?php
 			$args = array(  'numberposts'  => 4,  /* get 4 posts, or set -1 for all */
 			                'orderby'      => 'meta_value_num',
