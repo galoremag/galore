@@ -70,7 +70,7 @@
 			<?php
 			    $args = array(
 			                'post_type'    => 'post',
-			                'category'     => 'nyfw',
+			                'category_name'     => 'nyfw',
 			                'numberposts'  => 4,
 			                'orderby'      => 'meta_value', 
 			                'meta_key'     => 'post_views_count',

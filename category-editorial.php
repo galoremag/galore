@@ -69,7 +69,7 @@
 			<?php
 			    $args = array(
 			                'post_type'    => 'post',
-			                'category'     => 'editorial',
+			                'category_name'     => 'editorial',
 			                'numberposts'  => 4,
 			                'orderby'      => 'meta_value', 
 			                'meta_key'     => 'post_views_count',
