@@ -68,14 +68,14 @@
 			<h2>Trending</h2>
 			<?php
 			    $args = array(
-			                'post_type'    => 'post',
-			                'category_name'     => 'style',
-			                'numberposts'  => 4,
-			                'orderby'      => 'meta_value', 
-			                'meta_key'     => 'post_views_count',
-			                'order'        => 'DESC',
-			                'post_status'  => 'publish'
-			            ); 
+	                'post_type'    => 'post',
+	                // 'category_name'=> 'style',
+	                'numberposts'  => 4,
+	                'orderby'      => 'meta_value', 
+	                'meta_key'     => 'post_views_count',
+	                'order'        => 'DESC',
+	                'post_status'  => 'publish'
+	            ); 
 			    $ranking = 0;
 			?>
 			<?php query_posts($args); ?>
