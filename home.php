@@ -92,7 +92,7 @@
 							//Show the left hand side column
 							if($counter == 1) :
 							?>
-							<div class="col-md-6">
+							<div class="col-md-6 pull-left">
 								<div class="catlinks"><?php the_category(); ?></div>
 								<div class="thumbnail nopad">
 									<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
