@@ -25,6 +25,22 @@
 			}
 		});
 
+		function sticky_relocate() {
+			var window_height = window.innerHeight;
+		    var window_top = $(window).scrollTop();
+		    var div_top = $('#sidebar-anchor').offset().top;
+		    if (window_top > (div_top + 240)) {
+		        $('#sidebar').addClass('sticky').css({'height': window_height, 'overflow':'scroll'});
+		    } else {
+		        $('#sidebar').removeClass('sticky');
+		    }
+		}
+
+		$(function () {
+		    $(window).scroll(sticky_relocate);
+		    sticky_relocate();
+		});
+
 		/////////////////////
 		// Signup Modal  //
 		/////////////////////
@@ -70,21 +86,41 @@
 		  $('.nav-collapse').css('height', '100%');
 		});
 
-		/////////////////////
+		$('#glides').perfectScrollbar();
+
+		// $('#modal-nav-button').click(function() {
+		// 	$('.modal-nav').fadeIn(200);
+		// });
+
+		// $('.modal-nav-close').click(function() {
+		// 	$('.modal-nav').fadeOut(200);
+		// });
+
+		$("#newsletterClose").click(function() {
+            $("#email-signup").fadeOut(500);
+            $.cookie('newsletter', 14);
+        });
+
+		$('.hmbrgr').hmbrgr({
+		  width     : 14,
+		  height    : 10,
+		  barHeight : 1,
+		  barColor  : '#fff'
+		});
+
+		// Nav Button
+
+		$('#nav-button').on('click', function(event) {        
+             $('.modal-nav').fadeToggle('show');
+        });
+
+        /////////////////////
 		// Footer Opener //
 		/////////////////////
 
-		$('#footer-open').click(function(event) {
-			event.preventDefault();
-			$('footer').css('bottom: 0px;');
-		});
-
-		$('#footer-close').click(function(event) {
-			event.preventDefault();
-			$('footer').css('bottom: -50px;');
-		});
-
-		$('#glides').perfectScrollbar();
+		$('#footer-open').on('click', function(event) {
+            $('#footer').toggleClass('footerOn');
+        });
 
 		// Recommendations on scroll
 	    // var isBusy = false,

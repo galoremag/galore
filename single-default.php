@@ -10,18 +10,22 @@
 */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-<div class="container-fluid">
+<div class="container-fluid nopad">
 	<div class="row-fluid">
-		<div id="content" class="col-sm-10 col-sm-offset-1">
+		<div id="content" class="col-md-8 col-sm-12 container-fixed">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article>
+				<div class="single-featured-image">
+					<div class="catlinks"><?php the_category(); ?></div>
+					<?php the_post_thumbnail('large'); ?>
+				</div>
+				<h1><?php the_title(); ?></h1>
 				<div id="social-links">
 					<ul id="post-social" class="post-social hidden-xs hidden-sm">
 						<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
 					</ul>
 				</div>
-				<h2><?php the_title(); ?></h2>
 				
 				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> By <?php the_author_posts_link(); ?></p>
 				<?php edit_post_link('EDIT. THIS. PIECE.', '<p>', '</p>'); ?>
@@ -44,6 +48,7 @@
 			</article>
 			<?php endwhile; ?>
 			<hr>
+			<h2 class="text-center">Gimme <span>More</span></h2>
 			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
 				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'date' ) ); ?>
@@ -56,6 +61,27 @@
 					echo do_shortcode('[ajax_load_more orderby="date" exclude="'.$wp_query->post->ID.'" button_label="More Beauty Shit"]');
 			    ?>
 			</ul>
+		</div>
+		<div id="sidebar-anchor"></div>
+		<div id="sidebar" class="sidebar col-md-4 pad40 hidden-sm">
+			<h2>Related</h2>
+			<?php query_posts('post_type=post&posts_per_page=4&offset=4'); ?>
+			<?php if ( have_posts() ): ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<li class="post">
+					<article>
+						<div class="thumbnail">
+							<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
+						</div>
+						<h4 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
+						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+					</article>
+				</li>
+			<?php endwhile; ?>
+
+			<?php else: ?>
+			<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>
