@@ -881,7 +881,7 @@ body {
 
 .brand {
 	width: 180px;
-	height: 215px;
+	height: 132px;
 	overflow: visible;
 	background: url(images/galore-logo.png) no-repeat;
 	background-size: 180px auto;
@@ -890,7 +890,7 @@ body {
 
 .brand-white {
 	width: 180px;
-	height: 215px;
+	height: 132px;
 	overflow: visible;
 	background: url(images/galore-logo-white.png) no-repeat;
 	background-size: 180px auto;
@@ -938,17 +938,21 @@ ul.top-social li a:hover {color:@pink;}
 
 .navbar-brand {
 	position: absolute;
-	top: 0px;
+	top: 10px;
 	width: 180px;
-	height: 215px;
+	height: 132px;
 	overflow: visible;
-	background: url(images/galore-logo-white.png) no-repeat;
+	background: url(images/galore-logo-short-straight-white.png) no-repeat;
 	background-size: 180px auto;
 	opacity: 1;
 	z-index: 999;
 	left: 50%;
 	margin-left: -180px;
 	.transition;
+	-webkit-transform: rotate(-12deg);
+	-moz-transform: rotate(-12deg);
+	-o-transform: rotate(-12deg);
+	transform: rotate(-12deg);
 }
 
 .navbar-brand span {
@@ -958,12 +962,12 @@ ul.top-social li a:hover {color:@pink;}
 nav.shrink .navbar-brand {
 	background: url(images/galore-logo-short-straight-white.png) no-repeat;
 	background-size: 180px auto;
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	-o-transform: scale(0.5);
-	transform: scale(0.5);
+	-webkit-transform: scale(0.5) rotate(0deg);
+	-moz-transform: scale(0.5) rotate(0deg);
+	-o-transform: scale(0.5) rotate(0deg);
+	transform: scale(0.5) rotate(0deg);
 	.transition;
-	top: -50px;
+	top: -28px;
 }
 
 .navbar-default.shrink {
