@@ -75,7 +75,7 @@
 			<?php
 			    $args = array(
 	                'post_type'    => 'post',
-	                // 'category_name'=> 'tv',
+	                'category_name'=> 'tv',
 	                'numberposts'  => 4,
 	                'orderby'      => 'meta_value', 
 	                'meta_key'     => 'post_views_count',

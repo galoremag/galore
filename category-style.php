@@ -69,7 +69,7 @@
 			<?php
 			    $args = array(
 	                'post_type'    => 'post',
-	                // 'category_name'=> 'style',
+	                'category_name'=> 'style',
 	                'numberposts'  => 4,
 	                'orderby'      => 'meta_value', 
 	                'meta_key'     => 'post_views_count',
