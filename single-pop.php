@@ -68,18 +68,18 @@
 		<div id="sidebar" class="sidebar col-md-4 pad40 hidden-sm">
 			<h2>Trending</h2>
 			<?php
-			$args = array(  'numberposts'  => 4,  /* get 4 posts, or set -1 for all */
-			                'orderby'      => 'meta_value_num',
+			    $args = array(
+			                'post_type'    => 'post',
+			                'category'     => 'pop',
+			                'numberposts'  => 1,
+			                'orderby'      => 'meta_value', 
 			                'meta_key'     => 'post_views_count',
 			                'order'        => 'DESC',
-			                'post_type'    => 'post',
 			                'post_status'  => 'publish'
-			            );
-			$myposts = get_posts( $args );
-			foreach( $myposts as $mypost ) {
-			    /* do things here */
-			}
+			            ); 
+			    $ranking = 0;
 			?>
+			<?php query_posts($args); ?>
 			<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<li class="post">
