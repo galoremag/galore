@@ -15,7 +15,6 @@
 		<div id="content" class="col-md-8 col-sm-12 container-fixed">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article>
-				<?php setPostViews(get_the_ID()); ?>
 				<div class="single-featured-image">
 					<div class="catlinks"><?php the_category(); ?></div>
 					<?php the_post_thumbnail('large'); ?>
