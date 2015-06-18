@@ -69,7 +69,7 @@
 			<?php
 			    $args = array(
 			                'post_type'    => 'post',
-			                'category'     => 'parties',
+			                'category_name'     => 'parties',
 			                'numberposts'  => 4,
 			                'orderby'      => 'meta_value', 
 			                'meta_key'     => 'post_views_count',
