@@ -14,7 +14,7 @@
 <div class="container-fluid nopad">
 	<div class="row-fluid">
 		<div class="col-md-8 col-md-offset-2 container-fixed nopad">
-		<?php echo do_shortcode( '[new_royalslider id="6"]' ); ?>
+		<?php echo do_shortcode( '[new_royalslider id="13"]' ); ?>
 		</div>
 	</div>
 	<div class="row-fluid">
@@ -22,7 +22,7 @@
 			<h2 class="text-center">The Latest in <span><?php echo single_cat_title( '', false ); ?></span> <i class="fa fa-star"></i></h2>
 			<hr>
 			<ol>
-			<?php query_posts('category_name=parties&posts_per_page=4&offset=4&ignore_sticky_posts=4'); ?>
+			<?php query_posts('category_name=parties&posts_per_page=4&offset=3&ignore_sticky_posts=4'); ?>
 			<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<li class="post">
