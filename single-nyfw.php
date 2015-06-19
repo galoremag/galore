@@ -65,7 +65,7 @@
 			</ul>
 		</div>
 		<div id="sidebar-anchor"></div>
-		<div id="sidebar" class="sidebar col-md-4 pad40 hidden-sm">
+		<div id="sidebar" class="sidebar col-md-4 hidden-sm">
 			<h2>Trending</h2>
 			<?php
 			    $args = array(
