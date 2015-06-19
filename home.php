@@ -92,7 +92,7 @@
 							//Show the left hand side column
 							if($counter == 1) :
 							?>
-							<div class="col-md-6 pull-left">
+							<div class="post-node">
 								<div class="catlinks"><?php the_category(); ?></div>
 								<div class="thumbnail nopad">
 									<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
@@ -111,7 +111,7 @@
 							//Show the left hand side column
 							if($counter == 1) :
 							?>
-							<div class="col-md-6">
+							<div class="post-node">
 								<div class="catlinks"><?php the_category(); ?></div>
 								<div class="thumbnail nopad">
 									<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
@@ -254,7 +254,7 @@
 							//Show the left hand side column
 							if($counter == 1) :
 							?>
-							<div class="col-sm-4">
+							<div class="post-node">
 								<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
 				                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
 				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
@@ -273,7 +273,7 @@
 							//Show the left hand side column
 							if($counter == 1) :
 							?>
-							<div class="col-sm-4">
+							<div class="post-node">
 								<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
 				                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
 				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
@@ -292,7 +292,7 @@
 							//Show the left hand side column
 							if($counter == 1) :
 							?>
-							<div class="col-sm-4">
+							<div class="post-node">
 								<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
 				                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
