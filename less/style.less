@@ -485,7 +485,7 @@ blockquote {
 	border-left: 0px;
 	margin: 20px -20px;
 	padding: 60px 80px;
-	background: url(images/greyfloral.png);
+	background: url(images/kindajean.png);
 }
 
 blockquote p, blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
@@ -1136,7 +1136,8 @@ ul.modal-nav-menu li {
 	top: 0px;
 	padding: 0px;
 	margin: 0px;
-	background: url(images/greyfloral.png) repeat;
+	background: url(images/valfre.png) repeat;
+	background-size: 300px 300px;
 	.translate;
 }
 
@@ -1146,7 +1147,7 @@ ul.modal-nav-menu li {
 
 .jumbotron-in {
 	padding: 120px 0px 120px 0px;
-	.pinkYellowFade;
+	background: fade(lightpink, 66%);
 	width: 100%;
 	height: 100%;
 }
@@ -1435,7 +1436,7 @@ ul.post-social li a:hover {
 	margin: 20px auto !important;
 }
 
-.single div.catlinks {
+.single-featured-image div.catlinks {
 	padding: 5px 10px;
 	background: @salmon;
 	color: white;
@@ -2440,9 +2441,6 @@ time {
 /* RETINA STUFF */
 
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
-	blockquote {
-		background: url(images/greyfloral_@2X.png);
-	}
 	#global-container.parties {
 		background-image: url(images/subtle_white_feathers_@2X.png);
 	}
@@ -2453,10 +2451,13 @@ time {
 	#global-container.page-about,
 	#global-container.page-legal,
 	#global-container.dmca-policy,
-	.jumbotron,
 	.beauty {
 		background-image: url(images/greyfloral_@2X.png) repeat;
 		background-size: 150px 124px;
+	}
+	.jumbotron {
+		background: url(images/valfre_@2X.png) repeat;
+		background-size: 300px 300px;
 	}
 	.style {
 		background-image: url(images/pinstriped_suit_@2X.png) repeat;
@@ -2465,13 +2466,13 @@ time {
 	.fitness {
 		background-size: 150px 150px;
 	}
-	/*#global-container.pop,
+	#global-container.pop,
 	#global-container.tag,
 	#global-container.models,
-	.pop {
+	.pop, blockquote {
 		background-image: url(images/kindajean_@2X.png);
 		background-size: 147px 147px;
-	}*/
+	}
 	.home-style {
 		background: url(images/greyfloral_@2X.png) repeat;
 		background-size: 150px 124px;
