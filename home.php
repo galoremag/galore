@@ -169,12 +169,12 @@
 		<div class="sex-dating-in">
 			<div class="container-fluid">
 				<div class="row-fluid">
-					<div class="col-sm-10 col-sm-offset-1">
+					<div class="col-md-10 col-md-offset-1">
 						<h2>Sex + Dating <i class="fa fa-heart"></i></h2>
 					</div>
 				</div>
 				<div class="row-fluid">
-					<div class="col-sm-7 col-sm-offset-1">
+					<div class="col-md-7 col-sm-8 col-md-offset-1">
 						<?php
 						$postslist = get_posts('category_name=sex-dating&numberposts=1&order=DESC&orderby=date');
 						foreach ($postslist as $post) :
@@ -195,7 +195,7 @@
 						</div>
 						<?php endforeach; ?>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-md-3 col-sm-4">
 						<?php
 						$postslist = get_posts('category_name=sex-dating&numberposts=2&order=DESC&orderby=date&offset=1');
 						foreach ($postslist as $post) :
@@ -232,7 +232,7 @@
 		<div class="pop-in">
 			<div class="container-fluid">
 				<div class="row-fluid">
-					<div class="col-sm-10 col-sm-offset-1">
+					<div class="col-md-10 col-md-offset-1">
 						<h2>Guilty Pleasure <i class="fa fa-star"></i></h2>
 						<h3>Best of Pop Culture</h3>
 						<div class="spacer20"></div>
@@ -343,7 +343,7 @@
 
 	<div class="container-fluid nopad">
 		<div class="row-fluid">
-			<div id="content" class="col-sm-10 col-sm-offset-1">
+			<div id="content" class="col-md-10 col-md-offset-1">
 				<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> More Everything <i class="fa fa-diamond"></i></h2>
 				<hr>
 <!-- 				<ol>

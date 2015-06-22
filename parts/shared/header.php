@@ -19,7 +19,7 @@
 					<!-- <button id="modal-nav-button" type="button" class="nav-button">
 					<i class="fa fa-bars"></i>
 					</button> -->
-					<a class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
+					<a id="navbar-brand" class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
 				</div>
 				<div>
 					<ul class="top-social navbar-right tab hidden-xs">
