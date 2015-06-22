@@ -93,7 +93,6 @@
 							if($counter == 1) :
 							?>
 							<div class="post-node">
-								<div class="catlinks"><?php the_category(); ?></div>
 								<div class="thumbnail nopad">
 									<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
 									<div class="caption">
@@ -112,7 +111,6 @@
 							if($counter == 1) :
 							?>
 							<div class="post-node">
-								<div class="catlinks"><?php the_category(); ?></div>
 								<div class="thumbnail nopad">
 									<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
 									<div class="caption">
