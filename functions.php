@@ -267,6 +267,7 @@
 	// update_option('siteurl','http://galoremag.com/');
  	// update_option('home','http://galoremag.com/');
 
+	// Remove Auto-links on Post Images
     function wpb_imagelink_setup() {
 	$image_set = get_option( 'image_default_link_type' );
 	
@@ -275,6 +276,11 @@
 	}
 	}
 	add_action('admin_init', 'wpb_imagelink_setup', 10);
+
+	add_action('pre_option_image_default_link_type', 'always_link_images_to_none');
+	function always_link_images_to_none() {
+		return 'none';
+	}
 
 	// TV Redirect
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];

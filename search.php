@@ -13,7 +13,7 @@
 
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div id="content" class="col-sm-8 col-sm-offset-2">
+		<div id="content" class="col-sm-10 col-sm-offset-1">
 
 			<?php
 			global $query_string;
