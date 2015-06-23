@@ -59,7 +59,7 @@
 					// 	//Implode the posts and set a variable to pass to our exclude param.
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
-					echo do_shortcode('[ajax_load_more orderby="date" exclude="'.$wp_query->post->ID.'" button_label="More Beauty Shit"]');
+					echo do_shortcode('[ajax_load_more orderby="date" exclude="'.$wp_query->post->ID.'" button_label="More Shit"]');
 			    ?>
 			</ul>
 		</div>
@@ -69,12 +69,17 @@
 			<?php
 			    $args = array(
 			                'post_type'    => 'post',
-			                'category_name'     => 'beauty',
 			                'numberposts'  => 4,
 			                'orderby'      => 'meta_value', 
 			                'meta_key'     => 'post_views_count',
 			                'order'        => 'DESC',
-			                'post_status'  => 'publish'
+			                'post_status'  => 'publish',
+			                'date_query' => array(
+						        array(
+						        	'column' => 'post_date_gmt',
+						            'after' => '2 month ago'
+						        )
+						    )
 			            ); 
 			    $ranking = 0;
 			?>
