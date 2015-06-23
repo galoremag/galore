@@ -76,6 +76,18 @@ Version: 1.0.1
 @import url(//fonts.googleapis.com/css?family=Corben:400,700);
 @import url(//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
 
+@font-face {
+    font-family: 'salome';
+    src: url('../fonts/salome-webfont.eot');
+    src: url('../fonts/salome-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/salome-webfont.woff2') format('woff2'),
+         url('../fonts/salome-webfont.woff') format('woff'),
+         url('../fonts/salome-webfont.ttf') format('truetype'),
+         url('../fonts/salome-webfont.svg#salomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Your theme files */
 //@import "_global.less";
 //@import "_header.less";
@@ -87,6 +99,7 @@ Version: 1.0.1
 
 /*@pink : #E81B8E;*/
 @pink : #FA7470;
+@yellow : #fff200;
 @salmon : #FA7470;
 @galwhite : antiquewhite;
 
@@ -470,7 +483,7 @@ a {
 	.transition;
 	color: @pink;
 }
-a:hover, a h1:hover, a:hover h1, a:hover h2, a:hover h3, a:hover h4, a h2:hover, a h3:hover, a h4:hover {text-decoration: none; opacity: 1;.transition; color: @pink;}
+a:hover, a h1:hover, a:hover h1, a:hover h2, a:hover h3, a:hover h4, a h2:hover, a h3:hover, a h4:hover {text-decoration: none; opacity: 1;.transition; color: @yellow;}
 a:focus {text-decoration: none; color: @pink; outline: 0px; text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);}
 
 a.btn {
@@ -486,6 +499,7 @@ a.btn {
 }
 
 a.btn:hover {
+	background: darken(@pink, 10%);
 	.font2;
 	opacity: 1;
 	color: white;
@@ -584,6 +598,12 @@ h1 {
 	font-size: 42px;
 	letter-spacing: 0.5px;
 	margin: 15px 0px;
+}
+
+h1 span {
+	font-family: 'salome', serif;
+	text-transform: none;
+	color: @pink;
 }
 
 h2 {
@@ -1870,11 +1890,12 @@ h2.stuckHead {
 	overflow: visible;
 	z-index: 1001;
 	.transition;
+	opacity: 0.7;
 }
 
 .footbut:hover {
 	.transition;
-	.pinkBlueGradientFade;
+	opacity: 1;
 }
 
 .footbut a.brand-white-sm {
