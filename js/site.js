@@ -119,6 +119,7 @@
 		/////////////////////
 
 		$('#footer-open').on('click', function(event) {
+			event.preventDefault();
             $('#footer').toggleClass('footerOn');
         });
 

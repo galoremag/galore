@@ -53,110 +53,106 @@
 
 	<!-- STYLE SECTION -->
 
-	<div class="home-style">
-		<div class="home-style-in nopad">
-			<div class="container-fluid nopad">
+	<div class="home-style container-fluid nopad">
+		<div class="row-fluid home-style-in nopad">
+			<div class="col-md-8 pad40">
 				<div class="row-fluid">
-					<div class="col-sm-8 beauty-style">
-						<div class="row-fluid">
-							<div class="col-sm-12 nopad">
-								<h2>Style + Beauty <i class="fa fa-scissors"></i></h2>
-							</div>
-							<div class="col-sm-12 spacer20"></div>
-						</div>
-						<div class="row-fluid">
-							<div class="col-sm-12 nopad">
-							<?php echo do_shortcode( '[new_royalslider id="5"]' ); ?>
-							</div>
-						</div>
-						<div class="row-fluid">
-							<div class="col-sm-12 spacer40"></div>
-						</div>
-						<div class="row-fluid post-grid">
-							<?php
-							$counter = 1; //start counter
+					<div class="col-sm-12 nopad">
+						<h2>Style + Beauty <i class="fa fa-scissors"></i></h2>
+					</div>
+					<div class="col-sm-12 spacer20"></div>
+				</div>
+				<div class="row-fluid">
+					<div class="col-sm-12 nopad">
+					<?php echo do_shortcode( '[new_royalslider id="5"]' ); ?>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="col-sm-12 spacer40"></div>
+				</div>
+				<div class="row-fluid post-grid">
+					<?php
+					$counter = 1; //start counter
 
-							$grids = 2; //Grids per row-fluid
+					$grids = 2; //Grids per row-fluid
 
-							$args = array(
-								'category_name' => 'beauty,style',
-								'showposts' => 4,
-								'orderby' => 'date',
-								'post__in'  => get_option( 'sticky_posts' ),
-								'ignore_sticky_posts' => 4
-							);
-							$bsQuery = new WP_Query( $args );
+					$args = array(
+						'category_name' => 'beauty,style',
+						'showposts' => 4,
+						'orderby' => 'date',
+						'post__in'  => get_option( 'sticky_posts' ),
+						'ignore_sticky_posts' => 4
+					);
+					$bsQuery = new WP_Query( $args );
 
-							if(have_posts()) :	while($bsQuery->have_posts()) :  $bsQuery->the_post(); 
+					if(have_posts()) :	while($bsQuery->have_posts()) :  $bsQuery->the_post(); 
 
-							//Show the left hand side column
-							if($counter == 1) :
-							?>
-							<div class="post-node">
-								<div class="thumbnail nopad">
-									<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
-									<div class="caption">
-										<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-						                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-						                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
-						            </div>
-								</div>
-							</div>
-							<?php
-							$counter = 0;
-							endif;
-							?>
-							<?php
-							//Show the left hand side column
-							if($counter == 1) :
-							?>
-							<div class="post-node">
-								<div class="thumbnail nopad">
-									<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
-									<div class="caption">
-										<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-						                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-						                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
-						            </div>
-								</div>
-							</div>
-							<?php
-							$counter = 0;
-							endif;
-							?>
-							<?php
-							$counter++;
-							endwhile;
-							//Pagination can go here if you want it.
-							endif;
-							?>
-						</div>
-						<div class="row-fluid">
-							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/beauty"><i class="fa fa-scissors"></i>&nbsp; Get Glam &nbsp;<i class="fa fa-scissors"></i></a></p>
+					//Show the left hand side column
+					if($counter == 1) :
+					?>
+					<div class="post-node">
+						<div class="nopad">
+							<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
+							<div class="caption">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
+				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
+				            </div>
 						</div>
 					</div>
-					<div class="col-sm-4 nopad">
-						<div class="darlings pad40">
-							<div class="brand"></div>
-							<h1 class="text-center">Darlings</h1>
-							<?php
-							$args = array( 'tag' => 'darling', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC' );
-
-							$postslist = get_posts( $args );
-
-							// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
-							foreach ($postslist as $post) : setup_postdata($post);
-							?>
-							<div class="text-left">
-								<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
+					<?php
+					$counter = 0;
+					endif;
+					?>
+					<?php
+					//Show the left hand side column
+					if($counter == 1) :
+					?>
+					<div class="post-node">
+						<div class="nopad">
+							<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
+							<div class="caption">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-							</div>
-							<?php endforeach; ?>
-							<div class="row-fluid">
-								<div class="spacer20"></div>
-								<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/tag/darling"><i class="fa fa-bomb"></i> Bombshells <i class="fa fa-bomb"></i></a></p>
-							</div>
+				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
+				            </div>
 						</div>
+					</div>
+					<?php
+					$counter = 0;
+					endif;
+					?>
+					<?php
+					$counter++;
+					endwhile;
+					//Pagination can go here if you want it.
+					endif;
+					?>
+				</div>
+				<!-- <div class="row-fluid">
+					<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/beauty"><i class="fa fa-scissors"></i>&nbsp; Get Glam &nbsp;<i class="fa fa-scissors"></i></a></p>
+				</div> -->
+			</div>
+			<div class="col-md-4 nopad">
+				<div class="darlings pad40">
+					<div class="brand"></div>
+					<h1 class="text-center">Darlings</h1>
+					<?php
+					$args = array( 'tag' => 'darling', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC' );
+
+					$postslist = get_posts( $args );
+
+					// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
+					foreach ($postslist as $post) : setup_postdata($post);
+					?>
+					<div class="text-left">
+						<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
+					</div>
+					<?php endforeach; ?>
+					<div class="row-fluid">
+						<div class="spacer20"></div>
+						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/tag/darling"><i class="fa fa-bomb"></i> Bombshells <i class="fa fa-bomb"></i></a></p>
 					</div>
 				</div>
 			</div>
