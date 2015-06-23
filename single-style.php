@@ -70,12 +70,18 @@
 			<?php
 			    $args = array(
 			                'post_type'    => 'post',
-			                'category_name'     => 'style',
+			                'category_name'=> 'style',
 			                'numberposts'  => 4,
 			                'orderby'      => 'meta_value', 
 			                'meta_key'     => 'post_views_count',
 			                'order'        => 'DESC',
-			                'post_status'  => 'publish'
+			                'post_status'  => 'publish',
+			                'date_query' => array(
+						        array(
+						        	'column' => 'post_date_gmt',
+						            'after' => '2 month ago'
+						        )
+						    )
 			            ); 
 			    $ranking = 0;
 			?>
