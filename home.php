@@ -17,7 +17,7 @@ foreach ($postslist as $post) : setup_postdata($post);
 <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 
 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-	<div id="superhero" class="jumbotron" style="background: url(<?php echo $url ?>) no-repeat;">
+	<div id="superhero" style="background: url(<?php echo $url ?>) no-repeat;">
 		<h1 class="pad40 col-md-6"><?php the_title(); ?></h1>
 	</div>
 </a>
