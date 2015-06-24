@@ -12,7 +12,6 @@
 		// 	any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
 		// };
 
-
 		$(function() {
 			FastClick.attach(document.body);
 		});

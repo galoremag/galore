@@ -4,6 +4,28 @@
 */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+
+<?php
+$args = array( 'tag' => 'superhero', 'post_type' => 'post', 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
+
+$postslist = get_posts( $args );
+
+// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
+foreach ($postslist as $post) : setup_postdata($post);
+?>
+
+<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+
+<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+	<div id="superhero" class="jumbotron" style="background: url(<?php echo $url ?>) no-repeat;">
+		<h1 class="pad40 col-md-6"><?php the_title(); ?></h1>
+	</div>
+</a>
+
+<!-- <a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a> -->
+
+<?php endforeach; ?>
+
 <div class="jumbotron">
 	<div class="jumbotron-in">
 		<div class="container">
