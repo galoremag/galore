@@ -134,8 +134,6 @@
 			$(function() {
 				if (isMobile == true && window.location.pathname == '/') {
 					document.getElementById('superhero').style.display = 'table';
-				} else {
-					document.getElementById('superhero').style.display = 'none';
 				}
 			});
 		</script>
