@@ -836,6 +836,17 @@ body {
 	padding: 120px 0px 0px 0px;
 }
 
+/* GENERAL PAGE BACKGROUND */
+
+#global-container.page {
+	background: url(images/greyfloral.png) repeat;
+}
+
+#global-inner.page {
+	.heroGradientFade;
+	padding: 120px 0px 0px 0px;
+}
+
 /* ABOUT BACKGROUND */
 
 #global-container.page-about {
@@ -1164,8 +1175,9 @@ ul.modal-nav-menu li {
 	width: 100%;
 	height: 95vh;
 	background-size: cover !important;
+	background-attachment: fixed;
 	background-position: center center !important;
-	display: table;
+	display: none;
 }
 
 #superhero h1 {

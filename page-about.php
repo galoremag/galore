@@ -16,7 +16,7 @@ Template Name: About
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div id="content" class="col-sm-8 col-sm-offset-2">
+		<div id="content" class="col-sm-10 col-sm-offset-1">
 			<div class="row-fluid">
 				<div class="col-sm-12">
 					<h1 class="text-center"><span>Who We</span> Are</h1>
