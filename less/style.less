@@ -68,12 +68,7 @@ Version: 1.0.1
 @fa-font-path: "fonts"; // Font Awesome font directory override
 
 /* Google fonts */
-@import url(//fonts.googleapis.com/css?family=Cabin:700,700italic);
-@import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic);
 @import url(//fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
-@import url(//fonts.googleapis.com/css?family=Cherry+Swash:400,700);
-@import url(//fonts.googleapis.com/css?family=Corben:400,700);
 @import url(//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
 
 @font-face {
@@ -114,6 +109,7 @@ Version: 1.0.1
 
 .font2 {
 	font-family: 'Karla', sans-serif;
+	font-weight: 700;
 }
 
 .font3 {
@@ -483,7 +479,7 @@ a {
 	.transition;
 	color: @pink;
 }
-a:hover, a h1:hover, a:hover h1, a:hover h2, a:hover h3, a:hover h4, a h2:hover, a h3:hover, a h4:hover {text-decoration: none; opacity: 1;.transition; color: @yellow;}
+a:hover, a h1:hover, a:hover h1, a:hover h2, a:hover h3, a:hover h4, a h2:hover, a h3:hover, a h4:hover {text-decoration: none; opacity: 1;.transition; color: darken(@pink, 10%);}
 a:focus {text-decoration: none; color: @pink; outline: 0px; text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);}
 
 a.btn {
@@ -841,6 +837,17 @@ body {
 	padding: 120px 0px 0px 0px;
 }
 
+/* GENERAL PAGE BACKGROUND */
+
+#global-container.page {
+	background: url(images/greyfloral.png) repeat;
+}
+
+#global-inner.page {
+	.heroGradientFade;
+	padding: 120px 0px 0px 0px;
+}
+
 /* ABOUT BACKGROUND */
 
 #global-container.page-about {
@@ -1162,6 +1169,31 @@ ul.modal-nav-menu li {
 	padding: 20px;
 	font-size: 42px;
 }
+
+ul.modal-nav-menu li a:hover {
+	color: @yellow;
+}
+
+/* SUPERHERO */
+
+#superhero {
+	width: 100%;
+	height: 95vh;
+	background-size: cover !important;
+	background-attachment: fixed;
+	background-position: center center !important;
+	display: none;
+}
+
+#superhero h1 {
+	color: white;
+	display: table-cell;
+	vertical-align: bottom;
+	float: none !important;
+	text-align: right;
+}
+
+/* HERO */
 
 .jumbotron {
 	position: relative;
@@ -2089,6 +2121,7 @@ button.alm-load-more-btn.done:before {
 
 .search-submit:hover {
 	opacity: 1;
+	.transition;
 }
 
 /*  NEWSLETTER SIGNUP MODAL  */
