@@ -13,7 +13,7 @@
 
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div id="content" class="col-sm-8 col-sm-offset-2">
+		<div id="content" class="col-sm-10 col-sm-offset-1">
 			<?php if ( have_posts() ): ?>
 			<h2><span>Tag </span><i class="fa fa-tag"></i> <?php echo single_tag_title( '', false ); ?></h2>
 			<hr>
@@ -54,13 +54,7 @@
 			$tags = $tag->slug;
 			echo do_shortcode('[ajax_load_more tag="'.$tags.'" offset="4"]');
 			?>
-
-			<!-- <div id="post-nav">
-				<ul>
-					<li id="page-left" class="alignleft pull-left"><?php previous_posts_link( '<h4><i class="fa fa-chevron-left"></i> &nbsp; PREV</h4>' ); ?></li>
-					<li id="page-right" class="alignright pull-right"><?php next_posts_link( '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>', '' ); ?></li>
-				</ul>
-			</div> -->
+			
 			<div class="spacer40"></div>
 		</div>
 	</div>

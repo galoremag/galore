@@ -13,6 +13,10 @@ elseif ( in_category('pop') ) {
     include(TEMPLATEPATH . '/single-pop.php'); }
 elseif ( in_category('nyfw') ) {
     include(TEMPLATEPATH . '/single-nyfw.php'); }
+elseif ( in_category('parties') ) {
+    include(TEMPLATEPATH . '/single-parties.php'); }
+elseif ( in_category('editorial') ) {
+    include(TEMPLATEPATH . '/single-editorial.php'); }
 else {
     include(TEMPLATEPATH . '/single-default.php');
   }

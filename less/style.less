@@ -1078,13 +1078,13 @@ nav.shrink .navbar-brand {
 	text-decoration: none;
 }
 
-.nav-button {
+#modal-nav-button {
 	border-radius: 50%;
 	background: @pink;
 	color: black;
 	border: 0px;
 	padding: 5px 10px 5px 8px;
-	opacity: 0.5;
+	opacity: 0;
 	margin: 10px 0px 0px 0px;
 	z-index: 9999;
 	width: 32px;
@@ -1093,18 +1093,18 @@ nav.shrink .navbar-brand {
 	.transition;
 }
 
-#nav-button {
-	color: white;
-}
-
-.nav-button:hover {
+#modal-nav-button:hover {
 	opacity: 1;
 	.transition;
 }
 
-.nav-button:focus {
+#modal-nav-button:focus {
 	outline: none;
 	border: none;
+}
+
+#nav-button {
+	color: white;
 }
 
 .modal-nav {
@@ -1529,25 +1529,6 @@ ul.post-social h4 {
 	.font2;
 	color: white;
 	display: inline;
-}
-
-.single img.img-left {
-	float: left;
-	width: 50%;
-	margin: 10px 40px 10px 0px;
-}
-
-.single img.img-right {
-	float: right;
-	width: 50%;
-	margin: 10px 0px 10px 40px;
-}
-
-.single img.img-sm {
-	display: table;
-	width: 60%;
-	text-align: center;
-	margin: 20px auto !important;
 }
 
 .single-featured-image div.catlinks {
@@ -2363,8 +2344,7 @@ time {
 		padding: 20px 40px;
 	}
 	.jumbotron-in {
-		padding-top: 80px !important;
-		padding-bottom: 20px !important
+		padding: 20px 0;
 	}
 	.jumbotron-in .container {
 		padding: auto 0px !important;
@@ -2495,12 +2475,15 @@ time {
 	footer div.footer-icon {
 		display: none !important;
 	}
+	.jumbotron-in {
+		padding: 60px 0;
+	}
 	.rsGalore {
 		height: 280px !important;
 	}
 	.rsGalore .rsGCaption {
 		font-size: 18px !important;
-		padding: 10px 20px !important;
+		padding: 10px 15px !important;
 	}
 	.post-grid {
 		-moz-column-count: 1;
