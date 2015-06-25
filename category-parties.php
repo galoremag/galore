@@ -75,7 +75,7 @@
 	                'orderby'      => 'meta_value', 
 	                'meta_key'     => 'post_views_count',
 	                'order'        => 'DESC',
-	                'post_status'  => 'publish',
+	                'post_status'  => 'publish'
 	            ); 
 			    $ranking = 0;
 			?>
