@@ -1,28 +1,32 @@
 
 	jQuery(document).ready(function($) {
 
-		// Mobile Detection
-
-		// var isMobile = {
-		// 	Android: function() {return navigator.userAgent.match(/Android/i);},
-		// 	BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},
-		// 	iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
-		// 	Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},
-		// 	Windows: function() {return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);},
-		// 	any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
-		// };
+		// Snappy Taps
 
 		$(function() {
 			FastClick.attach(document.body);
 		});
 
+		// Navbar Shrinks on Scroll
+
 		$(window).scroll(function() {
 			if ($(document).scrollTop() > 50) {
-				$('nav').addClass('shrink');
+				$('nav').addClass('shrink') && $('.footbut').addClass('appear');
 			} else {
-				$('nav').removeClass('shrink');
+				$('nav').removeClass('shrink') && $('.footbut').removeClass('appear');
 			}
 		});
+
+		// Scroll down Button Actually Scrolls Down
+
+		var body = $('html, body');
+
+		$('#scroll-down').click(function(e){
+	        e.preventDefault();
+	        body.animate({scrollTop:520}, '2000', 'swing');
+		});
+
+		// Sticky Sidebar
 
 		function sticky_relocate() {
 			var window_height = window.innerHeight;
