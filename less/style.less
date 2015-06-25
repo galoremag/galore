@@ -571,6 +571,16 @@ blockquote p, blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
 	margin: 0;
 }
 
+/*.half-width {
+	width: 50%;
+	margin: 10px;
+}
+
+.one-third-width {
+	width: 30%;
+	margin: 10px;
+}*/
+
 hr {
 	border-top: 1px dotted fade(@pink, 30%);
 	width: 100%;
@@ -623,6 +633,9 @@ h5 {
 }
 
 h1 span, h2 span, h3 span {
+	/*-webkit-text-fill-color: white;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: @pink;*/
 	color: @pink;
 	/*text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 0px 0px 0px black;*/
 }
@@ -639,6 +652,10 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h1 a:hover span, h2 a:hover span
 	.transition;
 	/*text-shadow-color: @pink;*/
 }
+
+/*h1 a:hover span, h2 a:hover span, h3 a:hover span, h4 a:hover span {
+	text-shadow: 1px 1px 0 @pink, -1px -1px 0 @pink, 1px -1px 0 @pink, -1px 1px 0 @pink, 0px 0px 0px @pink;
+}*/
 
 body {
 	overflow-x: hidden;
@@ -1403,6 +1420,10 @@ ul.modal-nav-menu li a:hover {
 	margin: 20px 0 !important;
 }
 
+/*.pop #content {
+	background: #2B2B2B;
+}*/
+
 .entry {
 	padding-bottom: 20px;
 	font-size: 16px !important;
@@ -1426,6 +1447,10 @@ ul.post-social li {
 	margin: 0px 20px 0px 0px;
 	height: 40px;
 	width: auto;
+/*	transform: scale(2);
+	-o-transform: scale(2);
+	-moz-transform: scale(2);
+	-webkit-transform: scale(2);*/
 }
 
 ul.post-social li:first-child {
@@ -1544,6 +1569,10 @@ ul.post-social h4 {
 	margin: 0;
 }
 
+/*.single.pop {
+	color: white;
+}*/
+
 #home-container .sex-dating {
 	background: url(images/symphony.png) repeat !important;
 	background-size: 99px 99px;
@@ -1554,6 +1583,12 @@ ul.post-social h4 {
 	.bluePinkGradientFade;
 	width: 100%;
 	height: 100%;
+}
+
+.sex-dating .LightText h1, .sex-dating .LightText h2 {
+	/*color: @pink;*/
+	/*color: black;*/
+	/*text-shadow: 1px 1px 0px rgba(255,255,0,1);*/
 }
 
 .post-grid {
@@ -1592,6 +1627,11 @@ ul.post-social h4 {
 	padding: 1em;
 	width: 100%;
 }
+
+/*.post-grid h2 a {color: #77787a; font-size: 13px;}
+.post-grid .griditemleft {float: left; width: 278px; margin: 0 40px 40px 0;}
+.post-grid .griditemright {float: left; width: 278px;}
+.post-grid .postimage {margin: 0 0 10px 0;}*/
 
 .post-grid .entry {
 	display: table-cell;
@@ -1689,6 +1729,29 @@ ul.post-social h4 {
 .rsContent .DarkTextRight h4 {
     text-align: right !important;
 }
+/*
+.rsContent .rsABlock button, .rsContent .rsSBlock button {
+    width: 150px !important;
+    background: black;
+    color: #fff;
+    font-family: 'ProximaNovaBold', sans-serif;
+    padding: 10px 35px !important;
+    margin: 20px 0px 0px 0px !important;
+    position: relative !important;
+    top: 20px !important;
+    border-radius: 5px;
+    border: none;
+}*/
+
+/*.rsContent  .rsABlock button:hover, .rsContent  .rsSBlock button:hover {background: @pink !important; color: white !important;}*/
+
+/*.rsContent h1 {text-transform: uppercase;font-style: italic;}*/
+
+/*.rsContent h2 {text-transform: uppercase;font-style: italic;}*/
+
+/*.rsContent h3 {text-transform: uppercase;font-style: italic;}*/
+
+/*.rsContent h4 {text-transform: uppercase;font-style: italic;}*/
 
 .rsGalore .rsGCaption {
 	font-size: 32px !important;
@@ -1722,6 +1785,18 @@ ul.post-social h4 {
 	padding: 20px 0px 40px 0px;
 	/*background: rgba(0,0,0,0.8);*/
 }
+
+/*.pop-in .post-grid .entry p {
+	color: white;
+}*/
+
+/*.archive.pop p {
+	color: white;
+}*/
+
+/*.archive.pop h3 a {
+	color: white;
+}*/
 
 .pop .taglinks {
 	color: white;
@@ -1782,6 +1857,26 @@ ul.post-social h4 {
 	margin: -20px 0px -100px 0px;
 	left: 80px;
 	z-index: 9;
+}
+
+#kitten-posts {
+	padding: 20px;
+	.bluePinkGradient;
+}
+
+/*#kitten-posts.sticky {
+	top: 50px;
+	position: fixed;
+}*/
+
+#kitten-posts .brand {
+	background: url(images/kitten-logo-white.png) center center no-repeat;
+	display: block;
+	/*transform: scale(0.5);
+	-webkit-transform: scale(0.5);*/
+	margin: 0 auto;
+	background-size: 100% auto;
+	height: 45px;
 }
 
 .archive .archive-thumb {
@@ -1985,6 +2080,11 @@ ul#menu-footer-menu li a:hover, ul#menu-footer li a:hover {
 	color: black;
 	margin-top: 0px !important;
 }
+
+/*.pop .alm-listing li h3 a {
+	color: white;
+	margin-top: 0px !important;
+}*/
 
 .alm-listing li h3 a:hover {
 	color: @pink;
@@ -2454,7 +2554,15 @@ time {
 		top: -12px;
 		.transition;
 	}
+	/*nav.shrink {
+		background: rgba(0,0,0,0.5) !important;
+	}*/
+	/*.rsGalore .rsText h1, .rsGalore .rsText h2, .rsGalore .rsText h3 {
+		margin: 0px !important;
+	}*/
 
+	/*.pad20 {padding: 4% !important;}
+	.pad40 {padding: 2% !important;}*/
 	.nav-button {
 		width: 32px;
 		height: 32px;

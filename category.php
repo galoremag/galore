@@ -60,6 +60,12 @@
 			echo do_shortcode('[ajax_load_more category="'.$category.'" offset="4"]');
 			?>
 
+			<!-- <div id="post-nav">
+				<ul>
+					<li id="page-left" class="alignleft pull-left"><?php previous_posts_link( '<h4><i class="fa fa-chevron-left"></i> &nbsp; PREV</h4>' ); ?></li>
+					<li id="page-right" class="alignright pull-right"><?php next_posts_link( '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>', '' ); ?></li>
+				</ul>
+			</div> -->
 			<div class="spacer40"></div>
 		</div>
 	</div>
