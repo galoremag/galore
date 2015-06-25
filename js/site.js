@@ -11,9 +11,9 @@
 
 		$(window).scroll(function() {
 			if ($(document).scrollTop() > 50) {
-				$('nav').addClass('shrink') && $('.footbut').addClass('appear') && $('#modal-nav-button').addClass('appear');
+				$('nav').addClass('shrink') && $('.footbut').addClass('appear');
 			} else {
-				$('nav').removeClass('shrink') && $('.footbut').removeClass('appear') && $('#modal-nav-button').removeClass('appear');
+				$('nav').removeClass('shrink') && $('.footbut').removeClass('appear');
 			}
 		});
 
