@@ -477,16 +477,3 @@
 *  8. Global caption
 *
 ****************/
-.rsGalore .rsGCaption {
-	position: relative;
-	text-align: left;
-
-	background: black;
-
-	color: #FFF;
-	padding: 20px;
-	width: 100%;
-	font-size: 32px;
-	font-family: 'proxima-nova-alt-condensed';
-	text-transform: uppercase;
-}

@@ -16,11 +16,10 @@ foreach ($postslist as $post) : setup_postdata($post);
 
 <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 
-<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-	<div id="superhero" class="jumbotron" style="background: url(<?php echo $url ?>) no-repeat;">
-		<h1 class="pad40 col-md-6"><?php the_title(); ?></h1>
-	</div>
+<a id="superhero" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" style="background: url(<?php echo $url ?>) no-repeat;">
+	<h1 class="pad40 col-md-6"><?php the_title(); ?></h1>
 </a>
+<a id="scroll-down"><i class="fa fa-arrow-circle-o-down"></i></a>
 
 <!-- <a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a> -->
 

@@ -133,9 +133,10 @@
 
 			$(function() {
 				if (isMobile == true) {
-					document.getElementById('superhero').style.display = 'table';
+					$('a#superhero').css({'display' : 'table'}) && $('#scroll-down').css({'display' : 'block'});
+					// document.getElementById('superhero').style.display = 'table';
 				} else {
-					document.getElementById('superhero').style.display = 'none';
+					$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'});
 				}
 			});
 		</script>

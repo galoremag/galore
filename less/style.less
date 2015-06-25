@@ -1178,11 +1178,10 @@ ul.modal-nav-menu li a:hover {
 
 #superhero {
 	width: 100%;
-	height: 95vh;
+	height: 90vh;
 	background-size: cover !important;
 	background-attachment: fixed;
 	background-position: center center !important;
-	display: none;
 }
 
 #superhero h1 {
@@ -1191,6 +1190,55 @@ ul.modal-nav-menu li a:hover {
 	vertical-align: bottom;
 	float: none !important;
 	text-align: right;
+	padding-bottom: 80px !important;
+}
+
+#scroll-down {
+	position:absolute;
+	bottom:5px;
+	left: 50%;
+	margin-left: -19px;
+	text-align: center;
+	-webkit-animation-name: scrolldown;
+    		animation-name: scrolldown;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+}
+
+#scroll-down i {
+	margin: 0 auto;
+	color: white;
+	font-size: 42px;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+@keyframes scroll-down {
+	0% {
+		bottom: 5px
+	}
+	50% {
+		bottom: 10px
+	}
+	100% {
+		bottom: 5px
+	}
+}
+
+@-webkit-keyframes scrolldown {
+	0% {
+		bottom: 5px
+	}
+	50% {
+		bottom: 10px
+	}
+	100% {
+		bottom: 5px
+	}
 }
 
 /* HERO */
@@ -1705,15 +1753,17 @@ ul.post-social h4 {
 
 /*.rsContent h4 {text-transform: uppercase;font-style: italic;}*/
 
-/*.rsGalore .rsGCaption {
-    bottom: 0px;
-    left: 0px;
-    padding: 15px;
-    border-radius: 0px;
-    font-size: 18px !important;
-    font-style: italic;
-    .font4;
-}*/
+.rsGalore .rsGCaption {
+	font-size: 32px !important;
+	padding: 10px 20px !important;
+	position: relative;
+	text-align: left;
+	background: black;
+	color: #FFF;
+	width: 100%;
+	font-family: 'proxima-nova-alt-condensed';
+	text-transform: uppercase;
+}
 
 .style .post-grid .entry {
 	display: table-cell;
@@ -1916,7 +1966,11 @@ h2.stuckHead {
 	overflow: visible;
 	z-index: 1001;
 	.transition;
-	opacity: 0.7;
+	opacity: 0;
+}
+
+.appear {
+	opacity: 0.7 !important;
 }
 
 .footbut:hover {
@@ -2096,11 +2150,12 @@ button.alm-load-more-btn.done:before {
 	border-radius: 20px;
 	opacity: 0.5;
 	width: 200px;
+	.transition;
 }
 
 #site-search .form-control:hover, #site-search .form-control:focus {
-	background: @pink;
 	opacity: 1;
+	.transition;
 }
 
 .search-submit {
@@ -2352,7 +2407,8 @@ time {
 	}
 
 	.rsGalore .rsGCaption {
-		font-size: 24px;
+		font-size: 18px !important;
+		padding: 10px 20px !important;
 	}
 
 	.home-sex-dating .excerpt {
@@ -2439,11 +2495,12 @@ time {
 	footer div.footer-icon {
 		display: none !important;
 	}
-	.jumbotron .rsGalore {
-		height: 260px !important;
+	.rsGalore {
+		height: 280px !important;
 	}
 	.rsGalore .rsGCaption {
-		font-size: 18px;
+		font-size: 18px !important;
+		padding: 10px 20px !important;
 	}
 	.post-grid {
 		-moz-column-count: 1;

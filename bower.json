@@ -3,6 +3,7 @@
   "dependencies": {
     "bootstrap": "3.2.*",
     "jquery": "1.11.*",
-    "fontawesome": "4.3.0"
+    "fontawesome": "4.3.0",
+    "jquery.scrollTo": "~2.1.1"
   }
 }
