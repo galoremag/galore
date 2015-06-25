@@ -6,7 +6,7 @@
 *
 	* @package 	WordPress
 	* @subpackage 	Starkers
-		* @since 		Starkers 4.0
+	* @since 		Starkers 4.0
 */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
@@ -40,9 +40,6 @@
 				<?php endif; ?>
 				<ul class="single-social">
 					<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i> &nbsp;<h4 class="nomarg">Share on Facebook</h4></a></li>
-					<!-- <li class="pad10">
-						<div class="fb-like hidden-xs hidden-sm" data-href="http://galoremag.com" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-					</li> -->
 					<li class="pull-right"><h4 class="social-title"><?php the_title(); ?></h4></li>
 				</ul>
 				<?php comments_template( '', true ); ?>
@@ -54,14 +51,7 @@
 			<ul id="related-posts" class="row-fluid">
 				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'date' ) ); ?>
 
-			    <?php
-			    	// if($post_ids){
-					// 	//Implode the posts and set a variable to pass to our exclude param.
-					// 	$postsNotIn = implode(",", $post_ids);
-					// }
-
-					echo do_shortcode('[ajax_load_more orderby="date" category="beauty" exclude="'.$wp_query->post->ID.'" button_label="More Shit"]');
-			    ?>
+			    <?php echo do_shortcode('[ajax_load_more orderby="date" category="beauty" exclude="'.$wp_query->post->ID.'" button_label="More Shit"]'); ?>
 			</ul>
 		</div>
 		<div id="sidebar-anchor"></div>
