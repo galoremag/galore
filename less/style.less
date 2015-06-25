@@ -1089,11 +1089,11 @@ nav.shrink .navbar-brand {
 	color: black;
 	border: 0px;
 	padding: 5px 10px 5px 8px;
-	opacity: 0;
 	margin: 10px 0px 0px 0px;
 	z-index: 9999;
 	width: 32px;
 	height: 32px;
+	opacity: 0.7;
 	border: 1px solid white;
 	.transition;
 }
@@ -1106,10 +1106,6 @@ nav.shrink .navbar-brand {
 #modal-nav-button:focus {
 	outline: none;
 	border: none;
-}
-
-#nav-button {
-	color: white;
 }
 
 .modal-nav {
@@ -1959,6 +1955,10 @@ h2.stuckHead {
 	opacity: 0.7 !important;
 }
 
+.hider {
+	opacity: 0 !important;
+}
+
 .footbut:hover {
 	.transition;
 	opacity: 1;
@@ -2449,10 +2449,11 @@ time {
 	.nopadright {
 		padding: 0px;
 	}
-	.nav-button {
+	#modal-nav-button {
 		width: 32px;
 		height: 32px;
-		padding: 6px 10px 5px 8px;;
+		padding: 6px 10px 5px 8px;
+		margin: 10px;
 	}
 	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
 		display: none;
@@ -2551,11 +2552,11 @@ time {
 
 	/*.pad20 {padding: 4% !important;}
 	.pad40 {padding: 2% !important;}*/
-	.nav-button {
+	#modal-nav-button {
 		width: 32px;
 		height: 32px;
 		padding: 6px 10px 5px 8px;;
-		margin: 8px 0 0 8px;
+		margin: 10px 0 0 10px;
 	}
 	ul.modal-nav-menu {
 		padding-top: 60px;
