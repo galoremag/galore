@@ -133,10 +133,10 @@
 
 			$(function() {
 				if (isMobile == true) {
-					$('a#superhero').css({'display' : 'table'});
+					$('a#superhero').css({'display' : 'table'}) && $('#scroll-down').css({'display' : 'block'});
 					// document.getElementById('superhero').style.display = 'table';
 				} else {
-					$('a#superhero').css({'display' : 'none'});
+					$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'});
 				}
 			});
 		</script>
