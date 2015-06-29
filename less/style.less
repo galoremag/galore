@@ -554,12 +554,17 @@ blockquote p, blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
 }
 
 .thumbnail {
-	/*max-height: 200px !important;*/
+	max-height: 260px;
 	overflow: hidden !important;
 	border: 0px;
 	padding: 5px;
 	background: transparent;
 	border-radius: 0px;
+}
+
+div.wp-caption {
+	width: 100% !important;
+	height: auto !important;
 }
 
 .photoswipe_gallery figure figcaption {
@@ -1078,31 +1083,27 @@ nav.shrink .navbar-brand {
 	text-decoration: none;
 }
 
-.nav-button {
+#modal-nav-button {
 	border-radius: 50%;
 	background: @pink;
 	color: black;
 	border: 0px;
 	padding: 5px 10px 5px 8px;
-	opacity: 0.5;
 	margin: 10px 0px 0px 0px;
 	z-index: 9999;
 	width: 32px;
 	height: 32px;
+	opacity: 0.7;
 	border: 1px solid white;
 	.transition;
 }
 
-#nav-button {
-	color: white;
-}
-
-.nav-button:hover {
+#modal-nav-button:hover {
 	opacity: 1;
 	.transition;
 }
 
-.nav-button:focus {
+#modal-nav-button:focus {
 	outline: none;
 	border: none;
 }
@@ -1531,25 +1532,6 @@ ul.post-social h4 {
 	display: inline;
 }
 
-.single img.img-left {
-	float: left;
-	width: 50%;
-	margin: 10px 40px 10px 0px;
-}
-
-.single img.img-right {
-	float: right;
-	width: 50%;
-	margin: 10px 0px 10px 40px;
-}
-
-.single img.img-sm {
-	display: table;
-	width: 60%;
-	text-align: center;
-	margin: 20px auto !important;
-}
-
 .single-featured-image div.catlinks {
 	padding: 5px 10px;
 	background: @salmon;
@@ -1973,6 +1955,10 @@ h2.stuckHead {
 	opacity: 0.7 !important;
 }
 
+.hider {
+	opacity: 0 !important;
+}
+
 .footbut:hover {
 	.transition;
 	opacity: 1;
@@ -2363,8 +2349,7 @@ time {
 		padding: 20px 40px;
 	}
 	.jumbotron-in {
-		padding-top: 80px !important;
-		padding-bottom: 20px !important
+		padding: 20px 0;
 	}
 	.jumbotron-in .container {
 		padding: auto 0px !important;
@@ -2464,10 +2449,11 @@ time {
 	.nopadright {
 		padding: 0px;
 	}
-	.nav-button {
+	#modal-nav-button {
 		width: 32px;
 		height: 32px;
-		padding: 6px 10px 5px 8px;;
+		padding: 6px 10px 5px 8px;
+		margin: 10px;
 	}
 	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
 		display: none;
@@ -2481,8 +2467,12 @@ time {
 	figure.hammy-responsive {
 		width: 100%;
 	}
+	.post h4 {
+		text-align: center;
+	}
 	ul.post-social {
 		width: 100%;
+		padding: 20px 100px;
 	}
 	ul.post-social li:first-child {
 		margin-right: 0px !important;
@@ -2495,12 +2485,15 @@ time {
 	footer div.footer-icon {
 		display: none !important;
 	}
+	.jumbotron-in {
+		padding: 60px 0;
+	}
 	.rsGalore {
 		height: 280px !important;
 	}
 	.rsGalore .rsGCaption {
 		font-size: 18px !important;
-		padding: 10px 20px !important;
+		padding: 10px 15px !important;
 	}
 	.post-grid {
 		-moz-column-count: 1;
@@ -2563,11 +2556,11 @@ time {
 
 	/*.pad20 {padding: 4% !important;}
 	.pad40 {padding: 2% !important;}*/
-	.nav-button {
+	#modal-nav-button {
 		width: 32px;
 		height: 32px;
 		padding: 6px 10px 5px 8px;;
-		margin: 8px 0 0 8px;
+		margin: 10px 0 0 10px;
 	}
 	ul.modal-nav-menu {
 		padding-top: 60px;

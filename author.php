@@ -13,7 +13,7 @@
 
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div id="content" class="col-sm-8 col-sm-offset-2">
+		<div id="content" class="col-sm-10 col-sm-offset-1">
 			<?php
 			$author = get_the_author_meta('ID', get_query_var('author'));
 			query_posts('posts_per_page=4&author='.$author.'&offset=0'); ?>
@@ -32,13 +32,13 @@
 			<?php rewind_posts(); while ( have_posts() ) : the_post(); ?>
 				<li>
 					<article class="row-fluid">
-						<div class="nopad col-sm-4">
+						<div class="nopad col-sm-5">
 							<div class="catlinks"><?php the_category(); ?></div>
 							<div class="thumbnail">
 								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large', 300, 150); ?></a>
 							</div>
 						</div>
-						<div class="nopadright col-sm-8">
+						<div class="nopadright col-sm-7">
 							<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 							<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 

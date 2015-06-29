@@ -139,4 +139,5 @@
 					$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'});
 				}
 			});
+
 		</script>
