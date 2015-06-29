@@ -334,3 +334,21 @@
 	        echo getPostViews(get_the_ID());
 	    }
 	}
+
+	// JSON API Hooks
+
+	add_filter( 'json_serve_request', function( ) {
+		header( "Access-Control-Allow-Origin: *" );
+	});
+
+	add_filter( 'json_query_var-posts_per_page', function( $posts_per_page ) {
+		if ( 10 < intval( $posts_per_page )  ) {
+			$posts_per_page = 30;
+		}
+		return $posts_per_page;
+	});
+
+	add_filter( 'json_query_vars', function( $valid_vars ) {
+		$valid_vars[] = 'offset';
+		return $valid_vars;
+	});
