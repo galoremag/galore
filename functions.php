@@ -334,3 +334,11 @@
 	        echo getPostViews(get_the_ID());
 	    }
 	}
+
+	// Prepend Cloudinary Upload URL
+	add_filter('get_image_tag', 'add_cloudinary_url', 10, 2);
+	function add_cloudinary_url($html) {
+		list($img_src, $width, $height) = image_downsize($id, $size);
+		$html = '<img src="http://res.cloudinary.com/galore/image/upload/' . esc_attr($img_src) . '" alt="' . esc_attr($alt) . '" ' . $title . $hwstring . 'class="' . $class . '" />';
+		return $html;
+	}
