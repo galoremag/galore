@@ -348,4 +348,4 @@
 
 	  	return $html;
 	}
-	add_filter('image_send_to_editor', 'add_cloudinary_url', 10, 8);
+	add_filter('get_image_tag', 'add_cloudinary_url', 10, 8);
