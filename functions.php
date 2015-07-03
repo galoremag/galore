@@ -343,9 +343,9 @@
 	// }
 	// add_filter('get_image_tag', 'add_cloudinary_url', 10, 2);
 
-	function add_cloudinary_url($html) {
-	  	$html = str_replace('<img src="', '<img src="http://res.cloudinary.com/galore/image/upload/', $html);
+	// function add_cloudinary_url($html) {
+	//   	$html = str_replace('<img src="', '<img src="http://res.cloudinary.com/galore/image/upload/', $html);
 
-	  	return $html;
-	}
-	add_filter('get_image_tag', 'add_cloudinary_url', 10, 8);
+	//   	return $html;
+	// }
+	// add_filter('get_image_tag', 'add_cloudinary_url', 10, 8);
