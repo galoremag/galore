@@ -21,8 +21,6 @@ foreach ($postslist as $post) : setup_postdata($post);
 </a>
 <a id="scroll-down"><i class="fa fa-arrow-circle-o-down"></i></a>
 
-<!-- <a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a> -->
-
 <?php endforeach; ?>
 
 <div class="jumbotron">
@@ -111,7 +109,7 @@ foreach ($postslist as $post) : setup_postdata($post);
 					//Show the left hand side column
 					if($counter == 1) :
 					?>
-					<div class="post-node">
+					<div class="thumbnail col-sm-6 horpad10">
 						<div class="nopad">
 							<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
 							<div class="caption">
@@ -129,16 +127,6 @@ foreach ($postslist as $post) : setup_postdata($post);
 					//Show the left hand side column
 					if($counter == 1) :
 					?>
-					<div class="post-node">
-						<div class="nopad">
-							<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
-							<div class="caption">
-								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
-				            </div>
-						</div>
-					</div>
 					<?php
 					$counter = 0;
 					endif;
@@ -269,11 +257,12 @@ foreach ($postslist as $post) : setup_postdata($post);
 							//Show the left hand side column
 							if($counter == 1) :
 							?>
-							<div class="post-node">
+							<div class="thumbnail col-md-4">
 								<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
-				                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-				                <div class="spacer10"></div>
+				                <div class="caption">
+				                	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
+				                	<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				                </div>
 				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
 				                <!-- <ul class="post-social">
 									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
@@ -288,37 +277,6 @@ foreach ($postslist as $post) : setup_postdata($post);
 							//Show the left hand side column
 							if($counter == 1) :
 							?>
-							<div class="post-node">
-								<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
-				                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-				                <div class="spacer10"></div>
-				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
-				                <!-- <ul class="post-social">
-									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-								</ul> -->
-							</div>
-							<?php
-							$counter = 0;
-							endif;
-							?>
-							<?php
-							//Show the left hand side column
-							if($counter == 1) :
-							?>
-							<div class="post-node">
-								<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('large'); ?></a>
-				                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-				                <div class="spacer10"></div>
-				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
-				                <!-- <ul class="post-social">
-									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-								</ul> -->
-							</div>
-							<div class="clear"></div>
 							<?php
 							$counter = 0;
 							endif;
@@ -363,38 +321,7 @@ foreach ($postslist as $post) : setup_postdata($post);
 			<div id="content" class="col-md-10 col-md-offset-1">
 				<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> More Everything <i class="fa fa-diamond"></i></h2>
 				<hr>
-<!-- 				<ol>
-				<?php query_posts($query_string . 'posts_per_page=4&offset=24'); ?>
-				<?php if ( have_posts() ): ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<li class="post">
-						<article class="row-fluid">
-							<div class="nopad col-sm-4">
-								<div class="catlinks"><?php the_category(); ?></div>
-								<div class="thumbnail">
-									<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large'); ?></a>
-								</div>
-							</div>
-							<div class="nopadright col-sm-8">
-								<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-								<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 
-								<div class="excerpt"><?php the_excerpt(); ?></div>
-
-								<p class="pull-left"><a class="pull-left" href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
-								<ul class="post-social pull-right">
-									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-								</ul>
-							</div>
-						</article>
-					</li>
-				<?php endwhile; ?>
-				</ol>
-				<?php else: ?>
-				<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
-				<?php endif; ?>
- -->
 				<?php 
 				echo do_shortcode('[ajax_load_more button_label="More Shit" offset="32"]');
 				?>

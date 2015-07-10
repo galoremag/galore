@@ -553,7 +553,7 @@ blockquote p, blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
 	opacity: 1 !important;
 }
 
-.thumbnail {
+.thumb {
 	max-height: 260px;
 	overflow: hidden !important;
 	border: 0px;
@@ -1576,39 +1576,39 @@ ul.post-social h4 {
 .post-grid {
 	margin-left: 0;
 	margin-right: 0;
-	display: inline-block;
-	-moz-column-count: 2;
+	/*display: inline-block;*/
+	/*-moz-column-count: 2;
 	-webkit-column-count: 2;
 	column-count: 2;
 	-moz-column-gap: 1em;
 	-webkit-column-gap: 1em;
-	column-gap: 1em;
+	column-gap: 1em;*/
 }
 
-.post-node {
+/*.post-node {
 	display: table-footer-group;
 	display: -moz-deck;
 	width: 100%;
-}
+}*/
 
 .pop-in .post-grid {
 	margin-left: -15px;
 	margin-right: -15px;
-	display: inline-block;
-	-moz-column-count: 3;
+	/*display: inline-block;*/
+	/*-moz-column-count: 3;
 	-webkit-column-count: 3;
 	column-count: 3;
 	-moz-column-gap: 1em;
 	-webkit-column-gap: 1em;
-	column-gap: 1em;
+	column-gap: 1em;*/
 }
 
-.pop-in .post-node {
+/*.pop-in .post-node {
 	display: table-footer-group;
 	display: -moz-deck;
 	padding: 1em;
 	width: 100%;
-}
+}*/
 
 /*.post-grid h2 a {color: #77787a; font-size: 13px;}
 .post-grid .griditemleft {float: left; width: 278px; margin: 0 40px 40px 0;}
@@ -1625,6 +1625,11 @@ ul.post-social h4 {
 	overflow: hidden;
 	display: block;
 	/*border-radius: 4px;*/
+}
+
+.thumbnail {
+	border: 0px;
+	background: transparent;
 }
 
 /* STYLE SECTION HOMEPAGE */
@@ -2341,7 +2346,7 @@ time {
 		line-height: 1;
 	}
 	.nopadright {
-		padding: 0px;
+		padding-right: 0px;
 	}
 	blockquote {
 		border-left: 0px;
@@ -2447,7 +2452,7 @@ time {
 @media only screen and (max-width : 320px) {
 /* Styles */
 	.nopadright {
-		padding: 0px;
+		padding-right: 0px;
 	}
 	#modal-nav-button {
 		width: 32px;
@@ -2670,7 +2675,7 @@ time {
 	ul#menu-footer-menu li:last-child, ul#menu-footer li:last-child {
 		display: none !important;
 	}
-	.thumbnail {
+	.thumb {
 		width: 100%;
 	}
 	.email-signup-dialog {

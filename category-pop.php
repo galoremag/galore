@@ -29,7 +29,7 @@
 					<article class="row-fluid">
 						<div class="nopad col-sm-5">
 							<div class="catlinks"><?php the_category(); ?></div>
-							<div class="thumbnail">
+							<div class="thumb">
 								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large', 300, 300); ?></a>
 							</div>
 							<h4>Share this post</h4>
@@ -90,7 +90,7 @@
 			<?php while ( have_posts() ) : the_post(); ?>
 				<li class="post">
 					<article>
-						<div class="thumbnail">
+						<div class="thumb">
 							<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
 						</div>
 						<h4 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
