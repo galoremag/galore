@@ -14,7 +14,11 @@ $postslist = get_posts( $args );
 foreach ($postslist as $post) : setup_postdata($post);
 ?>
 
-<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+<?php 
+$thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
+$url = $thumb[0];
+?>
+
 
 <a id="superhero" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" style="background: url(<?php echo $url ?>) no-repeat;">
 	<h1 class="pad40 col-md-6"><?php the_title(); ?></h1>
