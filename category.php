@@ -30,7 +30,7 @@
 						<div class="nopad col-sm-4">
 							<div class="catlinks"><?php the_category(); ?></div>
 							<div class="thumb">
-								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large'); ?></a>
+								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
 							</div>
 						</div>
 						<div class="nopadright col-sm-8">

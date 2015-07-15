@@ -30,7 +30,7 @@
 						<div class="nopad col-sm-5">
 							<div class="catlinks"><?php the_category(); ?></div>
 							<div class="thumbnail">
-								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large', 300, 300); ?></a>
+								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
 							</div>
 							<h4>Share this post</h4>
 							<ul class="post-social pull-left">
