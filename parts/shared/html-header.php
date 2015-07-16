@@ -61,9 +61,6 @@
 
 		<?php wp_head(); ?>
 
-		<script src="//use.typekit.net/uqi4yop.js"></script>
-		<script>try{Typekit.load();}catch(e){}</script>
-
 		<!-- Main slider JS script file --> 
 		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
 
@@ -99,31 +96,6 @@
 
 		<!-- Google Tag Manager Plugin -->
 		<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
-
-
-		<div id="fb-root"></div>
-		<script>
-		  window.fbAsyncInit = function() {
-		    FB.init({
-		      appId      : '341699539354957',
-		      xfbml      : true,
-		      version    : 'v2.2'
-		    });
-		  };
-
-		  (function(d, s, id){
-		     var js, fjs = d.getElementsByTagName(s)[0];
-		     if (d.getElementById(id)) {return;}
-		     js = d.createElement(s); js.id = id;
-		     js.src = "//connect.facebook.net/en_US/sdk.js";
-		     fjs.parentNode.insertBefore(js, fjs);
-		   }(document, 'script', 'facebook-jssdk'));
-
-		</script>
-
-		<script>
-		window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
-		</script>
 
 		<script type="text/javascript">
 			var isMobile = false; //initiate as false
