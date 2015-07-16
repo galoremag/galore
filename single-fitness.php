@@ -59,7 +59,7 @@
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
 
-					echo do_shortcode('[ajax_load_more orderby="date" category="fitness" exclude="'.$wp_query->post->ID.'" button_label="More Shit"]');
+					echo do_shortcode('[ajax_load_more orderby="date" category="fitness" exclude="'.$wp_query->post->ID.'" button_label="Loading"]');
 			    ?>
 			</ul>
 		</div>

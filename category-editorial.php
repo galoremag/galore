@@ -58,7 +58,7 @@
 			<?php endif; ?>
 
 			<?php 
-			echo do_shortcode('[ajax_load_more category="editorial" button_label="More Shit" offset="4"]');
+			echo do_shortcode('[ajax_load_more category="editorial" button_label="Loading" offset="4"]');
 			?>
 
 			<div class="spacer40"></div>

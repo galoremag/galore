@@ -40,7 +40,7 @@ $url = $thumb[0];
 </div>
 
 <div id="latest-container">
-	<h2 class="text-center verPad20"><a href="the-latest/"><i class="fa fa-flash"></i> New Shit <i class="fa fa-flash"></i></a></h2>
+	<h2 class="text-center verPad20"><a href="the-latest/"><i class="fa fa-flash"></i> Daily Dish <i class="fa fa-flash"></i></a></h2>
 	<div id="latest">
 
 		<div id="glides">
@@ -374,7 +374,7 @@ $url = $thumb[0];
 				<hr>
 
 				<?php 
-				echo do_shortcode('[ajax_load_more button_label="More Shit" offset="32"]');
+				echo do_shortcode('[ajax_load_more button_label="Loading" offset="32"]');
 				?>
 
 				<div class="spacer40"></div>
