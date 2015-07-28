@@ -23,7 +23,7 @@
 		<?php if ( (is_page()) || (is_single()) ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<meta name="description" content="<?php echo get_the_excerpt(); ?>" />
 		<meta name="author" content="<?php echo get_the_author() ; ?>">
-		<link rel="author" href="<?php the_author_posts_link(); ?>"/>
+		<link rel="author" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"/>
 		<meta property="article:author" content="<?php the_author_posts_link(); ?>" />
 		<?php endwhile; endif; elseif(is_home()) : ?>
 
