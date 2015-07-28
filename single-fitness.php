@@ -32,10 +32,16 @@
 				<div class="spacer20"></div>
 				<?php the_content(); ?>
 				<div class="spacer20"></div>
-				<?php if ( get_the_author_meta( 'description' ) ) : ?>
-				<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
-				<h3>About <?php echo get_the_author() ; ?></h3>
-				<?php the_author_meta( 'description' ); ?>
+				<div class="author-info row">
+					<?php if ( get_the_author_meta( 'description' ) ) : ?>
+					<div class="author-bio col-md-8 col-md-offset-2 text-right">
+						<h3>About The Author: <span><?php echo get_the_author() ; ?></span></h3>
+						<?php the_author_meta( 'description' ); ?>
+					</div>
+					<div class="author-pic col-md-2">
+						<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
+					</div>
+				</div>
 				<?php endif; ?>
 				<ul class="single-social">
 					<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i> &nbsp;<h4 class="nomarg">Share on Facebook</h4></a></li>

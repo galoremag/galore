@@ -22,7 +22,7 @@
 			<h2 class="text-center">The Latest in <span><?php echo single_cat_title( '', false ); ?></span> <i class="fa fa-scissors"></i></h2>
 			<hr>
 			<ol>
-			<?php query_posts('category_name=style&posts_per_page=4&offset=3&ignore_sticky_posts=4'); ?>
+			<?php query_posts('category_name=style&posts_per_page=4&offset=3&ignore_sticky_posts=true'); ?>
 			<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<li class="post">
@@ -58,7 +58,7 @@
 			<?php endif; ?>
 
 			<?php 
-			echo do_shortcode('[ajax_load_more category="style" button_label="Loading" offset="4"]');
+			echo do_shortcode('[ajax_load_more category="style" button_label="Loading" offset="4" ignore_sticky_posts="true"]');
 			?>
 
 			<div class="spacer40"></div>
