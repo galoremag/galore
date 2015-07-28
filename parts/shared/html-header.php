@@ -23,6 +23,7 @@
 		<?php if ( (is_page()) || (is_single()) ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<meta name="description" content="<?php echo get_the_excerpt(); ?>" />
 		<meta name="author" content="<?php echo get_the_author() ; ?>">
+		<link rel="author" href="<?php the_author_posts_link(); ?>"/>
 		<?php endwhile; endif; elseif(is_home()) : ?>
 
 		<!-- Site-wide Meta Description -->
