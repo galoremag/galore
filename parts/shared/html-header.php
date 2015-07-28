@@ -24,7 +24,7 @@
 		<meta name="description" content="<?php echo get_the_excerpt(); ?>" />
 		<meta name="author" content="<?php echo get_the_author() ; ?>">
 		<link rel="author" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"/>
-		<meta property="article:author" content="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" />
+		<meta property="article:author" content="<?php echo get_the_author() ; ?>" />
 		<?php endwhile; endif; elseif(is_home()) : ?>
 
 		<!-- Site-wide Meta Description -->
