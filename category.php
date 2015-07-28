@@ -57,7 +57,7 @@
 			<?php 
 			$cat = get_category( get_query_var( 'cat' ) );
 			$category = $cat->slug;
-			echo do_shortcode('[ajax_load_more category="'.$category.'" offset="4" ignore_sticky_posts="true"]');
+			echo do_shortcode('[ajax_load_more category="'.$category.'" offset="7" ignore_sticky_posts="true"]');
 			?>
 
 			<!-- <div id="post-nav">

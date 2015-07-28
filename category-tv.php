@@ -58,7 +58,7 @@
 			<?php endif; ?>
 
 			<?php 
-			echo do_shortcode('[ajax_load_more category="tv" offset="5" button_label="Loading" ignore_sticky_posts="true"]');
+			echo do_shortcode('[ajax_load_more category="tv" offset="8" button_label="Loading" ignore_sticky_posts="true"]');
 			?>
 
 			<!-- <div id="post-nav">
