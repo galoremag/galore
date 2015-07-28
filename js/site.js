@@ -54,18 +54,18 @@
 		// Signup Modal  //
 		/////////////////////
 
-	    $(window).scroll(function() {
-	    	if ($.cookie('newsletter')) {
-	    		$('#email-signup').hide();
-	    	} else if ($(document).scrollTop() > 150) {
-	    		$("#email-signup").fadeIn(500);
-	    		$('#fieldName').focus();
-		        $("#newsletterClose").click(function() {
-		            $("#email-signup").fadeOut(500);
-		            $.cookie('newsletter', 14);
-		        });
-	    	}
-		});
+	 //    $(window).scroll(function() {
+	 //    	if ($.cookie('newsletter')) {
+	 //    		$('#email-signup').hide();
+	 //    	} else if ($(document).scrollTop() > 150) {
+	 //    		$("#email-signup").fadeIn(500);
+	 //    		$('#fieldName').focus();
+		//         $("#newsletterClose").click(function() {
+		//             $("#email-signup").fadeOut(500);
+		//             $.cookie('newsletter', 14);
+		//         });
+	 //    	}
+		// });
 
 		$('#signupButton').on('click', function() {
 			$("#email-signup").fadeIn(500);
