@@ -7,6 +7,12 @@
 			FastClick.attach(document.body);
 		});
 
+		$(function() {
+		   $( 'a[href="#"]' ).click( function(e) {
+		      e.preventDefault();
+		   } );
+		});
+
 		// Navbar Shrinks on Scroll
 
 		$(window).scroll(function() {
