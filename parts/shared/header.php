@@ -23,12 +23,13 @@
 				</div>
 				<div>
 					<ul class="top-social navbar-right tab hidden-xs">
-						<li><a id="signupButton" href="#"><i class="fa fa-inbox"></i></a></li>
+						<li><a href="http://tv.galoremag.com" title="GaloreTV">TV <i class="fa fa-television"></i></a></li>
+						<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
 						<li><a href="https://www.facebook.com/galoremag" target="_blank"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="http://instagram.com/kittengalore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 						<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li>
-						<li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+						<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
+						<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
 						<!-- <li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li> -->
 					</ul>
 				</div><!--/.nav-collapse -->
@@ -50,7 +51,6 @@
 			<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
 			<li><a href="<?php bloginfo('url'); ?>/category/fitness" title="Fitness">Fitness</a></li>
 			<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a></li>
-			<li><a href="http://tv.galoremag.com" title="GaloreTV">TV <i class="fa fa-tv"></i></a></li>
 			<div id="site-search" class="visible-xs">
 				<!-- <?php get_search_form(); ?> -->
 				<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
