@@ -50,6 +50,7 @@
 			<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
 			<li><a href="<?php bloginfo('url'); ?>/category/fitness" title="Fitness">Fitness</a></li>
 			<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a></li>
+			<li><a href="http://tv.galoremag.com" title="GaloreTV">TV <i class="fa fa-tv"></i></a></li>
 			<div id="site-search" class="visible-xs">
 				<!-- <?php get_search_form(); ?> -->
 				<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
