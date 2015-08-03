@@ -3,9 +3,24 @@
 <!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]--> 
 <!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]--> 
 <!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]--> 
-<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html class="no-js" lang="en"><!--<![endif]-->
 	<head>
+
 		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+		<?php
+		if (is_home()) {
+		    $blog_title = get_bloginfo('name') . " | " . get_bloginfo('description');
+		} elseif (is_category()) {
+			$blog_title = single_cat_title('', false) . " | " . get_bloginfo('name');
+		} elseif (is_tag()) {
+			$blog_title = single_tag_title('', false) . " | " . get_bloginfo('name');
+		} elseif (is_author()) {
+			$blog_title = get_the_author() . " | " . get_bloginfo('name');
+		} else {
+			$blog_title = get_the_title() . " | " . get_bloginfo('name');
+		}
+		?>
 		<title>
 		<?php echo $blog_title; ?>
 		</title>
@@ -18,7 +33,20 @@
 		<meta name="author" content="<?php echo get_the_author() ; ?>">
 		<link rel="author" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"/>
 		<meta property="article:author" content="<?php echo get_the_author() ; ?>" />
-		<?php endwhile; endif; elseif(is_home()) : ?>
+
+		<?php endwhile; endif; elseif ( (is_category()) || (is_tag()) ) : ?>
+		<meta name="description" content="<?php echo single_cat_title(); ?>" />
+		<meta name="author" content="Galore">
+		<link rel="author" href="http://GaloreMag.com"/>
+		<meta property="article:author" content="Galore" />
+
+		<?php elseif (is_author()) : ?>
+		<meta name="description" content="<?php echo get_the_author_meta( 'description' ); ?>" />
+		<meta name="author" content="<?php echo get_the_author(); ?>">
+		<link rel="author" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"/>
+		<meta property="article:author" content="<?php echo get_the_author(); ?>" />
+
+		<?php elseif(is_home()) : ?>
 
 		<!-- Site-wide Meta Description -->
 	  	<meta name="description" content="GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative woman in her 20's surrounding Style, Beauty, Pop, Sex + Dating and Fitness.">
@@ -35,6 +63,7 @@
 
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico"/>
+
 
 		<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 

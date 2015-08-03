@@ -19,7 +19,7 @@
 			query_posts('posts_per_page=4&author='.$author.'&offset=0'); ?>
 			<?php if ( have_posts() ): the_post(); ?>
 
-			<h3>Stories by <span><?php echo get_the_author() ; ?></span></h3>
+			<h3>Stories by <span><?php echo get_the_author(); ?></span></h3>
 			<hr>
 
 			<div class="author-info row hidden-xs">
