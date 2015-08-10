@@ -335,6 +335,13 @@
 	    }
 	}
 
+	// FIX AUTOSAVE FAIL
+	function function_save_var()
+	{
+		if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE )
+        return $post_id;
+	}
+
 	// Prepend Cloudinary Upload URL
 	
 	// function add_cloudinary_url($html) {
