@@ -26,7 +26,7 @@
 	                <p class="text-center">
 	                    Get updates right in your inbox.
 	                </p>
-	                <h1 class="text-center">Get On The List</h1>
+	                <h2 class="text-center">Get On The List</h2>
 	                <form action="http://galoremag.createsend.com/t/i/s/tjcj/" method="post">
 	                    <div class="form-group">
 	                        <input placeholder="Name" class="form-control" id="fieldName" name="cm-name" type="text" required />
