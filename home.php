@@ -31,7 +31,7 @@ $url = $thumb[0];
 	<div class="jumbotron-in">
 		<div class="container">
 			<div class="row-fluid">
-				<div class="hero-slider col-md-12">
+				<div class="hero-slider col-md-10 col-md-offset-1">
 					<?php echo do_shortcode( '[new_royalslider id="4"]' ); ?>
 				</div>
 			</div>
