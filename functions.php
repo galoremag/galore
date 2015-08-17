@@ -342,6 +342,8 @@
         return $post_id;
 	}
 
+	add_filter( 'allowed_http_origin', '__return_true' );
+
 	// Prepend Cloudinary Upload URL
 	
 	// function add_cloudinary_url($html) {
