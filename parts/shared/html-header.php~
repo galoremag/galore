@@ -1,6 +1,3 @@
-<?php /** @package WordPress @subpackage Default_Theme  **/
-header("Access-Control-Allow-Origin: *"); 
-?>
 <!DOCTYPE HTML>
 <!--[if IEMobile 7 ]><html class="no-js iem7" manifest="default.appcache?v=1"><![endif]--> 
 <!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]--> 
