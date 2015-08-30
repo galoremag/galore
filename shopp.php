@@ -23,12 +23,12 @@
 			<h2 class="text-center"><i class="fa fa-moon-o"></i> Shop <i class="fa fa-moon-o"></i></h2>
 			<hr>
 
-			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-			<?php the_content(); ?>
-			<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
-			<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
-			<?php endwhile; endif; ?>
+			<?php if (have_posts()) : while ( have_posts() ) : the_post(); ?>
 
+			<?php the_content();?>
+			<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
+
+			<?php endwhile; endif; ?>
 			<?php else: ?>
 			<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
 			<?php endif; ?>
