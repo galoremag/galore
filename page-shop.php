@@ -20,7 +20,7 @@
 	<div class="row-fluid">
 		<div id="content" class="col-sm-10 col-sm-offset-1">
 			<?php if ( have_posts() ): ?>
-			<h2 class="text-center"><i class="fa fa-flash"></i> The Daily Dish <i class="fa fa-flash"></i></h2>
+			<h2 class="text-center"><i class="fa fa-moon-o"></i> Shop <i class="fa fa-moon-o"></i></h2>
 			<hr>
 			<?php if (have_posts()) : while ( have_posts() ) : the_post(); ?>
 
@@ -30,10 +30,6 @@
 			<?php else: ?>
 			<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
 			<?php endif; ?>
-
-			<?php 
-			echo do_shortcode('[ajax_load_more post_type="post" category="beauty,fitness,tv,mag,models,parties,pop,sex-dating,style" button_label="More Shit"]');
-			?>
 
 			<!-- <div id="post-nav">
 				<ul>
