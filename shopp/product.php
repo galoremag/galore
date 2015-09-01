@@ -11,7 +11,7 @@
   <div class="row">
 
     <?php if (shopp('product','found')): ?>
-    <div class="span6">
+    <div class="col-md-6">
       <?php // shopp('product','gallery','p_setting=full-image'); ?>
       <?php shopp('product','coverimage','size=full-image'); ?>
       <ul class="product-thumbnails">
@@ -21,9 +21,9 @@
           </li>
         <?php endwhile; ?>
         </ul>
-    </div><!--/span6-->
+    </div><!--/col-md-6-->
 
-    <div class="span6">
+    <div class="col-md-6">
 
       <!-- Title -->
       <h3><?php shopp('product','name'); ?></h3>
@@ -89,7 +89,7 @@
 
 
 
-    </div><!--/span6-->
+    </div><!--/col-md-6-->
 
 
 

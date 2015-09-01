@@ -6,13 +6,13 @@
 <h2>Checkout</h2>
 
 <div class="row">
-<div class="span12">
+<div class="col-sm-12">
 	<div class="well">
 	<div class="row">
 		<?php shopp('checkout','function'); ?>
 
 				<?php if (shopp('customer','notloggedin')): ?>
-				<div class="span12">
+				<div class="col-sm-12">
 				<ul>
 					<li>
 						<label for="login">Login to Your Account</label>
@@ -27,11 +27,11 @@
 						<?php shopp('customer','login-button','context=checkout&value=Login'); ?>
 					</li>
 				</ul>
-				</div><!--/span12-->
+				</div><!--/col-sm-12-->
 				<?php endif; ?>
 
 				<?php if (shopp('customer','notloggedin')): ?>
-				<div class="span12">
+				<div class="col-sm-12">
 				<ul>
 					<li>
 						<?php shopp('checkout','password','required=true&format=passwords&size=16&title=Password'); ?>
@@ -42,11 +42,11 @@
 						<label for="confirm-password">Confirm Password</label>
 					</li>
 				</ul>
-				</div><!--/span12-->
+				</div><!--/col-sm-12-->
 				<?php endif; ?>
 
-				<div class="span6">
-      	<legend>Your Contact Information</legend>
+				<div class="col-md-6">
+      				<legend>Your Contact Information</legend>
 					<div class="control-group">
 						<label for="firstname" class="control-label">First Name</label>
 						<div class="controls"><?php shopp('checkout','firstname','required=true&minlength=2&class=input-block-level&title=First Name'); ?></div>
@@ -67,12 +67,12 @@
 						<label for="email" class="control-label">Email</label>
 						<div class="controls"><?php shopp('checkout','email','required=true&format=email&size=30&class=input-block-level&title=Email'); ?></div>
 					</div><!--/control-group-->
-				</div><!--/span6-->
+				</div><!--/col-md-6-->
 
-				<!-- <div class="span6"><legend>Secure</legend></div> -->
+				<!-- <div class="col-md-6"><legend>Secure</legend></div> -->
 				<div class="clearfix"></div>
 
-				<div class="span6">
+				<div class="col-md-6">
 				<legend>Billing Address</legend>
 				<?php if (shopp('cart','needs-shipped')): ?>
 				<div id="billing-address-fields">
@@ -107,9 +107,9 @@
 						<div class="controls"><?php shopp('checkout','billing-country','required=true&class=input-block-level&title=Country billing address'); ?></div>
 					</div><!--/control-group-->
 					</div><!--/billing-address-fields-->
-				</div><!--/span6-->
+				</div><!--/col-md-6-->
 
-				<div class="span6">
+				<div class="col-md-6">
 				<legend>
 					Shipping Address
 					<div class="pull-right"><?php shopp('checkout','same-shipping-address'); ?></div>
@@ -147,9 +147,9 @@
 				</div><!--/shipping-address-fields-->
 				<?php else: ?>
 				<?php endif; ?>
-				</div><!--/span6--><div class="clearfix"></div>
+				</div><!--/col-md-6--><div class="clearfix"></div>
 
-				<div class="span6">
+				<div class="col-md-6">
 
 				<?php if (shopp('checkout','billing-localities')): ?>
 				<div class="half locale hidden">
@@ -208,17 +208,17 @@
 				<!-- <div class="inline"><label for="marketing"><?php shopp('checkout','marketing'); ?> Yes, I would like to receive e-mail updates and special offers!</label></div> -->
 
 				<p class="submit"><?php shopp('checkout','submit','value=Submit Order&class=btn btn-success btn-block btn-large'); ?></p>
-			</div><!--/span6-->
+			</div><!--/col-md-6-->
 
-			<div class="span6">
+			<div class="col-md-6">
 				<legend>Secure Payment <i class="ss-icon ss-standard">&#x1F512;</i></legend>
 				<p>This is a secure 128-bit SSL Encryption payment. You're Safe.</p>
 				<span id="siteseal"><script type="text/javascript" src="https://seal.starfieldtech.com/getSeal?sealID=wJvwFTptDbKXsIEPMJQDLCyNeMlGaNRUfaG7kbDlEgmbx1tz2NcX9Q"></script></span>
-			</div><!--/span6-->
+			</div><!--/col-md-6-->
 
 		</div><!--/row-->
 </div><!--/well-->
-</div><!--/span12-->
+</div><!--/col-sm-12-->
 </div><!--/row-->
 </div><!--/shop-checkout-->
 <?php endif; ?>
