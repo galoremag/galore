@@ -3,7 +3,7 @@
 	<div class="shop-products">
 	  <div class="row">
 			<?php // shopp('catalog','breadcrumb'); ?>
-			<div class="span12">
+			<div class="col-sm-12">
 				<h2><?php shopp('collection','name'); ?></h2>
 			</div><!--/span12-->
 			<?php // shopp('catalog','views','label=Views: '); ?>
@@ -12,7 +12,7 @@
 			<?php // shopp('category','pagination','show=10'); ?>
 
 			<?php while(shopp('category','products')): ?>
-				<div class="span3">
+				<div class="col-sm-12">
 					<a href="<?php shopp('product','url'); ?>">
 						<?php shopp('product','coverimage','setting=full-image'); ?>
 						<h3><?php shopp('product','name'); ?></h3>
@@ -34,9 +34,9 @@
 				</div><!--/span3-->
 			<?php endwhile; ?>
 
-			<div class="span12">
+			<div class="col-sm-12">
 				<?php // shopp('category','pagination','show=50'); ?>
-			</div><!--/span12-->
+			</div><!--/col-sm-12-->
 
 	</div><!--/row-->
 </div><!--/shop-products-->
