@@ -12,15 +12,15 @@
 
     <?php if (shopp('product','found')): ?>
     <div class="col-md-6">
-      <?php // shopp('product','gallery','p_setting=full-image'); ?>
-      <?php shopp('product','coverimage','size=full-image'); ?>
+      <?php shopp('product','gallery','p_setting=full-image'); ?>
+      <!-- <?php shopp('product','coverimage','size=full-image'); ?>
       <ul class="product-thumbnails">
         <?php while(shopp('product','images')): ?>
           <li>
             <a href="<?php shopp('product', 'image', 'setting=full-image&property=src'); ?>"><?php shopp('product', 'image', 'setting=gallery-thumbnails&fit=crop'); ?></a>
           </li>
         <?php endwhile; ?>
-        </ul>
+      </ul> -->
     </div><!--/col-md-6-->
 
     <div class="col-md-6">
