@@ -19,18 +19,19 @@
 
 						<!-- <p class="price"><?php // shopp('product','saleprice','starting=from'); ?> </p> -->
 
-							<?php // global $Shopp; ?>
-							<?php $product_stock = shopp('product','outofstock'); ?>
-							<?php if($product_stock == 'Sold'): ?>
-								<p class="sold">Sold Out</p>
-							<?php else: ?>
-								<div class="price"><?php shopp('product','price'); ?>
-                                  <?php if (shopp('product','has-savings')): ?>
-							      <div class="savings">Save <?php shopp('product','savings','show=percent'); ?></div>
-						    <?php endif; ?>
-                                </div>
-							<?php endif; ?>
+						<?php // global $Shopp; ?>
+						<?php $product_stock = shopp('product','outofstock'); ?>
+						<?php if($product_stock == 'Sold'): ?>
+							<p class="sold">Sold Out</p>
+						<?php else: ?>
+							<div class="price"><?php shopp('product','price'); ?>
+                              <?php if (shopp('product','has-savings')): ?>
+						      <div class="savings">Save <?php shopp('product','savings','show=percent'); ?></div>
+					    <?php endif; ?>
+                            </div>
+						<?php endif; ?>
 					</a>
+					<?php shopp('product','addtocart', 'class=btn btn-block btn-large btn-success'); ?>
 				</div><!--/span3-->
 			<?php endwhile; ?>
 
