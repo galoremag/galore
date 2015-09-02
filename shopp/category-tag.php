@@ -4,16 +4,16 @@
 	<div class="shop-products">
 	  <div class="row">
 			<?php // shopp('catalog','breadcrumb'); ?>
-			<div class="span12">
+			<div class="col-sm-12">
 
-			</div><!--/span12-->
+			</div><!--/col-sm-12-->
 			<?php // shopp('catalog','views','label=Views: '); ?>
 			<?php // shopp('category','subcategory-list','hierarchy=true&showall=true&class=subcategories&dropdown=1'); ?>
 			<?php // shopp('catalog','orderby-list','dropdown=on'); ?>
 			<?php // shopp('category','pagination','show=10'); ?>
 
 			<?php while(shopp('category','products')): ?>
-				<div class="span3">
+				<div class="col-md-3">
 					<a href="<?php shopp('product','url'); ?>">
 						<?php shopp('product','coverimage','setting=full-image'); ?>
 						<h3><?php shopp('product','name'); ?></h3>

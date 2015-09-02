@@ -3,7 +3,7 @@
 	<div class="shop-products">
 	  <div class="row">
 			<?php // shopp('catalog','breadcrumb'); ?>
-			<div class="span12">
+			<div class="col-sm-12">
 				<h2><?php shopp('collection','name'); ?></h2>
 			</div><!--/span12-->
 			<?php // shopp('catalog','views','label=Views: '); ?>
@@ -12,31 +12,32 @@
 			<?php // shopp('category','pagination','show=10'); ?>
 
 			<?php while(shopp('category','products')): ?>
-				<div class="span3">
+				<div class="col-lg-3 col-md-6 col-sm-12">
 					<a href="<?php shopp('product','url'); ?>">
 						<?php shopp('product','coverimage','setting=full-image'); ?>
 						<h3><?php shopp('product','name'); ?></h3>
 
 						<!-- <p class="price"><?php // shopp('product','saleprice','starting=from'); ?> </p> -->
 
-							<?php // global $Shopp; ?>
-							<?php $product_stock = shopp('product','outofstock'); ?>
-							<?php if($product_stock == 'Sold'): ?>
-								<p class="sold">Sold Out</p>
-							<?php else: ?>
-								<div class="price"><?php shopp('product','price'); ?>
-                                  <?php if (shopp('product','has-savings')): ?>
-							      <div class="savings">Save <?php shopp('product','savings','show=percent'); ?></div>
-						    <?php endif; ?>
-                                </div>
-							<?php endif; ?>
+						<?php // global $Shopp; ?>
+						<?php $product_stock = shopp('product','outofstock'); ?>
+						<?php if($product_stock == 'Sold'): ?>
+							<p class="sold">Sold Out</p>
+						<?php else: ?>
+							<div class="price"><?php shopp('product','price'); ?>
+                              <?php if (shopp('product','has-savings')): ?>
+						      <div class="savings">Save <?php shopp('product','savings','show=percent'); ?></div>
+					    <?php endif; ?>
+                            </div>
+						<?php endif; ?>
 					</a>
+					<?php shopp('product','addtocart', 'class=btn btn-block btn-large btn-success'); ?>
 				</div><!--/span3-->
 			<?php endwhile; ?>
 
-			<div class="span12">
+			<div class="col-sm-12">
 				<?php // shopp('category','pagination','show=50'); ?>
-			</div><!--/span12-->
+			</div><!--/col-sm-12-->
 
 	</div><!--/row-->
 </div><!--/shop-products-->

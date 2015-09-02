@@ -1,10 +1,10 @@
 <div class="shop-thanks">
 	<h3>Thank you for your order!</h3>
 	<div class="row">
-		<div class="span12">
+		<div class="col-sm-12">
 			<div class="well">
 				<div class="row">
-					<div class="span12">
+					<div class="col-sm-12">
 				<?php if (shopp('checkout','completed')): ?>
 
 					<?php if (shopp('purchase','notpaid')): ?>
@@ -35,10 +35,10 @@
 						<p>Your order is still in progress and has not yet been received from the payment processor. You will receive an email notification when your payment has been verified and the order has been completed.</p>
 
 					<?php endif; ?>
-					</div><!--/span12-->
+					</div><!--/col-sm-12-->
 
 				</div><!--/row-->
 			</div><!--/well-->
-		</div><!--/span12-->
+		</div><!--/col-sm-12-->
 	</div><!--/row-->
 </div><!--/shop-thanks-->
