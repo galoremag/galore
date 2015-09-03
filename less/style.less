@@ -2125,17 +2125,8 @@ button.alm-load-more-btn.done:before {
    color: white !important;  
 }
 
-#email-signup {
-	position: fixed;
-	.translate;
-	top: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	display: none;
-}
+.placeholder { color: @pink; }
+
 #site-search {
 	height: 50px;
 }
@@ -2182,16 +2173,38 @@ button.alm-load-more-btn.done:before {
 
 /*  NEWSLETTER SIGNUP MODAL  */
 
+#email-signup {
+	position: fixed;
+	.translate;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9990;
+	display: none;
+}
+
+#email-signup .back {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+	z-index: 9991;
+}
+
 #signupButton {
 	cursor: pointer;
 }
 
 .email-signup-dialog {
+	z-index: 9992;
 	margin-top: 100px;
 }
 
 .email-signup.in .email-signup-dialog {
-	z-index: 9999;
+	z-index: 9993;
 }
 
 .email-signup-content {
@@ -2690,6 +2703,12 @@ time {
 	}
 	.email-signup-dialog {
 		margin-top: 20px;
+	}
+	.email-signup-body p {
+		font-size: 0.8em;
+	}
+	.email-signup-dialog .brand-white {
+		-webkit-transform: scale(0.7);
 	}
 }
 

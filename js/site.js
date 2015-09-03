@@ -1,8 +1,13 @@
 
 	jQuery(document).ready(function($) {
 
-		// Snappy Taps
+		// $('input, textarea').placeholder();
 
+		function isTouchDevice(){
+			return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
+		}
+
+		// Snappy Taps
 		$(function() {
 			FastClick.attach(document.body);
 		});
@@ -45,14 +50,24 @@
 		    }
 		}
 
-		$(function () {
-		    $(window).scroll(sticky_relocate);
-		    sticky_relocate();
-		});
+		if (isTouchDevice()===true) {
+			return;
+		} else {
+			$(function () {
+			    $(window).scroll(sticky_relocate);
+			    sticky_relocate();
+			});
+		}
 
 		/////////////////////
 		// Signup Modal  //
 		/////////////////////
+		
+		if (isTouchDevice()===true) {
+			return;
+		} else {
+			$('#email-signup').delay(3200).fadeIn(600);
+		}
 
 	 //    $(window).scroll(function() {
 	 //    	if ($.cookie('newsletter')) {
@@ -73,6 +88,11 @@
 	        $("#newsletterClose").click(function() {
 	            $("#email-signup").fadeOut(500);
 	        });
+		});
+
+		$('#email-signup .back').click(function(e){
+	        e.preventDefault();
+	        $("#email-signup").fadeOut(500);
 		});
 
 		// Detect User Agent

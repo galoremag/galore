@@ -26,13 +26,13 @@
 	                <p class="text-center">
 	                    Get updates right in your inbox.
 	                </p>
-	                <h2 class="text-center">Get On The List</h2>
+	                <!-- <h2 class="text-center">Get On The List</h2> -->
 	                <form action="http://galoremag.createsend.com/t/i/s/tjcj/" method="post">
 	                    <div class="form-group">
-	                        <input placeholder="Name" class="form-control" id="fieldName" name="cm-name" type="text" required />
+	                        <input placeholder="Your Name" class="form-control" id="fieldName" name="cm-name" type="text" required />
 	                    </div>
 	                    <div class="form-group">
-	                        <input placeholder="Email" class="form-control" id="fieldEmail" name="cm-tjcj-tjcj" type="email" required />
+	                        <input placeholder="Your Email" class="form-control" id="fieldEmail" name="cm-tjcj-tjcj" type="email" required />
 	                    </div>
 	                    <div class="form-group">
 	                        <button class="btn btn-bp" type="submit">Subscribe</button>
@@ -41,4 +41,5 @@
 	            </div>
 	        </div>
 	    </div>
+	    <div class="back"></div>
 	</div>

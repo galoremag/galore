@@ -80,15 +80,11 @@
 
 		<!-- Plugin requires jQuery 1.8+  -->
 		<!-- <script src='<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery-1.7.2.min.js'></script> -->
-		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/bower_components/jquery/dist/jquery.min.js'></script>
-
-		<!-- BOOSTRAP -->
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 		<?php wp_head(); ?>
 
 		<!-- Main slider JS script file --> 
-		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
+		<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
 
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>		
