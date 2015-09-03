@@ -59,6 +59,8 @@
 		<!-- Pinterest Verification -->
 		<meta name="p:domain_verify" content="8c3f8aadea8dcff760f98a676ca9a2f7"/>
 
+		<meta name="google-site-verification" content="9q_iilZ2axazp6DWJG9YsrsLMupyES5IOH2jc4Mm2t4" />
+
 		<link rel="author" href="https://plus.google.com/111766775974771084195"/>
 
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
