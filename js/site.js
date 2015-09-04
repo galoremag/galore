@@ -1,11 +1,45 @@
 
+	function loadNewsletter() {
+		if (isTouchDevice()===true) {
+			return;
+		} else if ($.cookie('newsletter')) {
+			return;
+		} else {
+			$('#email-signup').delay(3200).fadeIn(600);
+		}
+	}
+
+	function sticky_relocate() {
+		var window_height = window.innerHeight;
+	    var window_top = $(window).scrollTop();
+	    var div_top = $('#sidebar-anchor').offset().top;
+	    if (window_top > (div_top + 240)) {
+	        $('#sidebar').addClass('sticky').css({'height': window_height, 'overflow':'scroll'});
+	    } else {
+	        $('#sidebar').removeClass('sticky');
+	    }
+	}
+
+	function isTouchDevice(){
+		return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
+	}
+
 	jQuery(document).ready(function($) {
 
-		// $('input, textarea').placeholder();
-
-		function isTouchDevice(){
-			return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
-		}
+		// FIX PLACEHOLDERS
+	    $('[placeholder]').focus(function() {
+	        var input = $(this);
+	        if (input.val() == input.attr('placeholder')) {
+	            input.val('');
+	            input.removeClass('placeholder');
+	        }
+	    }).blur(function() {
+	        var input = $(this);
+	        if (input.val() == '' || input.val() == input.attr('placeholder')) {
+	            input.addClass('placeholder');
+	            input.val(input.attr('placeholder'));
+	        }
+	    }).blur();
 
 		// Snappy Taps
 		$(function() {
@@ -39,17 +73,6 @@
 
 		// Sticky Sidebar
 
-		function sticky_relocate() {
-			var window_height = window.innerHeight;
-		    var window_top = $(window).scrollTop();
-		    var div_top = $('#sidebar-anchor').offset().top;
-		    if (window_top > (div_top + 240)) {
-		        $('#sidebar').addClass('sticky').css({'height': window_height, 'overflow':'scroll'});
-		    } else {
-		        $('#sidebar').removeClass('sticky');
-		    }
-		}
-
 		if (isTouchDevice()===true) {
 			return;
 		} else {
@@ -63,11 +86,9 @@
 		// Signup Modal  //
 		/////////////////////
 		
-		if (isTouchDevice()===true) {
-			return;
-		} else {
-			$('#email-signup').delay(3200).fadeIn(600);
-		}
+		$(window).on('load', function() {
+			loadNewsletter();
+		});
 
 	 //    $(window).scroll(function() {
 	 //    	if ($.cookie('newsletter')) {
@@ -75,16 +96,22 @@
 	 //    	} else if ($(document).scrollTop() > 150) {
 	 //    		$("#email-signup").fadeIn(500);
 	 //    		$('#fieldName').focus();
-		//         $("#newsletterClose").click(function() {
-		//             $("#email-signup").fadeOut(500);
-		//             $.cookie('newsletter', 14);
-		//         });
+	//         $("#newsletterClose").click(function() {
+	//             $("#email-signup").fadeOut(500);
+	//             $.cookie('newsletter', 14);
+	//         });
 	 //    	}
 		// });
+	
+		$("#newsletterClose").click(function() {
+            $("#email-signup").fadeOut(500);
+            $.cookie('newsletter', 14);
+        });
 
-		$('#signupButton').on('click', function() {
+		$('#signupButton').on('click', function(e) {
+			e.preventDefault();
 			$("#email-signup").fadeIn(500);
-    		$('#fieldName').focus();
+    		// $('#fieldName').focus();
 	        $("#newsletterClose").click(function() {
 	            $("#email-signup").fadeOut(500);
 	        });
@@ -93,6 +120,7 @@
 		$('#email-signup .back').click(function(e){
 	        e.preventDefault();
 	        $("#email-signup").fadeOut(500);
+	        $.cookie('newsletter', 14);
 		});
 
 		// Detect User Agent

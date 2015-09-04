@@ -29,10 +29,10 @@
 	                <!-- <h2 class="text-center">Get On The List</h2> -->
 	                <form action="http://galoremag.createsend.com/t/i/s/tjcj/" method="post">
 	                    <div class="form-group">
-	                        <input placeholder="Your Name" class="form-control" id="fieldName" name="cm-name" type="text" required />
+	                        <input class="form-control" id="fieldName" name="cm-name" type="text" placeholder="Your Name" required />
 	                    </div>
 	                    <div class="form-group">
-	                        <input placeholder="Your Email" class="form-control" id="fieldEmail" name="cm-tjcj-tjcj" type="email" required />
+	                        <input class="form-control" id="fieldEmail" name="cm-tjcj-tjcj" type="email" placeholder="Your Email" required />
 	                    </div>
 	                    <div class="form-group">
 	                        <button class="btn btn-bp" type="submit">Subscribe</button>
