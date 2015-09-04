@@ -6,8 +6,6 @@
 
 	<?php wp_footer(); ?>
 
-	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js"></script> -->
-
 	<div id="fb-root"></div>
 	<script>
 	  window.fbAsyncInit = function() {

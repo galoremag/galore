@@ -15,18 +15,26 @@ Version: 1.0.1
 @import "../bower_components/fontawesome/less/font-awesome.less";
 @fa-font-path: "fonts"; // Font Awesome font directory override
 
-/* Google fonts */
-@import url(//fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
-@import url(//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
+@font-face {
+    font-family: 'Karla';
+    src: url('../galore/fonts/karla-regular-webfont.eot');
+    src: url('../galore/fonts/karla-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../galore/fonts/karla-regular-webfont.woff2') format('woff2'),
+         url('../galore/fonts/karla-regular-webfont.woff') format('woff'),
+         url('../galore/fonts/karla-regular-webfont.ttf') format('truetype'),
+         url('../galore/fonts/karla-regular-webfont.svg#karlaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'salome';
-    src: url('../fonts/salome-webfont.eot');
-    src: url('../fonts/salome-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/salome-webfont.woff2') format('woff2'),
-         url('../fonts/salome-webfont.woff') format('woff'),
-         url('../fonts/salome-webfont.ttf') format('truetype'),
-         url('../fonts/salome-webfont.svg#salomeregular') format('svg');
+    src: url('../galore/fonts/salome-webfont.eot');
+    src: url('../galore/fonts/salome-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../galore/fonts/salome-webfont.woff2') format('woff2'),
+         url('../galore/fonts/salome-webfont.woff') format('woff'),
+         url('../galore/fonts/salome-webfont.ttf') format('truetype'),
+         url('../galore/fonts/salome-webfont.svg#salomeregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -1037,7 +1045,6 @@ nav.shrink .navbar-brand {
 	background: @pink;
 	color: black;
 	border: 0px;
-	padding: 5px 10px 5px 8px;
 	margin: 10px 0px 0px 0px;
 	z-index: 9999;
 	width: 32px;
@@ -1075,6 +1082,11 @@ nav.shrink .navbar-brand {
 
 .modal-nav-close {
 	cursor: pointer;
+}
+
+#nav-button {
+	padding: 6px 8px 5px 8px;
+    position: absolute;
 }
 
 .hmbrgr {

@@ -5,7 +5,7 @@
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<div id="modal-nav-button" class="nav-button pull-left">
-						<a id="nav-button" href="#" class="hmbrgr"></a>
+						<a id="nav-button" href="#"><div class="hmbrgr"></div></a>
 					</div>
 					<div id="site-search" class="pull-left hidden-xs">
 						<!-- <?php get_search_form(); ?> -->
