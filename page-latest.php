@@ -20,7 +20,7 @@
 	<div class="row-fluid">
 		<div id="content" class="col-sm-10 col-sm-offset-1">
 			<?php if ( have_posts() ): ?>
-			<h2 class="text-center"><span>The</span> Latest</h2>
+			<h2 class="text-center"><i class="fa fa-flash"></i> The Daily Dish <i class="fa fa-flash"></i></h2>
 			<hr>
 			<ol>
 			<?php $popularpost = new WP_Query( array( 'posts_per_page' => 4, 'meta_key' => 'wpb_post_views_count', 'orderby' => 'date', 'order' => 'DESC'  ) ); while ( $popularpost->have_posts() ) : $popularpost->the_post(); ?>

@@ -18,8 +18,13 @@ module.exports = (grunt) ->
         options:
           separator: ";\n"
         src: [
+          'bower_components/bootstrap/dist/js/bootstrap.min.js'
           'bower_components/jquery/dist/jquery.min.js'
-          'js/**/*.js'
+          'bower_components/jquery-cookie/jquery.cookie.js'
+          'bower_components/jquery.scrollTo/jquery.scrollTo.min.js'
+          'bower_components/jquery-placeholder/jquery.placeholder.min.js'
+          'bower_components/smooth-scroll/smooth-scroll.min.js'
+          'js/*.js'
         ]
         dest: 'prod.js'
 
@@ -48,12 +53,12 @@ module.exports = (grunt) ->
         options:
           livereload: true
       js:
-        files: ['js/**/*.js']
+        files: ['js/*.js']
         tasks: ['concat:js', 'uglify:js']
         options:
           livereload: true
       less:
-        files: ['less/**/*.less']
+        files: ['less/*.less']
         tasks: ['less:style']
         options:
           livereload: true

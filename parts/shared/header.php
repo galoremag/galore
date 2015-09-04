@@ -5,7 +5,7 @@
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<div id="modal-nav-button" class="nav-button pull-left">
-						<a id="nav-button" href="#" class="hmbrgr"></a>
+						<a id="nav-button" href="#"><div class="hmbrgr"></div></a>
 					</div>
 					<div id="site-search" class="pull-left hidden-xs">
 						<!-- <?php get_search_form(); ?> -->
@@ -23,12 +23,13 @@
 				</div>
 				<div>
 					<ul class="top-social navbar-right tab hidden-xs">
-						<li><a id="signupButton" href="#"><i class="fa fa-inbox"></i></a></li>
+						<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">TV <i class="fa fa-television"></i></a></li>
+						<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
 						<li><a href="https://www.facebook.com/galoremag" target="_blank"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="http://instagram.com/kittengalore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 						<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li>
-						<li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+						<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
+						<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
 						<!-- <li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li> -->
 					</ul>
 				</div><!--/.nav-collapse -->

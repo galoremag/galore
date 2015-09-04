@@ -3,12 +3,20 @@
 <!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]--> 
 <!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]--> 
 <!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]--> 
-<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html class="no-js" lang="en"><!--<![endif]-->
 	<head>
+
 		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
 		<?php
 		if (is_home()) {
 		    $blog_title = get_bloginfo('name') . " | " . get_bloginfo('description');
+		} elseif (is_category()) {
+			$blog_title = single_cat_title('', false) . " | " . get_bloginfo('name');
+		} elseif (is_tag()) {
+			$blog_title = single_tag_title('', false) . " | " . get_bloginfo('name');
+		} elseif (is_author()) {
+			$blog_title = get_the_author() . " | " . get_bloginfo('name');
 		} else {
 			$blog_title = get_the_title() . " | " . get_bloginfo('name');
 		}
@@ -22,7 +30,23 @@
 	  	<!-- Post Meta Description -->
 		<?php if ( (is_page()) || (is_single()) ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<meta name="description" content="<?php echo get_the_excerpt(); ?>" />
-		<?php endwhile; endif; elseif(is_home()) : ?>
+		<meta name="author" content="<?php echo get_the_author() ; ?>">
+		<link rel="author" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"/>
+		<meta property="article:author" content="<?php echo get_the_author() ; ?>" />
+
+		<?php endwhile; endif; elseif ( (is_category()) || (is_tag()) ) : ?>
+		<meta name="description" content="<?php echo single_cat_title(); ?>" />
+		<meta name="author" content="Galore">
+		<link rel="author" href="http://GaloreMag.com"/>
+		<meta property="article:author" content="Galore" />
+
+		<?php elseif (is_author()) : ?>
+		<meta name="description" content="<?php echo get_the_author_meta( 'description' ); ?>" />
+		<meta name="author" content="<?php echo get_the_author(); ?>">
+		<link rel="author" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"/>
+		<meta property="article:author" content="<?php echo get_the_author(); ?>" />
+
+		<?php elseif(is_home()) : ?>
 
 		<!-- Site-wide Meta Description -->
 	  	<meta name="description" content="GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative woman in her 20's surrounding Style, Beauty, Pop, Sex + Dating and Fitness.">
@@ -31,41 +55,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
 		
 		<meta name="keywords" content="Galore, Galore Girls, girls, edgy, sexy, teens, teenager, pop culture, Justin Bieber, Nicki Minaj, Kanye West, entertainment">
-		<meta name="author" content="Galore Girl">
 
 		<!-- Pinterest Verification -->
 		<meta name="p:domain_verify" content="8c3f8aadea8dcff760f98a676ca9a2f7"/>
+
+		<meta name="google-site-verification" content="9q_iilZ2axazp6DWJG9YsrsLMupyES5IOH2jc4Mm2t4" />
 
 		<link rel="author" href="https://plus.google.com/111766775974771084195"/>
 
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico"/>
 
-		<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
 		<!-- basic stylesheet -->
 		<link rel="stylesheet" href="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/royalslider.css">
 
-		<!-- skin stylesheet (change it if you use another) -->
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/rs-galore-skin/rs-galore.css"> 
-
-		<!-- Perfect Scrollbar CSS -->
-		<link rel='stylesheet' href='<?php echo get_stylesheet_directory_uri(); ?>/css/perfect-scrollbar.min.css' />
-
-		<!-- Plugin requires jQuery 1.8+  -->
-		<!-- <script src='<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery-1.7.2.min.js'></script> -->
-		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/bower_components/jquery/dist/jquery.min.js'></script>
-
-		<!-- BOOSTRAP -->
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
 		<?php wp_head(); ?>
 
-		<script src="//use.typekit.net/uqi4yop.js"></script>
-		<script>try{Typekit.load();}catch(e){}</script>
-
 		<!-- Main slider JS script file --> 
-		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
+		<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
 
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>		
@@ -73,11 +81,11 @@
 
 		<script type="text/javascript">
 
-		( function( $ ) {
-		    $( document.body ).on( 'post-load', function () {
-		        // New posts have been added to the page.
-		    } );
-		} )( jQuery );
+		// ( function( $ ) {
+		//     $( document.body ).on( 'post-load', function () {
+		//         // New posts have been added to the page.
+		//     } );
+		// } )( jQuery );
 
 		</script>
 
@@ -99,31 +107,6 @@
 
 		<!-- Google Tag Manager Plugin -->
 		<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
-
-
-		<div id="fb-root"></div>
-		<script>
-		  window.fbAsyncInit = function() {
-		    FB.init({
-		      appId      : '341699539354957',
-		      xfbml      : true,
-		      version    : 'v2.2'
-		    });
-		  };
-
-		  (function(d, s, id){
-		     var js, fjs = d.getElementsByTagName(s)[0];
-		     if (d.getElementById(id)) {return;}
-		     js = d.createElement(s); js.id = id;
-		     js.src = "//connect.facebook.net/en_US/sdk.js";
-		     fjs.parentNode.insertBefore(js, fjs);
-		   }(document, 'script', 'facebook-jssdk'));
-
-		</script>
-
-		<script>
-		window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
-		</script>
 
 		<script type="text/javascript">
 			var isMobile = false; //initiate as false

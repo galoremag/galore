@@ -22,15 +22,15 @@
 			</div>
 			<hr>
 			<ol>
-			<?php query_posts('posts_per_page=4&offset=0'); ?>
+			<?php query_posts('posts_per_page=4&offset=0&ignore_sticky_posts=true'); ?>
 			<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<li class="post">
 					<article class="row-fluid">
 						<div class="nopad col-sm-4">
 							<div class="catlinks"><?php the_category(); ?></div>
-							<div class="thumbnail">
-								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large'); ?></a>
+							<div class="thumb">
+								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
 							</div>
 						</div>
 						<div class="nopadright col-sm-8">
@@ -57,7 +57,7 @@
 			<?php 
 			$cat = get_category( get_query_var( 'cat' ) );
 			$category = $cat->slug;
-			echo do_shortcode('[ajax_load_more category="'.$category.'" offset="4"]');
+			echo do_shortcode('[ajax_load_more category="'.$category.'" offset="7" ignore_sticky_posts="true"]');
 			?>
 
 			<!-- <div id="post-nav">

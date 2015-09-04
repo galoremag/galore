@@ -7,58 +7,6 @@ Description: 2015 Digital GaloreMag.com
 Version: 1.0.1
 */
 
-/* Bootstrap imports */
-
-/* Core variables and mixins */
-@import "../bower_components/bootstrap/less/variables.less";
-@import "../bower_components/bootstrap/less/mixins.less";
-
-/* Reset */
-@import "../bower_components/bootstrap/less/normalize.less";
-@import "../bower_components/bootstrap/less/print.less";
-
-/* Core CSS */
-@import "../bower_components/bootstrap/less/scaffolding.less";
-@import "../bower_components/bootstrap/less/type.less";
-@import "../bower_components/bootstrap/less/code.less";
-@import "../bower_components/bootstrap/less/grid.less";
-@import "../bower_components/bootstrap/less/tables.less";
-@import "../bower_components/bootstrap/less/forms.less";
-@import "../bower_components/bootstrap/less/buttons.less";
-
-/* Components */
-@import "../bower_components/bootstrap/less/component-animations.less";
-@import "../bower_components/bootstrap/less/glyphicons.less";
-@import "../bower_components/bootstrap/less/dropdowns.less";
-@import "../bower_components/bootstrap/less/button-groups.less";
-@import "../bower_components/bootstrap/less/input-groups.less";
-@import "../bower_components/bootstrap/less/navs.less";
-@import "../bower_components/bootstrap/less/navbar.less";
-@import "../bower_components/bootstrap/less/breadcrumbs.less";
-@import "../bower_components/bootstrap/less/pagination.less";
-@import "../bower_components/bootstrap/less/pager.less";
-@import "../bower_components/bootstrap/less/labels.less";
-@import "../bower_components/bootstrap/less/badges.less";
-@import "../bower_components/bootstrap/less/jumbotron.less";
-@import "../bower_components/bootstrap/less/thumbnails.less";
-@import "../bower_components/bootstrap/less/alerts.less";
-@import "../bower_components/bootstrap/less/progress-bars.less";
-@import "../bower_components/bootstrap/less/media.less";
-@import "../bower_components/bootstrap/less/list-group.less";
-@import "../bower_components/bootstrap/less/panels.less";
-@import "../bower_components/bootstrap/less/wells.less";
-@import "../bower_components/bootstrap/less/close.less";
-
-/* Components w/ JavaScript */
-@import "../bower_components/bootstrap/less/modals.less";
-@import "../bower_components/bootstrap/less/tooltip.less";
-@import "../bower_components/bootstrap/less/popovers.less";
-@import "../bower_components/bootstrap/less/carousel.less";
-
-/* Utility classes */
-@import "../bower_components/bootstrap/less/utilities.less";
-@import "../bower_components/bootstrap/less/responsive-utilities.less";
-
 /*@import "../less/base.less";
 @import "../less/lesshat.less";*/
 @import "../less/hmbrgr.less";
@@ -67,18 +15,26 @@ Version: 1.0.1
 @import "../bower_components/fontawesome/less/font-awesome.less";
 @fa-font-path: "fonts"; // Font Awesome font directory override
 
-/* Google fonts */
-@import url(//fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
-@import url(//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
+@font-face {
+    font-family: 'Karla';
+    src: url('../galore/fonts/karla-regular-webfont.eot');
+    src: url('../galore/fonts/karla-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../galore/fonts/karla-regular-webfont.woff2') format('woff2'),
+         url('../galore/fonts/karla-regular-webfont.woff') format('woff'),
+         url('../galore/fonts/karla-regular-webfont.ttf') format('truetype'),
+         url('../galore/fonts/karla-regular-webfont.svg#karlaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'salome';
-    src: url('../fonts/salome-webfont.eot');
-    src: url('../fonts/salome-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/salome-webfont.woff2') format('woff2'),
-         url('../fonts/salome-webfont.woff') format('woff'),
-         url('../fonts/salome-webfont.ttf') format('truetype'),
-         url('../fonts/salome-webfont.svg#salomeregular') format('svg');
+    src: url('../galore/fonts/salome-webfont.eot');
+    src: url('../galore/fonts/salome-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../galore/fonts/salome-webfont.woff2') format('woff2'),
+         url('../galore/fonts/salome-webfont.woff') format('woff'),
+         url('../galore/fonts/salome-webfont.ttf') format('truetype'),
+         url('../galore/fonts/salome-webfont.svg#salomeregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -93,7 +49,8 @@ Version: 1.0.1
 /*  VARIABLES & MIXINS  */
 
 /*@pink : #E81B8E;*/
-@pink : #FA7470;
+/*@pink : #FA7470;*/
+@pink   : #66ccff;
 @yellow : #fff200;
 @salmon : #FA7470;
 @galwhite : antiquewhite;
@@ -553,7 +510,7 @@ blockquote p, blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
 	opacity: 1 !important;
 }
 
-.thumbnail {
+.thumb {
 	max-height: 260px;
 	overflow: hidden !important;
 	border: 0px;
@@ -1088,7 +1045,6 @@ nav.shrink .navbar-brand {
 	background: @pink;
 	color: black;
 	border: 0px;
-	padding: 5px 10px 5px 8px;
 	margin: 10px 0px 0px 0px;
 	z-index: 9999;
 	width: 32px;
@@ -1126,6 +1082,11 @@ nav.shrink .navbar-brand {
 
 .modal-nav-close {
 	cursor: pointer;
+}
+
+#nav-button {
+	padding: 6px 8px 5px 8px;
+    position: absolute;
 }
 
 .hmbrgr {
@@ -1179,7 +1140,7 @@ ul.modal-nav-menu li a:hover {
 
 #superhero {
 	width: 100%;
-	height: 90vh;
+	height: 100vh;
 	background-size: cover !important;
 	background-attachment: fixed;
 	background-position: center center !important;
@@ -1191,7 +1152,9 @@ ul.modal-nav-menu li a:hover {
 	vertical-align: bottom;
 	float: none !important;
 	text-align: right;
-	padding-bottom: 80px !important;
+	padding: 80px 15px 120px 15px!important;
+	letter-spacing:-1px;
+	font-size:30px;
 }
 
 #scroll-down {
@@ -1249,7 +1212,7 @@ ul.modal-nav-menu li a:hover {
 	top: 0px;
 	padding: 0px;
 	margin: 0px;
-	background: url(images/valfre.png) repeat;
+	background: url(images/valfre2.png) repeat;
 	background-size: 300px 300px;
 	.translate;
 }
@@ -1260,7 +1223,7 @@ ul.modal-nav-menu li a:hover {
 
 .jumbotron-in {
 	padding: 120px 0px 120px 0px;
-	background: fade(lightpink, 66%);
+	/*background: fade(@pink, 33%);*/
 	width: 100%;
 	height: 100%;
 }
@@ -1576,55 +1539,65 @@ ul.post-social h4 {
 .post-grid {
 	margin-left: 0;
 	margin-right: 0;
-	display: inline-block;
-	-moz-column-count: 2;
+	/*display: inline-block;*/
+	/*-moz-column-count: 2;
 	-webkit-column-count: 2;
 	column-count: 2;
 	-moz-column-gap: 1em;
 	-webkit-column-gap: 1em;
-	column-gap: 1em;
+	column-gap: 1em;*/
 }
 
-.post-node {
+.post-grid h3 {
+	font-size: 18px;
+}
+
+/*.post-node {
 	display: table-footer-group;
 	display: -moz-deck;
 	width: 100%;
-}
+}*/
 
 .pop-in .post-grid {
 	margin-left: -15px;
 	margin-right: -15px;
 	display: inline-block;
-	-moz-column-count: 3;
+	/*display: inline-block;*/
+	/*-moz-column-count: 3;
 	-webkit-column-count: 3;
 	column-count: 3;
 	-moz-column-gap: 1em;
 	-webkit-column-gap: 1em;
-	column-gap: 1em;
+	column-gap: 1em;*/
 }
 
-.pop-in .post-node {
+/*.pop-in .post-node {
 	display: table-footer-group;
 	display: -moz-deck;
 	padding: 1em;
 	width: 100%;
-}
+}*/
 
 /*.post-grid h2 a {color: #77787a; font-size: 13px;}
 .post-grid .griditemleft {float: left; width: 278px; margin: 0 40px 40px 0;}
 .post-grid .griditemright {float: left; width: 278px;}
 .post-grid .postimage {margin: 0 0 10px 0;}*/
 
-.post-grid .entry {
+/*.post-grid .entry {
 	display: table-cell;
 	height: 350px;
-}
+}*/
 
 .post-grid a.postimage {
 	height: 200px !important;
 	overflow: hidden;
 	display: block;
 	/*border-radius: 4px;*/
+}
+
+.thumbnail {
+	border: 0px;
+	background: transparent;
 }
 
 /* STYLE SECTION HOMEPAGE */
@@ -1747,10 +1720,10 @@ ul.post-social h4 {
 	text-transform: uppercase;
 }
 
-.style .post-grid .entry {
+/*.style .post-grid .entry {
 	display: table-cell;
 	height: 340px;
-}
+}*/
 
 .darlings a.postimage {
 	height: 200px !important;
@@ -1919,6 +1892,8 @@ article p {
 .wp-caption-text {
 	text-align: center;
 	font-size: 10px;
+	display: table;
+	width: 100%;
 }
 
 h2.stuckHead {
@@ -2110,17 +2085,8 @@ button.alm-load-more-btn.done:before {
    color: white !important;  
 }
 
-#email-signup {
-	position: fixed;
-	.translate;
-	top: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	display: none;
-}
+input, textarea { .font2; color: @pink !important; }
+
 #site-search {
 	height: 50px;
 }
@@ -2134,7 +2100,7 @@ button.alm-load-more-btn.done:before {
 	.font2;
 	margin: 10px 15px;
 	border-radius: 20px;
-	opacity: 0.5;
+	opacity: 0.7;
 	width: 200px;
 	.transition;
 }
@@ -2167,16 +2133,38 @@ button.alm-load-more-btn.done:before {
 
 /*  NEWSLETTER SIGNUP MODAL  */
 
+#email-signup {
+	position: fixed;
+	.translate;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9990;
+	display: none;
+}
+
+#email-signup .back {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+	z-index: 9991;
+}
+
 #signupButton {
 	cursor: pointer;
 }
 
 .email-signup-dialog {
+	z-index: 9992;
 	margin-top: 100px;
 }
 
 .email-signup.in .email-signup-dialog {
-	z-index: 9999;
+	z-index: 9993;
 }
 
 .email-signup-content {
@@ -2278,7 +2266,7 @@ time {
 		text-align: right;
 		width: 100%;
 	}
-	.post-grid {
+/*	.post-grid {
 		-moz-column-count: 1;
 		-webkit-column-count: 1;
 		column-count: 1;
@@ -2294,7 +2282,7 @@ time {
 		-moz-column-gap: 1em;
 		-webkit-column-gap: 1em;
 		column-gap: 1em;
-	}
+	}*/
 	.home-style .rsGalore {
 		height: 320px !important;
 		width: auto !important;
@@ -2341,7 +2329,7 @@ time {
 		line-height: 1;
 	}
 	.nopadright {
-		padding: 0px;
+		padding-right: 0px;
 	}
 	blockquote {
 		border-left: 0px;
@@ -2421,7 +2409,7 @@ time {
 		text-align: right;
 		width: 100%;
 	}
-	.post-grid {
+/*	.post-grid {
 		-moz-column-count: 1;
 		-webkit-column-count: 1;
 		column-count: 1;
@@ -2437,7 +2425,7 @@ time {
 		-moz-column-gap: 1em;
 		-webkit-column-gap: 1em;
 		column-gap: 1em;
-	}
+	}*/
 	footer div.footer-icon {
 		display: none !important;
 	}
@@ -2447,7 +2435,7 @@ time {
 @media only screen and (max-width : 320px) {
 /* Styles */
 	.nopadright {
-		padding: 0px;
+		padding-right: 0px;
 	}
 	#modal-nav-button {
 		width: 32px;
@@ -2495,7 +2483,7 @@ time {
 		font-size: 18px !important;
 		padding: 10px 15px !important;
 	}
-	.post-grid {
+/*	.post-grid {
 		-moz-column-count: 1;
 		-webkit-column-count: 1;
 		column-count: 1;
@@ -2511,7 +2499,7 @@ time {
 		-moz-column-gap: 1em;
 		-webkit-column-gap: 1em;
 		column-gap: 1em;
-	}
+	}*/
 }
 
 @media only screen and (max-width: 767px) {
@@ -2670,11 +2658,17 @@ time {
 	ul#menu-footer-menu li:last-child, ul#menu-footer li:last-child {
 		display: none !important;
 	}
-	.thumbnail {
+	.thumb {
 		width: 100%;
 	}
 	.email-signup-dialog {
 		margin-top: 20px;
+	}
+	.email-signup-body p {
+		font-size: 0.8em;
+	}
+	.email-signup-dialog .brand-white {
+		-webkit-transform: scale(0.7);
 	}
 }
 
@@ -2696,7 +2690,7 @@ time {
 		background-size: 150px 124px;
 	}
 	.jumbotron {
-		background: url(images/valfre_@2X.png) repeat;
+		background: url(images/valfre2_@2X.png) repeat;
 		background-size: 300px 300px;
 	}
 	.style {

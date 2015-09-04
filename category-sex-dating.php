@@ -22,7 +22,7 @@
 			<h2 class="text-center">The Latest in <span><?php echo single_cat_title( '', false ); ?></span> <i class="fa fa-heart"></i></h2>
 			<hr>
 			<ol>
-			<?php query_posts('category_name=sex-dating&posts_per_page=4&offset=3&ignore_sticky_posts=4'); ?>
+			<?php query_posts('category_name=sex-dating&posts_per_page=4&offset=3&ignore_sticky_posts=true'); ?>
 			<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<li class="post">
@@ -30,7 +30,7 @@
 						<div class="nopad col-sm-5">
 							<div class="catlinks"><?php the_category(); ?></div>
 							<div class="thumbnail">
-								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large', 300, 300); ?></a>
+								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
 							</div>
 							<h4>Share this post</h4>
 							<ul class="post-social pull-left">
@@ -58,7 +58,7 @@
 			<?php endif; ?>
 
 			<?php 
-			echo do_shortcode('[ajax_load_more category="sex-dating" button_label="More Shit" offset="4"]');
+			echo do_shortcode('[ajax_load_more category="sex-dating" button_label="Loading" offset="7" ignore_sticky_posts="true"]');
 			?>
 
 			<div class="spacer40"></div>

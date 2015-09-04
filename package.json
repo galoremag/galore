@@ -1,15 +1,15 @@
 {
   "name": "grunt-bower-wordpress",
   "title": "Grunt Bower WordPress",
-  "description": "Grunt & Bower Configuration for WordPress Themes",
+  "description": "Grunt & Bower Configuration for WordPress",
   "version": "1.0.1",
   "author": {
-    "name": "Justin Klemm",
-    "email": "jwklemm@gmail.com"
+    "name": "Aaron Smulktis",
+    "email": "aaron@galoremag.com"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/justinklemm/grunt-bower-wordpress.git"
+    "url": "https://github.com/galoremag/galore.git"
   },
   "engines": {
     "node": ">=0.10.25",

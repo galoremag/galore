@@ -68,7 +68,7 @@
 
 			<h2 class="text-center pad20">Recent Stories</h2>
 			<?php 
-			echo do_shortcode('[ajax_load_more post_type="post" orderby="date" button_label="More Shit"]');
+			echo do_shortcode('[ajax_load_more post_type="post" orderby="date" button_label="Loading"]');
 			?>
 
 			<!-- <div id="post-nav">

@@ -19,13 +19,22 @@
 			query_posts('posts_per_page=4&author='.$author.'&offset=0'); ?>
 			<?php if ( have_posts() ): the_post(); ?>
 
-			<h3>Stories by <span><?php echo get_the_author() ; ?></span></h3>
+			<h3>Stories by <span><?php echo get_the_author(); ?></span></h3>
 			<hr>
 
-			<?php if ( get_the_author_meta( 'description' ) ) : ?>
-			<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
-			<h4>About <?php echo get_the_author() ; ?></h4>
-			<?php the_author_meta( 'description' ); ?>
+			<div class="author-info row hidden-xs">
+				<?php if ( get_the_author_meta( 'description' ) ) : ?>
+				<div class="author-bio col-md-8 col-md-offset-2 text-right">
+					<h3><span><?php echo get_the_author() ; ?></span></h3>
+					<?php the_author_meta( 'description' ); ?>
+				</div>
+				<div class="author-pic col-md-2">
+					<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
+				</div>
+			</div>
+
+			<hr>
+
 			<?php endif; ?>
 
 			<ol>
@@ -34,7 +43,7 @@
 					<article class="row-fluid">
 						<div class="nopad col-sm-5">
 							<div class="catlinks"><?php the_category(); ?></div>
-							<div class="thumbnail">
+							<div class="thumb">
 								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large', 300, 150); ?></a>
 							</div>
 						</div>
