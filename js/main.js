@@ -159,16 +159,16 @@
         });
 
 		$('.hmbrgr').hmbrgr({
-		  width     : 14,
-		  height    : 10,
-		  barHeight : 1,
-		  barColor  : '#fff'
+			width     : 14,
+			height    : 10,
+			barHeight : 1,
+			barColor  : '#fff'
 		});
 
 		// Nav Button
 
 		$('#nav-button').on('click', function(event) {        
-             $('.modal-nav').fadeToggle('show');
+            $('.modal-nav').fadeToggle('show');
         });
 
         /////////////////////
