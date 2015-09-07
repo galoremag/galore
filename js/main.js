@@ -27,10 +27,10 @@
 	function defaulSelect() {
 		var first = $('select option:first-child');
 
-		if (first === null) {
+		if (first.val() === '') {
 			first.setAttribute('default');
 			first.setAttribute('selected');
-			first.val('Choose');
+			first.val('Choose').change();
 		}
 	}
 
