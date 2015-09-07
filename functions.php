@@ -41,8 +41,6 @@
 	
 	======================================================================================================================== */
 
-	add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer' );
-
 	add_filter( 'body_class', array( 'Starkers_Utilities', 'add_slug_to_body_class' ) );
 
 	/* ========================================================================================================================
@@ -72,9 +70,20 @@
 		// wp_register_script( 'site', get_template_directory_uri().'/js/prod.js', array( 'jquery' ) );
 		// wp_enqueue_script( 'site' );
 
+		wp_register_style( 'bootstrap', get_stylesheet_directory_uri().'/bower_components/bootstrap/dist/css/bootstrap.min.css', '', '', 'screen' );
+        wp_enqueue_style( 'bootstrap' );
+
+        wp_register_style( 'sliderskin', get_stylesheet_directory_uri().'/rs-galore-skin/rs-galore.css', '', '', 'screen' );
+        wp_enqueue_style( 'sliderskin' );
+
+        wp_register_style( 'perfect-scrollbar', get_stylesheet_directory_uri().'/css/perfect-scrollbar.min.css', '', '', 'screen' );
+        wp_enqueue_style( 'perfect-scrollbar' );
+
 		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
         wp_enqueue_style( 'screen' );
 	}	
+
+	add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer' );
 
 	/* ========================================================================================================================
 	

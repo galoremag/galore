@@ -59,34 +59,23 @@
 		<!-- Pinterest Verification -->
 		<meta name="p:domain_verify" content="8c3f8aadea8dcff760f98a676ca9a2f7"/>
 
+		<meta name="google-site-verification" content="9q_iilZ2axazp6DWJG9YsrsLMupyES5IOH2jc4Mm2t4" />
+
 		<link rel="author" href="https://plus.google.com/111766775974771084195"/>
 
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico"/>
 
 
-		<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
 		<!-- basic stylesheet -->
 		<link rel="stylesheet" href="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/royalslider.css">
 
-		<!-- skin stylesheet (change it if you use another) -->
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/rs-galore-skin/rs-galore.css"> 
-
-		<!-- Perfect Scrollbar CSS -->
-		<link rel='stylesheet' href='<?php echo get_stylesheet_directory_uri(); ?>/css/perfect-scrollbar.min.css' />
-
-		<!-- Plugin requires jQuery 1.8+  -->
-		<!-- <script src='<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery-1.7.2.min.js'></script> -->
-		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/bower_components/jquery/dist/jquery.min.js'></script>
-
-		<!-- BOOSTRAP -->
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
 		<?php wp_head(); ?>
 
+		<script src='//cdn.goroost.com/roostjs/sl6otjre2knha1dhhy3trjd9y94q775x' async></script>
+
 		<!-- Main slider JS script file --> 
-		<script type='application/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
+		<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
 
 		<!-- Create it with slider online build tool for better performance. -->
 		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>		
@@ -94,11 +83,11 @@
 
 		<script type="text/javascript">
 
-		( function( $ ) {
-		    $( document.body ).on( 'post-load', function () {
-		        // New posts have been added to the page.
-		    } );
-		} )( jQuery );
+		// ( function( $ ) {
+		//     $( document.body ).on( 'post-load', function () {
+		//         // New posts have been added to the page.
+		//     } );
+		// } )( jQuery );
 
 		</script>
 
