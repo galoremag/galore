@@ -20,13 +20,23 @@
 	    }
 	}
 
-	function isTouchDevice(){
+	function isTouchDevice() {
 		return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
+	}
+
+	function defaulSelect() {
+		var first = $('select option:first-child');
+
+		if (first === null) {
+			first.attr('default');
+			first.attr('selected');
+			first.text('Choose');
+		}
 	}
 
 	jQuery(document).ready(function($) {
 
-		$('select option:first-child').attr('value','Choose');
+		defaulSelect();
 
 		// FIX PLACEHOLDERS
 	    $('[placeholder]').focus(function() {
