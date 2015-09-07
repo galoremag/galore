@@ -2,7 +2,7 @@
 	<?php //shopp('checkout','cart-summary'); ?>
 	<?php if (shopp('cart','hasitems')): ?>
 	<div class="shop-checkout">
-		<h2>Checkout</h2>
+		<h2 class="text-center">Checkout</h2>
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="row-fluid">
@@ -43,6 +43,9 @@
 					
 					<?php endif; ?>
 					
+				</div>
+				<div class="row-fluid">
+
 					<div class="col-md-6">
 						<h2>Your Contact Information</h2>
 						<div class="form-group">
@@ -67,6 +70,9 @@
 						</div><!--/form-group-->
 					</div><!--/col-md-6-->
 					
+				</div>
+				<div class="row-fluid">
+
 					<!-- <div class="col-md-6"><h2>Secure</h2></div> -->
 					<div class="clearfix"></div>
 					
@@ -149,6 +155,9 @@
 						<?php endif; ?>
 						
 					</div><!--/col-md-6-->
+
+				</div>
+				<div class="row-fluid">
 
 					<div class="clearfix"></div>
 					
