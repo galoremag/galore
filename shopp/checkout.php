@@ -44,10 +44,10 @@
 					<?php endif; ?>
 					
 					<div class="col-md-6">
-						<h3>Your Contact Information</h3>
+						<h2>Your Contact Information</h2>
 						<div class="form-group">
 							<label for="firstname">First Name</label>
-							<?php shopp('checkout','firstname','required=true&minlength=2&class=form-control&title=First Name'); ?>
+							<?php shopp('checkout','firstname','required=true&minlength=2&class=form-control&title=First Name&placeholder=Your Name'); ?>
 						</div><!--/form-group-->
 						<div class="form-group">
 							<label for="lastname">Last Name</label>
@@ -67,11 +67,11 @@
 						</div><!--/form-group-->
 					</div><!--/col-md-6-->
 					
-					<!-- <div class="col-md-6"><h3>Secure</h3></div> -->
+					<!-- <div class="col-md-6"><h2>Secure</h2></div> -->
 					<div class="clearfix"></div>
 					
 					<div class="col-md-6">
-						<h3>Billing Address</h3>
+						<h2>Billing Address</h2>
 						<?php if (shopp('cart','needs-shipped')): ?>
 
 						<div id="billing-address-fields" class="row-fluid">
@@ -109,10 +109,10 @@
 					</div><!--/col-md-6-->
 					
 					<div class="col-md-6">
-						<h3>
+						<h2>
 							Shipping Address
 							<div class=""><?php shopp('checkout','same-shipping-address'); ?></div>
-						</h3>
+						</h2>
 						<?php if (shopp('cart','needs-shipped')): ?>
 						<div id="shipping-address-fields" style="display:none">
 							<div class="form-group">
@@ -168,7 +168,7 @@
 						<?php if (shopp('checkout','card-required')): ?>
 						
 						<div class="payment">
-							<h3>Payment Information</h3>
+							<h2>Payment Information</h2>
 							<div class="form-group">
 								<label for="billing-cardholder">Name on Card</label>
 								<?php shopp('checkout','billing-cardholder','required=true&size=30&class=form-control&title=Card Holder\'s Name'); ?>
@@ -207,7 +207,7 @@
 					</div><!--/col-md-6-->
 					
 					<div class="col-md-6">
-						<h3>Secure Payment <i class="ss-icon ss-standard">&#x1F512;</i></h3>
+						<h2>Secure Payment <i class="ss-icon ss-standard">&#x1F512;</i></h2>
 						<p>This is a secure 128-bit SSL Encryption payment. You're Safe.</p>
 						<span id="siteseal"><script type="text/javascript" src="https://seal.starfieldtech.com/getSeal?sealID=wJvwFTptDbKXsIEPMJQDLCyNeMlGaNRUfaG7kbDlEgmbx1tz2NcX9Q"></script></span>
 					</div><!--/col-md-6-->
