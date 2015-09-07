@@ -25,7 +25,7 @@
 	}
 
 	function fixSelect() {
-		var select = $('select option');
+		var select = $('.form-group select option');
 		var defOption = select.first();
 
 		console.log(select);
