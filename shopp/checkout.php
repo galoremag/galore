@@ -73,7 +73,7 @@
 					<div class="col-md-6">
 						<h3>Billing Address</h3>
 						<?php if (shopp('cart','needs-shipped')): ?>
-							
+
 						<div id="billing-address-fields" class="row-fluid">
 							<?php else: ?>
 							<?php endif; ?>
@@ -116,32 +116,32 @@
 						<?php if (shopp('cart','needs-shipped')): ?>
 						<div id="shipping-address-fields" style="display:none">
 							<div class="control-group">
-								<label for="shipping-name" class="control-label">Full Name</label>
+								<label for="shipping-name">Full Name</label>
 								<?php shopp('checkout','shipping-name','required=false&class=form-control&title=Bill to'); ?>
 							</div><!--/control-group-->
 							<div class="control-group">
-								<label for="shipping-address" class="control-label">Steet Address</label>
+								<label for="shipping-address">Steet Address</label>
 								<?php shopp('checkout','shipping-address','required=true&class=form-control&title=shipping street address'); ?>
 							</div><!--/control-group-->
 							<div class="control-group">
-								<label for="shipping-xaddress" class="control-label">Apt, Suite, Bldg. (optional)</label>
+								<label for="shipping-xaddress">Apt, Suite, Bldg. (optional)</label>
 								<?php shopp('checkout','shipping-xaddress','title=shipping address line 2&class=form-control'); ?>
 							</div><!--/control-group-->
 							<div class="control-group">
-								<label for="shipping-city" class="control-label">City</label>
+								<label for="shipping-city">City</label>
 								<?php shopp('checkout','shipping-city','required=true&class=form-control&title=City shipping address'); ?>
 							</div><!--/control-group-->
 							<div class="control-group">
-								<label for="shipping-state" class="control-label">State</label>
+								<label for="shipping-state">State</label>
 								<?php shopp('checkout','shipping-state','required=true&class=form-control&title=State/Provice/Region shipping address'); ?>
 							</div><!--/control-group-->
 							<div class="control-group">
-								<label for="shipping-postcode" class="control-label">Postal / Zip Code</label>
+								<label for="shipping-postcode">Postal / Zip Code</label>
 								<?php shopp('checkout','shipping-postcode','required=true&class=form-control&title=Postal/Zip Code shipping address'); ?>
 							</div><!--/control-group-->
 							
 							<div class="control-group">
-								<label for="shipping-country" class="control-label">Country</label>
+								<label for="shipping-country">Country</label>
 								<?php shopp('checkout','shipping-country','required=true&class=form-control&title=Country shipping address'); ?>
 							</div><!--/control-group-->
 						</div><!--/shipping-address-fields-->
@@ -157,7 +157,7 @@
 						<?php if (shopp('checkout','billing-localities')): ?>
 						<div class="half locale hidden">
 							<div class="control-group">
-								<label for="billing-locale" class="control-label">Local Jurisdiction</label>
+								<label for="billing-locale">Local Jurisdiction</label>
 								<?php shopp('checkout','billing-locale'); ?>
 							</div><!--/control-group-->
 						</div><!--/locale-->
@@ -170,27 +170,27 @@
 						<div class="payment">
 							<h3>Payment Information</h3>
 							<div class="control-group">
-								<label for="billing-cardholder" class="control-label">Name on Card</label>
+								<label for="billing-cardholder">Name on Card</label>
 								<?php shopp('checkout','billing-cardholder','required=true&size=30&class=form-control&title=Card Holder\'s Name'); ?>
 							</div><!--/control-group-->
 							<div class="control-group">
-								<label for="billing-cardtype" class="control-label">Card Type</label>
+								<label for="billing-cardtype">Card Type</label>
 								<?php shopp('checkout','billing-cardtype','required=true&class=form-control&title=Card Type'); ?>
 							</div><!--/control-group-->
 							<div class="control-group">
-								<label for="billing-card" class="control-label">Card Number</label>
+								<label for="billing-card">Card Number</label>
 								<?php shopp('checkout','billing-card','required=true&size=30&class=form-control&title=Credit/Debit Card Number'); ?>
 							</div><!--/control-group-->
 							<div class="control-group">
-								<label for="billing-cardexpires-mm" class="control-label">MM</label>
+								<label for="billing-cardexpires-mm">MM</label>
 								<?php shopp('checkout','billing-cardexpires-mm','size=4&required=true&minlength=2&maxlength=2&class=form-control&title=Card\'s 2-digit expiration month'); ?>
 							</div><!--/control-group-->
 							<div class="control-group">
-								<label for="billing-cardexpires-yy" class="control-label">YY</label>
+								<label for="billing-cardexpires-yy">YY</label>
 								<?php shopp('checkout','billing-cardexpires-yy','size=4&required=true&minlength=2&maxlength=2&class=form-control&title=Card\'s 2-digit expiration year'); ?>
 							</div><!--/control-group-->
 							<div class="control-group">
-								<label for="billing-cvv" class="control-label">Card Security Code</label>
+								<label for="billing-cvv">Card Security Code</label>
 								<?php shopp('checkout','billing-cvv','size=7&minlength=3&maxlength=4&class=form-control&title=Card\'s security code (3-4 digits on the back of the card)'); ?>
 							</div><!--/control-group-->
 							
