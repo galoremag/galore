@@ -26,7 +26,7 @@
 
 	function fixSelect() {
 		var select = $('select option');
-		var defOption = $select.first();
+		var defOption = select.first();
 
 		if (defOption.getAttribute('value') == null) {
 			defOption.setAttribute('value','Choose');
