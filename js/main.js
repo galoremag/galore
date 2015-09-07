@@ -28,8 +28,8 @@
 		var first = $('select option:first-child');
 
 		if (first.val() === '') {
-			first.setAttribute('default');
-			first.setAttribute('selected');
+			first.attr('default');
+			first.attr('selected');
 			first.val('Choose').change();
 		}
 	}
