@@ -25,12 +25,12 @@
 	}
 
 	function defaulSelect() {
-		var first = $('select option:first-child');
+		var firstOpt = $('select option:first-child');
 
-		if (first.val() === '') {
-			first.attr('default');
-			first.attr('selected');
-			first.val('Choose').change();
+		if (firstOpt.val() == '') {
+			firstOpt.attr('default', '');
+			firstOpt.attr('selected', '');
+			firstOpt.val('Choose').change();
 		}
 	}
 
