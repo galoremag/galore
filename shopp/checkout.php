@@ -180,17 +180,19 @@
 								<!-- <label for="billing-card">Card Number</label> -->
 								<?php shopp('checkout','billing-card','required=true&size=30&class=form-control&title=Credit/Debit Card Number&placeholder=Card Number'); ?>
 							</div><!--/form-group-->
-							<div class="form-group col-sm-4">
+							<div class="form-group row-fluid">
 								<!-- <label for="billing-cardexpires-mm">MM</label> -->
-								<?php shopp('checkout','billing-cardexpires-mm','size=4&required=true&minlength=2&maxlength=2&class=form-control&title=Card\'s 2-digit expiration month&placeholder=Month'); ?>
-							</div><!--/form-group-->
-							<div class="form-group col-sm-4">
-								<!-- <label for="billing-cardexpires-yy">YY</label> -->
-								<?php shopp('checkout','billing-cardexpires-yy','size=4&required=true&minlength=2&maxlength=2&class=form-control&title=Card\'s 2-digit expiration year&placeholder=Year'); ?>
-							</div><!--/form-group-->
-							<div class="form-group col-sm-2">
-								<!-- <label for="billing-cvv">Card Security Code</label> -->
-								<?php shopp('checkout','billing-cvv','size=7&minlength=3&maxlength=4&class=form-control&title=Card\'s security code (3-4 digits on the back of the card)&placeholder=CVV'); ?>
+								<div class="col-sm-4">
+									<?php shopp('checkout','billing-cardexpires-mm','size=4&required=true&minlength=2&maxlength=2&class=form-control&title=Card\'s 2-digit expiration month&placeholder=Month'); ?>
+								</div>
+								<div class="col-sm-4">
+									<!-- <label for="billing-cardexpires-yy">YY</label> -->
+									<?php shopp('checkout','billing-cardexpires-yy','size=4&required=true&minlength=2&maxlength=2&class=form-control&title=Card\'s 2-digit expiration year&placeholder=Year'); ?>
+								</div><!--/form-group-->
+								<div class="col-sm-2">
+									<!-- <label for="billing-cvv">Card Security Code</label> -->
+									<?php shopp('checkout','billing-cvv','size=7&minlength=3&maxlength=4&class=form-control&title=Card\'s security code (3-4 digits on the back of the card)&placeholder=CVV'); ?>
+								</div><!--/form-group-->
 							</div><!--/form-group-->
 							
 							<?php if (shopp('checkout','billing-xcsc-required')): // Extra billing security fields ?>
