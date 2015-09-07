@@ -30,7 +30,7 @@
 		if (firstOpt.val() == '') {
 			firstOpt.attr('default', '');
 			firstOpt.attr('selected', '');
-			firstOpt.val('Choose').change();
+			firstOpt.val('Choose');
 		}
 	}
 
