@@ -2,10 +2,10 @@
 	<?php //shopp('checkout','cart-summary'); ?>
 	<?php if (shopp('cart','hasitems')): ?>
 	<div class="shop-checkout">
-		<h2>Checkout</h2>
-		<div class="row">
+		<h1>Checkout</h2>
+		<div class="row-fluid">
 			<div class="col-sm-12">
-				<div class="row">
+				<div class="row-fluid">
 					<?php shopp('checkout','function'); ?>
 					<?php if (shopp('customer','notloggedin')): ?>
 					<div class="col-sm-12">
