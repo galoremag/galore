@@ -28,7 +28,7 @@
 		var select = $('select option');
 		var defOption = select.first();
 
-		if (defOption.getAttribute('value') == null) {
+		if (defOption.getAttribute('value') === null) {
 			defOption.setAttribute('value','Choose');
 		}
 	}
