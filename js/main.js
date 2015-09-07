@@ -27,9 +27,10 @@
 	function defaulSelect() {
 		var firstOpt = $('select option:first-child');
 
-		if (firstOpt.text() == '') {
+		if (firstOpt.val() == '') {
 			firstOpt.attr('default', '');
 			firstOpt.attr('selected', '');
+			firstOpt.val('Choose');
 			firstOpt.text('Choose');
 		}
 	}
