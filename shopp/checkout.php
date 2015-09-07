@@ -2,8 +2,8 @@
 	<?php //shopp('checkout','cart-summary'); ?>
 	<?php if (shopp('cart','hasitems')): ?>
 	<div class="shop-checkout">
-		<h1>Checkout</h2>
-		<div class="row-fluid">
+		<h2>Checkout</h2>
+		<div class="row">
 			<div class="col-sm-12">
 				<div class="row-fluid">
 					<?php shopp('checkout','function'); ?>
@@ -73,7 +73,8 @@
 					<div class="col-md-6">
 						<h3>Billing Address</h3>
 						<?php if (shopp('cart','needs-shipped')): ?>
-						<div id="billing-address-fields">
+							
+						<div id="billing-address-fields" class="row-fluid">
 							<?php else: ?>
 							<?php endif; ?>
 							<div class="form-group">
