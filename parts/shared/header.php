@@ -11,7 +11,7 @@
 						<!-- <?php get_search_form(); ?> -->
 						<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
 							<label class="form-group">
-								<input type="text" class="form-control" placeholder="Search..." name="s" title="Search" />
+								<input type="search" class="form-control" placeholder="Search" value="Search" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
 							</label>
 							<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 						</form>
