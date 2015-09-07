@@ -25,13 +25,11 @@
 	}
 
 	function fixSelect() {
-		var select = $('.form-group select option');
-		var defOption = select.first();
-
+		var select = $('.form-group select option').first();
 		console.log(select);
 
-		if (defOption.getAttribute('value') === null) {
-			defOption.setAttribute('value','Choose');
+		if (select.getAttribute('value') === null) {
+			select.val('Choose').change();
 		}
 	}
 
