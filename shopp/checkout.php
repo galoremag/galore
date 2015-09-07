@@ -47,26 +47,26 @@
 
 				<div class="col-md-6">
       				<legend>Your Contact Information</legend>
-					<div class="control-group">
-						<label for="firstname" class="control-label">First Name</label>
+					<div class="form-group">
+						<label for="firstname">First Name</label>
 						<div class="controls"><?php shopp('checkout','firstname','required=true&minlength=2&class=input-block-level&title=First Name'); ?></div>
-					</div><!--/control-group-->
-					<div class="control-group">
-						<label for="lastname" class="control-label">Last Name</label>
+					</div><!--/form-group-->
+					<div class="form-group">
+						<label for="lastname">Last Name</label>
 						<div class="controls"><?php shopp('checkout','lastname','required=true&minlength=3&class=input-block-level&title=Last Name'); ?></div>
-					</div><!--/control-group-->
-					<div class="control-group">
-						<label for="company" class="control-label">Company Name</label>
+					</div><!--/form-group-->
+					<div class="form-group">
+						<label for="company">Company Name</label>
 						<div class="controls"><?php shopp('checkout','company','size=22&class=input-block-level&title=Company/Organization'); ?></div>
-					</div><!--/control-group-->
-					<div class="control-group">
-						<label for="phone" class="control-label">Phone</label>
+					</div><!--/form-group-->
+					<div class="form-group">
+						<label for="phone">Phone</label>
 						<div class="controls"><?php shopp('checkout','phone','format=phone&size=15&class=input-block-level&title=Phone'); ?></div>
-					</div><!--/control-group-->
-					<div class="control-group">
-						<label for="email" class="control-label">Email</label>
+					</div><!--/form-group-->
+					<div class="form-group">
+						<label for="email">Email</label>
 						<div class="controls"><?php shopp('checkout','email','required=true&format=email&size=30&class=input-block-level&title=Email'); ?></div>
-					</div><!--/control-group-->
+					</div><!--/form-group-->
 				</div><!--/col-md-6-->
 
 				<!-- <div class="col-md-6"><legend>Secure</legend></div> -->
@@ -78,34 +78,34 @@
 				<div id="billing-address-fields">
 				<?php else: ?>
 				<?php endif; ?>
-					<div class="control-group">
-						<label for="billing-name" class="control-label">Full Name</label>
-						<div class="controls"><?php shopp('checkout','billing-name','required=false&class=input-block-level&title=Bill to'); ?></div>
-					</div><!--/control-group-->
-					<div class="control-group">
-						<label for="billing-address" class="control-label">Steet Address</label>
-						<div class="controls"><?php shopp('checkout','billing-address','required=true&class=input-block-level&title=Billing street address'); ?></div>
-					</div><!--/control-group-->
-					<div class="control-group">
-						<label for="billing-xaddress" class="control-label">Apt, Suite, Bldg. (optional)</label>
-						<div class="controls"><?php shopp('checkout','billing-xaddress','title=Billing address line 2&class=input-block-level'); ?></div>
-					</div><!--/control-group-->
-					<div class="control-group">
-						<label for="billing-city" class="control-label">City</label>
-						<div class="controls"><?php shopp('checkout','billing-city','required=true&class=input-block-level&title=City billing address'); ?></div>
-					</div><!--/control-group-->
-					<div class="control-group">
-						<label for="billing-state" class="control-label">State</label>
-						<div class="controls"><?php shopp('checkout','billing-state','required=true&class=input-block-level&title=State/Provice/Region billing address'); ?></div>
-					</div><!--/control-group-->
-					<div class="control-group">
-						<label for="billing-postcode" class="control-label">Postal / Zip Code</label>
-						<div class="controls"><?php shopp('checkout','billing-postcode','required=true&class=input-block-level&title=Postal/Zip Code billing address'); ?></div>
-					</div><!--/control-group-->
-					<div class="control-group">
-						<label for="billing-country" class="control-label">Country</label>
-						<div class="controls"><?php shopp('checkout','billing-country','required=true&class=input-block-level&title=Country billing address'); ?></div>
-					</div><!--/control-group-->
+					<div class="form-group">
+						<label for="billing-name">Full Name</label>
+						<?php shopp('checkout','billing-name','required=false&class=form-control&title=Bill to'); ?>
+					</div><!--/form-group-->
+					<div class="form-group">
+						<label for="billing-address">Steet Address</label>
+						<?php shopp('checkout','billing-address','required=true&class=form-control&title=Billing street address'); ?>
+					</div><!--/form-group-->
+					<div class="form-group">
+						<label for="billing-xaddress">Apt, Suite, Bldg. (optional)</label>
+						<?php shopp('checkout','billing-xaddress','title=Billing address line 2&class=form-control'); ?>
+					</div><!--/form-group-->
+					<div class="form-group">
+						<label for="billing-city">City</label>
+						<?php shopp('checkout','billing-city','required=true&class=form-control&title=City billing address'); ?>
+					</div><!--/form-group-->
+					<div class="form-group">
+						<label for="billing-state">State</label>
+						<?php shopp('checkout','billing-state','required=true&class=form-control&title=State/Provice/Region billing address'); ?>
+					</div><!--/form-group-->
+					<div class="form-group">
+						<label for="billing-postcode">Postal / Zip Code</label>
+						<?php shopp('checkout','billing-postcode','required=true&class=form-control&title=Postal/Zip Code billing address'); ?>
+					</div><!--/form-group-->
+					<div class="form-group">
+						<label for="billing-country">Country</label>
+						<?php shopp('checkout','billing-country','required=true&class=form-control&title=Country billing address'); ?>
+					</div><!--/form-group-->
 					</div><!--/billing-address-fields-->
 				</div><!--/col-md-6-->
 
