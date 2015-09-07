@@ -28,6 +28,8 @@
 		var select = $('select option');
 		var defOption = select.first();
 
+		console.log(select);
+
 		if (defOption.getAttribute('value') === null) {
 			defOption.setAttribute('value','Choose');
 		}
