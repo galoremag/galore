@@ -174,7 +174,7 @@
 							</div><!--/form-group-->
 							<div class="form-group">
 								<!-- <label for="billing-cardtype">Card Type</label> -->
-								<?php shopp('checkout','billing-cardtype','required=true&class=form-control&title=Card Type&placeholder=Card Type'); ?>
+								<?php shopp('checkout','billing-cardtype','required=true&class=form-control&title=Card Type'); ?>
 							</div><!--/form-group-->
 							<div class="form-group">
 								<!-- <label for="billing-card">Card Number</label> -->

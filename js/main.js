@@ -24,7 +24,18 @@
 		return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
 	}
 
+	function fixSelect() {
+		var select = $('select option');
+		var defOption = $select.first();
+
+		if (defOption.getAttribute('value') == null) {
+			defOption.setAttribute('value','Choose');
+		}
+	}
+
 	jQuery(document).ready(function($) {
+
+		fixSelect();
 
 		// FIX PLACEHOLDERS
 	    $('[placeholder]').focus(function() {
