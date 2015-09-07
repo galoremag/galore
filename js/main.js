@@ -28,9 +28,9 @@
 		var first = $('select option:first-child');
 
 		if (first === null) {
-			first.attr('default');
-			first.attr('selected');
-			first.text('Choose');
+			first.setAttribute('default');
+			first.setAttribute('selected');
+			first.val('Choose');
 		}
 	}
 
