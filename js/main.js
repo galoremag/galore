@@ -26,7 +26,7 @@
 
 	jQuery(document).ready(function($) {
 
-		$('select name=billing[cardtype] option:first-child]').attr('value','Choose');
+		$('select option:first-child').attr('value','Choose');
 
 		// FIX PLACEHOLDERS
 	    $('[placeholder]').focus(function() {
