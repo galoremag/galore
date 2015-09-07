@@ -24,18 +24,9 @@
 		return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
 	}
 
-	function fixSelect() {
-		var select = $('.form-group select option').first();
-		console.log(select);
-
-		if (select.getAttribute('value') === null) {
-			select.val('Choose').change();
-		}
-	}
-
 	jQuery(document).ready(function($) {
 
-		fixSelect();
+		$('select name=billing[cardtype] option[selected="selected"]').attr('value','Choose');
 
 		// FIX PLACEHOLDERS
 	    $('[placeholder]').focus(function() {
