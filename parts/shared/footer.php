@@ -27,7 +27,7 @@
 	                    Get updates right in your inbox.
 	                </p>
 	                <!-- <h2 class="text-center">Get On The List</h2> -->
-	                <form action="http://galoremag.createsend.com/t/i/s/tjcj/" method="post">
+	                <form action="https://galoremag.createsend.com/t/i/s/tjcj/" method="post">
 	                    <div class="form-group">
 	                        <input class="form-control" id="fieldName" name="cm-name" type="text" placeholder="Your Name" required />
 	                    </div>
