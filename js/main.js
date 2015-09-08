@@ -41,6 +41,7 @@
 
 		$('input[type=text]').addClass('form-control');
 		$('input#discount-code[type=text]').attr('size','5').addClass('pull-left');
+		$('form#cart input[type=text]').css('width','auto');
 
 		// FIX PLACEHOLDERS
 	    $('[placeholder]').focus(function() {
