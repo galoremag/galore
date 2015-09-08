@@ -53,9 +53,9 @@
 							<?php // endif; ?>
 						</div>
 						<div class="col-sm-3 pull-right">
-							<?php shopp('cart','update-button', 'value=Update Cart&class=btn btn-small btn-primary'); ?>
+							<?php shopp('cart','update-button', 'value=Update Cart&class=btn btn-small btn-bp'); ?>
 							<hr>
-							<?php shopp('cart','promo-code','class=btn btn-small btn-primary pull-right'); ?>
+							<?php shopp('cart','promo-code','class=btn btn-small btn-bp pull-right'); ?>
 							<table class="order-total">
 								<tbody>
 									<tr class="totals">
@@ -84,7 +84,7 @@
 									</tr>
 								</tbody>
 							</table>
-							<a href="<?php shopp('checkout','url'); ?>" class="right btn btn-success btn-block btn-large">Secure Checkout &rsaquo;</a>
+							<a href="<?php shopp('checkout','url'); ?>" class="right btn btn-bp btn-block btn-large">Secure Checkout &rsaquo;</a>
 						</div><!--/col-md-3-->
 						<div class="col-sm-12">
 							<big>

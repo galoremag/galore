@@ -82,7 +82,7 @@
         <!-- Quantity -->
         <?php // shopp('product','quantity'); ?>
         <!-- Add to Cart -->
-        <?php shopp('product','addtocart', 'class=btn btn-block btn-large btn-success'); ?>
+        <?php shopp('product','addtocart', 'class=btn btn-block btn-large btn-bp'); ?>
       </form>
 
 

@@ -31,7 +31,7 @@
                             </div>
 						<?php endif; ?>
 					</a>
-					<?php shopp('product','addtocart', 'class=btn btn-block btn-large btn-success'); ?>
+					<?php shopp('product','addtocart', 'class=btn btn-block btn-large btn-bp'); ?>
 				</div><!--/span3-->
 			<?php endwhile; ?>
 

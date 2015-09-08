@@ -213,7 +213,7 @@
 						</div><!--/payment-->
 						<?php endif; ?>
 						<div class="inline font2"><label for="marketing"><?php shopp('checkout','marketing'); ?> Yes, I would like to receive e-mail updates and special offers!</label></div>
-						<p class="submit"><?php shopp('checkout','submit','value=Submit Order&class=btn btn-success btn-block btn-large'); ?></p>
+						<p class="submit"><?php shopp('checkout','submit','value=Submit Order&class=btn btn-bp btn-block btn-large'); ?></p>
 					</div><!--/col-md-6-->
 					
 					<div class="col-md-5 col-md-offset-1">

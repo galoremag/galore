@@ -1,5 +1,5 @@
 <div class="shop-thanks">
-	<h3>Thank you for your order!</h3>
+	<h3>Thank you for your order <?php (shopp('purchase.customer')) ?>!</h3>
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="well">
@@ -39,6 +39,21 @@
 
 				</div><!--/row-->
 			</div><!--/well-->
+			<p class="text-center">
+                Get updates right in your inbox.
+            </p>
+            <!-- <h2 class="text-center">Get On The List</h2> -->
+            <form class="form-inline" action="http://galoremag.createsend.com/t/i/s/tjcj/" method="post">
+                <div class="form-group">
+                    <input class="form-control" id="fieldName" name="cm-name" type="text" placeholder="Your Name" required />
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="fieldEmail" name="cm-tjcj-tjcj" type="email" placeholder="Your Email" required />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-bp" type="submit">Subscribe</button>
+                </div>
+            </form>
 		</div><!--/col-sm-12-->
 	</div><!--/row-->
 </div><!--/shop-thanks-->

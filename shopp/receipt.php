@@ -1,4 +1,5 @@
 <div id="receipt" class="shopp">
+<p>Your receipt has been emailed to <?php shopp('purchase','email'); ?>, but you may also <a class="btn btn-primary" onClick="preventDefault(); window.print()">print this page</a>.</p>
 <table class="transaction">
 	<tr><th>Order Num:</th><td><?php shopp('purchase','id'); ?></td></tr>
 	<tr><th>Order Date:</th><td><?php shopp('purchase','date'); ?></td></tr>
