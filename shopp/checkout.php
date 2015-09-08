@@ -116,7 +116,7 @@
 					
 					<div class="col-md-5 col-md-offset-1">
 						<h2>Shipping Address</h2>
-						<div class=""><?php shopp('checkout','same-shipping-address'); ?></div>
+						<?php shopp('checkout','same-shipping-address','class=font2'); ?>
 
 						<?php if (shopp('cart','needs-shipped')): ?>
 						<div id="shipping-address-fields" style="display:none">
@@ -161,7 +161,7 @@
 
 					<div class="clearfix"></div>
 					
-					<div class="col-md-5">
+					<div class="col-md-5 nopadleft">
 						<?php if (shopp('checkout','billing-localities')): ?>
 						<div class="half locale hidden">
 							<div class="form-group">
@@ -175,7 +175,7 @@
 						<?php shopp('checkout','gateway-inputs'); ?>
 						<?php if (shopp('checkout','card-required')): ?>
 						
-						<div class="payment">
+						<div class="payment horPad10">
 							<h2>Payment Information</h2>
 							<div class="form-group">
 								<!-- <label for="billing-cardholder">Name on Card</label> -->
@@ -191,7 +191,7 @@
 							</div><!--/form-group-->
 							<div class="form-group row-fluid">
 								<!-- <label for="billing-cardexpires-mm">MM</label> -->
-								<div class="col-sm-4">
+								<div class="col-sm-4 nopadleft">
 									<?php shopp('checkout','billing-cardexpires-mm','size=4&required=true&minlength=2&maxlength=2&class=form-control&title=Card\'s 2-digit expiration month&placeholder=Month'); ?>
 								</div>
 								<div class="col-sm-4">
@@ -212,13 +212,13 @@
 							<?php endif; ?>
 						</div><!--/payment-->
 						<?php endif; ?>
-						<div class="inline"><label for="marketing"><?php shopp('checkout','marketing'); ?> Yes, I would like to receive e-mail updates and special offers!</label></div>
+						<div class="inline font2"><label for="marketing"><?php shopp('checkout','marketing'); ?> Yes, I would like to receive e-mail updates and special offers!</label></div>
 						<p class="submit"><?php shopp('checkout','submit','value=Submit Order&class=btn btn-success btn-block btn-large'); ?></p>
 					</div><!--/col-md-6-->
 					
 					<div class="col-md-5 col-md-offset-1">
 						<h2>Secure Payment <i class="ss-icon ss-standard">&#x1F512;</i></h2>
-						<p>This is a secure 128-bit SSL Encryption payment. You're Safe.</p>
+						<p class="font2">This is a secure 128-bit SSL Encryption payment. You're Safe.</p>
 						<span id="siteseal"><script type="text/javascript" src="https://seal.starfieldtech.com/getSeal?sealID=wJvwFTptDbKXsIEPMJQDLCyNeMlGaNRUfaG7kbDlEgmbx1tz2NcX9Q"></script></span>
 					</div><!--/col-md-6-->
 				</div><!--/row-->
