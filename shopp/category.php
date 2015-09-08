@@ -23,7 +23,7 @@
 							<?php // global $Shopp; ?>
 							<?php $product_stock = shopp('product','outofstock'); ?>
 							<?php if($product_stock == 'Sold'): ?>
-								<p class="sold">Sold Out</p>
+								<p class="btn btn-block btn-large btn-bp sold">Sold Out</p>
 							<?php else: ?>
 								<div class="price"><?php shopp('product','price'); ?>
 	                              <?php if (shopp('product','has-savings')): ?>
