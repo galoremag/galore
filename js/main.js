@@ -39,7 +39,7 @@
 
 		defaulSelect();
 
-		$('input[type=text]').addClass('form-control');
+		$('input[type=text]').addClass('form-control').css('width','auto');
 
 		// FIX PLACEHOLDERS
 	    $('[placeholder]').focus(function() {
