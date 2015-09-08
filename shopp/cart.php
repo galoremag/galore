@@ -53,7 +53,7 @@
 							<?php // endif; ?>
 						</div>
 						<div class="col-md-3 pull-right">
-							<?php shopp('cart','update-button', 'value=Update Cart&class=btn btn-small btn-bp pull-right verMarg'); ?>
+							<?php shopp('cart','update-button', 'value=Update Cart&class=btn btn-small btn-bp pull-right verMarg10'); ?>
 							<hr>
 							<?php shopp('cart','promo-code','class=btn btn-small btn-bp pull-right'); ?>
 							<table class="order-total">

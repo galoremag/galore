@@ -39,7 +39,7 @@
 
 		defaulSelect();
 
-		$('input[type=text]').addClass('form-control').css('width','auto');
+		$('input[type=text]').addClass('form-control');
 		$('input#discount-code[type=text]').attr('size','5').addClass('pull-left');
 
 		// FIX PLACEHOLDERS
