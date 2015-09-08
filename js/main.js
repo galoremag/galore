@@ -89,13 +89,18 @@
 
 		// Sticky Sidebar
 
-		if (isTouchDevice()===true) {
+		if ($('#sidebar').length) {
+			if (isTouchDevice()===true) {
+				return;
+			} else {
+				$(function () {
+				    $(window).scroll(sticky_relocate);
+				    sticky_relocate();
+				});
+			}
 			return;
 		} else {
-			$(function () {
-			    $(window).scroll(sticky_relocate);
-			    sticky_relocate();
-			});
+			return;
 		}
 
 		/////////////////////
