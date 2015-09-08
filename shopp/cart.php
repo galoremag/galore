@@ -24,7 +24,7 @@
 									<tr>
 										<td>
 											<a href="<?php shopp('cartitem','url'); ?>">
-												<?php shopp('cartitem','thumbnail','setting=cart'); ?>
+												<?php shopp('cartitem','medium','setting=cart'); ?>
 												<span class="cartitem-name"><?php shopp('cartitem','name'); ?></span>
 												<span class="cartitem-options"><?php shopp('cartitem','options', 'show=selected'); ?></span>
 											</a>
