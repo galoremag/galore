@@ -45,15 +45,15 @@
 							<tr><td colspan="4" class="money"><?php shopp('cart','promo-name'); ?><strong><?php shopp('cart','promo-discount',array('before' => '&nbsp;&mdash;&nbsp;')); ?></strong></td></tr>
 							<?php endwhile; ?>
 						</div><!--/col-sm-12-->
-						<div class="col-md-9 "><br/>
+						<div class="col-md-8"><br/>
 							<?php // if (shopp('cart','needs-shipping-estimates')): ?>
 							<h4>Estimate Shipping &amp; Tax</h4>
 							<p>Enter your shipping destination to get an estimate.</p>
 							<?php // shopp('cart','shipping-estimates'); ?>
 							<?php // endif; ?>
 						</div>
-						<div class="col-sm-3 pull-right">
-							<?php shopp('cart','update-button', 'value=Update Cart&class=btn btn-small btn-bp'); ?>
+						<div class="col-sm-4 pull-right">
+							<?php shopp('cart','update-button', 'value=Update Cart&class=btn btn-small btn-bp pull-right verMarg10'); ?>
 							<hr>
 							<?php shopp('cart','promo-code','class=btn btn-small btn-bp pull-right'); ?>
 							<table class="order-total">
