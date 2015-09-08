@@ -12,7 +12,7 @@
 			<?php // shopp('category','pagination','show=10'); ?>
 
 			<?php while(shopp('category','products')): ?>
-				<div class="col-lg-3 col-md-6 col-sm-12">
+				<div class="col-lg-4 col-md-6 col-sm-12">
 					<div class="thumbnail">
 						<a href="<?php shopp('product','url'); ?>">
 							<?php shopp('product','coverimage','setting=full-image'); ?>
