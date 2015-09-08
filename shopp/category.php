@@ -13,24 +13,26 @@
 
 			<?php while(shopp('category','products')): ?>
 				<div class="col-lg-3 col-md-6 col-sm-12">
-					<a href="<?php shopp('product','url'); ?>">
-						<?php shopp('product','coverimage','setting=full-image'); ?>
-						<h3><?php shopp('product','name'); ?></h3>
+					<div class="thumbnail">
+						<a href="<?php shopp('product','url'); ?>">
+							<?php shopp('product','coverimage','setting=full-image'); ?>
+							<h3><?php shopp('product','name'); ?></h3>
 
-						<!-- <p class="price"><?php // shopp('product','saleprice','starting=from'); ?> </p> -->
+							<!-- <p class="price"><?php // shopp('product','saleprice','starting=from'); ?> </p> -->
 
-						<?php // global $Shopp; ?>
-						<?php $product_stock = shopp('product','outofstock'); ?>
-						<?php if($product_stock == 'Sold'): ?>
-							<p class="sold">Sold Out</p>
-						<?php else: ?>
-							<div class="price"><?php shopp('product','price'); ?>
-                              <?php if (shopp('product','has-savings')): ?>
-						      <div class="savings">Save <?php shopp('product','savings','show=percent'); ?></div>
-					    <?php endif; ?>
-                            </div>
-						<?php endif; ?>
-					</a>
+							<?php // global $Shopp; ?>
+							<?php $product_stock = shopp('product','outofstock'); ?>
+							<?php if($product_stock == 'Sold'): ?>
+								<p class="sold">Sold Out</p>
+							<?php else: ?>
+								<div class="price"><?php shopp('product','price'); ?>
+	                              <?php if (shopp('product','has-savings')): ?>
+							      <div class="savings">Save <?php shopp('product','savings','show=percent'); ?></div>
+						    <?php endif; ?>
+	                            </div>
+							<?php endif; ?>
+						</a>
+					</div>
 					<?php shopp('product','addtocart', 'class=btn btn-block btn-large btn-bp'); ?>
 				</div><!--/span3-->
 			<?php endwhile; ?>
