@@ -46,7 +46,7 @@
 				</div>
 				<div class="row-fluid">
 
-					<div class="col-md-6">
+					<div class="col-md-5">
 						<h2>Your Contact Information</h2>
 						<div class="form-group">
 							<!-- <label for="firstname">First Name</label> -->
@@ -76,7 +76,7 @@
 					<!-- <div class="col-md-6"><h2>Secure</h2></div> -->
 					<div class="clearfix"></div>
 					
-					<div class="col-md-6">
+					<div class="col-md-5">
 						<h2>Billing Address</h2>
 						<?php if (shopp('cart','needs-shipped')): ?>
 
@@ -114,7 +114,7 @@
 						</div><!--/billing-address-fields-->
 					</div><!--/col-md-6-->
 					
-					<div class="col-md-6">
+					<div class="col-md-5 col-md-offset-1">
 						<h2>Shipping Address</h2>
 						<div class=""><?php shopp('checkout','same-shipping-address'); ?></div>
 
@@ -161,7 +161,7 @@
 
 					<div class="clearfix"></div>
 					
-					<div class="col-md-6">
+					<div class="col-md-5">
 						<?php if (shopp('checkout','billing-localities')): ?>
 						<div class="half locale hidden">
 							<div class="form-group">
@@ -216,7 +216,7 @@
 						<p class="submit"><?php shopp('checkout','submit','value=Submit Order&class=btn btn-success btn-block btn-large'); ?></p>
 					</div><!--/col-md-6-->
 					
-					<div class="col-md-6">
+					<div class="col-md-5 col-md-offset-1">
 						<h2>Secure Payment <i class="ss-icon ss-standard">&#x1F512;</i></h2>
 						<p>This is a secure 128-bit SSL Encryption payment. You're Safe.</p>
 						<span id="siteseal"><script type="text/javascript" src="https://seal.starfieldtech.com/getSeal?sealID=wJvwFTptDbKXsIEPMJQDLCyNeMlGaNRUfaG7kbDlEgmbx1tz2NcX9Q"></script></span>
