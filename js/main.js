@@ -40,6 +40,7 @@
 		defaulSelect();
 
 		$('input[type=text]').addClass('form-control').css('width','auto');
+		$('#discount-code[type=text').attr('size','6');
 
 		// FIX PLACEHOLDERS
 	    $('[placeholder]').focus(function() {

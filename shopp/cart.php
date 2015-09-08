@@ -32,7 +32,7 @@
 											<?php shopp('cartitem','inputs-list'); ?>
 										</td>
 										<td class="money"><?php shopp('cartitem','unitprice'); ?></td>
-										<td><?php shopp('cartitem','quantity','input=text&class=col-sm-1'); ?></td>
+										<td><?php shopp('cartitem','quantity','input=text&class=col-sm-1 pull-right'); ?></td>
 										<td class="money"><?php shopp('cartitem','total'); ?></td>
 										<td>
 											<?php shopp('cartitem','remove','label=X&input=button'); ?>
@@ -55,7 +55,7 @@
 						<div class="col-sm-3 pull-right">
 							<?php shopp('cart','update-button', 'value=Update Cart&class=btn btn-small btn-primary'); ?>
 							<hr>
-							<?php shopp('cart','promo-code','class=btn btn-small btn-primary'); ?>
+							<?php shopp('cart','promo-code','class=btn btn-small btn-primary pull-right'); ?>
 							<table class="order-total">
 								<tbody>
 									<tr class="totals">
