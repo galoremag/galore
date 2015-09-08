@@ -18,7 +18,7 @@
 
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div id="content" class="col-sm-10 col-sm-offset-1">
+		<div id="content" class="col-md-10 col-md-offset-1">
 			<?php if ( have_posts() ): ?>
 			<h2 class="text-center"><i class="fa fa-moon-o"></i> Shop <i class="fa fa-moon-o"></i></h2>
 			<hr>

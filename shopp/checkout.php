@@ -191,14 +191,14 @@
 							</div><!--/form-group-->
 							<div class="form-group row-fluid">
 								<!-- <label for="billing-cardexpires-mm">MM</label> -->
-								<div class="col-sm-4 nopadleft">
+								<div class="col-md-4 nopadleft">
 									<?php shopp('checkout','billing-cardexpires-mm','size=4&required=true&minlength=2&maxlength=2&class=form-control&title=Card\'s 2-digit expiration month&placeholder=Month'); ?>
 								</div>
-								<div class="col-sm-4">
+								<div class="col-md-4">
 									<!-- <label for="billing-cardexpires-yy">YY</label> -->
 									<?php shopp('checkout','billing-cardexpires-yy','size=4&required=true&minlength=2&maxlength=2&class=form-control&title=Card\'s 2-digit expiration year&placeholder=Year'); ?>
 								</div><!--/form-group-->
-								<div class="col-sm-2">
+								<div class="col-md-2">
 									<!-- <label for="billing-cvv">Card Security Code</label> -->
 									<?php shopp('checkout','billing-cvv','size=7&minlength=3&maxlength=4&class=form-control&title=Card\'s security code (3-4 digits on the back of the card)&placeholder=CVV'); ?>
 								</div><!--/form-group-->
