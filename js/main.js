@@ -40,7 +40,7 @@
 		defaulSelect();
 
 		$('input[type=text]').addClass('form-control').css('width','auto');
-		// $('.applycode input[type=text').attr('size','5').addClass('pull-left');
+		$('input#discount-code[type=text').attr('size','5').addClass('pull-left');
 
 		// FIX PLACEHOLDERS
 	    $('[placeholder]').focus(function() {
