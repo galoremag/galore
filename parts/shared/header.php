@@ -23,7 +23,10 @@
 				</div>
 				<div>
 					<ul class="top-social navbar-right tab hidden-xs">
-						<li><a href="<?php bloginfo('url'); ?>/shop" title="Galore Shop">Shop <i class="fa fa-shopping-cart"></i></a></li>
+						<li><a href="<?php bloginfo('url'); ?>/shop" title="Galore Shop">Shop</a></li>
+						<?php if(shopp('cart','hasitems')) : ?>
+							<li><a href="<?php shopp('cart','url'); ?>" title="Galore Shopping Cart"><span class="badge"><?php shopp('cart','totalitems'); ?></span> <i class="fa fa-shopping-cart"></i></a></li>
+						<?php endif ?>
 						<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
 						<li><a href="https://www.facebook.com/galoremag" target="_blank"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="http://instagram.com/kittengalore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
