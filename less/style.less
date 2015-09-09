@@ -1065,6 +1065,7 @@ nav.shrink .navbar-brand {
 	opacity: 0.7;
 	border: 1px solid white;
 	.transition;
+	cursor: pointer;
 }
 
 #modal-nav-button:hover {
@@ -1100,9 +1101,10 @@ nav.shrink .navbar-brand {
 #nav-button {
 	padding: 6px 8px 5px 8px;
     position: absolute;
+    cursor: pointer;
 }
 
-.hmbrgr {
+#nav-button a.hmbrgr {
 	position: relative;
 	display: inline-block;
 
@@ -1968,6 +1970,7 @@ h2.stuckHead {
 	background-size: 35px 80px;
 	opacity: 1;
 	margin: -3px 0px 0px -3px;
+	cursor: pointer;
 }
 
 footer {
@@ -2344,8 +2347,7 @@ time {
 		.yellowBlueGradientFade;
 		font-size: 18px;
 		line-height: 19px;
-		/*color: @pink;*/
-		color: black;
+		color: @pink !important;
 		padding: 10px;
 		margin: 0 !important;
 		/*text-shadow: 1px 1px 0px rgba(255,255,0,1);*/
@@ -2484,7 +2486,7 @@ time {
 	#modal-nav-button {
 		width: 32px;
 		height: 32px;
-		padding: 6px 10px 5px 8px;
+		/*padding: 6px 10px 5px 8px;*/
 		margin: 10px;
 	}
 	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
@@ -2583,7 +2585,7 @@ time {
 	#modal-nav-button {
 		width: 32px;
 		height: 32px;
-		padding: 6px 10px 5px 8px;;
+		/*padding: 6px 10px 5px 8px;*/
 		margin: 10px 0 0 10px;
 	}
 	ul.modal-nav-menu {

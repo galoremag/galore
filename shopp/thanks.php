@@ -1,5 +1,5 @@
 <div class="shop-thanks">
-	<h3>Thank you for your order <?php (shopp('purchase.customer')) ?>!</h3>
+	<h3>Thanks a bunch, <?php (shopp('checkout','billing-name')) ?>!</h3>
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="well">
@@ -43,7 +43,7 @@
                 Get updates right in your inbox.
             </p>
             <!-- <h2 class="text-center">Get On The List</h2> -->
-            <form class="form-inline" action="http://galoremag.createsend.com/t/i/s/tjcj/" method="post">
+            <form class="form-inline text-center" action="https://galoremag.createsend.com/t/i/s/tjcj/" method="post">
                 <div class="form-group">
                     <input class="form-control" id="fieldName" name="cm-name" type="text" placeholder="Your Name" required />
                 </div>
