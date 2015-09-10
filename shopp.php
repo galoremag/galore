@@ -27,6 +27,10 @@
 
 			<?php the_content();?>
 
+			<div class="col-sm-12 text-center">
+				<p>Having trouble? Feel free to hit us up: <a href="mailto:help@galoremag.com">help@galoremag.com</a>. You could also <a href="" onClick="$('#habla_window_div #habla_topbar_div').click();">chat with us</a>.</p>
+			</div>
+
 			<?php endwhile; endif; ?>
 			<?php else: ?>
 			<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
