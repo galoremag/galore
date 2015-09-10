@@ -97,7 +97,7 @@ jQuery(document).ready(function($) {
 
 	// Sticky Sidebar
 	$(function() {
-		if $('#global-container').is('.tag, .category, .single') {
+		if ($('#global-container').is('.tag, .category, .single')) {
 			if (isTouchDevice()===true) {
 				return;
 			} else {
