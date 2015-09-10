@@ -39,7 +39,7 @@
 					<li id="page-right" class="alignright pull-right"><?php next_posts_link( '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>', '' ); ?></li>
 				</ul>
 			</div> -->
-			<div class="text-center">
+			<div class="col-sm-12 text-center">
 				<p>Having trouble? Feel free to hit us up: <a href="mailto:help@galoremag.com">help@galoremag.com</a>. You could also <a href="" onClick="$('#habla_window_div #habla_topbar_div').click();">chat with us</a>.</p>
 			</div>
 			<div class="spacer40"></div>
