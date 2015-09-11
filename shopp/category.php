@@ -33,7 +33,7 @@
 							<?php endif; ?>
 						</a>
 					</div>
-					<?php shopp('product','buy-now', 'class=btn btn-block btn-large btn-bp'); ?>
+					<?php shopp('product','buy-now'); ?>
 					<!-- <?php shopp('product','add-to-cart', 'ajax=on&class=btn btn-block btn-large btn-bp verMarg10'); ?> -->
 				</div><!--/span3-->
 			<?php endwhile; ?>
