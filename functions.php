@@ -95,7 +95,7 @@
 	 * Custom callback for outputting comments 
 	 *
 	 * @return void
-	 * @author Keir Whitaker
+	 * @author Aaron Smulktis
 	 */
 	function starkers_comment( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment; 

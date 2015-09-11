@@ -59,13 +59,11 @@
     </div><!--/product-details-->
 
 
-      <ul class="share">
-        <li><strong>Share:</strong></li>
-        <li><a class="share-facebook" href="//www.facebook.com/sharer.php?u=<?php echo $url; ?>" rel="nofollow" target="_blank"><i class="fa fa-facebook">&#xF610;</i></a></li>
-        <li><a class="share-twitter" href="//twitter.com/share?text=<?php echo $title; ?>&amp;url=<?php echo $url; ?>&amp;via=TheGaloreMag" rel="nofollow" target="_blank"><i class="fa fa-twitter">&#xF611;</i></a></li>
-        <li><a class="share-pinterest" href="//pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $thumburl; ?>&description=<?php echo $title; ?>" rel="nofollow" target="_blank"><i class="fa fa-pinterest">&#xF650;</i></a></li>
-        <li><a class="share-google" href="//plus.google.com/share?url=<?php echo $url; ?>" rel="nofollow" target="_blank"><i class="fa fa-google">&#xF613;</i></a></li>
-        <li><a class="share-fancy" href="//www.fancy.com/fancyit?ItemURL=<?php echo $url; ?>&Title=<?php echo $title; ?>&Category=Women's&ImageURL=<?php echo $thumburl; ?>" rel="nofollow" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/fancy.png"></a></li>
+      <ul class="share list-inline">
+        <li><a class="share-facebook" href="//www.facebook.com/sharer.php?u=<?php echo $url; ?>" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="share-twitter" href="//twitter.com/share?text=<?php echo $title; ?>&amp;url=<?php echo $url; ?>&amp;via=TheGaloreMag" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="share-pinterest" href="//pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $thumburl; ?>&description=<?php echo $title; ?>" rel="nofollow" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+        <li><a class="share-google" href="//plus.google.com/share?url=<?php echo $url; ?>" rel="nofollow" target="_blank"><i class="fa fa-google"></i></a></li>
       </ul><!--/social-->
 
       <form action="<?php shopp('cart','url'); ?>" method="post" class="shopp product validate validation-alerts">
@@ -83,7 +81,7 @@
         <?php // shopp('product','quantity'); ?>
         <!-- Add to Cart -->
         <?php shopp('product','addtocart', 'class=btn btn-block btn-large btn-bp'); ?>
-        <?php shopp('product','addtocart', 'ajax=on&class=btn btn-block btn-large btn-bp verMarg10'); ?>
+        <!-- <?php shopp('product','addtocart', 'ajax=on&class=btn btn-block btn-large btn-bp verMarg10'); ?> -->
       </form>
 
 
