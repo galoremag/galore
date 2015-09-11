@@ -1107,6 +1107,7 @@ nav.shrink .navbar-brand {
 #nav-button a.hmbrgr {
 	position: relative;
 	display: inline-block;
+	pointer-events: none !important;
 
 	span {
 		position: absolute;
@@ -1374,7 +1375,7 @@ ul.modal-nav-menu li a:hover {
 	/*background: ghostwhite;*/
 	/*background: lavenderblush;*/
 	background: white;
-	/*box-shadow: 0px 0px 10px rgba(255,0,50, 0.3);*/
+	box-shadow: 0px 0px 10px rgba(255,0,50, 0.3);
 	min-height: 100vh;
 }
 
@@ -1512,7 +1513,7 @@ ul.post-social h4 {
 
 .single-featured-image div.catlinks {
 	padding: 5px 10px;
-	background: @salmon;
+	background: @pink;
 	color: white;
 	top: 40px;
 	left: 15px;
@@ -1862,7 +1863,7 @@ li.related-post {
 
 div.catlinks {
 	position: absolute;
-	background: @salmon;
+	background: @pink;
 	color: white;
 	padding: 3px 8px;
 	top: 15px;
@@ -2267,6 +2268,21 @@ time {
 #asdf-text-wrapper {
 	display: none !important;
 	visibility: hidden !important;
+}
+
+/* OLARK */
+
+#habla_window_div #habla_topbar_div {
+	background: @pink !important;
+}
+
+#habla_window_div .habla_offline_submit_input {
+	background: @pink !important;
+	color: white !important;
+}
+
+#habla_window_div .habla_conversation_person2 {
+	color: @pink !important;
 }
 
 /*  MEDIA QUERIES  */

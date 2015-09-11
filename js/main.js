@@ -97,13 +97,17 @@ jQuery(document).ready(function($) {
 
 	// Sticky Sidebar
 	$(function() {
-		if (isTouchDevice()===true) {
-			return;
+		if ($('#global-container').is('.tag, .category, .single')) {
+			if (isTouchDevice()===true) {
+				return;
+			} else {
+				$(function () {
+				    $(window).scroll(sticky_relocate);
+				    sticky_relocate();
+				});
+			}
 		} else {
-			$(function () {
-			    $(window).scroll(sticky_relocate);
-			    sticky_relocate();
-			});
+			return;
 		}
 	});
 
