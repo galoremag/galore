@@ -15,7 +15,7 @@
 				<div class="col-lg-4 col-md-6 col-sm-12">
 					<div class="thumbnail">
 						<a href="<?php shopp('product','url'); ?>">
-							<?php shopp('product','coverimage','setting=full-image'); ?>
+							<?php shopp('product','coverimage','setting=full-image&class=product-img'); ?>
 							<h3><?php shopp('product','name'); ?></h3>
 
 							<!-- <p class="price"><?php // shopp('product','saleprice','starting=from'); ?> </p> -->
