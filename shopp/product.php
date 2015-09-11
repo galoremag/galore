@@ -82,6 +82,7 @@
         <!-- Quantity -->
         <?php // shopp('product','quantity'); ?>
         <!-- Add to Cart -->
+        <?php shopp('product','addtocart', 'class=btn btn-block btn-large btn-bp'); ?>
         <?php shopp('product','addtocart', 'ajax=html&class=btn btn-block btn-large btn-bp verMarg10'); ?>
       </form>
 
