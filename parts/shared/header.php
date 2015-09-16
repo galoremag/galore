@@ -5,7 +5,7 @@
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<div id="modal-nav-button" class="nav-button pull-left">
-						<a id="nav-button" href="#"><div class="hmbrgr"></div></a>
+						<div id="nav-button"><a href="#" class="hmbrgr" onClick="menuToggle()"></a></div>
 					</div>
 					<div id="site-search" class="pull-left hidden-xs">
 						<!-- <?php get_search_form(); ?> -->
@@ -23,7 +23,10 @@
 				</div>
 				<div>
 					<ul class="top-social navbar-right tab hidden-xs">
-						<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">TV <i class="fa fa-television"></i></a></li>
+						<li><a href="<?php bloginfo('url'); ?>/shop" title="Galore Shop">Shop</a></li>
+						<?php if(shopp('cart','hasitems')) : ?>
+							<li><a href="<?php shopp('cart','url'); ?>" title="Galore Shopping Cart"><span class="badge"><?php shopp('cart','totalitems'); ?></span> <i class="fa fa-shopping-cart"></i></a></li>
+						<?php endif ?>
 						<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
 						<li><a href="https://www.facebook.com/galoremag" target="_blank"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="http://instagram.com/kittengalore/" target="_blank"><i class="fa fa-instagram"></i></a></li>

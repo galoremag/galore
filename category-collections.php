@@ -12,11 +12,11 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <div class="container-fluid nopad">
-	<div class="row-fluid">
+	<!-- <div class="row-fluid">
 		<div class="col-md-6 col-md-offset-3 container-fixed nopad">
 		<?php echo do_shortcode( '[new_royalslider id="6"]' ); ?>
 		</div>
-	</div>
+	</div> -->
 	<div class="row-fluid">
 		<div id="content" class="col-md-8 col-sm-12">
 			<h2 class="text-center">The Latest in <span><?php echo single_cat_title( '', false ); ?></span> <i class="fa fa-gittip"></i></h2>

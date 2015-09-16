@@ -190,7 +190,7 @@ $url = $thumb[0];
 						setup_postdata($post);
 						?>
 						<div class="entry home-sex-dating">
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 							<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 							<div class="spacer10"></div>

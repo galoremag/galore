@@ -1,0 +1,1 @@
+<?php shopp('cart','sidecart'); ?>
