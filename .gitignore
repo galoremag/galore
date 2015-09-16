@@ -5,7 +5,7 @@ node_modules/
 bower_components/
 
 # Ignore the fonts/js/css that gets built
-fonts/
+# fonts/
 prod.js
 style.css
 
