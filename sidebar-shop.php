@@ -12,7 +12,7 @@
             <?php
     if ( function_exists('dynamic_sidebar')) dynamic_sidebar("sidebar-shop");
 ?>
-	</div><!--/.well .sidebar-nav -->
-         </div><!-- /.span4 -->
-          </div><!-- /.row .content -->
+</div><!--/.well .sidebar-nav -->
+</div><!-- /.span4 -->
+</div><!-- /.row .content -->
 
