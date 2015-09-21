@@ -16,15 +16,17 @@
 					<div class="thumbnail">
 						<a href="<?php shopp('product','url'); ?>">
 							<?php shopp('product','coverimage','alt=Issue - Galore Magazine&title=Issue - Galore Magazine&setting=full-image&class=product-img mag-issue'); ?>
-							<h3><?php shopp('product','name'); ?></h3>
+							<h3>
+								<?php shopp('product','name'); ?>
+								<?php // global $Shopp; ?>
+								<?php $product_stock = shopp('product','outofstock'); ?>
+								<?php if($product_stock == 'Sold'): ?>
+									<span class="badge">Sold Out</span>
+								<?php else: ?>
+							</h3>
 
 							<!-- <p class="price"><?php // shopp('product','saleprice','starting=from'); ?> </p> -->
 
-							<?php // global $Shopp; ?>
-							<?php $product_stock = shopp('product','outofstock'); ?>
-							<?php if($product_stock == 'Sold'): ?>
-								<p class="btn btn-block btn-large btn-bp sold">Sold Out</p>
-							<?php else: ?>
 								<div class="price"><?php shopp('product','price'); ?>
 	                              <?php if (shopp('product','has-savings')): ?>
 							      <div class="savings">Save <?php shopp('product','savings','show=percent'); ?></div>
@@ -33,8 +35,6 @@
 							<?php endif; ?>
 						</a>
 					</div>
-					<!-- <?php shopp('product','buy-now'); ?> -->
-					<?php shopp('product','add-to-cart', 'ajax=html&class=btn btn-block btn-large btn-bp verMarg10'); ?>
 				</div><!--/span3-->
 			<?php endwhile; ?>
 
