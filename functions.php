@@ -298,7 +298,7 @@
 	    wp_redirect( 'http://tv.galoremag.com', 301 ); exit;
 	}
 
-	// if (strpos($url,'shop/') !== false) {
+	// if (strpos($url,'/shop/') !== false) {
 	//     wp_redirect( 'http://galoremag.com', 301 ); exit;
 	// }
 
