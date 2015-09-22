@@ -212,7 +212,7 @@ jQuery(document).ready(function($) {
 
 	var shareFacebook = document.getElementsByClassName('share-facebook'); 
 	
-	addListener(shareFacebook, 'click', function() { 
+	addEventListener(shareFacebook, 'click', function() { 
 		ga('send', 'event', 'button', 'click', 'share on facebook'); 
 	});
 
