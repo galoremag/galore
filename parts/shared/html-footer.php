@@ -33,22 +33,5 @@
 	<script src="//use.typekit.net/uqi4yop.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
 
-	<!-- Social Share Buttons -->
-		<!-- Facebook Scripts -->
-		<script src="http://connect.facebook.com/en_US/all.js#xfbml=1"></script>
-		<script type="text/javascript">_ga.trackFacebook();</script>
-
-		<!-- Twitter Scripts -->
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-		<!-- Google+ Scripts -->
-		<script type="text/javascript">
-		(function() {
-		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-		po.src = 'https://apis.google.com/js/plusone.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-		})();
-		</script>
-
 	</body>
 </html>
