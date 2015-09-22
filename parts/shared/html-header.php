@@ -7,6 +7,17 @@
 <html class="no-js" lang="en"><!--<![endif]-->
 	<head>
 
+		<!-- Google Analytics -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-36901236-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
 		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
 		<?php
 		if (is_home()) {
@@ -102,17 +113,6 @@
 		    p.src = '//rum-static.pingdom.net/prum.min.js';
 		    s.parentNode.insertBefore(p, s);
 		})();
-		</script>
-
-		<!-- Google Analytics -->
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-36901236-1', 'auto');
-			ga('send', 'pageview');
 		</script>
 		
 	</head>
