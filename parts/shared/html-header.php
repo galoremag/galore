@@ -7,6 +7,21 @@
 <html class="no-js" lang="en"><!--<![endif]-->
 	<head>
 
+		<!-- Kissmetrics tracking snippet -->
+		<script type="text/javascript">var _kmq = _kmq || [];
+		var _kmk = _kmk || '78f19657106f3450a14274219c3cf49914872963';
+		function _kms(u){
+		  setTimeout(function(){
+		    var d = document, f = d.getElementsByTagName('script')[0],
+		    s = d.createElement('script');
+		    s.type = 'text/javascript'; s.async = true; s.src = u;
+		    f.parentNode.insertBefore(s, f);
+		  }, 1);
+		}
+		_kms('//i.kissmetrics.com/i.js');
+		_kms('//scripts.kissmetrics.com/' + _kmk + '.2.js');
+		</script>
+
 		<!-- Google Analytics -->
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
