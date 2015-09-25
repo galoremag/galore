@@ -60,8 +60,9 @@
 
 
       <ul class="share list-inline">
-        <li><a class="share-facebook" href="//www.facebook.com/sharer.php?u=<?php echo $url; ?>" rel="nofollow" target="_blank"><i class="fa fa-facebook"></i></a></li>
-        <li><a class="share-twitter" href="//twitter.com/share?text=<?php echo $title; ?>&amp;url=<?php echo $url; ?>&amp;via=TheGaloreMag" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="share-email" href="mailto:Friend@somewhere.com?subject=<?php the_title(); ?>&amp;body=<?php the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
+        <li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>','Share this on Facebook','width=600,height=400')" rel="nofollow"><i class="fa fa-facebook"></i></a>
+        <li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php echo $url; ?>','Tweet this thang','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
         <li><a class="share-pinterest" href="//pinterest.com/pin/create/button/?url=<?php echo $url; ?>&media=<?php echo $thumburl; ?>&description=<?php echo $title; ?>" rel="nofollow" target="_blank"><i class="fa fa-pinterest"></i></a></li>
         <li><a class="share-google" href="//plus.google.com/share?url=<?php echo $url; ?>" rel="nofollow" target="_blank"><i class="fa fa-google"></i></a></li>
       </ul><!--/social-->

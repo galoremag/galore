@@ -294,11 +294,11 @@
 	// TV Redirect
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
-	if (strpos($url,'tv/') !== false) {
+	if (strpos($url,'/tv/') !== false) {
 	    wp_redirect( 'http://tv.galoremag.com', 301 ); exit;
 	}
 
-	// if (strpos($url,'shop/') !== false) {
+	// if (strpos($url,'/shop/') !== false) {
 	//     wp_redirect( 'http://galoremag.com', 301 ); exit;
 	// }
 

@@ -7,6 +7,32 @@
 <html class="no-js" lang="en"><!--<![endif]-->
 	<head>
 
+		<!-- Kissmetrics tracking snippet -->
+		<script type="text/javascript">var _kmq = _kmq || [];
+		var _kmk = _kmk || '78f19657106f3450a14274219c3cf49914872963';
+		function _kms(u){
+		  setTimeout(function(){
+		    var d = document, f = d.getElementsByTagName('script')[0],
+		    s = d.createElement('script');
+		    s.type = 'text/javascript'; s.async = true; s.src = u;
+		    f.parentNode.insertBefore(s, f);
+		  }, 1);
+		}
+		_kms('//i.kissmetrics.com/i.js');
+		_kms('//scripts.kissmetrics.com/' + _kmk + '.2.js');
+		</script>
+
+		<!-- Google Analytics -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-36901236-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
 		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
 		<?php
 		if (is_home()) {
@@ -103,12 +129,22 @@
 		    s.parentNode.insertBefore(p, s);
 		})();
 		</script>
+
+		<!-- Pingdom Real User Info -->
+		<script>
+		var _prum = [['id', '56019c8cabe53d87787f8ac3'],
+		             ['mark', 'firstbyte', (new Date()).getTime()]];
+		(function() {
+		    var s = document.getElementsByTagName('script')[0]
+		      , p = document.createElement('script');
+		    p.async = 'async';
+		    p.src = '//rum-static.pingdom.net/prum.min.js';
+		    s.parentNode.insertBefore(p, s);
+		})();
+		</script>
 		
 	</head>
 	<body>
-
-		<!-- Google Tag Manager Plugin -->
-		<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
 
 		<script type="text/javascript">
 			var isMobile = false; //initiate as false

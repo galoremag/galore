@@ -43,8 +43,8 @@
 					<article class="row-fluid">
 						<div class="nopad col-sm-5">
 							<div class="catlinks"><?php the_category(); ?></div>
-							<div class="thumb">
-								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('large', 300, 150); ?></a>
+							<div class="thumbnail">
+								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
 							</div>
 						</div>
 						<div class="nopadright col-sm-7">

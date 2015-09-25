@@ -207,5 +207,16 @@ jQuery(document).ready(function($) {
 	    });
 	});
 
+
+	// Google Analytics Events
+
+	var shareFacebook = document.getElementsByClassName('share-facebook'); 
+	
+	addEventListener(shareFacebook, 'click', function() { 
+		console.log(shareFacebook);
+		// ga('send', 'event', 'button', 'click', 'share on facebook'); 
+		_kmq.push(['record', 'Share on Facebook']);
+	});
+
 });
 
