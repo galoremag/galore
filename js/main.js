@@ -213,7 +213,9 @@ jQuery(document).ready(function($) {
 	var shareFacebook = document.getElementsByClassName('share-facebook'); 
 	
 	addEventListener(shareFacebook, 'click', function() { 
-		ga('send', 'event', 'button', 'click', 'share on facebook'); 
+		console.log(shareFacebook);
+		// ga('send', 'event', 'button', 'click', 'share on facebook'); 
+		_kmq.push(['record', 'Share on Facebook']);
 	});
 
 });
