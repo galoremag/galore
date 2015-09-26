@@ -35,6 +35,15 @@ function defaulSelect() {
 	}
 }
 
+function recordShare(e) {
+	if (e.target !== e.currentTarget) {
+        var clickedItem = $(event.target).attr('class');
+        alert("You clicked " + clickedItem);
+        _kmq.push(['record', clickedItem]);
+    }
+    e.stopPropagation();
+}
+
 jQuery(window).on('load', function($) {
 	loadNewsletter();
 });
@@ -212,15 +221,6 @@ jQuery(document).ready(function($) {
 
 	var shareButton = document.querySelector('post-social');
 	shareButton.addEventListener("click", recordShare, false);
-	
-	function recordShare(e) {
-		if (e.target !== e.currentTarget) {
-	        var clickedItem = $(event.target).attr('class');
-	        alert("You clicked " + clickedItem);
-	        _kmq.push(['record', clickedItem]);
-	    }
-	    e.stopPropagation();
-	}
 
 	// shareButton.addEventListener(shareFacebook, 'click', function() { 
 	// 	console.log(shareFacebook);
