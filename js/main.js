@@ -1,5 +1,9 @@
 jQuery(window).on('load', function($) {
 
+});
+
+jQuery(document).ready(function($) {
+
 	function loadNewsletter() {
 		if (isTouchDevice()===true) {
 			return;
@@ -25,7 +29,7 @@ jQuery(window).on('load', function($) {
 		return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
 	};
 
-	function defaulSelect() {
+	function defaultSelect() {
 		var firstOpt = $('select option:first-child');
 
 		if (firstOpt.val() == '') {
@@ -46,11 +50,8 @@ jQuery(window).on('load', function($) {
 	};
 
 	loadNewsletter();
-});
 
-jQuery(document).ready(function($) {
-
-	defaulSelect();
+	defaultSelect();
 
 	$('input[type=text]').addClass('form-control');
 	$('input#discount-code[type=text]').attr('size','5').addClass('pull-left');
