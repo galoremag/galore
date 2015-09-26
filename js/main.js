@@ -210,13 +210,24 @@ jQuery(document).ready(function($) {
 
 	// Google Analytics Events
 
-	var shareFacebook = document.getElementsByClassName('share-facebook'); 
+	var shareButton = document.querySelector('post-social');
+	shareButton.addEventListener("click", recordShare, false);
 	
-	addEventListener(shareFacebook, 'click', function() { 
-		console.log(shareFacebook);
-		// ga('send', 'event', 'button', 'click', 'share on facebook'); 
-		_kmq.push(['record', 'Share on Facebook']);
-	});
+	function recordShare(e) {
+		if (e.target !== e.currentTarget) {
+	        var clickedItem = $(event.target).attr('class');
+	        alert("You clicked " + clickedItem);
+	        _kmq.push(['record', clickedItem]);
+	    }
+	    e.stopPropagation();
+	}
+
+	// shareButton.addEventListener(shareFacebook, 'click', function() { 
+	// 	console.log(shareFacebook);
+	// 	// ga('send', 'event', 'button', 'click', 'share on facebook'); 
+	// 	_kmq.push(['record', 'Share on Facebook']);
+	// 	_kmq.push(['record', 'Share on Facebook']);
+	// });
 
 });
 
