@@ -9,7 +9,7 @@
 
 		<!-- Kissmetrics tracking snippet -->
 		<script type="text/javascript">var _kmq = _kmq || [];
-		var _kmk = _kmk || '78f19657106f3450a14274219c3cf49914872963';
+		var _kmk = _kmk || 'ea856667b51eeb50b8bbdfbcbce28320d0675fbd';
 		function _kms(u){
 		  setTimeout(function(){
 		    var d = document, f = d.getElementsByTagName('script')[0],
