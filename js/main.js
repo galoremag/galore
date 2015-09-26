@@ -1,50 +1,50 @@
-
-function loadNewsletter() {
-	if (isTouchDevice()===true) {
-		return;
-	} else if ($.cookie('newsletter')) {
-		return;
-	} else {
-		$('#email-signup').delay(3200).fadeIn(600);
-	}
-}
-
-function sticky_relocate() {
-	var window_height = window.innerHeight;
-    var window_top = $(window).scrollTop();
-    var div_top = $('#sidebar-anchor').offset().top;
-    if (window_top > (div_top + 240)) {
-        $('#sidebar').addClass('sticky').css({'height': window_height, 'overflow':'scroll'});
-    } else {
-        $('#sidebar').removeClass('sticky');
-    }
-}
-
-function isTouchDevice() {
-	return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
-}
-
-function defaulSelect() {
-	var firstOpt = $('select option:first-child');
-
-	if (firstOpt.val() == '') {
-		firstOpt.attr('default', '');
-		firstOpt.attr('selected', '');
-		firstOpt.val('Choose');
-		firstOpt.text('Choose');
-	}
-}
-
-function recordShare(e) {
-	if (e.target !== e.currentTarget) {
-        var clickedItem = $(event.target).attr('class');
-        alert("You clicked " + clickedItem);
-        _kmq.push(['record', clickedItem]);
-    }
-    e.stopPropagation();
-}
-
 jQuery(window).on('load', function($) {
+
+	function loadNewsletter() {
+		if (isTouchDevice()===true) {
+			return;
+		} else if ($.cookie('newsletter')) {
+			return;
+		} else {
+			$('#email-signup').delay(3200).fadeIn(600);
+		}
+	};
+
+	function sticky_relocate() {
+		var window_height = window.innerHeight;
+	    var window_top = $(window).scrollTop();
+	    var div_top = $('#sidebar-anchor').offset().top;
+	    if (window_top > (div_top + 240)) {
+	        $('#sidebar').addClass('sticky').css({'height': window_height, 'overflow':'scroll'});
+	    } else {
+	        $('#sidebar').removeClass('sticky');
+	    }
+	};
+
+	function isTouchDevice() {
+		return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
+	};
+
+	function defaulSelect() {
+		var firstOpt = $('select option:first-child');
+
+		if (firstOpt.val() == '') {
+			firstOpt.attr('default', '');
+			firstOpt.attr('selected', '');
+			firstOpt.val('Choose');
+			firstOpt.text('Choose');
+		}
+	};
+
+	function recordShare(e) {
+		if (e.target !== e.currentTarget) {
+	        var clickedItem = $(event.target).attr('class');
+	        alert("You clicked " + clickedItem);
+	        _kmq.push(['record', clickedItem]);
+	    }
+	    e.stopPropagation();
+	};
+
 	loadNewsletter();
 });
 
