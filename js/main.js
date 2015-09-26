@@ -220,8 +220,14 @@ jQuery(document).ready(function($) {
 
 	// Google Analytics Events
 
-	var shareButton = document.querySelector('post-social');
-	shareButton.addEventListener("click", recordShare, false);
+	$(function() {
+		if ($('#global-container').is('.tag, .category, .single')) {
+			var shareButton = document.querySelector('post-social');
+			shareButton.addEventListener("click", recordShare, false);
+		} else {
+			return;
+		}
+	});
 
 	// shareButton.addEventListener(shareFacebook, 'click', function() { 
 	// 	console.log(shareFacebook);
