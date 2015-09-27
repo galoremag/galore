@@ -45,6 +45,7 @@ jQuery(document).ready(function($) {
 	        var clickedItem = $(event.target).attr('class');
 	        alert("You clicked " + clickedItem);
 	        _kmq.push(['record', clickedItem]);
+	        _gaq.push(['_trackEvent', 'Social Share', clickedItem]);
 	    }
 	    e.stopPropagation();
 	};
@@ -79,7 +80,7 @@ jQuery(document).ready(function($) {
 
 	// Prevent Default on All Hash Links
 	$(function() {
-	   $( 'a[href="#"]' ).click( function(e) {
+	   $('a[href="#"]').click( function(e) {
 	      e.preventDefault();
 	   } );
 	});
