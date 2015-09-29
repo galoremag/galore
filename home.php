@@ -45,7 +45,7 @@ $url = $thumb[0];
 
 		<div id="glides">
 			<?php
-				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0');
+				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post');
 				foreach ($postslist as $post) :
 				setup_postdata($post);
 			?>
@@ -374,7 +374,7 @@ $url = $thumb[0];
 				<hr>
 
 				<?php 
-				echo do_shortcode('[ajax_load_more button_label="Loading" offset="32"]');
+				echo do_shortcode('[ajax_load_more button_label="Loading" offset="32" post_type="post"]');
 				?>
 
 				<div class="spacer40"></div>
