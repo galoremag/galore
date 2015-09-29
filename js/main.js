@@ -208,13 +208,21 @@ jQuery(document).ready(function($) {
 	});
 
     /////////////////////
-	// Footer Opener //
+	// Footer Toggle //
 	/////////////////////
 
 	$(function() {
 		$('#footer-open').on('click', function(event) {
 			event.preventDefault();
 	        $('#footer').toggleClass('footerOn');
+	    });
+	});
+
+	$(function() {
+		$("#footer-close").click(function(e) {
+			e.preventDefault();
+	        $('#footer').toggleClass('footerOn');
+	        $.cookie('newsletter', 14);
 	    });
 	});
 

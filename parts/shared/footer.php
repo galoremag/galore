@@ -6,11 +6,40 @@
 		<a id="footer-open" class="brand-white-sm" href="#"></a>
 	</div>
 	<footer id="footer">
-		<div class="container-fluid">
-			<div class="pad5 pull-left">
-				<?php wp_nav_menu( array('theme_location' => 'footer-menu')); ?>
+		<div class="footer-content container-fluid">
+			<a id="footer-close" href=""><i class="fa fa-close"></i></a>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<p class="text-center">GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative woman in her 20's surrounding Style, Beauty, Pop, Sex + Dating and Fitness.</p>
+				</div>
+			</div>
+			
+			<hr />
+
+			<div class="row">
+				<div class="col-xs-6">
+					<h1>Links</h1>
+					<div>
+						<?php wp_nav_menu( array('theme_location' => 'footer-menu')); ?>
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<h1>Feeds</h1>
+					<ul>
+						<li><a href="<?php bloginfo('url'); ?>/feed" title="Everything">Everything &nbsp;<i class="fa fa-rss"></i></a></li>
+						<li><a href="<?php bloginfo('url'); ?>/category/style/feed" title="Style">Style &nbsp;<i class="fa fa-rss"></i></a></li>
+						<li><a href="<?php bloginfo('url'); ?>/category/beauty/feed" title="Beauty">Beauty &nbsp;<i class="fa fa-rss"></i></a></li>
+						<li><a href="<?php bloginfo('url'); ?>/category/sex-dating/feed" title="Sex + Dating">Sex + Dating &nbsp;<i class="fa fa-rss"></i></a></li>
+						<li><a href="<?php bloginfo('url'); ?>/category/fitness/feed" title="Fitness">Fitness &nbsp;<i class="fa fa-rss"></i></a></li>
+						<li><a href="<?php bloginfo('url'); ?>/category/pop/feed" title="Pop">Pop &nbsp;<i class="fa fa-rss"></i></a></li>
+					</ul>
+				</div>
+
 			</div>
 		</div>
+		
+		<a class="cat-icon" href="http://kittenagency.com"></a>
 	</footer>
 
 	<!-- Newsletter Signup -->

@@ -1979,16 +1979,23 @@ footer {
 	position: fixed;
 	.translate;
 	left: 0px;
-	bottom: -50px;
+	bottom: -100vh;
 	width: 100%;
-	height: 50px;
+	height: 100vh;
 	overflow: hidden;
-	padding: 10px 10px 10px 40px;
+	padding: 80px 10px 40px 10px;
 	.footerGradient;
-	color: white;
 	.font4;
 	.transition;
-	z-index: 1000;
+	z-index: 9999;
+}
+
+footer hr {
+	border-color: white;
+}
+
+footer, footer a, footer p, footer h1, footer h2, footer h3 {
+	color: white !important;
 }
 
 footer.footerOn {
@@ -1996,23 +2003,26 @@ footer.footerOn {
 	.transition;
 }
 
+footer .footer-content {
+	height: auto;
+	overflow: scroll;
+}
+/*
 .menu-footer-container, .menu-footer-menu-container {
 	text-align: center;
-}
+}*/
 
 ul#menu-footer-menu, ul#menu-footer {
 	list-style-type: none;
-	margin: 0 auto;
-	display: table;
+	/*margin: 0 auto;
+	display: table;*/
 }
 
 ul#menu-footer-menu li, ul#menu-footer li {
-	float: left;
 	margin: 0px 4px;
 }
 
-ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
-	margin-left: 0px;
+a.cat-icon {
 	width: 32px;
 	height: 32px;
 	background: url(images/anicat.gif) no-repeat !important;
@@ -2020,18 +2030,28 @@ ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
 	-webkit-transform: scale(1.5);
 	transform: scale(1.5);
   	opacity: 0.3;
+  	position: absolute;
+  	bottom: 0;
+  	left: 50%;
+  	margin-left: -16px;
+}
+
+a#footer-close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
 }
 
 ul#menu-footer-menu li:last-child, ul#menu-footer li:last-child {
 	margin-right: 0px;
 }
 
-ul#menu-footer-menu li a, ul#menu-footer li a {
+ul#menu-footer-menu li a, ul#menu-footer li a, a.close-footer {
 	color: white;
 	opacity: 0.7;
 }
 
-ul#menu-footer-menu li a:hover, ul#menu-footer li a:hover {
+ul#menu-footer-menu li a:hover, ul#menu-footer li a:hover, a.close-footer:hover {
 	color: white;
 	opacity: 1;
 }
@@ -2555,6 +2575,13 @@ time {
 		z-index: 9999;
 		letter-spacing: 0px;
 	}
+
+	footer {
+		padding-top: 100px;
+	}
+	a#footer-close {
+		top: 80px;
+	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -2704,15 +2731,12 @@ time {
 	.single ul.single-social .social-title {
 		display: none;
 	}
-	footer {
-		padding-left: 25px;
-	}
-	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
+	/*ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
 		display: none !important;
 	}
 	ul#menu-footer-menu li:last-child, ul#menu-footer li:last-child {
 		display: none !important;
-	}
+	}*/
 	.thumb {
 		width: 100%;
 	}
