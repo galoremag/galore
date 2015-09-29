@@ -1,47 +1,58 @@
-
-function loadNewsletter() {
-	if (isTouchDevice()===true) {
-		return;
-	} else if ($.cookie('newsletter')) {
-		return;
-	} else {
-		$('#email-signup').delay(3200).fadeIn(600);
-	}
-}
-
-function sticky_relocate() {
-	var window_height = window.innerHeight;
-    var window_top = $(window).scrollTop();
-    var div_top = $('#sidebar-anchor').offset().top;
-    if (window_top > (div_top + 240)) {
-        $('#sidebar').addClass('sticky').css({'height': window_height, 'overflow':'scroll'});
-    } else {
-        $('#sidebar').removeClass('sticky');
-    }
-}
-
-function isTouchDevice() {
-	return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
-}
-
-function defaulSelect() {
-	var firstOpt = $('select option:first-child');
-
-	if (firstOpt.val() == '') {
-		firstOpt.attr('default', '');
-		firstOpt.attr('selected', '');
-		firstOpt.val('Choose');
-		firstOpt.text('Choose');
-	}
-}
-
 jQuery(window).on('load', function($) {
-	loadNewsletter();
+
 });
 
 jQuery(document).ready(function($) {
 
-	defaulSelect();
+	function loadNewsletter() {
+		if (isTouchDevice()===true) {
+			return;
+		} else if ($.cookie('newsletter')) {
+			return;
+		} else {
+			$('#email-signup').delay(3200).fadeIn(600);
+		}
+	};
+
+	function sticky_relocate() {
+		var window_height = window.innerHeight;
+	    var window_top = $(window).scrollTop();
+	    var div_top = $('#sidebar-anchor').offset().top;
+	    if (window_top > (div_top + 240)) {
+	        $('#sidebar').addClass('sticky').css({'height': window_height, 'overflow':'scroll'});
+	    } else {
+	        $('#sidebar').removeClass('sticky');
+	    }
+	};
+
+	function isTouchDevice() {
+		return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
+	};
+
+	function defaultSelect() {
+		var firstOpt = $('select option:first-child');
+
+		if (firstOpt.val() == '') {
+			firstOpt.attr('default', '');
+			firstOpt.attr('selected', '');
+			firstOpt.val('Choose');
+			firstOpt.text('Choose');
+		}
+	};
+
+	function recordShare(e) {
+		if (e.target !== e.currentTarget) {
+	        var clickedItem = $(event.target).attr('class');
+	        alert("You clicked " + clickedItem);
+	        _kmq.push(['record', clickedItem]);
+	        _gaq.push(['_trackEvent', 'Social Share', clickedItem]);
+	    }
+	    e.stopPropagation();
+	};
+
+	loadNewsletter();
+
+	defaultSelect();
 
 	$('input[type=text]').addClass('form-control');
 	$('input#discount-code[type=text]').attr('size','5').addClass('pull-left');
@@ -69,7 +80,7 @@ jQuery(document).ready(function($) {
 
 	// Prevent Default on All Hash Links
 	$(function() {
-	   $( 'a[href="#"]' ).click( function(e) {
+	   $('a[href="#"]').click( function(e) {
 	      e.preventDefault();
 	   } );
 	});
@@ -210,13 +221,21 @@ jQuery(document).ready(function($) {
 
 	// Google Analytics Events
 
-	var shareFacebook = document.getElementsByClassName('share-facebook'); 
-	
-	addEventListener(shareFacebook, 'click', function() { 
-		console.log(shareFacebook);
-		// ga('send', 'event', 'button', 'click', 'share on facebook'); 
-		_kmq.push(['record', 'Share on Facebook']);
+	$(function() {
+		if ($('#global-container').is('.tag, .category, .single')) {
+			var shareButton = document.querySelector('post-social');
+			shareButton.addEventListener("click", recordShare, false);
+		} else {
+			return;
+		}
 	});
+
+	// shareButton.addEventListener(shareFacebook, 'click', function() { 
+	// 	console.log(shareFacebook);
+	// 	// ga('send', 'event', 'button', 'click', 'share on facebook'); 
+	// 	_kmq.push(['record', 'Share on Facebook']);
+	// 	_kmq.push(['record', 'Share on Facebook']);
+	// });
 
 });
 
