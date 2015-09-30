@@ -152,6 +152,10 @@ p {
 	padding: 0px 10px !important;
 }
 
+.horPad20 {
+	padding: 0px 20px !important;
+}
+
 .verPad10 {
 	padding: 10px 0px !important;
 }
@@ -1987,7 +1991,7 @@ footer {
 	.footerGradient;
 	.font4;
 	.transition;
-	z-index: 9999;
+	z-index: 9991;
 }
 
 footer hr {
@@ -2103,6 +2107,21 @@ button.alm-load-more-btn:hover {
 button.alm-load-more-btn:before, 
 button.alm-load-more-btn.done:before {
 	background: url(preloaders/preloader-pink.gif) no-repeat center center !important;
+}
+
+#likeBar {
+	position: fixed;
+	bottom: -80px;
+	width: 100%;
+	left: 0;
+	height: 60px;
+	background-color: white;
+	z-index: 9999;
+	.transition;
+}
+
+#likeBar .fb-like {
+	margin: 8px 10px;
 }
 
 /* Newsletter Signup */

@@ -14,6 +14,14 @@ jQuery(document).ready(function($) {
 		}
 	};
 
+	function loadLikeBar() {
+		if (isTouchDevice() === true) {
+			$('#likeBar').delay(8000).animate({bottom: "0px"}, 500);
+		}
+	}
+
+	setTimeout(loadLikeBar, 7000);
+
 	function sticky_relocate() {
 		var window_height = window.innerHeight;
 	    var window_top = $(window).scrollTop();
@@ -51,6 +59,8 @@ jQuery(document).ready(function($) {
 	};
 
 	loadNewsletter();
+
+	loadLikeBar();
 
 	defaultSelect();
 
@@ -195,7 +205,7 @@ jQuery(document).ready(function($) {
 		$('.hmbrgr').on('click', function(e) {
 			$('.modal-nav').fadeToggle('show');
 		});
-	})
+	});
 
 	// HAMBURGER
 	$(function() {
@@ -226,6 +236,13 @@ jQuery(document).ready(function($) {
 	    });
 	});
 
+	// CLOSE Facebook LIKE BAR
+	$(function() {
+		$("#likeBar-close").click(function(e) {
+			e.preventDefault();
+	        $('#likeBar').animate({bottom: "-60px"}, "fast");
+	    });
+	});
 
 	// Google Analytics Events
 
