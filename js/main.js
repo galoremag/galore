@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
 
 	function loadLikeBar() {
 		if (isTouchDevice() === true) {
-			$('#likeBar').delay(8000).animate({bottom: "0px"}, 500);
+			$('#likeBar').delay(6000).animate({bottom: "0px"}, 500);
 		}
 	}
 
