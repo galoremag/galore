@@ -2,8 +2,8 @@
 	</div>
 
 	<div id="likeBar" class="">
-		<a class="col-xs-6 twitterButton font1" href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i> Tweet</a>
-		<a class="col-xs-6 facebookButton font1 pull-right" href="https://www.facebook.com/galoremag" target="_blank"><i class="fa fa-facebook"></i> Share</a>
+		<a class="col-xs-6 twitterButton" href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i> Tweet</a>
+		<a class="col-xs-6 facebookButton pull-right" href="https://www.facebook.com/galoremag" target="_blank"><i class="fa fa-facebook"></i> Share</a>
 	</div>
 
 	<div class="footbut">
