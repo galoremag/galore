@@ -5,7 +5,7 @@
 		<h1 class="horPad20 pull-left">Do You Like?</h1>
 		<div class="pad10 fb-like pull-left" data-href="https://www.facebook.com/galoremag" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 		<div class="pull-right">
-			<a id="likeBar-close" href="#"><i class="fa fa-lg fa-close pad20"></i></a>
+			<a id="likeBar-times" href="#"><i class="fa fa-lg fa-times pad20"></i></a>
 		</div>
 	</div>
 
@@ -14,7 +14,7 @@
 	</div>
 	<footer id="footer">
 		<div class="footer-content container-fluid">
-			<a id="footer-close" href="#"><i class="fa fa-close"></i></a>
+			<a id="footer-close" href="#"><i class="fa fa-times"></i></a>
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 					<p class="text-center">GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative woman in her 20's surrounding Style, Beauty, Pop, Sex + Dating and Fitness.</p>
@@ -55,7 +55,7 @@
 	    <div class="email-signup-dialog col-md-4 col-md-offset-4">
 	        <div class="email-signup-content">
 	            <div class="email-signup-header">
-	                <button id="newsletterClose" type="button" class="close" data-dismiss="email-signup" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></button>
+	                <button id="newsletterClose" type="button" class="close" data-dismiss="email-signup" aria-label="Close"><span aria-hidden="true" class="fa fa-times"></span></button>
 	            </div>
 	            <div class="email-signup-body">
 	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
