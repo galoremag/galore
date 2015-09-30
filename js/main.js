@@ -240,7 +240,7 @@ jQuery(document).ready(function($) {
 	$(function() {
 		$("#likeBar-close").click(function(e) {
 			e.preventDefault();
-	        $('#likeBar').animate({bottom: "-60px"}, "fast");
+	        $('#likeBar').animate({bottom: "-60px"});
 	    });
 	});
 
