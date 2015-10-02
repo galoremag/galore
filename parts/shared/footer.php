@@ -2,19 +2,15 @@
 	</div>
 
 	<div id="likeBar" class="">
-		<h1 class="horPad20 pull-left">Do You Like?</h1>
-		<div class="pad10 fb-like pull-left" data-href="https://www.facebook.com/galoremag" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-		<div class="pull-right">
-			<a id="likeBar-close" href="#"><i class="fa fa-lg fa-close pad20"></i></a>
-		</div>
+		<a class="col-xs-6 twitterButton" href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i> Tweet</a>
+		<a class="col-xs-6 facebookButton pull-right" href="https://www.facebook.com/galoremag" target="_blank"><i class="fa fa-facebook"></i> Share</a>
 	</div>
 
 	<div class="footbut">
 		<a id="footer-open" class="brand-white-sm" href="#"></a>
 	</div>
 	<footer id="footer">
-		<div class="footer-content container-fluid">
-			<a id="footer-close" href="#"><i class="fa fa-close"></i></a>
+		<div class="footer-content container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 					<p class="text-center">GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative woman in her 20's surrounding Style, Beauty, Pop, Sex + Dating and Fitness.</p>
