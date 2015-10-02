@@ -14,6 +14,16 @@ jQuery(document).ready(function($) {
 		}
 	};
 
+	function loadFacebookModal() {
+		if (isTouchDevice()!==true) {
+			return;
+		} else if ($.cookie('facebook')) {
+			return;
+		} else if ($('#global-container').is('.tag, .category, .single')) {
+			$('#fb-modal').delay(3200).fadeIn(600);
+		}
+	};
+
 	function loadLikeBar() {
 		if (isTouchDevice() === true) {
 			$('#likeBar').delay(6000).animate({bottom: "0px"}, 500);
@@ -133,15 +143,8 @@ jQuery(document).ready(function($) {
 	});
 
 	/////////////////////
-	// Signup Modal  //
+	////// MODALS  //////
 	/////////////////////
-
-	$(function() {
-		$("#newsletterClose").click(function() {
-	        $("#email-signup").fadeOut(500);
-	        $.cookie('newsletter', 14);
-	    });
-	});
 
 	$(function() {
 		$('#signupButton').on('click', function(e) {
@@ -160,6 +163,28 @@ jQuery(document).ready(function($) {
 	        $("#email-signup").fadeOut(500);
 	        $.cookie('newsletter', 14);
 		});
+	});
+
+	$(function() {
+		$('#fb-modal .back').click(function(e){
+	        e.preventDefault();
+	        $("#fb-modal").fadeOut(500);
+	        $.cookie('facebook', 14);
+		});
+	});
+
+	$(function() {
+		$("#newsletterClose").click(function() {
+	        $("#email-signup").fadeOut(500);
+	        $.cookie('newsletter', 14);
+	    });	
+	});
+
+	$(function() {
+		$("#fbClose").click(function() {
+	        $("#fb-modal").fadeOut(500);
+	        $.cookie('facebook', 14);
+	    });	
 	});
 
 	// Detect User Agent
@@ -186,15 +211,7 @@ jQuery(document).ready(function($) {
 		$('#glides').perfectScrollbar();
 	});
 
-	$(function() {
-		$("#newsletterClose").click(function() {
-	        $("#email-signup").fadeOut(500);
-	        $.cookie('newsletter', 14);
-	    });	
-	});
-
 	// Nav Button
-
 	$(function() {
 		$('#nav-button').on('click', function(event) {
 	        $('.hmbrgr').click();
