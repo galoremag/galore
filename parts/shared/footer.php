@@ -58,7 +58,7 @@
 	            </div>
 	            <div class="fb-modal-body">
 	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
-	                <h1 class="horPad20 pull-left">Do You Like?</h1>
+	                <h1 class="horPad20">Do You Like?</h1>
 	                <p class="text-center">
 	                    Some things are only found on Facebook. Don't miss out.
 	                </p>

@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 	};
 
 	function loadFacebookModal() {
-		if (isTouchDevice()!=true) {
+		if (isTouchDevice()===false) {
 			return;
 		} else if ($.cookie('facebook')) {
 			return;
