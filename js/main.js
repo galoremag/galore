@@ -70,6 +70,8 @@ jQuery(document).ready(function($) {
 
 	loadNewsletter();
 
+	loadFacebookModal();
+
 	loadLikeBar();
 
 	defaultSelect();
