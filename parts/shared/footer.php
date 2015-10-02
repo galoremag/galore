@@ -50,26 +50,7 @@
 	</footer>
 
 	<!-- Newsletter Signup -->
-	<div id="fb-modal">
-	    <div class="fb-modal-dialog col-md-4 col-md-offset-4">
-	        <div class="fb-modal-content">
-	            <div class="fb-modal-header">
-	                <button id="fbClose" type="button" class="close" data-dismiss="fb-modal" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></button>
-	            </div>
-	            <div class="fb-modal-body">
-	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
-	                <h1 class="horPad20">Do You Like?</h1>
-	                <p class="text-center">
-	                    Some things are only found on Facebook. Don't miss out.
-	                </p>
-	                <div class="pad10 fb-like pull-left" data-href="https://www.facebook.com/galoremag" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-	            </div>
-	        </div>
-	    </div>
-	    <div class="back"></div>
-	</div>
 
-	<!-- Newsletter Signup -->
 	<div id="email-signup">
 	    <div class="email-signup-dialog col-md-4 col-md-offset-4">
 	        <div class="email-signup-content">
