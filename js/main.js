@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
 	};
 
 	function loadLikeBar() {
-		if (isTouchDevice() === true) {
+		if ($('#global-container').is('.tag, .category, .home, .archive')) {
 			$('#likeBar').delay(6000).animate({bottom: "0px"}, 500);
 		}
 	}
