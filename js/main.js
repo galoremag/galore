@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 	};
 
 	function loadFacebookModal() {
-		if (isTouchDevice()!==true) {
+		if (isTouchDevice()!=true) {
 			return;
 		} else if ($.cookie('facebook')) {
 			return;
@@ -268,7 +268,7 @@ jQuery(document).ready(function($) {
 	$(function() {
 		if ($('#global-container').is('.tag, .category, .single')) {
 			var shareButton = document.querySelector('post-social');
-			shareButton.addEventListener("click", recordShare, false);
+			shareButton.addEventListener('click', recordShare, false);
 		} else {
 			return;
 		}
