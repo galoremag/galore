@@ -260,6 +260,7 @@ jQuery(document).ready(function($) {
 		$("#likeBar-close").click(function(e) {
 			e.preventDefault();
 	        $('#likeBar').animate({bottom: "-60px"});
+	        $.cookie('facebook', 7);
 	    });
 	});
 
