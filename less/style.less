@@ -152,6 +152,10 @@ p {
 	padding: 0px 10px !important;
 }
 
+.horPad20 {
+	padding: 0px 20px !important;
+}
+
 .verPad10 {
 	padding: 10px 0px !important;
 }
@@ -748,11 +752,11 @@ body {
 	padding: 120px 0px 0px 0px;
 }
 
-#global-container.category-fitness {
+#global-container.category-health {
 	background: url(images/food.png) repeat;
 }
 
-#global-inner.fitness {
+#global-inner.health {
 	.bluePinkGradientFade;
 	padding: 120px 0px 0px 0px;
 }
@@ -1465,7 +1469,7 @@ ul.post-social h4 {
 
 .category .rsGalore .rsText {
 	padding: 10px 20px 10px 20px;
-    background: rgba(0,0,0,0.66);
+    /*background: rgba(0,0,0,0.66);*/
 }
 
 .category .rsText h2 {
@@ -1979,16 +1983,23 @@ footer {
 	position: fixed;
 	.translate;
 	left: 0px;
-	bottom: -50px;
+	bottom: -100vh;
 	width: 100%;
-	height: 50px;
+	height: 100vh;
 	overflow: hidden;
-	padding: 10px 10px 10px 40px;
+	padding: 80px 10px 40px 10px;
 	.footerGradient;
-	color: white;
 	.font4;
 	.transition;
-	z-index: 1000;
+	z-index: 9991;
+}
+
+footer hr {
+	border-color: white;
+}
+
+footer, footer a, footer p, footer h1, footer h2, footer h3 {
+	color: white !important;
 }
 
 footer.footerOn {
@@ -1996,23 +2007,26 @@ footer.footerOn {
 	.transition;
 }
 
+footer .footer-content {
+	height: auto;
+	overflow: scroll;
+}
+/*
 .menu-footer-container, .menu-footer-menu-container {
 	text-align: center;
-}
+}*/
 
 ul#menu-footer-menu, ul#menu-footer {
 	list-style-type: none;
-	margin: 0 auto;
-	display: table;
+	/*margin: 0 auto;
+	display: table;*/
 }
 
 ul#menu-footer-menu li, ul#menu-footer li {
-	float: left;
 	margin: 0px 4px;
 }
 
-ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
-	margin-left: 0px;
+a.cat-icon {
 	width: 32px;
 	height: 32px;
 	background: url(images/anicat.gif) no-repeat !important;
@@ -2020,18 +2034,28 @@ ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
 	-webkit-transform: scale(1.5);
 	transform: scale(1.5);
   	opacity: 0.3;
+  	position: absolute;
+  	bottom: 0;
+  	left: 50%;
+  	margin-left: -16px;
+}
+
+a#footer-close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
 }
 
 ul#menu-footer-menu li:last-child, ul#menu-footer li:last-child {
 	margin-right: 0px;
 }
 
-ul#menu-footer-menu li a, ul#menu-footer li a {
+ul#menu-footer-menu li a, ul#menu-footer li a, a.close-footer {
 	color: white;
 	opacity: 0.7;
 }
 
-ul#menu-footer-menu li a:hover, ul#menu-footer li a:hover {
+ul#menu-footer-menu li a:hover, ul#menu-footer li a:hover, a.close-footer:hover {
 	color: white;
 	opacity: 1;
 }
@@ -2083,6 +2107,36 @@ button.alm-load-more-btn:hover {
 button.alm-load-more-btn:before, 
 button.alm-load-more-btn.done:before {
 	background: url(preloaders/preloader-pink.gif) no-repeat center center !important;
+}
+
+#likeBar {
+	position: fixed;
+	bottom: -80px;
+	width: 100%;
+	left: 0;
+	height: 60px;
+	background-color: white;
+	z-index: 9999;
+	.transition;
+}
+
+#likeBar .fb-like {
+	margin: 8px 0px;
+}
+
+#fb-modal .fb-modal-body {
+	text-align: center;
+}
+
+#fb-modal .fb-like {
+	margin: 0 auto !important;
+}
+
+/* FACEBOOK OVERRRIDES */
+div.pluginButton.pluginButtonSmall.pluginButtonInline.pluginConnectButtonDisconnected {
+	background: @pink !important;
+	border: 0px;
+	box-shadow: inset 0 0 1px darken(@pink, 20%);
 }
 
 /* Newsletter Signup */
@@ -2225,6 +2279,82 @@ input, textarea, .form-control { .font2; color: @pink !important; }
 	background: darken(@pink, 15%);
 }
 
+/*  FACEBOOK SIGNUP MODAL  */
+
+#fb-modal {
+	position: fixed;
+	.translate;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9990;
+	display: none;
+}
+
+#fb-modal .back {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+	z-index: 9991;
+}
+
+#modalButton {
+	cursor: pointer;
+}
+
+.fb-modal-dialog {
+	z-index: 9992;
+	margin-top: 100px;
+}
+
+.fb-modal.in .fb-modal-dialog {
+	z-index: 9993;
+}
+
+.fb-modal-content {
+	background: black;
+	color: white;
+	padding: 0 40px 120px 40px;
+	/*box-shadow: 1px 1px 0px rgba(255,255,0,1);*/
+	box-shadow: 0px 0px 20px rgba(250,100,100,0.3);
+	border-radius: 7px;
+}
+
+.fb-modal-content h1 {
+	color: white;
+}
+
+.fb-modal-content .fb-modal-header {
+	border: 0px !important;
+}
+
+.fb-modal-header {
+	height: 80px;
+	border: 0px;
+}
+
+.fb-modal-header .close {
+	margin: 30px 0px 0px 0px;
+	color: white;
+}
+
+.fb-modal-body button {
+	padding: 5px 20px;
+}
+
+.fb-modal .form-control {
+	background: @pink;
+	color: @pink !important;
+}
+
+.fb-modal .form-control:hover, .fb-modal .form-control:focus {
+	background: darken(@pink, 15%);
+}
+
 time {
 	.font2;
 	font-size: 12px;
@@ -2308,6 +2438,10 @@ time {
 
 	.navbar>.container-fluid .navbar-brand {
 		margin-left: -90px;
+	}
+
+	#likeBar h1 {
+		margin: 10px 0 !important;
 	}
 }
 
@@ -2555,6 +2689,13 @@ time {
 		z-index: 9999;
 		letter-spacing: 0px;
 	}
+
+	footer {
+		padding-top: 100px;
+	}
+	a#footer-close {
+		top: 80px;
+	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -2662,7 +2803,7 @@ time {
 		font-size: 18px;
 		line-height: 19px;
 		/*color: @pink;*/
-		color: black;
+		color: @pink !important;
 		padding: 10px;
 		margin: 0 !important;
 		/*text-shadow: 1px 1px 0px rgba(255,255,0,1);*/
@@ -2704,15 +2845,12 @@ time {
 	.single ul.single-social .social-title {
 		display: none;
 	}
-	footer {
-		padding-left: 25px;
-	}
-	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
+	/*ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
 		display: none !important;
 	}
 	ul#menu-footer-menu li:last-child, ul#menu-footer li:last-child {
 		display: none !important;
-	}
+	}*/
 	.thumb {
 		width: 100%;
 	}
@@ -2752,7 +2890,7 @@ time {
 		background-image: url(images/pinstriped_suit_@2X.png) repeat;
 		background-size: 400px 333px;
 	}
-	.fitness {
+	.health {
 		background-size: 150px 150px;
 	}
 	#global-container.pop,

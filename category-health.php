@@ -22,7 +22,7 @@
 			<h2 class="text-center">The Latest in <span><?php echo single_cat_title( '', false ); ?></span> <i class="fa fa-heartbeat"></i></h2>
 			<hr>
 			<ol>
-			<?php query_posts('category_name=fitness&posts_per_page=4&offset=3&ignore_sticky_posts=true'); ?>
+			<?php query_posts('category_name=health&posts_per_page=4&offset=3&ignore_sticky_posts=true'); ?>
 			<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<li class="post">
@@ -58,7 +58,7 @@
 			<?php endif; ?>
 
 			<?php 
-			echo do_shortcode('[ajax_load_more category="fitness" button_label="Loading" offset="7" ignore_sticky_posts="true"]');
+			echo do_shortcode('[ajax_load_more category="health" button_label="Loading" offset="7" ignore_sticky_posts="true"]');
 			?>
 
 			<div class="spacer40"></div>
@@ -69,7 +69,7 @@
 			<?php
 			    $args = array(
 	                'post_type'    => 'post',
-	                'category_name'=> 'fitness',
+	                'category_name'=> 'health',
 	                'ignore_sticky_posts'=> 'true',
 	                'numberposts'  => 4,
 	                'orderby'      => 'meta_value', 

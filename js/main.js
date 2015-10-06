@@ -14,6 +14,24 @@ jQuery(document).ready(function($) {
 		}
 	};
 
+	function loadFacebookModal() {
+		if (isTouchDevice()===false) {
+			return;
+		} else if ($.cookie('facebook')) {
+			return;
+		} else if ($('#global-container').is('.tag, .category, .single')) {
+			$('#fb-modal').delay(3200).fadeIn(600);
+		}
+	};
+
+	function loadLikeBar() {
+		if ($('#global-container').is('.tag, .category, .home, .archive')) {
+			$('#likeBar').delay(6000).animate({bottom: "0px"}, 500);
+		}
+	}
+
+	setTimeout(loadLikeBar, 7000);
+
 	function sticky_relocate() {
 		var window_height = window.innerHeight;
 	    var window_top = $(window).scrollTop();
@@ -51,6 +69,10 @@ jQuery(document).ready(function($) {
 	};
 
 	loadNewsletter();
+
+	loadFacebookModal();
+
+	loadLikeBar();
 
 	defaultSelect();
 
@@ -123,15 +145,8 @@ jQuery(document).ready(function($) {
 	});
 
 	/////////////////////
-	// Signup Modal  //
+	////// MODALS  //////
 	/////////////////////
-
-	$(function() {
-		$("#newsletterClose").click(function() {
-	        $("#email-signup").fadeOut(500);
-	        $.cookie('newsletter', 14);
-	    });
-	});
 
 	$(function() {
 		$('#signupButton').on('click', function(e) {
@@ -150,6 +165,28 @@ jQuery(document).ready(function($) {
 	        $("#email-signup").fadeOut(500);
 	        $.cookie('newsletter', 14);
 		});
+	});
+
+	$(function() {
+		$('#fb-modal .back').click(function(e){
+	        e.preventDefault();
+	        $("#fb-modal").fadeOut(500);
+	        $.cookie('facebook', 14);
+		});
+	});
+
+	$(function() {
+		$("#newsletterClose").click(function() {
+	        $("#email-signup").fadeOut(500);
+	        $.cookie('newsletter', 14);
+	    });	
+	});
+
+	$(function() {
+		$("#fbClose").click(function() {
+	        $("#fb-modal").fadeOut(500);
+	        $.cookie('facebook', 14);
+	    });	
 	});
 
 	// Detect User Agent
@@ -176,15 +213,7 @@ jQuery(document).ready(function($) {
 		$('#glides').perfectScrollbar();
 	});
 
-	$(function() {
-		$("#newsletterClose").click(function() {
-	        $("#email-signup").fadeOut(500);
-	        $.cookie('newsletter', 14);
-	    });	
-	});
-
 	// Nav Button
-
 	$(function() {
 		$('#nav-button').on('click', function(event) {
 	        $('.hmbrgr').click();
@@ -195,7 +224,7 @@ jQuery(document).ready(function($) {
 		$('.hmbrgr').on('click', function(e) {
 			$('.modal-nav').fadeToggle('show');
 		});
-	})
+	});
 
 	// HAMBURGER
 	$(function() {
@@ -208,7 +237,7 @@ jQuery(document).ready(function($) {
 	});
 
     /////////////////////
-	// Footer Opener //
+	// Footer Toggle //
 	/////////////////////
 
 	$(function() {
@@ -218,13 +247,29 @@ jQuery(document).ready(function($) {
 	    });
 	});
 
+	$(function() {
+		$("#footer-close").click(function(e) {
+			e.preventDefault();
+	        $('#footer').toggleClass('footerOn');
+	        $.cookie('newsletter', 14);
+	    });
+	});
+
+	// CLOSE Facebook LIKE BAR
+	$(function() {
+		$("#likeBar-close").click(function(e) {
+			e.preventDefault();
+	        $('#likeBar').animate({bottom: "-60px"});
+	        $.cookie('facebook', 7);
+	    });
+	});
 
 	// Google Analytics Events
 
 	$(function() {
 		if ($('#global-container').is('.tag, .category, .single')) {
 			var shareButton = document.querySelector('post-social');
-			shareButton.addEventListener("click", recordShare, false);
+			shareButton.addEventListener('click', recordShare, false);
 		} else {
 			return;
 		}
