@@ -52,7 +52,7 @@
 			<li><a href="<?php bloginfo('url'); ?>/category/style" title="Style">Style</a></li>
 			<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a></li>
 			<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
-			<li><a href="<?php bloginfo('url'); ?>/category/fitness" title="Fitness">Fitness</a></li>
+			<li><a href="<?php bloginfo('url'); ?>/category/health" title="health">Health</a></li>
 			<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a></li>
 			<div id="site-search" class="visible-xs">
 				<!-- <?php get_search_form(); ?> -->
