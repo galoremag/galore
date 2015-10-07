@@ -6,6 +6,8 @@
 
 	<?php wp_footer(); ?>
 
+
+	<!-- Facebook Code -->
 	<div id="fb-root"></div>
 	<script>
 	  window.fbAsyncInit = function() {

@@ -52,7 +52,6 @@
 					</li> -->
 					<li class="pull-right"><h4 class="social-title"><?php the_title(); ?></h4></li>
 				</ul>
-				<?php comments_template( '', true ); ?>
 			</article>
 			<?php endwhile; ?>
 			<hr>
