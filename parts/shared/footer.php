@@ -2,7 +2,7 @@
 	</div>
 
 	<div id="likeBar" class="">
-		<h1 class="horPad20 pull-left">Get Exclusives</h1>
+		<h1 class="pull-left">Get Exclusives</h1>
 		<div class="pad10 fb-like pull-left" data-href="https://www.facebook.com/galoremag" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 		<div class="pull-right">
 			<a id="likeBar-close" href="#"><i class="fa fa-lg fa-close pad20"></i></a>
