@@ -42,6 +42,7 @@
 					<div class="author-pic col-md-2">
 						<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
 					</div>
+					<?php endif; ?>
 				</div>
 				<div class="spacer20"></div>
 				<ul class="single-social">
@@ -51,7 +52,6 @@
 					</li> -->
 					<li class="pull-right"><h4 class="social-title"><?php the_title(); ?></h4></li>
 				</ul>
-				<?php endif; ?>
 			</article>
 			<?php endwhile; ?>
 			<hr>
