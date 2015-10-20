@@ -438,3 +438,25 @@
 		elseif ( '' == $new_meta_value && $meta_value )
 		delete_post_meta( $post_id, $meta_key, $meta_value );
 	}
+
+	/* Filter the post class hook with our custom post class function. */
+	add_filter( 'post_class', 'smashing_post_class' );
+
+	function galore_post_class( $classes ) {
+
+		/* Get the current post ID. */
+		$post_id = get_the_ID();
+
+		/* If we have a post ID, proceed. */
+		if ( !empty( $post_id ) ) {
+
+		/* Get the custom post class. */
+		$post_class = get_post_meta( $post_id, 'galore_post_class', true );
+
+		/* If a post class was input, sanitize it and add it to the post class array. */
+		if ( !empty( $post_class ) )
+		  $classes[] = sanitize_html_class( $post_class );
+		}
+
+	  return $classes;
+	}
