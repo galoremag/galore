@@ -45,18 +45,48 @@ $url = $thumb[0];
 
 		<div id="glides">
 			<?php
-				$postslist = get_posts( array(
-					'offset' => 0,
-					'numberposts' => 20,
-					'orderby' => 'date',
-					'order' => 'DESC',
-					'post__in'  => get_option( 'sticky_posts' ),
-					'ignore_sticky_posts' => 4
+				$recent_posts = new WP_Query(array(
+					'showposts' => $posts,
+					'post_type' => 'post',
+					'ignore_sticky_posts' => 'false',
+					'post__not_in' => get_option('sticky_posts'),
+					'cat' => $categories,
 				));
-				foreach ($postslist as $post) :
-				setup_postdata($post);
+
+				$recent_sticky_posts = new WP_Query(array(
+					'showposts' => $posts,
+					'post_type' => 'post',
+					'ignore_sticky_posts' => 'false',
+					'post__in' => get_option('sticky_posts'),
+					'cat' => $categories,
+				));
+
+				$my_regposts = array();
+				$my_stickyposts = array();
+
+				foreach($recent_sticky_posts->posts as $my_post) {
+					array_push($my_stickyposts,$my_post);
+				}
+
+				foreach($recent_posts->posts as $my_post) {
+					array_push($my_regposts,$my_post);
+				}
+
+				// clear out the original query and push on the regular and sticky posts
+				$recent_posts->posts = array();
+
+				// sticky posts first
+				foreach($my_stickyposts as $my_stickypost) {
+					array_push($recent_posts->posts,$my_stickypost);
+				}
+				// regular posts next
+				foreach($my_regposts as $my_regpost) {
+					array_push($recent_posts->posts,$my_regpost);
+				}
 
 			?>
+
+
 			<div class="glide">
 				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
