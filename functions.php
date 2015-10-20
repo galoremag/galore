@@ -395,11 +395,11 @@
 
 	/* Display the post meta box. */
 	function galore_post_class_meta_box( $object, $box ) { ?>
-		<?php wp_nonce_field( basename( __FILE__ ), 'smashing_post_class_nonce' ); ?>
+		<?php wp_nonce_field( basename( __FILE__ ), 'galore_post_class_nonce' ); ?>
 		<p>
-		<label for="smashing-post-class"><?php _e( "Add a custom CSS class, which will be applied to WordPress' post class.", 'example' ); ?></label>
+		<label for="galore-post-class"><?php _e( "Add a custom CSS class, which will be applied to WordPress' post class.", 'example' ); ?></label>
 		<br />
-		<input class="widefat" type="text" name="smashing-post-class" id="smashing-post-class" value="<?php echo esc_attr( get_post_meta( $object->ID, 'smashing_post_class', true ) ); ?>" size="30" />
+		<input class="widefat" type="text" name="galore-post-class" id="galore-post-class" value="<?php echo esc_attr( get_post_meta( $object->ID, 'galore_post_class', true ) ); ?>" size="30" />
 		</p>
 		<?php
 	}
@@ -440,7 +440,7 @@
 	}
 
 	/* Filter the post class hook with our custom post class function. */
-	add_filter( 'post_class', 'smashing_post_class' );
+	add_filter( 'post_class', 'galore_post_class' );
 
 	function galore_post_class( $classes ) {
 
