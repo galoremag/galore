@@ -375,7 +375,7 @@
 	/* Meta box setup function. */
 	function galore_post_meta_boxes_setup() {
 		/* Add meta boxes on the 'add_meta_boxes' hook. */
-		add_action( 'add_meta_boxes', 'galore_add_post_meta_boxes' );
+		add_action( 'add_meta_boxes', 'galore_ad_post_meta_boxes' );
 
 		  /* Save post meta on the 'save_post' hook. */
 		add_action( 'save_post', 'galore_save_ad_post_meta', 10, 2 );
