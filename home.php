@@ -45,7 +45,15 @@ $url = $thumb[0];
 
 		<div id="glides">
 			<?php
-				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post&post__in=sticky_posts&ignore_sticky_posts=1');
+				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post');
+				$postslist = get_posts( array(
+					'offset' => 0,
+					'numberposts' => 20,
+					'orderby' => 'date',
+					'order' => 'DESC',
+					'post__in'  => get_option( 'sticky_posts' ),
+					'ignore_sticky_posts' => 4
+				));
 				foreach ($postslist as $post) :
 				setup_postdata($post);
 
