@@ -418,7 +418,7 @@
 		return $post_id;
 
 		/* Get the posted data and sanitize it for use as an HTML class. */
-		$new_meta_value = ( isset( $_POST['galore-post-class'] ) ? sanitize_html_class( $_POST['galore-post-class'] ) : '' );
+		$new_meta_value = ( isset( $_POST['galore_ad_post'] ) ? sanitize_html_class( $_POST['galore_ad_post'] ) : '' );
 
 		/* Get the meta key. */
 		$meta_key = 'galore_ad_post';
