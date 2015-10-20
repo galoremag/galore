@@ -45,9 +45,10 @@ $url = $thumb[0];
 
 		<div id="glides">
 			<?php
-				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post');
+				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post&post__in=sticky_posts&ignore_sticky_posts=1');
 				foreach ($postslist as $post) :
 				setup_postdata($post);
+
 			?>
 			<div class="glide">
 				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
