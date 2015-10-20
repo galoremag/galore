@@ -375,7 +375,7 @@
 	/* Meta box setup function. */
 	function galore_post_meta_boxes_setup() {
 		/* Add meta boxes on the 'add_meta_boxes' hook. */
-		add_action( 'add_meta_boxes', 'galore_ad_post_meta_boxes' );
+		add_action( 'add_meta_boxes', 'galore_add_post_meta_boxes' );
 
 		  /* Save post meta on the 'save_post' hook. */
 		add_action( 'save_post', 'galore_save_ad_post_meta', 10, 2 );
@@ -389,7 +389,7 @@
 	    'galore_post_meta_boxes_setup',   // Callback function
 	    'post',         // Admin page (or post type)
 	    'side',         // Context
-	    'default'         // Priority
+	    'high'         // Priority
 	  );
 	}
 
@@ -397,9 +397,9 @@
 	function galore_ad_post_meta_box( $object, $box ) { ?>
 		<?php wp_nonce_field( basename( __FILE__ ), 'galore_ad_post_nonce' ); ?>
 		<p>
-		<label for="galore-post-class"><?php _e( "Add a custom CSS class, which will be applied to WordPress' post class.", 'example' ); ?></label>
+		<label for="galore-ad-post"><?php _e( "Add the name of the campaign", 'example' ); ?></label>
 		<br />
-		<input class="widefat" type="text" name="galore-post-class" id="galore-post-class" value="<?php echo esc_attr( get_post_meta( $object->ID, 'galore_ad_post', true ) ); ?>" size="30" />
+		<input class="widefat" type="text" name="galore-post-class" id="galore-post-class" value="<?php echo esc_attr( get_post_meta( $object->ID, 'galore-ad-post', true ) ); ?>" size="30" />
 		</p>
 		<?php
 	}
