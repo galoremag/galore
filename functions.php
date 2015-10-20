@@ -386,7 +386,7 @@
 	  add_meta_box(
 	    'galore-ad-post',      // Unique ID
 	    esc_html__( 'Ad Post', 'example' ),    // Title
-	    'galore_post_meta_boxes_setup',   // Callback function
+	    'galore_ad_post_meta_box',   // Callback function
 	    'post',         // Admin page (or post type)
 	    'side',         // Context
 	    'high'         // Priority
