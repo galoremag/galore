@@ -378,7 +378,7 @@
 		add_action( 'add_meta_boxes', 'galore_add_post_meta_boxes' );
 
 		  /* Save post meta on the 'save_post' hook. */
-		add_action( 'save_post', 'galore_save_post_class_meta', 10, 2 );
+		add_action( 'save_post', 'galore_save_ad_post_meta', 10, 2 );
 	}
 
 	/* Create one or more meta boxes to be displayed on the post editor screen. */
@@ -394,20 +394,20 @@
 	}
 
 	/* Display the post meta box. */
-	function galore_post_class_meta_box( $object, $box ) { ?>
-		<?php wp_nonce_field( basename( __FILE__ ), 'galore_post_class_nonce' ); ?>
+	function galore_ad_post_meta_box( $object, $box ) { ?>
+		<?php wp_nonce_field( basename( __FILE__ ), 'galore_ad_post_nonce' ); ?>
 		<p>
 		<label for="galore-post-class"><?php _e( "Add a custom CSS class, which will be applied to WordPress' post class.", 'example' ); ?></label>
 		<br />
-		<input class="widefat" type="text" name="galore-post-class" id="galore-post-class" value="<?php echo esc_attr( get_post_meta( $object->ID, 'galore_post_class', true ) ); ?>" size="30" />
+		<input class="widefat" type="text" name="galore-post-class" id="galore-post-class" value="<?php echo esc_attr( get_post_meta( $object->ID, 'galore_ad_post', true ) ); ?>" size="30" />
 		</p>
 		<?php
 	}
 
 	/* Save the meta box's post metadata. */
-	function galore_save_post_class_meta( $post_id, $post ) {
+	function galore_save_ad_post_meta( $post_id, $post ) {
 		/* Verify the nonce before proceeding. */
-		if ( !isset( $_POST['galore_post_class_nonce'] ) || !wp_verify_nonce( $_POST['galore_post_class_nonce'], basename( __FILE__ ) ) )
+		if ( !isset( $_POST['galore_ad_post_nonce'] ) || !wp_verify_nonce( $_POST['galore_ad_post_nonce'], basename( __FILE__ ) ) )
 		return $post_id;
 
 		/* Get the post type object. */
@@ -421,7 +421,7 @@
 		$new_meta_value = ( isset( $_POST['galore-post-class'] ) ? sanitize_html_class( $_POST['galore-post-class'] ) : '' );
 
 		/* Get the meta key. */
-		$meta_key = 'galore_post_class';
+		$meta_key = 'galore_ad_post';
 
 		/* Get the meta value of the custom field key. */
 		$meta_value = get_post_meta( $post_id, $meta_key, true );
@@ -440,9 +440,9 @@
 	}
 
 	/* Filter the post class hook with our custom post class function. */
-	add_filter( 'post_class', 'galore_post_class' );
+	add_filter( 'post_class', 'galore_ad_post' );
 
-	function galore_post_class( $classes ) {
+	function galore_ad_post( $classes ) {
 
 		/* Get the current post ID. */
 		$post_id = get_the_ID();
@@ -451,7 +451,7 @@
 		if ( !empty( $post_id ) ) {
 
 		/* Get the custom post class. */
-		$post_class = get_post_meta( $post_id, 'galore_post_class', true );
+		$post_class = get_post_meta( $post_id, 'galore_ad_post', true );
 
 		/* If a post class was input, sanitize it and add it to the post class array. */
 		if ( !empty( $post_class ) )
