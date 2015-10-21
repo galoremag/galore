@@ -44,24 +44,73 @@ $url = $thumb[0];
 	<div id="latest">
 
 		<div id="glides">
-			<?php
-				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post');
-				foreach ($postslist as $post) :
-				setup_postdata($post);
-			?>
-			<div class="glide">
-				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-				<!-- <h4>
-					<?php 
-					if (get_post_meta($post->ID,'tagline')) {
-					echo get_post_meta($post->ID,'tagline');
-					}
-					?>
-				</h4> -->
-				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-			</div>
-			<?php endforeach; ?>
+
+				<?php
+
+				$postid = $wp_query->post->ID;
+
+			    $args_ordinary = array(
+			        'offset' => 1,
+					'numberposts' => 20,
+					'orderby' => 'date',
+					'order' => 'DESC',
+					'post_type' => 'post',
+					'posts_per_page' => 20,
+				);
+
+			    $args_sticky = array(
+			    	'numberposts' => 5,
+		            'meta_key'  => 'medium',
+		            'meta_value' => '1'
+			    );
+
+			    get_posts($args_sticky);
+			    
+			    if (have_posts()): ?>
+
+			    <?php while (have_posts()) : the_post(); ?>
+			    
+					<div class="glide ad">
+						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+						<div class="adFlag">Presented By <?php echo get_post_meta( $postid, 'sponsor', true ); ?></div>
+						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+						<!-- <h4>
+							<?php 
+							if (get_post_meta($post->ID,'tagline')) {
+							echo get_post_meta($post->ID,'tagline');
+							}
+							?>
+						</h4> -->
+						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+					</div>
+
+			    <?php endwhile; ?>
+			    <?php endif; ?>
+
+				<?php
+			    
+			    query_posts($args_ordinary);
+
+			    if (have_posts()): ?>
+
+			    <?php while (have_posts()) : the_post(); ?>
+					
+					<div class="glide">
+						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+						<!-- <h4>
+							<?php 
+							if (get_post_meta($post->ID,'tagline')) {
+							echo get_post_meta($post->ID,'tagline');
+							}
+							?>
+						</h4> -->
+						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+					</div>
+
+			    <?php endwhile; ?>
+			    <?php endif; ?>
+
 		</div>
 	</div>
 </div>
