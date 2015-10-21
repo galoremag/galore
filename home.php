@@ -47,7 +47,8 @@ $url = $thumb[0];
 
 				<?php
 
-				$postid = $wp_query->post->ID;
+				// $postid = $wp_query->post->ID;
+				$sticky = get_option( 'sticky_posts' );
 
 			    $args_ordinary = array(
 			        'offset' => 1,
@@ -59,20 +60,26 @@ $url = $thumb[0];
 				);
 
 			    $args_sticky = array(
-			    	'numberposts' => 5,
-		            'meta_key'  => 'medium',
-		            'meta_value' => '1'
+			    	'numberposts' => 1,
+		            'post__not_in' => $sticky,
+		            'meta_query' => array(
+						'relation' => 'AND',
+						array('key' => 'size','value' => 'medium','compare' => 'LIKE'),
+					),
+					'ignore_sticky_posts' => 1
 			    );
 
-			    get_posts($args_sticky);
-			    
-			    if (have_posts()): ?>
+			    // get_posts($args_sticky);
 
-			    <?php while (have_posts()) : the_post(); ?>
+			    $sticky_query = new WP_Query($args_sticky);
+			    
+			    if ($sticky_query->have_posts()): ?>
+
+			    <?php while ($sticky_query->have_posts()) : $sticky_query->the_post(); ?>
 			    
 					<div class="glide ad">
 						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-						<div class="adFlag">Presented By <?php echo get_post_meta( $postid, 'sponsor', true ); ?></div>
+						<div class="adFlag">Presented By <?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
 						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
 						<!-- <h4>
 							<?php 
@@ -85,15 +92,17 @@ $url = $thumb[0];
 					</div>
 
 			    <?php endwhile; ?>
+			    <?php wp_reset_postdata(); ?>
 			    <?php endif; ?>
 
 				<?php
 			    
-			    query_posts($args_ordinary);
+			    // get_posts($args_ordinary);
+			    $ord_query = new WP_Query($args_ordinary);
 
-			    if (have_posts()): ?>
+			    if ($ord_query->have_posts()): ?>
 
-			    <?php while (have_posts()) : the_post(); ?>
+			    <?php while ($ord_query->have_posts()) : $ord_query->the_post(); ?>
 					
 					<div class="glide">
 						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
