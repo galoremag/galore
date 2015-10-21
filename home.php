@@ -65,7 +65,6 @@ $url = $thumb[0];
 		            'meta_query' => array(
 						'relation' => 'AND',
 						array('key' => 'size','value' => 'medium','compare' => 'LIKE'),
-						array('key' => 'sponsor','value' => 'Lulu','compare' => 'LIKE'),
 					),
 					'ignore_sticky_posts' => 1
 			    );
