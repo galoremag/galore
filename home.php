@@ -44,75 +44,70 @@ $url = $thumb[0];
 	<div id="latest">
 
 		<div id="glides">
-			<?php
-				$postslist = get_posts( array(
-					'offset' => 0,
+
+				<?php
+
+			    $args_ordinary = array(
+			        'offset' => 1,
 					'numberposts' => 20,
 					'orderby' => 'date',
 					'order' => 'DESC',
-					'post__in'  => get_option( 'sticky_posts' ),
-					'ignore_sticky_posts' => 4
-				));
-				foreach ($postslist as $post) :
-				setup_postdata($post);
-
-////
-
-				$recent_posts = new WP_Query(array(
-					'showposts' => $posts,
 					'post_type' => 'post',
-					'ignore_sticky_posts' => 'false',
-					'post__not_in' => get_option('sticky_posts'),
-					'cat' => $categories,
-				));
+					'posts_per_page' => 20,
+				);
 
-				$recent_sticky_posts = new WP_Query(array(
-					'showposts' => $posts,
-					'post_type' => 'post',
-					'ignore_sticky_posts' => 'false',
-					'post__in' => get_option('sticky_posts'),
-					'cat' => $categories,
-				));
+			    $args_sticky = array(
+			    	'numberposts' => 1,
+		            'meta_key'  => 'medium',
+		            'meta_value' => '1'
+			    );
 
-				$my_regposts = array();
-				$my_stickyposts = array();
+			    get_posts($args_sticky);
+			    
+			    if (have_posts()): ?>
 
-				foreach($recent_sticky_posts->posts as $my_post) {
-					array_push($my_stickyposts,$my_post);
-				}
+			    <?php while (have_posts()) : the_post(); ?>
+			    
+					<div class="glide ad">
+						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+						<!-- <h4>
+							<?php 
+							if (get_post_meta($post->ID,'tagline')) {
+							echo get_post_meta($post->ID,'tagline');
+							}
+							?>
+						</h4> -->
+						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+					</div>
 
-				foreach($recent_posts->posts as $my_post) {
-					array_push($my_regposts,$my_post);
-				}
+			    <?php endwhile; ?>
+			    <?php endif; ?>
 
-				// clear out the original query and push on the regular and sticky posts
-				$recent_posts->posts = array();
+				<?php
+			    
+			    query_posts($args_ordinary);
 
-				// sticky posts first
-				foreach($my_stickyposts as $my_stickypost) {
-					array_push($recent_posts->posts,$my_stickypost);
-				}
-				// regular posts next
-				foreach($my_regposts as $my_regpost) {
-					array_push($recent_posts->posts,$my_regpost);
-				}
+			    if (have_posts()): ?>
 
-			?>
+			    <?php while (have_posts()) : the_post(); ?>
+					
+					<div class="glide">
+						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+						<!-- <h4>
+							<?php 
+							if (get_post_meta($post->ID,'tagline')) {
+							echo get_post_meta($post->ID,'tagline');
+							}
+							?>
+						</h4> -->
+						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+					</div>
 
+			    <?php endwhile; ?>
+			    <?php endif; ?>
 
-			<div class="glide">
-				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-				<!-- <h4>
-					<?php 
-					if (get_post_meta($post->ID,'tagline')) {
-					echo get_post_meta($post->ID,'tagline');
-					}
-					?>
-				</h4> -->
-				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-			</div>
-			<?php endforeach; ?>
 		</div>
 	</div>
 </div>
