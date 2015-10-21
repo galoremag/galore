@@ -47,6 +47,8 @@ $url = $thumb[0];
 
 				<?php
 
+				$postid = $wp_query->post->ID;
+
 			    $args_ordinary = array(
 			        'offset' => 1,
 					'numberposts' => 20,
@@ -57,7 +59,7 @@ $url = $thumb[0];
 				);
 
 			    $args_sticky = array(
-			    	'numberposts' => 1,
+			    	'numberposts' => 5,
 		            'meta_key'  => 'medium',
 		            'meta_value' => '1'
 			    );
@@ -70,6 +72,7 @@ $url = $thumb[0];
 			    
 					<div class="glide ad">
 						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+						<div class="adFlag">Presented By <?php echo get_post_meta( $postid, 'sponsor', true ); ?></div>
 						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
 						<!-- <h4>
 							<?php 
