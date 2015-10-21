@@ -45,6 +45,19 @@ $url = $thumb[0];
 
 		<div id="glides">
 			<?php
+				$postslist = get_posts( array(
+					'offset' => 0,
+					'numberposts' => 20,
+					'orderby' => 'date',
+					'order' => 'DESC',
+					'post__in'  => get_option( 'sticky_posts' ),
+					'ignore_sticky_posts' => 4
+				));
+				foreach ($postslist as $post) :
+				setup_postdata($post);
+
+////
+
 				$recent_posts = new WP_Query(array(
 					'showposts' => $posts,
 					'post_type' => 'post',
