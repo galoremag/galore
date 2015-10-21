@@ -47,17 +47,8 @@ $url = $thumb[0];
 
 				<?php
 
-				$postid = $wp_query->post->ID;
+				// $postid = $wp_query->post->ID;
 				$sticky = get_option( 'sticky_posts' );
-
-			    $args_ordinary = array(
-			        'offset' => 1,
-					'numberposts' => 20,
-					'orderby' => 'date',
-					'order' => 'DESC',
-					'post_type' => 'post',
-					'posts_per_page' => 20,
-				);
 
 			    $args_sticky = array(
 			    	'numberposts' => 1,
@@ -79,7 +70,7 @@ $url = $thumb[0];
 			    
 					<div class="glide ad">
 						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-						<div class="adFlag">Presented By <?php echo get_post_meta( $postid, 'sponsor', true ); ?></div>
+						<div class="adFlag">Presented By <?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
 						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
 						<!-- <h4>
 							<?php 
@@ -96,6 +87,15 @@ $url = $thumb[0];
 			    <?php endif; ?>
 
 				<?php
+
+				$args_ordinary = array(
+			        'offset' => 1,
+					'numberposts' => 19,
+					'orderby' => 'date',
+					'order' => 'DESC',
+					'post_type' => 'post',
+					'posts_per_page' => 19,
+				);
 			    
 			    // get_posts($args_ordinary);
 			    $ord_query = new WP_Query($args_ordinary);
@@ -118,6 +118,7 @@ $url = $thumb[0];
 					</div>
 
 			    <?php endwhile; ?>
+			    <?php wp_reset_postdata(); ?>
 			    <?php endif; ?>
 
 		</div>
