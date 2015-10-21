@@ -50,15 +50,6 @@ $url = $thumb[0];
 				// $postid = $wp_query->post->ID;
 				$sticky = get_option( 'sticky_posts' );
 
-			    $args_ordinary = array(
-			        'offset' => 1,
-					'numberposts' => 20,
-					'orderby' => 'date',
-					'order' => 'DESC',
-					'post_type' => 'post',
-					'posts_per_page' => 20,
-				);
-
 			    $args_sticky = array(
 			    	'numberposts' => 1,
 		            'post__not_in' => $sticky,
@@ -96,6 +87,15 @@ $url = $thumb[0];
 			    <?php endif; ?>
 
 				<?php
+
+				$args_ordinary = array(
+			        'offset' => 1,
+					'numberposts' => 19,
+					'orderby' => 'date',
+					'order' => 'DESC',
+					'post_type' => 'post',
+					'posts_per_page' => 19,
+				);
 			    
 			    // get_posts($args_ordinary);
 			    $ord_query = new WP_Query($args_ordinary);
@@ -118,6 +118,7 @@ $url = $thumb[0];
 					</div>
 
 			    <?php endwhile; ?>
+			    <?php wp_reset_postdata(); ?>
 			    <?php endif; ?>
 
 		</div>
