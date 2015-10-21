@@ -136,6 +136,10 @@ p {
 	padding: 10px !important;
 }
 
+.pad15 {
+	padding: 15px !important;
+}
+
 .pad20 {
 	padding: 20px !important;
 }
@@ -554,10 +558,13 @@ hr {
 	width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
 h1 {
 	.font1;
 	color: black;
-	font-weight: bold;
 	text-transform: uppercase;
 	font-size: 42px;
 	letter-spacing: 0.5px;
@@ -579,7 +586,6 @@ h2 {
 h3, h3 a {
 	color: black;
 	.font2;
-	font-weight: bold;
 	font-size: 24px;
 	margin: 5px 0px;
 }
@@ -587,7 +593,6 @@ h3, h3 a {
 h4 {
 	color: black;
 	.font2;
-	font-weight: bold;
 	font-size: 18px;
 	margin: 5px 0px;
 }
@@ -595,7 +600,6 @@ h4 {
 h5 {
 	color: black;
 	.font4;
-	font-weight: bold;
 	font-size: 22px;
 	margin: 0px;	
 }
@@ -2136,27 +2140,16 @@ button.alm-load-more-btn.done:before {
 	left: 0;
 	height: 60px;
 	background-color: white;
-	z-index: 9999;
+	z-index: 1005;
 	.transition;
 }
 
+#likeBar h1 {
+	margin: 15px 10px 15px 20px;
+}
+
 #likeBar .fb-like {
-	margin: 8px 0px;
-}
-
-#fb-modal .fb-modal-body {
-	text-align: center;
-}
-
-#fb-modal .fb-like {
-	margin: 0 auto !important;
-}
-
-/* FACEBOOK OVERRRIDES */
-div.pluginButton.pluginButtonSmall.pluginButtonInline.pluginConnectButtonDisconnected {
-	background: @pink !important;
-	border: 0px;
-	box-shadow: inset 0 0 1px darken(@pink, 20%);
+	margin: 10px 0px;
 }
 
 /* Newsletter Signup */
@@ -2335,6 +2328,14 @@ input, textarea, .form-control { .font2; color: @pink !important; }
 	z-index: 9993;
 }
 
+#fb-modal .fb-modal-body {
+	text-align: center;
+}
+
+#fb-modal .fb-like {
+	margin: 0 auto !important;
+}
+
 .fb-modal-content {
 	background: black;
 	color: white;
@@ -2461,7 +2462,7 @@ time {
 	}
 
 	#likeBar h1 {
-		margin: 10px 0 !important;
+		margin: 10px 10px !important;
 	}
 }
 
@@ -2708,6 +2709,11 @@ time {
 		box-shadow: 1px 1px 0px rgba(255,255,0,1);
 		z-index: 9999;
 		letter-spacing: 0px;
+	}
+
+	.category .rsText h2 {
+		font-size: 22px !important;
+		padding-top: 40px !important;
 	}
 
 	footer {

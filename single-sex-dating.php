@@ -42,8 +42,8 @@
 					<div class="author-pic col-md-2">
 						<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
 					</div>
+					<?php endif; ?>
 				</div>
-				<?php endif; ?>
 				<div class="spacer20"></div>
 				<ul class="single-social">
 					<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i> &nbsp;<h4 class="nomarg">Share on Facebook</h4></a></li>
@@ -71,7 +71,7 @@
 			</ul>
 		</div>
 		<div id="sidebar-anchor"></div>
-		<div id="sidebar" class="sidebar col-md-4 hidden-sm">
+		<div id="sidebar" class="sidebar col-md-4 hidden-xs hidden-sm">
 			<h2>Trending</h2>
 			<?php
 			    $args = array(
