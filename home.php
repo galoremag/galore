@@ -53,6 +53,10 @@ $url = $thumb[0];
 			    $args_sticky = array(
 			    	'numberposts' => 1,
 		            'post__not_in' => $sticky,
+		            'orderby' => 'date',
+		            'order' => 'DESC',
+		            'post_type' => 'post',
+		            'posts_per_page' => 1,
 		            'meta_query' => array(
 						'relation' => 'AND',
 						array('key' => 'size','value' => 'medium','compare' => 'LIKE'),
@@ -88,13 +92,17 @@ $url = $thumb[0];
 
 				<?php
 
+				$sticky = get_option( 'sticky_posts' );
+
 				$args_ordinary = array(
-			        'offset' => 1,
+			        'offset' => 0,
+			        'post__not_in' => $sticky,
 					'numberposts' => 19,
 					'orderby' => 'date',
 					'order' => 'DESC',
 					'post_type' => 'post',
 					'posts_per_page' => 19,
+					'ignore_sticky_posts' => 1
 				);
 			    
 			    // get_posts($args_ordinary);
