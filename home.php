@@ -74,7 +74,7 @@ $url = $thumb[0];
 			    
 					<div class="glide ad">
 						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-						<div class="adFlag">Presenting <i class="fa fa-hand-peace-o"></i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
+						<div class="adFlag">Presenting </i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
 						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
 						<!-- <h4>
 							<?php 
