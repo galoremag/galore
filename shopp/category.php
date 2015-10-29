@@ -21,7 +21,7 @@
 								<?php // global $Shopp; ?>
 								<?php $product_stock = shopp('product','outofstock'); ?>
 								<?php if($product_stock == 'Sold'): ?>
-									<span class="badge">Sold Out</span>
+								<br/><span class="badge">Sold Out</span>
 								<?php else: ?>
 							</h3>
 
