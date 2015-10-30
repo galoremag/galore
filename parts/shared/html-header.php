@@ -84,7 +84,7 @@
 
 
 		<!-- Facebook Pixel Tracking -->
-		<?php if ( is_single() ) : if ( has_term('kylie-jenner', 'tag') ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php if ( has_term( 'kylie-jenner', 'tag' )) : ?>
 
 			<!-- Facebook Pixel Code -->
 			<script>
