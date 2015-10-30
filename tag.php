@@ -15,7 +15,7 @@
 	<div class="row-fluid">
 		<div id="content" class="col-sm-10 col-sm-offset-1">
 			<?php if ( have_posts() ): ?>
-			<h2><span>Tag </span><i class="fa fa-tag"></i> <?php echo single_tag_title( '', false ); ?></h2>
+			<h2>Tag <i class="fa fa-tag"></i> <span><?php echo single_tag_title( '', false ); ?></span></h2>
 			<hr>
 			<ol>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -51,12 +51,14 @@
 			<h2>No posts to display in <?php echo single_tag_title( '', false ); ?></h2>
 			<?php endif; ?>
 
-			<h2>No more stories tagged <span><?php echo single_tag_title( '', false ); ?></span></h2>
+			<h4 class="text-center">No more stories tagged <span><?php echo single_tag_title( '', false ); ?></span></h4>
+
+			<hr>
 
 			<?php 
 			$tag = get_the_tags( get_query_var( 'tag' ) );
 			$tags = $tag->slug;
-			echo do_shortcode('[ajax_load_more tag="'.$tags.'" offset="4"]');
+			echo do_shortcode('[ajax_load_more button_label="Loading" ignore_sticky_posts="true" tag="'.$tags.'" offset="0"]');
 			?>
 			
 			<div class="spacer40"></div>
