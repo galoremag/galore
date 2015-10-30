@@ -84,7 +84,7 @@
 
 
 		<!-- Facebook Pixel Tracking -->
-		<?php if ( has_term('kylie-jenner', 'tag') ) { ?>
+		<?php if ( has_term( 'kylie-jenner', 'tag' )) : ?>
 
 			<!-- Facebook Pixel Code -->
 			<script>
@@ -101,7 +101,7 @@
 			/></noscript>
 			<!-- End Facebook Pixel Code -->
 
-		<?php } endif; ?>
+		<?php endif; ?>
 
 		<!-- Pinterest Verification -->
 		<meta name="p:domain_verify" content="8c3f8aadea8dcff760f98a676ca9a2f7"/>
