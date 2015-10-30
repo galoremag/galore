@@ -82,8 +82,6 @@
 		
 		<meta name="keywords" content="Galore, Galore Girls, girls, edgy, sexy, teens, teenager, pop culture, Justin Bieber, Nicki Minaj, Kanye West, entertainment">
 
-
-		<!-- Facebook Pixel Tracking -->
 		<?php if ( has_term( 'kylie-jenner', 'tag' )) : ?>
 
 			<!-- Facebook Pixel Code -->
