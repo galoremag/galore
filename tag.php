@@ -51,6 +51,8 @@
 			<h2>No posts to display in <?php echo single_tag_title( '', false ); ?></h2>
 			<?php endif; ?>
 
+			<h2>No more stories tagged <span><?php echo single_tag_title( '', false ); ?></span></h2>
+
 			<?php 
 			$tag = get_the_tags( get_query_var( 'tag' ) );
 			$tags = $tag->slug;
