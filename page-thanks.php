@@ -24,7 +24,7 @@ Template Name: Newsletter Thanks
 
                 <!-- Newsletter Signup -->
 
-                <div class="email-signup-body col-sm-6 col-sm-offset-3">
+                <div class="email-signup-body col-sm-12">
                     
                     <?php the_content(); ?>
 
