@@ -30,7 +30,21 @@ Template Name: Newsletter Thanks
 
                 </div>
 
+                <div class="text-center">
+                    <div id="_giphy_tv"></div>
+                    <script>
+                    var _giphy_tv_tag="email";
+                    var g = document.createElement('script'); g.type = 'text/javascript'; g.async = true;
+                    g.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'giphy.com/static/js/widgets/tv.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(g, s);
+                    </script>
+                </div>
+
                 <hr>
+
+                <div class="spacer40"></div>
+                <h2 class="text-center">Hot <span>Stories</span></h2>
+                <div class="spacer40"></div>
 
                 <?php echo do_shortcode('[ajax_load_more orderby="date" category="parties" button_label="Loading"]'); ?>
 
