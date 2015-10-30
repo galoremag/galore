@@ -30,6 +30,8 @@ Template Name: Newsletter Thanks
 
                 </div>
 
+                <hr>
+
                 <?php echo do_shortcode('[ajax_load_more orderby="date" category="parties" button_label="Loading"]'); ?>
 
             </div>
