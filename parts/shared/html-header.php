@@ -82,6 +82,8 @@
 		
 		<meta name="keywords" content="Galore, Galore Girls, girls, edgy, sexy, teens, teenager, pop culture, Justin Bieber, Nicki Minaj, Kanye West, entertainment">
 
+		<?php echo $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ?>
+
 		<?php if ( has_term( 'kylie-jenner', 'tag' )) : ?>
 
 			<!-- Facebook Pixel Code -->
