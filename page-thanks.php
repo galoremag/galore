@@ -43,7 +43,7 @@ Template Name: Newsletter Thanks
                 <hr>
 
                 <div class="spacer40"></div>
-                <h2 class="text-center">Hot <span>Stories</span></h2>
+                <h2 class="text-center">Join The <span>Party</span></h2>
                 <div class="spacer40"></div>
 
                 <?php echo do_shortcode('[ajax_load_more orderby="date" category="parties" button_label="Loading"]'); ?>
