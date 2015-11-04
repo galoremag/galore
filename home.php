@@ -418,22 +418,6 @@ $url = $thumb[0];
 		</div>
 	</div>
 
-	<!-- COVER STORIES -->
-
-	<div id="cover-title">
-		<img src="<?php bloginfo('template_url'); ?>/images/cover-stories.png" alt="Galore Mag Cover Stories">
-	</div>
-
-	<div class="cover-stories">
-		<div class="container-fluid nopad">
-			<div class="row-fluid">
-				<div class="nopad col-sm-12">
-					<?php echo do_shortcode( '[new_royalslider id="3"]' ); ?>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<div class="container-fluid nopad">
 		<div class="row-fluid">
 			<div id="content" class="col-md-10 col-md-offset-1">
