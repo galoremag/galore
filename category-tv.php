@@ -77,7 +77,7 @@
 			<div class="spacer40"></div>
 		</div>
 		<div id="sidebar-anchor"></div>
-		<div id="sidebar" class="sidebar col-md-4 hidden-sm">
+		<div id="sidebar" class="sidebar col-md-4 hidden-sm hidden-xs">
 			<h2>Trending</h2>
 			<?php
 			    $args = array(
