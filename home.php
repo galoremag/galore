@@ -53,19 +53,22 @@ $url = $thumb[0];
 				setup_postdata($post);
 			?>
 					
-					<div class="glide ad">
-						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-						<!-- <h4>
-							<?php 
-							if (get_post_meta($post->ID,'tagline')) {
-							echo get_post_meta($post->ID,'tagline');
-							}
-							?>
-						</h4> -->
-						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-					</div>
-					<?php endforeach; ?>
+			<div class="glide ad">
+				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+				<div class="adFlag">Presenting </i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
+				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+				<!-- <h4>
+					<?php 
+					if (get_post_meta($post->ID,'tagline')) {
+					echo get_post_meta($post->ID,'tagline');
+					}
+					?>
+				</h4> -->
+				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+			</div>
+			
+			<?php endforeach; ?>
+
 		    <?php wp_reset_postdata(); ?>
 
 			<?php
