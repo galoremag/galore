@@ -48,7 +48,7 @@ $url = $thumb[0];
 		<div id="glides">
 
 			<?php
-				$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=ad');
+				$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=sponsor');
 				foreach ($adlist as $post) :
 				setup_postdata($post);
 			?>
@@ -66,7 +66,7 @@ $url = $thumb[0];
 				</h4> -->
 				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 			</div>
-			
+
 			<?php endforeach; ?>
 
 		    <?php wp_reset_postdata(); ?>
