@@ -210,7 +210,9 @@ jQuery(document).ready(function($) {
 	// });
 
 	$(function() {
-		$('#glides').perfectScrollbar();
+		$('#glides').perfectScrollbar({
+			suppressScrollY: true
+		});
 	});
 
 	// Nav Button

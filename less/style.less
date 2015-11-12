@@ -15,6 +15,8 @@ Version: 1.0.1
 @import "../bower_components/fontawesome/less/font-awesome.less";
 @fa-font-path: "fonts"; // Font Awesome font directory override
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+
 @font-face {
     font-family: "Karla";
     src: url("../galore/fonts/karla-regular-webfont.eot");
@@ -54,7 +56,10 @@ Version: 1.0.1
 }
 
 .font1 {
-	font-family: 'proxima-nova-alt-condensed', sans-serif;
+	/*font-family: 'proxima-nova-alt-condensed', sans-serif;*/
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 900;
+	font-stretch: expanded;
 	text-transform: uppercase;
 }
 
@@ -1343,7 +1348,7 @@ ul.modal-nav-menu li a:hover {
   width: 100%; height: 100%;
   white-space: nowrap !important;
   font-size: 0;
-  padding: 0px 10px 20px 10px;
+  padding: 10px 10px 20px 10px;
   position: relative;
   overflow: hidden !important;
   -webkit-transform: translate3d(0,0,0);
@@ -1360,6 +1365,7 @@ ul.modal-nav-menu li a:hover {
   background-size: cover;
   white-space: normal !important;
   font-size: 12px;
+  vertical-align: top;
 }
 
 .glide h3 {
@@ -1372,6 +1378,8 @@ ul.modal-nav-menu li a:hover {
     padding: 10px;
     border-radius: 3px;
     box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+    vertical-align: middle;
+    margin-top: -10px;
 }
 
 .glide.ad .adFlag {
@@ -1735,7 +1743,7 @@ ul.post-social h4 {
     width: 150px !important;
     background: black;
     color: #fff;
-    font-family: 'ProximaNovaBold', sans-serif;
+    .font1;
     padding: 10px 35px !important;
     margin: 20px 0px 0px 0px !important;
     position: relative !important;
@@ -1759,11 +1767,11 @@ ul.post-social h4 {
 	padding: 10px 20px !important;
 	position: relative;
 	text-align: left;
-	background: black;
+	background: @pink;
 	color: #FFF;
 	width: 100%;
-	font-family: 'proxima-nova-alt-condensed';
-	text-transform: uppercase;
+	.font1;
+	-webkit-text-stroke: 2px white;
 }
 
 /*.style .post-grid .entry {
@@ -2104,6 +2112,7 @@ button.alm-load-more-btn.done:before {
 
 #likeBar h1 {
 	margin: 15px 10px 15px 20px;
+	-webkit-text-stroke: 2px black;
 }
 
 #likeBar .fb-like {
