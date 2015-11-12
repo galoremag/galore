@@ -15,6 +15,8 @@ Version: 1.0.1
 @import "../bower_components/fontawesome/less/font-awesome.less";
 @fa-font-path: "fonts"; // Font Awesome font directory override
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+
 @font-face {
     font-family: "Karla";
     src: url("../galore/fonts/karla-regular-webfont.eot");
@@ -54,7 +56,10 @@ Version: 1.0.1
 }
 
 .font1 {
-	font-family: 'proxima-nova-alt-condensed', sans-serif;
+	/*font-family: 'proxima-nova-alt-condensed', sans-serif;*/
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 900;
+	font-stretch: expanded;
 	text-transform: uppercase;
 }
 
@@ -1738,7 +1743,7 @@ ul.post-social h4 {
     width: 150px !important;
     background: black;
     color: #fff;
-    font-family: 'ProximaNovaBold', sans-serif;
+    .font1;
     padding: 10px 35px !important;
     margin: 20px 0px 0px 0px !important;
     position: relative !important;
@@ -1762,11 +1767,11 @@ ul.post-social h4 {
 	padding: 10px 20px !important;
 	position: relative;
 	text-align: left;
-	background: black;
+	background: @pink;
 	color: #FFF;
 	width: 100%;
-	font-family: 'proxima-nova-alt-condensed';
-	text-transform: uppercase;
+	.font1;
+	-webkit-text-stroke: 2px white;
 }
 
 /*.style .post-grid .entry {
@@ -2107,6 +2112,7 @@ button.alm-load-more-btn.done:before {
 
 #likeBar h1 {
 	margin: 15px 10px 15px 20px;
+	-webkit-text-stroke: 2px black;
 }
 
 #likeBar .fb-like {
