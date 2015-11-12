@@ -211,7 +211,7 @@ jQuery(document).ready(function($) {
 
 	$(function() {
 		$('#glides').perfectScrollbar({
-			suppressScrollY: true;
+			suppressScrollY: true
 		});
 	});
 
