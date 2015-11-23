@@ -6,7 +6,7 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <?php
-$args = array( 'tag' => 'superhero', 'post_type' => 'post', 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
+$args = array( 'tag' => 'superhero', 'post_type' => array('sponsor', 'post'), 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
 
 $postslist = get_posts( $args );
 
@@ -53,9 +53,9 @@ $url = $thumb[0];
 				setup_postdata($post);
 			?>
 					
-			<div class="glide ad">
+			<div class="glide special">
 				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-				<div class="adFlag">Presenting </i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
+				<div class="specialFlagSm">Presenting </i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
 				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
 				<!-- <h4>
 					<?php 
@@ -385,6 +385,53 @@ $url = $thumb[0];
 				<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> More Everything <i class="fa fa-diamond"></i></h2>
 				<hr>
 
+				<!-- Special Post -->
+
+				<?php
+					$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=sponsor');
+					foreach ($adlist as $post) :
+					setup_postdata($post);
+				?>
+
+				<li class="post specialMd">
+					<article class="row-fluid">
+						<div class="nopad col-sm-5">
+							<div class="specialFlagMd">Presenting </i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
+							<div class="thumb">
+								<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
+							</div>
+							<h4 class="hidden-xs">Share this post</h4>
+							<ul class="post-social pull-left hidden-xs">
+								<li><a class="share-email" href="/cdn-cgi/l/email-protection#2365514a464d4763504c4e46544b4651460d404c4e1c505641494640571e1f1c534b5303574b467c574a574f460b0a18031c1d05424e5318414c475a1e1f1c534b53X the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
+								<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+								<li class="visible-xs"><h4>Share This Post</h4></li>
+							</ul>
+						</div>
+						<div class="nopadright col-sm-7">
+							<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+							<p class="byline hidden-xs"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+							<p class="byline visible-xs pull-left nomarg"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <br /> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+							<ul class="post-social visible-xs">
+								<li><a class="share-email" href="/cdn-cgi/l/email-protection#3d7b4f545853597d4e5250584a55584f58135e5250024e485f57585e490001024d554d1d4955586249544951581514061d02031b5c504d065f5259440001024d554dX the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
+								<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul>
+
+							<div class="excerpt hidden-xs"><?php the_excerpt(); ?></div>
+
+							<p class="pull-left hidden-xs"><a href="<?php esc_url( the_permalink() ); ?>">Full Story <i class="fa fa-mars"></i></a></p>
+
+						</div>
+					</article>
+				</li>
+
+				<?php endforeach; ?>
+
+			    <?php wp_reset_postdata(); ?>
+
+			    <!-- Infinite Scroll -->
+
 				<?php 
 				echo do_shortcode('[ajax_load_more button_label="Loading" offset="32" post_type="post"]');
 				?>
@@ -394,20 +441,5 @@ $url = $thumb[0];
 		</div>
 	</div>
 </div>
-
-<!-- <div class="kittens container-fluid">
-	<div class="row-fluid">
-		<div class="col-sm-6 col-sm-offset-3">
-			<div class="kitten-logo" style="-webkit-transform: scale(0.4);">
-				<img src="<?php bloginfo('template_url'); ?>/images/kitten-logo.png">
-			</div>
-			<h3 class="text-center">Finally, a talent agency for the mobile + social world.</h3>
-			<p class="text-center">See our full roster of girls <a href="/kitten">here</a>.</p>
-			<div class="kitten-girls">
-				<img src="<?php bloginfo('template_url'); ?>/images/kittens/kittens.png">
-			</div>
-		</div>
-	</div>
-</div> -->
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>
