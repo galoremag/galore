@@ -4,13 +4,15 @@ jQuery(window).on('load', function($) {
 
 jQuery(document).ready(function($) {
 
+	$.cookie('sponsorLoaded', 14);
+
 	function loadNewsletter() {
 		if (isTouchDevice()===true) {
 			return;
 		} else if ($.cookie('newsletter')) {
 			return;
 		} else {
-			$('#email-signup').delay(3200).fadeIn(600);
+			$('#email-signup').delay(6000).fadeIn(600);
 		}
 	};
 
@@ -26,7 +28,7 @@ jQuery(document).ready(function($) {
 
 	function loadLikeBar() {
 		if ($('#global-container').is('.tag, .category, .home, .archive')) {
-			$('#likeBar').delay(6000).animate({bottom: "0px"}, 500);
+			$('#likeBar').delay(8000).animate({bottom: "0px"}, 500);
 		}
 	}
 
