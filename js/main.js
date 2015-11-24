@@ -4,8 +4,6 @@ jQuery(window).on('load', function($) {
 
 jQuery(document).ready(function($) {
 
-	$.cookie('sponsorLoaded', 14);
-
 	function loadNewsletter() {
 		if (isTouchDevice()===true) {
 			return;
