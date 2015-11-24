@@ -30,6 +30,8 @@ $url = $thumb[0];
 
 <a id="superhero" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" style="background: url(<?php echo $url ?>) no-repeat;">
 	<h1 class="pad40 col-md-6"><?php the_title(); ?></h1>
+	<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=5697&lid=27946&csid=&c=0&itt=EOTgSDNteBPGBZseExTPjt3KGpZXpe1WEEYEwE1Y%2FTII51KPC7NhewUsrcjb%2FwYB&ord=[RANDOM]'/>
+	<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=5697&lid=27946&csid=&c=0&ict=fc%2BEefcyYl059wfYiWxiFP1FJQs4mZgA&ord=[RANDOM]'/></a>
 </a>
 <a id="scroll-down"><i class="fa fa-arrow-circle-o-down"></i></a>
 
@@ -123,8 +125,8 @@ $url = $thumb[0];
 
 							<p class="pull-left hidden-xs"><a href="<?php esc_url( the_permalink() ); ?>">Full Story <i class="fa fa-mars"></i></a></p>
 
-							<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=5697&lid=27946&csid=&c=0&itt=EOTgSDNteBPGBZseExTPjt3KGpZXpe1WEEYEwE1Y%2FTII51KPC7NhewUsrcjb%2FwYB&ord=[RANDOM]'/>
-							<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=5697&lid=27946&csid=&c=0&ict=fc%2BEefcyYl059wfYiWxiFP1FJQs4mZgA&ord=[RANDOM]'/></a>
+							<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=5697&lid=27989&csid=&c=0&itt=EOTgSDNteBPGBZseExTPjt3KGpZXpe1WEEYEwE1Y%2FTII51KPC7NhewUsrcjb%2FwYB&ord=[RANDOM]'/>
+							<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=5697&lid=27989&csid=&c=0&ict=fc%2BEefcyYl059wfYiWxiFP1FJQs4mZgA&ord=[RANDOM]'/></a>
 
 						</div>
 					</article>
