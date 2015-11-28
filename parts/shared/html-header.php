@@ -197,7 +197,7 @@
 
 			$(function() {
 				if ($.cookie('sponsorLoaded')) {
-					$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'});
+					$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner.single, #global-inner.archive, #global-inner.category, #global-inner.tag, #global-inner.page').css({'padding' : '0'});
 				} else if (isMobile == true) {
 					$('a#superhero').css({'display' : 'table'}) && $('#scroll-down').css({'display' : 'block'});
 					$.cookie('sponsorLoaded', 14);
