@@ -34,7 +34,7 @@
 				<div class="spacer20"></div>
 				<?php the_content(); ?>
 				<div class="spacer20"></div>
-				<div class="author-info row">
+				<div class="author-info row hidden-xs">
 					<?php if ( get_the_author_meta( 'description' ) ) : ?>
 					<div class="author-bio col-md-8 col-md-offset-2 text-right">
 						<h3>About The Author: <span><?php echo get_the_author() ; ?></span></h3>

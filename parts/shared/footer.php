@@ -54,7 +54,7 @@
 	    <div class="fb-modal-dialog col-md-4 col-md-offset-4">
 	        <div class="fb-modal-content">
 	            <div class="fb-modal-header">
-	                <button id="fbClose" type="button" class="close" data-dismiss="fb-modal" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></button>
+	                <a id="fbClose" class="close" data-dismiss="fb-modal" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
 	            </div>
 	            <div class="fb-modal-body">
 	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
@@ -74,7 +74,7 @@
 	    <div class="email-signup-dialog col-md-4 col-md-offset-4">
 	        <div class="email-signup-content">
 	            <div class="email-signup-header">
-	                <button id="newsletterClose" type="button" class="close" data-dismiss="email-signup" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></button>
+	                <a id="newsletterClose" class="close" data-dismiss="email-signup" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
 	            </div>
 	            <div class="email-signup-body">
 	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
