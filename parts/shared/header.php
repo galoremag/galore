@@ -96,12 +96,15 @@ $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
 $url = $thumb[0];
 ?>
 
-<a id="superhero" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" style="background: url(<?php echo $url ?>) no-repeat;">
-	<h1 class="pad40 col-md-6"><?php the_title(); ?></h1>
+<div id="superSpecial">
+	<a id="superhero" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" style="background: url(<?php echo $url ?>) no-repeat;"></a>
+	<h1 class="pad20"><?php the_title(); ?></h1>
+	
 	<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=5697&lid=27946&csid=&c=0&itt=EOTgSDNteBPGBZseExTPjt3KGpZXpe1WEEYEwE1Y%2FTII51KPC7NhewUsrcjb%2FwYB&ord=[RANDOM]'/>
 	<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=5697&lid=27946&csid=&c=0&ict=fc%2BEefcyYl059wfYiWxiFP1FJQs4mZgA&ord=[RANDOM]'/></a>
-</a>
-<a id="scroll-down"><i class="fa fa-arrow-circle-o-down"></i></a>
+	
+	<a id="scroll-down"><i class="fa fa-arrow-circle-o-down"></i></a>
+</div>
 
 <?php endforeach; ?>
 
