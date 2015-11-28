@@ -76,6 +76,16 @@ jQuery(document).ready(function($) {
 
 	defaultSelect();
 
+	$(function() {
+		if ($.cookie('sponsorLoaded')) {
+			$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('padTop120');
+		} else if (isTouchDevice()===true) {
+			$('a#superhero').css({'display' : 'table'}) && $('#scroll-down').css({'display' : 'block'}) && $.cookie('sponsorLoaded', 14);
+		} else {
+			$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('padTop120');
+		}
+	});
+
 	$('input[type=text]').addClass('form-control');
 	$('input#discount-code[type=text]').attr('size','5').addClass('pull-left');
 	$('form#cart input[type=text]').css('width','auto');
