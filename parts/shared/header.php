@@ -105,6 +105,8 @@ $url = $thumb[0];
 
 <?php endforeach; ?>
 
+<?php wp_reset_postdata(); ?>
+
 <!-- End Superhero -->
 
 <div id="global-container" <?php body_class(); ?>>

@@ -70,6 +70,8 @@
 				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 			</div>
 			<?php endforeach; ?>
+
+			<?php wp_reset_postdata(); ?>
 		</div>
 
 	</div>
