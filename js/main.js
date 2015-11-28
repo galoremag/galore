@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 
 	function loadLikeBar() {
 		if ($('#global-container').is('.tag, .category, .home, .archive')) {
-			$('#likeBar').delay(8000).animate({bottom: "0px"}, 500);
+			$('#likeBar').delay(22000).animate({bottom: "0px"}, 500);
 		}
 	}
 
