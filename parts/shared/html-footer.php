@@ -16,12 +16,20 @@
 
 			if ($.cookie('sponsorLoaded')) {
 				$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'});
+				
+				return;
+
 			} else if (isMobile == true) {
 				$('div#global-inner').addClass('nopad');
 				$('a#superhero').css({'display' : 'table'}) && $('#scroll-down').css({'display' : 'block'});
 				$.cookie('sponsorLoaded', 14);
+
+				return;
+				
 			} else {
 				$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'});
+
+				return;
 			}
 
 	</script>
