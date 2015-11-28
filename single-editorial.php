@@ -11,34 +11,6 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<!-- Start Superhero -->
-
-<?php
-$args = array( 'tag' => 'superhero', 'post_type' => array('sponsor', 'post'), 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
-
-$postslist = get_posts( $args );
-
-// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
-foreach ($postslist as $post) : setup_postdata($post);
-?>
-
-<?php 
-$thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
-$url = $thumb[0];
-?>
-
-
-<a id="superhero" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" style="background: url(<?php echo $url ?>) no-repeat;">
-	<h1 class="pad40 col-md-6"><?php the_title(); ?></h1>
-	<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=5697&lid=27946&csid=&c=0&itt=EOTgSDNteBPGBZseExTPjt3KGpZXpe1WEEYEwE1Y%2FTII51KPC7NhewUsrcjb%2FwYB&ord=[RANDOM]'/>
-	<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=5697&lid=27946&csid=&c=0&ict=fc%2BEefcyYl059wfYiWxiFP1FJQs4mZgA&ord=[RANDOM]'/></a>
-</a>
-<a id="scroll-down"><i class="fa fa-arrow-circle-o-down"></i></a>
-
-<?php endforeach; ?>
-
-<!-- End Superhero -->
-
 <div class="container-fluid nopad">
 	<div class="row-fluid">
 		<div id="content" class="col-md-8 col-sm-12 container-fixed">
@@ -127,7 +99,7 @@ $url = $thumb[0];
 
 							<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=5697&lid=27989&csid=&c=0&itt=EOTgSDNteBPGBZseExTPjt3KGpZXpe1WEEYEwE1Y%2FTII51KPC7NhewUsrcjb%2FwYB&ord=[RANDOM]'/>
 							<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=5697&lid=27989&csid=&c=0&ict=fc%2BEefcyYl059wfYiWxiFP1FJQs4mZgA&ord=[RANDOM]'/></a>
-							
+
 						</div>
 					</article>
 				</li>
