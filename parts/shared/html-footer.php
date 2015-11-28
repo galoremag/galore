@@ -17,7 +17,7 @@
 			if ($.cookie('sponsorLoaded')) {
 				$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'});
 			} else if (isMobile == true) {
-				$('#global-inner').addClass('nopad');
+				$('div#global-inner').addClass('nopad');
 				$('a#superhero').css({'display' : 'table'}) && $('#scroll-down').css({'display' : 'block'});
 				$.cookie('sponsorLoaded', 14);
 			} else {
