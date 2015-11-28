@@ -1868,7 +1868,13 @@ div.catlinks {
 	z-index: 9;
 }
 
-li.specialMd {background: fade(@yell, 10%); margin-bottom: 20px; padding: 20px;}
+li.specialMd {
+	background: fade(@yell, 10%);
+	margin-bottom: 20px;
+	padding: 20px;
+	border-radius: 3px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+}
 
 li.specialMd article {display: inline-block; width: 100%;}
 
@@ -2673,6 +2679,10 @@ time {
 	ul.post-social {
 		width: 100%;
 		padding: 20px 100px;
+		width: 100% !important;
+		position: absolute;
+		right: 0px;
+		bottom: -65px;
 	}
 	ul.post-social li:first-child {
 		margin-right: 0px !important;
