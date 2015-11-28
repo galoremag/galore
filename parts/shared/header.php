@@ -106,5 +106,7 @@ $url = $thumb[0];
 
 <?php endforeach; ?>
 
+<!-- End Superhero -->
+
 <div id="global-container" <?php body_class(); ?>>
 	<div id="global-inner" <?php body_class(); ?>>
