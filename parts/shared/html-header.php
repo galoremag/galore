@@ -197,9 +197,9 @@
 
 			$(function() {
 				if ($.cookie('sponsorLoaded')) {
-					$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner.single, #global-inner.archive, #global-inner.category, #global-inner.tag, #global-inner.page').css({'padding' : '0'});
+					$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'});
 				} else if (isMobile == true) {
-					$('a#superhero').css({'display' : 'table'}) && $('#scroll-down').css({'display' : 'block'});
+					$('a#superhero').css({'display' : 'table'}) && $('#scroll-down').css({'display' : 'block'}) && $('#global-inner.single, #global-inner.archive, #global-inner.category, #global-inner.tag, #global-inner.page').css({'padding' : '0'});
 					$.cookie('sponsorLoaded', 14);
 				} else {
 					$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'});
