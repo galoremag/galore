@@ -199,8 +199,7 @@
 				if ($.cookie('sponsorLoaded')) {
 					$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('nopad');
 				} else if (isMobile == true) {
-					$('a#superhero').css({'display' : 'table'}) && $('#scroll-down').css({'display' : 'block'});
-					$.cookie('sponsorLoaded', 14);
+					$('a#superhero').css({'display' : 'table'}) && $('#scroll-down').css({'display' : 'block'}) && $.cookie('sponsorLoaded', 14);
 				} else {
 					$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('nopad');
 				}
