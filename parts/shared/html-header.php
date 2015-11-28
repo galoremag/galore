@@ -197,11 +197,11 @@
 
 			$(function() {
 				if ($.cookie('sponsorLoaded')) {
-					$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('nopad');
+					$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('padTop120');
 				} else if (isMobile == true) {
 					$('a#superhero').css({'display' : 'table'}) && $('#scroll-down').css({'display' : 'block'}) && $.cookie('sponsorLoaded', 14);
 				} else {
-					$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('nopad');
+					$('a#superhero').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('padTop120');
 				}
 			});
 
