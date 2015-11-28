@@ -184,13 +184,13 @@ jQuery(document).ready(function($) {
 	});
 
 	$(function() {
-		$("a#newsletterClose").click(function() {
+		$("#newsletterClose").click(function() {
 	        $("#email-signup").fadeOut(500) && $.cookie('facebook', 14);
-	    });
+	    });	
 	});
 
 	$(function() {
-		$("a#fbClose").click(function() {
+		$("#fbClose").click(function() {
 	        $("#fb-modal").fadeOut(500) && $.cookie('facebook', 14);
 	    });	
 	});
