@@ -28,7 +28,7 @@ jQuery(document).ready(function($) {
 		if ($('#global-container').is('.tag, .category, .home, .archive')) {
 			$('#likeBar').delay(22000).animate({bottom: "0px"}, 500);
 		}
-	};
+	}
 
 	setTimeout(loadLikeBar, 7000);
 
@@ -172,26 +172,30 @@ jQuery(document).ready(function($) {
 	$(function() {
 		$('#email-signup .back').click(function(e){
 	        e.preventDefault();
-	        $("#email-signup").fadeOut(500) && $.cookie('newsletter', 14);
+	        $("#email-signup").fadeOut(500);
+	        $.cookie('newsletter', 14);
 		});
 	});
 
 	$(function() {
 		$('#fb-modal .back').click(function(e){
 	        e.preventDefault();
-	        $("#fb-modal").fadeOut(500) && $.cookie('facebook', 14);
+	        $("#fb-modal").fadeOut(500);
+	        $.cookie('facebook', 14);
 		});
 	});
 
 	$(function() {
 		$("#newsletterClose").click(function() {
-	        $("#email-signup").fadeOut(500) && $.cookie('facebook', 14);
+	        $("#email-signup").fadeOut(500);
+	        $.cookie('newsletter', 14);
 	    });	
 	});
 
 	$(function() {
 		$("#fbClose").click(function() {
-	        $("#fb-modal").fadeOut(500) && $.cookie('facebook', 14);
+	        $("#fb-modal").fadeOut(500);
+	        $.cookie('facebook', 14);
 	    });	
 	});
 
