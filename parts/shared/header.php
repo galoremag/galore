@@ -97,7 +97,7 @@ $url = $thumb[0];
 ?>
 
 <div id="superSpecial">
-	<a id="superhero" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" style="background: url(<?php echo $url ?>) no-repeat;"></a>
+	<a id="superhero" href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title_attribute(); ?>" style="background: url(<?php echo $url ?>) no-repeat;"></a>
 	<div class="specialFlag">Presented by <?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
 	<h1 class="pad20"><?php the_title(); ?></h1>
 	<p class="specialTip">Scroll to site</p>
