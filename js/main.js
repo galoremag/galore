@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
 		}
 	}
 
-	setTimeout(loadLikeBar, 7000);
+	setTimeout(loadLikeBar, 22000);
 
 	function sticky_relocate() {
 		var window_height = window.innerHeight;

@@ -1876,7 +1876,7 @@ li.specialMd article {display: inline-block; width: 100%;}
 
 img.specialPixel {width: 1px; height: 1px;}
 
-div.specialFlagMd {
+.specialFlagMd {
 	position: absolute;
     color: black;
     background: yellow;
@@ -1886,7 +1886,7 @@ div.specialFlagMd {
     /*font-size: 10px;*/
     font-weight: bold;
     pointer-events: none;
-    bottom: 20px;
+    bottom: 100px; 
 	z-index: 1;
 }
 
@@ -2136,6 +2136,7 @@ button.alm-load-more-btn.done:before {
 
 #likeBar h1 {
 	margin: 12px 10px;
+	letter-spacing: -2px;
 	/*-webkit-text-stroke: 2px black;*/
 }
 
@@ -2143,8 +2144,10 @@ button.alm-load-more-btn.done:before {
 	margin: 10px 0px;
 }
 
-#likeBar-close i {
-	padding: 22px;
+#likeBar-close {
+	padding: 20px;
+	position: absolute;
+	right: 0;
 }
 
 /* Newsletter Signup */
@@ -2683,6 +2686,9 @@ time {
 		float: right;
 		text-align: right;
 		width: 100%;
+	}
+	div.specialFlagMd {
+		bottom: 20px;
 	}
 	.specialMd ul.post-social {
 		width: 100% !important;
