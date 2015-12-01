@@ -32,9 +32,9 @@
 			?>
 					
 			<div class="glide special">
-				<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+				<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank"><?php the_post_thumbnail('thumbnail'); ?></a>
 				<div class="specialFlagSm">Presenting </i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
-				<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>"><h3><?php the_title(); ?></h3></a>
+				<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank"><h3><?php the_title(); ?></h3></a>
 				<!-- <h4>
 					<?php 
 					if (get_post_meta($post->ID,'tagline')) {
