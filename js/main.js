@@ -21,6 +21,8 @@ jQuery(document).ready(function($) {
 			return;
 		} else if ($('#global-container').is('.tag, .category, .single')) {
 			$('#fb-modal').delay(3200).fadeIn(600);
+		} else {
+			return;
 		}
 	};
 
@@ -80,7 +82,7 @@ jQuery(document).ready(function($) {
 		if ($.cookie('sponsorLoaded')) {
 			$('#superSpecial').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('padTop120');
 		} else if (isTouchDevice()===true) {
-			$('#superSpecial').css({'display' : 'block'}) && $('#scroll-down').css({'display' : 'block'}) && $.cookie('sponsorLoaded', 14);
+			$('#superSpecial').css({'display' : 'block'}) && $('#scroll-down').css({'display' : 'block'}) && $.cookie('sponsorLoaded', 2, { expires : 14 });
 		} else {
 			$('#superSpecial').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('padTop120');
 		}
@@ -173,7 +175,7 @@ jQuery(document).ready(function($) {
 		$('#email-signup .back').click(function(e){
 	        e.preventDefault();
 	        $("#email-signup").fadeOut(500);
-	        $.cookie('newsletter', 14);
+	        $.cookie('newsletter', 1, { expires : 14 });
 		});
 	});
 
@@ -181,21 +183,21 @@ jQuery(document).ready(function($) {
 		$('#fb-modal .back').click(function(e){
 	        e.preventDefault();
 	        $("#fb-modal").fadeOut(500);
-	        $.cookie('facebook', 14);
+	        $.cookie('facebook', 2, { expires : 7 });
 		});
 	});
 
 	$(function() {
 		$("#newsletterClose").click(function() {
 	        $("#email-signup").fadeOut(500);
-	        $.cookie('facebook', 14);
+	        $.cookie('facebook', 2, { expires : 7 });
 	    });	
 	});
 
 	$(function() {
 		$("#fbClose").click(function() {
 	        $("#fb-modal").fadeOut(500);
-	        $.cookie('facebook', 14);
+	        $.cookie('facebook', 2, { expires : 7 });
 	    });	
 	});
 
@@ -263,7 +265,7 @@ jQuery(document).ready(function($) {
 		$("#footer-close").click(function(e) {
 			e.preventDefault();
 	        $('#footer').toggleClass('footerOn');
-	        $.cookie('newsletter', 14);
+	        $.cookie('newsletter', 1, { expires : 14 });
 	    });
 	});
 
@@ -272,7 +274,7 @@ jQuery(document).ready(function($) {
 		$("#likeBar-close").click(function(e) {
 			e.preventDefault();
 	        $('#likeBar').animate({bottom: "-60px"});
-	        $.cookie('facebook', 7);
+	        $.cookie('facebook', 2, { expires : 7 });
 	    });
 	});
 
