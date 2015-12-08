@@ -6,6 +6,7 @@
     "fontawesome": "4.3.0",
     "jquery.scrollTo": "~2.1.1",
     "jquery-placeholder": "~2.1.2",
-    "jquery-cookie": "~1.4.1"
+    "jquery-cookie": "~1.4.1",
+    "js-cookie": "~2.0.4"
   }
 }

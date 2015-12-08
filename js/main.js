@@ -4,10 +4,40 @@ jQuery(window).on('load', function($) {
 
 jQuery(document).ready(function($) {
 
+	// Create cookie
+	function createCookie(name, value, days) {
+	    var expires;
+	    if (days) {
+	        var date = new Date();
+	        date.setTime(date.getTime()+(days*24*60*60*1000));
+	        expires = "; expires="+date.toGMTString();
+	    }
+	    else {
+	        expires = "";
+	    }
+	    document.cookie = name+"="+value+expires+"; path=/";
+	}
+
+	// Read cookie
+	function readCookie(name) {
+	    var nameEQ = name + "=";
+	    var ca = document.cookie.split(';');
+	    for(var i=0;i < ca.length;i++) {
+	        var c = ca[i];
+	        while (c.charAt(0) === ' ') {
+	            c = c.substring(1,c.length);
+	        }
+	        if (c.indexOf(nameEQ) === 0) {
+	            return c.substring(nameEQ.length,c.length);
+	        }
+	    }
+	    return null;
+	}
+
 	function loadNewsletter() {
 		if (isTouchDevice()===true) {
 			return;
-		} else if ($.cookie('newsletter')) {
+		} else if (readCookie("newsletter")) {
 			return;
 		} else {
 			$('#email-signup').delay(6000).fadeIn(600);
@@ -17,7 +47,7 @@ jQuery(document).ready(function($) {
 	function loadFacebookModal() {
 		if (isTouchDevice()===false) {
 			return;
-		} else if ($.cookie('facebook')) {
+		} else if (readCookie("facebook")) {
 			return;
 		} else if ($('#global-container').is('.tag, .category, .single')) {
 			$('#fb-modal').delay(3200).fadeIn(600);
@@ -79,10 +109,10 @@ jQuery(document).ready(function($) {
 	defaultSelect();
 
 	$(function() {
-		if ($.cookie('sponsorLoaded')) {
+		if (readCookie("sponsorLoaded")) {
 			$('#superSpecial').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('padTop120');
 		} else if (isTouchDevice()===true) {
-			$('#superSpecial').css({'display' : 'block'}) && $('#scroll-down').css({'display' : 'block'}) && $.cookie('sponsorLoaded', 2, { expires : 14 });
+			$('#superSpecial').css({'display' : 'block'}) && $('#scroll-down').css({'display' : 'block'}) && createCookie("sponsorLoaded", "read", 14);
 		} else {
 			$('#superSpecial').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('padTop120');
 		}
@@ -175,7 +205,7 @@ jQuery(document).ready(function($) {
 		$('#email-signup .back').click(function(e){
 	        e.preventDefault();
 	        $("#email-signup").fadeOut(500);
-	        $.cookie('newsletter', 1, { expires : 14 });
+	        createCookie("newsletter", "read", 14);
 		});
 	});
 
@@ -183,21 +213,21 @@ jQuery(document).ready(function($) {
 		$('#fb-modal .back').click(function(e){
 	        e.preventDefault();
 	        $("#fb-modal").fadeOut(500);
-	        $.cookie('facebook', 2, { expires : 7 });
+	        createCookie("facebook", "read", 7);
 		});
 	});
 
 	$(function() {
 		$("#newsletterClose").click(function() {
 	        $("#email-signup").fadeOut(500);
-	        $.cookie('facebook', 2, { expires : 7 });
+	        createCookie("facebook", "read", 7);
 	    });	
 	});
 
 	$(function() {
 		$("#fbClose").click(function() {
 	        $("#fb-modal").fadeOut(500);
-	        $.cookie('facebook', 2, { expires : 7 });
+	        createCookie("facebook", "read", 7);
 	    });	
 	});
 
@@ -265,7 +295,7 @@ jQuery(document).ready(function($) {
 		$("#footer-close").click(function(e) {
 			e.preventDefault();
 	        $('#footer').toggleClass('footerOn');
-	        $.cookie('newsletter', 1, { expires : 14 });
+	        createCookie("newsletter", "read", 14);
 	    });
 	});
 
@@ -274,7 +304,7 @@ jQuery(document).ready(function($) {
 		$("#likeBar-close").click(function(e) {
 			e.preventDefault();
 	        $('#likeBar').animate({bottom: "-60px"});
-	        $.cookie('facebook', 2, { expires : 7 });
+	        createCookie("facebook", "read", 7);
 	    });
 	});
 
