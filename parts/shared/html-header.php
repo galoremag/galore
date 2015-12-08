@@ -160,18 +160,7 @@
 		<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
 
 		<!-- Create it with slider online build tool for better performance. -->
-		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>		
-
-
-		<script type="text/javascript">
-
-		// ( function( $ ) {
-		//     $( document.body ).on( 'post-load', function () {
-		//         // New posts have been added to the page.
-		//     } );
-		// } )( jQuery );
-
-		</script>
+		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
 
 		<!-- PERFORMANCE MONITORING -->
 		<script>
@@ -184,6 +173,16 @@
 		    p.src = '//rum-static.pingdom.net/prum.min.js';
 		    s.parentNode.insertBefore(p, s);
 		})();
+		</script>
+
+		<script type="text/javascript">
+		(function(n,a,t,i,v,e,ai){n['NativeAIObject']=v;n[v]=n[v]||function(){
+		(n[v].q=n[v].q||[]).push(arguments)},n[v].l=1*new
+		Date();e=a.createElement(t),
+		ai=a.getElementsByTagName(t)[0];e.async=1;e.src=i+"?"+parseInt(n[v].l/604800000);
+		ai.parentNode.insertBefore(e,ai)})
+		(window,document,'script','https://api.native.ai/js/current/nativeai.js','nativeAI');
+		nativeAI('create','9bd8568d-6ad3-4d6a-955a-0d8a7779328e',isTestMode);
 		</script>
 		
 	</head>
