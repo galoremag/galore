@@ -172,26 +172,30 @@ jQuery(document).ready(function($) {
 	$(function() {
 		$('#email-signup .back').click(function(e){
 	        e.preventDefault();
-	        $("#email-signup").fadeOut(500) && $.cookie('newsletter', 14);
+	        $("#email-signup").fadeOut(500);
+	        $.cookie('newsletter', 14);
 		});
 	});
 
 	$(function() {
 		$('#fb-modal .back').click(function(e){
 	        e.preventDefault();
-	        $("#fb-modal").fadeOut(500) && $.cookie('facebook', 14);
+	        $("#fb-modal").fadeOut(500);
+	        $.cookie('facebook', 14);
 		});
 	});
 
 	$(function() {
 		$("#newsletterClose").click(function() {
-	        $("#email-signup").fadeOut(500) && $.cookie('facebook', 14);
+	        $("#email-signup").fadeOut(500);
+	        $.cookie('facebook', 14);
 	    });	
 	});
 
 	$(function() {
 		$("#fbClose").click(function() {
-	        $("#fb-modal").fadeOut(500) && $.cookie('facebook', 14);
+	        $("#fb-modal").fadeOut(500);
+	        $.cookie('facebook', 14);
 	    });	
 	});
 
