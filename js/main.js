@@ -34,15 +34,15 @@ jQuery(document).ready(function($) {
 	    return null;
 	}
 
-	function loadNewsletter() {
-		if (isTouchDevice()===true) {
-			return;
-		} else if (readCookie("newsletter")) {
-			return;
-		} else {
-			$('#email-signup').delay(6000).fadeIn(600);
-		}
-	};
+	// function loadNewsletter() {
+	// 	if (isTouchDevice()===true) {
+	// 		return;
+	// 	} else if (readCookie("newsletter")) {
+	// 		return;
+	// 	} else {
+	// 		$('#email-signup').delay(6000).fadeIn(600);
+	// 	}
+	// };
 
 	function loadFacebookModal() {
 		if (isTouchDevice()===false) {
@@ -100,7 +100,7 @@ jQuery(document).ready(function($) {
 	    e.stopPropagation();
 	};
 
-	loadNewsletter();
+	// loadNewsletter();
 
 	loadFacebookModal();
 
@@ -190,24 +190,24 @@ jQuery(document).ready(function($) {
 	////// MODALS  //////
 	/////////////////////
 
-	$(function() {
-		$('#signupButton').on('click', function(e) {
-			e.preventDefault();
-			$("#email-signup").fadeIn(500);
-			// $('#fieldName').focus();
-	        $("#newsletterClose").click(function() {
-	            $("#email-signup").fadeOut(500);
-	        });
-		});
-	});
+	// $(function() {
+	// 	$('#signupButton').on('click', function(e) {
+	// 		e.preventDefault();
+	// 		$("#email-signup").fadeIn(500);
+	// 		// $('#fieldName').focus();
+	//         $("#newsletterClose").click(function() {
+	//             $("#email-signup").fadeOut(500);
+	//         });
+	// 	});
+	// });
 	
-	$(function() {
-		$('#email-signup .back').click(function(e){
-	        e.preventDefault();
-	        $("#email-signup").fadeOut(500);
-	        createCookie("newsletter", "read", 14);
-		});
-	});
+	// $(function() {
+	// 	$('#email-signup .back').click(function(e){
+	//         e.preventDefault();
+	//         $("#email-signup").fadeOut(500);
+	//         createCookie("newsletter", "read", 14);
+	// 	});
+	// });
 
 	$(function() {
 		$('#fb-modal .back').click(function(e){
@@ -295,7 +295,7 @@ jQuery(document).ready(function($) {
 		$("#footer-close").click(function(e) {
 			e.preventDefault();
 	        $('#footer').toggleClass('footerOn');
-	        createCookie("newsletter", "read", 14);
+	        // createCookie("newsletter", "read", 14);
 	    });
 	});
 
