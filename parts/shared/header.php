@@ -98,7 +98,7 @@ $url = $thumb[0];
 
 <div id="superSpecial">
 	<a id="superhero" href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title_attribute(); ?>" target="_blank" style="background: url(<?php echo $url ?>) no-repeat;"></a>
-	<div class="specialFlag">Presented by <?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
+	<div class="specialFlag">Presenting <?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
 	<h1 class="pad20"><?php the_title(); ?></h1>
 	<p class="specialTip">Scroll to site</p>
 	<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=5697&lid=27946&csid=&c=0&itt=EOTgSDNteBPGBZseExTPjt3KGpZXpe1WEEYEwE1Y%2FTII51KPC7NhewUsrcjb%2FwYB&ord=[RANDOM]'/>
