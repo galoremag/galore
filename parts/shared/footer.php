@@ -4,7 +4,7 @@
 	<div id="likeBar" class="">
 		<h1 class="pull-left">Get Exclusives</h1>
 		<div class="pad10 fb-like pull-left" data-href="https://www.facebook.com/galoremag" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-		<div class="pull-right">
+		<div>
 			<a id="likeBar-close" href="#"><i class="fa fa-lg fa-close"></i></a>
 		</div>
 	</div>

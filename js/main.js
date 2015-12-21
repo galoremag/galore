@@ -60,9 +60,9 @@ jQuery(document).ready(function($) {
 		if ($('#global-container').is('.tag, .category, .home, .archive')) {
 			$('#likeBar').delay(22000).animate({bottom: "0px"}, 500);
 		}
-	};
+	}
 
-	setTimeout(loadLikeBar, 7000);
+	setTimeout(loadLikeBar, 22000);
 
 	function sticky_relocate() {
 		var window_height = window.innerHeight;

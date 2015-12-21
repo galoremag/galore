@@ -586,13 +586,14 @@ h1 span {
 h2 {
 	.font2;
 	color: black;
+	font-size: 28px;
 	margin: 10px 0px;
 }
 
 h3, h3 a {
 	color: black;
 	.font2;
-	font-size: 24px;
+	font-size: 22px;
 	margin: 5px 0px;
 }
 
@@ -1139,8 +1140,8 @@ ul.modal-nav-menu li a:hover {
 
 #superSpecial {
 	width: 100vw;
-	height: 100vh;
-	display: block;
+	height: 95vh;
+	display: none;
 }
 
 #superhero {
@@ -1153,14 +1154,31 @@ ul.modal-nav-menu li a:hover {
 }
 
 #superSpecial h1 {
-	/*color: black;*/
-	color: white;
-	text-align: right;
+	color: black;
+	/*color: white;*/
+	text-align: center;
 	letter-spacing:-1px;
 	font-size:30px;
 	position: absolute;
-	bottom: 20px;
+	bottom: 50px;
 	right: 0;
+}
+
+#superSpecial .specialFlag {
+	position: absolute;
+	bottom: 200px;
+	background: yellow;
+	padding: 5px 8px;
+	.font2;
+}
+
+#superSpecial .specialTip {
+	position: absolute;
+	bottom: 50px;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	.font2;
 }
 
 #scroll-down {
@@ -1181,8 +1199,8 @@ ul.modal-nav-menu li a:hover {
 }
 
 #scroll-down i {
-	/*color: black;*/
-	color: white;
+	color: black;
+	/*color: white;*/ 
 	margin: 0 auto;
 	font-size: 42px;
 	text-align: center;
@@ -1363,8 +1381,8 @@ ul.modal-nav-menu li a:hover {
 
 .glide.special .specialFlagSm {
 	position: absolute;
-    color: white;
-    background: @pink;
+    color: black;
+    background: yellow;
     padding: 5px 8px;
     font-family: 'Karla';
     text-transform: uppercase;
@@ -1858,17 +1876,17 @@ li.specialMd article {display: inline-block; width: 100%;}
 
 img.specialPixel {width: 1px; height: 1px;}
 
-div.specialFlagMd {
+.specialFlagMd {
 	position: absolute;
-    color: white;
-    background: @pink;
+    color: black;
+    background: yellow;
     padding: 5px 8px;
     font-family: 'Karla';
     /*text-transform: uppercase;*/
     /*font-size: 10px;*/
     font-weight: bold;
     pointer-events: none;
-    bottom: 20px;
+    bottom: 100px; 
 	z-index: 1;
 }
 
@@ -2067,7 +2085,7 @@ ul#menu-footer-menu li a:hover, ul#menu-footer li a:hover, a.close-footer:hover 
 .alm-listing li img {
 	position: relative !important;
 	float: none !important;
-	width: auto !important;
+	width: 100% !important;
 	margin: auto !important;
 }
 
@@ -2118,6 +2136,7 @@ button.alm-load-more-btn.done:before {
 
 #likeBar h1 {
 	margin: 12px 10px;
+	letter-spacing: -2px;
 	/*-webkit-text-stroke: 2px black;*/
 }
 
@@ -2125,8 +2144,10 @@ button.alm-load-more-btn.done:before {
 	margin: 10px 0px;
 }
 
-#likeBar-close i {
-	padding: 22px;
+#likeBar-close {
+	padding: 20px;
+	position: absolute;
+	right: 0;
 }
 
 /* Newsletter Signup */
@@ -2298,7 +2319,7 @@ input, textarea, .form-control { .font2; color: @pink !important; }
 
 .fb-modal-dialog {
 	z-index: 9992;
-	margin-top: 100px;
+	margin-top: 60px;
 }
 
 .fb-modal.in .fb-modal-dialog {
@@ -2669,6 +2690,9 @@ time {
 		float: right;
 		text-align: right;
 		width: 100%;
+	}
+	div.specialFlagMd {
+		bottom: 20px;
 	}
 	.specialMd ul.post-social {
 		width: 100% !important;

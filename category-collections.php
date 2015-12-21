@@ -19,7 +19,7 @@
 	</div> -->
 	<div class="row-fluid">
 		<div id="content" class="col-md-8 col-sm-12">
-			<h2 class="text-center">The Latest in <span><?php echo single_cat_title( '', false ); ?></span> <i class="fa fa-gittip"></i></h2>
+			<h2 class="text-center">The Latest in <span><?php echo single_cat_title( '', false ); ?> <i class="fa fa-gittip"></i></span></h2>
 			<hr>
 			<ol>
 			<?php query_posts('category_name=collections&posts_per_page=4&offset=3&ignore_sticky_posts=true'); ?>
