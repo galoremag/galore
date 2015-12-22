@@ -70,7 +70,7 @@
 	</div>
 
 	<!-- Newsletter Signup -->
-	<div id="email-signup">
+	<div id="email-signup" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="email-signup" aria-hidden="true">
 	    <div class="email-signup-dialog col-md-4 col-md-offset-4">
 	        <div class="email-signup-content">
 	            <div class="email-signup-header">
