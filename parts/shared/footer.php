@@ -9,9 +9,62 @@
 		</div>
 	</div>
 
+	<!-- Newsletter Signup -->
+	<div id="fb-modal">
+	    <div class="fb-modal-dialog col-md-4 col-md-offset-4">
+	        <div class="fb-modal-content">
+	            <div class="fb-modal-header">
+	                <a id="fbClose" class="close" data-dismiss="fb-modal" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
+	            </div>
+	            <div class="fb-modal-body">
+	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
+	                <h1 class="horPad20 text-center">Do You Like?</h1>
+	                <p class="text-center">
+	                    Some things are only found on Facebook. Don't miss out.
+	                </p>
+	                <div class="pad10 fb-like" data-href="https://www.facebook.com/galoremag" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="back"></div>
+	</div>
+
+	<!-- Newsletter Signup -->
+	<div id="email-signup" class="modal" tabindex="-1" role="dialog" aria-labelledby="email-signup" aria-hidden="true">
+	    <div class="email-signup-dialog col-md-4 col-md-offset-4">
+	        <div class="email-signup-content">
+	            <div class="email-signup-header">
+	                <a id="newsletterClose" class="close" data-dismiss="email-signup" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
+	            </div>
+	            <div class="email-signup-body">
+	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
+	                <p class="text-center">
+	                    Get updates right in your inbox.
+	                </p>
+	                <!-- <h2 class="text-center">Get On The List</h2> -->
+	                <form action="https://galoremag.createsend.com/t/i/s/tjcj/" method="post">
+	                    <div class="form-group">
+	                        <input class="form-control" id="fieldName" name="cm-name" type="text" placeholder="Your Name" required />
+	                    </div>
+	                    <div class="form-group">
+	                        <input class="form-control" id="fieldEmail" name="cm-tjcj-tjcj" type="email" placeholder="Your Email" required />
+	                    </div>
+	                    <div class="form-group">
+	                        <button class="btn btn-bp" type="submit">Subscribe</button>
+	                    </div>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="back"></div>
+	</div>
+
+	<!-- FOOTER STUFF -->
+
 	<div class="footbut">
 		<a id="footer-open" class="brand-white-sm" href="#"></a>
 	</div>
+	
 	<footer id="footer">
 		<div class="footer-content container-fluid">
 			<a id="footer-close" href="#"><i class="fa fa-close"></i></a>
@@ -48,53 +101,3 @@
 		
 		<a class="cat-icon" href="http://kittenagency.com"></a>
 	</footer>
-
-	<!-- Newsletter Signup -->
-	<div id="fb-modal">
-	    <div class="fb-modal-dialog col-md-4 col-md-offset-4">
-	        <div class="fb-modal-content">
-	            <div class="fb-modal-header">
-	                <a id="fbClose" class="close" data-dismiss="fb-modal" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
-	            </div>
-	            <div class="fb-modal-body">
-	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
-	                <h1 class="horPad20 text-center">Do You Like?</h1>
-	                <p class="text-center">
-	                    Some things are only found on Facebook. Don't miss out.
-	                </p>
-	                <div class="pad10 fb-like" data-href="https://www.facebook.com/galoremag" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
-	            </div>
-	        </div>
-	    </div>
-	    <div class="back"></div>
-	</div>
-
-	<!-- Newsletter Signup -->
-	<div id="email-signup" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="email-signup" aria-hidden="true">
-	    <div class="email-signup-dialog col-md-4 col-md-offset-4">
-	        <div class="email-signup-content">
-	            <div class="email-signup-header">
-	                <a id="newsletterClose" class="close" data-dismiss="email-signup" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
-	            </div>
-	            <div class="email-signup-body">
-	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
-	                <p class="text-center">
-	                    Get updates right in your inbox.
-	                </p>
-	                <!-- <h2 class="text-center">Get On The List</h2> -->
-	                <form action="https://galoremag.createsend.com/t/i/s/tjcj/" method="post">
-	                    <div class="form-group">
-	                        <input class="form-control" id="fieldName" name="cm-name" type="text" placeholder="Your Name" required />
-	                    </div>
-	                    <div class="form-group">
-	                        <input class="form-control" id="fieldEmail" name="cm-tjcj-tjcj" type="email" placeholder="Your Email" required />
-	                    </div>
-	                    <div class="form-group">
-	                        <button class="btn btn-bp" type="submit">Subscribe</button>
-	                    </div>
-	                </form>
-	            </div>
-	        </div>
-	    </div>
-	    <div class="back"></div>
-	</div>

@@ -4,6 +4,8 @@
 	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 	<![endif]-->
 
+	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+
 	<?php wp_footer(); ?>
 
 	<!-- Facebook Code -->
