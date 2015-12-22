@@ -218,7 +218,8 @@ jQuery(document).ready(function($) {
 	});
 
 	$(function() {
-		$("#newsletterClose").click(function() {
+		$("#newsletterClose").click(function(e) {
+			e.preventDefault();
 	        $("#email-signup").fadeOut(500);
 	        createCookie("facebook", "read", 7);
 	    });	
