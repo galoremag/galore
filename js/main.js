@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
 		} else if (readCookie("newsletter")) {
 			return;
 		} else {
-			$('#email-signup').delay(6000).fadeIn(600);
+			$('#email-signup').delay(6000).show();
 		}
 	};
 
@@ -193,10 +193,10 @@ jQuery(document).ready(function($) {
 	$(function() {
 		$('#signupButton').on('click', function(e) {
 			e.preventDefault();
-			$("#email-signup").fadeIn(500);
+			$("#email-signup").show();
 			// $('#fieldName').focus();
 	        $("#newsletterClose").click(function() {
-	            $("#email-signup").fadeOut(500);
+	            $("#email-signup").hide();
 	        });
 		});
 	});
@@ -204,7 +204,7 @@ jQuery(document).ready(function($) {
 	$(function() {
 		$('#email-signup .back').click(function(e){
 	        e.preventDefault();
-	        $("#email-signup").fadeOut(500);
+	        $("#email-signup").hide();
 	        createCookie("newsletter", "read", 14);
 		});
 	});
@@ -220,7 +220,7 @@ jQuery(document).ready(function($) {
 	$(function() {
 		$("#newsletterClose").click(function(e) {
 			e.preventDefault();
-	        $("#email-signup").fadeOut(500);
+	        $("#email-signup").hide();
 	        createCookie("facebook", "read", 7);
 	    });	
 	});

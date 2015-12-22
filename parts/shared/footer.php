@@ -34,7 +34,7 @@
 	    <div class="email-signup-dialog col-md-4 col-md-offset-4">
 	        <div class="email-signup-content">
 	            <div class="email-signup-header">
-	                <a id="newsletterClose" class="close" data-dismiss="email-signup" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
+	                <a href="javascript:;" id="newsletterClose" class="close" data-dismiss="email-signup" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
 	            </div>
 	            <div class="email-signup-body">
 	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
