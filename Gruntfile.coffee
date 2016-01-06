@@ -32,6 +32,8 @@ module.exports = (grunt) ->
     uglify:
       options:
         mangle: false
+        beautify: true
+        drop_debugger: false
       js:
         files:
           'prod.js': ['prod.js']

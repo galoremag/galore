@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
 	        expires = "";
 	    }
 	    document.cookie = name+"="+value+expires+"; path=/";
-	}
+	};
 
 	// Read cookie
 	function readCookie(name) {
@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
 	        }
 	    }
 	    return null;
-	}
+	};
 
 	function loadNewsletter() {
 		if (isTouchDevice()===true) {
@@ -60,7 +60,7 @@ jQuery(document).ready(function($) {
 		if ($('#global-container').is('.tag, .category, .home, .archive')) {
 			$('#likeBar').delay(22000).animate({bottom: "0px"}, 500);
 		}
-	}
+	};
 
 	setTimeout(loadLikeBar, 22000);
 
@@ -68,7 +68,7 @@ jQuery(document).ready(function($) {
 		var window_height = window.innerHeight;
 	    var window_top = $(window).scrollTop();
 	    var div_top = $('#sidebar-anchor').offset().top;
-	    if (window_top > (div_top + 240)) {
+	    if (window_top > (div_top - 50)) {
 	        $('#sidebar').addClass('sticky').css({'height': window_height, 'overflow':'scroll'});
 	    } else {
 	        $('#sidebar').removeClass('sticky');
@@ -144,9 +144,9 @@ jQuery(document).ready(function($) {
 
 	// Prevent Default on All Hash Links
 	$(function() {
-	   $('a[href="#"]').click( function(e) {
-	      e.preventDefault();
-	   } );
+		$('a[href="#"]').click( function(e) {
+			e.preventDefault();
+		});
 	});
 
 	// Navbar Shrinks on Scroll
@@ -172,14 +172,13 @@ jQuery(document).ready(function($) {
 
 	// Sticky Sidebar
 	$(function() {
-		if ($('#global-container').is('.tag, .category, .single')) {
+		var target = $('#global-container');
+		if (target.is('.tag,.category,.single')) {
 			if (isTouchDevice()===true) {
 				return;
 			} else {
-				$(function () {
-				    $(window).scroll(sticky_relocate);
-				    sticky_relocate();
-				});
+			    $(window).scroll(sticky_relocate);
+			    sticky_relocate();
 			}
 		} else {
 			return;
