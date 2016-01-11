@@ -231,6 +231,8 @@ jQuery(document).ready(function($) {
 	    });	
 	});
 
+
+
 	// Detect User Agent
 
 	// if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -250,6 +252,14 @@ jQuery(document).ready(function($) {
 	// $('.nav-collapse a[data-toggle]').click(function() {
 	//   $('.nav-collapse').css('height', '100%');
 	// });
+	
+	// $(function() {
+	// 	$("#main-menu").on("show", function () {
+	// 		$("body").addClass("menu-open");
+	// 	}).on("hidden", function () {
+	// 		$("body").removeClass("menu-open")
+	// 	});
+	// });
 
 	$(function() {
 		$('#glides').perfectScrollbar({
@@ -260,15 +270,17 @@ jQuery(document).ready(function($) {
 	// Nav Button
 	$(function() {
 		$('#nav-button').on('click', function(event) {
+			$('.modal-nav').fadeToggle('show');
+			$('body').toggleClass('menu-open');
 	        $('.hmbrgr').click();
 	    });
 	});
 
-	$(function() {
-		$('.hmbrgr').on('click', function(e) {
-			$('.modal-nav').fadeToggle('show');
-		});
-	});
+	// $(function() {
+	// 	$('.hmbrgr').on('click', function(e) {
+	// 		$('.modal-nav').fadeToggle('show');
+	// 	});
+	// });
 
 	// HAMBURGER
 	$(function() {
