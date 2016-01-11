@@ -3,6 +3,521 @@
 
 /*  MEDIA QUERIES  */
 
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+/* Styles */
+	#cover-stories .rsGalore h1 {
+		font-size: 85px !important;
+	}
+}
+
+/* Tablets and up (768px and up) */
+@media (min-width: 768px) {
+	
+	/*figure.hammy-responsive {
+		display: table;
+		width: 60%;
+		text-align: center;
+		margin: 20px auto !important;
+	}*/
+
+	div.specialFlagMd {
+		bottom: 100px;
+	}
+	
+	.navbar>.container-fluid .navbar-brand {
+		margin-left: -90px;
+	}
+
+	#likeBar h1 {
+		margin: 10px 10px !important;
+	}
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	ul.post-social {
+		width: 100%;
+	}
+	ul.post-social li:first-child {
+		margin-right: 0px !important;
+	}
+	ul.post-social h4 {
+		float: right;
+		text-align: right;
+		width: 100%;
+	}
+/*	.post-grid {
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-count: 1;
+		-moz-column-gap: 1em;
+		-webkit-column-gap: 1em;
+		column-gap: 1em;
+	}
+
+	.pop-in .post-grid {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+		-moz-column-gap: 1em;
+		-webkit-column-gap: 1em;
+		column-gap: 1em;
+	}*/
+	.home-style .rsGalore {
+		height: 320px !important;
+		width: auto !important;
+	}
+
+	.home-style .rsGalore .rsText, .home-style .rsGalore .rsBlock, .home-style .rsGalore .rsABlock {
+		padding: 0;
+		margin: 0;
+		width: 100% !important;
+		height: auto !important;
+		left: 0 !important;
+		bottom: 0 !important;
+	}
+
+	.home-style .rsGalore .rsText h2, .home-style .rsGalore .rsABlock h2, .home-style .rsGalore .rsBlock h2 {
+		.yellowBlueGradientFade;
+		font-size: 18px;
+		line-height: 19px;
+		color: @pink !important;
+		padding: 10px;
+		margin: 0 !important;
+		/*text-shadow: 1px 1px 0px rgba(255,255,0,1);*/
+	}
+
+	.home-style .rsGalore .rsText .btn, .home-style .rsGalore .rsABlock .btn, .home-style .rsGalore .rsBlock .btn {
+		display: none;
+	}
+
+	.beauty-style {
+		padding: 15px;
+	}
+
+	#cover-title {
+		left: 15px;
+	}
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	h1 {
+		font-size: 32px;
+		letter-spacing: 0px;
+		line-height: 1;
+	}
+	.nopadright {
+		padding-right: 0px;
+	}
+	blockquote {
+		border-left: 0px;
+		margin: 20px -20px;
+		padding: 20px 40px;
+	}
+	.jumbotron-in {
+		padding: 120px 0 20px 0;
+	}
+	.jumbotron-in .container {
+		padding: auto 0px !important;
+	}
+	.jumbotron-in .container  .col-sm-10 {
+		padding: 0px !important;
+	}
+	.jumbotron .rsGalore {
+		height: 222px !important;
+		/*-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);*/
+		border: 0px;
+	}
+	.rsGalore h1 {
+		font-size:24px !important;
+	}
+	.rsGalore h1 span {
+		/*-webkit-text-stroke-width: 0px !important;
+		-webkit-text-fill-color: @pink !important;
+		color: @pink !important;*/
+		color: black;
+		/*text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 0px 0px 0px black;*/
+	}
+	.rsGalore .rsText p {
+		display: none;
+	}
+	.rsGalore .rsTags {
+		top: 10px;
+		right: 0px;
+		padding: 2px 6px;
+		background: @pink;
+		box-shadow: 1px 1px 0px rgba(255,255,0,1);
+		z-index: 9999;
+		letter-spacing: 0px;
+	}
+	.rsGalore .rsExcerpt {
+		display: none !important;
+	}
+	.rsGalore .rsText h1, .rsGalore .rsText h2, .rsGalore .rsText h3 {
+		
+	}
+
+	.rsGalore .rsGCaption {
+		font-size: 18px !important;
+		padding: 10px 20px !important;
+	}
+
+	.home-sex-dating .excerpt {
+		display: none;
+	}
+	#cover-title {
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-o-transform: scale(0.5);
+		transform: scale(0.5);
+		-webkit-transform-origin: top left;
+		-moz-transform-origin: top left;
+		-o-transform-origin: top left;
+		transform-origin: top left;
+		top: -10px;
+	}
+	ul.post-social {
+		width: 100%;
+	}
+	ul.post-social li:first-child {
+		margin-right: 0px !important;
+	}
+	ul.post-social h4 {
+		float: right;
+		text-align: right;
+		width: 100%;
+	}
+/*	.post-grid {
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-count: 1;
+		-moz-column-gap: 1em;
+		-webkit-column-gap: 1em;
+		column-gap: 1em;
+	}
+
+	.pop-in .post-grid {
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-count: 1;
+		-moz-column-gap: 1em;
+		-webkit-column-gap: 1em;
+		column-gap: 1em;
+	}*/
+	footer div.footer-icon {
+		display: none !important;
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+	.nopadright {
+		padding-right: 0px;
+	}
+	#modal-nav-button {
+		width: 32px;
+		height: 32px;
+		/*padding: 6px 10px 5px 8px;*/
+		margin: 10px;
+	}
+	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
+		display: none;
+	}
+	.hero-slider {
+		padding: 0px;
+	}
+	.home-sex-dating .excerpt {
+		display: none;
+	}
+	figure.hammy-responsive {
+		width: 100%;
+	}
+	.post h4 {
+		text-align: center;
+	}
+	ul.post-social {
+		width: 100%;
+		padding: 20px 100px;
+	}
+	ul.post-social li:first-child {
+		margin-right: 0px !important;
+	}
+	ul.post-social h4 {
+		float: right;
+		text-align: right;
+		width: 100%;
+	}
+	div.specialFlagMd {
+		bottom: 20px;
+	}
+	.specialMd ul.post-social {
+		width: 100% !important;
+		position: absolute !important;
+		right: 0px !important;
+		bottom: -65px !important;
+	}
+	footer div.footer-icon {
+		display: none !important;
+	}
+	.jumbotron-in {
+		padding: 120px 0 60px 0;
+	}
+	.rsGalore {
+		height: 280px !important;
+	}
+	.rsGalore .rsGCaption {
+		font-size: 18px !important;
+		padding: 10px 15px !important;
+	}
+	.rsGalore .rsTags {
+		top: 10px;
+		right: 0px;
+		padding: 2px 6px;
+		background: @pink;
+		box-shadow: 1px 1px 0px rgba(255,255,0,1);
+		z-index: 9999;
+		letter-spacing: 0px;
+	}
+
+	.category .rsText h2 {
+		font-size: 22px !important;
+		padding-top: 40px !important;
+	}
+
+	footer {
+		padding-top: 100px;
+	}
+	a#footer-close {
+		top: 80px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	
+	iframe {
+		width: 100% !important;
+	}
+
+	.navbar-brand {
+		position: absolute;
+		top: 15px;
+		width: 140px;
+		height: 100px;
+		overflow: visible;
+		background: url(images/galore-logo-short-straight-white.png) no-repeat;
+		background-size: 140px auto;
+		opacity: 1;
+		z-index: 999;
+		display: inline-block;
+		margin: 0 auto;
+		margin-left:-70px;
+		left: 50%;
+		.transition;
+	}
+
+	nav.shrink .navbar-brand {
+		background: url(images/galore-logo-short-straight-white.png) no-repeat;
+		background-size: 140px auto;
+		-webkit-transform: scale(0.7);
+		-moz-transform: scale(0.7);
+		-o-transform: scale(0.7);
+		transform: scale(0.7);
+		top: -12px;
+		.transition;
+	}
+	/*nav.shrink {
+		background: rgba(0,0,0,0.5) !important;
+	}*/
+	/*.rsGalore .rsText h1, .rsGalore .rsText h2, .rsGalore .rsText h3 {
+		margin: 0px !important;
+	}*/
+
+	/*.pad20 {padding: 4% !important;}
+	.pad40 {padding: 2% !important;}*/
+	#modal-nav-button {
+		width: 32px;
+		height: 32px;
+		/*padding: 6px 10px 5px 8px;*/
+		margin: 10px 0 0 10px;
+	}
+	ul.modal-nav-menu {
+		padding-top: 60px;
+	}
+	ul.modal-nav-menu li {
+		padding: 15px;
+		font-size: 24px;
+	}
+	.bp-touchSwipe,
+	.bp-touchSwipe .bp-touchSwipe_inner,
+	.bp-touchSwipe .bp-inner_item {
+	  height: 220px;
+	}
+
+	.bp-touchSwipe .bp-touchSwipe_inner {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  margin: 0;
+	  padding: 0;
+	  -moz-transition: all, 0.1s, ease;
+	  -o-transition: all, 0.1s, ease;
+	  -webkit-transition: all, 0.1s, ease;
+	  transition: all, 0.1s, ease;
+	}
+
+	.bp-touchSwipe .bp-inner_item {
+	  width: 320px;
+	  float: left;
+	}
+
+	ul.top-social {
+		display: inline-block;
+		margin: 0px;
+		text-align: center;
+	}
+
+	.home-style .rsGalore {
+		height: 320px !important;
+		margin-left: -20px;
+		margin-right: -20px;
+		width: auto !important;
+	}
+
+	.home-style .rsGalore .rsText, .home-style .rsGalore .rsBlock, .home-style .rsGalore .rsABlock {
+		padding: 0;
+		margin: 0;
+		width: 100% !important;
+		height: auto !important;
+		left: 0 !important;
+		bottom: 0 !important;
+	}
+
+	.home-style .rsGalore .rsText h2, .home-style .rsGalore .rsABlock h2, .home-style .rsGalore .rsBlock h2 {
+		.yellowBlueGradientFade;
+		font-size: 18px;
+		line-height: 19px;
+		/*color: @pink;*/
+		color: @pink !important;
+		padding: 10px;
+		margin: 0 !important;
+		/*text-shadow: 1px 1px 0px rgba(255,255,0,1);*/
+	}
+
+	.home-style .rsGalore .rsText .btn, .home-style .rsGalore .rsABlock .btn, .home-style .rsGalore .rsBlock .btn {
+		display: none;
+	}
+
+	.beauty-style {
+		padding: 20px;
+	}
+
+	#cover-title {
+		left: 20px;
+	}
+
+	#main-cats.navbar-collapse.in.collapse {
+		height: 400px;
+	}
+
+	.main-cats-collapse.in ul.top-social {
+		margin: 0px 0px 4px 0px !important;
+		padding: 0px !important;
+	}
+	.single ul.single-social {
+		display: table;
+		width: 100%;
+		text-align: center;
+	}
+	/*.single ul.post-social li {
+		float: right !important;
+	}*/
+	.single ul.single-social li {
+		display: table-cell;
+		float: none;
+		margin: 0 auto;
+	}
+	.single ul.single-social .social-title {
+		display: none;
+	}
+	/*ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
+		display: none !important;
+	}
+	ul#menu-footer-menu li:last-child, ul#menu-footer li:last-child {
+		display: none !important;
+	}*/
+	.thumb {
+		width: 100%;
+	}
+	.email-signup-dialog {
+		margin-top: 20px;
+	}
+	.email-signup-body p {
+		font-size: 0.8em;
+	}
+	.email-signup-dialog .brand-white {
+		-webkit-transform: scale(0.7);
+	}
+}
+
+/* RETINA STUFF */
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+	#global-container.parties {
+		background-image: url(images/subtle_white_feathers_@2X.png);
+	}
+	#global-container.the-latest,
+	#global-container.style,
+	#global-container.beauty,
+	#global-container.search,
+	#global-container.page-about,
+	#global-container.page-legal,
+	#global-container.dmca-policy,
+	.beauty {
+		background-image: url(images/greyfloral_@2X.png) repeat;
+		background-size: 150px 124px;
+	}
+	#global-container.sex-dating,
+	#global-container.search {
+		background-size: 400px 533px
+	}
+	.jumbotron {
+		background: url(images/iScream_@2X.png) repeat;
+		background-size: 300px 300px;
+	}
+	.style {
+		background-image: url(images/pinstriped_suit_@2X.png) repeat;
+		background-size: 400px 333px;
+	}
+	.health {
+		background-size: 150px 150px;
+	}
+	#global-container.pop,
+	#global-container.tag,
+	#global-container.models,
+	blockquote {
+		background-image: url(images/kindajean_@2X.png);
+		background-size: 147px 147px;
+	}
+	.home-style {
+		background: url(images/greyfloral_@2X.png) repeat;
+		background-size: 150px 124px;
+	}
+	#home-container .sex-dating {
+		background: url(images/symphony_@2X.png) repeat;
+		background-size: 129px 129px !important;
+	}
+}
+
+
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
 /* Styles */

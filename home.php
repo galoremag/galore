@@ -152,6 +152,10 @@
 					//Pagination can go here if you want it.
 					endif;
 					?>
+					<div class="row-fluid">
+						<div class="spacer20"></div>
+						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/style"><i class="fa fa-scissors"></i> Get Fresh <i class="fa fa-scissors"></i></a></p>
+					</div>
 				</div>
 				<!-- <div class="row-fluid">
 					<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/beauty"><i class="fa fa-scissors"></i>&nbsp; Get Glam &nbsp;<i class="fa fa-scissors"></i></a></p>
@@ -169,9 +173,10 @@
 					// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
 					foreach ($postslist as $post) : setup_postdata($post);
 					?>
-					<div class="text-left">
+					<div class="snippet">
 						<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
+						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 					</div>
 					<?php endforeach; ?>
 					<div class="row-fluid">
