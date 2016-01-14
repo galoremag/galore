@@ -40,7 +40,8 @@ jQuery(document).ready(function($) {
 		} else if (readCookie("newsletter")) {
 			return;
 		} else {
-			$('#email-signup').delay(6000).show();
+			return;
+			// $('#email-signup').delay(6000).show();
 		}
 	};
 
