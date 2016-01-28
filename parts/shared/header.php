@@ -29,7 +29,7 @@
 						<?php endif ?>
 						<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
 						<li><a href="https://www.facebook.com/galoremag" target="_blank"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="http://instagram.com/kittengalore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 						<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
 						<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
 						<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
