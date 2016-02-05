@@ -17,37 +17,48 @@ WP Post Template: Fancy List
 
 <div class="container-fluid nopad">
 	<div class="row-fluid">
-		<div id="content" class="col-sm-12 container-fixed">
+		<div id="content" class="col-sm-12 container-fluid">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article>
 				<?php setPostViews(get_the_ID()); ?>
 				
-				<?php edit_post_link('EDIT. THIS. PIECE.', '<p>', '</p>'); ?>
+				<div class="row">
+					
+					<div class="col-sm-8 col-sm-offset-2">
+
+						<?php edit_post_link('EDIT. THIS. PIECE.', '<p>', '</p>'); ?>
+
+						<h1><?php the_title(); ?></h1>
+						<?php the_content(); ?>
+					</div>
+
+				</div>
 				
-				<h1><?php the_title(); ?></h1>
-				<?php the_content(); ?>
 				<div class="spacer20"></div>
 
-				<?php $pic1 = get_field('pic1');
-					  $pic2 = get_field('pic2'); ?>
+				<?php $pic1 = get_field('pic1'); ?>
 
-				<div class="listHero container-fluid" style="background-image: url(<?php echo $pic1['sizes']['large']; ?>)">
-					<div class="listHeader">
-						<h1><span>
-						<?php if(get_field('title1')) {
-							echo get_field('title1');
-						} ?>
-						</span></h1>
+				<div class="listHero row-fluid" style="background-image: url(<?php echo $pic1['sizes']['large']; ?>)">
+					<div class="listHeader container-fluid nopad">
+						<div class="col-sm-8 col-sm-offset-2 nopad">
+							<h1><span>
+							<?php if(get_field('title1')) {
+								echo get_field('title1');
+							} ?>
+							</span></h1>
 
-						<h3 class="subtitle"><?php if(get_field('subtitle1')) {
-							echo get_field('subtitle1');
-						} ?></h3>
+							<h3 class="subtitle"><?php if(get_field('subtitle1')) {
+								echo get_field('subtitle1');
+							} ?></h3>
+						</div>
 					</div>
 				</div>
-
-				<p><?php if(get_field('desc1')) {
-					echo get_field('desc1');
-				} ?></p>
+				
+				<div class="col-sm-8 col-sm-offset-2 nopad">
+					<p><?php if(get_field('desc1')) {
+						echo get_field('desc1');
+					} ?></p>
+				</div>
 
 				<div id="social-links center-block">
 					<ul id="post-social" class="post-social hidden-xs hidden-sm">

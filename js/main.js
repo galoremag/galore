@@ -176,8 +176,10 @@ jQuery(document).ready(function($) {
 		if (target.is('.tag,.category,.single')) {
 			if (isTouchDevice()===true) {
 				return;
+			} else if (target.is('.single-list')) {
+			    return;
 			} else {
-			    $(window).scroll(sticky_relocate);
+				$(window).scroll(sticky_relocate);
 			    sticky_relocate();
 			}
 		} else {
