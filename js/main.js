@@ -338,5 +338,16 @@ jQuery(document).ready(function($) {
 	// 	_kmq.push(['record', 'Share on Facebook']);
 	// });
 
+
+	// Fancy List Scrolling
+	$(function() {
+		if ($('#global-container').is('.tag, .category, .single')) {
+			var shareButton = document.querySelector('post-social');
+			shareButton.addEventListener('click', recordShare, false);
+		} else {
+			return;
+		}
+	});
+
 });
 

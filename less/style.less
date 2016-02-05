@@ -302,9 +302,27 @@ body.menu-open {
 }
 
 #global-inner.single, #global-inner.category, #global-inner.archive, #global-inner.tag, #global-inner.page {
-	.heroGradientFade;
 	min-height: 1200px;
 	padding: 0;
+}
+
+#global-container.single-list {
+	background: url(images/rstheory2.gif) repeat;
+}
+
+#global-inner.single-list {
+	min-height: 1200px;
+	padding: 0;
+}
+
+.jumbotron {
+	position: relative;
+	top: 0px;
+	padding: 0px;
+	margin: 0px;
+	background: url(images/rstheory2.gif) repeat;
+	background-size: 400px 400px;
+	.translate;
 }
 
 /* THE LATEST BACKGROUND */
@@ -1614,6 +1632,34 @@ h2.stuckHead {
 	height: 50px;
 	left: 0px;
 	padding: 10px;
+}
+
+/*-- FANCY LISTS --*/
+
+.listHero {
+	display: block;
+	width: 100%;
+	height: 50vh;
+	padding-left: -15px;
+	padding-right: -15px;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.listHeader h1 span {
+	background: black;
+	box-shadow: 0px 0px 20px rgba(250,100,100,0.3);
+	color: white;
+	position: relative;
+	bottom: 0px;
+	left: 0px;
+	padding: 0 10px;
+}
+
+article .listHeader h3.subtitle {
+	color: white;
 }
 
 /* FOOTER */

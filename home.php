@@ -56,7 +56,18 @@
 		    <?php wp_reset_postdata(); ?>
 
 			<?php
-				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post');
+
+				$postslist = query_posts( array(
+					'post_type' => array( 'post', 'list', 'sponsor' ),
+					'order' => 'DESC',
+					'orderby' => 'date',
+					'offset' => 0,
+					'numberposts' => 20,
+					'posts_per_page' => 20,
+					'showposts' => 5 )
+				);
+
+				// $postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post');
 				foreach ($postslist as $post) :
 				setup_postdata($post);
 			?>
@@ -75,6 +86,43 @@
 			<?php endforeach; ?>
 
 			<?php wp_reset_postdata(); ?>
+
+			<!-- SECOND NEEDED? -->
+
+			<?php wp_reset_postdata(); ?>
+
+			<?php
+
+				$postslist = query_posts( array(
+					'post_type' => array( 'post', 'list', 'sponsor' ),
+					'order' => 'DESC',
+					'orderby' => 'date',
+					'offset' => 10,
+					'numberposts' => 20,
+					'posts_per_page' => 20,
+					'showposts' => 5 )
+				);
+
+				// $postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post');
+				foreach ($postslist as $post) :
+				setup_postdata($post);
+			?>
+			<div class="glide">
+				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+				<!-- <h4>
+					<?php 
+					if (get_post_meta($post->ID,'tagline')) {
+					echo get_post_meta($post->ID,'tagline');
+					}
+					?>
+				</h4> -->
+				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+			</div>
+			<?php endforeach; ?>
+
+			<?php wp_reset_postdata(); ?>
+
 		</div>
 
 	</div>
