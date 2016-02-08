@@ -36,69 +36,187 @@ WP Post Template: Fancy List
 				
 				<div class="spacer20"></div>
 
-				<?php $pic1 = get_field('pic1'); ?>
+				<!-- Item on List -->
 
-				<div id="1" class="listHero row-fluid" style="background-image: url(<?php echo $pic1['sizes']['large']; ?>)">
-					<div class="listHeader container-fluid nopad">
-						<div class="col-sm-8 col-sm-offset-2 nopad">
-							<h1><span>
-							<?php if(get_field('title1')) {
-								echo get_field('title1');
-							} ?>
-							</span></h1>
+				<?php if(get_field('pic1')) { ?>
 
-							<h3 class="subtitle"><?php if(get_field('subtitle1')) {
-								echo get_field('subtitle1');
-							} ?></h3>
+					<?php $pic1 = get_field('pic1'); ?>
+					
+					<div id="1" class="listHero row-fluid" style="background-image: url(<?php echo $pic1['sizes']['large']; ?>)">
+						<div class="listHeader container-fluid nopad">
+							<div class="col-sm-8 col-sm-offset-2 nopad">
+								<?php if(get_field('title1')) { ?>
+									<h1>
+										<span>
+											<?php echo get_field('title1'); ?>
+										</span>
+									</h1>
+								<?php } ?>
+
+								<?php if(get_field('subtitle1')) { ?>
+									<h3 class="subtitle">
+										<?php echo get_field('subtitle1'); ?>
+									</h3>
+								<?php } ?>
+							</div>
 						</div>
 					</div>
-				</div>
-				
-				<div class="listBody row">
-					<div class="col-sm-8 col-sm-offset-2 nopad">
-						<p><?php if(get_field('desc1')) {
-							echo get_field('desc1');
-						} ?></p>
-					</div>
-
-					<div id="social-links" class="col-sm-8 col-sm-offset-2 nopad">
-						<ul id="post-social" class="post-social hidden-xs hidden-sm">
-							<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-							<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-						</ul>
-					</div>
-				</div>
-
-				<div id="2" class="listHero row-fluid" style="background-image: url(<?php echo $pic1['sizes']['large']; ?>)">
-					<div class="listHeader container-fluid nopad">
+					
+					<div class="listBody row">
 						<div class="col-sm-8 col-sm-offset-2 nopad">
-							<h1><span>
-							<?php if(get_field('title1')) {
-								echo get_field('title1');
-							} ?>
-							</span></h1>
+							<?php if(get_field('desc1')) { ?>
+								<p>
+									<?php echo get_field('desc1'); ?>
+								</p>
+							<?php } ?>
+						</div>
 
-							<h3 class="subtitle"><?php if(get_field('subtitle1')) {
-								echo get_field('subtitle1');
-							} ?></h3>
+						<div id="social-links" class="col-sm-8 col-sm-offset-2 nopad">
+							<ul id="post-social" class="post-social hidden-xs hidden-sm">
+								<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul>
 						</div>
 					</div>
-				</div>
-				
-				<div class="listBody row">
-					<div class="col-sm-8 col-sm-offset-2 nopad">
-						<p><?php if(get_field('desc1')) {
-							echo get_field('desc1');
-						} ?></p>
+
+				<?php } ?>
+
+				<!-- Item on List -->
+
+				<?php if(get_field('pic2')) { ?>
+
+					<?php $pic2 = get_field('pic2'); ?>
+					
+					<div id="4" class="listHero row-fluid" style="background-image: url(<?php echo $pic2['sizes']['large']; ?>)">
+						<div class="listHeader container-fluid nopad">
+							<div class="col-sm-8 col-sm-offset-2 nopad">
+								<?php if(get_field('title2')) { ?>
+									<h1>
+										<span>
+											<?php echo get_field('title2'); ?>
+										</span>
+									</h1>
+								<?php } ?>
+
+								<?php if(get_field('subtitle2')) { ?>
+									<h3 class="subtitle">
+										<?php echo get_field('subtitle2'); ?>
+									</h3>
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+					
+					<div class="listBody row">
+						<div class="col-sm-8 col-sm-offset-2 nopad">
+							<?php if(get_field('desc2')) { ?>
+								<p>
+									<?php echo get_field('desc2'); ?>
+								</p>
+							<?php } ?>
+						</div>
+
+						<div id="social-links" class="col-sm-8 col-sm-offset-2 nopad">
+							<ul id="post-social" class="post-social hidden-xs hidden-sm">
+								<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul>
+						</div>
 					</div>
 
-					<div id="social-links" class="col-sm-8 col-sm-offset-2 nopad">
-						<ul id="post-social" class="post-social hidden-xs hidden-sm">
-							<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-							<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-						</ul>
+				<?php } ?>
+
+				<!-- Item on List -->
+
+				<?php if(get_field('pic3')) { ?>
+
+					<?php $pic3 = get_field('pic3'); ?>
+					
+					<div id="4" class="listHero row-fluid" style="background-image: url(<?php echo $pic3['sizes']['large']; ?>)">
+						<div class="listHeader container-fluid nopad">
+							<div class="col-sm-8 col-sm-offset-2 nopad">
+								<?php if(get_field('title3')) { ?>
+									<h1>
+										<span>
+											<?php echo get_field('title3'); ?>
+										</span>
+									</h1>
+								<?php } ?>
+
+								<?php if(get_field('subtitle3')) { ?>
+									<h3 class="subtitle">
+										<?php echo get_field('subtitle3'); ?>
+									</h3>
+								<?php } ?>
+							</div>
+						</div>
 					</div>
-				</div>
+					
+					<div class="listBody row">
+						<div class="col-sm-8 col-sm-offset-2 nopad">
+							<?php if(get_field('desc3')) { ?>
+								<p>
+									<?php echo get_field('desc3'); ?>
+								</p>
+							<?php } ?>
+						</div>
+
+						<div id="social-links" class="col-sm-8 col-sm-offset-2 nopad">
+							<ul id="post-social" class="post-social hidden-xs hidden-sm">
+								<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul>
+						</div>
+					</div>
+
+				<?php } ?>
+
+				<!-- Item on List -->
+
+				<?php if(get_field('pic4')) { ?>
+
+					<?php $pic4 = get_field('pic4'); ?>
+					
+					<div id="4" class="listHero row-fluid" style="background-image: url(<?php echo $pic4['sizes']['large']; ?>)">
+						<div class="listHeader container-fluid nopad">
+							<div class="col-sm-8 col-sm-offset-2 nopad">
+								<?php if(get_field('title4')) { ?>
+									<h1>
+										<span>
+											<?php echo get_field('title4'); ?>
+										</span>
+									</h1>
+								<?php } ?>
+
+								<?php if(get_field('subtitle4')) { ?>
+									<h3 class="subtitle">
+										<?php echo get_field('subtitle4'); ?>
+									</h3>
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+					
+					<div class="listBody row">
+						<div class="col-sm-8 col-sm-offset-2 nopad">
+							<?php if(get_field('desc4')) { ?>
+								<p>
+									<?php echo get_field('desc4'); ?>
+								</p>
+							<?php } ?>
+						</div>
+
+						<div id="social-links" class="col-sm-8 col-sm-offset-2 nopad">
+							<ul id="post-social" class="post-social hidden-xs hidden-sm">
+								<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul>
+						</div>
+					</div>
+
+				<?php } ?>
+
+				<!-- End Items on List -->
 
 				<ul class="single-social">
 					<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i> &nbsp;<h4 class="nomarg">Share on Facebook</h4></a></li>

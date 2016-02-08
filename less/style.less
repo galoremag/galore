@@ -226,7 +226,7 @@ h1 {
 }
 
 h1 span {
-	font-family: 'salome', serif;
+	.font6;
 	text-transform: none;
 	color: @pink;
 }
@@ -303,7 +303,7 @@ body.menu-open {
 
 #global-inner.single, #global-inner.category, #global-inner.archive, #global-inner.tag, #global-inner.page {
 	min-height: 1200px;
-	padding: 0;
+	padding: 110px 0 0 0;
 }
 
 #global-container.single-list {
@@ -312,7 +312,7 @@ body.menu-open {
 
 #global-inner.single-list {
 	min-height: 1200px;
-	padding: 0;
+	padding: 110px 0 0 0;
 }
 
 .jumbotron {
@@ -1636,6 +1636,10 @@ h2.stuckHead {
 
 /*-- FANCY LISTS --*/
 
+html.touch .listHero {
+  background-attachment: scroll !important;
+}
+
 .single-list #content {
 	padding: 0;
 }
@@ -1651,11 +1655,12 @@ h2.stuckHead {
 .listHero {
 	display: block;
 	width: 100%;
-	height: 50vh;
+	height: 60vh;
 	padding: 0;
 
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 	background-position: center center;
 }
 

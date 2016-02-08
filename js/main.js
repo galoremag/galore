@@ -109,6 +109,12 @@ jQuery(document).ready(function($) {
 	defaultSelect();
 
 	$(function() {
+		if (isTouchDevice()===true) {
+			$('html').addClass('touch');
+		}
+	})
+
+	$(function() {
 		if (readCookie("sponsorLoaded")) {
 			$('#superSpecial').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('padTop120');
 		} else if (isTouchDevice()===true) {
