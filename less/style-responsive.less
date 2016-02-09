@@ -299,14 +299,6 @@
 		padding-top: 40px !important;
 	}
 
-	/*#global-inner.single-list {
-		background-color: transparent !important;
-		background-attachment: scroll !important;
-		background-repeat: no-repeat !important;
-		background-size: cover !important;
-		background-position: center !important;
-	}*/
-
 	footer {
 		padding-top: 100px;
 	}
@@ -477,6 +469,8 @@
 		display: none !important;
 	}*/
 
+	/*== Mobile Fancy List ==*/
+
 	#global-inner.single-list {
 		overflow-x: hidden
 	}
@@ -490,8 +484,41 @@
 	}
 
 	.listHero {
-		padding: 15px;
+		height: 100vh;
 	}
+
+	.listItem {
+		width: 200vh;
+		height: 100vh;
+	}
+
+	.listItem.shift {
+		position: relative;
+		left: -92vh;
+
+	}
+
+	.listHeader {
+		width: 100vh;
+		height: 100vh;
+		float: left;
+		padding: 64vh 10px 10px 10px;
+		& h1 {
+			font-size: 32px;
+		}
+	}
+
+	.listHeroBody {
+		width: 50vh;
+		height: 100vh;
+		overflow-y: scroll;
+		background: white;
+		& h1 {
+			.font6;
+			padding: 0 15px !important;
+		}
+	}
+
 	.email-signup-dialog {
 		margin-top: 20px;
 	}

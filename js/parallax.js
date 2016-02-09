@@ -1,4 +1,9 @@
+function isTouchDevice() {
+    return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
+};
+
 (function() {
+    if (isTouchDevice()===false) {
         var $sections = $('.listHero'),
             $firstSection = $sections.first(),
             $lastSection = $sections.last(),
@@ -11,7 +16,7 @@
 
         // use an indirect approach to updating the trigger positions
         // this way we don't over do it with event handlers
-        $window.on('resize load orientationchange', function() {
+        $(window).on('resize load orientationchange', function() {
             resized = true;
         });
         // $('.ringly-item img').on('load', function() {
@@ -24,14 +29,14 @@
                 resized = false;
 
                 // notify others of potential page changes
-                $window.trigger('updated-y-position');
+                $(window).trigger('updated-y-position');
 
                 // delay in case the above trigger causes other page
                 // changes!
                 window.setTimeout(function() {
                     scrollTriggerYMax = $lastSection.offset().top;
                     scrollTriggerYMin = $firstSection.offset().top;
-                    $window.trigger('scroll');
+                    $(window).trigger('scroll');
                 }, 1);
             }
         }
@@ -40,10 +45,10 @@
         window.setInterval(updateYTriggers, 200);
 
         // when page has scrolled see if we hit the scroll target
-        $window.on('scroll', function() {
+        $(window).on('scroll', function() {
             var updateMin = false,
                 updateMax = false,
-                scrollY = $window.scrollTop();
+                scrollY = $(window).scrollTop();
 
             // var _data = {
             //     scrollY: scrollY,
@@ -90,5 +95,6 @@
             // window._data = _data;
 
         }).trigger('scroll');
+    }
 
-    })();
+})();

@@ -58,14 +58,14 @@ jQuery(document).ready(function($) {
 
 	function loadLikeBar() {
 		if ($('#global-container').is('.tag, .category, .home, .archive')) {
-			$('#likeBar').delay(22000).animate({bottom: "0px"}, 500);
+			$('#likeBar').animate({bottom: "0px"}, 300);
 		}
 	};
 
 	setTimeout(loadLikeBar, 22000);
 
 	function sticky_relocate() {
-		var window_height = window.innerHeight;
+		var window_height = $(window).innerHeight;
 	    var window_top = $(window).scrollTop();
 	    var div_top = $('#sidebar-anchor').offset().top;
 	    if (window_top > (div_top - 50)) {
@@ -100,13 +100,21 @@ jQuery(document).ready(function($) {
 	    e.stopPropagation();
 	};
 
+	function mobileList() {
+		if (isTouchDevice()===true) {
+			var posHero = $('.listHero').scrollTop();
+
+			console.log(posHero);
+		}
+	}
+
 	loadNewsletter();
 
 	loadFacebookModal();
 
-	loadLikeBar();
-
 	defaultSelect();
+
+	mobileList();
 
 	$(function() {
 		if (isTouchDevice()===true) {
@@ -278,9 +286,7 @@ jQuery(document).ready(function($) {
 	// Nav Button
 	$(function() {
 		$('#nav-button').on('click', function(event) {
-			$('.modal-nav').fadeToggle('show');
-			$('body').toggleClass('menu-open');
-	        $('.hmbrgr').click();
+	        $('#hmbrgr').click();
 	    });
 	});
 
@@ -292,11 +298,19 @@ jQuery(document).ready(function($) {
 
 	// HAMBURGER
 	$(function() {
-		$('.hmbrgr').hmbrgr({
+		$('#hmbrgr').hmbrgr({
 			width     : 14,
 			height    : 10,
 			barHeight : 1,
-			barColor  : '#fff'
+			barColor  : '#fff',
+			onOpen	  : function() {
+				$('.modal-nav').fadeToggle('show').once;
+				$('body').toggleClass('menu-open');
+			},
+			onClose   : function() {
+				$('.modal-nav').fadeToggle('show').once;
+				$('body').toggleClass('menu-open');
+			}
 		});
 	});
 
