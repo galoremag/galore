@@ -12,7 +12,7 @@
 			<?php // shopp('category','pagination','show=10'); ?>
 
 			<?php while(shopp('category','products')): ?>
-				<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="col-md-4 col-sm-6">
 					<div class="thumbnail">
 						<a href="<?php shopp('product','url'); ?>">
 							<?php shopp('product','coverimage','alt=Issue - Galore Magazine&title=Issue - Galore Magazine&setting=full-image&class=product-img mag-issue'); ?>
