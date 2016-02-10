@@ -1,3 +1,14 @@
+var recordShare = function (e) {
+  var el = event.target;
+  var clickedItem = el.getAttribute('class');
+  console.log("You clicked " + clickedItem);
+  // _kmq.push(['record', clickedItem]);
+  ga(
+      "send", "event", "Social Share", clickedItem,
+      document.location.pathname + document.location.search
+  );
+}
+
 jQuery(window).on('load', function($) {
 
   "use strict";
@@ -94,63 +105,57 @@ jQuery(document).ready(function($) {
     }
   }
 
-  function recordShare(e) {
-    if (e.target !== e.currentTarget) {
-        var clickedItem = $(event.target).attr('class');
-        alert("You clicked " + clickedItem);
-        _kmq.push(['record', clickedItem]);
-        _gaq.push(['_trackEvent', 'Social Share', clickedItem]);
-      }
-      e.stopPropagation();
-  }
-
   // Tracking Info
 
-  function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    var expires = "expires=" + d.toGMTString();
-    document.cookie = cname + '=' + cvalue + ';path="/";' + expires;
-  }
+  // function setCookie(cname, cvalue, exdays) {
+  //   var d = new Date();
+  //   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  //   var expires = "expires=" + d.toGMTString();
+  //   document.cookie = cname + '=' + cvalue + ';path="/";' + expires;
+  // }
 
-  function checkHistory(targetId) {
-    var history = getCookie("history");
-    var htmlContent = '';
+  // function checkHistory(targetId) {
+  //   var history = getCookie("history");
+  //   var htmlContent = '';
 
-    if (history != "") {
-        var insert = true;
-        var sp = history.toString().split(",");
-        for ( var i = sp.length - 1; i >= 0; i--) {
-            htmlContent += '<a style="color: white;" class="demo-pricing demo-pricing-1"  href="'
-                    + sp[i]
-                    + '">'
-                    + sp[i].substring(sp[i].lastIndexOf('/') + 1) + '</a><br>';
-            if (sp[i] == document.URL) {
-                insert = false;
-            }
-            document.getElementById(targetId).innerHTML = htmlContent;
-        }
-        if (insert) {
-            sp.push(document.URL);
-        }
-        setCookie("history", sp.toString(), 30);
-    } else {
-        var stack = new Array();
-        stack.push(document.URL);
-        setCookie("history", stack.toString(), 30);
-    }
-  }
+  //   if (history != "") {
+  //       var insert = true;
+  //       var sp = history.toString().split(",");
+  //       for ( var i = sp.length - 1; i >= 0; i--) {
+  //           htmlContent += '<a style="color: white;" class="demo-pricing demo-pricing-1"  href="'
+  //                   + sp[i]
+  //                   + '">'
+  //                   + sp[i].substring(sp[i].lastIndexOf('/') + 1) + '</a><br>';
+  //           if (sp[i] == document.URL) {
+  //               insert = false;
+  //           }
+  //           // document.getElementById(targetId).innerHTML = htmlContent;
+  //           console.log(htmlContent);
+  //       }
+  //       if (insert) {
+  //           sp.push(document.URL);
+  //       }
+  //       createCookie("history", sp.toString(), 30);
+  //   } else {
+  //       var stack = new Array();
+  //       stack.push(document.URL);
+  //       createCookie("history", stack.toString(), 30);
+  //   }
+  // }
 
-  function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for ( var i = 0; i < ca.length; i++) {
-        var c = ca[i].trim();
-        if (c.indexOf(name) == 0)
-            return c.substring(name.length, c.length);
-    }
-    return "";
-  }
+  // function getCookie(cname) {
+  //   var name = cname + "=";
+  //   var ca = document.cookie.split(';');
+  //   for ( var i = 0; i < ca.length; i++) {
+  //       var c = ca[i].trim();
+  //       if (c.indexOf(name) == 0)
+  //           return c.substring(name.length, c.length);
+  //   }
+  //   return "";
+  // }
+
+  // setCookie("history", window.location, 80);
+  // checkHistory("recentPageViews");
 
   // End of Tracking
 
@@ -210,6 +215,15 @@ jQuery(document).ready(function($) {
       $('nav').addClass('shrink') && $('.footbut').addClass('appear');
     } else {
       $('nav').removeClass('shrink') && $('.footbut').removeClass('appear');
+    }
+  });
+
+  // Shrink Navbar if page loads scrolled
+  $(function() {
+    if ($(document).scrollTop() > 50) {
+      $('nav').addClass('shrink') && $('.footbut').addClass('appear');
+    } else {
+      return;
     }
   });
 
@@ -335,17 +349,6 @@ jQuery(document).ready(function($) {
           $('#likeBar').animate({bottom: "-60px"});
           createCookie("facebook", "read", 7);
       });
-  });
-
-  // Google Analytics Events
-
-  $(function() {
-    if ($('#global-container').is('.tag, .category, .single')) {
-      var shareButton = document.querySelector('post-social');
-      shareButton.addEventListener('click', recordShare, false);
-    } else {
-      return;
-    }
   });
 
 });
