@@ -367,7 +367,7 @@
 	add_action( 'rest_api_init', 'sb_register_featured_urls' );
 	function sb_register_featured_urls() {
 	    register_api_field( 'post',
-	        'featured_image_urls',
+	        'featured_image_url',
 	        array(
 	            'get_callback'    => 'sb_api_featured_images'
 	        )
