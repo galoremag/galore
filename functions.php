@@ -361,3 +361,43 @@
 	}
 	add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
 	
+
+	// Add Featured Image to WP-API Response
+
+	add_action( 'rest_api_init', 'sb_register_featured_urls' );
+	function sb_register_featured_urls() {
+	    register_api_field( 'post',
+	        'featured_image_urls',
+	        array(
+	            'get_callback'    => 'sb_api_featured_images'
+	        )
+	    );
+	}
+
+
+	function sb_api_featured_images( $data, $post ) {
+
+		$featured_id = get_post_thumbnail_id( $post->ID );
+
+		$sizes = wp_get_attachment_metadata( $featured_id );
+		
+		$size_data = new stdClass();
+				
+		if ( ! empty( $sizes['sizes'] ) ) {
+
+			foreach ( $sizes['sizes'] as $key => $size ) {
+				// Use the same method image_downsize() does
+				$image_src = wp_get_attachment_image_src( $featured_id, $key );
+
+				if ( ! $image_src ) {
+					continue;
+				}
+				
+				$size_data->$key = $image_src[0];
+				
+			}
+
+		}
+
+		return $size_data;
+	}
