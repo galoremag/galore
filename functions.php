@@ -379,25 +379,28 @@
 
 		$featured_id = get_post_thumbnail_id( $post->ID );
 
-		$sizes = wp_get_attachment_metadata( $featured_id );
+		// $sizes = wp_get_attachment_metadata( $featured_id );
+		$url = wp_get_attachment_url( $featured_id );
 		
-		$size_data = new stdClass();
+		return $url;
+
+		// $size_data = new stdClass();
 				
-		if ( ! empty( $sizes['sizes'] ) ) {
+		// if ( ! empty( $sizes['sizes'] ) ) {
 
-			foreach ( $sizes['sizes'] as $key => $size ) {
-				// Use the same method image_downsize() does
-				$image_src = wp_get_attachment_image_src( $featured_id, $key );
+		// 	foreach ( $sizes['sizes'] as $key => $size ) {
+		// 		// Use the same method image_downsize() does
+		// 		$image_src = wp_get_attachment_image_src( $featured_id, $key );
 
-				if ( ! $image_src ) {
-					continue;
-				}
+		// 		if ( ! $image_src ) {
+		// 			continue;
+		// 		}
 				
-				$size_data->$key = $image_src[0];
+		// 		$size_data->$key = $image_src[0];
 				
-			}
+		// 	}
 
-		}
+		// }
 
-		return $size_data;
+		// return $size_data;
 	}
