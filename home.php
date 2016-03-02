@@ -55,6 +55,10 @@
 
 		    <?php wp_reset_postdata(); ?>
 
+		    <!­­ cmnUNT | Begin ad tag ­­>
+			<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
+			<!­­ cmnUNT | End ad tag ­­>
+
 			<?php
 				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post');
 				foreach ($postslist as $post) :
@@ -169,7 +173,32 @@
 					<div class="brand"></div>
 					<h1 class="text-center">Darlings</h1>
 					<?php
-					$args = array( 'tag' => 'darling', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC' );
+					$args = array( 'tag' => 'darling', 'post_type' => 'post', 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
+
+					$postslist = get_posts( $args );
+
+					// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
+					foreach ($postslist as $post) : setup_postdata($post);
+					?>
+					<div class="snippet">
+						<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
+						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+					</div>
+					<?php endforeach; ?>
+					<div class="row-fluid">
+						<div class="spacer20"></div>
+						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/tag/darling"><i class="fa fa-bomb"></i> Bombshells <i class="fa fa-bomb"></i></a></p>
+					</div>
+
+					<!­­ cmnUNT | Begin ad tag ­­>
+					<div id="cmn_ad_tag_content">
+						<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
+					</div>
+					<!­­ cmnUNT | End ad tag ­­>
+
+					<?php
+					$args = array( 'tag' => 'darling', 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'offset' => 1 );
 
 					$postslist = get_posts( $args );
 
@@ -195,7 +224,7 @@
 
 	<div class="sex-dating">
 		<div class="sex-dating-in">
-			<div class="container">
+			<div class="container nopad">
 				<div class="row-fluid">
 					<div class="col-sm-12">
 						<h2>Sex + Dating <i class="fa fa-heart"></i></h2>
@@ -418,12 +447,6 @@
 				<?php endforeach; ?>
 
 			    <?php wp_reset_postdata(); ?>
-
-			    <!­­ cmnUNT | Begin ad tag ­­>
-				<div id="cmn_ad_tag_content">
-					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-				</div>
-				<!­­ cmnUNT | End ad tag ­­>
 
 			    <!-- Infinite Scroll -->
 
