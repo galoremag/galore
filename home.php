@@ -186,10 +186,6 @@
 						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 					</div>
 					<?php endforeach; ?>
-					<div class="row-fluid">
-						<div class="spacer20"></div>
-						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/tag/darling"><i class="fa fa-bomb"></i> Bombshells <i class="fa fa-bomb"></i></a></p>
-					</div>
 
 					<!­­ cmnUNT | Begin ad tag ­­>
 					<div id="cmn_ad_tag_content">
