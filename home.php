@@ -90,7 +90,7 @@
 
 	<!-- STYLE SECTION -->
 
-	<div class="home-style container-fluid nopad">
+	<div class="home-style container nopad">
 		<div class="row-fluid home-style-in nopad">
 			<div class="col-md-8 pad40">
 				<div class="row-fluid">
@@ -195,7 +195,7 @@
 
 	<div class="sex-dating">
 		<div class="sex-dating-in">
-			<div class="container-fluid">
+			<div class="container">
 				<div class="row-fluid">
 					<div class="col-md-10 col-md-offset-1">
 						<h2>Sex + Dating <i class="fa fa-heart"></i></h2>
@@ -258,7 +258,7 @@
 
 	<div class="pop">
 		<div class="pop-in">
-			<div class="container-fluid">
+			<div class="container">
 				<div class="row-fluid">
 					<div class="col-md-10 col-md-offset-1">
 						<h2>Guilty Pleasure <i class="fa fa-star"></i></h2>
@@ -370,7 +370,7 @@
 		</div>
 	</div>
 
-	<div class="container-fluid nopad">
+	<div class="container nopad">
 		<div class="row-fluid">
 			<div id="content" class="col-md-10 col-md-offset-1">
 				<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> More Everything <i class="fa fa-diamond"></i></h2>
