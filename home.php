@@ -56,7 +56,9 @@
 		    <?php wp_reset_postdata(); ?>
 
 		    <!­­ cmnUNT | Begin ad tag ­­>
-			<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
+		    <div class="container">
+				<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
+			</div>
 			<!­­ cmnUNT | End ad tag ­­>
 
 			<?php
