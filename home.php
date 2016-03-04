@@ -55,12 +55,6 @@
 
 		    <?php wp_reset_postdata(); ?>
 
-		    <!­­ cmnUNT | Begin ad tag ­­>
-		    <div class="container">
-				<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
-			</div>
-			<!­­ cmnUNT | End ad tag ­­>
-
 			<?php
 				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post');
 				foreach ($postslist as $post) :
@@ -85,6 +79,10 @@
 
 	</div>
 </div>
+
+<!­­ cmnUNT | Begin ad tag ­­>
+	<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
+<!­­ cmnUNT | End ad tag ­­>
 
 <!-- <div class="text-center">
 	<div class="spacer20"></div>
