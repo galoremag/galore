@@ -90,7 +90,7 @@
 
 	<!-- STYLE SECTION -->
 
-	<div class="home-style container-fluid nopad">
+	<div class="home-style container nopad">
 		<div class="row-fluid home-style-in nopad">
 			<div class="col-md-8 pad40">
 				<div class="row-fluid">
