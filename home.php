@@ -80,10 +80,6 @@
 	</div>
 </div>
 
-<!­­ cmnUNT | Begin ad tag ­­>
-	<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
-<!­­ cmnUNT | End ad tag ­­>
-
 <!-- <div class="text-center">
 	<div class="spacer20"></div>
 	<a class="btn centerBlock" href="the-latest"><i class="fa fa-bomb"></i>&nbsp; Go Crazy &nbsp;<i class="fa fa-bomb"></i></a>
@@ -188,7 +184,7 @@
 					<?php endforeach; ?>
 
 					<!­­ cmnUNT | Begin ad tag ­­>
-					<div id="cmn_ad_tag_content">
+					<div id="cmn_ad_tag_content" class="snippet">
 						<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
 					</div>
 					<!­­ cmnUNT | End ad tag ­­>
@@ -215,6 +211,10 @@
 			</div>
 		</div>
 	</div>
+
+	<!­­ cmnUNT | Begin ad tag ­­>
+		<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
+	<!­­ cmnUNT | End ad tag ­­>
 
 	<!-- SEX + DATING SECTION -->
 
