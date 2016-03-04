@@ -353,7 +353,7 @@ $url = $thumb[0];
 
 	<!-- COVER STORIES -->
 
-	<div id="cover-title">
+	<!-- <div id="cover-title">
 		<img src="<?php bloginfo('template_url'); ?>/images/cover-stories.png" alt="Galore Mag Cover Stories">
 	</div>
 
@@ -365,7 +365,7 @@ $url = $thumb[0];
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="container-fluid nopad">
 		<div class="row-fluid">
