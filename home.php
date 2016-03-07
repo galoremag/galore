@@ -20,6 +20,10 @@
 	</div>
 </div>
 
+<div id=”cmn_ad_tag_head” class=”fw_sitename”>
+	<script type="text/javascript">cmnUNT('3x3', tile_num++);</script>
+</div>
+
 <div id="latest-container">
 	<h2 class="text-center verPad10"><a href="the-latest/"><i class="fa fa-flash"></i> The Daily Dish <i class="fa fa-flash"></i></a></h2>
 	<div id="latest">
@@ -56,7 +60,7 @@
 		    <?php wp_reset_postdata(); ?>
 
 			<?php
-				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post');
+				$postslist = get_posts('numberposts=10&order=DESC&orderby=date&offset=0&post_type=post');
 				foreach ($postslist as $post) :
 				setup_postdata($post);
 			?>
@@ -75,6 +79,34 @@
 			<?php endforeach; ?>
 
 			<?php wp_reset_postdata(); ?>
+
+			<!­­ cmnUNT | Begin ad tag ­­>
+			<div id="cmn_ad_tag_content" class="snippet">
+				<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
+			</div>
+			<!­­ cmnUNT | End ad tag ­­>
+
+			<?php
+				$postslist = get_posts('numberposts=9&order=DESC&orderby=date&offset=10&post_type=post');
+				foreach ($postslist as $post) :
+				setup_postdata($post);
+			?>
+			<div class="glide">
+				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+				<!-- <h4>
+					<?php 
+					if (get_post_meta($post->ID,'tagline')) {
+					echo get_post_meta($post->ID,'tagline');
+					}
+					?>
+				</h4> -->
+				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+			</div>
+			<?php endforeach; ?>
+
+			<?php wp_reset_postdata(); ?>
+
 		</div>
 
 	</div>
@@ -340,7 +372,7 @@
 							<?php
 							$counter = 1; //start counter
 
-							$grids = 3; //Grids per row-fluid
+							$grids = 2; //Grids per row-fluid
 
 							/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
 							query_posts($query_string . 'category_name=pop&ignore_sticky_posts=0&posts_per_page=3&offset=3');
@@ -382,6 +414,15 @@
 							//Pagination can go here if you want it.
 							endif;
 							?>
+
+							<div class="thumbnail col-md-4">
+								<!­­ cmnUNT | Begin ad tag ­­>
+								<div id="cmn_ad_tag_content" class="snippet">
+									<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
+								</div>
+								<!­­ cmnUNT | End ad tag ­­>
+							</div>
+
 						</div>
 					</div>
 				</div>

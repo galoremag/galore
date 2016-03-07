@@ -241,10 +241,6 @@
 	</head>
 	<body>
 
-		<div id=”cmn_ad_tag_head” class=”fw_sitename”>
-			<script type="text/javascript">cmnUNT('3x3', tile_num++);</script>
-		</div>
-
 		<script type="text/javascript">
 			var isMobile = false; //initiate as false
 			// device detection
