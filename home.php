@@ -82,7 +82,7 @@
 
 			<div class="glide">
 				<!­­ cmnUNT | Begin ad tag ­­>
-				<div id="cmn_ad_tag_content" class="snippet">
+				<div id="cmn_ad_tag_content">
 					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
 				</div>
 				<!­­ cmnUNT | End ad tag ­­>
@@ -419,7 +419,7 @@
 
 							<div class="thumbnail col-md-4">
 								<!­­ cmnUNT | Begin ad tag ­­>
-								<div id="cmn_ad_tag_content" class="snippet">
+								<div id="cmn_ad_tag_content">
 									<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
 								</div>
 								<!­­ cmnUNT | End ad tag ­­>
