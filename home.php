@@ -5,7 +5,7 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<!-- <div id=”cmn_ad_tag_head” class=”fw_galore”></div> -->
+<div id=”cmn_ad_tag_head” class=”fw_galore”></div>
 
 <div id="cmn_wrap" class="jumbotron">
 	<div class="jumbotron-in">
