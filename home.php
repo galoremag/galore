@@ -80,11 +80,13 @@
 
 			<?php wp_reset_postdata(); ?>
 
-			<!­­ cmnUNT | Begin ad tag ­­>
-			<div id="cmn_ad_tag_content" class="snippet">
-				<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
+			<div class="glide">
+				<!­­ cmnUNT | Begin ad tag ­­>
+				<div id="cmn_ad_tag_content" class="snippet">
+					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
+				</div>
+				<!­­ cmnUNT | End ad tag ­­>
 			</div>
-			<!­­ cmnUNT | End ad tag ­­>
 
 			<?php
 				$postslist = get_posts('numberposts=9&order=DESC&orderby=date&offset=10&post_type=post');
