@@ -5,7 +5,9 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<div class="jumbotron">
+<div id=”cmn_ad_tag_head” class=”fw_galore”></div>
+
+<div id="cmn_wrap" class="jumbotron">
 	<div class="jumbotron-in">
 		<div class="container">
 			<div class="row-fluid">
@@ -19,6 +21,11 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	cmnTB();
+	cmnUNT('tover', tile_num++);
+</script>
 
 <div id=”cmn_ad_tag_head” class=”fw_sitename”>
 	<script type="text/javascript">cmnUNT('3x3', tile_num++);</script>
