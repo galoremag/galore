@@ -9,7 +9,7 @@
 					</div>
 					<div id="site-search" class="pull-left hidden-xs">
 						<!-- <?php get_search_form(); ?> -->
-						<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
+						<form role="search" method="get" action="<?php echo site_url(); ?>">
 							<label class="form-group">
 								<input type="search" class="form-control" placeholder="Search" value="Search" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
 							</label>
