@@ -323,7 +323,7 @@
 
 	<div class="pop nopad">
 		<div class="row-fluid pop-in nopad">
-			<div class="col-sm-12">
+			<div class="col-sm-12 pad40">
 				<h2>Guilty Pleasure <i class="fa fa-star"></i></h2>
 				<h3>Best of Pop Culture</h3>
 				<div class="spacer20"></div>
