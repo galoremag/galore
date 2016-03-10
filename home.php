@@ -315,129 +315,128 @@
 						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> &nbsp; Hook It Up &nbsp;<i class="fa fa-heart"></i></a></p>
 					</div>
 				</div>
+			</div>
 		</div>
 	</div>
 
 	<!-- POP SECTION -->
 
-	<div class="pop">
-		<div class="pop-in">
-			<div class="container">
-				<div class="row-fluid">
-					<div class="col-sm-12">
-						<h2>Guilty Pleasure <i class="fa fa-star"></i></h2>
-						<h3>Best of Pop Culture</h3>
-						<div class="spacer20"></div>
-						<div class="row-fluid post-grid">
-							<?php
-							$counter = 1; //start counter
+	<div class="pop nopad">
+		<div class="row-fluid pop-in nopad">
+			<div class="row-fluid">
+				<div class="col-sm-12">
+					<h2>Guilty Pleasure <i class="fa fa-star"></i></h2>
+					<h3>Best of Pop Culture</h3>
+					<div class="spacer20"></div>
+					<div class="row-fluid post-grid">
+						<?php
+						$counter = 1; //start counter
 
-							$grids = 3; //Grids per row-fluid
+						$grids = 3; //Grids per row-fluid
 
-							/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
-							query_posts($query_string . 'category_name=pop&ignore_sticky_posts=0&posts_per_page=3');
+						/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
+						query_posts($query_string . 'category_name=pop&ignore_sticky_posts=0&posts_per_page=3');
 
 
-							if(have_posts()) :	while(have_posts()) :  the_post(); 
-							?>
-							<?php
-							//Show the left hand side column
-							if($counter == 1) :
-							?>
-							<div class="thumbnail col-md-4">
-								<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
-				                <div class="caption">
-				                	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-				                	<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-				                </div>
-				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
-				                <!-- <ul class="post-social">
-									<li><a href="javascript:;" target="popup" onclick="recordShare(); window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="javascript:;" target="popup" onclick="recordShare(); window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-								</ul> -->
-							</div>
-							<?php
-							$counter = 0;
-							endif;
-							?>
-							<?php
-							//Show the left hand side column
-							if($counter == 1) :
-							?>
-							<?php
-							$counter = 0;
-							endif;
-							?>
-							<?php
-							$counter++;
-							endwhile;
-							//Pagination can go here if you want it.
-							endif;
-							?>
+						if(have_posts()) :	while(have_posts()) :  the_post(); 
+						?>
+						<?php
+						//Show the left hand side column
+						if($counter == 1) :
+						?>
+						<div class="thumbnail col-md-4">
+							<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+			                <div class="caption">
+			                	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
+			                	<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+			                </div>
+			                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
+			                <!-- <ul class="post-social">
+								<li><a href="javascript:;" target="popup" onclick="recordShare(); window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="javascript:;" target="popup" onclick="recordShare(); window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul> -->
 						</div>
-						<div class="row-fluid post-grid">
-							<?php
-							$counter = 1; //start counter
+						<?php
+						$counter = 0;
+						endif;
+						?>
+						<?php
+						//Show the left hand side column
+						if($counter == 1) :
+						?>
+						<?php
+						$counter = 0;
+						endif;
+						?>
+						<?php
+						$counter++;
+						endwhile;
+						//Pagination can go here if you want it.
+						endif;
+						?>
+					</div>
+					<div class="row-fluid post-grid">
+						<?php
+						$counter = 1; //start counter
 
-							$grids = 2; //Grids per row-fluid
+						$grids = 2; //Grids per row-fluid
 
-							/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
-							query_posts($query_string . 'category_name=pop&ignore_sticky_posts=0&posts_per_page=2&offset=3');
+						/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
+						query_posts($query_string . 'category_name=pop&ignore_sticky_posts=0&posts_per_page=2&offset=3');
 
 
-							if(have_posts()) :	while(have_posts()) :  the_post(); 
-							?>
-							<?php
-							//Show the left hand side column
-							if($counter == 1) :
-							?>
-							<div class="thumbnail col-md-4">
-								<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
-				                <div class="caption">
-				                	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-				                	<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-				                </div>
-				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
-				                <!-- <ul class="post-social">
-									<li><a href="javascript:;" target="popup" onclick="recordShare(); window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="javascript:;" target="popup" onclick="recordShare(); window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-								</ul> -->
-							</div>
-							<?php
-							$counter = 0;
-							endif;
-							?>
-							<?php
-							//Show the left hand side column
-							if($counter == 1) :
-							?>
-							<?php
-							$counter = 0;
-							endif;
-							?>
-							<?php
-							$counter++;
-							endwhile;
-							//Pagination can go here if you want it.
-							endif;
-							?>
-
-							<div class="thumbnail col-md-4">
-								<!­­ cmnUNT | Begin ad tag ­­>
-								<div id="cmn_ad_tag_content">
-									<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-								</div>
-								<!­­ cmnUNT | End ad tag ­­>
-							</div>
-
+						if(have_posts()) :	while(have_posts()) :  the_post(); 
+						?>
+						<?php
+						//Show the left hand side column
+						if($counter == 1) :
+						?>
+						<div class="thumbnail col-md-4">
+							<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+			                <div class="caption">
+			                	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
+			                	<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+			                </div>
+			                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
+			                <!-- <ul class="post-social">
+								<li><a href="javascript:;" target="popup" onclick="recordShare(); window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="javascript:;" target="popup" onclick="recordShare(); window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+							</ul> -->
 						</div>
+						<?php
+						$counter = 0;
+						endif;
+						?>
+						<?php
+						//Show the left hand side column
+						if($counter == 1) :
+						?>
+						<?php
+						$counter = 0;
+						endif;
+						?>
+						<?php
+						$counter++;
+						endwhile;
+						//Pagination can go here if you want it.
+						endif;
+						?>
+
+						<div class="thumbnail col-md-4">
+							<!­­ cmnUNT | Begin ad tag ­­>
+							<div id="cmn_ad_tag_content">
+								<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
+							</div>
+							<!­­ cmnUNT | End ad tag ­­>
+						</div>
+
 					</div>
 				</div>
-				<div class="row-fluid">
-					<div class="col-sm-12">
-						<div class="spacer20"></div>
-						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/pop"><i class="fa fa-flash"></i>&nbsp; Make It Pop &nbsp;<i class="fa fa-flash"></i></a></p>
-					</div>
+			</div>
+			<div class="row-fluid">
+				<div class="col-sm-12">
+					<div class="spacer20"></div>
+					<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/pop"><i class="fa fa-flash"></i>&nbsp; Make It Pop &nbsp;<i class="fa fa-flash"></i></a></p>
 				</div>
 			</div>
 		</div>
