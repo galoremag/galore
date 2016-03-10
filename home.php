@@ -258,12 +258,9 @@
 
 	<!-- SEX + DATING SECTION -->
 
-	<div class="home-style nopad">
-		<div class="row-fluid home-style-in nopad">
-
 	<div class="sex-dating nopad">
 		<div class="row-fluid sex-dating-in nopad">
-			<div class="container nopad">
+			<div class="col-sm-12 pad40">
 				<div class="row-fluid">
 					<div class="col-sm-12">
 						<h2>Sex + Dating <i class="fa fa-heart"></i></h2>
@@ -318,7 +315,6 @@
 						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> &nbsp; Hook It Up &nbsp;<i class="fa fa-heart"></i></a></p>
 					</div>
 				</div>
-			</div>
 		</div>
 	</div>
 
