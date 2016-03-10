@@ -258,8 +258,11 @@
 
 	<!-- SEX + DATING SECTION -->
 
-	<div class="sex-dating">
-		<div class="sex-dating-in">
+	<div class="home-style nopad">
+		<div class="row-fluid home-style-in nopad">
+
+	<div class="sex-dating nopad">
+		<div class="row-fluid sex-dating-in nopad">
 			<div class="container nopad">
 				<div class="row-fluid">
 					<div class="col-sm-12">
