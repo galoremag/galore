@@ -620,7 +620,12 @@ nav.shrink .navbar-brand {
 	top: -28px;
 }
 
+.navbar {
+	margin-bottom: 0;
+}
+
 .navbar-default.shrink {
+	border-radius: 0px;
 	background: black;
 	.transition;
 }
@@ -636,7 +641,7 @@ nav.shrink .navbar-brand {
 	transition: 1s all easeinout;
 }
 
-.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+.navbar-fixed-bottom .navbar-collapse, .navbar-default .navbar-collapse {
 	.transition;
 	.translate;
 }
