@@ -111,6 +111,58 @@
 				</div>
 				<!­­ cmnUNT | End ad tag ­­>
 
+				<ul class="alm-listing alm-ajax">
+
+					<?php
+					$args = array( 'category_name' => 'nyfw', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC' );
+
+					$postslist = get_posts( $args );
+
+					// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
+					foreach ($postslist as $post) : setup_postdata($post);
+					?>
+					<li class="post">
+						<article class="row-fluid">
+							<div class="nopad col-sm-5">
+								<div class="catlinks"><?php the_category(); ?></div>
+								<div class="thumb">
+									<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
+								</div>
+								<h4 class="hidden-xs">Share this post</h4>
+								<ul class="post-social pull-left hidden-xs">
+									<li><a class="share-email" href="mailto:Friend@somewhere.com?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
+									<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+									<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+									<li class="visible-xs"><h4>Share This Post</h4></li>
+								</ul>
+							</div>
+							<div class="nopadright col-sm-7">
+								<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+								<p class="byline hidden-xs"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+								<p class="byline visible-xs pull-left nomarg"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <br /> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+								<ul class="post-social visible-xs">
+									<li><a class="share-email" href="mailto:Friend@somewhere.com?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
+									<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+									<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+								</ul>
+
+								<div class="excerpt hidden-xs"><?php the_excerpt(); ?></div>
+
+								<p class="pull-left hidden-xs"><a href="<?php esc_url( the_permalink() ); ?>">Full Story <i class="fa fa-mars"></i></a></p>
+
+							</div>
+						</article>
+					</li>
+					<?php endforeach; ?>
+
+				</ul>
+
+				<!­­ cmnUNT | Begin ad tag ­­>
+				<div id="cmn_ad_tag_content" class="text-center">
+					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
+				</div>
+				<!­­ cmnUNT | End ad tag ­­>
+
 			    <?php
 			    	// if($post_ids){
 					// 	//Implode the posts and set a variable to pass to our exclude param.
