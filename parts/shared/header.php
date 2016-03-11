@@ -114,4 +114,4 @@ $url = $thumb[0];
 <!-- End Superhero -->
 
 <div id="global-container" <?php body_class(); ?>>
-	<div id="global-inner" class="container" <?php body_class(); ?>>
+	<div id="global-inner" <?php body_class(); ?>>
