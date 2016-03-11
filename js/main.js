@@ -208,24 +208,24 @@ jQuery(document).ready(function($) {
     });
   });
 
-  // Navbar Shrinks on Scroll
+  // // Navbar Shrinks on Scroll
 
-  $(window).scroll(function() {
-    if ($(document).scrollTop() > 50) {
-      $('nav').addClass('shrink') && $('.footbut').addClass('appear');
-    } else {
-      $('nav').removeClass('shrink') && $('.footbut').removeClass('appear');
-    }
-  });
+  // $(window).scroll(function() {
+  //   if ($(document).scrollTop() > 50) {
+  //     $('nav').addClass('shrink') && $('.footbut').addClass('appear');
+  //   } else {
+  //     $('nav').removeClass('shrink') && $('.footbut').removeClass('appear');
+  //   }
+  // });
 
-  // Shrink Navbar if page loads scrolled
-  $(function() {
-    if ($(document).scrollTop() > 50) {
-      $('nav').addClass('shrink') && $('.footbut').addClass('appear');
-    } else {
-      return;
-    }
-  });
+  // // Shrink Navbar if page loads scrolled
+  // $(function() {
+  //   if ($(document).scrollTop() > 50) {
+  //     $('nav').addClass('shrink') && $('.footbut').addClass('appear');
+  //   } else {
+  //     return;
+  //   }
+  // });
 
   // Scroll down Button Actually Scrolls Down
 

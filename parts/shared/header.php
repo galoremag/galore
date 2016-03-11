@@ -1,7 +1,7 @@
 <header>
 	<div class="container-fluid">
 		<!-- Fixed navbar -->
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<nav class="navbar navbar-default navbar-fixed-top shrink" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<div id="modal-nav-button" class="nav-button pull-left">
