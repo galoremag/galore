@@ -500,7 +500,7 @@
 				</div>
 				<!­­ cmnUNT | End ad tag ­­>
 
-				<ul>
+				<ul class="alm-listing alm-ajax">
 					
 					<?php
 					$args = array( 'category_name' => 'beauty', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC' );
