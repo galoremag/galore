@@ -5,14 +5,6 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<div id="cmn_ad_tag_head" class="fw_galoremag">
-    <script type="text/javascript">
-    	if (isMobile == true) {
-    		cmnUNT('3x3', tile_num++);
-    	}
-    </script>
-</div>
-
 <div id="cmn_wrap" class="jumbotron">
 	<div class="jumbotron-in">
 		<div class="container">
@@ -27,14 +19,6 @@
 		</div>
 	</div>
 </div>
-
-<script type="text/javascript">
-
-	if (isMobile == true) {
-		cmnUNT('tover', tile_num++);
-	}
-
-</script>
 
 <div id="latest-container">
 	<h2 class="text-center verPad10"><a href="the-latest/"><i class="fa fa-flash"></i> The Daily Dish <i class="fa fa-flash"></i></a></h2>
@@ -259,7 +243,7 @@
 	</div>
 
 	<!­­ cmnUNT | Begin ad tag ­­>
-	<div id="cmn_ad_tag_content" class="container">
+	<div id="cmn_ad_tag_content" class="container-fluid nopad">
 		<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
 	</div>
 	<!­­ cmnUNT | End ad tag ­­>
