@@ -2,7 +2,7 @@
 	<div class="container-fluid">
 		<!-- Fixed navbar -->
 		<nav class="navbar navbar-default shrink" role="navigation">
-			<div class="container-fluid">
+			<div class="container-fluid nopad">
 				<div class="navbar-header">
 					<div id="modal-nav-button" class="nav-button pull-left">
 						<div id="nav-button"><a href="#" class="hmbrgr" onClick="menuToggle()"></a></div>
