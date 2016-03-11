@@ -1,3 +1,17 @@
+<div id="cmn_ad_tag_head" class="fw_galoremag">
+    <script type="text/javascript">
+    	if (isMobile == true) {
+    		cmnUNT('3x3', tile_num++);
+    	}
+    </script>
+</div>
+
+<script type="text/javascript">
+	if (isMobile == true) {
+		cmnUNT('tover', tile_num++);
+	}
+</script>
+
 <header>
 	<div class="container-fluid nopad">
 		<!-- Fixed navbar -->
