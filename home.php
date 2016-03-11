@@ -25,7 +25,11 @@
 </div>
 
 <script type="text/javascript">
-	cmnUNT('tover', tile_num++);
+
+	if (isMobile == true) {
+		cmnUNT('tover', tile_num++);
+	}
+
 </script>
 
 <div id="latest-container">
@@ -421,13 +425,11 @@
 					endif;
 					?>
 
-					<div class="thumbnail col-md-4">
-						<!­­ cmnUNT | Begin ad tag ­­>
-						<div id="cmn_ad_tag_content">
-							<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-						</div>
-						<!­­ cmnUNT | End ad tag ­­>
+					<!­­ cmnUNT | Begin ad tag ­­>
+					<div id="cmn_ad_tag_content" class="thumbnail col-md-4">
+						<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
 					</div>
+					<!­­ cmnUNT | End ad tag ­­>
 
 				</div>
 			</div>
