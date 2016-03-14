@@ -404,16 +404,3 @@
 
 		// return $size_data;
 	}
-
-
-		function add_my_rss_image() {
-		    echo '<image><title>', bloginfo_rss('name'), '</title>';
-		    echo '<url>', bloginfo_rss('stylesheet_directory'), '/images/galore-logo-short-straight.png</url>';
-		    echo '<link>', bloginfo_rss('url'), '</link>';
-		    echo '<width>88</width><height>31</height>';
-		    echo '<description>GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative woman in her 20's surrounding Style, Beauty, Pop, Sex + Dating and Fitness.</description></image>';
-		}
-
-		add_action('rss2_head','add_my_rss_image');
-		add_action('rss_head','add_my_rss_image');
-		add_action('commentsrss2_head','add_my_rss_image');
