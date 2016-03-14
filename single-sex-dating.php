@@ -16,12 +16,15 @@
 		<div id="content" class="col-md-8 col-sm-12 container-fixed">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article>
+
+				<meta itemprop="articleBody" content="">
+
 				<?php setPostViews(get_the_ID()); ?>
 				<div class="single-featured-image">
 					<div class="catlinks"><?php the_category(); ?></div>
 					<?php the_post_thumbnail('large'); ?>
 				</div>
-				<h1><?php the_title(); ?></h1>
+				<h1 itemprop="name"><?php the_title(); ?></h1>
 				<div id="social-links">
 					<ul id="post-social" class="post-social hidden-xs hidden-sm">
 						<li><a class="share-facebook" href="javascript:;" target="popup" onclick="recordShare(); window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
@@ -29,7 +32,7 @@
 					</ul>
 				</div>
 
-				<p class="byline"><i class="fa fa-heart"></i> <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> By <?php the_author_posts_link(); ?></p>
+				<p class="byline"><i class="fa fa-heart"></i> <time itemprop="datePublished" datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> By <?php the_author_posts_link(); ?></p>
 				<?php edit_post_link('EDIT. THIS. PIECE.', '<p>', '</p>'); ?>
 				<div class="spacer20"></div>
 				<?php the_content(); ?>
@@ -37,7 +40,10 @@
 				<div class="author-info row hidden-xs">
 					<?php if ( get_the_author_meta( 'description' ) ) : ?>
 					<div class="author-bio col-md-8 col-md-offset-2 text-right">
-						<h3>About The Author: <span><?php echo get_the_author() ; ?></span></h3>
+						<h3>About The Author:
+							<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+							<span itemprop="name"><?php echo get_the_author() ; ?></span>
+						</h3>
 						<?php the_author_meta( 'description' ); ?>
 					</div>
 					<div class="author-pic col-md-2">

@@ -114,5 +114,27 @@ $url = $thumb[0];
 
 <!-- End Superhero -->
 
+<!-- Structured Markup -->
+<?php if ( (is_page()) || (is_single()) ) : if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+<div itemscope itemtype="http://schema.org/Article" id="global-container" <?php body_class(); ?>>
+	<div id="global-inner" <?php body_class(); ?>>
+
+
+<?php endwhile; endif; elseif ( (is_category()) || (is_tag()) ) : ?>
+
 <div id="global-container" <?php body_class(); ?>>
 	<div id="global-inner" <?php body_class(); ?>>
+
+<?php elseif (is_author()) : ?>
+
+<div id="global-container" <?php body_class(); ?>>
+	<div id="global-inner" <?php body_class(); ?>>
+
+<?php elseif(is_home()) : ?>
+
+<div id="global-container" <?php body_class(); ?>>
+	<div id="global-inner" <?php body_class(); ?>>
+
+<?php endif; ?>
+
