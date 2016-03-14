@@ -49,7 +49,7 @@
 				</div>
 			</div> -->
 			<ul class="modal-nav-menu text-center">
-				<li><a href="http://tv.galoremag.com" title="GaloreTV">GaloreTV <span class="badge">New</span></a></li>
+				<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">GaloreTV <span class="badge">New</span></a></li>
 				<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a> + <a href="<?php bloginfo('url'); ?>/category/style" title="Style">Style</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/category/health" title="health">Health</a></li>
