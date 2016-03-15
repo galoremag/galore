@@ -76,7 +76,7 @@
 
 			<?php wp_reset_postdata(); ?>
 
-			<div class="glide">
+			<div class="glide wide">
 				<!­­ cmnUNT | Begin ad tag ­­>
 				<div id="cmn_ad_tag_content">
 					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
