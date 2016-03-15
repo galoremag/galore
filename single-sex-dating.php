@@ -15,7 +15,7 @@
 	<div class="row-fluid">
 		<div id="content" class="col-md-8 col-sm-12 container-fixed">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-			<article>
+			<article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 
 				<meta itemprop="articleBody" content="">
 
@@ -24,7 +24,7 @@
 					<div class="catlinks"><?php the_category(); ?></div>
 					<?php the_post_thumbnail('large'); ?>
 				</div>
-				<h1 itemprop="name"><?php the_title(); ?></h1>
+				<h1 itemprop="headline"><?php the_title(); ?></h1>
 				<div id="social-links">
 					<ul id="post-social" class="post-social hidden-xs hidden-sm">
 						<li><a class="share-facebook" href="javascript:;" target="popup" onclick="recordShare(); window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
