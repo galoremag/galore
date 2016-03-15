@@ -1,4 +1,4 @@
-<div id="cmn_ad_tag_head" class="fw_galoremag">
+<div id="cmn_ad_tag_head" class="fw_galoremag text-center">
     <script type="text/javascript">
     	if (isMobile == true) {
     		cmnUNT('3x3', tile_num++);
