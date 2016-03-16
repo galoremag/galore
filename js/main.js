@@ -203,7 +203,7 @@ jQuery(document).ready(function($) {
 
   // Prevent Default on All Hash Links
   $(function() {
-    $('a[href="#"]').click( function(e) {
+    $('a[href="#"]').on('click', function(e) {
       e.preventDefault();
     });
   });
@@ -232,7 +232,7 @@ jQuery(document).ready(function($) {
   var body = $('html, body');
 
   $(function() {
-    $('#scroll-down').click(function(e){
+    $('#scroll-down').on('click touchend', function(e){
           e.preventDefault();
           body.animate({scrollTop:520}, '2000', 'swing');
     });
@@ -268,7 +268,7 @@ jQuery(document).ready(function($) {
   });
 
   $(function() {
-    $('#email-signup .back').click(function(e){
+    $('#email-signup .back').on('click touchend', function(e){
           e.preventDefault();
           $("#email-signup").hide();
           createCookie("newsletter", "read", 14);
@@ -276,7 +276,7 @@ jQuery(document).ready(function($) {
   });
 
   $(function() {
-    $('#fb-modal .back').click(function(e){
+    $('#fb-modal .back').on('click touchend', function(e){
           e.preventDefault();
           $("#fb-modal").fadeOut(500);
           createCookie("facebook", "read", 7);
@@ -284,7 +284,7 @@ jQuery(document).ready(function($) {
   });
 
   $(function() {
-    $("#newsletterClose").click(function(e) {
+    $("#newsletterClose").on('click touchend', function(e) {
       e.preventDefault();
           $("#email-signup").hide();
           createCookie("facebook", "read", 7);
@@ -292,7 +292,7 @@ jQuery(document).ready(function($) {
   });
 
   $(function() {
-    $("#fbClose").click(function() {
+    $("#fbClose").on('click touchend', function() {
           $("#fb-modal").fadeOut(500);
           createCookie("facebook", "read", 7);
       });
@@ -306,11 +306,11 @@ jQuery(document).ready(function($) {
 
   // Nav Button
   $(function() {
-    $('#nav-button').on('click', function(event) {
+    $('#nav-button').on('click touchend', function(event) {
       $('.modal-nav').fadeToggle('show');
       $('body').toggleClass('menu-open');
-          $('.hmbrgr').click();
-      });
+      $('.hmbrgr').click();
+    });
   });
 
   // HAMBURGER
@@ -335,8 +335,8 @@ jQuery(document).ready(function($) {
   });
 
   $(function() {
-    $("#footer-close").click(function(e) {
-      e.preventDefault();
+    $("#footer-close").on('click touchend', function(event) {
+      event.preventDefault();
           $('#footer').toggleClass('footerOn');
           createCookie("newsletter", "read", 14);
       });
@@ -344,8 +344,8 @@ jQuery(document).ready(function($) {
 
   // CLOSE Facebook LIKE BAR
   $(function() {
-    $("#likeBar-close").click(function(e) {
-      e.preventDefault();
+    $("#likeBar-close").on('click touchend', function(event) {
+      event.preventDefault();
           $('#likeBar').animate({bottom: "-60px"});
           createCookie("facebook", "read", 7);
       });
