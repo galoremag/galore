@@ -258,7 +258,7 @@ jQuery(document).ready(function($) {
   /////////////////////
 
   $(function() {
-    $('#signupButton').on('click', function(e) {
+    $('#signupButton').on('click touchend', function(e) {
       e.preventDefault();
       $("#email-signup").show();
           $("#newsletterClose").click(function() {
@@ -328,7 +328,7 @@ jQuery(document).ready(function($) {
   /////////////////////
 
   $(function() {
-    $('#footer-open').on('click', function(event) {
+    $('#footer-open').on('click touchend', function(event) {
       event.preventDefault();
           $('#footer').toggleClass('footerOn');
       });
