@@ -161,7 +161,7 @@ jQuery(document).ready(function($) {
 
   // loadNewsletter();
 
-  loadFacebookModal();
+  // loadFacebookModal();
 
   loadLikeBar();
 
