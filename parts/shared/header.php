@@ -1,186 +1,85 @@
-<?php if ( wp_is_mobile() ) : ?>
-	<div id="cmn_ad_tag_head" class="fw_galoremag text-center">
-	    <script type="text/javascript">
-	    	cmnUNT('3x3', tile_num++);
-	    </script>
+<header itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
+	<div class="container-fluid">
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<div id="modal-nav-button" class="nav-button pull-left">
+						<div id="nav-button"><a href="#" class="hmbrgr" onClick="menuToggle()"></a></div>
+					</div>
+					<div id="site-search" class="pull-left hidden-xs">
+						<!-- <?php get_search_form(); ?> -->
+						<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
+							<label class="form-group">
+								<input type="search" class="form-control" placeholder="Search" value="Search" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+							</label>
+							<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+						</form>
+					</div>
+					<!-- <button id="modal-nav-button" type="button" class="nav-button">
+					<i class="fa fa-bars"></i>
+					</button> -->
+					<a id="navbar-brand" class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
+				</div>
+				<div>
+					<ul class="top-social navbar-right tab hidden-xs">
+						<li><a href="http://tv.galoremag.com" title="GaloreTV">TV</a></li>
+						<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
+						<li><a href="https://www.facebook.com/galoremag" target="_blank"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="<?php bloginfo('url'); ?>/shop" title="Galore Shop">Shop</a></li>
+						<?php if(shopp('cart','hasitems')) : ?>
+							<li><a href="<?php shopp('cart','url'); ?>" title="Galore Shopping Cart"><span class="badge"><?php shopp('cart','totalitems'); ?></span> <i class="fa fa-shopping-cart"></i></a></li>
+						<?php endif ?>
+						<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
+						<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
+						<!-- <li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li> -->
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
 	</div>
-<?php endif; ?>
 
-<?php if ( wp_is_mobile() ) : ?>
-	<script type="text/javascript">
-		cmnUNT('tover', tile_num++);
-	</script>
-<?php endif; ?>
-
-<?php if ( wp_is_mobile() ) : ?>
-
-	<header>
-		<div class="container-fluid nopad">
-			<!-- Fixed navbar -->
-			<nav class="navbar navbar-default shrink" role="navigation">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<div id="modal-nav-button" class="nav-button pull-left">
-							<div id="nav-button"><a href="#" class="hmbrgr" onClick="menuToggle()"></a></div>
-						</div>
-						<div id="site-search" class="pull-left hidden-xs">
-							<!-- <?php get_search_form(); ?> -->
-							<form role="search" method="get" action="<?php echo site_url(); ?>">
-								<label class="form-group">
-									<input type="search" class="form-control" placeholder="Search" value="Search" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-								</label>
-								<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
-							</form>
-						</div>
-						<!-- <button id="modal-nav-button" type="button" class="nav-button">
-						<i class="fa fa-bars"></i>
-						</button> -->
-						<a id="navbar-brand" class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
-					</div>
-					<div>
-						<ul class="top-social navbar-right tab hidden-xs">
-							<li><a href="<?php bloginfo('url'); ?>/shop" title="Galore Shop">Shop</a></li>
-							<?php if(shopp('cart','hasitems')) : ?>
-								<li><a href="<?php shopp('cart','url'); ?>" title="Galore Shopping Cart"><span class="badge"><?php shopp('cart','totalitems'); ?></span> <i class="fa fa-shopping-cart"></i></a></li>
-							<?php endif ?>
-							<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
-							<li><a href="https://www.facebook.com/galoremag" target="_blank"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
-							<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
-							<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
-							<!-- <li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li> -->
-						</ul>
-					</div><!--/.nav-collapse -->
+	<div id="main-menu" class="modal-nav">
+		<div class="modal-nav-content">
+			<!-- <div class="modal-nav-header">
+				<div class="modal-nav-close">
+					<i class="fa fa-close"></i>
 				</div>
-			</nav>
-		</div>
-
-		<div id="main-menu" class="modal-nav">
-			<div class="modal-nav-content">
-				<!-- <div class="modal-nav-header">
-					<div class="modal-nav-close">
-						<i class="fa fa-close"></i>
-					</div>
-				</div> -->
-				<ul class="modal-nav-menu text-center">
-					<li><a href="<?php bloginfo('url'); ?>/category/style" title="Style">Style</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/health" title="health">Health</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a></li>
-					<div id="site-search" class="visible-xs">
-						<!-- <?php get_search_form(); ?> -->
-						<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
-							<label class="form-group">
-								<input type="search" class="form-control" placeholder="<?php echo esc_attr_x( 'Search...', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-							</label>
-							<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
-						</form>
-					</div>
-					<!-- <li><a href="//tv.galoremag.com" target="_blank">TV</a></li> -->
-					<!-- <li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li class="dropdown-header">Nav header</li>
-							<li><a href="#">Separated link</a></li>
-							<li><a href="#">One more separated link</a></li>
-						</ul>
-					</li> -->
-				</ul>
-			</div>
-		</div>
-	</header>
-
-<?php else : ?>
-
-	<header>
-		<div class="container-fluid nopad">
-			<!-- Fixed navbar -->
-			<nav id="deskNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<div id="modal-nav-button" class="nav-button pull-left">
-							<div id="nav-button"><a href="#" class="hmbrgr" onClick="menuToggle()"></a></div>
-						</div>
-						<div id="site-search" class="pull-left hidden-xs">
-							<!-- <?php get_search_form(); ?> -->
-							<form role="search" method="get" action="<?php echo site_url(); ?>">
-								<label class="form-group">
-									<input type="search" class="form-control" placeholder="Search" value="Search" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-								</label>
-								<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
-							</form>
-						</div>
-						<!-- <button id="modal-nav-button" type="button" class="nav-button">
-						<i class="fa fa-bars"></i>
-						</button> -->
-						<a id="navbar-brand" class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
-					</div>
-					<div>
-						<ul class="top-social navbar-right tab hidden-xs">
-							<li><a href="<?php bloginfo('url'); ?>/shop" title="Galore Shop">Shop</a></li>
-							<?php if(shopp('cart','hasitems')) : ?>
-								<li><a href="<?php shopp('cart','url'); ?>" title="Galore Shopping Cart"><span class="badge"><?php shopp('cart','totalitems'); ?></span> <i class="fa fa-shopping-cart"></i></a></li>
-							<?php endif ?>
-							<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
-							<li><a href="https://www.facebook.com/galoremag" target="_blank"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
-							<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
-							<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
-							<!-- <li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li> -->
-						</ul>
-					</div><!--/.nav-collapse -->
+			</div> -->
+			<ul class="modal-nav-menu text-center">
+				<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">GaloreTV <span class="badge">New</span></a></li>
+				<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a> + <a href="<?php bloginfo('url'); ?>/category/style" title="Style">Style</a></li>
+				<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
+				<li><a href="<?php bloginfo('url'); ?>/category/health" title="health">Health</a></li>
+				<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a></li>
+				<div id="site-search" class="visible-xs">
+					<!-- <?php get_search_form(); ?> -->
+					<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
+						<label class="form-group">
+							<input type="search" class="form-control" placeholder="<?php echo esc_attr_x( 'Search...', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+						</label>
+						<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+					</form>
 				</div>
-			</nav>
+				<!-- <li><a href="//tv.galoremag.com" target="_blank">TV</a></li> -->
+				<!-- <li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li class="divider"></li>
+						<li class="dropdown-header">Nav header</li>
+						<li><a href="#">Separated link</a></li>
+						<li><a href="#">One more separated link</a></li>
+					</ul>
+				</li> -->
+			</ul>
 		</div>
-
-		<div id="main-menu" class="modal-nav">
-			<div class="modal-nav-content">
-				<!-- <div class="modal-nav-header">
-					<div class="modal-nav-close">
-						<i class="fa fa-close"></i>
-					</div>
-				</div> -->
-				<ul class="modal-nav-menu text-center">
-					<li><a href="<?php bloginfo('url'); ?>/category/style" title="Style">Style</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/health" title="health">Health</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a></li>
-					<div id="site-search" class="visible-xs">
-						<!-- <?php get_search_form(); ?> -->
-						<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
-							<label class="form-group">
-								<input type="search" class="form-control" placeholder="<?php echo esc_attr_x( 'Search...', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-							</label>
-							<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
-						</form>
-					</div>
-					<!-- <li><a href="//tv.galoremag.com" target="_blank">TV</a></li> -->
-					<!-- <li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li class="dropdown-header">Nav header</li>
-							<li><a href="#">Separated link</a></li>
-							<li><a href="#">One more separated link</a></li>
-						</ul>
-					</li> -->
-				</ul>
-			</div>
-		</div>
-	</header>
-
-<?php endif; ?>
+	</div>
+</header>
 
 <!-- Start Superhero -->
 
@@ -193,7 +92,7 @@ $postslist = get_posts( $args );
 foreach ($postslist as $post) : setup_postdata($post);
 ?>
 
-<?php 
+<?php
 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
 $url = $thumb[0];
 ?>
@@ -205,7 +104,7 @@ $url = $thumb[0];
 	<p class="specialTip">Scroll to site</p>
 	<img height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=5697&lid=28249&csid=&c=0&itt=EOTgSDNteBPGBZseExTPjt3KGpZXpe1WEEYEwE1Y%2FTII51KPC7NhewUsrcjb%2FwYB&ord=[RANDOM]'/>
 	<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=5697&lid=28249&csid=&c=0&ict=J4USQfJyvBlMu2SRh3iQGGbxFnwXyP0RFM%2BYPCbvTs%2F5ejjlVlrQ7BuFo%2B2HhxazyywI0bIkDPiwooLpuEJwqSs35ce8191aKY9dlUH0AMug7cTRufjy%2FQ%3D%3D&ord=[RANDOM]'/></a>
-	
+
 	<a id="scroll-down"><i class="fa fa-arrow-circle-o-down"></i></a>
 </div>
 
@@ -215,5 +114,5 @@ $url = $thumb[0];
 
 <!-- End Superhero -->
 
-<div id="global-container" <?php body_class(); ?>>
+<div itemscope itemtype="http://schema.org/Article" id="global-container" <?php body_class(); ?>>
 	<div id="global-inner" <?php body_class(); ?>>
