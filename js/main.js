@@ -212,18 +212,27 @@ jQuery(document).ready(function($) {
 
   $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
-      $('nav').addClass('shrink') && $('.footbut').addClass('appear');
+      $('#deskNav').addClass('shrink');
     } else {
-      $('nav').removeClass('shrink') && $('.footbut').removeClass('appear');
+      $('#deskNav').removeClass('shrink');
     }
   });
 
-  // Shrink Navbar if page loads scrolled
+  // Shrink Navbar if page LOADS scrolled
   $(function() {
     if ($(document).scrollTop() > 50) {
-      $('nav').addClass('shrink') && $('.footbut').addClass('appear');
+      $('#deskNav').addClass('shrink') && $('.footbut').addClass('appear');
     } else {
       return;
+    }
+  });
+
+  // Show footer button on scroll
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $('.footbut').addClass('appear');
+    } else {
+      $('.footbut').removeClass('appear')
     }
   });
 
