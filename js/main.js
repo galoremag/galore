@@ -241,7 +241,7 @@ jQuery(document).ready(function($) {
   var body = $('html, body');
 
   $(function() {
-    $('#scroll-down').on('click touchstart', function(e){
+    $('#scroll-down').on('click tap', function(e){
           e.preventDefault();
           body.animate({scrollTop:520}, '2000', 'swing');
     });
@@ -267,7 +267,7 @@ jQuery(document).ready(function($) {
   /////////////////////
 
   $(function() {
-    $('#signupButton').on('click touchstart', function(e) {
+    $('#signupButton').on('click tap', function(e) {
       e.preventDefault();
       $("#email-signup").show();
           $("#newsletterClose").click(function() {
@@ -277,7 +277,7 @@ jQuery(document).ready(function($) {
   });
 
   $(function() {
-    $('#email-signup .back').on('click touchstart', function(e){
+    $('#email-signup .back').on('click tap', function(e){
           e.preventDefault();
           $("#email-signup").hide();
           createCookie("newsletter", "read", 14);
@@ -285,7 +285,7 @@ jQuery(document).ready(function($) {
   });
 
   $(function() {
-    $('#fb-modal .back').on('click touchstart', function(e){
+    $('#fb-modal .back').on('click tap', function(e){
           e.preventDefault();
           $("#fb-modal").fadeOut(500);
           createCookie("facebook", "read", 7);
@@ -293,7 +293,7 @@ jQuery(document).ready(function($) {
   });
 
   $(function() {
-    $("#newsletterClose").on('click touchstart', function(e) {
+    $("#newsletterClose").on('click tap', function(e) {
       e.preventDefault();
           $("#email-signup").hide();
           createCookie("facebook", "read", 7);
@@ -301,7 +301,7 @@ jQuery(document).ready(function($) {
   });
 
   $(function() {
-    $("#fbClose").on('click touchstart', function() {
+    $("#fbClose").on('click tap', function() {
           $("#fb-modal").fadeOut(500);
           createCookie("facebook", "read", 7);
       });
@@ -315,7 +315,7 @@ jQuery(document).ready(function($) {
 
   // Nav Button
   $(function() {
-    $('#nav-button').on('click touchstart', function(event) {
+    $('#nav-button').on('click tap', function(event) {
       $('.modal-nav').fadeToggle('show');
       $('body').toggleClass('menu-open');
       $('.hmbrgr').click();
@@ -337,14 +337,14 @@ jQuery(document).ready(function($) {
   /////////////////////
 
   $(function() {
-    $('#footer-open').on('click touchstart', function(event) {
+    $('#footer-open').on('click tap', function(event) {
       event.preventDefault();
           $('#footer').toggleClass('footerOn');
       });
   });
 
   $(function() {
-    $("#footer-close").on('click touchstart', function(event) {
+    $("#footer-close").on('click tap', function(event) {
       event.preventDefault();
           $('#footer').toggleClass('footerOn');
           createCookie("newsletter", "read", 14);
@@ -353,7 +353,7 @@ jQuery(document).ready(function($) {
 
   // CLOSE Facebook LIKE BAR
   $(function() {
-    $("#likeBar-close").on('click touchstart', function(event) {
+    $("#likeBar-close").on('click tap', function(event) {
       event.preventDefault();
           $('#likeBar').animate({bottom: "-60px"});
           createCookie("facebook", "read", 7);
