@@ -212,16 +212,16 @@ jQuery(document).ready(function($) {
 
   $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
-      $('#deskNav').addClass('shrink');
+      $('nav').addClass('shrink');
     } else {
-      $('#deskNav').removeClass('shrink');
+      $('nav').removeClass('shrink');
     }
   });
 
   // Shrink Navbar if page LOADS scrolled
   $(function() {
     if ($(document).scrollTop() > 50) {
-      $('#deskNav').addClass('shrink') && $('.footbut').addClass('appear');
+      $('nav').addClass('shrink') && $('.footbut').addClass('appear');
     } else {
       return;
     }
