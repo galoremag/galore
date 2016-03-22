@@ -10,53 +10,53 @@
 	 */
 
 	/* ========================================================================================================================
-	
+
 	Required external files
-	
+
 	======================================================================================================================== */
 
 	require_once( 'external/starkers-utilities.php' );
 
 	/* ========================================================================================================================
-	
+
 	Theme specific settings
 
 	Uncomment register_nav_menus to enable a single menu with the title of "Primary Navigation" in your theme
-	
+
 	======================================================================================================================== */
 
 	add_theme_support('post-thumbnails');
 
 	add_image_size( 'sidebar-thumb', 120, 120, true ); // Hard Crop Mode
-	
+
 	add_image_size( 'homepage-thumb', 220, 180 ); // Soft Crop Mode
-	
+
 	add_image_size( 'singlepost-thumb', 590, 9999 ); // Unlimited Height Mode
-	
+
 	// register_nav_menus(array('primary' => 'Primary Navigation'));
 
 	/* ========================================================================================================================
-	
+
 	Actions and Filters
-	
+
 	======================================================================================================================== */
 
 	add_filter( 'body_class', array( 'Starkers_Utilities', 'add_slug_to_body_class' ) );
 
 	/* ========================================================================================================================
-	
+
 	Custom Post Types - include custom post types and taxonimies here e.g.
 
 	e.g. require_once( 'custom-post-types/your-custom-post-type.php' );
-	
+
 	======================================================================================================================== */
 
 
 
 	/* ========================================================================================================================
-	
+
 	Scripts
-	
+
 	======================================================================================================================== */
 
 	/**
@@ -81,26 +81,26 @@
 
 		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
         wp_enqueue_style( 'screen' );
-	}	
+	}
 
 	add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer' );
 
 	/* ========================================================================================================================
-	
+
 	Comments
-	
+
 	======================================================================================================================== */
 
 	/**
-	 * Custom callback for outputting comments 
+	 * Custom callback for outputting comments
 	 *
 	 * @return void
 	 * @author Keir Whitaker
 	 */
 	function starkers_comment( $comment, $args, $depth ) {
-		$GLOBALS['comment'] = $comment; 
+		$GLOBALS['comment'] = $comment;
 		?>
-		<?php if ( $comment->comment_approved == '1' ): ?>	
+		<?php if ( $comment->comment_approved == '1' ): ?>
 		<li>
 			<article id="comment-<?php comment_ID() ?>">
 				<?php echo get_avatar( $comment ); ?>
@@ -168,9 +168,9 @@
 
 	function add_additional_posts_to_slider($slides, $options, $type) {
 	    if( $options['id'] !== 4 ) { return $slides; }
-	    
+
 	    $slides = array();
-	   
+
 	    // Query #1 parameters  https://gist.github.com/luetkemj/2023628
 	    $args = array(
 	        'posts_per_page' => 3,
@@ -180,7 +180,7 @@
 	    $query = new WP_Query($args);
 	    $slides = array_merge($slides,  (array)$query->posts); // merge queried data
 
-	    // Query #2 parameters 
+	    // Query #2 parameters
 	    $args = array(
 	        'posts_per_page' => 3,
 	        'orderby' => 'date',
@@ -189,7 +189,7 @@
 	    $query = new WP_Query($args);
 	    $slides = array_merge($slides, (array)$query->posts); // merge queried data
 
-	    return $slides; 
+	    return $slides;
 	}
 	add_filter('new_rs_slides_filter', 'add_additional_posts_to_slider', 10, 3);
 
@@ -252,7 +252,7 @@
 	    if ( !is_single() ) return;
 	    if ( empty ( $post_id) ) {
 	        global $post;
-	        $post_id = $post->ID;    
+	        $post_id = $post->ID;
 	    }
 	    wpb_set_post_views($post_id);
 	}
@@ -279,7 +279,7 @@
 	// Remove Auto-links on Post Images
     function wpb_imagelink_setup() {
 	$image_set = get_option( 'image_default_link_type' );
-	
+
 	if ($image_set !== 'none') {
 		update_option('image_default_link_type', 'none');
 	}
@@ -360,7 +360,7 @@
 		return "$url.' async onload='myinit()";
 	}
 	add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
-	
+
 
 	// Add Featured Image to WP-API Response
 
@@ -381,11 +381,11 @@
 
 		// $sizes = wp_get_attachment_metadata( $featured_id );
 		$url = wp_get_attachment_url( $featured_id );
-		
+
 		return $url;
 
 		// $size_data = new stdClass();
-				
+
 		// if ( ! empty( $sizes['sizes'] ) ) {
 
 		// 	foreach ( $sizes['sizes'] as $key => $size ) {
@@ -395,9 +395,9 @@
 		// 		if ( ! $image_src ) {
 		// 			continue;
 		// 		}
-				
+
 		// 		$size_data->$key = $image_src[0];
-				
+
 		// 	}
 
 		// }

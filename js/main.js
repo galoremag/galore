@@ -59,17 +59,17 @@ jQuery(document).ready(function($) {
     }
   }
 
-  function loadFacebookModal() {
-    if (isTouchDevice()===false) {
-      return;
-    } else if (readCookie("facebook")) {
-      return;
-    } else if ($('#global-container').is('.tag, .category, .single')) {
-      $('#fb-modal').delay(3200).fadeIn(600);
-    } else {
-      return;
-    }
-  }
+  // function loadFacebookModal() {
+  //   if (isTouchDevice()===false) {
+  //     return;
+  //   } else if (readCookie("facebook")) {
+  //     return;
+  //   } else if ($('#global-container').is('.tag, .category, .single')) {
+  //     $('#fb-modal').delay(3200).fadeIn(600);
+  //   } else {
+  //     return;
+  //   }
+  // }
 
   function loadLikeBar() {
     if ($('#global-container').is('.tag, .category, .home, .archive')) {
@@ -203,7 +203,7 @@ jQuery(document).ready(function($) {
 
   // Prevent Default on All Hash Links
   $(function() {
-    $('a[href="#"]').click( function(e) {
+    $('a[href="#"]').on('click', function(e) {
       e.preventDefault();
     });
   });
@@ -212,13 +212,13 @@ jQuery(document).ready(function($) {
 
   $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
-      $('#deskNav').addClass('shrink') && $('.footbut').addClass('appear');
+      $('#deskNav').addClass('shrink');
     } else {
-      $('#deskNav').removeClass('shrink') && $('.footbut').removeClass('appear');
+      $('#deskNav').removeClass('shrink');
     }
   });
 
-  // Shrink Navbar if page loads scrolled
+  // Shrink Navbar if page LOADS scrolled
   $(function() {
     if ($(document).scrollTop() > 50) {
       $('#deskNav').addClass('shrink') && $('.footbut').addClass('appear');
@@ -227,12 +227,21 @@ jQuery(document).ready(function($) {
     }
   });
 
+  // Show footer button on scroll
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $('.footbut').addClass('appear');
+    } else {
+      $('.footbut').removeClass('appear')
+    }
+  });
+
   // Scroll down Button Actually Scrolls Down
 
   var body = $('html, body');
 
   $(function() {
-    $('#scroll-down').click(function(e){
+    $('#scroll-down').on('click tap', function(e){
           e.preventDefault();
           body.animate({scrollTop:520}, '2000', 'swing');
     });
@@ -258,7 +267,7 @@ jQuery(document).ready(function($) {
   /////////////////////
 
   $(function() {
-    $('#signupButton').on('click', function(e) {
+    $('#signupButton').on('click tap', function(e) {
       e.preventDefault();
       $("#email-signup").show();
           $("#newsletterClose").click(function() {
@@ -268,7 +277,7 @@ jQuery(document).ready(function($) {
   });
 
   $(function() {
-    $('#email-signup .back').click(function(e){
+    $('#email-signup .back').on('click tap', function(e){
           e.preventDefault();
           $("#email-signup").hide();
           createCookie("newsletter", "read", 14);
@@ -276,7 +285,7 @@ jQuery(document).ready(function($) {
   });
 
   $(function() {
-    $('#fb-modal .back').click(function(e){
+    $('#fb-modal .back').on('click tap', function(e){
           e.preventDefault();
           $("#fb-modal").fadeOut(500);
           createCookie("facebook", "read", 7);
@@ -284,7 +293,7 @@ jQuery(document).ready(function($) {
   });
 
   $(function() {
-    $("#newsletterClose").click(function(e) {
+    $("#newsletterClose").on('click tap', function(e) {
       e.preventDefault();
           $("#email-signup").hide();
           createCookie("facebook", "read", 7);
@@ -292,7 +301,7 @@ jQuery(document).ready(function($) {
   });
 
   $(function() {
-    $("#fbClose").click(function() {
+    $("#fbClose").on('click tap', function() {
           $("#fb-modal").fadeOut(500);
           createCookie("facebook", "read", 7);
       });
@@ -306,11 +315,11 @@ jQuery(document).ready(function($) {
 
   // Nav Button
   $(function() {
-    $('#nav-button').on('click', function(event) {
+    $('#nav-button').on('click tap', function(event) {
       $('.modal-nav').fadeToggle('show');
       $('body').toggleClass('menu-open');
-          $('.hmbrgr').click();
-      });
+      $('.hmbrgr').click();
+    });
   });
 
   // HAMBURGER
@@ -328,15 +337,15 @@ jQuery(document).ready(function($) {
   /////////////////////
 
   $(function() {
-    $('#footer-open').on('click', function(event) {
+    $('#footer-open').on('click tap', function(event) {
       event.preventDefault();
           $('#footer').toggleClass('footerOn');
       });
   });
 
   $(function() {
-    $("#footer-close").click(function(e) {
-      e.preventDefault();
+    $("#footer-close").on('click tap', function(event) {
+      event.preventDefault();
           $('#footer').toggleClass('footerOn');
           createCookie("newsletter", "read", 14);
       });
@@ -344,12 +353,11 @@ jQuery(document).ready(function($) {
 
   // CLOSE Facebook LIKE BAR
   $(function() {
-    $("#likeBar-close").click(function(e) {
-      e.preventDefault();
+    $("#likeBar-close").on('click tap', function(event) {
+      event.preventDefault();
           $('#likeBar').animate({bottom: "-60px"});
           createCookie("facebook", "read", 7);
       });
   });
 
 });
-
