@@ -28,7 +28,7 @@
 						<li><a class="share-twitter" href="javascript:;" target="popup" onclick="recordShare(); window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
 					</ul>
 				</div>
-				
+
 				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> By <?php the_author_posts_link(); ?></p>
 				<?php edit_post_link('EDIT. THIS. PIECE.', '<p>', '</p>'); ?>
 				<div class="spacer20"></div>
@@ -111,6 +111,8 @@
 				</div>
 				<!­­ cmnUNT | End ad tag ­­>
 
+				<hr />
+
 				<ul class="alm-listing alm-ajax">
 
 					<?php
@@ -157,11 +159,15 @@
 
 				</ul>
 
+				<hr />
+
 				<!­­ cmnUNT | Begin ad tag ­­>
 				<div id="cmn_ad_tag_content" class="text-center">
 					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
 				</div>
 				<!­­ cmnUNT | End ad tag ­­>
+
+				<hr />
 
 			    <?php
 					// if($post_ids){
@@ -179,7 +185,7 @@
 			    $args = array(
 			                'post_type'    => 'post',
 			                'numberposts'  => 4,
-			                'orderby'      => 'meta_value', 
+			                'orderby'      => 'meta_value',
 			                'meta_key'     => 'post_views_count',
 			                'order'        => 'DESC',
 			                'post_status'  => 'publish',
@@ -189,7 +195,7 @@
 						            'after' => '2 month ago'
 						        )
 						    )
-			            ); 
+			            );
 			    $ranking = 0;
 			?>
 			<?php query_posts($args); ?>

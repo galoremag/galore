@@ -185,7 +185,7 @@
 					<?php endforeach; ?>
 
 					<!­­ cmnUNT | Begin ad tag ­­>
-					<div id="cmn_ad_tag_content" class="snippet">
+					<div id="cmn_ad_tag_content" class="snippet text-center">
 						<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
 					</div>
 					<!­­ cmnUNT | End ad tag ­­>
@@ -385,7 +385,7 @@
 					?>
 
 					<!­­ cmnUNT | Begin ad tag ­­>
-					<div id="cmn_ad_tag_content" class="thumbnail col-md-4">
+					<div id="cmn_ad_tag_content" class="thumbnail col-md-4 text-center">
 						<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
 					</div>
 					<!­­ cmnUNT | End ad tag ­­>
@@ -455,6 +455,8 @@
 				</div>
 				<!­­ cmnUNT | End ad tag ­­>
 
+				<hr />
+
 				<ul class="alm-listing alm-ajax">
 
 					<?php
@@ -501,11 +503,15 @@
 
 				</ul>
 
+				<hr />
+
 				<!­­ cmnUNT | Begin ad tag ­­>
 				<div id="cmn_ad_tag_content" class="text-center">
 					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
 				</div>
 				<!­­ cmnUNT | End ad tag ­­>
+
+				<hr />
 
 			    <!-- Infinite Scroll -->
 

@@ -111,6 +111,8 @@
 				</div>
 				<!­­ cmnUNT | End ad tag ­­>
 
+				<hr />
+
 				<ul class="alm-listing alm-ajax">
 
 					<?php
@@ -157,11 +159,15 @@
 
 				</ul>
 
+				<hr />
+
 				<!­­ cmnUNT | Begin ad tag ­­>
 				<div id="cmn_ad_tag_content" class="text-center">
 					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
 				</div>
 				<!­­ cmnUNT | End ad tag ­­>
+
+				<hr />
 
 			    <?php
 			    	// if($post_ids){
@@ -181,11 +187,11 @@
 			                'post_type'    => 'post',
 			                'category_name'=> 'parties',
 			                'numberposts'  => 4,
-			                'orderby'      => 'meta_value', 
+			                'orderby'      => 'meta_value',
 			                'meta_key'     => 'post_views_count',
 			                'order'        => 'DESC',
 			                'post_status'  => 'publish'
-			            ); 
+			            );
 			    $ranking = 0;
 			?>
 			<?php query_posts($args); ?>
