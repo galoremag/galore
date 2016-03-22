@@ -400,7 +400,7 @@
 		</div>
 	</div>
 
-	<div class="everything container nopad">
+	<div class="everything container">
 		<div class="row-fluid">
 			<div id="content" class="col-sm-12">
 				<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> More Everything <i class="fa fa-diamond"></i></h2>
