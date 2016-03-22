@@ -33,13 +33,13 @@
 				foreach ($adlist as $post) :
 				setup_postdata($post);
 			?>
-					
+
 			<div class="glide special">
 				<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank"><?php the_post_thumbnail('thumbnail'); ?></a>
 				<div class="specialFlagSm">Presenting </i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
 				<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank"><h3><?php the_title(); ?></h3></a>
 				<!-- <h4>
-					<?php 
+					<?php
 					if (get_post_meta($post->ID,'tagline')) {
 					echo get_post_meta($post->ID,'tagline');
 					}
@@ -56,7 +56,7 @@
 		    <?php wp_reset_postdata(); ?>
 
 			<?php
-				$postslist = get_posts('numberposts=10&order=DESC&orderby=date&offset=0&post_type=post');
+				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post');
 				foreach ($postslist as $post) :
 				setup_postdata($post);
 			?>
@@ -64,36 +64,7 @@
 				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
 				<!-- <h4>
-					<?php 
-					if (get_post_meta($post->ID,'tagline')) {
-					echo get_post_meta($post->ID,'tagline');
-					}
-					?>
-				</h4> -->
-				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-			</div>
-			<?php endforeach; ?>
-
-			<?php wp_reset_postdata(); ?>
-
-			<div class="glide wide">
-				<!­­ cmnUNT | Begin ad tag ­­>
-				<div id="cmn_ad_tag_content">
-					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-				</div>
-				<!­­ cmnUNT | End ad tag ­­>
-			</div>
-
-			<?php
-				$postslist = get_posts('numberposts=9&order=DESC&orderby=date&offset=10&post_type=post');
-				foreach ($postslist as $post) :
-				setup_postdata($post);
-			?>
-			<div class="glide">
-				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-				<!-- <h4>
-					<?php 
+					<?php
 					if (get_post_meta($post->ID,'tagline')) {
 					echo get_post_meta($post->ID,'tagline');
 					}
@@ -152,7 +123,7 @@
 					);
 					$bsQuery = new WP_Query( $args );
 
-					if(have_posts()) :	while($bsQuery->have_posts()) :  $bsQuery->the_post(); 
+					if(have_posts()) :	while($bsQuery->have_posts()) :  $bsQuery->the_post();
 
 					//Show the left hand side column
 					if($counter == 1) :
@@ -329,7 +300,7 @@
 					query_posts($query_string . 'category_name=pop&ignore_sticky_posts=0&posts_per_page=3');
 
 
-					if(have_posts()) :	while(have_posts()) :  the_post(); 
+					if(have_posts()) :	while(have_posts()) :  the_post();
 					?>
 					<?php
 					//Show the left hand side column
@@ -376,7 +347,7 @@
 					query_posts($query_string . 'category_name=pop&ignore_sticky_posts=0&posts_per_page=2&offset=3');
 
 
-					if(have_posts()) :	while(have_posts()) :  the_post(); 
+					if(have_posts()) :	while(have_posts()) :  the_post();
 					?>
 					<?php
 					//Show the left hand side column
@@ -421,7 +392,7 @@
 
 				</div>
 			</div>
-		
+
 			<div class="col-sm-12">
 				<div class="spacer20"></div>
 				<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/pop"><i class="fa fa-flash"></i>&nbsp; Make It Pop &nbsp;<i class="fa fa-flash"></i></a></p>
@@ -429,7 +400,7 @@
 		</div>
 	</div>
 
-	<div class="container nopad">
+	<div class="everything container nopad">
 		<div class="row-fluid">
 			<div id="content" class="col-sm-12">
 				<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> More Everything <i class="fa fa-diamond"></i></h2>
@@ -485,7 +456,7 @@
 				<!­­ cmnUNT | End ad tag ­­>
 
 				<ul class="alm-listing alm-ajax">
-					
+
 					<?php
 					$args = array( 'category_name' => 'beauty', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC' );
 
@@ -538,7 +509,7 @@
 
 			    <!-- Infinite Scroll -->
 
-				<?php 
+				<?php
 				echo do_shortcode('[ajax_load_more button_label="Loading" offset="32" post_type="post"]');
 				?>
 
