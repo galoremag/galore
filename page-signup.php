@@ -23,12 +23,12 @@ Template Name: Newsletter Signup
             <div class="row-fluid">
 
                 <!-- Newsletter Signup -->
+                <div class="email-signup-body col-sm-6 col-sm-offset-3 font2 text-center">
 
-                <div class="email-signup-body col-sm-6 col-sm-offset-3">
-                    
                     <?php the_content(); ?>
 
                     <h1 class="text-center">Get On The List</h1>
+                    <p class="font2 text-center">We promise not to spam you, we don't like it either.</p>
                     <form action="https://galoremag.createsend.com/t/i/s/tjcj/" method="post">
                         <div class="form-group">
                             <input placeholder="Name" class="form-control" id="fieldName" name="cm-name" type="text" required />
@@ -41,8 +41,18 @@ Template Name: Newsletter Signup
                         </div>
                     </form>
                 </div>
-
             </div>
+
+            <hr />
+
+    			  <!-- Infinite Scroll -->
+
+    				<?php
+    				echo do_shortcode('[ajax_load_more button_label="Loading" offset="32" post_type="post"]');
+    				?>
+
+    				<div class="spacer40"></div>
+
         </div>
     </div>
 </div>
