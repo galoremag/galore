@@ -19,7 +19,7 @@ Template Name: Newsletter Signup
 
 <div class="container-fluid">
     <div class="row-fluid">
-        <div id="content" class="col-sm-8 col-sm-offset-2">
+        <div id="content" class="col-sm-10 col-sm-offset-1">
             <div class="row-fluid">
 
                 <!-- Newsletter Signup -->
@@ -42,6 +42,8 @@ Template Name: Newsletter Signup
                     </form>
                 </div>
             </div>
+
+            <div class="spacer40"></div>
 
             <hr />
 
