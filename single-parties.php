@@ -55,7 +55,14 @@
 				</ul>
 			</article>
 			<?php endwhile; ?>
-			<hr>
+			<!-- <hr> -->
+
+			<!­­ cmnUNT | Begin ad tag ­­>
+			<div id="cmn_ad_tag_content" class="container-fluid nopad">
+				<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
+			</div>
+			<!­­ cmnUNT | End ad tag ­­>
+
 			<h2 class="text-center">Gimme More <i class="fa fa-bomb"></i> <span>Parties</span></h2>
 			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
