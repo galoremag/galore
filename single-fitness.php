@@ -55,7 +55,14 @@
 				</ul>
 			</article>
 			<?php endwhile; ?>
-			<hr>
+			<!-- <hr> -->
+
+			<!­­ cmnUNT | Begin ad tag ­­>
+			<div id="cmn_ad_tag_content" class="container-fluid nopad">
+				<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
+			</div>
+			<!­­ cmnUNT | End ad tag ­­>
+
 			<h2 class="text-center">Gimme More <i class="fa fa-heartbeat"></i> <span>Fitness</span></h2>
 			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
@@ -114,7 +121,12 @@
 				<hr />
 
 				<?php
-				$args = array( 'category_name' => 'fitness', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC' );
+				global $wp_query;
+				$cat_ID = get_the_category($post->ID);
+				$cat_ID = $cat_ID[0]->cat_ID;
+				$this_post = $post->ID;
+
+				$args = array( 'category_name' => 'fitness', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
 
 				$postslist = get_posts( $args );
 
