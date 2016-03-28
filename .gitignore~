@@ -5,10 +5,7 @@ node_modules/
 bower_components/
 
 # Ignore the fonts/js/css that gets built
-<<<<<<< HEAD
 # fonts/
-=======
->>>>>>> master
 prod.js
 style.css
 
