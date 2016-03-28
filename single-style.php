@@ -65,6 +65,8 @@
 
 			<h2 class="text-center">Gimme More <i class="fa fa-scissors"></i> <span>Style</span></h2>
 			<div class="spacer20"></div>
+			<hr />
+			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
 
 				<!-- Special Post -->
@@ -105,6 +107,8 @@
 						</div>
 					</article>
 				</li>
+
+				<hr />
 
 				<?php endforeach; ?>
 
