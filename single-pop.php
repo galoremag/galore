@@ -127,6 +127,7 @@
 					$cat_ID = get_the_category($post->ID);
 					$cat_ID = $cat_ID[0]->cat_ID;
 					$this_post = $post->ID;
+					'post__not_in' => array($this_post)
 
 					$args = array( 'category_name' => 'pop', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
 
@@ -187,7 +188,7 @@
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
 
-					echo do_shortcode('[ajax_load_more orderby="date" category="pop" exclude="'.$wp_query->post->ID.'" button_label="Loading"]');
+					echo do_shortcode('[ajax_load_more offset="4" orderby="date" category="pop" exclude="'.$wp_query->post->ID.'" button_label="Loading"]');
 			    ?>
 			</ul>
 		</div>

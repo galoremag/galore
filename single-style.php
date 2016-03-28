@@ -187,7 +187,7 @@
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
 
-					echo do_shortcode('[ajax_load_more orderby="date" category="style" exclude="'.$wp_query->post->ID.'" button_label="Loading"]');
+					echo do_shortcode('[ajax_load_more offset="4" orderby="date" category="style" exclude="'.$wp_query->post->ID.'" button_label="Loading"]');
 			    ?>
 			</ul>
 		</div>
