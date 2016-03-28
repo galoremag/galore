@@ -78,7 +78,7 @@
 				</div>
 				<div>
 					<ul class="top-social navbar-right tab hidden-xs">
-						<li><a href="http://tv.galoremag.com" title="GaloreTV">TV</a></li>
+						<li><a href="http://tv.galoremag.com" title="GaloreTV">TV <i class="fa fa-television"></i></a></li>
 						<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
 						<li><a href="https://www.facebook.com/galoremag" target="_blank"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
@@ -123,6 +123,7 @@
 					</div>
 					<div>
 						<ul class="top-social navbar-right tab hidden-xs">
+							<li><a href="http://tv.galoremag.com" title="GaloreTV">TV <i class="fa fa-television"></i></a></li>
 							<li><a href="<?php bloginfo('url'); ?>/shop" title="Galore Shop">Shop</a></li>
 							<?php if(shopp('cart','hasitems')) : ?>
 								<li><a href="<?php shopp('cart','url'); ?>" title="Galore Shopping Cart"><span class="badge"><?php shopp('cart','totalitems'); ?></span> <i class="fa fa-shopping-cart"></i></a></li>
@@ -148,7 +149,7 @@
 					</div>
 				</div> -->
 				<ul class="modal-nav-menu text-center">
-					<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">GaloreTV <span class="badge">New</span></a></li>
+					<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i>GaloreTV <span class="badge">New</span></a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a> + <a href="<?php bloginfo('url'); ?>/category/style" title="Style">Style</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/health" title="health">Health</a></li>
