@@ -129,7 +129,12 @@
 				<ul class="alm-listing alm-ajax">
 
 					<?php
-					$args = array( 'category_name' => 'sex-dating', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC' );
+					global $wp_query;
+					$cat_ID = get_the_category($post->ID);
+					$cat_ID = $cat_ID[0]->cat_ID;
+					$this_post = $post->ID;
+
+					$args = array( 'category_name' => 'sex-dating', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
 
 					$postslist = get_posts( $args );
 
