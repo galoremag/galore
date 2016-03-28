@@ -157,6 +157,8 @@
 				</li>
 				<?php endforeach; ?>
 
+				<?php wp_reset_postdata(); ?>
+
 				<hr />
 
 				<!­­ cmnUNT | Begin ad tag ­­>

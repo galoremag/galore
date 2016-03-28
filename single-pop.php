@@ -170,6 +170,8 @@
 					</li>
 					<?php endforeach; ?>
 
+					<?php wp_reset_postdata(); ?>
+
 				</ul>
 
 				<hr />
