@@ -114,6 +114,14 @@
 
 			  <?php wp_reset_postdata(); ?>
 
+				<!­­ cmnUNT | Begin ad tag ­­>
+				<div id="cmn_ad_tag_content" class="text-center">
+					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
+				</div>
+				<!­­ cmnUNT | End ad tag ­­>
+
+				<hr />
+
 				<?php
 				global $wp_query;
 				$cat_ID = get_the_category($post->ID);

@@ -118,9 +118,7 @@
 
 				<?php endforeach; ?>
 
-			    <?php wp_reset_postdata(); ?>
-
-				<?php $post_ids = array(); $loop = new WP_Query( array( 'posts_per_page' => 4, 'orderby' => 'date' ) ); ?>
+			  <?php wp_reset_postdata(); ?>
 
 				<!­­ cmnUNT | Begin ad tag ­­>
 				<div id="cmn_ad_tag_content" class="text-center">
