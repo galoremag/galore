@@ -234,8 +234,8 @@ $url = $thumb[0];
 
 	<div class="sex-dating nopad">
 		<div class="sex-dating-in nopad">
-			<div class="container">
-				<div class="col-sm-12 pad40">
+			<div class="container nopad">
+				<div class="col-sm-12 verPad40">
 					<div class="row-fluid">
 						<div class="col-sm-12">
 							<h2>Sex + Dating <i class="fa fa-heart"></i></h2>
