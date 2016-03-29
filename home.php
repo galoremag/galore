@@ -107,7 +107,7 @@ $url = $thumb[0];
 
 	<!-- STYLE SECTION -->
 
-	<div class="home-style nopad">
+	<div class="home-style nopad container">
 		<div class="row-fluid home-style-in nopad">
 			<div class="col-md-8 pad40">
 				<div class="row-fluid">
@@ -233,60 +233,62 @@ $url = $thumb[0];
 	<!-- SEX + DATING SECTION -->
 
 	<div class="sex-dating nopad">
-		<div class="sex-dating-in container nopad">
-			<div class="col-sm-12 pad40">
-				<div class="row-fluid">
-					<div class="col-sm-12">
-						<h2>Sex + Dating <i class="fa fa-heart"></i></h2>
-					</div>
-				</div>
-				<div class="row-fluid">
-					<div class="col-sm-8">
-						<?php
-						$postslist = get_posts('category_name=sex-dating&numberposts=1&order=DESC&orderby=date');
-						foreach ($postslist as $post) :
-						setup_postdata($post);
-						?>
-						<div class="entry home-sex-dating">
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
-							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-							<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-							<div class="spacer10"></div>
-							<div class="excerpt"><?php the_excerpt(); ?></div>
-							<div class="spacer10"></div>
-							<p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
-							<!-- <ul class="post-social">
-								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-							</ul> -->
+		<div class="sex-dating-in nopad">
+			<div class="container">
+				<div class="col-sm-12 pad40">
+					<div class="row-fluid">
+						<div class="col-sm-12">
+							<h2>Sex + Dating <i class="fa fa-heart"></i></h2>
 						</div>
-						<?php endforeach; ?>
 					</div>
-					<div class="col-sm-4">
-						<?php
-						$postslist = get_posts('category_name=sex-dating&numberposts=2&order=DESC&orderby=date&offset=1');
-						foreach ($postslist as $post) :
-						setup_postdata($post);
-						?>
-						<div class="entry">
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
-							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-							<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-							<div class="spacer10"></div>
-							<p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
-							<!-- <ul class="post-social">
-								<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-							</ul> -->
-							<div class="spacer10"></div>
+					<div class="row-fluid">
+						<div class="col-sm-8">
+							<?php
+							$postslist = get_posts('category_name=sex-dating&numberposts=1&order=DESC&orderby=date');
+							foreach ($postslist as $post) :
+							setup_postdata($post);
+							?>
+							<div class="entry home-sex-dating">
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+								<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+								<div class="spacer10"></div>
+								<div class="excerpt"><?php the_excerpt(); ?></div>
+								<div class="spacer10"></div>
+								<p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
+								<!-- <ul class="post-social">
+									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+								</ul> -->
+							</div>
+							<?php endforeach; ?>
 						</div>
-						<?php endforeach; ?>
+						<div class="col-sm-4">
+							<?php
+							$postslist = get_posts('category_name=sex-dating&numberposts=2&order=DESC&orderby=date&offset=1');
+							foreach ($postslist as $post) :
+							setup_postdata($post);
+							?>
+							<div class="entry">
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+								<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+								<div class="spacer10"></div>
+								<p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
+								<!-- <ul class="post-social">
+									<li><a href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+								</ul> -->
+								<div class="spacer10"></div>
+							</div>
+							<?php endforeach; ?>
+						</div>
 					</div>
-				</div>
-				<div class="row-fluid">
-					<div class="col-sm-12">
-						<div class="spacer20"></div>
-						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> &nbsp; Hook It Up &nbsp;<i class="fa fa-heart"></i></a></p>
+					<div class="row-fluid">
+						<div class="col-sm-12">
+							<div class="spacer20"></div>
+							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> &nbsp; Hook It Up &nbsp;<i class="fa fa-heart"></i></a></p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -297,13 +299,13 @@ $url = $thumb[0];
 
 	<div class="pop">
 		<div class="pop-in">
-			<div class="container-fluid">
+			<div class="container nopad">
 				<div class="row-fluid">
-					<div class="col-md-10 col-md-offset-1">
+					<div class="col-sm-12">
 						<h2>Guilty Pleasure <i class="fa fa-star"></i></h2>
 						<h3>Best of Pop Culture</h3>
 						<div class="spacer20"></div>
-						<div class="row-fluid post-grid">
+						<div class="row post-grid">
 							<?php
 							$counter = 1; //start counter
 
@@ -351,7 +353,7 @@ $url = $thumb[0];
 							?>
 						</div>
 
-						<div class="row-fluid post-grid">
+						<div class="row post-grid">
 							<?php
 							$counter = 1; //start counter
 
@@ -416,7 +418,7 @@ $url = $thumb[0];
 
 	<div class="everything container">
 		<div class="row-fluid">
-			<div id="content" class="col-sm-12">
+			<div id="content" class="col-sm-12 nopad">
 				<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> More Everything <i class="fa fa-diamond"></i></h2>
 				<hr>
 
