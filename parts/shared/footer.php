@@ -3,7 +3,7 @@
 
 	<div id="likeBar" class="">
 		<h1 class="pull-left">Get Exclusives</h1>
-		<div class="pad10 fb-like pull-left" data-href="https://www.facebook.com/galoremag" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+		<div class="pad10 fb-like pull-left" data-href="https://www.facebook.com/galore" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 		<div>
 			<a id="likeBar-close" href="#"><i class="fa fa-lg fa-close"></i></a>
 		</div>
@@ -64,7 +64,7 @@
 	<div class="footbut">
 		<a id="footer-open" class="brand-white-sm" href="#"></a>
 	</div>
-	
+
 	<footer id="footer">
 		<div class="footer-content container-fluid">
 			<a id="footer-close" href="#"><i class="fa fa-2x fa-close"></i></a>
@@ -73,7 +73,7 @@
 					<p class="text-center">GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative woman in her 20's surrounding Style, Beauty, Pop, Sex + Dating and Fitness.</p>
 				</div>
 			</div>
-			
+
 			<hr />
 
 			<div class="row">
@@ -98,6 +98,6 @@
 
 			</div>
 		</div>
-		
+
 		<a class="cat-icon" href="http://kittenagency.com"></a>
 	</footer>
