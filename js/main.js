@@ -169,7 +169,7 @@ jQuery(document).ready(function($) {
 
   // End of Tracking
 
-  loadNewsletter();
+  // loadNewsletter();
 
   loadSnapchatModal();
 
