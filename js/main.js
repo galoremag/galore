@@ -74,10 +74,11 @@ jQuery(document).ready(function($) {
   function loadSnapchatModal() {
     if (readCookie("snapchat")) {
       return;
-    } else if ($('#global-container').is('.tag, .category, .single')) {
-      $('#snapchat-modal').delay(3200).fadeIn(600);
+    // } else if ($('#global-container').is('.tag, .category, .single')) {
+    //   $('#snapchat-modal').delay(3200).show();
     } else {
-      return;
+      $('#snapchat-modal').delay(3200).show();
+      // return;
     }
   }
 
