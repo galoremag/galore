@@ -71,6 +71,16 @@ jQuery(document).ready(function($) {
     }
   }
 
+  function loadSnapchatModal() {
+    if (readCookie("snapchat")) {
+      return;
+    } else if ($('#global-container').is('.tag, .category, .single')) {
+      $('#snapchat-modal').delay(3200).fadeIn(600);
+    } else {
+      return;
+    }
+  }
+
   function loadLikeBar() {
     if ($('#global-container').is('.tag, .category, .home, .archive')) {
       $('#likeBar').delay(22000).animate({bottom: "0px"}, 500);
@@ -159,9 +169,9 @@ jQuery(document).ready(function($) {
 
   // End of Tracking
 
-  // loadNewsletter();
+  loadNewsletter();
 
-  loadFacebookModal();
+  loadSnapchatModal();
 
   loadLikeBar();
 
@@ -293,6 +303,14 @@ jQuery(document).ready(function($) {
   });
 
   $(function() {
+    $('#snapchat-modal .back').on('click tap', function(e){
+          e.preventDefault();
+          $("#snapchat-modal").fadeOut(500);
+          createCookie("snapchat", "read", 7);
+    });
+  });
+
+  $(function() {
     $("#newsletterClose").on('click tap', function(e) {
       e.preventDefault();
           $("#email-signup").hide();
@@ -304,6 +322,13 @@ jQuery(document).ready(function($) {
     $("#fbClose").on('click tap', function() {
           $("#fb-modal").fadeOut(500);
           createCookie("facebook", "read", 7);
+      });
+  });
+
+  $(function() {
+    $("#snapchatClose").on('click tap', function() {
+          $("#snapchat-modal").fadeOut(500);
+          createCookie("snapchat", "read", 7);
       });
   });
 
