@@ -19,7 +19,9 @@
 	            <div class="fb-modal-body">
 	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
 	                <h2 class="horPad20 text-center">Oh Snap.</h2>
-	                <div class="pad10 fb-like" data-href="https://www.facebook.com/galoremag" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+	                <div class="pad10 fb-like">
+										<img src="images/galore_snapcode.svg" title="Galore Snapchat - Snapcode" alt="Galore Snapchat - Snapcode" />
+									</div>
 	            </div>
 	        </div>
 	    </div>
