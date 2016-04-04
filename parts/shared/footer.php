@@ -29,7 +29,7 @@
 	</div>
 
 	<!-- Snapchat Follow -->
-	<div id="snapchat-modal">
+	<div id="snapchat-modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="email-signup" aria-hidden="true">
 	    <div class="snapchat-modal-dialog col-md-4 col-md-offset-4">
 	        <div class="snapchat-modal-content">
 	            <div class="snapchat-modal-header">
