@@ -22,7 +22,7 @@
 	                <p class="text-center">
 	                    Some things are only found on Facebook. Don't miss out.
 	                </p>
-	                <div class="pad10 fb-like" data-href="https://www.facebook.com/galoremag" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+	                <div class="pad10 fb-like" data-href="https://www.facebook.com/galore" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 	            </div>
 	        </div>
 	    </div>
