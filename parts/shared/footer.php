@@ -17,7 +17,7 @@
 	                <a id="fbClose" class="close" data-dismiss="fb-modal" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
 	            </div>
 	            <div class="fb-modal-body">
-	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
+	                <!-- <div class="brand-white" style="margin: 0 auto -100px auto;"></div> -->
 	                <h1 class="horPad20 text-center">Do You Like?</h1>
 	                <p class="text-center">
 	                    Some things are only found on Facebook. Don't miss out.
