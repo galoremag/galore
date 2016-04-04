@@ -74,7 +74,6 @@
 							<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 						</form>
 					</div>
-					<a id="navbar-brand" class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
 				</div>
 				<div>
 					<ul class="top-social navbar-right tab hidden-xs">
