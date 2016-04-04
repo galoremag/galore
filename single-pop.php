@@ -55,7 +55,9 @@
 				</ul>
 			</article>
 			<?php endwhile; ?>
-			<!-- <hr> -->
+			<hr>
+
+			<?php comments_template(); ?>
 
 			<!­­ cmnUNT | Begin ad tag ­­>
 			<div id="cmn_ad_tag_content" class="container-fluid nopad">
