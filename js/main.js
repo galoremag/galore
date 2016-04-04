@@ -59,17 +59,17 @@ jQuery(document).ready(function($) {
     }
   }
 
-  // function loadFacebookModal() {
-  //   if (isTouchDevice()===false) {
-  //     return;
-  //   } else if (readCookie("facebook")) {
-  //     return;
-  //   } else if ($('#global-container').is('.tag, .category, .single')) {
-  //     $('#fb-modal').delay(3200).fadeIn(600);
-  //   } else {
-  //     return;
-  //   }
-  // }
+  function loadFacebookModal() {
+    if (isTouchDevice()===false) {
+      return;
+    } else if (readCookie("facebook")) {
+      return;
+    } else if ($('#global-container').is('.tag, .category, .single')) {
+      $('#fb-modal').delay(3200).fadeIn(600);
+    } else {
+      return;
+    }
+  }
 
   function loadLikeBar() {
     if ($('#global-container').is('.tag, .category, .home, .archive')) {
@@ -161,7 +161,7 @@ jQuery(document).ready(function($) {
 
   // loadNewsletter();
 
-  // loadFacebookModal();
+  loadFacebookModal();
 
   loadLikeBar();
 

@@ -18,10 +18,7 @@
 	            </div>
 	            <div class="fb-modal-body">
 	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
-	                <h1 class="horPad20 text-center">Do You Like?</h1>
-	                <p class="text-center">
-	                    Some things are only found on Facebook. Don't miss out.
-	                </p>
+	                <h2 class="horPad20 text-center">Oh Snap.</h2>
 	                <div class="pad10 fb-like" data-href="https://www.facebook.com/galoremag" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 	            </div>
 	        </div>
