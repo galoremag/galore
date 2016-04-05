@@ -72,13 +72,12 @@ jQuery(document).ready(function($) {
   }
 
   function loadSnapchatModal() {
-    if (readCookie("snapchat")) {
+    if (isTouchDevice()===false) {
       return;
-    // } else if ($('#global-container').is('.tag, .category, .single')) {
-    //   $('#snapchat-modal').delay(3200).show();
+    } else if (readCookie("snapchat")) {
+      return;
     } else {
-      $('#snapchat-modal').delay(3200).show();
-      // return;
+      $('#snapchat-modal').delay(3000).show();
     }
   }
 
