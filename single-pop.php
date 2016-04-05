@@ -57,8 +57,6 @@
 			<?php endwhile; ?>
 			<hr>
 
-			<?php comments_template(); ?>
-
 			<!­­ cmnUNT | Begin ad tag ­­>
 			<div id="cmn_ad_tag_content" class="container-fluid nopad">
 				<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
