@@ -38,9 +38,9 @@
 							</div>
 							<div class="snapchat-modal-body">
 									<!-- <div class="brand-white" style="margin: 0 auto -100px auto;"></div> -->
-									<h1 class="horPad20 text-center">Sex, Style and Late-Night Shenanigans.</h1>
+									<h1 class="horPad20 text-center">Sh*t Gets Real.</h1>
 									<p class="text-center">
-										Screenshot the Snapcode and follow us on Snapchat.
+										Screenshot this and follow on Snapchat.
 									</p>
 									<div class="pad10 snapchat-like">
 										<img src="<?php echo content_url(); ?>/themes/galore/images/galore_snapcode.svg" title="Galore Snapchat - Snapcode" alt="Galore Snapchat - Snapcode" />
