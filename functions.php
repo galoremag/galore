@@ -374,7 +374,6 @@
 	    );
 	}
 
-
 	function sb_api_featured_images( $data, $post ) {
 
 		$featured_id = get_post_thumbnail_id( $post->ID );
@@ -404,3 +403,5 @@
 
 		// return $size_data;
 	}
+
+	add_theme_support( 'title-tag' );
