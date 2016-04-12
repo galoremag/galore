@@ -15,7 +15,7 @@
 	<div class="row-fluid">
 		<div id="content" class="col-sm-10 col-sm-offset-1">
 			<?php if ( have_posts() ): ?>
-			<h1 class="text-center">The Illustrious <i class="fa fa-tag"></i> <span class="kylieTag"><?php echo single_tag_title( '', false ); ?></span></h1>
+			<h1 class="text-center">The Illustrious: <span class="kylieTag"><?php echo single_tag_title( '', false ); ?></span></h1>
 			<p class="text-center"></p>
 			<hr>
 			<ol>
