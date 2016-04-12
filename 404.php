@@ -4,7 +4,6 @@
  *
  * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
- * @package 	WordPress
  * @subpackage 	Starkers
  * @since 		Starkers 4.0
  */
@@ -29,7 +28,7 @@
 
 			<div class="spacer40"></div>
 			<h2 class="text-center">Hot <span>Stories</span></h2>
-			<?php 
+			<?php
 			echo do_shortcode('[ajax_load_more post_type="post" orderby="date" offset="4"]');
 			?>
 		</div>
