@@ -1,15 +1,19 @@
 <?php if ( wp_is_mobile() ) : ?>
+	<!­­ cmnUNT | Begin ad tag ­­>
 	<div id="cmn_ad_tag_head" class="fw_galoremag text-center">
 	    <script type="text/javascript">
 	    	cmnUNT('3x3', tile_num++);
 	    </script>
 	</div>
+	<!­­ cmnUNT | End ad tag ­­>
 <?php endif; ?>
 
 <?php if ( wp_is_mobile() ) : ?>
+	<!­­ cmnUNT | Begin ad tag ­­>
 	<script type="text/javascript">
 		cmnUNT('tover', tile_num++);
 	</script>
+	<!­­ cmnUNT | End ad tag ­­>
 <?php endif; ?>
 
 <?php if ( wp_is_mobile() ) : ?>
