@@ -2,7 +2,7 @@
 // http://wordpresshero.com/tricks/different-single-post-pages-in-wordpress.html/
 
 if ( in_category('style') ) {
-  	include(TEMPLATEPATH . '/single-style.php'); }
+  	include(TEMPLATEPATH . '/single-fashion.php'); }
 elseif ( in_category('beauty') ) {
     include(TEMPLATEPATH . '/single-beauty.php'); }
 elseif ( in_category('sex-dating') ) {

@@ -63,7 +63,7 @@
 			</div>
 			<!­­ cmnUNT | End ad tag ­­>
 
-			<h2 class="text-center">Gimme More <i class="fa fa-scissors"></i> <span>Style</span></h2>
+			<h2 class="text-center">Gimme More <i class="fa fa-scissors"></i> <span>Fashion</span></h2>
 			<div class="spacer20"></div>
 			<hr />
 			<div class="spacer20"></div>
