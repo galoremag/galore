@@ -406,6 +406,8 @@
 
 	add_theme_support( 'title-tag' );
 
+
+	// Hide user accounts
 	add_action(‘template_redirect’, ‘bwp_template_redirect’);
 
 	function bwp_template_redirect()
