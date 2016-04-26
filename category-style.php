@@ -19,12 +19,12 @@
 	</div>
 	<div class="row-fluid">
 		<div id="content" class="col-md-8 col-sm-12">
-			<!-- Manually replace "style" for "fashion" -->
+			<!-- Manually replace "fashion" for "fashion" -->
 			<!-- echo single_cat_title( '', false ); -->
 			<h2 class="text-center">The Latest in <span>Fashion <i class="fa fa-scissors"></i></span></h2>
 			<hr>
 			<ol>
-			<?php query_posts('category_name=style&posts_per_page=4&offset=3&ignore_sticky_posts=true'); ?>
+			<?php query_posts('category_name=fashion&posts_per_page=4&offset=3&ignore_sticky_posts=true'); ?>
 			<?php if ( have_posts() ): ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<li class="post">
@@ -67,7 +67,7 @@
 			<?php endif; ?>
 
 			<?php
-			echo do_shortcode('[ajax_load_more category="style" button_label="Loading" offset="7" ignore_sticky_posts="true"]');
+			echo do_shortcode('[ajax_load_more category="fashion" button_label="Loading" offset="7" ignore_sticky_posts="true"]');
 			?>
 
 			<div class="spacer40"></div>
@@ -78,7 +78,7 @@
 			<?php
 			    $args = array(
 	                'post_type'    => 'post',
-	                'category_name'=> 'style',
+	                'category_name'=> 'fashion',
 	                'ignore_sticky_posts'=> 'true',
 	                'numberposts'  => 4,
 	                'orderby'      => 'meta_value',

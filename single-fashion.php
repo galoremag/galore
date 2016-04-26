@@ -130,7 +130,7 @@
 					$cat_ID = $cat_ID[0]->cat_ID;
 					$this_post = $post->ID;
 
-					$args = array( 'category_name' => 'style', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
+					$args = array( 'category_name' => 'fashion', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
 
 					$postslist = get_posts( $args );
 
@@ -191,7 +191,7 @@
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
 
-					echo do_shortcode('[ajax_load_more offset="4" orderby="date" category="style" exclude="'.$wp_query->post->ID.'" button_label="Loading"]');
+					echo do_shortcode('[ajax_load_more offset="4" orderby="date" category="fashion" exclude="'.$wp_query->post->ID.'" button_label="Loading"]');
 			    ?>
 			</ul>
 		</div>
@@ -201,7 +201,7 @@
 			<?php
 			    $args = array(
 			                'post_type'    => 'post',
-			                'category_name'=> 'style',
+			                'category_name'=> 'fashion',
 			                'numberposts'  => 4,
 			                'orderby'      => 'meta_value',
 			                'meta_key'     => 'post_views_count',

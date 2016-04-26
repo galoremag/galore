@@ -1,7 +1,7 @@
 <?php $post = $wp_query->post;
 // http://wordpresshero.com/tricks/different-single-post-pages-in-wordpress.html/
 
-if ( in_category('style') ) {
+if ( in_category('fashion') ) {
   	include(TEMPLATEPATH . '/single-fashion.php'); }
 elseif ( in_category('beauty') ) {
     include(TEMPLATEPATH . '/single-beauty.php'); }

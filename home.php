@@ -105,14 +105,14 @@ $url = $thumb[0];
 
 <div id="home-container">
 
-	<!-- STYLE SECTION -->
+	<!-- FASHION SECTION -->
 
-	<div class="home-style nopad container">
-		<div class="row-fluid home-style-in nopad">
+	<div class="home-fashion nopad container">
+		<div class="row-fluid home-fashion-in nopad">
 			<div class="col-md-8 pad40">
 				<div class="row-fluid">
 					<div class="col-sm-12 nopad">
-						<h2>Style + Beauty <i class="fa fa-scissors"></i></h2>
+						<h2>Fashion + Beauty <i class="fa fa-scissors"></i></h2>
 					</div>
 					<div class="col-sm-12 spacer20"></div>
 				</div>
@@ -131,7 +131,7 @@ $url = $thumb[0];
 					$grids = 2; //Grids per row-fluid
 
 					$args = array(
-						'category_name' => 'beauty,style',
+						'category_name' => 'beauty,fashion',
 						'showposts' => 4,
 						'orderby' => 'date',
 						'post__in'  => get_option( 'sticky_posts' ),
