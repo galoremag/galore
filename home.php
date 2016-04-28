@@ -64,8 +64,8 @@ $url = $thumb[0];
 				</h4> -->
 				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 
-				<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=5697&lid=28250&csid=&c=0&itt=EOTgSDNteBPGBZseExTPjt3KGpZXpe1WEEYEwE1Y%2FTII51KPC7NhewUsrcjb%2FwYB&ord=[RANDOM]'/>
-				<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=5697&lid=28250&csid=&c=0&ict=J4USQfJyvBlMu2SRh3iQGGbxFnwXyP0RFM%2BYPCbvTs%2F5ejjlVlrQ7BuFo%2B2HhxazyywI0bIkDPiwooLpuEJwqSs35ce8191aKY9dlUH0AMug7cTRufjy%2FQ%3D%3D&ord=[RANDOM]'/></a>
+				<img height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=6277&lid=30111&csid=&c=0&itt=J4USQfJyvBnLk5r%2BTHsi9i0P9gRfJwRXEg31FnhzRp8QnEtMvSypZRZrWa0O1xyJSvBCMGULTBg%3D&ord=[RANDOM]'/>
+				<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=6277&lid=30111&csid=&c=0&ict=J4USQfJyvBlMu2SRh3iQGLuBsGuWmcAK%2FiWRKdw%2BQEX%2FEkHe9QE%2BigWjF0q7qdjweLSIcap3dHBNNLmx2VL%2BvXMbmpC%2FkCdO&ord=[RANDOM]'/></a>
 			</div>
 
 			<?php endforeach; ?>
@@ -454,8 +454,8 @@ $url = $thumb[0];
 
 							<p class="pull-left hidden-xs"><a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank" >Full Story <i class="fa fa-mars"></i></a></p>
 
-							<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=5697&lid=28251&csid=&c=0&itt=EOTgSDNteBPGBZseExTPjt3KGpZXpe1WEEYEwE1Y%2FTII51KPC7NhewUsrcjb%2FwYB&ord=[RANDOM]'/>
-							<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=5697&lid=28251&csid=&c=0&ict=J4USQfJyvBlMu2SRh3iQGGbxFnwXyP0RFM%2BYPCbvTs%2F5ejjlVlrQ7BuFo%2B2HhxazyywI0bIkDPiwooLpuEJwqSs35ce8191aKY9dlUH0AMug7cTRufjy%2FQ%3D%3D&ord=[RANDOM]'/></a>
+							<img height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=6277&lid=30112&csid=&c=0&itt=J4USQfJyvBnLk5r%2BTHsi9i0P9gRfJwRXEg31FnhzRp8QnEtMvSypZRZrWa0O1xyJSvBCMGULTBg%3D&ord=[RANDOM]'/>
+							<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=6277&lid=30112&csid=&c=0&ict=J4USQfJyvBlMu2SRh3iQGLuBsGuWmcAK%2FiWRKdw%2BQEX%2FEkHe9QE%2BigWjF0q7qdjweLSIcap3dHBNNLmx2VL%2BvXMbmpC%2FkCdO&ord=[RANDOM]'/></a>
 
 						</div>
 					</article>
