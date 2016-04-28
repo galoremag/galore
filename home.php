@@ -64,7 +64,7 @@ $url = $thumb[0];
 				</h4> -->
 				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 
-				<img height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=6277&lid=30111&csid=&c=0&itt=J4USQfJyvBnLk5r%2BTHsi9i0P9gRfJwRXEg31FnhzRp8QnEtMvSypZRZrWa0O1xyJSvBCMGULTBg%3D&ord=[RANDOM]'/>
+				<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=6277&lid=30111&csid=&c=0&itt=J4USQfJyvBnLk5r%2BTHsi9i0P9gRfJwRXEg31FnhzRp8QnEtMvSypZRZrWa0O1xyJSvBCMGULTBg%3D&ord=[RANDOM]'/>
 				<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=6277&lid=30111&csid=&c=0&ict=J4USQfJyvBlMu2SRh3iQGLuBsGuWmcAK%2FiWRKdw%2BQEX%2FEkHe9QE%2BigWjF0q7qdjweLSIcap3dHBNNLmx2VL%2BvXMbmpC%2FkCdO&ord=[RANDOM]'/></a>
 			</div>
 
@@ -454,7 +454,7 @@ $url = $thumb[0];
 
 							<p class="pull-left hidden-xs"><a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank" >Full Story <i class="fa fa-mars"></i></a></p>
 
-							<img height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=6277&lid=30112&csid=&c=0&itt=J4USQfJyvBnLk5r%2BTHsi9i0P9gRfJwRXEg31FnhzRp8QnEtMvSypZRZrWa0O1xyJSvBCMGULTBg%3D&ord=[RANDOM]'/>
+							<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=6277&lid=30112&csid=&c=0&itt=J4USQfJyvBnLk5r%2BTHsi9i0P9gRfJwRXEg31FnhzRp8QnEtMvSypZRZrWa0O1xyJSvBCMGULTBg%3D&ord=[RANDOM]'/>
 							<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=6277&lid=30112&csid=&c=0&ict=J4USQfJyvBlMu2SRh3iQGLuBsGuWmcAK%2FiWRKdw%2BQEX%2FEkHe9QE%2BigWjF0q7qdjweLSIcap3dHBNNLmx2VL%2BvXMbmpC%2FkCdO&ord=[RANDOM]'/></a>
 
 						</div>

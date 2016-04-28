@@ -194,7 +194,7 @@ $url = $thumb[0];
 	<div class="specialFlag">Presenting <?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
 	<h1 class="pad20"><?php the_title(); ?></h1>
 	<p class="specialTip">Scroll to site</p>
-	<img height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=6277&lid=30110&csid=&c=0&itt=J4USQfJyvBnLk5r%2BTHsi9i0P9gRfJwRXEg31FnhzRp8QnEtMvSypZRZrWa0O1xyJSvBCMGULTBg%3D&ord=[RANDOM]'/>
+	<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=6277&lid=30110&csid=&c=0&itt=J4USQfJyvBnLk5r%2BTHsi9i0P9gRfJwRXEg31FnhzRp8QnEtMvSypZRZrWa0O1xyJSvBCMGULTBg%3D&ord=[RANDOM]'/>
 	<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=6277&lid=30110&csid=&c=0&ict=J4USQfJyvBlMu2SRh3iQGLuBsGuWmcAK%2FiWRKdw%2BQEX%2FEkHe9QE%2BigWjF0q7qdjweLSIcap3dHBNNLmx2VL%2BvXMbmpC%2FkCdO&ord=[RANDOM]'/></a>
 
 	<a id="scroll-down"><i class="fa fa-arrow-circle-o-down"></i></a>
