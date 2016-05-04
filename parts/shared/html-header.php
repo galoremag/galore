@@ -7,6 +7,24 @@
 <html class="no-js" lang="en"><!--<![endif]-->
 	<head>
 
+		<!-- Device scaling -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0, minimal-ui">
+
+		<!-- Pinterest Verification -->
+		<meta name="p:domain_verify" content="8c3f8aadea8dcff760f98a676ca9a2f7"/>
+
+		<meta name="google-site-verification" content="9q_iilZ2axazp6DWJG9YsrsLMupyES5IOH2jc4Mm2t4" />
+
+		<link rel="author" href="https://plus.google.com/111766775974771084195"/>
+
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico"/>
+
+		<!-- basic stylesheet -->
+		<link rel="stylesheet" href="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/royalslider.css">
+
+		<?php wp_head(); ?>
+
 		<!-- Google Analytics -->
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -105,21 +123,6 @@
 		src="https://www.facebook.com/tr?id=1012502838816199&ev=PageView&noscript=1"
 		/></noscript>
 		<!-- End Facebook Pixel Code -->
-
-		<!-- Pinterest Verification -->
-		<meta name="p:domain_verify" content="8c3f8aadea8dcff760f98a676ca9a2f7"/>
-
-		<meta name="google-site-verification" content="9q_iilZ2axazp6DWJG9YsrsLMupyES5IOH2jc4Mm2t4" />
-
-		<link rel="author" href="https://plus.google.com/111766775974771084195"/>
-
-		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico"/>
-
-		<!-- basic stylesheet -->
-		<link rel="stylesheet" href="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/royalslider.css">
-
-		<?php wp_head(); ?>
 
 		<script src='//cdn.goroost.com/roostjs/sl6otjre2knha1dhhy3trjd9y94q775x' async></script>
 
