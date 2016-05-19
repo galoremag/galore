@@ -81,13 +81,13 @@ jQuery(document).ready(function($) {
     }
   }
 
-  function loadLikeBar() {
-    if ($('#global-container').is('.tag, .category, .home, .archive')) {
-      $('#likeBar').delay(22000).animate({bottom: "0px"}, 500);
-    }
-  }
+  // function loadLikeBar() {
+  //   if ($('#global-container').is('.tag, .category, .home, .archive')) {
+  //     $('#likeBar').delay(22000).animate({bottom: "0px"}, 500);
+  //   }
+  // }
 
-  setTimeout(loadLikeBar, 22000);
+  // setTimeout(loadLikeBar, 22000);
 
   function sticky_relocate() {
     var window_height = window.innerHeight;
@@ -173,7 +173,7 @@ jQuery(document).ready(function($) {
 
   loadSnapchatModal();
 
-  loadLikeBar();
+  // loadLikeBar();
 
   defaultSelect();
 
@@ -377,12 +377,12 @@ jQuery(document).ready(function($) {
   });
 
   // CLOSE Facebook LIKE BAR
-  $(function() {
-    $("#likeBar-close").on('click tap', function(event) {
-      event.preventDefault();
-          $('#likeBar').animate({bottom: "-60px"});
-          createCookie("facebook", "read", 7);
-      });
-  });
+  // $(function() {
+  //   $("#likeBar-close").on('click tap', function(event) {
+  //     event.preventDefault();
+  //         $('#likeBar').animate({bottom: "-60px"});
+  //         createCookie("facebook", "read", 7);
+  //     });
+  // });
 
 });
