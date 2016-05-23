@@ -180,7 +180,7 @@ $url = $thumb[0];
 			<div class="col-md-4 nopad">
 				<div class="darlings pad40">
 					<!-- <div class="brand"></div> -->
-					<h1 class="text-center">Healthy + Fitness <i class="fa fa-heartbeat"></i></h1>
+					<h3 class="text-center">Healthy <i class="fa fa-heartbeat"></i></h3>
 					<?php
 					$args = array( 'category_name' => 'health', 'post_type' => 'post', 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
 
