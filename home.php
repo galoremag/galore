@@ -179,10 +179,10 @@ $url = $thumb[0];
 			</div>
 			<div class="col-md-4 nopad">
 				<div class="darlings pad40">
-					<div class="brand"></div>
-					<h1 class="text-center">Darlings</h1>
+					<!-- <div class="brand"></div> -->
+					<h1 class="text-center">Healthy + Fitness <i class="fa fa-heartbeat"></i></h1>
 					<?php
-					$args = array( 'tag' => 'darling', 'post_type' => 'post', 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
+					$args = array( 'category_name' => 'health', 'post_type' => 'post', 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
 
 					$postslist = get_posts( $args );
 
@@ -203,7 +203,7 @@ $url = $thumb[0];
 					<!­­ cmnUNT | End ad tag ­­>
 
 					<?php
-					$args = array( 'tag' => 'darling', 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'offset' => 1 );
+					$args = array( 'category_name' => 'health', 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'offset' => 1 );
 
 					$postslist = get_posts( $args );
 
