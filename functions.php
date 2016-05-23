@@ -166,32 +166,32 @@
 
 	// MOST RECENT POSTS FROM TAG 'FEATURED'
 
-	// function add_additional_posts_to_slider($slides, $options, $type) {
-	//     if( $options['id'] !== 4 ) { return $slides; }
-	//
-	//     $slides = array();
-	//
-	//     // Query #1 parameters  https://gist.github.com/luetkemj/2023628
-	//     $args = array(
-	//         'posts_per_page' => 3,
-	//         'orderby' => 'date',
-	// 				'tag' => 'featured'
-	//     );
-	//     $query = new WP_Query($args);
-	//     $slides = array_merge($slides,  (array)$query->posts); // merge queried data
-	//
-	//     // Query #2 parameters
-	//     $args = array(
-	//         'posts_per_page' => 3,
-	//         'orderby' => 'date',
-	//         'tag' => 'featured'
-	//     );
-	//     $query = new WP_Query($args);
-	//     $slides = array_merge($slides, (array)$query->posts); // merge queried data
-	//
-	//     return $slides;
-	// }
-	// add_filter('new_rs_slides_filter', 'add_additional_posts_to_slider', 10, 3);
+	function add_additional_posts_to_slider($slides, $options, $type) {
+	    if( $options['id'] !== 4 ) { return $slides; }
+
+	    $slides = array();
+
+	    // Query #1 parameters  https://gist.github.com/luetkemj/2023628
+	    $args = array(
+	        'posts_per_page' => 3,
+	        'orderby' => 'date',
+					'tag' => 'featured'
+	    );
+	    $query = new WP_Query($args);
+	    $slides = array_merge($slides,  (array)$query->posts); // merge queried data
+
+	    // Query #2 parameters
+	    $args = array(
+	        'posts_per_page' => 3,
+	        'orderby' => 'date',
+	        'tag' => 'featured'
+	    );
+	    $query = new WP_Query($args);
+	    $slides = array_merge($slides, (array)$query->posts); // merge queried data
+
+	    return $slides;
+	}
+	add_filter('new_rs_slides_filter', 'add_additional_posts_to_slider', 10, 3);
 
 	/** Add Social Sharing Links on Single Posts **/
 	add_action('genesis_after_entry', 'include_social', 9);
