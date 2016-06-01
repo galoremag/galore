@@ -75,9 +75,9 @@
 									<div class="pad10 snapchat-like">
 										<img src="<?php echo content_url(); ?>/themes/galore/images/galore_snapcode.svg" title="Galore Snapchat - Snapcode" alt="Galore Snapchat - Snapcode" />
 									</div>
-									<h1 class="horPad20 text-center">!!GIVEAWAY ALERT!!</h1>
+									<h1 class="horPad20 text-center">SH*T GETS REAL</h1>
 									<p class="text-center">
-										Follow us RIGHT NOW and be the 30th screenshotter for some free Peeks Cosmetics!!
+										Screenshot that ^^^ and follow us on Snapchat.
 									</p>
 							</div>
 					</div>
