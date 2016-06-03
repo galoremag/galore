@@ -194,8 +194,8 @@ $url = $thumb[0];
 	<div class="specialFlag">Presenting <?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
 	<h1 class="pad20"><?php the_title(); ?></h1>
 	<p class="specialTip">Scroll to site</p>
-	<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=6277&lid=30110&csid=&c=0&itt=J4USQfJyvBnLk5r%2BTHsi9i0P9gRfJwRXEg31FnhzRp8QnEtMvSypZRZrWa0O1xyJSvBCMGULTBg%3D&ord=[RANDOM]'/>
-	<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=6277&lid=30110&csid=&c=0&ict=J4USQfJyvBlMu2SRh3iQGLuBsGuWmcAK%2FiWRKdw%2BQEX%2FEkHe9QE%2BigWjF0q7qdjweLSIcap3dHBNNLmx2VL%2BvXMbmpC%2FkCdO&ord=[RANDOM]'/></a>
+	<img class="specialPixel" SRC="https://ad.doubleclick.net/ddm/ad/N9556.2353504GALORE/B9575230.132670120;sz=1x1;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement">
+	<a href="https://ad.doubleclick.net/ddm/clk/305312944;132670120;o"/></a>
 
 	<a id="scroll-down"><i class="fa fa-arrow-circle-o-down"></i></a>
 </div>
