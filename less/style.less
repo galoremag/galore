@@ -98,16 +98,16 @@ ul, ol {
 a {
 	.font2;
 	.transition;
-	color: @pink;
+	color: @brand;
 }
-a:hover, a h1:hover, a:hover h1, a:hover h2, a:hover h3, a:hover h4, a h2:hover, a h3:hover, a h4:hover {text-decoration: none; opacity: 1;.transition; color: darken(@pink, 10%);}
-a:focus {text-decoration: none; color: @pink; outline: 0px; text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);}
+a:hover, a h1:hover, a:hover h1, a:hover h2, a:hover h3, a:hover h4, a h2:hover, a h3:hover, a h4:hover {text-decoration: none; opacity: 1;.transition; color: darken(@brand, 10%);}
+a:focus {text-decoration: none; color: @brand; outline: 0px; text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);}
 
 a.btn {
 	.font2;
 	border-radius: 5px;
 	border: 0px;
-	background: @pink;
+	background: @brand;
 	opacity: 0.9;
 	color: white;
 	.transition;
@@ -116,7 +116,7 @@ a.btn {
 }
 
 a.btn:hover {
-	background: darken(@pink, 10%);
+	background: darken(@brand, 10%);
 	.font2;
 	opacity: 1;
 	color: white;
@@ -133,7 +133,7 @@ blockquote p, blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
 	-webkit-transform: rotate(-3deg);
 	.font1;
 	font-size: 1.5em !important;
-	/*color: @pink;*/
+	/*color: @brand;*/
 }
 
 .centerBlock {
@@ -154,7 +154,7 @@ blockquote p, blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
 }
 
 .btn-bp {
-	background: @pink;
+	background: @brand;
 	color: white !important;
 	opacity: 0.7;
 	.font2;
@@ -208,7 +208,7 @@ div.wp-caption {
 }*/
 
 hr {
-	border-top: 1px dotted fade(@pink, 30%);
+	border-top: 1px dotted fade(@brand, 30%);
 	width: 100%;
 }
 
@@ -228,7 +228,7 @@ h1 {
 h1 span {
 	font-family: 'salome', serif;
 	text-transform: none;
-	color: @pink;
+	color: @brand;
 }
 
 h2 {
@@ -262,8 +262,8 @@ h5 {
 h1 span, h2 span, h3 span {
 	/*-webkit-text-fill-color: white;
 	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: @pink;*/
-	color: @pink;
+	-webkit-text-stroke-color: @brand;*/
+	color: @brand;
 	/*text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 0px 0px 0px black;*/
 }
 
@@ -273,15 +273,15 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h1 a:hover span, h2 a:hover span, h3 a:hover span, h4 a:hover span {
-	color: @pink;
+	color: @brand;
 	opacity: 1;
 	text-decoration: none;
 	.transition;
-	/*text-shadow-color: @pink;*/
+	/*text-shadow-color: @brand;*/
 }
 
 /*h1 a:hover span, h2 a:hover span, h3 a:hover span, h4 a:hover span {
-	text-shadow: 1px 1px 0 @pink, -1px -1px 0 @pink, 1px -1px 0 @pink, -1px 1px 0 @pink, 0px 0px 0px @pink;
+	text-shadow: 1px 1px 0 @brand, -1px -1px 0 @brand, 1px -1px 0 @brand, -1px 1px 0 @brand, 0px 0px 0px @brand;
 }*/
 
 body {
@@ -438,7 +438,7 @@ body.menu-open {
 }
 
 #global-inner .signup #content {
-	/*background: @pink;*/
+	/*background: @brand;*/
 }
 
 /* SEARCH PAGE */
@@ -572,7 +572,7 @@ ul.top-social li {
 }
 
 ul.top-social li a {color: white;}
-ul.top-social li a:hover {color:@pink;}
+ul.top-social li a:hover {color:@brand;}
 
 .navbar-default {
 	border: 0px;
@@ -670,7 +670,7 @@ nav.shrink {
 .navbar-default .navbar-toggle {
 	color: white !important;
 	border-radius: 50%;
-	background: @pink;
+	background: @brand;
 	border: 0px;
 	padding: 6px 10px;
 	opacity: 0.5;
@@ -678,13 +678,13 @@ nav.shrink {
 }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-	background: darken(@pink, 10%) !important;
+	background: darken(@brand, 10%) !important;
 	opacity: 1;
 	.transition;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-	color: @pink !important;
+	color: @brand !important;
 	-webkit-transition: 1s all easeinout;
 	-moz-transition: 1s all easeinout;
 	-o-transition: 1s all easeinout;
@@ -703,7 +703,7 @@ nav.shrink {
 }
 
 .navbar-default .navbar-right > li > a:hover {
-	color: @pink !important;
+	color: @brand !important;
 	-webkit-transition: 1s all easeinout;
 	-moz-transition: 1s all easeinout;
 	-o-transition: 1s all easeinout;
@@ -715,7 +715,7 @@ nav.shrink {
 
 #modal-nav-button {
 	border-radius: 50%;
-	background: @pink;
+	background: @brand;
 	color: black;
 	border: 0px;
 	margin: 10px 0px 0px 0px;
@@ -845,13 +845,15 @@ ul.modal-nav-menu li a:hover {
 
 #superSpecial .specialFlag {
 	position: absolute;
-	bottom: 200px;
+	top: 80px;
 	background: yellow;
 	padding: 5px 8px;
+  .brand-shadow;
 	.font2;
 }
 
 #superSpecial .specialTip {
+  color: white;
 	position: absolute;
 	bottom: 50px;
 	text-align: center;
@@ -861,6 +863,7 @@ ul.modal-nav-menu li a:hover {
 }
 
 #scroll-down {
+  color: white;
 	display: block;
 	position:absolute;
 	bottom:5px;
@@ -929,7 +932,7 @@ ul.modal-nav-menu li a:hover {
 
 .jumbotron-in {
 	padding: 120px 0px 120px 0px;
-	background: fade(@pink, 50%);
+	background: fade(@brand, 50%);
 	width: 100%;
 	height: 100%;
 }
@@ -963,14 +966,14 @@ ul.modal-nav-menu li a:hover {
 
 .rsText h3 a {color: white !important;}
 .rsText h3 a:visited {color: white !important;}
-.rsText h3 a:hover {color: @pink;}
+.rsText h3 a:hover {color: @brand;}
 
 .rsGalore .rsTags {
 	position: absolute;
 	top: 20px;
 	right: 0px;
 	padding: 10px 15px;
-	background: @pink;
+	background: @brand;
 	.font2;
 }
 
@@ -1026,7 +1029,7 @@ ul.modal-nav-menu li a:hover {
 
 /* CUSTOM SLIDER */
 
-.ps-container.ps-in-scrolling>.ps-scrollbar-x-rail { background-color: lighten(@pink, 80%); }
+.ps-container.ps-in-scrolling>.ps-scrollbar-x-rail { background-color: lighten(@brand, 80%); }
 .ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x { background-color: .heroGradientFade !important; }
 
 #latest-container {
@@ -1120,7 +1123,7 @@ ul.modal-nav-menu li a:hover {
 }
 
 #sidebar {
-	background: lighten(@pink, 25%);
+	background: lighten(@brand, 25%);
 	padding: 10px 20px 120px 20px;
 }
 
@@ -1174,7 +1177,7 @@ ul.post-social li:first-child {
 
 ul.post-social li a {
 	border-radius: 50%;
-	background: @pink;
+	background: @brand;
 	color: white !important;
 	display: block;
 	padding: 4px 10px;
@@ -1190,7 +1193,7 @@ ul.post-social li a i.fa-twitter {
 
 ul.post-social li a:hover {
 	color: white;
-	background-color: darken(@pink, 20%);
+	background-color: darken(@brand, 20%);
 	/*opacity:1;*/
 }
 
@@ -1234,7 +1237,7 @@ ul.post-social h4 {
 .single ul.single-social li a {
 	.font2;
 	border-radius: 7px;
-	background: @pink;
+	background: @brand;
 	color: white;
 	display: block;
 	padding: 8px 16px;
@@ -1249,7 +1252,7 @@ ul.post-social h4 {
 
 .single-featured-image div.catlinks {
 	padding: 5px 10px;
-	background: @pink;
+	background: @brand;
 	color: white;
 	top: 40px;
 	left: 15px;
@@ -1283,7 +1286,7 @@ ul.post-social h4 {
 }
 
 .sex-dating .LightText h1, .sex-dating .LightText h2 {
-	/*color: @pink;*/
+	/*color: @brand;*/
 	color: black;
 	text-shadow: 1px 1px 0px rgba(255,255,0,1);
 }
@@ -1450,7 +1453,7 @@ ul.post-social h4 {
     border: none;
 }*/
 
-/*.rsContent  .rsABlock button:hover, .rsContent  .rsSBlock button:hover {background: @pink !important; color: white !important;}*/
+/*.rsContent  .rsABlock button:hover, .rsContent  .rsSBlock button:hover {background: @brand !important; color: white !important;}*/
 
 /*.rsContent h1 {text-transform: uppercase;font-style: italic;}*/
 
@@ -1511,8 +1514,8 @@ div.pop {background: white;}
 	color: white;
 }
 
-.pop-in .post-grid .entry a {color: @pink;}
-.pop-in .post-grid .entry a:hover {color: darken(@pink, 20%);}
+.pop-in .post-grid .entry a {color: @brand;}
+.pop-in .post-grid .entry a:hover {color: darken(@brand, 20%);}
 
 #home-container {
 	background: url(images/greyfloral.png) repeat;
@@ -1562,7 +1565,7 @@ li.related-post {
 
 div.catlinks {
 	position: absolute;
-	background: @pink;
+	background: @brand;
 	color: white;
 	padding: 3px 8px;
 	top: 15px;
@@ -1664,7 +1667,7 @@ h2.stuckHead {
 	bottom: 10px;
 	border-radius: 50%;
 	border: 1px solid white;
-	background: @pink;
+	background: @brand;
 	overflow: visible;
 	z-index: 1001;
 	.transition;
@@ -1800,7 +1803,7 @@ ul#menu-footer-menu li a:hover, ul#menu-footer li a:hover, a.close-footer:hover 
 }
 
 .alm-listing li a {
-	color: @pink;
+	color: @brand;
 }
 
 .alm-listing li h3 a {
@@ -1814,18 +1817,18 @@ ul#menu-footer-menu li a:hover, ul#menu-footer li a:hover, a.close-footer:hover 
 }*/
 
 .alm-listing li h3 a:hover {
-	color: @pink;
+	color: @brand;
 }
 
 button.alm-load-more-btn {
 	.font2;
-	background: fade(@pink, 75%);
+	background: fade(@brand, 75%);
 	box-shadow: 1px 1px 0px rgba(255,255,0,1);
 }
 
 button.alm-load-more-btn:hover {
 	.font2;
-	background: @pink;
+	background: @brand;
 }
 
 button.alm-load-more-btn:before,
@@ -1878,7 +1881,7 @@ button.alm-load-more-btn.done:before {
    color: white !important;
 }
 
-input, textarea, .form-control { .font2; color: @pink !important; }
+input, textarea, .form-control { .font2; color: @brand !important; }
 
 #site-search {
 	height: 50px;
@@ -1886,7 +1889,7 @@ input, textarea, .form-control { .font2; color: @pink !important; }
 
 #site-search .form-control {
 	border: 1px solid white;
-	background: @pink;
+	background: @brand;
 	height: 30px;
 	padding: 5px 10px;
 	color: white !important;
@@ -1906,7 +1909,7 @@ input, textarea, .form-control { .font2; color: @pink !important; }
 .search-submit {
 	border-radius: 50%;
 	border: 0px;
-	background: @pink;
+	background: @brand;
 	box-shadow: 1px 1px 5px rgba(255,255,0,0.33);
 	opacity: 0.9;
 	color: white;
@@ -1992,12 +1995,12 @@ input, textarea, .form-control { .font2; color: @pink !important; }
 }
 
 .email-signup .form-control {
-	background: @pink;
-	color: @pink !important;
+	background: @brand;
+	color: @brand !important;
 }
 
 .email-signup .form-control:hover, .email-signup .form-control:focus {
-	background: darken(@pink, 15%);
+	background: darken(@brand, 15%);
 }
 
 /*  FACEBOOK SIGNUP MODAL  */
@@ -2076,12 +2079,12 @@ input, textarea, .form-control { .font2; color: @pink !important; }
 }
 
 .fb-modal .form-control {
-	background: @pink;
-	color: @pink !important;
+	background: @brand;
+	color: @brand !important;
 }
 
 .fb-modal .form-control:hover, .fb-modal .form-control:focus {
-	background: darken(@pink, 15%);
+	background: darken(@brand, 15%);
 }
 
 // SNAPCHAT MODAL
@@ -2181,11 +2184,11 @@ h1 span.kylieTag {
 /* == SHOP SECTION == */
 
 .well {
-	background: fade(@pink, 10%);
+	background: fade(@brand, 10%);
 }
 
 .badge {
-	background-color: @pink;
+	background-color: @brand;
 }
 
 .shop-checkout h2 {
@@ -2217,16 +2220,16 @@ h1 span.kylieTag {
 /* OLARK */
 
 #habla_window_div #habla_topbar_div {
-	background: @pink !important;
+	background: @brand !important;
 }
 
 #habla_window_div .habla_offline_submit_input {
-	background: @pink !important;
+	background: @brand !important;
 	color: white !important;
 }
 
 #habla_window_div .habla_conversation_person2 {
-	color: @pink !important;
+	color: @brand !important;
 }
 
 // Hide Complex Logo in Footer

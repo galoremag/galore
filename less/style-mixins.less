@@ -1,16 +1,16 @@
 /*  VARIABLES & MIXINS  */
 
-/*@pink : #E81B8E; First Color */
-/*@pink : #FA7470; Hot Pink*/
-/*@pink   : #66ccff; Valfre*/
-/*@pink   : #CF3569; iScream*/
-@pink : #CA5A74;
+/*@brand : #E81B8E; First Color */
+/*@brand : #FA7470; Hot Pink*/
+/*@brand   : #66ccff; Valfre*/
+/*@brand   : #CF3569; iScream*/
+@brand : #CA5A74;
 @yell : #fff200;
 @salmon : #FA7470;
 @galwhite : antiquewhite;
 
 .pink {
-	color: @pink !important;
+	color: @brand !important;
 }
 
 .font1 {
@@ -200,6 +200,12 @@ p {
 .clearfix {
     *zoom: 1;
 }
+
+.brand-shadow {
+	box-shadow: 1px 1px 5px fade(@brand, 33%);
+}
+
+// GRADIENTS
 
 .heroGradient {
 	background-attachment: fixed;
