@@ -181,7 +181,7 @@ jQuery(document).ready(function($) {
     if (readCookie("sponsorLoaded")) {
       $('#superSpecial').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('padTop120');
     } else if (isTouchDevice()===true) {
-      $('#superSpecial').css({'display' : 'block'}) && $('#scroll-down').css({'display' : 'block'}) && createCookie("sponsorLoaded", "read", 14);
+      $('#superSpecial').css({'display' : 'block'}) && $('#scroll-down').css({'display' : 'block'}) && createCookie("sponsorLoaded", "read", 1);
     } else {
       $('#superSpecial').css({'display' : 'none'}) && $('#scroll-down').css({'display' : 'none'}) && $('#global-inner').addClass('padTop120');
     }
