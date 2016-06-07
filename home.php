@@ -53,7 +53,7 @@ $url = $thumb[0];
 
 			<div class="glide special">
 				<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank"><?php the_post_thumbnail('thumbnail'); ?></a>
-				<div class="specialFlagSm">Presenting </i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
+				<div class="specialFlagSm"></i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
 				<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank"><h3><?php the_title(); ?></h3></a>
 				<!-- <h4>
 					<?php
@@ -433,7 +433,7 @@ $url = $thumb[0];
 				<li class="post specialMd">
 					<article class="row-fluid">
 						<div class="nopad col-sm-5">
-							<div class="specialFlagMd">Presenting </i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
+							<div class="specialFlagMd"></i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
 							<div class="thumb">
 								<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
 							</div>

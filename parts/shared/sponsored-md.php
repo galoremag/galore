@@ -7,7 +7,7 @@
 <li class="post specialMd">
   <article class="row-fluid">
     <div class="nopad col-sm-5">
-      <div class="specialFlagMd">Presenting </i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
+      <div class="specialFlagMd"></i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
       <div class="thumb">
         <a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
       </div>
