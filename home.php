@@ -25,6 +25,9 @@ $url = $thumb[0];
 </a>
 <a id="scroll-down"><i class="fa fa-arrow-circle-o-down"></i></a>
 
+<img class="specialPixel" SRC="https://ad.doubleclick.net/ddm/ad/N9556.2353504GALORE/B9575230.132670120;sz=1x1;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement" />
+<a href="https://ad.doubleclick.net/ddm/clk/305312944;132670120;o">
+
 <?php endforeach; ?>
 
 <div class="jumbotron">
@@ -64,7 +67,7 @@ $url = $thumb[0];
 				</h4> -->
 				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 
-				<img class="specialPixel" SRC="https://ad.doubleclick.net/ddm/ad/N9556.2353504GALORE/B9575230.132669759;sz=1x1;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement">
+				<img class="specialPixel" SRC="https://ad.doubleclick.net/ddm/ad/N9556.2353504GALORE/B9575230.132669759;sz=1x1;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement" />
 				<a href="https://ad.doubleclick.net/ddm/clk/305312745;132669759;n"/></a>
 			</div>
 

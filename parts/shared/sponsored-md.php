@@ -28,7 +28,7 @@
 
       <p class="pull-left hidden-xs"><a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank" >Full Story <i class="fa fa-mars"></i></a></p>
 
-      <IMG class="specialPixel" SRC="https://ad.doubleclick.net/ddm/ad/N9556.2353504GALORE/B9575230.132666268;sz=1x1;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement">
+      <img class="specialPixel" SRC="https://ad.doubleclick.net/ddm/ad/N9556.2353504GALORE/B9575230.132666268;sz=1x1;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement">
       <a href="https://ad.doubleclick.net/ddm/clk/305314311;132666268;w"/></a>
 
     </div>
