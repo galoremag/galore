@@ -827,6 +827,9 @@ ul.modal-nav-menu li a:hover {
 	background-size: cover !important;
 	background-attachment: fixed;
 	background-position: center center !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #superhero h1 {
@@ -841,6 +844,7 @@ ul.modal-nav-menu li a:hover {
 }
 
 #superhero .specialFlag {
+  color: black;
 	position: absolute;
 	top: 160px;
 	background: yellow;
@@ -850,9 +854,7 @@ ul.modal-nav-menu li a:hover {
 }
 
 #superhero .info {
-  display: flex;
-  align-items: bottom;
-  justify-content: bottom;
+  align-self: flex-end;
 }
 
 #superhero .specialTip {
@@ -869,9 +871,9 @@ ul.modal-nav-menu li a:hover {
   color: white;
 	display: block;
 	// position:absolute;
-	bottom:5px;
-	left: 50%;
-	margin-left: -19px;
+	// bottom:5px;
+	// left: 50%;
+	// margin-left: -19px;
 	text-align: center;
 	-webkit-animation-name: scrolldown;
     		animation-name: scrolldown;
@@ -894,25 +896,25 @@ ul.modal-nav-menu li a:hover {
 
 @keyframes scroll-down {
 	0% {
-		bottom: 5px
+		margin-bottom: 5px
 	}
 	50% {
-		bottom: 10px
+		margin-bottom: 10px
 	}
 	100% {
-		bottom: 5px
+		margin-bottom: 5px
 	}
 }
 
 @-webkit-keyframes scrolldown {
 	0% {
-		bottom: 5px
+		margin-bottom: 5px
 	}
 	50% {
-		bottom: 10px
+		margin-bottom: 10px
 	}
 	100% {
-		bottom: 5px
+		margin-bottom: 5px
 	}
 }
 
