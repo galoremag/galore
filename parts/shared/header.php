@@ -193,6 +193,7 @@ $url = $thumb[0];
 	<a id="superhero" href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title_attribute(); ?>" target="_blank" style="background: url(<?php echo $url ?>) no-repeat;"></a>
 	<div class="specialFlag"><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
 	<h1 class="pad20"><?php the_title(); ?></h1>
+	<a href="btn btn-primary">Read More</a>
 	<p class="specialTip">Scroll to site</p>
 	<img class="specialPixel" SRC="https://ad.doubleclick.net/ddm/ad/N9556.2353504GALORE/B9575230.132670120;sz=1x1;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement">
 	<a href="https://ad.doubleclick.net/ddm/clk/305312944;132670120;o"/></a>
