@@ -175,8 +175,9 @@
 
 <!-- Start Superhero -->
 
-<?php
-$args = array( 'tag' => 'superhero', 'post_type' => array('sponsor', 'post'), 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
+<?php if ( wp_is_mobile() ) : ?>
+
+<?php $args = array( 'tag' => 'superhero', 'post_type' => array('sponsor', 'post'), 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
 
 $postslist = get_posts( $args );
 
@@ -206,6 +207,8 @@ $url = $thumb[0];
 <?php endforeach; ?>
 
 <?php wp_reset_postdata(); ?>
+
+<?php endif; ?>
 
 <!-- End Superhero -->
 
