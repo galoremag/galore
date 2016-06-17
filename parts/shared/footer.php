@@ -126,7 +126,7 @@
 			<a id="footer-close" href="#"><i class="fa fa-2x fa-close"></i></a>
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
-					<p class="text-center">GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative woman in her 20's surrounding Style, Beauty, Pop, Sex + Dating and Fitness.</p>
+					<p class="text-center">GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative woman in her 20's surrounding Fashion, Beauty, Pop, Sex + Dating and Health.</p>
 				</div>
 			</div>
 
