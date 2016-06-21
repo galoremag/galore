@@ -128,6 +128,84 @@ $url = $thumb[0];
 					<div class="col-sm-12 spacer40"></div>
 				</div>
 				<div class="row-fluid post-grid">
+
+					<!-- 300x250 unit -->
+					<div class="thumbnail col-sm-6 horpad10">
+						<div class="nopad">
+							<?php if ( wp_is_mobile() ) : ?>
+
+								<!-- /60899964/Home_Mobile_300x250 -->
+								<div id='div-gpt-ad-1465835581876-13' style='height:250px; width:300px;'>
+								<script type='text/javascript'>
+								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-13'); });
+								</script>
+								</div>
+
+							<?php else: ?>
+
+								<!-- /60899964/Home_300x250 -->
+								<div id='div-gpt-ad-1465835581876-9' style='height:250px; width:300px;'>
+								<script type='text/javascript'>
+								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-9'); });
+								</script>
+								</div>
+
+							<?php endif; ?>
+						</div>
+					</div>
+
+					<!-- Posts -->
+					<?php
+					$counter = 1; //start counter
+
+					$grids = 1; //Grids per row-fluid
+
+					$args = array(
+						'category_name' => 'beauty,fashion',
+						'showposts' => 1,
+						'orderby' => 'date',
+						'post__in'  => get_option( 'sticky_posts' ),
+						'ignore_sticky_posts' => 1
+					);
+					$bsQuery = new WP_Query( $args );
+
+					if(have_posts()) :	while($bsQuery->have_posts()) :  $bsQuery->the_post();
+
+					//Show the left hand side column
+					if($counter == 1) :
+					?>
+					<div class="thumbnail col-sm-6 horpad10">
+						<div class="nopad">
+							<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+							<div class="caption">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
+				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
+				            </div>
+						</div>
+					</div>
+					<?php
+					$counter = 0;
+					endif;
+					?>
+					<?php
+					//Show the left hand side column
+					if($counter == 1) :
+					?>
+					<?php
+					$counter = 0;
+					endif;
+					?>
+					<?php
+					$counter++;
+					endwhile;
+					//Pagination can go here if you want it.
+					endif;
+					?>
+
+					<?php wp_reset_postdata(); ?>
+
+					<!-- 2nd row -->
 					<?php
 					$counter = 1; //start counter
 
@@ -135,10 +213,11 @@ $url = $thumb[0];
 
 					$args = array(
 						'category_name' => 'beauty,fashion',
-						'showposts' => 4,
+						'showposts' => 2,
 						'orderby' => 'date',
+						'offset' => 1,
 						'post__in'  => get_option( 'sticky_posts' ),
-						'ignore_sticky_posts' => 4
+						'ignore_sticky_posts' => 2
 					);
 					$bsQuery = new WP_Query( $args );
 
@@ -199,11 +278,25 @@ $url = $thumb[0];
 					</div>
 					<?php endforeach; ?>
 
-					<!­­ cmnUNT | Begin ad tag ­­>
-					<div id="cmn_ad_tag_content" class="snippet text-center">
-						<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-					</div>
-					<!­­ cmnUNT | End ad tag ­­>
+					<?php if (wp_is_mobile()) : ?>
+
+						<!-- /60899964/Home_300x250_970x250_pos2 -->
+						<div id='div-gpt-ad-1465835581876-10'>
+						<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-10'); });
+						</script>
+						</div>
+
+					<?php else : ?>
+
+						<!-- /60899964/Home_Mobile_300x250_pos2 -->
+						<div id='div-gpt-ad-1465835581876-14' style='height:250px; width:300px;'>
+						<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-14'); });
+						</script>
+						</div>
+
+					<?php endif; ?>
 
 					<?php
 					$args = array( 'category_name' => 'health', 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'offset' => 1 );
@@ -227,11 +320,26 @@ $url = $thumb[0];
 		</div>
 	</div>
 
-	<!­­ cmnUNT | Begin ad tag ­­>
-	<div id="cmn_ad_tag_content" class="container-fluid nopad">
-		<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
-	</div>
-	<!­­ cmnUNT | End ad tag ­­>
+	<!-- 100x100 -->
+	<?php if ( wp_is_mobile() ) : ?>
+
+		<!-- /60899964/Home_Mobile_OOP -->
+		<div id='div-gpt-ad-1465835581876-18'>
+		<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-18'); });
+		</script>
+		</div>
+
+	<?php else: ?>
+
+		<!-- /60899964/Home_OOP -->
+		<div id='div-gpt-ad-1465835581876-19'>
+		<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-19'); });
+		</script>
+		</div>
+
+	<?php endif; ?>
 
 	<!-- SEX + DATING SECTION -->
 
@@ -403,11 +511,25 @@ $url = $thumb[0];
 							endif;
 							?>
 
-							<!­­ cmnUNT | Begin ad tag ­­>
-							<div id="cmn_ad_tag_content" class="thumbnail col-md-4 text-center">
-								<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-							</div>
-							<!­­ cmnUNT | End ad tag ­­>
+							<?php if ( wp_is_mobile() ) : ?>
+
+								<!-- /60899964/Home_Mobile_300x250_pos3 -->
+								<div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;'>
+								<script type='text/javascript'>
+								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-15'); });
+								</script>
+								</div>
+
+							<?php else: ?>
+
+								<!-- /60899964/Home_300x250_970x250_pos3 -->
+								<div id='div-gpt-ad-1465835581876-11'>
+								<script type='text/javascript'>
+								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-11'); });
+								</script>
+								</div>
+
+							<?php endif; ?>
 
 						</div>
 					</div>
@@ -466,13 +588,9 @@ $url = $thumb[0];
 
 				<?php endforeach; ?>
 
-			    <?php wp_reset_postdata(); ?>
+			  <?php wp_reset_postdata(); ?>
 
-			    <!­­ cmnUNT | Begin ad tag ­­>
-				<div id="cmn_ad_tag_content" class="text-center">
-					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-				</div>
-				<!­­ cmnUNT | End ad tag ­­>
+				<!-- 3rd Unit -->
 
 				<hr />
 

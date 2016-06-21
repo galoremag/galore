@@ -194,6 +194,52 @@
 		</noscript>
 		<!-- End Quantcast Tag -->
 
+		<!-- DFP script -->
+		<script type='text/javascript'>
+		  var googletag = googletag || {};
+		  googletag.cmd = googletag.cmd || [];
+		  (function() {
+		    var gads = document.createElement('script');
+		    gads.async = true;
+		    gads.type = 'text/javascript';
+		    var useSSL = 'https:' == document.location.protocol;
+		    gads.src = (useSSL ? 'https:' : 'http:') +
+		      '//www.googletagservices.com/tag/js/gpt.js';
+		    var node = document.getElementsByTagName('script')[0];
+		    node.parentNode.insertBefore(gads, node);
+		  })();
+		</script>
+
+		<script type='text/javascript'>
+		  googletag.cmd.push(function() {
+		    googletag.defineSlot('/60899964/Article_300x250_970x250', [[970, 250], [300, 250]], 'div-gpt-ad-1465835581876-0').addService(googletag.pubads());
+		    googletag.defineSlot('/60899964/Article_300x250_970x250_pos2', [[970, 250], [300, 250]], 'div-gpt-ad-1465835581876-1').addService(googletag.pubads());
+		    googletag.defineOutOfPageSlot('/60899964/Article_Interstitial', 'div-gpt-ad-1465835581876-2').addService(googletag.pubads());
+		    googletag.defineSlot('/60899964/Article_Mobile_300x250', [300, 250], 'div-gpt-ad-1465835581876-3').addService(googletag.pubads());
+		    googletag.defineSlot('/60899964/Article_Mobile_300x250_pos2', [300, 250], 'div-gpt-ad-1465835581876-4').addService(googletag.pubads());
+		    googletag.defineOutOfPageSlot('/60899964/Article_Mobile_Interstitial', 'div-gpt-ad-1465835581876-5').addService(googletag.pubads());
+		    googletag.defineSlot('/60899964/Article_Mobile_Leaderboard', [[300, 50], [320, 50]], 'div-gpt-ad-1465835581876-6').addService(googletag.pubads());
+		    googletag.defineOutOfPageSlot('/60899964/Article_Mobile_OOP', 'div-gpt-ad-1465835581876-7').addService(googletag.pubads());
+		    googletag.defineOutOfPageSlot('/60899964/Article_OOP', 'div-gpt-ad-1465835581876-8').addService(googletag.pubads());
+		    googletag.defineSlot('/60899964/Home_300x250', [300, 250], 'div-gpt-ad-1465835581876-9').addService(googletag.pubads());
+		    googletag.defineSlot('/60899964/Home_300x250_970x250_pos2', [[970, 250], [300, 250]], 'div-gpt-ad-1465835581876-10').addService(googletag.pubads());
+		    googletag.defineSlot('/60899964/Home_300x250_970x250_pos3', [[970, 250], [300, 250]], 'div-gpt-ad-1465835581876-11').addService(googletag.pubads());
+		    googletag.defineOutOfPageSlot('/60899964/Home_Interstitial', 'div-gpt-ad-1465835581876-12').addService(googletag.pubads());
+		    googletag.defineSlot('/60899964/Home_Mobile_300x250', [300, 250], 'div-gpt-ad-1465835581876-13').addService(googletag.pubads());
+		    googletag.defineSlot('/60899964/Home_Mobile_300x250_pos2', [300, 250], 'div-gpt-ad-1465835581876-14').addService(googletag.pubads());
+		    googletag.defineSlot('/60899964/Home_Mobile_300x250_pos3', [300, 250], 'div-gpt-ad-1465835581876-15').addService(googletag.pubads());
+		    googletag.defineOutOfPageSlot('/60899964/Home_Mobile_Interstitial', 'div-gpt-ad-1465835581876-16').addService(googletag.pubads());
+		    googletag.defineSlot('/60899964/Home_Mobile_Leaderboard', [[300, 50], [320, 50]], 'div-gpt-ad-1465835581876-17').addService(googletag.pubads());
+		    googletag.defineOutOfPageSlot('/60899964/Home_Mobile_OOP', 'div-gpt-ad-1465835581876-18').addService(googletag.pubads());
+		    googletag.defineOutOfPageSlot('/60899964/Home_OOP', 'div-gpt-ad-1465835581876-19').addService(googletag.pubads());
+		    googletag.pubads().enableSingleRequest();
+		    googletag.pubads().collapseEmptyDivs();
+		    googletag.pubads().setTargeting('Category', []).setTargeting('Article', []);
+		    googletag.enableServices();
+		  });
+		</script>
+		<!-- END DFP script -->
+
 	</head>
 	<body>
 

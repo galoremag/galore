@@ -1,20 +1,18 @@
 <?php if ( wp_is_mobile() ) : ?>
-	<!­­ cmnUNT | Begin ad tag ­­>
-	<div id="cmn_ad_tag_head" class="fw_galoremag text-center">
-	    <script type="text/javascript">
-	    	cmnUNT('3x3', tile_num++);
-	    </script>
-	</div>
-	<!­­ cmnUNT | End ad tag ­­>
+	<!-- /60899964/Home_Mobile_Leaderboard -->
+	<div id='div-gpt-ad-1465835581876-17'>
+	<script type='text/javascript'>
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-17'); });
+	</script>
+	</div>>
 <?php endif; ?>
 
-<?php if ( wp_is_mobile() ) : ?>
-	<!­­ cmnUNT | Begin ad tag ­­>
-	<script type="text/javascript">
-		cmnUNT('tover', tile_num++);
-	</script>
-	<!­­ cmnUNT | End ad tag ­­>
-<?php endif; ?>
+<!-- /60899964/Home_Interstitial -->
+<div id='div-gpt-ad-1465835581876-12'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-12'); });
+</script>
+</div>
 
 <?php if ( wp_is_mobile() ) : ?>
 
