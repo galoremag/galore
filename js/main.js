@@ -171,7 +171,7 @@ jQuery(document).ready(function($) {
 
   // loadNewsletter();
 
-  // loadSnapchatModal();
+  loadSnapchatModal();
 
   // loadLikeBar();
 
@@ -306,7 +306,7 @@ jQuery(document).ready(function($) {
     $('#snapchat-modal .back').on('click tap', function(e){
           e.preventDefault();
           $("#snapchat-modal").fadeOut(500);
-          createCookie("snapchat", "read", 7);
+          createCookie("snapchat", "read", 1);
     });
   });
 
@@ -328,7 +328,7 @@ jQuery(document).ready(function($) {
   $(function() {
     $("#snapchatClose").on('click tap', function() {
           $("#snapchat-modal").fadeOut(500);
-          createCookie("snapchat", "read", 7);
+          createCookie("snapchat", "read", 1);
       });
   });
 
