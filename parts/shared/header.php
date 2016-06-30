@@ -1,18 +1,27 @@
-<?php if ( wp_is_mobile() ) : ?>
-	<!-- /60899964/Home_Mobile_Leaderboard -->
-	<div id='div-gpt-ad-1465835581876-17'>
-	<script type='text/javascript'>
-	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-17'); });
-	</script>
-	</div>>
-<?php endif; ?>
+<!-- LEADERBOARD -->
+<?php if ( is_single() ) : ?>
 
-<!-- /60899964/Home_Interstitial -->
-<div id='div-gpt-ad-1465835581876-12'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-12'); });
-</script>
-</div>
+	<?php if ( wp_is_mobile() ) : ?>
+		<!-- /60899964/Article_Mobile_Leaderboard -->
+		<div id='div-gpt-ad-1465835581876-6'>
+		<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-6'); });
+		</script>
+		</div>
+	<?php endif; ?>
+
+<?php else : ?>
+
+	<?php if ( wp_is_mobile() ) : ?>
+		<!-- /60899964/Home_Mobile_Leaderboard -->
+		<div id='div-gpt-ad-1465835581876-17'>
+		<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-17'); });
+		</script>
+		</div>
+	<?php endif; ?>
+
+<?php endif; ?>
 
 <?php if ( wp_is_mobile() ) : ?>
 
