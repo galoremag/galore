@@ -390,6 +390,6 @@ jQuery(document).ready(function($) {
     $.fn.almComplete = function(alm){
       console.log("Ajax Load More Complete!");
     };
-  })(jQuery);
+  });
 
 });
