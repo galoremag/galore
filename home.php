@@ -134,14 +134,14 @@ $url = $thumb[0];
 						<div class="nopad">
 
 								<!-- /60899964/Home_Mobile_300x250 -->
-								<div id='div-gpt-ad-1465835581876-13' style='height:250px; width:300px;'>
+								<div id='div-gpt-ad-1465835581876-13' style='height:250px; width:300px;' class="visible-xs">
 								<script type='text/javascript'>
 								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-13'); });
 								</script>
 								</div>
 
 								<!-- /60899964/Home_300x250 -->
-								<div id='div-gpt-ad-1465835581876-9' style='height:250px; width:300px;'>
+								<div id='div-gpt-ad-1465835581876-9' style='height:250px; width:300px;' class="hidden-xs">
 								<script type='text/javascript'>
 								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-9'); });
 								</script>
@@ -275,14 +275,14 @@ $url = $thumb[0];
 					<?php endforeach; ?>
 
 						<!-- /60899964/Home_300x250_970x250_pos2 -->
-						<div id='div-gpt-ad-1465835581876-10'>
+						<div id='div-gpt-ad-1465835581876-10' class="hidden-xs">
 						<script type='text/javascript'>
 						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-10'); });
 						</script>
 						</div>
 
 						<!-- /60899964/Home_Mobile_300x250_pos2 -->
-						<div id='div-gpt-ad-1465835581876-14' style='height:250px; width:300px;'>
+						<div id='div-gpt-ad-1465835581876-14' style='height:250px; width:300px;' class="visible-xs">
 						<script type='text/javascript'>
 						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-14'); });
 						</script>
@@ -313,14 +313,14 @@ $url = $thumb[0];
 	<!-- 100x100 -->
 
 		<!-- /60899964/Home_Mobile_OOP -->
-		<div id='div-gpt-ad-1465835581876-18'>
+		<div id='div-gpt-ad-1465835581876-18' class="visible-xs">
 		<script type='text/javascript'>
 		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-18'); });
 		</script>
 		</div>
 
 		<!-- /60899964/Home_OOP -->
-		<div id='div-gpt-ad-1465835581876-19'>
+		<div id='div-gpt-ad-1465835581876-19' class="hidden-xs">
 		<script type='text/javascript'>
 		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-19'); });
 		</script>
@@ -497,14 +497,14 @@ $url = $thumb[0];
 							?>
 
 								<!-- /60899964/Home_Mobile_300x250_pos3 -->
-								<div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;'>
+								<div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;' class="visible-xs">
 								<script type='text/javascript'>
 								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-15'); });
 								</script>
 								</div>
 
 								<!-- /60899964/Home_300x250_970x250_pos3 -->
-								<div id='div-gpt-ad-1465835581876-11'>
+								<div id='div-gpt-ad-1465835581876-11' class="hidden-xs">
 								<script type='text/javascript'>
 								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-11'); });
 								</script>
@@ -579,7 +579,7 @@ $url = $thumb[0];
 				</div>
 
 				<!-- /60899964/Home_Mobile_300x250_pos4 -->
-				<div id='div-gpt-ad-1467230007625-1' style='height:250px; width:300px;'>
+				<div id='div-gpt-ad-1467230007625-1' style='height:250px; width:300px;visible-xs'>
 				<script type='text/javascript'>
 				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-1'); });
 				</script>
