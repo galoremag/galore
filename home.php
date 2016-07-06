@@ -572,14 +572,14 @@ $url = $thumb[0];
 				<hr />
 
 				<!-- /60899964/Home_300x250_970x250_pos4 -->
-				<div id='div-gpt-ad-1467230007625-0'>
+				<div id='div-gpt-ad-1467230007625-0' class="hidden-xs">
 				<script type='text/javascript'>
 				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-0'); });
 				</script>
 				</div>
 
 				<!-- /60899964/Home_Mobile_300x250_pos4 -->
-				<div id='div-gpt-ad-1467230007625-1' style='height:250px; width:300px;visible-xs'>
+				<div id='div-gpt-ad-1467230007625-1' style='height:250px; width:300px;' class="visible-xs">
 				<script type='text/javascript'>
 				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-1'); });
 				</script>
