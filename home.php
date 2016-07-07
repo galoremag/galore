@@ -496,19 +496,19 @@ $url = $thumb[0];
 							endif;
 							?>
 
-								<!-- /60899964/Home_Mobile_300x250_pos3 -->
-								<div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;' class="visible-xs">
-								<script type='text/javascript'>
-								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-15'); });
-								</script>
-								</div>
+							<!-- /60899964/Home_Mobile_300x250_pos3 -->
+							<div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;' class="visible-xs">
+							<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-15'); });
+							</script>
+							</div>
 
-								<!-- /60899964/Home_300x250_970x250_pos3 -->
-								<div id='div-gpt-ad-1465835581876-11' class="hidden-xs">
-								<script type='text/javascript'>
-								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-11'); });
-								</script>
-								</div>
+							<!-- /60899964/Home_300x250_970x250_pos3 -->
+							<div id='div-gpt-ad-1465835581876-11' class="hidden-xs">
+							<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-11'); });
+							</script>
+							</div>
 
 						</div>
 					</div>
