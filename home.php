@@ -520,83 +520,92 @@ $url = $thumb[0];
 				</div>
 			</div>
 
-	<div class="everything container">
-		<div class="row-fluid">
-			<div id="content" class="col-sm-12 nopad">
-				<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> More Everything <i class="fa fa-diamond"></i></h2>
-				<hr>
+			<!-- /60899964/Home_Interstitial -->
+			<div id='div-gpt-ad-1465835581876-12' class="hidden-xs">
+			<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-12'); });
+			</script>
+			</div>
 
-				<!-- Special Post -->
+			<!-- Infinite Scroll -->
+			<div class="everything container">
+				<div class="row-fluid">
+					<div id="content" class="col-sm-12 nopad">
+						<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> More Everything <i class="fa fa-diamond"></i></h2>
+						<hr>
 
-				<?php
-					$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=sponsor');
-					foreach ($adlist as $post) :
-					setup_postdata($post);
-				?>
+						<!-- Special Post -->
 
-				<li class="post specialMd">
-					<article class="row-fluid">
-						<div class="nopad col-sm-5">
-							<div class="specialFlagMd"></i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
-							<div class="thumb">
-								<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
-							</div>
-							<h4 class="hidden-xs">Share this post</h4>
-							<ul class="post-social pull-left hidden-xs">
-								<li><a class="share-email" href="/cdn-cgi/l/email-protection#2365514a464d4763504c4e46544b4651460d404c4e1c505641494640571e1f1c534b5303574b467c574a574f460b0a18031c1d05424e5318414c475a1e1f1c534b53X the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
-								<li><a class="share-facebook" href="javascript:;" target="popup" onclick="recordShare(); window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-								<li><a class="share-twitter" href="javascript:;" target="popup" onclick="recordShare(); window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-								<li class="visible-xs"><h4>Share This Post</h4></li>
-							</ul>
+						<?php
+							$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=sponsor');
+							foreach ($adlist as $post) :
+							setup_postdata($post);
+						?>
+
+						<li class="post specialMd">
+							<article class="row-fluid">
+								<div class="nopad col-sm-5">
+									<div class="specialFlagMd"></i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
+									<div class="thumb">
+										<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
+									</div>
+									<h4 class="hidden-xs">Share this post</h4>
+									<ul class="post-social pull-left hidden-xs">
+										<li><a class="share-email" href="/cdn-cgi/l/email-protection#2365514a464d4763504c4e46544b4651460d404c4e1c505641494640571e1f1c534b5303574b467c574a574f460b0a18031c1d05424e5318414c475a1e1f1c534b53X the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
+										<li><a class="share-facebook" href="javascript:;" target="popup" onclick="recordShare(); window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+										<li><a class="share-twitter" href="javascript:;" target="popup" onclick="recordShare(); window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+										<li class="visible-xs"><h4>Share This Post</h4></li>
+									</ul>
+								</div>
+								<div class="nopadright col-sm-7">
+									<h3 class="nomartop"><a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="Permalink to <?php the_title(); ?>" target="_blank" rel="bookmark"><?php the_title(); ?></a></h3>
+									<p class="byline hidden-xs"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+									<p class="byline visible-xs pull-left nomarg"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <br /> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+
+									<div class="excerpt hidden-xs"><?php the_excerpt(); ?></div>
+
+									<p class="pull-left hidden-xs"><a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank" >Full Story <i class="fa fa-mars"></i></a></p>
+
+									<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=6277&lid=30112&csid=&c=0&itt=J4USQfJyvBnLk5r%2BTHsi9i0P9gRfJwRXEg31FnhzRp8QnEtMvSypZRZrWa0O1xyJSvBCMGULTBg%3D&ord=[RANDOM]'/>
+									<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=6277&lid=30112&csid=&c=0&ict=J4USQfJyvBlMu2SRh3iQGLuBsGuWmcAK%2FiWRKdw%2BQEX%2FEkHe9QE%2BigWjF0q7qdjweLSIcap3dHBNNLmx2VL%2BvXMbmpC%2FkCdO&ord=[RANDOM]'/></a>
+
+								</div>
+							</article>
+						</li>
+
+						<?php endforeach; ?>
+
+					  <?php wp_reset_postdata(); ?>
+
+						<hr />
+
+						<!-- /60899964/Home_300x250_970x250_pos4 -->
+						<div id='div-gpt-ad-1467230007625-0' class="hidden-xs">
+						<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-0'); });
+						</script>
 						</div>
-						<div class="nopadright col-sm-7">
-							<h3 class="nomartop"><a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="Permalink to <?php the_title(); ?>" target="_blank" rel="bookmark"><?php the_title(); ?></a></h3>
-							<p class="byline hidden-xs"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-							<p class="byline visible-xs pull-left nomarg"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <br /> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 
-							<div class="excerpt hidden-xs"><?php the_excerpt(); ?></div>
-
-							<p class="pull-left hidden-xs"><a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank" >Full Story <i class="fa fa-mars"></i></a></p>
-
-							<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=6277&lid=30112&csid=&c=0&itt=J4USQfJyvBnLk5r%2BTHsi9i0P9gRfJwRXEg31FnhzRp8QnEtMvSypZRZrWa0O1xyJSvBCMGULTBg%3D&ord=[RANDOM]'/>
-							<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=6277&lid=30112&csid=&c=0&ict=J4USQfJyvBlMu2SRh3iQGLuBsGuWmcAK%2FiWRKdw%2BQEX%2FEkHe9QE%2BigWjF0q7qdjweLSIcap3dHBNNLmx2VL%2BvXMbmpC%2FkCdO&ord=[RANDOM]'/></a>
-
+						<!-- /60899964/Home_Mobile_300x250_pos4 -->
+						<div id='div-gpt-ad-1467230007625-1' style='height:250px; width:300px;' class="visible-xs">
+						<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-1'); });
+						</script>
 						</div>
-					</article>
-				</li>
 
-				<?php endforeach; ?>
+						<hr />
 
-			  <?php wp_reset_postdata(); ?>
+					  <!-- Infinite Scroll -->
 
-				<hr />
+						<?php
+						echo do_shortcode('[ajax_load_more button_label="Loading" offset="32" post_type="post"]');
+						?>
 
-				<!-- /60899964/Home_300x250_970x250_pos4 -->
-				<div id='div-gpt-ad-1467230007625-0' class="hidden-xs">
-				<script type='text/javascript'>
-				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-0'); });
-				</script>
+						<div class="spacer40"></div>
+					</div>
 				</div>
-
-				<!-- /60899964/Home_Mobile_300x250_pos4 -->
-				<div id='div-gpt-ad-1467230007625-1' style='height:250px; width:300px;' class="visible-xs">
-				<script type='text/javascript'>
-				googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-1'); });
-				</script>
-				</div>
-
-				<hr />
-
-			  <!-- Infinite Scroll -->
-
-				<?php
-				echo do_shortcode('[ajax_load_more button_label="Loading" offset="32" post_type="post"]');
-				?>
-
-				<div class="spacer40"></div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>
+	<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>
