@@ -527,6 +527,13 @@ $url = $thumb[0];
 			</script>
 			</div>
 
+			<!-- /60899964/Home_Mobile_Interstitial -->
+			<div id='div-gpt-ad-1465835581876-16' class="visible-xs">
+			<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-16'); });
+			</script>
+			</div>
+
 			<!-- Infinite Scroll -->
 			<div class="everything container">
 				<div class="row-fluid">
