@@ -387,23 +387,22 @@ jQuery(document).ready(function($) {
 
   // Ad scripts
   $(function() {
+    var ad="";
+        ad += "<div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;' class=\"thumbnail col-sm-4 visible-xs\">";
+        ad += "          <script type='text\/javascript'>";
+        ad += "          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-15'); });";
+        ad += "          <\/script>";
+        ad += "          <\/div>";
+        ad += "";
+        ad += "          <div id='div-gpt-ad-1465835581876-11' class=\"thumbnail col-sm-4 hidden-xs\">";
+        ad += "          <script type='text\/javascript'>";
+        ad += "          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-11'); });";
+        ad += "          <\/script>";
+        ad += "          <\/div>";
+
     $.fn.almComplete = function(alm) {
       console.log("Ajax Load More Complete!");
-      $('ul.alm-listing').append(function() {
-        return (
-          <div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;' class="thumbnail col-sm-4 visible-xs">
-          <script type='text/javascript'>
-          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-15'); });
-          </script>
-          </div>
-
-          <div id='div-gpt-ad-1465835581876-11' class="thumbnail col-sm-4 hidden-xs">
-          <script type='text/javascript'>
-          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-11'); });
-          </script>
-          </div>
-        );
-      });
+      $('ul.alm-listing').append(ad);
     };
   });
 
