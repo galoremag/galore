@@ -56,6 +56,8 @@
 
 			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-interstitial' ) ); ?>
 
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-oop' ) ); ?>
+
 			<h2 class="text-center">Gimme More <i class="fa fa-diamond"></i> <span>POP</span></h2>
 			<div class="spacer20"></div>
 			<hr />

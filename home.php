@@ -312,19 +312,19 @@ $url = $thumb[0];
 
 	<!-- 100x100 -->
 
-		<!-- /60899964/Home_Mobile_OOP -->
-		<div id='div-gpt-ad-1465835581876-18' class="visible-xs">
-		<script type='text/javascript'>
-		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-18'); });
-		</script>
-		</div>
+	<!-- /60899964/Home_Mobile_OOP -->
+	<div id='div-gpt-ad-1467924264305-2' class="visible-xs">
+	<script type='text/javascript'>
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467924264305-2'); });
+	</script>
+	</div>
 
-		<!-- /60899964/Home_OOP -->
-		<div id='div-gpt-ad-1465835581876-19' class="hidden-xs">
-		<script type='text/javascript'>
-		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-19'); });
-		</script>
-		</div>
+	<!-- /60899964/Home_OOP -->
+	<div id='div-gpt-ad-1467924264305-3' class="hidden-xs">
+	<script type='text/javascript'>
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467924264305-3'); });
+	</script>
+	</div>
 
 	<!-- SEX + DATING SECTION -->
 
@@ -497,14 +497,14 @@ $url = $thumb[0];
 							?>
 
 							<!-- /60899964/Home_Mobile_300x250_pos3 -->
-							<div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;' class="visible-xs">
+							<div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;' class="thumbnail col-sm-4 visible-xs">
 							<script type='text/javascript'>
 							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-15'); });
 							</script>
 							</div>
 
 							<!-- /60899964/Home_300x250_970x250_pos3 -->
-							<div id='div-gpt-ad-1465835581876-11' class="hidden-xs">
+							<div id='div-gpt-ad-1465835581876-11' class="thumbnail col-sm-4 hidden-xs">
 							<script type='text/javascript'>
 							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-11'); });
 							</script>
@@ -583,22 +583,6 @@ $url = $thumb[0];
 						<?php endforeach; ?>
 
 					  <?php wp_reset_postdata(); ?>
-
-						<hr />
-
-						<!-- /60899964/Home_300x250_970x250_pos4 -->
-						<div id='div-gpt-ad-1467230007625-0' class="hidden-xs">
-						<script type='text/javascript'>
-						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-0'); });
-						</script>
-						</div>
-
-						<!-- /60899964/Home_Mobile_300x250_pos4 -->
-						<div id='div-gpt-ad-1467230007625-1' style='height:250px; width:300px;' class="visible-xs">
-						<script type='text/javascript'>
-						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-1'); });
-						</script>
-						</div>
 
 						<hr />
 
