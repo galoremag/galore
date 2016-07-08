@@ -402,7 +402,7 @@ jQuery(document).ready(function($) {
 
     $.fn.almComplete = function(alm) {
       console.log("Ajax Load More Complete!");
-      $('ul.alm-listing').append(ad);
+      $('#ajax-load-more ul.alm-listing').append(ad);
     };
   });
 
