@@ -282,6 +282,7 @@ jQuery(document).ready(function($) {
       $("#email-signup").show();
           $("#newsletterClose").click(function() {
               $("#email-signup").hide();
+              createCookie("newsletter", "read", 14);
           });
     });
   });
@@ -314,7 +315,7 @@ jQuery(document).ready(function($) {
     $("#newsletterClose").on('click tap', function(e) {
       e.preventDefault();
           $("#email-signup").hide();
-          createCookie("facebook", "read", 7);
+          createCookie("newsletter", "read", 14);
       });
   });
 
@@ -372,7 +373,7 @@ jQuery(document).ready(function($) {
     $("#footer-close").on('click tap', function(event) {
       event.preventDefault();
           $('#footer').toggleClass('footerOn');
-          createCookie("newsletter", "read", 14);
+          // createCookie("newsletter", "read", 14);
       });
   });
 
