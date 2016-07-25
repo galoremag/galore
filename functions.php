@@ -420,4 +420,9 @@
 	  }
 	}
 
+	$args = get_post_type_object("sponsor");
+	$args->rewrite["slug"] = "featured";
+	flush_rewrite_rules();
+	register_post_type($args->name, $args);
+
 ?>
