@@ -1,5 +1,5 @@
 <?php
-  $adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=sponsor');
+  $adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=featured');
   foreach ($adlist as $post) :
   setup_postdata($post);
 ?>
@@ -7,7 +7,7 @@
 <li class="post specialMd">
   <article class="row-fluid">
     <div class="nopad col-sm-5">
-      <div class="specialFlagMd"></i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
+      <div class="specialFlagMd"></i><?php echo get_post_meta( $post->ID, 'featured', true ); ?></div>
       <div class="thumb">
         <a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
       </div>

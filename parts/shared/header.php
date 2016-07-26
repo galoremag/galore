@@ -168,7 +168,7 @@
 
 <?php if ( wp_is_mobile() ) : ?>
 
-<?php $args = array( 'tag' => 'superhero', 'post_type' => array('sponsor', 'post'), 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
+<?php $args = array( 'tag' => 'superhero', 'post_type' => array('featured', 'post'), 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
 
 $postslist = get_posts( $args );
 
@@ -182,7 +182,7 @@ $url = $thumb[0];
 ?>
 
 <div id="superhero" style="background: url(<?php echo $url ?>) no-repeat;">
-	<div class="specialFlag"><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
+	<div class="specialFlag"><?php echo get_post_meta( $post->ID, 'featured', true ); ?></div>
 	<div class="info">
 		<h1 class="pad20 nomarg"><?php the_title(); ?></h1>
 		<div class="cta">
