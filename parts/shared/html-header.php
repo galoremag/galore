@@ -234,6 +234,11 @@
 		    googletag.defineSlot('/60899964/Home_Mobile_Leaderboard', [[300, 50], [320, 50]], 'div-gpt-ad-1465835581876-17').addService(googletag.pubads());
 				googletag.defineOutOfPageSlot('/60899964/Home_Mobile_OOP', 'div-gpt-ad-1467924264305-2').addService(googletag.pubads());
 		    googletag.defineOutOfPageSlot('/60899964/Home_OOP', 'div-gpt-ad-1467924264305-3').addService(googletag.pubads());
+
+				googletag.defineSlot('/60899964/Galore_Medium_Native', ['fluid'], 'div-gpt-ad-1470080205208-0').addService(googletag.pubads());
+		    googletag.defineSlot('/60899964/Galore_Mobile_Wallpaper', ['fluid'], 'div-gpt-ad-1470080205208-1').addService(googletag.pubads());
+		    googletag.defineSlot('/60899964/Galore_Small_Native', [200, 240], 'div-gpt-ad-1470080205208-2').addService(googletag.pubads());
+
 		    googletag.pubads().enableSingleRequest();
 		    googletag.pubads().collapseEmptyDivs();
 		    googletag.pubads().setTargeting('Category', []).setTargeting('Article', []);
