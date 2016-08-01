@@ -175,36 +175,12 @@
 
 <?php if ( wp_is_mobile() ) : ?>
 
-<?php $args = array( 'tag' => 'superhero', 'post_type' => array('featured', 'post'), 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
-
-$postslist = get_posts( $args );
-
-// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
-foreach ($postslist as $post) : setup_postdata($post);
-?>
-
-<?php
-$thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
-$url = $thumb[0];
-?>
-
-<div id="superhero" style="background: url(<?php echo $url ?>) no-repeat;">
-	<div class="specialFlag"><?php echo get_post_meta( $post->ID, 'featured', true ); ?></div>
-	<div class="info">
-		<h1 class="pad20 nomarg"><?php the_title(); ?></h1>
-		<div class="cta">
-			<a class="center-block btn btn-primary" href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title_attribute(); ?>">Read More</a>
-			<img class="specialPixel" SRC="https://ad.doubleclick.net/ddm/ad/N9556.2353504GALORE/B9575230.132670120;sz=1x1;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement">
-			<a href="https://ad.doubleclick.net/ddm/clk/305312944;132670120;o"/></a>
-		</div>
-		<p class="specialTip">Scroll to site</p>
-		<a id="scroll-down"><i class="fa fa-arrow-circle-o-down"></i></a>
-	</div>
+<!-- /60899964/Galore_Mobile_Wallpaper -->
+<div id='div-gpt-ad-1470080205208-1'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1470080205208-1'); });
+</script>
 </div>
-
-<?php endforeach; ?>
-
-<?php wp_reset_postdata(); ?>
 
 <?php endif; ?>
 
