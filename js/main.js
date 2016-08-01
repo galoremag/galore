@@ -169,9 +169,9 @@ jQuery(document).ready(function($) {
 
   // End of Tracking
 
-  // loadNewsletter();
+  loadNewsletter();
 
-  // loadSnapchatModal();
+  loadSnapchatModal();
 
   // loadLikeBar();
 
@@ -282,6 +282,7 @@ jQuery(document).ready(function($) {
       $("#email-signup").show();
           $("#newsletterClose").click(function() {
               $("#email-signup").hide();
+              createCookie("newsletter", "read", 14);
           });
     });
   });
@@ -306,7 +307,7 @@ jQuery(document).ready(function($) {
     $('#snapchat-modal .back').on('click tap', function(e){
           e.preventDefault();
           $("#snapchat-modal").fadeOut(500);
-          createCookie("snapchat", "read", 7);
+          createCookie("snapchat", "read", 1);
     });
   });
 
@@ -314,7 +315,7 @@ jQuery(document).ready(function($) {
     $("#newsletterClose").on('click tap', function(e) {
       e.preventDefault();
           $("#email-signup").hide();
-          createCookie("facebook", "read", 7);
+          createCookie("newsletter", "read", 14);
       });
   });
 
@@ -328,7 +329,7 @@ jQuery(document).ready(function($) {
   $(function() {
     $("#snapchatClose").on('click tap', function() {
           $("#snapchat-modal").fadeOut(500);
-          createCookie("snapchat", "read", 7);
+          createCookie("snapchat", "read", 1);
       });
   });
 
@@ -372,7 +373,7 @@ jQuery(document).ready(function($) {
     $("#footer-close").on('click tap', function(event) {
       event.preventDefault();
           $('#footer').toggleClass('footerOn');
-          createCookie("newsletter", "read", 14);
+          // createCookie("newsletter", "read", 14);
       });
   });
 

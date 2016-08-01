@@ -50,15 +50,12 @@
 					</div>
 					<div>
 						<ul class="top-social navbar-right tab hidden-xs">
-							<li><a href="<?php bloginfo('url'); ?>/shop" title="Galore Shop">Shop</a></li>
-							<?php if(shopp('cart','hasitems')) : ?>
-								<li><a href="<?php shopp('cart','url'); ?>" title="Galore Shopping Cart"><span class="badge"><?php shopp('cart','totalitems'); ?></span> <i class="fa fa-shopping-cart"></i></a></li>
-							<?php endif ?>
+							<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">TV <i class="fa fa-television"></i></a></li>
 							<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
 							<li><a href="https://www.facebook.com/galore" target="_blank"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 							<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">TV <i class="fa fa-television"></i></a></li>
+							<li><a href="http://kittenagency.com" target="_blank">Kitten <i class="fa fa-paw"></i></a></li>
 							<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
 							<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
 							<!-- <li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li> -->
@@ -93,10 +90,7 @@
 						<li><a href="https://www.facebook.com/galore" target="_blank"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 						<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="<?php bloginfo('url'); ?>/shop" title="Galore Shop">Shop</a></li>
-						<?php if(shopp('cart','hasitems')) : ?>
-							<li><a href="<?php shopp('cart','url'); ?>" title="Galore Shopping Cart"><span class="badge"><?php shopp('cart','totalitems'); ?></span> <i class="fa fa-shopping-cart"></i></a></li>
-						<?php endif ?>
+						<li><a href="http://kittenagency.com" target="_blank">Kitten <i class="fa fa-paw"></i></a></li>
 						<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
 						<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
 						<!-- <li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li> -->
@@ -134,14 +128,11 @@
 					<div>
 						<ul class="top-social navbar-right tab hidden-xs">
 							<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">TV <i class="fa fa-television"></i></a></li>
-							<li><a href="<?php bloginfo('url'); ?>/shop" title="Galore Shop">Shop</a></li>
-							<?php if(shopp('cart','hasitems')) : ?>
-								<li><a href="<?php shopp('cart','url'); ?>" title="Galore Shopping Cart"><span class="badge"><?php shopp('cart','totalitems'); ?></span> <i class="fa fa-shopping-cart"></i></a></li>
-							<?php endif ?>
 							<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
 							<li><a href="https://www.facebook.com/galore" target="_blank"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 							<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="http://kittenagency.com" target="_blank">Kitten <i class="fa fa-paw"></i></a></li>
 							<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
 							<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
 							<!-- <li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li> -->
@@ -184,7 +175,7 @@
 
 <?php if ( wp_is_mobile() ) : ?>
 
-<?php $args = array( 'tag' => 'superhero', 'post_type' => array('sponsor', 'post'), 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
+<?php $args = array( 'tag' => 'superhero', 'post_type' => array('featured', 'post'), 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
 
 $postslist = get_posts( $args );
 
@@ -198,7 +189,7 @@ $url = $thumb[0];
 ?>
 
 <div id="superhero" style="background: url(<?php echo $url ?>) no-repeat;">
-	<div class="specialFlag"><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
+	<div class="specialFlag"><?php echo get_post_meta( $post->ID, 'featured', true ); ?></div>
 	<div class="info">
 		<h1 class="pad20 nomarg"><?php the_title(); ?></h1>
 		<div class="cta">

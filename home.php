@@ -49,14 +49,14 @@ $url = $thumb[0];
 		<div id="glides">
 
 			<?php
-				$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=sponsor');
+				$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=featured');
 				foreach ($adlist as $post) :
 				setup_postdata($post);
 			?>
 
 			<div class="glide special">
 				<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank"><?php the_post_thumbnail('thumbnail'); ?></a>
-				<div class="specialFlagSm"></i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
+				<div class="specialFlagSm"></i><?php echo get_post_meta( $post->ID, 'featured', true ); ?></div>
 				<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank"><h3><?php the_title(); ?></h3></a>
 				<!-- <h4>
 					<?php
@@ -533,8 +533,7 @@ $url = $thumb[0];
 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-16'); });
 			</script>
 			</div>
-
-			<!-- Infinite Scroll -->
+			
 			<div class="everything container">
 				<div class="row-fluid">
 					<div id="content" class="col-sm-12 nopad">
@@ -544,7 +543,7 @@ $url = $thumb[0];
 						<!-- Special Post -->
 
 						<?php
-							$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=sponsor');
+							$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=featured');
 							foreach ($adlist as $post) :
 							setup_postdata($post);
 						?>
@@ -552,7 +551,7 @@ $url = $thumb[0];
 						<li class="post specialMd">
 							<article class="row-fluid">
 								<div class="nopad col-sm-5">
-									<div class="specialFlagMd"></i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
+									<div class="specialFlagMd"></i><?php echo get_post_meta( $post->ID, 'featured', true ); ?></div>
 									<div class="thumb">
 										<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
 									</div>
