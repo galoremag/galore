@@ -35,7 +35,7 @@ $url = $thumb[0];
 		<div class="container">
 			<div class="row-fluid">
 				<div class="hero-slider col-md-10 col-md-offset-1">
-					<?php echo do_shortcode( '[new_royalslider id="1"]' ); ?>
+					<?php echo do_shortcode( '[new_royalslider id="4"]' ); ?>
 				</div>
 			</div>
 		</div>
@@ -46,17 +46,17 @@ $url = $thumb[0];
 	<h2 class="text-center verPad20"><a href="the-latest/"><i class="fa fa-flash"></i> The Daily Dish <i class="fa fa-flash"></i></a></h2>
 	<div id="latest">
 
-		<div id="glides" class="ps-container ps-active-x">
+		<div id="glides">
 
 			<?php
-				$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=featured');
+				$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=sponsor');
 				foreach ($adlist as $post) :
 				setup_postdata($post);
 			?>
 
 			<div class="glide special">
 				<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank"><?php the_post_thumbnail('thumbnail'); ?></a>
-				<div class="specialFlagSm"></i><?php echo get_post_meta( $post->ID, 'featured', true ); ?></div>
+				<div class="specialFlagSm"></i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
 				<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank"><h3><?php the_title(); ?></h3></a>
 				<!-- <h4>
 					<?php
@@ -121,7 +121,7 @@ $url = $thumb[0];
 				</div>
 				<div class="row-fluid">
 					<div class="col-sm-12 nopad">
-					<?php echo do_shortcode( '[new_royalslider id="1"]' ); ?>
+					<?php echo do_shortcode( '[new_royalslider id="5"]' ); ?>
 					</div>
 				</div>
 				<div class="row-fluid">
@@ -428,7 +428,7 @@ $url = $thumb[0];
 				<!-- Special Post -->
 
 				<?php
-					$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=featured');
+					$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=sponsor');
 					foreach ($adlist as $post) :
 					setup_postdata($post);
 				?>
@@ -436,7 +436,7 @@ $url = $thumb[0];
 				<li class="post specialMd">
 					<article class="row-fluid">
 						<div class="nopad col-sm-5">
-							<div class="specialFlagMd"></i><?php echo get_post_meta( $post->ID, 'featured', true ); ?></div>
+							<div class="specialFlagMd"></i><?php echo get_post_meta( $post->ID, 'sponsor', true ); ?></div>
 							<div class="thumb">
 								<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
 							</div>
