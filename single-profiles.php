@@ -12,14 +12,21 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <?php
+  global $post;
+  $person = $post->post_name;
   $args = array(
     'tax_query' => array(
       array(
-        'taxonomy' => 'people', // change taxonomy
-        'field' => 'slug',
-        'terms' => 'kylie-jenner'
+        'post_type' => 'post',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'people', // change taxonomy
+            'field' => 'slug',
+            'terms' => $person
+            )
+		      )
+        )
       )
-		)
     );
 
   $myquery = new WP_Query( $args);
@@ -68,7 +75,7 @@
       ?>
 
 			<p class="text-center"></p>
-      <img class="img-circle img-responsive celebPic" src="" />
+      <img class="img-circle img-responsive celebPic" src="<?php $hero = get_field('profile_image'); if(get_field('profile_image')) { echo $hero['sizes']['large']; } ?>" />
       <h1 class="text-center"><span class="kylieTag">
       <?php
         the_title();
