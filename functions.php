@@ -358,7 +358,7 @@
 	function defer_parsing_of_js ( $url ) {
 		if ( FALSE === strpos( $url, '.js' ) ) return $url;
 		if ( strpos( $url, 'jquery.js' ) ) return $url;
-		return "$url.' async onload='myinit()";
+		return $url . " async onload='myinit()'";
 	}
 	add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
 
