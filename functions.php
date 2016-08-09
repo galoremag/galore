@@ -420,4 +420,12 @@
 	  }
 	}
 
+
+	// Custom CSS for Admin Pages
+	add_action('admin_head', 'admin_styles');
+
+	function admin_styles() {
+	  echo '<link rel="stylesheet" href="admin-style.css" type="text/css" media="all" />';
+	}
+
 ?>
