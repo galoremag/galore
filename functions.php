@@ -422,10 +422,13 @@
 
 
 	// Custom CSS for Admin Pages
-	add_action('admin_head', 'admin_styles');
+	function registerCustomAdminCss() {
+		$src = "admin-style.css";
+		$handle = "customAdminCss";
+		wp_register_script($handle, $src);
+		wp_enqueue_style($handle, $src, array(), false, false);
+  }
 
-	function admin_styles() {
-	  echo '<link rel="stylesheet" href="admin-style.css" type="text/css" media="all" />';
-	}
+  add_action('admin_head', 'registerCustomAdminCss');
 
 ?>
