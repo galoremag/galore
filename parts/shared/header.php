@@ -25,7 +25,7 @@
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<div id="modal-nav-button" class="nav-button pull-left">
-							<div id="nav-button"><a href="#" class="hmbrgr" onClick="menuToggle()"></a></div>
+							<div id="nav-button"><a href="#" id="hmbrgr" class="hmbrgr"></a></div>
 						</div>
 						<div id="site-search" class="pull-left hidden-xs">
 							<!-- <?php get_search_form(); ?> -->
@@ -102,7 +102,7 @@
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<div id="modal-nav-button" class="nav-button pull-left">
-							<div id="nav-button"><a href="#" class="hmbrgr" onClick="menuToggle()"></a></div>
+							<div id="nav-button"><a href="#" id="hmbrgr" class="hmbrgr"></a></div>
 						</div>
 						<div id="site-search" class="pull-left hidden-xs">
 							<!-- <?php get_search_form(); ?> -->
