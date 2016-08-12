@@ -518,7 +518,13 @@
 		background-size: 400px 533px
 	}
 	.jumbotron {
-		background: url(http://res.cloudinary.com/galore/image/upload/c_scale,dpr_2.0,f_auto,fl_lossy.progressive,q_60,w_1200/v1462255898/galore/backgrounds/unknown.jpg) no-repeat;
+		// background: url(http://res.cloudinary.com/galore/image/upload/c_scale,dpr_2.0,f_auto,fl_lossy.progressive,q_60,w_1200/v1462255898/galore/backgrounds/unknown.jpg) no-repeat;
+		background: #9dff0b; /* Old browsers */
+	  background: -moz-linear-gradient(-45deg,  #9dff0b 0%, #39a9ff 29%, #9dff0b 99%); /* FF3.6-15 */
+	  background: -webkit-linear-gradient(-45deg,  #9dff0b 0%,#39a9ff 29%,#9dff0b 99%); /* Chrome10-25,Safari5.1-6 */
+	  background: linear-gradient(135deg,  #9dff0b 0%,#39a9ff 29%,#9dff0b 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dff0b', endColorstr='#9dff0b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		
 		background-size: cover;
 	  background-position: center center;
 	}
