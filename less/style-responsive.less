@@ -313,6 +313,26 @@
 	}
 }
 
+// The Real iPhone media queries
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+	.hero-slider {
+	  padding-left: 0px;
+	  padding-right: 0px;
+	  border: 0;
+	  box-shadow: 0;
+	}
+
+	.jumbotron-in .container {
+	  padding-left: 0;
+	  padding-right: 0;
+	  border: 10px solid white;
+	  box-shadow: 1px 1px 25px fade(@brand, 30%);
+	}
+}
+
 @media only screen and (max-width: 767px) {
 
 	/*iframe {
