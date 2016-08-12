@@ -137,6 +137,7 @@ $url = $thumb[0];
 						'category_name' => 'beauty,fashion',
 						'showposts' => 4,
 						'orderby' => 'date',
+						'offset' => 4,
 						'post__in'  => get_option( 'sticky_posts' ),
 						'ignore_sticky_posts' => 4
 					);
