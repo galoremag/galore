@@ -223,9 +223,10 @@
 	.nopadright {
 		padding-right: 0px;
 	}
-	// .modal-nav {
-	// 	position: relative;
-	// }
+	body.menu-open .modal-nav {
+		position: absolute;
+		top:45px;
+	}
 	#modal-nav-button {
 		width: 32px;
 		height: 32px;
@@ -321,10 +322,10 @@
 and (min-device-width : 375px)
 and (max-device-width : 667px)
 and (orientation : portrait) {
-	// .modal-nav {
-	// 	position: absolute;
-	// 	top:0;
-	// }
+	body.menu-open .modal-nav {
+		position: absolute;
+		top:45px;
+	}
 
 	.hero-slider {
 	  padding-left: 0px;
