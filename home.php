@@ -39,6 +39,9 @@ $url = $thumb[0];
 				</div>
 			</div>
 		</div>
+		<div id="jumboCredit" class="hidden-xs">
+			Artwork by <a href="https://www.instagram.com/rstheory/" target="blank">iScream</a>
+		</div>
 	</div>
 </div>
 
