@@ -348,7 +348,7 @@ body.menu-open {
 /* AUTHOR */
 
 #global-inner.author {
-	.purpleGradientFade;
+	.brandGradientFade;
 }
 
 /* SEX & DATING BACKGROUND */
@@ -362,7 +362,7 @@ body.menu-open {
 }
 
 #global-inner.sex-dating {
-	.purpleGradientFade;
+	.brandGradientFade;
 }
 
 /* POP BACKGROUND */
@@ -372,11 +372,11 @@ body.menu-open {
 }
 
 #global-inner.category-pop {
-	.purpleGradientFade;
+	.brandGradientFade;
 }
 
 #global-inner.pop {
-	.purpleGradientFade;
+	.brandGradientFade;
 }
 
 /* PARTIES BACKGROUND */
@@ -386,11 +386,11 @@ body.menu-open {
 }
 
 #global-inner.category-parties {
-	.purpleGradientFade;
+	.brandGradientFade;
 }
 
 #global-inner.parties {
-	.purpleGradientFade;
+	.brandGradientFade;
 }
 
 /* ERROR 404 BACKGROUND */
@@ -400,7 +400,7 @@ body.menu-open {
 }
 
 #global-inner.error404 {
-	.purpleGradientFade;
+	.brandGradientFade;
 }
 
 #global-container.category-health {
@@ -518,11 +518,11 @@ body.menu-open {
 }
 
 #global-inner.category-models {
-	.purpleGradientFade;
+	.brandGradientFade;
 }
 
 #global-inner.models {
-	.purpleGradientFade;
+	.brandGradientFade;
 }
 
 .models {
@@ -571,7 +571,7 @@ ul.top-social li {
 	margin: 0px 10px;
 }
 
-ul.top-social li a {color: white;}
+ul.top-social li a {color: black;}
 ul.top-social li a:hover {color:@brand;}
 
 .navbar-default {
@@ -592,7 +592,7 @@ ul.top-social li a:hover {color:@brand;}
 	width: 180px;
 	height: 132px;
 	overflow: visible;
-	background: url(images/galore-logo-short-straight-white.png) no-repeat;
+	background: url(images/galore-logo-short-straight-black.png) no-repeat;
 	background-size: 180px auto;
 	opacity: 1;
 	z-index: 999;
@@ -610,7 +610,7 @@ ul.top-social li a:hover {color:@brand;}
 }
 
 nav.shrink .navbar-brand {
-	background: url(images/galore-logo-short-straight-white.png) no-repeat;
+	background: url(images/galore-logo-short-straight-black.png) no-repeat;
 	background-size: 180px auto;
 	-webkit-transform: scale(0.5) rotate(0deg);
 	-moz-transform: scale(0.5) rotate(0deg);
@@ -621,7 +621,7 @@ nav.shrink .navbar-brand {
 }
 
 #deskNav.shrink .navbar-brand {
-	background: url(images/galore-logo-short-straight-white.png) no-repeat;
+	background: url(images/galore-logo-short-straight-black.png) no-repeat;
 	background-size: 180px auto;
 	-webkit-transform: scale(0.5) rotate(0deg);
 	-moz-transform: scale(0.5) rotate(0deg);
@@ -637,13 +637,13 @@ nav.shrink .navbar-brand {
 
 nav.shrink {
 	border-radius: 0px;
-	background: black;
+	background: white;
 	.transition;
 }
 
 #deskNav.shrink {
 	border-radius: 0px;
-	background: black;
+	background: white;
 	.transition;
 }
 
@@ -692,7 +692,7 @@ nav.shrink {
 }
 
 .navbar-default .navbar-right > li > a {
-	color: white !important;
+	color: black !important;
 	text-transform: uppercase;
 	.font1;
 	font-weight: bold;
@@ -740,14 +740,21 @@ nav.shrink {
 
 .modal-nav {
 	position: fixed;
+  display: block;
 	width: 100%;
 	height: 100%;
-	background: black;
+	background: white;
 	z-index: 99;
-	display: none;
 	overflow: scroll;
-	/*top:0;
-	left: 0;*/
+	top: -100vh;
+  left: 0;
+  .transition;
+	// left: 0;
+}
+
+body.menu-open .modal-nav {
+  top: 0px;
+	.transition;
 }
 
 .modal-nav-header {
@@ -930,7 +937,11 @@ ul.modal-nav-menu li a:hover {
 	top: 0px;
 	padding: 0px;
 	margin: 0px;
-  background: url(http://res.cloudinary.com/galore/image/upload/c_scale,f_auto,fl_lossy.progressive,q_60,w_1200/v1462255898/galore/backgrounds/unknown.jpg) no-repeat;
+  height: 100vh;
+  // background: url(http://res.cloudinary.com/galore/image/upload/c_scale,f_auto,fl_lossy.progressive,q_60,w_1200/v1462255898/galore/backgrounds/unknown.jpg) no-repeat;
+  background: url(http://res.cloudinary.com/galore/image/upload/c_scale,dpr_1.0,f_auto,fl_lossy.progressive,q_70,w_1800/v1471028878/backgrounds/pool.jpg) no-repeat;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9dff0b+0,39a9ff+29,9dff0b+99 */
+
   background-size: cover;
   background-position: center center;
 	.translate;
@@ -942,7 +953,12 @@ ul.modal-nav-menu li a:hover {
 
 .jumbotron-in {
 	padding: 120px 0px 120px 0px;
-	background: fade(@brand, 50%);
+	// background: fade(@brand, 50%);
+  background: fade(#9dff0b, 75%); /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  fade(#9dff0b, 50%) 0%, fade(#39a9ff, 75%) 29%, fade(#9dff0b, 75%) 99%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  fade(#9dff0b, 75%) 0%,fade(#39a9ff, 75%) 29%,fade(#9dff0b, 75%) 99%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  fade(#9dff0b, 75%) 0%,fade(#39a9ff, 75%) 29%,fade(#9dff0b, 75%) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dff0b', endColorstr='#9dff0b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	width: 100%;
 	height: 100%;
 }
@@ -955,12 +971,19 @@ ul.modal-nav-menu li a:hover {
     background: none !important;
 }
 
+.hero-slider {
+  padding-left: 0px;
+  padding-right: 0px;
+  border: 10px solid white;
+  box-shadow: 1px 1px 25px fade(@brand, 30%);
+}
+
 .rsGalore {
-	box-shadow: 1px 1px 25px rgba(255,0,50,0.3);
+	// box-shadow: 1px 1px 25px fade(@brand, 30%);
 }
 
 .jumbotron .rsGalore {
-	box-shadow: 1px 1px 25px rgba(255,0,50,0.3);
+	// box-shadow: 1px 1px 25px fade(@brand, 30%);
 	/*-webkit-transform: rotate(1deg);
 	transform: rotate(1deg);*/
 }
@@ -1212,7 +1235,7 @@ ul.post-social h4 {
 }
 
 .category .rsGalore .rsText {
-	padding: 10px 20px 10px 20px;
+	padding: 100px 20px 10px 20px;
     /*background: rgba(0,0,0,0.66);*/
 }
 
@@ -1419,6 +1442,10 @@ ul.post-social h4 {
 	margin-bottom: 0px;
 }
 
+.rsContent .rsText h2 span {
+  color: white;
+}
+
 .rsContent .LightTextRight p,
 .rsContent .LightTextRight h1,
 .rsContent .LightTextRight h2,
@@ -1475,11 +1502,11 @@ ul.post-social h4 {
 
 .rsGalore .rsGCaption {
 	font-size: 32px !important;
-	padding: 10px 20px !important;
+	padding: 10px !important;
 	position: relative;
 	text-align: left;
-	background: black;
-	color: #FFF;
+	background: white;
+	color: black;
 	width: 100%;
 	.font1;
 	/*-webkit-text-stroke: 2px white;*/
@@ -1578,7 +1605,7 @@ div.catlinks {
 	background: @brand;
 	color: white;
 	padding: 3px 8px;
-	top: 15px;
+	top: 20px;
 	left: 0px;
 	z-index: 9;
 }

@@ -351,8 +351,6 @@ jQuery(document).ready(function($) {
   // Nav Button
   $(function() {
     $('#nav-button').on('click tap', function(event) {
-      $('.modal-nav').fadeToggle('show');
-      $('body').toggleClass('menu-open');
       $('.hmbrgr').click();
     });
   });
@@ -363,7 +361,13 @@ jQuery(document).ready(function($) {
       width     : 14,
       height    : 10,
       barHeight : 1,
-      barColor  : '#fff'
+      barColor  : '#fff',
+      onOpen    : function(){
+        $('body').addClass('menu-open');
+      },   // optional - callback when the hamburger is opening
+      onClose   : function(){
+        $('body').removeClass('menu-open');
+      }
     });
   });
 
@@ -374,16 +378,16 @@ jQuery(document).ready(function($) {
   $(function() {
     $('#footer-open').on('click tap', function(event) {
       event.preventDefault();
-          $('#footer').toggleClass('footerOn');
-      });
+      $('#footer').toggleClass('footerOn');
+    });
   });
 
   $(function() {
     $("#footer-close").on('click tap', function(event) {
       event.preventDefault();
-          $('#footer').toggleClass('footerOn');
-          // createCookie("newsletter", "read", 14);
-      });
+      $('#footer').toggleClass('footerOn');
+      // createCookie("newsletter", "read", 14);
+    });
   });
 
   // CLOSE Facebook LIKE BAR

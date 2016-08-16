@@ -121,7 +121,11 @@ $url = $thumb[0];
 				</div>
 				<div class="row-fluid">
 					<div class="col-sm-12 nopad">
+<<<<<<< HEAD
+					<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
+=======
 					<?php echo do_shortcode( '[new_royalslider id="1"]' ); ?>
+>>>>>>> ant
 					</div>
 				</div>
 				<div class="row-fluid">
@@ -137,6 +141,7 @@ $url = $thumb[0];
 						'category_name' => 'beauty,fashion',
 						'showposts' => 4,
 						'orderby' => 'date',
+						'offset' => 4,
 						'post__in'  => get_option( 'sticky_posts' ),
 						'ignore_sticky_posts' => 4
 					);

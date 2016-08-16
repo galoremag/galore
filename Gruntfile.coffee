@@ -18,11 +18,11 @@ module.exports = (grunt) ->
         options:
           separator: ";\n"
         src: [
-          'bower_components/bootstrap/dist/js/bootstrap.min.js'
           'bower_components/jquery/dist/jquery.min.js'
           'bower_components/jquery-cookie/jquery.cookie.js'
           'bower_components/jquery.scrollTo/jquery.scrollTo.min.js'
           'bower_components/jquery-placeholder/jquery.placeholder.min.js'
+          'bower_components/bootstrap/dist/js/bootstrap.min.js'
           'bower_components/smooth-scroll/smooth-scroll.min.js'
           'js/*.js'
         ]

@@ -167,7 +167,7 @@
 
 	.rsGalore .rsGCaption {
 		font-size: 18px !important;
-		padding: 10px 20px !important;
+		padding: 10px 10px !important;
 	}
 
 	.home-sex-dating .excerpt {
@@ -223,6 +223,10 @@
 	.nopadright {
 		padding-right: 0px;
 	}
+	body.menu-open .modal-nav {
+		position: absolute;
+		top:100px;
+	}
 	#modal-nav-button {
 		width: 32px;
 		height: 32px;
@@ -276,7 +280,7 @@
 	}
 	.rsGalore .rsGCaption {
 		font-size: 18px !important;
-		padding: 10px 15px !important;
+		padding: 10px 10px !important;
 	}
 	.rsGalore .rsTags {
 		top: 10px;
@@ -313,6 +317,35 @@
 	}
 }
 
+// The Real iPhone media queries
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+	body.menu-open .modal-nav {
+		position: absolute;
+		top:100px;
+	}
+
+	.hero-slider {
+	  padding-left: 0px;
+	  padding-right: 0px;
+	  border: 0;
+	  box-shadow: 0;
+	}
+
+	.jumbotron-in {
+		padding: 120px 10px 100px 10px;
+	}
+
+	.jumbotron-in .container {
+	  padding-left: 0;
+	  padding-right: 0;
+	  border: 10px solid white;
+	  box-shadow: 1px 1px 25px fade(@brand, 30%);
+	}
+}
+
 @media only screen and (max-width: 767px) {
 
 	/*iframe {
@@ -325,7 +358,7 @@
 		width: 140px;
 		height: 100px;
 		overflow: visible;
-		background: url(images/galore-logo-short-straight-white.png) no-repeat;
+		background: url(images/galore-logo-short-straight-black.png) no-repeat;
 		background-size: 140px auto;
 		opacity: 1;
 		z-index: 999;
@@ -337,7 +370,7 @@
 	}
 
 	nav.shrink .navbar-brand {
-		background: url(images/galore-logo-short-straight-white.png) no-repeat;
+		background: url(images/galore-logo-short-straight-black.png) no-repeat;
 		background-size: 140px auto;
 		-webkit-transform: scale(0.7);
 		-moz-transform: scale(0.7);
@@ -414,12 +447,12 @@
 	}
 
 	.home-fashion .rsGalore .rsText h2, .home-fashion .rsGalore .rsABlock h2, .home-fashion .rsGalore .rsBlock h2 {
-		.yellowBlueGradientFade;
-		font-size: 18px;
+		// .yellowBlueGradientFade;
+		font-size: 22px;
 		line-height: 19px;
 		/*color: @brand;*/
 		color: @brand !important;
-		padding: 10px;
+		padding: 60px 10px 10px 10px;
 		margin: 0 !important;
 		/*text-shadow: 1px 1px 0px rgba(255,255,0,1);*/
 	}
@@ -518,7 +551,8 @@
 		background-size: 400px 533px
 	}
 	.jumbotron {
-		background: url(http://res.cloudinary.com/galore/image/upload/c_scale,dpr_2.0,f_auto,fl_lossy.progressive,q_60,w_1200/v1462255898/galore/backgrounds/unknown.jpg) no-repeat;
+		// background: url(http://res.cloudinary.com/galore/image/upload/c_scale,dpr_2.0,f_auto,fl_lossy.progressive,q_60,w_1200/v1462255898/galore/backgrounds/unknown.jpg) no-repeat;
+		background: url(http://res.cloudinary.com/galore/image/upload/c_scale,dpr_2.0,f_auto,fl_lossy.progressive,q_70,w_1800/v1471028878/backgrounds/pool.jpg) no-repeat;
 		background-size: cover;
 	  background-position: center center;
 	}
