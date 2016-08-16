@@ -121,11 +121,7 @@ $url = $thumb[0];
 				</div>
 				<div class="row-fluid">
 					<div class="col-sm-12 nopad">
-<<<<<<< HEAD
-					<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
-=======
-					<?php echo do_shortcode( '[new_royalslider id="1"]' ); ?>
->>>>>>> ant
+						<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
 					</div>
 				</div>
 				<div class="row-fluid">
