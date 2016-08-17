@@ -147,8 +147,7 @@
 
 	// ADD ROYAL SLIDER THEME
 
-	add_filter('new_
-	slider_skins', 'new_royalslider_add_custom_skin', 10, 2);
+	add_filter('new_royalslider_skins', 'new_royalslider_add_custom_skin', 10, 2);
 	function new_royalslider_add_custom_skin($skins) {
 	      $skins['rsGalore'] = array(
 	           'label' => 'Galore Skin',
@@ -168,7 +167,7 @@
 	// MOST RECENT POSTS FROM TAG 'FEATURED'
 
 	function add_additional_posts_to_slider($slides, $options, $type) {
-	    if( $options['id'] !== 1 ) { return $slides; }
+	    if( $options['id'] !== 4 ) { return $slides; }
 
 	    $slides = array();
 
@@ -358,7 +357,7 @@
 	function defer_parsing_of_js ( $url ) {
 		if ( FALSE === strpos( $url, '.js' ) ) return $url;
 		if ( strpos( $url, 'jquery.js' ) ) return $url;
-		return $url . " async onload='myinit()'";
+		return "$url.' async onload='myinit()";
 	}
 	add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
 
@@ -409,36 +408,17 @@
 
 
 	// Hide user accounts
-	// add_action(‘template_redirect’, ‘bwp_template_redirect’);
-	//
-	// function bwp_template_redirect()
-	//
-	// {
-	//   if (is_author())
-	//
-	//   {
-	//     wp_redirect( home_url() ); exit;
-	//   }
-	// }
+	add_action(‘template_redirect’, ‘bwp_template_redirect’);
 
-	// Initialize the People taxonomy
+	function bwp_template_redirect()
 
-	// function people_init() {
-	// 	// create a new taxonomy
-	// 	register_taxonomy(
-	// 		'peopleFUNCTION',
-	// 		'post',
-	// 		array(
-	// 			'label' => __( 'PeopleFUNCTION' ),
-	// 			'rewrite' => array( 'slug' => 'people' ),
-	// 			'capabilities' => array(
-	// 				'assign_terms' => 'edit_posts',
-	// 				'edit_terms' => 'publish_posts'
-	// 			)
-	// 		)
-	// 	);
-	// }
-	// add_action( 'init', 'people_init' );
+	{
+	  if (is_author())
+
+	  {
+	    wp_redirect( home_url() ); exit;
+	  }
+	}
 
 	// Allow SVG uploads
 	function cc_mime_types($mimes) {
