@@ -521,13 +521,15 @@ $url = $thumb[0];
 						<hr>
 
 						<!-- Special Post -->
-
+						<?php if (get_option( 'ads_switcher_checkbox_field_1' ) === '1') : ?>
 						<!-- /60899964/Galore_Medium_Native -->
 						<div id='div-gpt-ad-1470080205208-0'>
 						<script>
 						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1470080205208-0'); });
 						</script>
 						</div>
+
+						<?php endif; ?>
 
 						<hr />
 
