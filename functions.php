@@ -354,12 +354,12 @@
 	add_filter( 'allowed_http_origin', '__return_true' );
 
 	// DEFER JS PARSING
-	function defer_parsing_of_js ( $url ) {
-		if ( FALSE === strpos( $url, '.js' ) ) return $url;
-		if ( strpos( $url, 'jquery.js' ) ) return $url;
-		return "$url.' async onload='myinit()";
-	}
-	add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+	// function defer_parsing_of_js ( $url ) {
+	// 	if ( FALSE === strpos( $url, '.js' ) ) return $url;
+	// 	if ( strpos( $url, 'jquery.js' ) ) return $url;
+	// 	return "$url.' async onload='myinit()";
+	// }
+	// add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
 
 
 	// Add Featured Image to WP-API Response
@@ -408,17 +408,17 @@
 
 
 	// Hide user accounts
-	add_action(‘template_redirect’, ‘bwp_template_redirect’);
-
-	function bwp_template_redirect()
-
-	{
-	  if (is_author())
-
-	  {
-	    wp_redirect( home_url() ); exit;
-	  }
-	}
+	// add_action(‘template_redirect’, ‘bwp_template_redirect’);
+	//
+	// function bwp_template_redirect()
+	//
+	// {
+	//   if (is_author())
+	//
+	//   {
+	//     wp_redirect( home_url() ); exit;
+	//   }
+	// }
 
 	// Allow SVG uploads
 	function cc_mime_types($mimes) {
