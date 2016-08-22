@@ -175,12 +175,7 @@
 
 <?php if ( wp_is_mobile() ) : ?>
 
-<!-- /60899964/Galore_Mobile_Wallpaper -->
-<div id='div-gpt-ad-1470080205208-1'>
-<script>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1470080205208-1'); });
-</script>
-</div>
+	<?php lg_unit(); ?>
 
 <?php endif; ?>
 

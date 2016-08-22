@@ -48,12 +48,7 @@ $url = $thumb[0];
 
 		<div id="glides">
 
-			<!-- /60899964/Galore_Small_Native -->
-			<div id='div-gpt-ad-1470080205208-2' style='height:240px; width:200px;'>
-			<script>
-			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1470080205208-2'); });
-			</script>
-			</div>
+			<?php sm_unit(); ?>
 
 			<?php
 				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0');
@@ -521,15 +516,7 @@ $url = $thumb[0];
 						<hr>
 
 						<!-- Special Post -->
-						<?php if (get_option( 'ads_switcher_checkbox_field_1' ) === '1') : ?>
-						<!-- /60899964/Galore_Medium_Native -->
-						<div id='div-gpt-ad-1470080205208-0'>
-						<script>
-						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1470080205208-0'); });
-						</script>
-						</div>
-
-						<?php endif; ?>
+						<?php md_unit(); ?>
 
 						<hr />
 
