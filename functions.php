@@ -408,17 +408,17 @@
 
 
 	// Hide user accounts
-	add_action(‘template_redirect’, ‘bwp_template_redirect’);
-
-	function bwp_template_redirect()
-
-	{
-	  if (is_author())
-
-	  {
-	    wp_redirect( home_url() ); exit;
-	  }
-	}
+	// add_action(‘template_redirect’, ‘bwp_template_redirect’);
+	//
+	// function bwp_template_redirect()
+	//
+	// {
+	//   if (is_author())
+	//
+	//   {
+	//     wp_redirect( home_url() ); exit;
+	//   }
+	// }
 
 	// Allow SVG uploads
 	function cc_mime_types($mimes) {
