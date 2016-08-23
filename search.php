@@ -70,6 +70,36 @@
 					<li id="page-right" class="alignright pull-right"><?php next_posts_link( '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>', '' ); ?></li>
 				</ul>
 			</div>
+			<table width="100%" cellspacing="0" cellpadding="0">
+			<tbody>
+				<tr>
+	        <td align="left">
+	            Results for <b><?php echo strip_tags($s); ?></b>
+	        </td>
+	        <td align="right">Results <?php
+						$num_cb = $wp_query->post_count;
+						$id_cb = $paged;
+						$r_cb=1;
+						$startNum_cb = $r_cb;
+						$endNum_cb = 10;
+						if($id_cb >=2) {
+						  $s_cb=$id_cb-1;
+						  $r_cb=($s_cb * 10) + 1;
+						  $startNum_cb=$r_cb;
+						  $endNum_cb=$startNum_cb + ($num_cb -1);
+						}
+
+						if (have_posts()) :
+						 echo "<b>$startNum_cb-$endNum_cb</b>";
+						endif;
+
+						$totaltime= number_format($load,4);
+
+					?> of overall <?php $search_count = 0; $search = new WP_Query("s=$s & showposts=-1"); if($search->have_posts()) : while($search->have_posts()) : $search->the_post(); $search_count++; endwhile; endif; echo "<b>$search_count</b>. (<b>$totaltime</b> seconds)";?></td>
+				</tr>
+			</tbody>
+		</table>
+			<!-- <p class="text-center">That's everything with "</span><?php echo get_search_query(); ?>" in it.</p> -->
 			<?php else: ?>
 			<h3 class="text-center"><span>Nothing found with '</span><?php echo get_search_query(); ?><span>' in it.</span></h3>
 			<?php endif; ?>
