@@ -70,7 +70,6 @@
 					<li id="page-right" class="alignright pull-right"><?php next_posts_link( '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>', '' ); ?></li>
 				</ul>
 			</div>
-			<p class="text-center">That's everything with "</span><?php echo get_search_query(); ?>" in it.</p>
 			<?php else: ?>
 			<h3 class="text-center"><span>Nothing found with '</span><?php echo get_search_query(); ?><span>' in it.</span></h3>
 			<?php endif; ?>
