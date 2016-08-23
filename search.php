@@ -61,7 +61,6 @@
 						</div>
 					</article>
 				</li>
-				<hr>
 			<?php endwhile; ?>
 			</ol>
 			<div id="post-nav">
@@ -70,7 +69,7 @@
 					<li id="page-right" class="alignright pull-right"><?php next_posts_link( '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>', '' ); ?></li>
 				</ul>
 			</div>
-			<p class="text-center">Results <?php
+			<p class="text-center">Showing results <?php
 				$num_cb = $wp_query->post_count;
 				$id_cb = $paged;
 				$r_cb=1;
@@ -89,9 +88,9 @@
 
 				$totaltime= number_format($load,4);
 
-				?> of overall <?php $search_count = 0; $search = new WP_Query("s=$s & showposts=-1"); if($search->have_posts()) : while($search->have_posts()) : $search->the_post(); $search_count++; endwhile; endif; echo "<b>$search_count</b>. (<b>$totaltime</b> seconds)";?>
+				?> out of <?php $search_count = 0; $search = new WP_Query("s=$s & showposts=-1"); if($search->have_posts()) : while($search->have_posts()) : $search->the_post(); $search_count++; endwhile; endif; echo "<b>$search_count</b>";?>
 			</p>
-		</table>
+			<hr>
 			<!-- <p class="text-center">That's everything with "</span><?php echo get_search_query(); ?>" in it.</p> -->
 			<?php else: ?>
 			<h3 class="text-center"><span>Nothing found with '</span><?php echo get_search_query(); ?><span>' in it.</span></h3>
