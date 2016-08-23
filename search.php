@@ -51,7 +51,7 @@
 
 				$totaltime= number_format($load,4);
 
-				?> out of <span><?php $search_count = 0; $search = new WP_Query("s=$s & showposts=-1"); if($search->have_posts()) : while($search->have_posts()) : $search->the_post(); $search_count++; endwhile; endif; echo "$search_count";?></span> for <span><?php echo echo get_search_query(); ?></span>.
+				?> out of <span><?php $search_count = 0; $search = new WP_Query("s=$s & showposts=-1"); if($search->have_posts()) : while($search->have_posts()) : $search->the_post(); $search_count++; endwhile; endif; echo "$search_count";?></span> for <span><?php echo get_search_query(); ?></span>.
 			</h2>
 			<hr>
 			<ol>
