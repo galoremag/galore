@@ -32,7 +32,27 @@
 			$search = new WP_Query($search_query);
 
 			if ( have_posts() ): ?>
-			<h2><span><?php $num = $wp_query->post_count; if (have_posts()) : echo $num; endif;?> Results for '</span><?php echo get_search_query(); ?><span>'</span></h2>
+			<h2 class="text-center">Showing results <?php
+				$num_cb = $wp_query->post_count;
+				$id_cb = $paged;
+				$r_cb=1;
+				$startNum_cb = $r_cb;
+				$endNum_cb = 10;
+				if($id_cb >=2) {
+				  $s_cb=$id_cb-1;
+				  $r_cb=($s_cb * 10) + 1;
+				  $startNum_cb=$r_cb;
+				  $endNum_cb=$startNum_cb + ($num_cb -1);
+				}
+
+				if (have_posts()) :
+				 echo "<b>$startNum_cb-$endNum_cb</b>";
+				endif;
+
+				$totaltime= number_format($load,4);
+
+				?> out of <span><?php $search_count = 0; $search = new WP_Query("s=$s & showposts=-1"); if($search->have_posts()) : while($search->have_posts()) : $search->the_post(); $search_count++; endwhile; endif; echo "$search_count";?></span> for <span><?php echo echo get_search_query(); ?></span>.
+			</h2>
 			<hr>
 			<ol>
 			<?php while ( have_posts() ) : the_post(); ?>
