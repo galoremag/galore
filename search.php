@@ -61,9 +61,10 @@
 						</div>
 					</article>
 				</li>
+				<hr>
 			<?php endwhile; ?>
 			</ol>
-			<div id="post-nav">
+			<div id="post-nav" style="clear:both">
 				<ul>
 					<li id="page-left" class="alignleft pull-left"><?php previous_posts_link( '<h4><i class="fa fa-chevron-left"></i> &nbsp; PREV</h4>' ); ?></li>
 					<li id="page-right" class="alignright pull-right"><?php next_posts_link( '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>', '' ); ?></li>
@@ -91,6 +92,7 @@
 				?> out of <?php $search_count = 0; $search = new WP_Query("s=$s & showposts=-1"); if($search->have_posts()) : while($search->have_posts()) : $search->the_post(); $search_count++; endwhile; endif; echo "<b>$search_count</b>";?>
 			</p>
 			<hr>
+
 			<!-- <p class="text-center">That's everything with "</span><?php echo get_search_query(); ?>" in it.</p> -->
 			<?php else: ?>
 			<h3 class="text-center"><span>Nothing found with '</span><?php echo get_search_query(); ?><span>' in it.</span></h3>
