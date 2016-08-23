@@ -1,7 +1,7 @@
 <?php
 /**
  * Search results page
- * 
+ *
  * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
  * @package 	WordPress
@@ -18,7 +18,7 @@
 			<?php
 			global $query_string;
 			global $wp_query;
-			
+
 			$total_results = $wp_query->found_posts;
 
 			$query_args = explode("&", $query_string);
@@ -30,9 +30,9 @@
 			} // foreach
 
 			$search = new WP_Query($search_query);
-			
+
 			if ( have_posts() ): ?>
-			<h2><span><?php $num = $wp_query->post_count; if (have_posts()) : echo $num; endif;?> Results for '</span><?php echo get_search_query(); ?><span>'</span></h2>	
+			<h2><span><?php $num = $wp_query->post_count; if (have_posts()) : echo $num; endif;?> Results for '</span><?php echo get_search_query(); ?><span>'</span></h2>
 			<hr>
 			<ol>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -64,22 +64,21 @@
 				<hr>
 			<?php endwhile; ?>
 			</ol>
+			<div id="post-nav">
+				<ul>
+					<li id="page-left" class="alignleft pull-left"><?php previous_posts_link( '<h4><i class="fa fa-chevron-left"></i> &nbsp; PREV</h4>' ); ?></li>
+					<li id="page-right" class="alignright pull-right"><?php next_posts_link( '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>', '' ); ?></li>
+				</ul>
+			</div>
 			<p class="text-center">That's everything with "</span><?php echo get_search_query(); ?>" in it.</p>
 			<?php else: ?>
 			<h3 class="text-center"><span>Nothing found with '</span><?php echo get_search_query(); ?><span>' in it.</span></h3>
 			<?php endif; ?>
 
 			<h2 class="text-center pad20">Recent Stories</h2>
-			<?php 
+			<?php
 			echo do_shortcode('[ajax_load_more post_type="post" orderby="date" button_label="Loading"]');
 			?>
-
-			<!-- <div id="post-nav">
-				<ul>
-					<li id="page-left" class="alignleft pull-left"><?php previous_posts_link( '<h4><i class="fa fa-chevron-left"></i> &nbsp; PREV</h4>' ); ?></li>
-					<li id="page-right" class="alignright pull-right"><?php next_posts_link( '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>', '' ); ?></li>
-				</ul>
-			</div> -->
 			<div class="spacer40"></div>
 		</div>
 	</div>
