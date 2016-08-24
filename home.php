@@ -6,7 +6,13 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <?php
-$args = array( 'tag' => 'superhero', 'post_type' => 'post', 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
+$args = array(
+	'tag' => 'superhero',
+	'post_type' => 'post',
+	'showposts' => 1,
+	'orderby' => 'date',
+	'order' => 'DESC'
+);
 
 $postslist = get_posts( $args );
 
@@ -76,7 +82,26 @@ $url = $thumb[0];
 		  <?php wp_reset_postdata(); ?>
 
 			<?php
-				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0');
+				$args = array(
+					// 'numberposts' => 20,
+					'posts_per_page' => 20,
+					'order' => 'DESC',
+					'orderby' => 'date',
+					'offset' => 0,
+					'tax_query' => array(
+			      array(
+			        'post_type' => 'post',
+			        'tax_query' => array(
+			          array(
+			            'taxonomy' => 'homepage', // change taxonomy
+			            'field' => 'slug',
+			            'terms' => $homepage
+			            )
+					      )
+			        )
+			      )
+				);
+				$postslist = get_posts($args);
 				foreach ($postslist as $post) :
 				setup_postdata($post);
 			?>
