@@ -5,28 +5,8 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<?php
-$args = array( 'tag' => 'superhero', 'post_type' => 'post', 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
-
-$postslist = get_posts( $args );
-
-// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
-foreach ($postslist as $post) : setup_postdata($post);
-?>
-
-<?php
-$thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
-$url = $thumb[0];
-?>
-
-
-<a id="superhero" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" style="background: url(<?php echo $url ?>) no-repeat;">
-	<h1 class="pad40 col-md-6"><?php the_title(); ?></h1>
-</a>
-<a id="scroll-down"><i class="fa fa-arrow-circle-o-down"></i></a>
-
-<img class="specialPixel" SRC="https://ad.doubleclick.net/ddm/ad/N9556.2353504GALORE/B9575230.132670120;sz=1x1;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement" />
-<a href="https://ad.doubleclick.net/ddm/clk/305312944;132670120;o">
+<!-- SUPERHERO -->
+<?php lg_unit(); ?>
 
 <?php endforeach; ?>
 
