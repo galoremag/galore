@@ -13,7 +13,7 @@
 
 <div class="container-fluid nopad">
 	<div class="row-fluid">
-		<div id="content" class="col-md-8 col-sm-12 container-fixed">
+		<div id="content" class="col-md-8 col-sm-12">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article>
 				<?php setPostViews(get_the_ID()); ?>
@@ -64,11 +64,8 @@
 			<div class="spacer20"></div>
 			<hr />
 			<div class="spacer20"></div>
-			<ul id="related-posts" class="row-fluid">
 
 				<!-- Special Post -->
-
-				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
 
 				<!­­ cmnUNT | Begin ad tag ­­>
 				<div id="cmn_ad_tag_content" class="text-center">
