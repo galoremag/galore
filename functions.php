@@ -405,7 +405,7 @@
 	}
 
 	add_theme_support( 'title-tag' );
-
+	add_theme_support('auto-load-next-post');
 
 	// Hide user accounts
 	// add_action(‘template_redirect’, ‘bwp_template_redirect’);
