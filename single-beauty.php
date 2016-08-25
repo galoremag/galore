@@ -141,14 +141,13 @@
 
 				<hr />
 
-			    <?php
-			    	// if($post_ids){
-					// 	//Implode the posts and set a variable to pass to our exclude param.
-					// 	$postsNotIn = implode(",", $post_ids);
-					// }
+				<div id="post-nav" style="clear:both">
+					<ul>
+						<li id="page-left" class="alignleft pull-left"><?php previous_posts_link( '<h4><i class="fa fa-chevron-left"></i> &nbsp; PREV</h4>' ); ?></li>
+						<li id="page-right" class="alignright pull-right"><?php next_posts_link( '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>', '' ); ?></li>
+					</ul>
+				</div>
 
-					echo do_shortcode('[ajax_load_more orderby="date" offset="4" category="beauty" exclude="'.$wp_query->post->ID.'" button_label="Loading"]');
-			    ?>
 			</ul>
 		</div>
 		<div id="sidebar-anchor"></div>
