@@ -52,10 +52,14 @@
 				</ul> -->
 			</article>
 
-			<?php posts_nav_link(); ?>
-
 			<?php endwhile; ?>
 			<!-- <hr> -->
+
+			<?php $posts = query_posts($query_string); if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+				<?php previous_post_link(); ?> | <?php next_post_link(); ?>
+
+			<?php endwhile; endif; ?>
 
 			<!­­ cmnUNT | Begin ad tag ­­>
 			<div id="cmn_ad_tag_content" class="container-fluid nopad">
