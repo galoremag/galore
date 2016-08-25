@@ -51,6 +51,14 @@
 					<li class="pull-right"><h4 class="social-title"><?php the_title(); ?></h4></li>
 				</ul> -->
 			</article>
+
+			<div id="post-nav" style="clear:both">
+				<ul>
+					<li id="page-left" class="alignleft pull-left"><?php previous_posts_link( '%link', '<h4><i class="fa fa-chevron-left"></i> &nbsp; PREV</h4>' ); ?></li>
+					<li id="page-right" class="alignright pull-right"><?php next_posts_link( '%link', '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>' ); ?></li>
+				</ul>
+			</div>
+
 			<?php endwhile; ?>
 			<!-- <hr> -->
 
@@ -62,24 +70,6 @@
 
 			<h2 class="text-center">Gimme More <i class="fa fa-bomb"></i> <span>Beauty</span></h2>
 			<div class="spacer20"></div>
-			<hr />
-			<div class="spacer20"></div>
-			<ul id="related-posts" class="row-fluid">
-
-				<!-- Special Post -->
-
-				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
-
-				<hr />
-
-				<div id="post-nav" style="clear:both">
-					<ul>
-						<li id="page-left" class="alignleft pull-left"><?php previous_posts_link( '%link', '<h4><i class="fa fa-chevron-left"></i> &nbsp; PREV</h4>' ); ?></li>
-						<li id="page-right" class="alignright pull-right"><?php next_posts_link( '%link', '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>' ); ?></li>
-					</ul>
-				</div>
-
-			</ul>
 		</div>
 		<div id="sidebar-anchor"></div>
 		<div id="sidebar" class="sidebar col-md-4 hidden-xs hidden-sm">
