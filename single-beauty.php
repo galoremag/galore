@@ -54,8 +54,8 @@
 
 			<div id="post-nav" style="clear:both">
 				<ul>
-					<li id="page-left" class="alignleft pull-left"><?php previous_posts_link( '%link', '<h4><i class="fa fa-chevron-left"></i> &nbsp; PREV</h4>' ); ?></li>
-					<li id="page-right" class="alignright pull-right"><?php next_posts_link( '%link', '<h4>NEXT &nbsp; <i class="fa fa-chevron-right"></i></h4>' ); ?></li>
+					<li id="page-left" class="alignleft pull-left"><?php previous_posts_link(); ?></li>
+					<li id="page-right" class="alignright pull-right"><?php next_posts_link(); ?></li>
 				</ul>
 			</div>
 
