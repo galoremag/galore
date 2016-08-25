@@ -89,16 +89,16 @@ jQuery(document).ready(function($) {
 
   // setTimeout(loadLikeBar, 22000);
 
-  function sticky_relocate() {
-    var window_height = window.innerHeight;
-      var window_top = $(window).scrollTop();
-      var div_top = $('#sidebar-anchor').offset().top;
-      if (window_top > (div_top - 50)) {
-          $('#sidebar').addClass('sticky').css({'height': window_height, 'overflow':'scroll'});
-      } else {
-          $('#sidebar').removeClass('sticky');
-      }
-  }
+  // function sticky_relocate() {
+  //   var window_height = window.innerHeight;
+  //     var window_top = $(window).scrollTop();
+  //     var div_top = $('#sidebar-anchor').offset().top;
+  //     if (window_top > (div_top - 50)) {
+  //         $('#sidebar').addClass('sticky').css({'height': window_height, 'overflow':'scroll'});
+  //     } else {
+  //         $('#sidebar').removeClass('sticky');
+  //     }
+  // }
 
   function isTouchDevice() {
     return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
@@ -258,19 +258,19 @@ jQuery(document).ready(function($) {
   });
 
   // Sticky Sidebar
-  $(function() {
-    var target = $('#global-container');
-    if (target.is('.tag,.category,.single')) {
-      if (isTouchDevice()===true) {
-        return;
-      } else {
-          $(window).scroll(sticky_relocate);
-          sticky_relocate();
-      }
-    } else {
-      return;
-    }
-  });
+  // $(function() {
+  //   var target = $('#global-container');
+  //   if (target.is('.tag,.category,.single')) {
+  //     if (isTouchDevice()===true) {
+  //       return;
+  //     } else {
+  //         $(window).scroll(sticky_relocate);
+  //         sticky_relocate();
+  //     }
+  //   } else {
+  //     return;
+  //   }
+  // });
 
   /////////////////////
   ////// MODALS  //////
