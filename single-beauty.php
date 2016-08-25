@@ -14,7 +14,7 @@
 <div class="container-fluid nopad">
 	<div class="row-fluid">
 		<div id="content" class="col-md-8 col-sm-12 container-fixed">
-			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); posts_nav_link();?>
 			<article>
 				<?php setPostViews(get_the_ID()); ?>
 				<div class="single-featured-image">
@@ -51,13 +51,6 @@
 					<li class="pull-right"><h4 class="social-title"><?php the_title(); ?></h4></li>
 				</ul> -->
 			</article>
-
-			<div id="post-nav" style="clear:both">
-				<ul>
-					<li id="page-left" class="alignleft pull-left"><?php previous_posts_link(); ?></li>
-					<li id="page-right" class="alignright pull-right"><?php next_posts_link(); ?></li>
-				</ul>
-			</div>
 
 			<?php endwhile; ?>
 			<!-- <hr> -->
