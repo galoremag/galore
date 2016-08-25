@@ -146,8 +146,8 @@
 					// 	//Implode the posts and set a variable to pass to our exclude param.
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
-
-					echo do_shortcode('[ajax_load_more orderby="date" offset="4" category="beauty" exclude="'.$wp_query->post->ID.'" button_label="Loading"]');
+					echo do_shortcode('[ajax_load_more previous_post="true" previous_post_id="'.$wp_query->post->ID.'" post_type="post" button_label="Loading" category="beauty"]');
+					// echo do_shortcode('[ajax_load_more orderby="date" offset="4" category="beauty" exclude="'.$wp_query->post->ID.'" button_label="Loading"]');
 			    ?>
 			</ul>
 		</div>
