@@ -71,7 +71,7 @@
 				</div>
 				<div class="row-fluid">
 					<div class="col-sm-12 nopad">
-					<?php echo do_shortcode( '[new_royalslider id="5"]' ); ?>
+					<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
 					</div>
 				</div>
 				<div class="row-fluid">
@@ -161,7 +161,7 @@
 						'category_name' => 'beauty,fashion',
 						'showposts' => 2,
 						'orderby' => 'date',
-						'offset' => 1,
+						'offset' => 4,
 						'post__in'  => get_option( 'sticky_posts' ),
 						'ignore_sticky_posts' => 2
 					);

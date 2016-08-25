@@ -4,7 +4,9 @@
 /*@brand : #FA7470; Hot Pink*/
 /*@brand   : #66ccff; Valfre*/
 /*@brand   : #CF3569; iScream*/
-@brand : #CA5A74;
+// @brand : #CA5A74;
+// @brand : #39a9ff;
+@brand : #FF0000;
 @yell : #fff200;
 @salmon : #FA7470;
 @galwhite : antiquewhite;
@@ -341,6 +343,15 @@ p {
 	background: -ms-linear-gradient(-45deg,  rgba(229,4,177,0.5) 0%,rgba(109,0,25,0.75) 100%); /* IE10+ */
 	background: linear-gradient(135deg,  rgba(229,4,177,0.5) 0%,rgba(109,0,25,0.75) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80e504b1', endColorstr='#bf6d0019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.brandGradientFade {
+	background-attachment: fixed;
+	background: #9dff0b; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  fade(#9dff0b, 50%) 0%, fade(#39a9ff, 50%) 29%, fade(#9dff0b, 50%) 99%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  fade(#9dff0b, 50%) 0%,fade(#39a9ff, 50%) 29%,fade(#9dff0b, 50%) 99%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  fade(#9dff0b, 50%) 0%,fade(#39a9ff, 50%) 29%,fade(#9dff0b, 50%) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dff0b', endColorstr='#9dff0b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .yellowBlueGradient {

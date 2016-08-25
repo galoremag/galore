@@ -22,7 +22,7 @@
 			<h3>Stories by <span><?php echo get_the_author(); ?></span></h3>
 			<hr>
 
-			<div class="author-info row hidden-xs">
+			<div class="author-info row-fluid hidden-xs">
 				<?php if ( get_the_author_meta( 'description' ) ) : ?>
 				<div class="author-bio col-md-8 col-md-offset-2 text-right">
 					<h3><span><?php echo get_the_author() ; ?></span></h3>
@@ -71,7 +71,7 @@
 			</ol>
 
 			<?php else: ?>
-			<h2>No posts to display for <?php echo get_the_author() ; ?></h2>	
+			<h2>No posts to display for <?php echo get_the_author() ; ?></h2>
 			<?php endif; ?>
 		</div>
 	</div>
