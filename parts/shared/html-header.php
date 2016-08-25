@@ -237,7 +237,7 @@
 
 				googletag.defineSlot('/60899964/Galore_Medium_Native', ['fluid'], 'div-gpt-ad-1470080205208-0').addService(googletag.pubads());
 		    googletag.defineSlot('/60899964/Galore_Mobile_Wallpaper', ['fluid'], 'div-gpt-ad-1470080205208-1').addService(googletag.pubads());
-		    googletag.defineSlot('/60899964/Galore_Small_Native', [200, 240], 'div-gpt-ad-1470080205208-2').addService(googletag.pubads());
+		    googletag.defineSlot('/60899964/Galore_Small_Native', [220, 240], 'div-gpt-ad-1470080205208-2').addService(googletag.pubads());
 
 		    googletag.pubads().enableSingleRequest();
 		    googletag.pubads().collapseEmptyDivs();
