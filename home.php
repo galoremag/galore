@@ -8,8 +8,6 @@
 <!-- SUPERHERO -->
 <?php lg_unit(); ?>
 
-<?php endforeach; ?>
-
 <div class="jumbotron">
 	<div class="jumbotron-in">
 		<div class="container">
