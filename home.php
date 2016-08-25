@@ -5,9 +5,6 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<!-- SUPERHERO -->
-<?php lg_unit(); ?>
-
 <div class="jumbotron">
 	<div class="jumbotron-in">
 		<div class="container">
