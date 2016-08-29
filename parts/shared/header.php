@@ -3,7 +3,7 @@
 
 	<?php if ( wp_is_mobile() ) : ?>
 		<!-- /60899964/Article_Mobile_Leaderboard -->
-		<div id='div-gpt-ad-1465835581876-6'>
+		<div id='div-gpt-ad-1465835581876-6' class="center-block text-center">
 		<script type='text/javascript'>
 		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-6'); });
 		</script>
@@ -14,7 +14,7 @@
 
 	<?php if ( wp_is_mobile() ) : ?>
 		<!-- /60899964/Home_Mobile_Leaderboard -->
-		<div id='div-gpt-ad-1465835581876-17'>
+		<div id='div-gpt-ad-1465835581876-17' class="center-block text-center">
 		<script type='text/javascript'>
 		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-17'); });
 		</script>
