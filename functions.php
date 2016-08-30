@@ -406,7 +406,7 @@
 	}
 
 	add_theme_support( 'title-tag' );
-
+	add_theme_support('auto-load-next-post');
 
 	// Hide user accounts
 	// add_action(‘template_redirect’, ‘bwp_template_redirect’);
@@ -421,24 +421,18 @@
 	//   }
 	// }
 
-	// Initialize the People taxonomy
-
-	// function people_init() {
-	// 	// create a new taxonomy
-	// 	register_taxonomy(
-	// 		'peopleFUNCTION',
-	// 		'post',
-	// 		array(
-	// 			'label' => __( 'PeopleFUNCTION' ),
-	// 			'rewrite' => array( 'slug' => 'people' ),
-	// 			'capabilities' => array(
-	// 				'assign_terms' => 'edit_posts',
-	// 				'edit_terms' => 'publish_posts'
-	// 			)
-	// 		)
-	// 	);
+	// DEBUGGIN'
+	// function debug_to_console( $data ) {
+	//
+	// 	if ( is_array( $data ) ) {
+	// 			$output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
+	// 	} else {
+	// 			$output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
+	// 	}
+	//
+	// 	echo $output;
 	// }
-	// add_action( 'init', 'people_init' );
+
 
 	// Allow SVG uploads
 	function cc_mime_types($mimes) {
