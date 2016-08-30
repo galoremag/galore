@@ -55,11 +55,9 @@
 			<?php endwhile; ?>
 			<!-- <hr> -->
 
-			<!­­ cmnUNT | Begin ad tag ­­>
-			<div id="cmn_ad_tag_content" class="container-fluid nopad">
-				<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
-			</div>
-			<!­­ cmnUNT | End ad tag ­­>
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-interstitial' ) ); ?>
+
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-oop' ) ); ?>
 
 			<h2 class="text-center">Gimme More <i class="fa fa-diamond"></i> <span>NYFW</span></h2>
 			<div class="spacer20"></div>
@@ -69,11 +67,7 @@
 
 				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
 
-				<!­­ cmnUNT | Begin ad tag ­­>
-				<div id="cmn_ad_tag_content" class="text-center">
-					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-				</div>
-				<!­­ cmnUNT | End ad tag ­­>
+				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
 
 				<hr />
 
@@ -116,11 +110,7 @@
 
 				<hr />
 
-				<!­­ cmnUNT | Begin ad tag ­­>
-				<div id="cmn_ad_tag_content" class="text-center">
-					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-				</div>
-				<!­­ cmnUNT | End ad tag ­­>
+				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-two-300x250' ) ); ?>
 
 				<hr />
 
