@@ -260,7 +260,7 @@ jQuery(document).ready(function($) {
   // Sticky Sidebar
   $(function() {
     var target = $('#global-container');
-    if (target.is('.tag,.category,.single')) {
+    if (target.is('.tag,.category')) {
       if (isTouchDevice()===true) {
         return;
       } else {
