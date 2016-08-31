@@ -58,15 +58,13 @@
 
 			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-oop' ) ); ?>
 
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
+
 			<h2 class="text-center">Gimme More <i class="fa fa-diamond"></i> <span>Beauty</span></h2>
 			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
 
 				<!-- Special Post -->
-
-				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
-
-				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
 
 				<hr />
 
@@ -78,7 +76,7 @@
 					$cat_ID = $cat_ID[0]->cat_ID;
 					$this_post = $post->ID;
 
-					$args = array( 'category_name' => 'beauty', 'post_type' => 'post', 'showposts' => 3, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
+					$args = array( 'category_name' => 'beauty', 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
 
 					$postslist = get_posts( $args );
 
@@ -110,7 +108,7 @@
 
 				<hr />
 
-				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-two-300x250' ) ); ?>
+				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
 
 				<hr />
 
@@ -120,7 +118,7 @@
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
 
-					echo do_shortcode('[ajax_load_more offset="3" previous_post="true" previous_post_id="'.$wp_query->post->ID.'" orderby="date" category="beauty" exclude="'.$wp_query->post->ID.'" button_label="Loading" repeater="template_2" post_type="post"]');
+					echo do_shortcode('[ajax_load_more previous_post="true" previous_post_id="'.$wp_query->post->ID.'" orderby="date" category="beauty" exclude="'.$wp_query->post->ID.'" button_label="Loading" repeater="template_2" post_type="post"]');
 			    ?>
 			</ul>
 		</div>

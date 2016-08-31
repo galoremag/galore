@@ -59,15 +59,11 @@
 
 			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-oop' ) ); ?>
 
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
+
 			<h2 class="text-center">Gimme More <i class="fa fa-diamond"></i> <span>NYFW</span></h2>
 			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
-
-				<!-- Special Post -->
-
-				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
-
-				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
 
 				<hr />
 
@@ -110,7 +106,9 @@
 
 				<hr />
 
-				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-two-300x250' ) ); ?>
+				<!-- Special Post -->
+
+				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
 
 				<hr />
 
