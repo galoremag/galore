@@ -18,8 +18,8 @@
 			<article>
 				<?php setPostViews(get_the_ID()); ?>
 				<div class="single-featured-image">
-					<div class="catlinks"><?php the_category(); ?></div>
 					<?php the_post_thumbnail('large'); ?>
+					<div class="catlinks"><?php the_category(); ?></div>
 				</div>
 				<h1><?php the_title(); ?></h1>
 				<div id="social-links">

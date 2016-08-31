@@ -1290,18 +1290,23 @@ ul.post-social h4 {
 	display: inline;
 }
 
-.single-featured-image div.catlinks {
-	padding: 5px 10px;
-	background: @brand;
-	color: white;
-	top: 40px;
-	left: 15px;
+.single-featured-image img {
+  margin: 0;
+  padding: 0;
+}
+
+div.catlinks li {
+	position: absolute;
+	top: 20px;
+	left: 0px;
 	z-index: 9;
 }
 
-.single div.catlinks li {
-	position: relative;
-	float: left;
+div.single-featured-image div.catlinks li {
+  position: relative;
+  top: -40px;
+  left: -5px;
+  float: left;
 	margin-right: 10px
 }
 
@@ -1607,16 +1612,6 @@ li.related-post {
 	display: table-cell;
 }
 
-div.catlinks {
-	position: absolute;
-	background: @brand;
-	color: white;
-	padding: 3px 8px;
-	top: 20px;
-	left: 0px;
-	z-index: 9;
-}
-
 li.specialMd {
 	background: fade(@yell, 10%);
 	margin-bottom: 20px;
@@ -1656,7 +1651,13 @@ div.catlinks li {
 	margin: 0px;
 }
 
-div.catlinks li a {color:white !important;.font2;}
+div.catlinks li a {
+  background: @brand;
+  color: white !important;
+  padding: 4px 8px;
+  opacity: 1;
+  .font2;
+}
 
 div.excerpt p {
 	text-rendering: geometricPrecision;
