@@ -144,7 +144,7 @@
 		})();
 		</script>
 
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 		(function(n,a,t,i,v,e,ai){n['NativeAIObject']=v;n[v]=n[v]||function(){
 		(n[v].q=n[v].q||[]).push(arguments)},n[v].l=1*new
 		Date();e=a.createElement(t),
@@ -152,7 +152,7 @@
 		ai.parentNode.insertBefore(e,ai)})
 		(window,document,'script','https://api.native.ai/js/current/nativeai.js','nativeAI');
 		nativeAI('create','9bd8568d-6ad3-4d6a-955a-0d8a7779328e',isTestMode);
-		</script>
+		</script> -->
 
 		<!-- Begin comScore Tag -->
 		<script>
