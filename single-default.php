@@ -74,14 +74,14 @@
 					$cat_ID = $cat_ID[0]->cat_ID;
 					$this_post = $post->ID;
 
-					$args = array( 'post_type' => 'post', 'showposts' => 3, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
+					$args = array( 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
 
 					$postslist = get_posts( $args );
 
 					// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
 					foreach ($postslist as $post) : setup_postdata($post);
 					?>
-					<li class="related post pull-left col-sm-4">
+					<li class="related post pull-left col-sm-6">
 						<div class="row-fluid">
 							<div class="nopad col-sm-12">
 								<div class="catlinks"><?php the_category(); ?></div>
