@@ -18,7 +18,7 @@
 			if ( have_posts() ) :
 				while (have_posts() ) : the_post();
 					// replaced with Ajax Load More shortcode
-					echo do_shortcode('[ajax_load_more post_type="post" repeater="template_2" previous_post="true" previous_post_id="'. get_the_ID() .'" posts_per_page="1" button_label="Loading..."]');
+					echo do_shortcode('[ajax_load_more post_type="post" scroll_distance="500" repeater="template_2" previous_post="true" previous_post_id="'. get_the_ID() .'" posts_per_page="1" button_label="Loading..."]');
 				endwhile;
 			endif;
 
