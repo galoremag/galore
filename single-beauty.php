@@ -125,7 +125,7 @@
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
 
-					echo do_shortcode('[ajax_load_more previous_post="true" exclude="'.$this_post_ID.'" previous_post_id="'.$this_post_ID.'" orderby="date" category="'.$cat_ID.'" button_label="Loading" repeater="template_2" post_type="post"]');
+					echo do_shortcode('[ajax_load_more previous_post="true" offset="1" exclude="'.$this_post_ID.'" previous_post_id="'.$this_post_ID.'" orderby="date" category="'.$cat_ID.'" button_label="Loading" repeater="template_2" post_type="post"]');
 			    ?>
 			</ul>
 		</div>
