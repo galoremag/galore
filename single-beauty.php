@@ -115,6 +115,8 @@
 
 				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
 
+				<?php wp_reset_postdata(); ?>
+
 				<hr />
 
 			    <?php
