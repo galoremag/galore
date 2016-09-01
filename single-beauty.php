@@ -60,7 +60,7 @@
 					<li class="pull-right"><h4 class="social-title"><?php the_title(); ?></h4></li>
 				</ul> -->
 			</article>
-		<?php endwhile; endif; ?>
+			<?php endwhile; ?>
 			<!-- <hr> -->
 
 			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-interstitial' ) ); ?>
