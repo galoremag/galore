@@ -123,7 +123,7 @@
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
 
-					echo do_shortcode('[ajax_load_more previous_post="true" orderby="date" category="beauty" button_label="Loading" repeater="template_2" post_type="post"]');
+					echo do_shortcode('[ajax_load_more previous_post="true" offset="1" previous_post_id="'.$this_post_ID.'" orderby="date" category="beauty" button_label="Loading" repeater="template_2" post_type="post"]');
 			    ?>
 			</ul>
 		</div>
