@@ -84,7 +84,7 @@
 					$cat_ID = $cat_ID[0]->cat_ID;
 					$this_post = $post->ID;
 
-					$args = array( 'category_name' => 'pop', 'post_type' => 'post', 'showposts' => 3, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
+					$args = array( 'category_name' => 'pop', 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
 
 					$postslist = get_posts( $args );
 
