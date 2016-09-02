@@ -168,8 +168,6 @@
 
 			<?php endforeach; ?>
 
-			<?php wp_reset_postdata(); ?>
-
 			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
 
 			<hr />
