@@ -29,9 +29,17 @@ Template Name: Register
 
                     <h1 class="text-center">Register</h1>
                     <p class="font2 text-center">We promise not to spam you, we don't like it either.</p>
-                    <form action="https://galoremag.createsend.com/t/i/s/tjcj/" method="post">
+                    <form action="https://galoremag.createsend.com/t/i/s/tjcj/" method="post" class="form-horizontal">
+                        <label for="fieldName" class="control-label">Name</label>
                         <div class="form-group">
                             <input placeholder="Name" class="form-control" id="fieldName" name="cm-name" type="text" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="fieldName" class="col-sm-2 control-label">Email</label>
+                            <input placeholder="Email" class="col-sm-10 form-control" id="fieldEmail" name="cm-tjcj-tjcj" type="email" required />
+                        </div>
+                        <div class="form-group">
+                            <input placeholder="Email" class="form-control" id="fieldEmail" name="cm-tjcj-tjcj" type="email" required />
                         </div>
                         <div class="form-group">
                             <input placeholder="Email" class="form-control" id="fieldEmail" name="cm-tjcj-tjcj" type="email" required />
@@ -47,7 +55,7 @@ Template Name: Register
 
             <hr />
 
-            <?php wp_register(); ?> 
+            <?php wp_register(); ?>
     			  <!-- Infinite Scroll -->
 
     				<?php
