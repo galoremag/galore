@@ -18,8 +18,8 @@
 			<article>
 				<?php setPostViews(get_the_ID()); ?>
 				<div class="single-featured-image">
-					<div class="catlinks"><?php the_category(); ?></div>
 					<?php the_post_thumbnail('large'); ?>
+					<div class="catlinks"><?php the_category(); ?></div>
 				</div>
 				<h1><?php the_title(); ?></h1>
 				<div id="social-links">
@@ -58,15 +58,11 @@
 
 			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-oop' ) ); ?>
 
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
+
 			<h2 class="text-center">Gimme More <i class="fa fa-diamond"></i> <span>POP</span></h2>
 			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
-
-				<!-- Special Post -->
-
-				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
-
-				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
 
 				<hr />
 
@@ -85,7 +81,7 @@
 					// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
 					foreach ($postslist as $post) : setup_postdata($post);
 					?>
-					<li class="related post pull-left col-sm-4">
+					<li class="related post pull-left col-sm-6">
 						<div class="row-fluid">
 							<div class="nopad col-sm-12">
 								<div class="catlinks"><?php the_category(); ?></div>
@@ -109,7 +105,9 @@
 
 				<hr />
 
-				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-two-300x250' ) ); ?>
+				<!-- Special Post -->
+
+				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
 
 				<hr />
 

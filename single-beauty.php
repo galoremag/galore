@@ -13,13 +13,22 @@
 
 <div class="container-fluid nopad">
 	<div class="row-fluid">
-		<div id="content" class="col-md-8 col-sm-12 col-md-offset-2">
+		<?php
+			global $wp_query;
+			$cat_ID = get_the_category($post->ID);
+			$cat_ID = $cat_ID[0]->cat_ID;
+			$this_post_ID = $post->ID;
+			$this_post_slug = $post->post_name;
+			$this_post_title = $post->post_title;
+
+		?>
+		<div id="content" class="alm-reveal alm-previous-post col-md-8 col-sm-12 col-md-offset-2 post-<?php echo $this_post_ID ?>	" data-title="<?php echo $this_post_title ?>" data-url="<?php echo $this_post_slug ?>" data-id="<?php echo this_post_ID ?>">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article>
 				<?php setPostViews(get_the_ID()); ?>
 				<div class="single-featured-image">
-					<div class="catlinks"><?php the_category(); ?></div>
 					<?php the_post_thumbnail('large'); ?>
+					<div class="catlinks"><?php the_category(); ?></div>
 				</div>
 				<h1><?php the_title(); ?></h1>
 				<div id="social-links">
@@ -54,11 +63,11 @@
 			<?php endwhile; ?>
 			<!-- <hr> -->
 
-			<!­­ cmnUNT | Begin ad tag ­­>
-			<div id="cmn_ad_tag_content" class="container-fluid nopad">
-				<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
-			</div>
-			<!­­ cmnUNT | End ad tag ­­>
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-interstitial' ) ); ?>
+
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-oop' ) ); ?>
+
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
 
 			<h2 class="text-center">Gimme More <i class="fa fa-diamond"></i> <span>Beauty</span></h2>
 			<div class="spacer20"></div>
@@ -66,25 +75,13 @@
 
 				<!-- Special Post -->
 
-				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
-
-				<!­­ cmnUNT | Begin ad tag ­­>
-				<div id="cmn_ad_tag_content" class="text-center">
-					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-				</div>
-				<!­­ cmnUNT | End ad tag ­­>
-
 				<hr />
 
 				<ul class="container-fluid">
 
 					<?php
-					global $wp_query;
-					$cat_ID = get_the_category($post->ID);
-					$cat_ID = $cat_ID[0]->cat_ID;
-					$this_post = $post->ID;
 
-					$args = array( 'category_name' => 'beauty', 'post_type' => 'post', 'showposts' => 3, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
+					$args = array( 'category_name' => 'beauty', 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post_ID) );
 
 					$postslist = get_posts( $args );
 
@@ -92,7 +89,7 @@
 					foreach ($postslist as $post) : setup_postdata($post);
 					?>
 
-					<li class="related post pull-left col-sm-4">
+					<li class="related post pull-left col-sm-6">
 						<div class="row-fluid">
 							<div class="nopad col-sm-12">
 								<div class="catlinks"><?php the_category(); ?></div>
@@ -116,11 +113,9 @@
 
 				<hr />
 
-				<!­­ cmnUNT | Begin ad tag ­­>
-				<div id="cmn_ad_tag_content" class="text-center">
-					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-				</div>
-				<!­­ cmnUNT | End ad tag ­­>
+				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
+
+				<?php wp_reset_postdata(); ?>
 
 				<hr />
 
@@ -130,48 +125,9 @@
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
 
-					echo do_shortcode('[ajax_load_more offset="3" previous_post="true" previous_post_id="'.$wp_query->post->ID.'" orderby="date" category="beauty" exclude="'.$wp_query->post->ID.'" button_label="Loading" repeater="template_2" post_type="post"]');
+					echo do_shortcode('[ajax_load_more previous_post="true" offset="1" exclude="'.$this_post_ID.'" previous_post_id="'.$this_post_ID.'" orderby="date" category="'.$cat_ID.'" button_label="Loading" repeater="template_2" post_type="post"]');
 			    ?>
 			</ul>
-		</div>
-		<div id="sidebar-anchor"></div>
-		<div id="sidebar" class="sidebar col-md-4 hidden-xs hidden-sm">
-			<h2>Trending</h2>
-			<?php
-			    $args = array(
-			                'post_type'    => 'post',
-			                'category_name'=> 'beauty',
-			                'numberposts'  => 4,
-			                'orderby'      => 'meta_value',
-			                'meta_key'     => 'post_views_count',
-			                'order'        => 'DESC',
-			                'post_status'  => 'publish',
-			                'date_query' => array(
-						        array(
-						        	'column' => 'post_date_gmt',
-						            'after' => '2 month ago'
-						        )
-						    )
-			            );
-			    $ranking = 0;
-			?>
-			<?php query_posts($args); ?>
-			<?php if ( have_posts() ): ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<li class="post">
-					<article>
-						<div class="thumbnail">
-							<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
-						</div>
-						<h4 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
-						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-					</article>
-				</li>
-			<?php endwhile; ?>
-
-			<?php else: ?>
-			<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
-			<?php endif; ?>
 		</div>
 	</div>
 </div>

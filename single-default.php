@@ -18,8 +18,8 @@
 			<article>
 				<?php setPostViews(get_the_ID()); ?>
 				<div class="single-featured-image">
-					<div class="catlinks"><?php the_category(); ?></div>
 					<?php the_post_thumbnail('large'); ?>
+					<div class="catlinks"><?php the_category(); ?></div>
 				</div>
 				<h1><?php the_title(); ?></h1>
 				<div id="social-links">
@@ -54,25 +54,15 @@
 			<?php endwhile; ?>
 			<!-- <hr> -->
 
-			<!­­ cmnUNT | Begin ad tag ­­>
-			<div id="cmn_ad_tag_content" class="container-fluid nopad">
-				<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
-			</div>
-			<!­­ cmnUNT | End ad tag ­­>
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-interstitial' ) ); ?>
+
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-oop' ) ); ?>
+
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
 
 			<h2 class="text-center">Gimme <span>More</span></h2>
 			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
-
-				<!-- Special Post -->
-
-				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
-
-				<!­­ cmnUNT | Begin ad tag ­­>
-				<div id="cmn_ad_tag_content" class="text-center">
-					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-				</div>
-				<!­­ cmnUNT | End ad tag ­­>
 
 				<hr />
 
@@ -84,14 +74,14 @@
 					$cat_ID = $cat_ID[0]->cat_ID;
 					$this_post = $post->ID;
 
-					$args = array( 'post_type' => 'post', 'showposts' => 3, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
+					$args = array( 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
 
 					$postslist = get_posts( $args );
 
 					// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
 					foreach ($postslist as $post) : setup_postdata($post);
 					?>
-					<li class="related post pull-left col-sm-4">
+					<li class="related post pull-left col-sm-6">
 						<div class="row-fluid">
 							<div class="nopad col-sm-12">
 								<div class="catlinks"><?php the_category(); ?></div>
@@ -117,11 +107,9 @@
 
 				<hr />
 
-				<!­­ cmnUNT | Begin ad tag ­­>
-				<div id="cmn_ad_tag_content" class="text-center">
-					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-				</div>
-				<!­­ cmnUNT | End ad tag ­­>
+				<!-- Special Post -->
+
+				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
 
 				<hr />
 

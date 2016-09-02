@@ -180,7 +180,7 @@ jQuery(document).ready(function($) {
 
   loadNewsletter();
 
-  loadSnapchatModal();
+  // loadSnapchatModal();
 
   // loadLikeBar();
 
