@@ -23,13 +23,13 @@ Template Name: Contributor Submission
 
           <div class="row-fluid contributorHeading">
             <div class="col-sm-12">
-              <h1 class="text-center" style="font-size: 70px; font-weight: bold; letter-spacing: 5px; color: #ffffff;">Write For Us</h1>
+              <h1 class="text-center">Write For Us</h1>
             </div>
           </div>
 
           <div class="row text-center contributorStats">
             <div class="col-sm-12">
-              <h2>Contributing to the Voice of Generation-Y</h2>
+              <h2>Contributing to the Voice of Generation-Z</h2>
             </div>
             <div class="col-sm-12">
               <div class="col-sm-4">
