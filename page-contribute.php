@@ -48,14 +48,7 @@ Template Name: Contributor Submission
           </div>
 
           <div class="row text-center contributorDescriptions">
-            <div class="col-sm-12">
-              <h2>What We Seek</h2>
-            </div>
-            <div class="col-sm-12">
-              <p><span style="color: #fa7470;">Galore’s </span> contributing writers are carefully selected based on a
-                combination of talent, experience, and passion. We leave no stone unturned, and every topic,
-                be it controversial or not, is explored through a variety of lenses and perspectives.</p>
-            </div>
+            <?php the_content(); ?>
           </div>
 
           <div class="row text-center contributorForm">
@@ -79,12 +72,6 @@ Template Name: Contributor Submission
               <label class="col-xs-4 col-form-label">Email Address:</label>
               <div class="col-xs-8">
                 <input class="form-control" type="email">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-xs-4 col-form-label">Birthdate:</label>
-              <div class="col-xs-8">
-                <input class="form-control" type="date">
               </div>
             </div>
             <div class="form-group row">
@@ -117,25 +104,21 @@ Template Name: Contributor Submission
                 </label>
                 <label>
                   <input type="checkbox" value="">
-                  Health
+                  Fashion
                 </label>
                 <label>
                   <input type="checkbox" value="">
-                  Models
+                  Sex + Dating
                 </label>
               </div>
               <div class="checkbox" class="col-sm-12">
                 <label>
                   <input type="checkbox" value="">
-                  Parties
+                  Health
                 </label>
                 <label>
                   <input type="checkbox" value="">
                   Pop
-                </label>
-                <label>
-                  <input type="checkbox" value="">
-                  Sex + Dating
                 </label>
               </div>
             </div>
