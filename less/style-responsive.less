@@ -9,6 +9,12 @@
 	#cover-stories .rsGalore h1 {
 		font-size: 85px !important;
 	}
+	.darlings a.postimage, .post-grid a.postimage {
+		height: 360px !important
+	}
+	.thumb {
+		max-height: 400px;
+	}
 }
 
 /* Tablets and up (768px and up) */
@@ -507,9 +513,57 @@ and (orientation : portrait) {
 	ul#menu-footer-menu li:last-child, ul#menu-footer li:last-child {
 		display: none !important;
 	}*/
-	.thumb {
-		width: 100%;
+
+	/*== Mobile Fancy List ==*/
+
+	#global-inner.single-list {
+		overflow-x: hidden
 	}
+
+	.single-list p, .single-list h1, .single-list h3 {
+		padding: 15px;
+	}
+
+/*	.single-list .listHero h1, .single-list .listHero h3 {
+		padding: 0;
+	}*/
+
+	.listHero {
+		height: 100vh;
+	}
+
+	.listItem {
+		width: 200vh;
+		height: 100vh;
+	}
+
+	.listItem.shift {
+		position: relative;
+		left: -92vh;
+
+	}
+
+	.listHeader {
+		width: 100vh;
+		height: 100vh;
+		float: left;
+		padding: 64vh 10px 10px 10px;
+		& h1 {
+			font-size: 32px;
+		}
+	}
+
+	.listHeroBody {
+		width: 50vh;
+		height: 100vh;
+		overflow-y: scroll;
+		background: white;
+		& h1 {
+			.font6;
+			padding: 0 15px !important;
+		}
+	}
+
 	.email-signup-dialog {
 		margin-top: 20px;
 	}

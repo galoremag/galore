@@ -192,19 +192,19 @@ jQuery(document).ready(function($) {
   $('form#cart input[type=text]').css('width','auto');
 
   // FIX PLACEHOLDERS
-    $('[placeholder]').focus(function() {
-        var input = $(this);
-        if (input.val() == input.attr('placeholder')) {
-            input.val('');
-            input.removeClass('placeholder');
-        }
-    }).blur(function() {
-        var input = $(this);
-        if (input.val() == '' || input.val() == input.attr('placeholder')) {
-            input.addClass('placeholder');
-            input.val(input.attr('placeholder'));
-        }
-    }).blur();
+  $('[placeholder]').focus(function() {
+      var input = $(this);
+      if (input.val() == input.attr('placeholder')) {
+          input.val('');
+          input.removeClass('placeholder');
+      }
+  }).blur(function() {
+      var input = $(this);
+      if (input.val() == '' || input.val() == input.attr('placeholder')) {
+          input.addClass('placeholder');
+          input.val(input.attr('placeholder'));
+      }
+  }).blur();
 
   // Snappy Taps
   $(function() {
@@ -362,7 +362,6 @@ jQuery(document).ready(function($) {
     });
   });
 
-    /////////////////////
   // Footer Toggle //
   /////////////////////
 
@@ -410,5 +409,15 @@ jQuery(document).ready(function($) {
   //     $('#ajax-load-more ul.alm-listing').append(ad);
   //   };
   // });
+
+  // Fancy List Scrolling
+  $(function() {
+      if ($('#global-container').is('.tag, .category, .single')) {
+          var shareButton = document.querySelector('post-social');
+          shareButton.addEventListener('click', recordShare, false);
+      } else {
+          return;
+      }
+  });
 
 });

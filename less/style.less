@@ -226,7 +226,7 @@ h1 {
 }
 
 h1 span {
-	font-family: 'salome', serif;
+	.font6;
 	text-transform: none;
 	color: @brand;
 }
@@ -302,9 +302,27 @@ body.menu-open {
 }
 
 #global-inner.single, #global-inner.category, #global-inner.archive, #global-inner.tag, #global-inner.page {
-	.heroGradientFade;
 	min-height: 1200px;
-	padding: 0;
+	padding: 110px 0 0 0;
+}
+
+#global-container.single-list {
+	background: url(images/rstheory2.gif) repeat;
+}
+
+#global-inner.single-list {
+	min-height: 1200px;
+	padding: 110px 0 0 0;
+}
+
+.jumbotron {
+	position: relative;
+	top: 0px;
+	padding: 0px;
+	margin: 0px;
+	background: url(images/rstheory2.gif) repeat;
+	background-size: 400px 400px;
+	.translate;
 }
 
 /* THE LATEST BACKGROUND */
@@ -775,7 +793,7 @@ body.menu-open .modal-nav {
     cursor: pointer;
 }
 
-#nav-button a.hmbrgr {
+#nav-button a#hmbrgr {
 	position: relative;
 	display: inline-block;
 	pointer-events: none !important;
@@ -1701,6 +1719,62 @@ h2.stuckHead {
 	height: 50px;
 	left: 0px;
 	padding: 10px;
+}
+
+/*-- FANCY LISTS --*/
+
+html.touch .listHero {
+  background-attachment: scroll !important;
+}
+
+.single-list #content {
+	padding: 0;
+}
+
+.single-list #related-posts {
+	padding: 0 15px;
+}
+
+.single-list .listHero h1, .single-list .listHero h3 {
+	padding: 0;
+}
+
+.listHero {
+	display: block;
+	width: 100%;
+	height: 60vh;
+	padding: 0;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+.listHeader {
+	position: relative;
+	padding: 34vh 15px 15px 15px;
+	left: 0px;
+}
+
+.listHeader h1 span {
+	background: black;
+	box-shadow: 0px 0px 20px rgba(250,100,100,0.3);
+	color: white;
+	padding: 0 10px;
+}
+
+article .listHeader h3.subtitle {
+	color: white;
+}
+
+.listBody {
+	margin: 40px auto;
+}
+
+.single-list .listBody .post-social li {
+	float: left;
+	margin: 0 20px 0 0 !important;
 }
 
 /* FOOTER */

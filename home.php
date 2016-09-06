@@ -26,7 +26,17 @@
 			<?php sm_unit(); ?>
 
 			<?php
-				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0');
+
+				$postslist = query_posts( array(
+					'post_type' => array( 'post', 'list', 'featured' ),
+					'order' => 'DESC',
+					'orderby' => 'date',
+					'offset' => 0,
+					'posts_per_page' => 20,
+					'showposts' => 20 )
+				);
+
+				// $postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post');
 				foreach ($postslist as $post) :
 				setup_postdata($post);
 			?>
@@ -45,6 +55,8 @@
 			<?php endforeach; ?>
 
 			<?php wp_reset_postdata(); ?>
+
+			<!-- SECOND NEEDED? -->
 
 		</div>
 	</div>
