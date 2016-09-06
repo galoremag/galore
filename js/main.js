@@ -187,7 +187,7 @@ jQuery(document).ready(function($) {
     // Sticky Sidebar
     $(function() {
         var target = $('#global-container');
-        if (target.is('.tag,.category,.single')) {
+        if (target.is('.tag,.category')) {
             if (isTouchDevice()===true) {
                 return;
             } else if (target.is('.single-list')) {
@@ -215,7 +215,7 @@ jQuery(document).ready(function($) {
             });
         });
     });
-    
+
     $(function() {
         $('#email-signup .back').click(function(e){
             e.preventDefault();
@@ -237,14 +237,14 @@ jQuery(document).ready(function($) {
             e.preventDefault();
             $("#email-signup").hide();
             createCookie("facebook", "read", 7);
-        }); 
+        });
     });
 
     $(function() {
         $("#fbClose").click(function() {
             $("#fb-modal").fadeOut(500);
             createCookie("facebook", "read", 7);
-        }); 
+        });
     });
 
 
@@ -264,11 +264,11 @@ jQuery(document).ready(function($) {
     //////////////////////////
     /// Bootstrap Collapse ///
     //////////////////////////
-    
+
     // $('.nav-collapse a[data-toggle]').click(function() {
     //   $('.nav-collapse').css('height', '100%');
     // });
-    
+
     // $(function() {
     //  $("#main-menu").on("show", function () {
     //      $("body").addClass("menu-open");
@@ -353,9 +353,9 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // shareButton.addEventListener(shareFacebook, 'click', function() { 
+    // shareButton.addEventListener(shareFacebook, 'click', function() {
     //  console.log(shareFacebook);
-    //  // ga('send', 'event', 'button', 'click', 'share on facebook'); 
+    //  // ga('send', 'event', 'button', 'click', 'share on facebook');
     //  _kmq.push(['record', 'Share on Facebook']);
     //  _kmq.push(['record', 'Share on Facebook']);
     // });
@@ -372,4 +372,3 @@ jQuery(document).ready(function($) {
     });
 
 });
-
