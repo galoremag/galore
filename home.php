@@ -40,7 +40,7 @@
 					}
 					?>
 				</h4> -->
-				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 			</div>
 			<?php endforeach; ?>
 
