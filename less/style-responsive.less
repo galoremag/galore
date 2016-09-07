@@ -9,6 +9,12 @@
 	#cover-stories .rsGalore h1 {
 		font-size: 85px !important;
 	}
+	.darlings a.postimage, .post-grid a.postimage {
+		height: 360px !important
+	}
+	.thumb {
+		max-height: 400px;
+	}
 }
 
 /* Tablets and up (768px and up) */
@@ -344,6 +350,10 @@ and (orientation : portrait) {
 	  border: 10px solid white;
 	  box-shadow: 1px 1px 25px fade(@brand, 30%);
 	}
+
+	.listHero {
+		background-attachment: scroll;
+	}
 }
 
 @media only screen and (max-width: 767px) {
@@ -507,9 +517,57 @@ and (orientation : portrait) {
 	ul#menu-footer-menu li:last-child, ul#menu-footer li:last-child {
 		display: none !important;
 	}*/
-	.thumb {
-		width: 100%;
+
+	/*== Mobile Fancy List ==*/
+
+	#global-inner.single-list {
+		overflow-x: hidden
 	}
+
+	.single-list p, .single-list h1, .single-list h3 {
+		padding: 15px;
+	}
+
+/*	.single-list .listHero h1, .single-list .listHero h3 {
+		padding: 0;
+	}*/
+
+	.listHero {
+		height: 100vh;
+	}
+
+	.listItem {
+		width: 200vh;
+		height: 100vh;
+	}
+
+	.listItem.shift {
+		position: relative;
+		left: -92vh;
+
+	}
+
+	.listHeader {
+		width: 100vh;
+		height: 100vh;
+		float: left;
+		padding: 64vh 10px 10px 10px;
+		& h1 {
+			font-size: 32px;
+		}
+	}
+
+	.listHeroBody {
+		width: 50vh;
+		height: 100vh;
+		overflow-y: scroll;
+		background: white;
+		& h1 {
+			.font6;
+			padding: 0 15px !important;
+		}
+	}
+
 	.email-signup-dialog {
 		margin-top: 20px;
 	}
@@ -551,9 +609,8 @@ and (orientation : portrait) {
 		background-size: 400px 533px
 	}
 	.jumbotron {
-		// background: url(http://res.cloudinary.com/galore/image/upload/c_scale,dpr_2.0,f_auto,fl_lossy.progressive,q_60,w_1200/v1462255898/galore/backgrounds/unknown.jpg) no-repeat;
-		background: url(http://res.cloudinary.com/galore/image/upload/c_scale,dpr_2.0,f_auto,fl_lossy.progressive,q_70,w_1800/v1471028878/backgrounds/pool.jpg) no-repeat;
-		background-size: cover;
+		background: url(http://res.cloudinary.com/galore/image/upload/c_scale,dpr_1.0,f_auto,fl_lossy.progressive,q_70/v1471971395/backgrounds/iScream2_@2X.gif);
+		background-size: 250px 250px;
 	  background-position: center center;
 	}
 	.fashion {

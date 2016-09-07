@@ -5,31 +5,6 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<?php
-$args = array( 'tag' => 'superhero', 'post_type' => 'post', 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
-
-$postslist = get_posts( $args );
-
-// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
-foreach ($postslist as $post) : setup_postdata($post);
-?>
-
-<?php
-$thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
-$url = $thumb[0];
-?>
-
-
-<a id="superhero" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" style="background: url(<?php echo $url ?>) no-repeat;">
-	<h1 class="pad40 col-md-6"><?php the_title(); ?></h1>
-</a>
-<a id="scroll-down"><i class="fa fa-arrow-circle-o-down"></i></a>
-
-<img class="specialPixel" SRC="https://ad.doubleclick.net/ddm/ad/N9556.2353504GALORE/B9575230.132670120;sz=1x1;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement" />
-<a href="https://ad.doubleclick.net/ddm/clk/305312944;132670120;o">
-
-<?php endforeach; ?>
-
 <div class="jumbotron">
 	<div class="jumbotron-in">
 		<div class="container">
@@ -48,35 +23,20 @@ $url = $thumb[0];
 
 		<div id="glides">
 
-			<?php
-				$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=featured');
-				foreach ($adlist as $post) :
-				setup_postdata($post);
-			?>
-
-			<div class="glide special">
-				<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank"><?php the_post_thumbnail('thumbnail'); ?></a>
-				<div class="specialFlagSm"></i><?php echo get_post_meta( $post->ID, 'featured', true ); ?></div>
-				<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank"><h3><?php the_title(); ?></h3></a>
-				<!-- <h4>
-					<?php
-					if (get_post_meta($post->ID,'tagline')) {
-					echo get_post_meta($post->ID,'tagline');
-					}
-					?>
-				</h4> -->
-				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time(); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-
-				<img class="specialPixel" SRC="https://ad.doubleclick.net/ddm/ad/N9556.2353504GALORE/B9575230.132669759;sz=1x1;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement" />
-				<a href="https://ad.doubleclick.net/ddm/clk/305312745;132669759;n"/></a>
-			</div>
-
-			<?php endforeach; ?>
-
-		  <?php wp_reset_postdata(); ?>
+			<?php sm_unit(); ?>
 
 			<?php
-				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0');
+
+				$postslist = query_posts( array(
+					'post_type' => array( 'post', 'list', 'featured' ),
+					'order' => 'DESC',
+					'orderby' => 'date',
+					'offset' => 0,
+					'posts_per_page' => 20,
+					'showposts' => 20 )
+				);
+
+				// $postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0&post_type=post');
 				foreach ($postslist as $post) :
 				setup_postdata($post);
 			?>
@@ -95,6 +55,8 @@ $url = $thumb[0];
 			<?php endforeach; ?>
 
 			<?php wp_reset_postdata(); ?>
+
+			<!-- SECOND NEEDED? -->
 
 		</div>
 	</div>
@@ -128,6 +90,80 @@ $url = $thumb[0];
 					<div class="col-sm-12 spacer40"></div>
 				</div>
 				<div class="row-fluid post-grid">
+
+					<!-- 300x250 unit -->
+					<div class="thumbnail col-sm-6 horpad10">
+						<div class="nopad">
+
+								<!-- /60899964/Home_Mobile_300x250 -->
+								<div id='div-gpt-ad-1465835581876-13' style='height:250px; width:300px;' class="visible-xs">
+								<script type='text/javascript'>
+								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-13'); });
+								</script>
+								</div>
+
+								<!-- /60899964/Home_300x250 -->
+								<div id='div-gpt-ad-1465835581876-9' style='height:250px; width:300px;' class="hidden-xs">
+								<script type='text/javascript'>
+								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-9'); });
+								</script>
+								</div>
+
+						</div>
+					</div>
+
+					<!-- Posts -->
+					<?php
+					$counter = 1; //start counter
+
+					$grids = 1; //Grids per row-fluid
+
+					$args = array(
+						'category_name' => 'beauty,fashion',
+						'showposts' => 1,
+						'orderby' => 'date',
+						'post__in'  => get_option( 'sticky_posts' ),
+						'ignore_sticky_posts' => 1
+					);
+					$bsQuery = new WP_Query( $args );
+
+					if(have_posts()) :	while($bsQuery->have_posts()) :  $bsQuery->the_post();
+
+					//Show the left hand side column
+					if($counter == 1) :
+					?>
+					<div class="thumbnail col-sm-6 horpad10">
+						<div class="nopad">
+							<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+							<div class="caption">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
+				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
+				            </div>
+						</div>
+					</div>
+					<?php
+					$counter = 0;
+					endif;
+					?>
+					<?php
+					//Show the left hand side column
+					if($counter == 1) :
+					?>
+					<?php
+					$counter = 0;
+					endif;
+					?>
+					<?php
+					$counter++;
+					endwhile;
+					//Pagination can go here if you want it.
+					endif;
+					?>
+
+					<?php wp_reset_postdata(); ?>
+
+					<!-- 2nd row -->
 					<?php
 					$counter = 1; //start counter
 
@@ -135,11 +171,11 @@ $url = $thumb[0];
 
 					$args = array(
 						'category_name' => 'beauty,fashion',
-						'showposts' => 4,
+						'showposts' => 2,
 						'orderby' => 'date',
 						'offset' => 4,
 						'post__in'  => get_option( 'sticky_posts' ),
-						'ignore_sticky_posts' => 4
+						'ignore_sticky_posts' => 2
 					);
 					$bsQuery = new WP_Query( $args );
 
@@ -200,11 +236,19 @@ $url = $thumb[0];
 					</div>
 					<?php endforeach; ?>
 
-					<!­­ cmnUNT | Begin ad tag ­­>
-					<div id="cmn_ad_tag_content" class="snippet text-center">
-						<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-					</div>
-					<!­­ cmnUNT | End ad tag ­­>
+						<!-- /60899964/Home_300x250_970x250_pos2 -->
+						<div id='div-gpt-ad-1465835581876-10' class="snippet hidden-xs">
+						<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-10'); });
+						</script>
+						</div>
+
+						<!-- /60899964/Home_Mobile_300x250_pos2 -->
+						<div id='div-gpt-ad-1465835581876-14' style='height:250px; width:300px;' class="snippet visible-xs">
+						<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-14'); });
+						</script>
+						</div>
 
 					<?php
 					$args = array( 'category_name' => 'health', 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'offset' => 1 );
@@ -228,11 +272,21 @@ $url = $thumb[0];
 		</div>
 	</div>
 
-	<!­­ cmnUNT | Begin ad tag ­­>
-	<div id="cmn_ad_tag_content" class="container-fluid nopad">
-		<script type="text/javascript">cmnUNT('100x100', tile_num++);</script>
+	<!-- 100x100 -->
+
+	<!-- /60899964/Home_Mobile_OOP -->
+	<div id='div-gpt-ad-1467924264305-2' class="visible-xs">
+	<script type='text/javascript'>
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467924264305-2'); });
+	</script>
 	</div>
-	<!­­ cmnUNT | End ad tag ­­>
+
+	<!-- /60899964/Home_OOP -->
+	<div id='div-gpt-ad-1467924264305-3' class="hidden-xs">
+	<script type='text/javascript'>
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467924264305-3'); });
+	</script>
+	</div>
 
 	<!-- SEX + DATING SECTION -->
 
@@ -404,11 +458,19 @@ $url = $thumb[0];
 							endif;
 							?>
 
-							<!­­ cmnUNT | Begin ad tag ­­>
-							<div id="cmn_ad_tag_content" class="thumbnail col-md-4 text-center">
-								<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
+							<!-- /60899964/Home_Mobile_300x250_pos3 -->
+							<div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;' class="thumbnail col-sm-4 visible-xs">
+							<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-15'); });
+							</script>
 							</div>
-							<!­­ cmnUNT | End ad tag ­­>
+
+							<!-- /60899964/Home_300x250_970x250_pos3 -->
+							<div id='div-gpt-ad-1465835581876-11' class="thumbnail col-sm-4 hidden-xs">
+							<script type='text/javascript'>
+							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-11'); });
+							</script>
+							</div>
 
 						</div>
 					</div>
@@ -420,129 +482,106 @@ $url = $thumb[0];
 				</div>
 			</div>
 
-	<div class="everything container">
-		<div class="row-fluid">
-			<div id="content" class="col-sm-12 nopad">
-				<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> More Everything <i class="fa fa-diamond"></i></h2>
-				<hr>
+			<!-- /60899964/Home_Interstitial -->
+			<div id='div-gpt-ad-1465835581876-12' class="hidden-xs">
+			<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-12'); });
+			</script>
+			</div>
 
-				<!-- Special Post -->
+			<!-- /60899964/Home_Mobile_Interstitial -->
+			<div id='div-gpt-ad-1465835581876-16' class="visible-xs">
+			<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-16'); });
+			</script>
+			</div>
 
-				<?php
-					$adlist = get_posts('numberposts=1&order=DESC&orderby=date&offset=0&post_type=featured');
-					foreach ($adlist as $post) :
-					setup_postdata($post);
-				?>
+			<div class="everything container">
+				<div class="row-fluid">
+					<div id="content" class="col-sm-12 nopad">
+						<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> More Everything <i class="fa fa-diamond"></i></h2>
+						<hr>
 
-				<li class="post specialMd">
-					<article class="row-fluid">
-						<div class="nopad col-sm-5">
-							<div class="specialFlagMd"></i><?php echo get_post_meta( $post->ID, 'featured', true ); ?></div>
-							<div class="thumb">
-								<a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title(); ?>" target="_blank" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
-							</div>
-							<h4 class="hidden-xs">Share this post</h4>
-							<ul class="post-social pull-left hidden-xs">
-								<li><a class="share-email" href="/cdn-cgi/l/email-protection#2365514a464d4763504c4e46544b4651460d404c4e1c505641494640571e1f1c534b5303574b467c574a574f460b0a18031c1d05424e5318414c475a1e1f1c534b53X the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
-								<li><a class="share-facebook" href="javascript:;" target="popup" onclick="recordShare(); window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-								<li><a class="share-twitter" href="javascript:;" target="popup" onclick="recordShare(); window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-								<li class="visible-xs"><h4>Share This Post</h4></li>
-							</ul>
+						<!-- Special Post -->
+						<?php md_unit(); ?>
+
+						<hr />
+
+						<ul class="alm-listing alm-ajax">
+
+							<?php
+							$args = array( 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC' );
+
+							$postslist = get_posts( $args );
+
+							// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
+							foreach ($postslist as $post) : setup_postdata($post);
+							?>
+							<li class="post">
+								<article class="row-fluid">
+									<div class="nopad col-sm-5">
+										<div class="catlinks"><?php the_category(); ?></div>
+										<div class="thumb">
+											<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
+										</div>
+										<h4 class="hidden-xs">Share this post</h4>
+										<ul class="post-social pull-left hidden-xs">
+											<li><a class="share-email" href="mailto:Friend@somewhere.com?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
+											<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+											<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+											<li class="visible-xs"><h4>Share This Post</h4></li>
+										</ul>
+									</div>
+									<div class="nopadright col-sm-7">
+										<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+										<p class="byline hidden-xs"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+										<p class="byline visible-xs pull-left nomarg"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <br /> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+										<ul class="post-social visible-xs">
+											<li><a class="share-email" href="mailto:Friend@somewhere.com?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
+											<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+											<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+										</ul>
+
+										<div class="excerpt hidden-xs"><?php the_excerpt(); ?></div>
+
+										<p class="pull-left hidden-xs"><a href="<?php esc_url( the_permalink() ); ?>">Full Story <i class="fa fa-mars"></i></a></p>
+
+									</div>
+								</article>
+							</li>
+							<?php endforeach; ?>
+
+						</ul>
+
+						<hr />
+
+						<!-- /60899964/Home_300x250_970x250_pos4 -->
+						<div id='div-gpt-ad-1467230007625-0' class="hidden-xs text-center">
+						<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-0'); });
+						</script>
 						</div>
-						<div class="nopadright col-sm-7">
-							<h3 class="nomartop"><a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="Permalink to <?php the_title(); ?>" target="_blank" rel="bookmark"><?php the_title(); ?></a></h3>
-							<p class="byline hidden-xs"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-							<p class="byline visible-xs pull-left nomarg"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <br /> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 
-							<div class="excerpt hidden-xs"><?php the_excerpt(); ?></div>
-
-							<p class="pull-left hidden-xs"><a href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" target="_blank" >Full Story <i class="fa fa-mars"></i></a></p>
-
-							<img class="specialPixel" height='1' width='1' src='https://tracking.jetpackdigital.com/jpt?sid=1242&oid=6277&lid=30112&csid=&c=0&itt=J4USQfJyvBnLk5r%2BTHsi9i0P9gRfJwRXEg31FnhzRp8QnEtMvSypZRZrWa0O1xyJSvBCMGULTBg%3D&ord=[RANDOM]'/>
-							<a href='https://tracking.jetpackdigital.com/jpc?sid=1242&oid=6277&lid=30112&csid=&c=0&ict=J4USQfJyvBlMu2SRh3iQGLuBsGuWmcAK%2FiWRKdw%2BQEX%2FEkHe9QE%2BigWjF0q7qdjweLSIcap3dHBNNLmx2VL%2BvXMbmpC%2FkCdO&ord=[RANDOM]'/></a>
-
+						<!-- /60899964/Home_Mobile_300x250_pos4 -->
+						<div id='div-gpt-ad-1467230007625-1' style='height:250px; width:300px;' class="visible-xs text-center">
+						<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-1'); });
+						</script>
 						</div>
-					</article>
-				</li>
 
-				<?php endforeach; ?>
+						<hr />
 
-			    <?php wp_reset_postdata(); ?>
+					  <!-- Infinite Scroll -->
 
-			    <!­­ cmnUNT | Begin ad tag ­­>
-				<div id="cmn_ad_tag_content" class="text-center">
-					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
+						<?php
+						echo do_shortcode('[ajax_load_more button_label="Loading" offset="32" post_type="post"]');
+						?>
+
+						<div class="spacer40"></div>
+					</div>
 				</div>
-				<!­­ cmnUNT | End ad tag ­­>
-
-				<hr />
-
-				<ul class="alm-listing alm-ajax">
-
-					<?php
-					$args = array( 'category_name' => 'beauty', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC' );
-
-					$postslist = get_posts( $args );
-
-					// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
-					foreach ($postslist as $post) : setup_postdata($post);
-					?>
-					<li class="post">
-						<article class="row-fluid">
-							<div class="nopad col-sm-5">
-								<div class="catlinks"><?php the_category(); ?></div>
-								<div class="thumb">
-									<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
-								</div>
-								<h4 class="hidden-xs">Share this post</h4>
-								<ul class="post-social pull-left hidden-xs">
-									<li><a class="share-email" href="mailto:Friend@somewhere.com?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
-									<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-									<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-									<li class="visible-xs"><h4>Share This Post</h4></li>
-								</ul>
-							</div>
-							<div class="nopadright col-sm-7">
-								<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-								<p class="byline hidden-xs"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-								<p class="byline visible-xs pull-left nomarg"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <br /> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-								<ul class="post-social visible-xs">
-									<li><a class="share-email" href="mailto:Friend@somewhere.com?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
-									<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-									<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-								</ul>
-
-								<div class="excerpt hidden-xs"><?php the_excerpt(); ?></div>
-
-								<p class="pull-left hidden-xs"><a href="<?php esc_url( the_permalink() ); ?>">Full Story <i class="fa fa-mars"></i></a></p>
-
-							</div>
-						</article>
-					</li>
-					<?php endforeach; ?>
-
-				</ul>
-
-				<hr />
-
-				<!­­ cmnUNT | Begin ad tag ­­>
-				<div id="cmn_ad_tag_content" class="text-center">
-					<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-				</div>
-				<!­­ cmnUNT | End ad tag ­­>
-
-				<hr />
-
-			  <!-- Infinite Scroll -->
-
-				<?php
-				echo do_shortcode('[ajax_load_more button_label="Loading" offset="32" post_type="post"]');
-				?>
-
-				<div class="spacer40"></div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>
+	<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>

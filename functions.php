@@ -405,7 +405,7 @@
 	}
 
 	add_theme_support( 'title-tag' );
-
+	add_theme_support('auto-load-next-post');
 
 	// Hide user accounts
 	// add_action(‘template_redirect’, ‘bwp_template_redirect’);
@@ -418,6 +418,18 @@
 	//   {
 	//     wp_redirect( home_url() ); exit;
 	//   }
+	// }
+
+	// DEBUGGIN'
+	// function debug_to_console( $data ) {
+	//
+	// 	if ( is_array( $data ) ) {
+	// 			$output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
+	// 	} else {
+	// 			$output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
+	// 	}
+	//
+	// 	echo $output;
 	// }
 
 	// Allow SVG uploads

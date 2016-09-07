@@ -171,7 +171,7 @@ jQuery(document).ready(function($) {
 
   loadNewsletter();
 
-  loadSnapchatModal();
+  // loadSnapchatModal();
 
   // loadLikeBar();
 
@@ -192,19 +192,19 @@ jQuery(document).ready(function($) {
   $('form#cart input[type=text]').css('width','auto');
 
   // FIX PLACEHOLDERS
-    $('[placeholder]').focus(function() {
-        var input = $(this);
-        if (input.val() == input.attr('placeholder')) {
-            input.val('');
-            input.removeClass('placeholder');
-        }
-    }).blur(function() {
-        var input = $(this);
-        if (input.val() == '' || input.val() == input.attr('placeholder')) {
-            input.addClass('placeholder');
-            input.val(input.attr('placeholder'));
-        }
-    }).blur();
+  $('[placeholder]').focus(function() {
+      var input = $(this);
+      if (input.val() == input.attr('placeholder')) {
+          input.val('');
+          input.removeClass('placeholder');
+      }
+  }).blur(function() {
+      var input = $(this);
+      if (input.val() == '' || input.val() == input.attr('placeholder')) {
+          input.addClass('placeholder');
+          input.val(input.attr('placeholder'));
+      }
+  }).blur();
 
   // Snappy Taps
   $(function() {
@@ -260,7 +260,7 @@ jQuery(document).ready(function($) {
   // Sticky Sidebar
   $(function() {
     var target = $('#global-container');
-    if (target.is('.tag,.category,.single')) {
+    if (target.is('.tag,.category')) {
       if (isTouchDevice()===true) {
         return;
       } else {
@@ -362,7 +362,6 @@ jQuery(document).ready(function($) {
     });
   });
 
-    /////////////////////
   // Footer Toggle //
   /////////////////////
 
@@ -389,5 +388,36 @@ jQuery(document).ready(function($) {
   //         createCookie("facebook", "read", 7);
   //     });
   // });
+
+  // Ad scripts
+  // $(function() {
+  //   var ad="";
+  //       ad += "<div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;' class=\"thumbnail col-sm-4 visible-xs\">";
+  //       ad += "          <script type='text\/javascript'>";
+  //       ad += "          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-15'); });";
+  //       ad += "          <\/script>";
+  //       ad += "          <\/div>";
+  //       ad += "";
+  //       ad += "          <div id='div-gpt-ad-1465835581876-11' class=\"thumbnail col-sm-4 hidden-xs\">";
+  //       ad += "          <script type='text\/javascript'>";
+  //       ad += "          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-11'); });";
+  //       ad += "          <\/script>";
+  //       ad += "          <\/div>";
+  //
+  //   $.fn.almComplete = function(alm) {
+  //     console.log("Ajax Load More Complete!");
+  //     $('#ajax-load-more ul.alm-listing').append(ad);
+  //   };
+  // });
+
+  // Fancy List Scrolling
+  $(function() {
+      if ($('#global-container').is('.tag, .category, .single')) {
+          var shareButton = document.querySelector('post-social');
+          shareButton.addEventListener('click', recordShare, false);
+      } else {
+          return;
+      }
+  });
 
 });

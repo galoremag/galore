@@ -5,7 +5,7 @@
 		<h1 class="pull-left">Get Exclusives</h1>
 		<div class="pad10 fb-like pull-left" data-href="https://www.facebook.com/galore" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 		<div>
-			<a id="likeBar-close" href="#"><i class="fa fa-lg fa-close"></i></a>
+			<a id="likeBar-close" href="javascript:;"><i class="fa fa-lg fa-close"></i></a>
 		</div>
 	</div> -->
 
@@ -73,11 +73,11 @@
 							<div class="snapchat-modal-body">
 									<!-- <div class="brand-white" style="margin: 0 auto -100px auto;"></div> -->
 									<div class="pad10 snapchat-like">
-										<img src="<?php echo content_url(); ?>/themes/galore/images/galore_snapcode.svg" title="Galore Snapchat - Snapcode" alt="Galore Snapchat - Snapcode" />
+										<a href="//snapchat.com/add/galoremag"><img src="<?php echo content_url(); ?>/themes/galore/images/galore_snapcode.svg" title="Galore Snapchat - Snapcode" alt="Galore Snapchat - Snapcode" /></a>
 									</div>
-									<h1 class="horPad20 text-center">SH*T GETS REAL</h1>
+									<h1 class="horPad20 text-center">Watched by over 100k daily</h1>
 									<p class="text-center">
-										Screenshot that ^^^ and follow us on Snapchat.
+										The craziest channel on Snapchat for beauty, fashion and pop. Screenshot the ^^^ or click the code to add now to join the fun.
 									</p>
 							</div>
 					</div>
