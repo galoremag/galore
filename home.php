@@ -10,7 +10,7 @@
 		<div class="container">
 			<div class="row-fluid">
 				<div class="hero-slider col-md-10 col-md-offset-1">
-					<?php echo do_shortcode( '[new_royalslider id="4"]' ); ?>
+					<?php echo do_shortcode( '[new_royalslider id="1"]' ); ?>
 				</div>
 			</div>
 		</div>
@@ -21,7 +21,7 @@
 	<h2 class="text-center verPad20"><a href="the-latest/"><i class="fa fa-flash"></i> The Daily Dish <i class="fa fa-flash"></i></a></h2>
 	<div id="latest">
 
-		<div id="glides">
+		<div id="glides" class="ps-container ps-active-x">
 
 			<?php sm_unit(); ?>
 
@@ -83,7 +83,7 @@
 				</div>
 				<div class="row-fluid">
 					<div class="col-sm-12 nopad">
-					<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
+					<?php echo do_shortcode( '[new_royalslider id="1"]' ); ?>
 					</div>
 				</div>
 				<div class="row-fluid">
