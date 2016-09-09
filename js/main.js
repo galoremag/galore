@@ -435,7 +435,7 @@ jQuery(document).ready(function($) {
       offset: 15,
       interstitialSection : "#listIntro",
       standardScrollElements: ".listBodyContainer, .footbut, #ctoolbar",
-      scrollSpeed: 400
+      scrollSpeed: 400 
     });
   } else {
     $.scrollify({
