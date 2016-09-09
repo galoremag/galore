@@ -359,9 +359,13 @@ and (orientation : portrait) {
 		background: white;
 		width: 80%;
 		height: 100vh;
-		right: 0;
+		right: -80%;
 		margin-top: -100vh;
 		z-index: 1;
+		.transition;
+	}
+	.listBodyContainer.open {
+		right: 0;
 	}
 	.listBodyContainer .listBodyToggle {
 		position: absolute;

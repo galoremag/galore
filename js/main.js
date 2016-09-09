@@ -380,6 +380,14 @@ jQuery(document).ready(function($) {
     });
   });
 
+  // Fancy List Body Toggle
+  $(function() {
+    $('#listBodyToggle').on('click tap', function(event) {
+      // event.preventDefault();
+      $('#listBodyContainer').toggleClass('open');
+    });
+  });
+
   // CLOSE Facebook LIKE BAR
   // $(function() {
   //   $("#likeBar-close").on('click tap', function(event) {

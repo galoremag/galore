@@ -90,7 +90,7 @@ WP Post Template: Fancy List
 										</div>
 
 										<div class="listBodyContainer row">
-											<div class="listBodyToggle visible-xs"><i class="fa fa-commenting"></i></div>
+											<div id="listBodyToggle" class="listBodyToggle visible-xs"><i class="fa fa-commenting"></i></div>
 											<div class="listBody col-sm-8 col-sm-offset-2 nopad">
 												<?php if($desc) : ?>
 													<p>
