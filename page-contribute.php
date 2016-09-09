@@ -59,7 +59,7 @@ Template Name: Contributor Submission
           </div>
 
           <div class="row text-center contributorForm">
-            <form>
+            <!-- <form>
             <div class="col-sm-12">
               <h2>Apply</h2>
             </div>
@@ -148,7 +148,10 @@ Template Name: Contributor Submission
               </div>
             </div>
             <button type="submit" class="btn btn-default text-center">Submit</button>
-            </form>
+            </form> -->
+
+            <?php echo do_shortcode("[RM_Form id='4']"); ?>
+            <?php echo do_shortcode("[RM_Login]"); ?>
           </div>
 
         </div>

@@ -2311,6 +2311,7 @@ td:nth-child(2){
 .contributorStats, .contributorDescriptions {
   margin: 25px 0px 25px 0px;
   & h2 {
+    font-family: 'proxima-nova-alt-condensed', sans-serif;
     font-size: 40px;
   }
   & i {
@@ -2326,7 +2327,7 @@ td:nth-child(2){
 }
 
 .contributorForm {
-  margin: 40px 150px 40px 150px;
+  margin: 40px;
   & h2 {
     font-size: 40px;
     margin-bottom: 50px;
@@ -2334,15 +2335,13 @@ td:nth-child(2){
   & label, p {
     font-size: 15px;
   }
-  & button {
-    width: 100px;
-    padding: 0px;
-    height: 50px;
-    background-color: white;
-    color: #fa7470; border: 2px solid #fa7470;
-    font-weight: bold;
-    font-size: 15px;
-    margin: 10px 0px;
+  & label {
+    .font2;
+  }
+  // only for local copy. Use Registration Magic settings to change button style
+  & input[type=button]{
+    background-color: #ffffff;
+    border-color: #fa7470;
   }
 }
 
