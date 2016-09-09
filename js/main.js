@@ -427,14 +427,34 @@ jQuery(document).ready(function($) {
   //   };
   // });
 
+  // Fancy List Panels
+  if (isMobile) {
+    $.scrollify({
+      section: ".listItem",
+      sectionName : false,
+      offset: 15,
+      interstitialSection : "#listIntro",
+      standardScrollElements: ".listBodyContainer, .footbut, #ctoolbar",
+      scrollSpeed: 400
+    });
+  } else {
+    $.scrollify({
+      section: ".listItem",
+      offset: 0,
+      sectionName : false,
+      interstitialSection : "#listIntro",
+      scrollSpeed: 400
+    });
+  }
+
   // Fancy List Scrolling
-  $(function() {
-      if ($('#global-container').is('.tag, .category, .single')) {
-          var shareButton = document.querySelector('post-social');
-          shareButton.addEventListener('click', recordShare, false);
-      } else {
-          return;
-      }
-  });
+  // $(function() {
+  //     if ($('#global-container').is('.tag, .category, .single')) {
+  //         var shareButton = document.querySelector('post-social');
+  //         shareButton.addEventListener('click', recordShare, false);
+  //     } else {
+  //         return;
+  //     }
+  // });
 
 });

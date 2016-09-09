@@ -19,6 +19,7 @@ module.exports = (grunt) ->
           separator: ";\n"
         src: [
           'bower_components/jquery/dist/jquery.min.js'
+          'bower_components/Scrollify/jquery.scrollify.min.js'
           'bower_components/jquery-cookie/jquery.cookie.js'
           'bower_components/jquery.scrollTo/jquery.scrollTo.min.js'
           'bower_components/jquery-placeholder/jquery.placeholder.min.js'
@@ -59,7 +60,7 @@ module.exports = (grunt) ->
         options:
           livereload: true
       less:
-        files: ['less/*.less']
+        files: ['less/*.less', 'less/**/*.less']
         tasks: ['less:style']
         options:
           livereload: true

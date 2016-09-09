@@ -369,16 +369,23 @@ and (orientation : portrait) {
 		.transition;
 		right: 0;
 	}
+	.listBodyContainer.open .listBodyToggle {
+		-ms-animation: none;
+		-moz-animation: none;
+		-webkit-animation: none;
+		animation: none;
+	}
 	.listBodyContainer .listBodyToggle {
 		border-radius: 50%;
 		background: black;
 		.brand-shadow;
+		.wiggle;
 		position: absolute;
-		margin-left: -85px;
+		margin-left: -65px;
 		margin-top: 5vh;
-		color: white;
-		font-size: 28px;
-		padding: 4px 10px;
+		color: #fff;
+		font-size: 18px;
+		padding: 4px 7px 3px 7px
 	}
 	.listBody {
 		margin: 0;
@@ -568,10 +575,10 @@ and (orientation : portrait) {
 		height: 100vh;
 	}
 
-	// .listItem {
-	// 	width: 200vh;
-	// 	height: 100vh;
-	// }
+	.listItem {
+		// width: 200vh;
+		height: 100vh;
+	}
 
 	// .listItem.shift {
 	// 	position: relative;

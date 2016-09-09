@@ -22,7 +22,7 @@ WP Post Template: Fancy List
 			<article>
 				<?php setPostViews(get_the_ID()); ?>
 
-				<div class="row-fluid">
+				<div id="listIntro" class="row-fluid">
 					<div class="container">
 
 						<div class="col-sm-8 col-sm-offset-2">
@@ -91,7 +91,7 @@ WP Post Template: Fancy List
 
 										<?php $color = sprintf("#%06x",rand(0,16777215)); ?>
 										<div class="row listBodyContainer">
-											<a id="listBodyToggle" class="listBodyToggle visible-xs"><i class="fa fa-comments"></i></a>
+											<a id="listBodyToggle" class="listBodyToggle visible-xs"><i class="btr bt-plus"></i></a>
 											<div class="listBody col-sm-8 col-sm-offset-2 nopad">
 												<?php if($desc) : ?>
 													<p>
