@@ -54,9 +54,8 @@ WP Post Template: Fancy List
 									$desc = get_sub_field('desc');
 									?>
 
-									<div class="listHero row-fluid" style="background-image: url(<?php echo $pic; ?>)">
-
-										<div class="listItem">
+									<div class="listItem">
+										<div class="listHero row-fluid" style="background-image: url(<?php echo $pic; ?>)">
 											<div class="listHeader container-fluid">
 												<div class="col-sm-8 col-sm-offset-2 nopad">
 													<?php if($title) : ?>
@@ -87,24 +86,25 @@ WP Post Template: Fancy List
 												<?php endif; ?>
 
 											</div>
+
 										</div>
 
-									</div>
+										<div class="listBodyContainer row">
+											<div class="listBodyToggle visible-xs"><i class="fa fa-commenting"></i></div>
+											<div class="listBody col-sm-8 col-sm-offset-2 nopad">
+												<?php if($desc) : ?>
+													<p>
+														<?php echo $desc; ?>
+													</p>
+												<?php endif; ?>
+											</div>
 
-									<div class="listBody row hidden-xs">
-										<div class="col-sm-8 col-sm-offset-2 nopad">
-											<?php if($desc) : ?>
-												<p>
-													<?php echo $desc; ?>
-												</p>
-											<?php endif; ?>
-										</div>
-
-										<div id="social-links" class="col-sm-8 col-sm-offset-2 nopad">
-											<ul id="post-social" class="post-social hidden-xs hidden-sm">
-												<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-												<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-											</ul>
+											<div id="social-links" class="col-sm-8 col-sm-offset-2 nopad">
+												<ul id="post-social" class="post-social hidden-xs hidden-sm">
+													<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+													<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+												</ul>
+											</div>
 										</div>
 									</div>
 
