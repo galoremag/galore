@@ -388,6 +388,15 @@ jQuery(document).ready(function($) {
     });
   });
 
+  // Color Fancy list bodies
+  var colors = ["bluePinkGradientFade", "yellowBlueGradient", "purpleGradientFade", "brandGradientFade"]
+  var randomColor = Math.floor(Math.random()*colors.length);
+
+  $(".listBodyContainer").each(function () {
+      $(this).addClass(colors[randomColor]);
+      randomColor = (randomColor + 1) % colors.length;
+  });
+
   // CLOSE Facebook LIKE BAR
   // $(function() {
   //   $("#likeBar-close").on('click tap', function(event) {

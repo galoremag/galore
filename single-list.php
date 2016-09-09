@@ -89,6 +89,7 @@ WP Post Template: Fancy List
 
 										</div>
 
+										<?php $color = sprintf("#%06x",rand(0,16777215)); ?>
 										<div class="row listBodyContainer">
 											<a id="listBodyToggle" class="listBodyToggle visible-xs"><i class="fa fa-comments"></i></a>
 											<div class="listBody col-sm-8 col-sm-offset-2 nopad">

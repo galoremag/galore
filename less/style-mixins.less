@@ -11,6 +11,16 @@
 @salmon : #FA7470;
 @galwhite : antiquewhite;
 
+.randomColor() {
+  @randomColor: `(Math.random()*0xFFFFFF<<0).toString(16)`;
+  @colorHex: e(@randomColor);
+  @color: ~"#@{colorHex}";
+}
+
+// to use:
+// .randomColor();
+// backgroun: @color
+
 .pink {
 	color: @brand !important;
 }
