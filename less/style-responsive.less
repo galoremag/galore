@@ -356,7 +356,7 @@ and (orientation : portrait) {
 	}
 	.listBodyContainer {
 		position: absolute;
-		background: white;
+		background-color: white;
 		width: 80%;
 		height: 100vh;
 		right: -80%;
@@ -365,17 +365,24 @@ and (orientation : portrait) {
 		.transition;
 	}
 	.listBodyContainer.open {
+		.transition;
 		right: 0;
 	}
 	.listBodyContainer .listBodyToggle {
+		border-radius: 50%;
+		background: black;
+		.brand-shadow;
 		position: absolute;
-		margin-left: -40px;
-		margin-top: 90vh;
-		color: @brand;
+		margin-left: -85px;
+		margin-top: 85vh;
+		color: white;
+		font-size: 28px;
+		padding: 4px 10px;
 	}
 	.listBody {
 		margin: 0;
-		overflow: scroll;
+		height: 100vh;
+		overflow-y: scroll;
 	}
 }
 

@@ -74,7 +74,7 @@ WP Post Template: Fancy List
 												</div>
 											</div>
 
-											<div class="listHeroBody visible-xs">
+											<!-- <div class="listHeroBody visible-xs">
 
 												<?php if($desc) : ?>
 													<h1>
@@ -85,12 +85,12 @@ WP Post Template: Fancy List
 													</p>
 												<?php endif; ?>
 
-											</div>
+											</div> -->
 
 										</div>
 
-										<div class="listBodyContainer row">
-											<div id="listBodyToggle" class="listBodyToggle visible-xs"><i class="fa fa-commenting"></i></div>
+										<div class="row listBodyContainer">
+											<a id="listBodyToggle" class="listBodyToggle visible-xs"><i class="fa fa-comments"></i></a>
 											<div class="listBody col-sm-8 col-sm-offset-2 nopad">
 												<?php if($desc) : ?>
 													<p>
