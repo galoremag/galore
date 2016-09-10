@@ -1,13 +1,13 @@
-<!-- <header>
-	<div class="container-fluid">
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a id="navbar-brand" class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
-				</div>
+<div class="container-fluid">
+	<nav class="navbar navbar-default" role="navigation" style="min-height: 0;">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a id="navbar-brand" class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
 			</div>
-		</nav>
-	</div>
+		</div>
+	</nav>
+</div>
+<!-- <header>
 
 	<div id="main-menu" class="modal-nav">
 			<ul class="modal-nav-menu text-center">

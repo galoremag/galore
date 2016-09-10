@@ -431,18 +431,19 @@ jQuery(document).ready(function($) {
   if (isMobile) {
     $.scrollify({
       section: ".listItem",
-      sectionName : false,
+      sectionName : "section-name",
       offset: 15,
-      interstitialSection : "#listIntro",
-      standardScrollElements: ".listBodyContainer, .footbut, #ctoolbar",
-      scrollSpeed: 400 
+      interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
+      standardScrollElements: "header, #listIntro, .listBodyContainer",
+      scrollSpeed: 400
     });
   } else {
     $.scrollify({
       section: ".listItem",
       offset: 0,
-      sectionName : false,
-      interstitialSection : "#listIntro",
+      sectionName : "section-name",
+      interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
+      standardScrollElements: "header, #listIntro",
       scrollSpeed: 400
     });
   }
