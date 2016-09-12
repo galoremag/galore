@@ -35,13 +35,11 @@ WP Post Template: Fancy List
 								<div class="listHeader container-fluid">
 									<div class="col-sm-8 col-sm-offset-2 nopad">
 										<h1 class="itemTitle">
-											<span>
 												<?php the_title(); ?>
-											</span>
 										</h1>
 
 										<h4 class="subtitle visible-xs">
-											<span><?php echo get_the_excerpt(); ?></span>
+											<?php echo get_the_excerpt(); ?>
 										</h4>
 
 									</div>
@@ -85,21 +83,17 @@ WP Post Template: Fancy List
 											<?php if($title) : ?>
 												<a class="itemTitle visible-xs" href="javascript:void;">
 													<h1>
-														<span>
 															<?php echo $title; ?>
-														</span>
 													</h1>
 												</a>
 												<h1 class="hidden-xs">
-													<span>
 														<?php echo $title; ?>
-													</span>
 												</h1>
 											<?php endif; ?>
 
 											<?php if($subtitle) : ?>
 												<h4 class="subtitle">
-													<span><?php echo $subtitle; ?></span>
+													<?php echo $subtitle; ?>
 												</h4>
 											<?php endif; ?>
 										</div>
