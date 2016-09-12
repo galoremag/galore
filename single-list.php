@@ -66,7 +66,7 @@ WP Post Template: Fancy List
 
 									</div>
 									<div class="pad40 col-sm-12 text-center">
-										<a class="btn btn-primary" onClick="$.scrollify.move('#1');">Read The List</a>
+										<a class="btn btn-primary" onClick="$.scrollify.next();">Read The List</a>
 									</div>
 								</div>
 							</div>
