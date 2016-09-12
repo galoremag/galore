@@ -410,7 +410,7 @@ jQuery(document).ready(function($) {
   if (isMobile) {
     $.scrollify({
       section: ".listItem",
-      sectionName : false,
+      sectionName : "section-name",
       offset: 0,
       // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
       standardScrollElements: "#listIntro, .listBodyContainer",
@@ -420,7 +420,7 @@ jQuery(document).ready(function($) {
     $.scrollify({
       section: ".listItem",
       offset: 0,
-      sectionName : false,
+      sectionName : "section-name",
       // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
       standardScrollElements: "#listIntro, .listBodyContainer",
       scrollSpeed: 400
