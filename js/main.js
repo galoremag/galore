@@ -412,7 +412,7 @@ jQuery(document).ready(function($) {
     $.scrollify({
       section: ".listItem",
       sectionName : "section-name",
-      offset: 0,
+      offset: 31,
       // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
       standardScrollElements: ".listBodyContainer",
       scrollSpeed: 400
