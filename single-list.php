@@ -52,7 +52,6 @@ WP Post Template: Fancy List
 							</div>
 
 							<div class="row listBodyContainer hidden-xs">
-								<a id="listBodyToggle" class="listBodyToggle visible-xs"><i class="btr bt-plus"></i></a>
 								<div class="listBody col-sm-8 col-sm-offset-2 nopad">
 									<p>
 										<?php echo get_the_content(); ?>
@@ -108,7 +107,7 @@ WP Post Template: Fancy List
 								</div>
 
 								<div class="row listBodyContainer">
-									<a id="listBodyToggle" class="listBodyToggle visible-xs"><i class="btr bt-plus"></i></a>
+									<a id="listBodyToggle" class="listBodyToggle visible-xs"><i class="btr bt-angles-left"></i></a>
 									<div class="listBody col-sm-8 col-sm-offset-2 nopad">
 										<?php if($desc) : ?>
 											<p>
