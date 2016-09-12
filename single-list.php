@@ -60,9 +60,9 @@ WP Post Template: Fancy List
 										<h4 class="subtitle visible-xs">
 											<span><?php echo get_the_content(); ?></span>
 										</h4>
-										<h4 class="subtitle hidden-xs">
+										<!-- <h4 class="subtitle hidden-xs" style="line-height: 1.5">
 											<span><?php echo get_the_excerpt(); ?></span>
-										</h4>
+										</h4> -->
 
 									</div>
 									<div class="pad40 col-sm-12 text-center">
