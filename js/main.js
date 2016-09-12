@@ -382,7 +382,7 @@ jQuery(document).ready(function($) {
 
   // Fancy List Body Toggle
   $(function() {
-    $('.listBodyContainer .listBodyToggle').on('click tap', function(event) {
+    $('.listBodyContainer .listBodyToggle, .listItem #itemTitle').on('click tap', function(event) {
       event.preventDefault();
       $('.listBodyContainer').toggleClass('open');
     });
@@ -406,35 +406,14 @@ jQuery(document).ready(function($) {
   //     });
   // });
 
-  // Ad scripts
-  // $(function() {
-  //   var ad="";
-  //       ad += "<div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;' class=\"thumbnail col-sm-4 visible-xs\">";
-  //       ad += "          <script type='text\/javascript'>";
-  //       ad += "          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-15'); });";
-  //       ad += "          <\/script>";
-  //       ad += "          <\/div>";
-  //       ad += "";
-  //       ad += "          <div id='div-gpt-ad-1465835581876-11' class=\"thumbnail col-sm-4 hidden-xs\">";
-  //       ad += "          <script type='text\/javascript'>";
-  //       ad += "          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-11'); });";
-  //       ad += "          <\/script>";
-  //       ad += "          <\/div>";
-  //
-  //   $.fn.almComplete = function(alm) {
-  //     console.log("Ajax Load More Complete!");
-  //     $('#ajax-load-more ul.alm-listing').append(ad);
-  //   };
-  // });
-
   // Fancy List Panels
   if (isMobile) {
     $.scrollify({
       section: ".listItem",
       sectionName : false,
-      offset: 15,
+      offset: 0,
       // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
-      standardScrollElements: "header, #listIntro, .listBodyContainer",
+      standardScrollElements: "#listIntro, .listBodyContainer",
       scrollSpeed: 400
     });
   } else {
@@ -443,7 +422,7 @@ jQuery(document).ready(function($) {
       offset: 0,
       sectionName : false,
       // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
-      standardScrollElements: "header, #listIntro",
+      standardScrollElements: "#listIntro, .listBodyContainer",
       scrollSpeed: 400
     });
   }

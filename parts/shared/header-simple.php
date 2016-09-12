@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
 	<nav class="navbar navbar-default" role="navigation" style="min-height: 0;">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -6,7 +6,7 @@
 			</div>
 		</div>
 	</nav>
-</div>
+</div> -->
 <!-- <header>
 
 	<div id="main-menu" class="modal-nav">
