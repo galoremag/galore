@@ -83,7 +83,14 @@ WP Post Template: Fancy List
 									<div class="listHeader container-fluid">
 										<div class="col-sm-8 col-sm-offset-2 nopad">
 											<?php if($title) : ?>
-												<h1 class="itemTitle">
+												<a class="itemTitle" class="visible-xs" href="javascript:void;">
+													<h1>
+														<span>
+															<?php echo $title; ?>
+														</span>
+													</h1>
+												</a>
+												<h1 class="hidden-xs">
 													<span>
 														<?php echo $title; ?>
 													</span>
