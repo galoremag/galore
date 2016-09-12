@@ -419,7 +419,7 @@ jQuery(document).ready(function($) {
   } else {
     $.scrollify({
       section: ".listItem",
-      offset: 0,
+      offset: -20,
       sectionName : "section-name",
       // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
       standardScrollElements: "#listIntro, .listBodyContainer",
