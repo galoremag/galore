@@ -431,9 +431,9 @@ jQuery(document).ready(function($) {
   if (isMobile) {
     $.scrollify({
       section: ".listItem",
-      sectionName : "section-name",
+      sectionName : false,
       offset: 15,
-      interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
+      // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
       standardScrollElements: "header, #listIntro, .listBodyContainer",
       scrollSpeed: 400
     });
@@ -441,8 +441,8 @@ jQuery(document).ready(function($) {
     $.scrollify({
       section: ".listItem",
       offset: 0,
-      sectionName : "section-name",
-      interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
+      sectionName : false,
+      // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
       standardScrollElements: "header, #listIntro",
       scrollSpeed: 400
     });
