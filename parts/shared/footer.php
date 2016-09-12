@@ -9,40 +9,6 @@
 		</div>
 	</div> -->
 
-	<?php if ( wp_is_mobile() ) : ?>
-		<script>
-
-		(function() {
-
-		  window.cToolbarInit = function() {
-
-		    cToolbar.load({
-		      mobileRightButton: 'youtube',
-		      facebookUsername: 'galore',
-		      facebookName: 'Galore',
-		      twitterHandle: 'TheGaloreMag',
-		      twitterName: 'Galore',
-		      youtubeCustomUrl: 'galoremag',
-		      youtubeDisplayName: 'GaloreTV',
-		      desktopBackground: 'solid',
-		      desktopSocialButtons: ["facebook","youtube"],
-		      channel: 'Style'
-		    });
-
-		  };
-
-		var ns = document.createElement('script');
-		    ns.type = 'text/javascript';
-		    ns.async = true;
-		    ns.src = '//toolbar.complex.com/dist/ctoolbar.min.js';
-		    var s = document.getElementsByTagName('script')[0];
-		    s.parentNode.insertBefore(ns, s);
-
-		})();
-
-		</script>
-	<?php endif; ?>
-
 	<!-- Newsletter Signup -->
 	<div id="fb-modal">
 	    <div class="fb-modal-dialog col-md-4 col-md-offset-4">
