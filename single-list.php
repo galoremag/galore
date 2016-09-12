@@ -80,6 +80,7 @@ WP Post Template: Fancy List
 
 							<div class="listItem">
 								<div class="listHero row-fluid" style="background-image: url(<?php echo $pic; ?>)">
+									<a class="listHeroCover"></a>
 									<div class="listHeader container-fluid">
 										<div class="col-sm-8 col-sm-offset-2 nopad">
 											<?php if($title) : ?>

@@ -382,9 +382,9 @@ jQuery(document).ready(function($) {
 
   // Fancy List Body Toggle
   $(function() {
-    $('.listBodyContainer .listBodyToggle, .listItem a.itemTitle').on('click tap', function(event) {
+    $('.listBodyContainer .listBodyToggle, .listItem a.itemTitle, .listHeroCover').on('click tap', function(event) {
       event.preventDefault();
-      $('.listBodyContainer').toggleClass('open');
+      $('.listBodyContainer, .listHeroCover').toggleClass('open');
     });
   });
 
