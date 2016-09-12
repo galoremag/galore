@@ -414,7 +414,7 @@ jQuery(document).ready(function($) {
       sectionName : "section-name",
       offset: 0,
       // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
-      standardScrollElements: ".listBodyContainer",
+      standardScrollElements: ".listBodyContainer, .everything",
       scrollSpeed: 400
     });
   } else {
@@ -423,7 +423,7 @@ jQuery(document).ready(function($) {
       offset: 0,
       sectionName : "section-name",
       // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
-      standardScrollElements: ".listBodyContainer",
+      standardScrollElements: ".listBodyContainer, .everything",
       scrollSpeed: 400
     });
   }
