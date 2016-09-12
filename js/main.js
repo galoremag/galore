@@ -406,6 +406,7 @@ jQuery(document).ready(function($) {
   //     });
   // });
 
+  console.log(isMobile);
   // Fancy List Panels
   if (isMobile) {
     $.scrollify({
@@ -413,16 +414,16 @@ jQuery(document).ready(function($) {
       sectionName : "section-name",
       offset: 0,
       // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
-      standardScrollElements: "#listIntro, .listBodyContainer",
+      standardScrollElements: ".listBodyContainer",
       scrollSpeed: 400
     });
   } else {
     $.scrollify({
       section: ".listItem",
-      offset: -20,
+      offset: 0,
       sectionName : "section-name",
       // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
-      standardScrollElements: "#listIntro, .listBodyContainer",
+      standardScrollElements: ".listBodyContainer",
       scrollSpeed: 400
     });
   }
