@@ -58,7 +58,7 @@ WP Post Template: Fancy List
 										</h1>
 
 										<h4 class="subtitle visible-xs">
-											<span><?php echo get_the_content(); ?></span>
+											<span><?php echo get_the_excerpt(); ?></span>
 										</h4>
 										<!-- <h4 class="subtitle hidden-xs" style="line-height: 1.5">
 											<span><?php echo get_the_excerpt(); ?></span>
@@ -75,7 +75,7 @@ WP Post Template: Fancy List
 								<a id="listBodyToggle" class="listBodyToggle visible-xs"><i class="btr bt-plus"></i></a>
 								<div class="listBody col-sm-8 col-sm-offset-2 nopad">
 									<p>
-										<?php the_content(); ?>
+										<?php echo get_the_content(); ?>
 									</p>
 								</div>
 
