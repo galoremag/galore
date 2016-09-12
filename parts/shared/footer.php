@@ -14,7 +14,7 @@
 	    <div class="fb-modal-dialog col-md-4 col-md-offset-4">
 	        <div class="fb-modal-content">
 	            <div class="fb-modal-header">
-	                <a id="fbClose" class="close" data-dismiss="fb-modal" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
+	                <a id="fbClose" class="close" data-dismiss="fb-modal" aria-label="Close"><span aria-hidden="true" class="btr bt-times"></span></a>
 	            </div>
 	            <div class="fb-modal-body">
 	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
@@ -34,7 +34,7 @@
 			<div class="snapchat-modal-dialog col-md-4 col-md-offset-4">
 					<div class="snapchat-modal-content">
 							<div class="snapchat-modal-header">
-									<a id="snapchatClose" class="close" data-dismiss="snapchat-modal" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
+									<a id="snapchatClose" class="close" data-dismiss="snapchat-modal" aria-label="Close"><span aria-hidden="true" class="btr bt-times"></span></a>
 							</div>
 							<div class="snapchat-modal-body">
 									<!-- <div class="brand-white" style="margin: 0 auto -100px auto;"></div> -->
@@ -56,7 +56,7 @@
 	    <div class="email-signup-dialog col-md-4 col-md-offset-4">
 	        <div class="email-signup-content">
 	            <div class="email-signup-header">
-	                <a href="javascript:;" id="newsletterClose" class="close" data-dismiss="email-signup" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
+	                <a href="javascript:;" id="newsletterClose" class="close" data-dismiss="email-signup" aria-label="Close"><span aria-hidden="true" class="btr bt-times"></span></a>
 	            </div>
 	            <div class="email-signup-body">
 	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
@@ -89,7 +89,7 @@
 
 	<footer id="footer">
 		<div class="footer-content container-fluid">
-			<a id="footer-close" href="#"><i class="fa fa-2x fa-close"></i></a>
+			<a id="footer-close" href="#"><i class="btr bt-times"></i></a>
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 					<p class="text-center">GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative woman in her 20's surrounding Fashion, Beauty, Pop, Sex + Dating and Health.</p>
