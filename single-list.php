@@ -47,7 +47,7 @@ WP Post Template: Fancy List
 							</div>
 
 							<div class="row visible-xs-block">
-								<div class="col-sm-8 col-sm-offset-2 nopad">
+								<div class="col-sm-8 col-sm-offset-2">
 									<?php the_content(); ?>
 								</div>
 							</div>
