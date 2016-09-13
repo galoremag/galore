@@ -196,19 +196,19 @@ jQuery(document).ready(function($) {
   $('form#cart input[type=text]').css('width','auto');
 
   // FIX PLACEHOLDERS
-    $('[placeholder]').focus(function() {
-        var input = $(this);
-        if (input.val() == input.attr('placeholder')) {
-            input.val('');
-            input.removeClass('placeholder');
-        }
-    }).blur(function() {
-        var input = $(this);
-        if (input.val() == '' || input.val() == input.attr('placeholder')) {
-            input.addClass('placeholder');
-            input.val(input.attr('placeholder'));
-        }
-    }).blur();
+  $('[placeholder]').focus(function() {
+      var input = $(this);
+      if (input.val() == input.attr('placeholder')) {
+          input.val('');
+          input.removeClass('placeholder');
+      }
+  }).blur(function() {
+      var input = $(this);
+      if (input.val() == '' || input.val() == input.attr('placeholder')) {
+          input.addClass('placeholder');
+          input.val(input.attr('placeholder'));
+      }
+  }).blur();
 
   // Snappy Taps
   $(function() {
@@ -366,7 +366,6 @@ jQuery(document).ready(function($) {
     });
   });
 
-    /////////////////////
   // Footer Toggle //
   /////////////////////
 
@@ -385,6 +384,23 @@ jQuery(document).ready(function($) {
     });
   });
 
+  // Fancy List Body Toggle
+  $(function() {
+    $('.listBodyContainer .listBodyToggle, .listItem a.itemTitle, .listHeroCover').on('click tap', function(event) {
+      event.preventDefault();
+      $('.listBodyContainer, .listHeroCover').toggleClass('open');
+    });
+  });
+
+  // Color Fancy list bodies
+  // var colors = ["bluePinkGradientFade", "yellowBlueGradient", "purpleGradientFade", "brandGradientFade"]
+  // var randomColor = Math.floor(Math.random()*colors.length);
+  //
+  // $(".listBodyContainer").each(function () {
+  //     $(this).addClass(colors[randomColor]);
+  //     randomColor = (randomColor + 1) % colors.length;
+  // });
+
   // CLOSE Facebook LIKE BAR
   // $(function() {
   //   $("#likeBar-close").on('click tap', function(event) {
@@ -394,25 +410,36 @@ jQuery(document).ready(function($) {
   //     });
   // });
 
-  // Ad scripts
+  console.log(isMobile);
+  // Fancy List Panels
+  if (isMobile) {
+    $.scrollify({
+      section: ".listItem",
+      sectionName : "section-name",
+      offset: 0,
+      // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
+      standardScrollElements: ".listBodyContainer, .everything, .listItem:last-child",
+      scrollSpeed: 400
+    });
+  } else {
+    $.scrollify({
+      section: ".listItem",
+      offset: 0,
+      sectionName : "section-name",
+      // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
+      standardScrollElements: ".listBodyContainer, .everything, .listItem:last-child",
+      scrollSpeed: 400
+    });
+  }
+
+  // Fancy List Scrolling
   // $(function() {
-  //   var ad="";
-  //       ad += "<div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;' class=\"thumbnail col-sm-4 visible-xs\">";
-  //       ad += "          <script type='text\/javascript'>";
-  //       ad += "          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-15'); });";
-  //       ad += "          <\/script>";
-  //       ad += "          <\/div>";
-  //       ad += "";
-  //       ad += "          <div id='div-gpt-ad-1465835581876-11' class=\"thumbnail col-sm-4 hidden-xs\">";
-  //       ad += "          <script type='text\/javascript'>";
-  //       ad += "          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-11'); });";
-  //       ad += "          <\/script>";
-  //       ad += "          <\/div>";
-  //
-  //   $.fn.almComplete = function(alm) {
-  //     console.log("Ajax Load More Complete!");
-  //     $('#ajax-load-more ul.alm-listing').append(ad);
-  //   };
+  //     if ($('#global-container').is('.tag, .category, .single')) {
+  //         var shareButton = document.querySelector('post-social');
+  //         shareButton.addEventListener('click', recordShare, false);
+  //     } else {
+  //         return;
+  //     }
   // });
 
 });

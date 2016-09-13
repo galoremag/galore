@@ -13,6 +13,15 @@
 
 <div class="container-fluid nopad">
 	<div class="row-fluid">
+		<?php
+			global $wp_query;
+			$cat_ID = get_the_category($post->ID);
+			$cat_ID = $cat_ID[0]->cat_ID;
+			$this_post_ID = $post->ID;
+			$this_post_slug = $post->post_name;
+			$this_post_title = $post->post_title;
+
+		?>
 		<div id="content" class="col-md-8 col-sm-12 col-md-offset-2">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
@@ -123,7 +132,7 @@
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
 
-					echo do_shortcode('[ajax_load_more offset="3" orderby="date" category="sex-dating" previous_post="true" previous_post_id="'.$wp_query->post->ID.'" exclude="'.$wp_query->post->ID.'" button_label="Loading" repeater="template_2" post_type="post"]');
+					echo do_shortcode('[ajax_load_more orderby="date" category="sex-dating" previous_post="true" previous_post_id="'.$wp_query->post->ID.'" button_label="Loading" repeater="template_2" post_type="post"]');
 			    ?>
 			</ul>
 		</div>

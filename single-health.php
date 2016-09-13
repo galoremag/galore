@@ -13,15 +13,25 @@
 
 <div class="container-fluid nopad">
 	<div class="row-fluid">
+		<?php
+			global $wp_query;
+			$cat_ID = get_the_category($post->ID);
+			$cat_ID = $cat_ID[0]->cat_ID;
+			$this_post_ID = $post->ID;
+			$this_post_slug = $post->post_name;
+			$this_post_title = $post->post_title;
+
+		?>
 		<div id="content" class="col-md-8 col-sm-12 col-md-offset-2">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-			<article>
+			<article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+				<meta itemprop="articleBody" content="">
 				<?php setPostViews(get_the_ID()); ?>
+				<h1><?php the_title(); ?></h1>
 				<div class="single-featured-image">
 					<?php the_post_thumbnail('large'); ?>
 					<div class="catlinks"><?php the_category(); ?></div>
 				</div>
-				<h1><?php the_title(); ?></h1>
 				<div id="social-links">
 					<ul id="post-social" class="post-social hidden-xs hidden-sm">
 						<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
@@ -115,7 +125,7 @@
 						// 	$postsNotIn = implode(",", $post_ids);
 						// }
 
-						echo do_shortcode('[ajax_load_more orderby="date" offset="3" category="health" previous_post="true" previous_post_id="'.$wp_query->post->ID.'" exclude="'.$wp_query->post->ID.'" button_label="Loading" repeater="template_2" post_type="post"]');
+						echo do_shortcode('[ajax_load_more orderby="date" category="health" previous_post="true" previous_post_id="'.$wp_query->post->ID.'" button_label="Loading" repeater="template_2" post_type="post"]');
 				    ?>
 			</ul>
 		</div>
