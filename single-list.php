@@ -39,15 +39,16 @@ WP Post Template: Fancy List
 												<?php the_title(); ?>
 											</span>
 										</h1>
-
-										<h4 class="subtitle visible-xs">
-											<span><?php echo get_the_excerpt(); ?></span>
-										</h4>
-
 									</div>
 									<div class="pad40 col-sm-12 text-center">
 										<a class="btn btn-primary" onClick="$.scrollify.next();">Read The List</a>
 									</div>
+								</div>
+							</div>
+
+							<div class="row visible-xs-block">
+								<div class="col-sm-8 col-sm-offset-2 nopad">
+									<?php the_content(); ?>
 								</div>
 							</div>
 
@@ -83,7 +84,7 @@ WP Post Template: Fancy List
 									<div class="listHeader container-fluid">
 										<div class="col-sm-8 col-sm-offset-2 nopad">
 											<?php if($title) : ?>
-												<a class="itemTitle visible-xs" href="javascript:void;">
+												<a class="itemTitle visible-xs-block" href="javascript:void;">
 													<h1>
 														<span>
 															<?php echo $title; ?>
@@ -107,7 +108,7 @@ WP Post Template: Fancy List
 								</div>
 
 								<div class="row listBodyContainer">
-									<a id="listBodyToggle" class="listBodyToggle visible-xs"><i class="btr bt-angles-left"></i></a>
+									<a id="listBodyToggle" class="listBodyToggle visible-xs-block"><i class="btr bt-angles-left"></i></a>
 									<div class="listBody col-sm-8 col-sm-offset-2 nopad">
 										<?php if($desc) : ?>
 											<p>
@@ -146,7 +147,7 @@ WP Post Template: Fancy List
 			</div>
 
 			<!-- /60899964/Home_Mobile_Interstitial -->
-			<div id='div-gpt-ad-1465835581876-16' class="visible-xs">
+			<div id='div-gpt-ad-1465835581876-16' class="visible-xs-block">
 			<script type='text/javascript'>
 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-16'); });
 			</script>
@@ -185,14 +186,14 @@ WP Post Template: Fancy List
 											<li><a class="share-email" href="mailto:Friend@somewhere.com?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
 											<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 											<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
-											<li class="visible-xs"><h4>Share This Post</h4></li>
+											<li class="visible-xs-block"><h4>Share This Post</h4></li>
 										</ul>
 									</div>
 									<div class="nopadright col-sm-7">
 										<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 										<p class="byline hidden-xs"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-										<p class="byline visible-xs pull-left nomarg"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <br /> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-										<ul class="post-social visible-xs">
+										<p class="byline visible-xs-block pull-left nomarg"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <br /> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+										<ul class="post-social visible-xs-block">
 											<li><a class="share-email" href="mailto:Friend@somewhere.com?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
 											<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
 											<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
@@ -219,7 +220,7 @@ WP Post Template: Fancy List
 						</div>
 
 						<!-- /60899964/Home_Mobile_300x250_pos4 -->
-						<div id='div-gpt-ad-1467230007625-1' style='height:250px; width:300px;' class="visible-xs text-center">
+						<div id='div-gpt-ad-1467230007625-1' style='height:250px; width:300px;' class="visible-xs-block text-center">
 						<script type='text/javascript'>
 						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-1'); });
 						</script>
