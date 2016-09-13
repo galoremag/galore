@@ -150,7 +150,7 @@ Template Name: Contributor Submission
             <button type="submit" class="btn btn-default text-center">Submit</button>
             </form> -->
 
-            <?php echo do_shortcode("[RM_Form id='4']"); ?>
+            <?php echo do_shortcode("[RM_Form id='1']"); ?>
             <?php echo do_shortcode("[RM_Login]"); ?>
           </div>
 
