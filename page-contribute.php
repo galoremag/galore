@@ -23,7 +23,7 @@ Template Name: Contributor Submission
 
           <div class="row-fluid contributorHeading">
             <div class="col-sm-12">
-              <h1 class="text-center">Write For Us</h1>
+              <h1 class="text-center"><?php the_title(); ?></h1>
             </div>
           </div>
 
@@ -33,11 +33,11 @@ Template Name: Contributor Submission
             </div>
             <div class="col-sm-12">
               <div class="col-sm-4">
-                <i class="fa fa-globe" aria-hidden="true"></i>
+                <i class="btr bt-bar-chart" aria-hidden="true"></i>
                 <p class="stats">Over 1M Unique Visitors</p>
               </div>
               <div class="col-sm-4">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="btr bar-camera" aria-hidden="true"></i>
                 <p class="stats">Over 200k Instagram Followers</p>
               </div>
               <div class="col-sm-4">
@@ -48,14 +48,7 @@ Template Name: Contributor Submission
           </div>
 
           <div class="row text-center contributorDescriptions">
-            <div class="col-sm-12">
-              <h2>What We Seek</h2>
-            </div>
-            <div class="col-sm-12">
-              <p><span style="color: #fa7470;">Galore’s </span> contributing writers are carefully selected based on a
-                combination of talent, experience, and passion. We leave no stone unturned, and every topic,
-                be it controversial or not, is explored through a variety of lenses and perspectives.</p>
-            </div>
+            <?php the_content(); ?>
           </div>
 
           <div class="row text-center contributorForm">
