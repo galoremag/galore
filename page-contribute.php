@@ -34,15 +34,15 @@ Template Name: Contributor Submission
             <div class="col-sm-12">
               <div class="col-sm-4">
                 <i class="btr bt-bar-chart" aria-hidden="true"></i>
-                <p class="stats">Over 1M Unique Visitors</p>
+                <h4 class="stats">Over 1M Unique Visitors / Month</h4>
               </div>
               <div class="col-sm-4">
-                <i class="btr bar-camera" aria-hidden="true"></i>
-                <p class="stats">Over 200k Instagram Followers</p>
+                <i class="btr bt-smile" aria-hidden="true"></i>
+                <h4 class="stats">Bi-Coastal Chill Culture</h4>
               </div>
               <div class="col-sm-4">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                <p class="stats">Over 200k Twitter Followers</p>
+                <i class="btr bt-paper-plane" aria-hidden="true"></i>
+                <h4 class="stats">Freedom of Expression</h4>
               </div>
             </div>
           </div>
