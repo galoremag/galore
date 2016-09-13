@@ -89,6 +89,10 @@ jQuery(document).ready(function($) {
 
   // setTimeout(loadLikeBar, 22000);
 
+  //If window location contains /tag or /category , then do the function, else return false or null
+  var current_url = window.location.href;
+  var current_url_path = current_url.match(/(\/tag\/)|(\/category\/)/g);
+
   function sticky_relocate() {
     var window_height = window.innerHeight;
       var window_top = $(window).scrollTop();
