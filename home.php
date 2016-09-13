@@ -73,7 +73,7 @@
 				</div>
 				<div class="row-fluid">
 					<div class="col-sm-12 nopad">
-					<?php echo do_shortcode( '[new_royalslider id="1"]' ); ?>
+					<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
 					</div>
 				</div>
 				<div class="row-fluid">
