@@ -104,7 +104,7 @@ WP Post Template: Fancy List
 												</h4>
 											<?php endif; ?>
 
-											<a href="javascript:void;" class="listReadMore">Read More <i class="btr bt-angles-right"></i></a>
+											<a href="javascript:void;" class="listReadMore visible-xs">Read More <i class="btr bt-angles-right"></i></a>
 										</div>
 									</div>
 								</div>
