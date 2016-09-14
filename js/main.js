@@ -386,7 +386,7 @@ jQuery(document).ready(function($) {
 
   // Fancy List Body Toggle
   $(function() {
-    $('.listBodyContainer .listBodyToggle, .listItem a.itemTitle, .listHeroCover').on('click tap', function(event) {
+    $('.listBodyContainer .listBodyToggle, .listItem a.listReadMore, .listItem a.itemTitle, .listHeroCover').on('click tap', function(event) {
       event.preventDefault();
       $('.listBodyContainer, .listHeroCover').toggleClass('open');
     });

@@ -103,6 +103,8 @@ WP Post Template: Fancy List
 													<span><?php echo $subtitle; ?></span>
 												</h4>
 											<?php endif; ?>
+
+											<a href="javascript:void;" class="listReadMore"><h4>Read More</h4></a>
 										</div>
 									</div>
 								</div>
