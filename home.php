@@ -25,6 +25,15 @@
 
 			<?php sm_unit(); ?>
 
+			<!-- Snapchat Takeover -->
+			<div class="glide snapPostSm">
+				<a href="//snapchat.com/add/galoremag" target="_blank" class="snapPostContent">
+					<img src="<?php echo content_url(); ?>/themes/galore/images/galore_snapcode.svg" title="Galore Snapchat" />
+					<h3>Watched by Over 100K Daily</h3>
+					<p>#craycray</p>
+				</a>
+			</div>
+
 			<?php
 				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0');
 				foreach ($postslist as $post) :
@@ -495,6 +504,15 @@
 
 						<!-- Special Post -->
 						<?php md_unit(); ?>
+
+						<!-- Snapchat takeover -->
+						<li class="post snapPostMd">
+							<a href="//snapchat.com/add/galoremag" target="_blank" class="snapPostContent">
+								<img src="<?php echo content_url(); ?>/themes/galore/images/galore_snapcode.svg" title="Galore Snapchat" />
+								<h3>WATCHED BY OVER 100K DAILY</h3>
+								<p>The craziest channel on Snapchat for beauty, fashion and pop. Screenshot the ^^^ or click the code to add now to join the fun.</p>
+							</a>
+						</li>
 
 						<hr />
 
