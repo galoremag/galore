@@ -146,9 +146,7 @@
 	add_filter('show_admin_bar', '__return_false');
 
 	// ADD ROYAL SLIDER THEME
-
-	add_filter('new_
-	slider_skins', 'new_royalslider_add_custom_skin', 10, 2);
+	add_filter('new_royalslider_skins', 'new_royalslider_add_custom_skin', 10, 2);
 	function new_royalslider_add_custom_skin($skins) {
 	      $skins['rsGalore'] = array(
 	           'label' => 'Galore Skin',
