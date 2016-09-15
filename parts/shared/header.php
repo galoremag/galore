@@ -177,17 +177,6 @@
 
 	<?php lg_unit(); ?>
 
-	<div class="snapPostXl">
-		<a href="//snapchat.com/add/galoremag" target="_blank" class="snapPostContent">
-			<img src="<?php echo content_url(); ?>/themes/galore/images/galore_snapcode.svg" title="Galore Snapchat" />
-			<h1>Watched by Over 100K Daily</h1>
-			<p>Screenshot that ^^^ or tap to follow</p>
-			<div class="readMore center-block">
-				<i class="btr bt-arrow-down"></i>
-			</div>
-		</a>
-	</div>
-
 <?php endif; ?>
 
 <!-- End Superhero -->
