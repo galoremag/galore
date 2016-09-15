@@ -29,6 +29,7 @@
 			<div class="glide snapPostSm">
 				<a href="//snapchat.com/add/galoremag" target="_blank" class="snapPostContent">
 					<img src="<?php echo content_url(); ?>/themes/galore/images/galore_snapcode.svg" title="Galore Snapchat" />
+					<p>@galoremag</p>
 					<h3>Watched by Over 100K Daily</h3>
 				</a>
 			</div>
