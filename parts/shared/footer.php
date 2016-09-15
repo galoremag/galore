@@ -5,50 +5,16 @@
 		<h1 class="pull-left">Get Exclusives</h1>
 		<div class="pad10 fb-like pull-left" data-href="https://www.facebook.com/galore" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 		<div>
-			<a id="likeBar-close" href="#"><i class="fa fa-lg fa-close"></i></a>
+			<a id="likeBar-close" href="javascript:;"><i class="fa fa-lg fa-close"></i></a>
 		</div>
 	</div> -->
-
-	<?php if ( wp_is_mobile() ) : ?>
-		<script>
-
-		(function() {
-
-		  window.cToolbarInit = function() {
-
-		    cToolbar.load({
-		      mobileRightButton: 'youtube',
-		      facebookUsername: 'galore',
-		      facebookName: 'Galore',
-		      twitterHandle: 'TheGaloreMag',
-		      twitterName: 'Galore',
-		      youtubeCustomUrl: 'galoremag',
-		      youtubeDisplayName: 'GaloreTV',
-		      desktopBackground: 'solid',
-		      desktopSocialButtons: ["facebook","youtube"],
-		      channel: 'Style'
-		    });
-
-		  };
-
-		var ns = document.createElement('script');
-		    ns.type = 'text/javascript';
-		    ns.async = true;
-		    ns.src = '//toolbar.complex.com/dist/ctoolbar.min.js';
-		    var s = document.getElementsByTagName('script')[0];
-		    s.parentNode.insertBefore(ns, s);
-
-		})();
-
-		</script>
-	<?php endif; ?>
 
 	<!-- Newsletter Signup -->
 	<div id="fb-modal">
 	    <div class="fb-modal-dialog col-md-4 col-md-offset-4">
 	        <div class="fb-modal-content">
 	            <div class="fb-modal-header">
-	                <a id="fbClose" class="close" data-dismiss="fb-modal" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
+	                <a id="fbClose" class="close" data-dismiss="fb-modal" aria-label="Close"><span aria-hidden="true" class="btr bt-times"></span></a>
 	            </div>
 	            <div class="fb-modal-body">
 	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
@@ -68,16 +34,16 @@
 			<div class="snapchat-modal-dialog col-md-4 col-md-offset-4">
 					<div class="snapchat-modal-content">
 							<div class="snapchat-modal-header">
-									<a id="snapchatClose" class="close" data-dismiss="snapchat-modal" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
+									<a id="snapchatClose" class="close" data-dismiss="snapchat-modal" aria-label="Close"><span aria-hidden="true" class="btr bt-times"></span></a>
 							</div>
 							<div class="snapchat-modal-body">
 									<!-- <div class="brand-white" style="margin: 0 auto -100px auto;"></div> -->
 									<div class="pad10 snapchat-like">
-										<img src="<?php echo content_url(); ?>/themes/galore/images/galore_snapcode.svg" title="Galore Snapchat - Snapcode" alt="Galore Snapchat - Snapcode" />
+										<a href="//snapchat.com/add/galoremag"><img src="<?php echo content_url(); ?>/themes/galore/images/galore_snapcode.svg" title="Galore Snapchat - Snapcode" alt="Galore Snapchat - Snapcode" /></a>
 									</div>
-									<h1 class="horPad20 text-center">SH*T GETS REAL</h1>
+									<h1 class="horPad20 text-center">Watched by over 100k daily</h1>
 									<p class="text-center">
-										Screenshot that ^^^ and follow us on Snapchat.
+										The craziest channel on Snapchat for beauty, fashion and pop. Screenshot the ^^^ or click the code to add now to join the fun.
 									</p>
 							</div>
 					</div>
@@ -90,7 +56,7 @@
 	    <div class="email-signup-dialog col-md-4 col-md-offset-4">
 	        <div class="email-signup-content">
 	            <div class="email-signup-header">
-	                <a href="javascript:;" id="newsletterClose" class="close" data-dismiss="email-signup" aria-label="Close"><span aria-hidden="true" class="fa fa-close"></span></a>
+	                <a href="javascript:;" id="newsletterClose" class="close" data-dismiss="email-signup" aria-label="Close"><span aria-hidden="true" class="btr bt-times"></span></a>
 	            </div>
 	            <div class="email-signup-body">
 	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
@@ -123,7 +89,7 @@
 
 	<footer id="footer">
 		<div class="footer-content container-fluid">
-			<a id="footer-close" href="#"><i class="fa fa-2x fa-close"></i></a>
+			<a id="footer-close" href="#"><i class="btr bt-times"></i></a>
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 					<p class="text-center">GALORE is a media brand for the modern bombshell, speaking to the edgy, sexy and creative woman in her 20's surrounding Fashion, Beauty, Pop, Sex + Dating and Health.</p>

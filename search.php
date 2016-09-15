@@ -168,13 +168,7 @@
 
 			<?php endforeach; ?>
 
-			<?php wp_reset_postdata(); ?>
-
-			<!­­ cmnUNT | Begin ad tag ­­>
-			<div id="cmn_ad_tag_content" class="text-center">
-				<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-			</div>
-			<!­­ cmnUNT | End ad tag ­­>
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
 
 			<hr />
 
@@ -226,11 +220,7 @@
 
 			<hr />
 
-			<!­­ cmnUNT | Begin ad tag ­­>
-			<div id="cmn_ad_tag_content" class="text-center">
-				<script type="text/javascript">cmnUNT('300x250', tile_num++);</script>
-			</div>
-			<!­­ cmnUNT | End ad tag ­­>
+			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-two-300x250' ) ); ?>
 
 			<hr />
 

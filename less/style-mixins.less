@@ -11,8 +11,29 @@
 @salmon : #FA7470;
 @galwhite : antiquewhite;
 
+.randomColor() {
+  @randomColor: `(Math.random()*0xFFFFFF<<0).toString(16)`;
+  @colorHex: e(@randomColor);
+  @color: ~"#@{colorHex}";
+}
+
+// to use:
+// .randomColor();
+// backgroun: @color
+
 .pink {
 	color: @brand !important;
+}
+
+// Image Mixins
+.brandBackground {
+	background: url(http://res.cloudinary.com/galore/image/upload/c_scale,dpr_1.0,f_auto,fl_lossy.progressive,q_70/v1471971395/backgrounds/iScream2.gif);
+	background-size: 250px 250px;
+  background-position: center center;
+}
+
+.brandBackgroundGlaze {
+	.pinkYellowFade;
 }
 
 .font1 {
@@ -38,6 +59,11 @@
 
 .font5 {
 	font-family: 'Cherry Swash', cursive;
+}
+
+.font6 {
+	font-family: 'salome', serif;
+	font-weight: normal !important;
 }
 
 li {
@@ -69,6 +95,73 @@ p {
 	perspective: 1000;
 	-webkit-perspective: 1000;
 }
+
+// Wiggle
+@-ms-keyframes wiggle {
+	0% {
+		-ms-transform: rotate(5deg);
+	}
+	15% {
+		-ms-transform: rotate(-5deg);
+	}
+	25% {
+		-ms-transform: rotate(5deg);
+	}
+	50% {
+		-ms-transform: rotate(0deg);
+	}
+}
+@-moz-keyframes wiggle {
+	0% {
+		-moz-transform: rotate(5deg);
+	}
+	15% {
+		-moz-transform: rotate(-5deg);
+	}
+	25% {
+		-moz-transform: rotate(5deg);
+	}
+	50% {
+		-moz-transform: rotate(0deg);
+	}
+}
+@-webkit-keyframes wiggle {
+	0% {
+		-webkit-transform: rotate(5deg);
+	}
+	15% {
+		-webkit-transform: rotate(-5deg);
+	}
+	25% {
+		-webkit-transform: rotate(5deg);
+	}
+	50% {
+		-webkit-transform: rotate(0deg);
+	}
+}
+@keyframes wiggle {
+	0% {
+		transform: rotate(5deg);
+	}
+	15% {
+		transform: rotate(-5deg);
+	}
+	25% {
+		transform: rotate(5deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+}
+
+.wiggle {
+	-ms-animation: wiggle 1.5s infinite;
+	-moz-animation: wiggle 1.5s infinite;
+	-webkit-animation: wiggle 1.5s infinite;
+	animation: wiggle 1.5s infinite;
+	// -webkit-animation-fill-mode: forwards;
+}
+
 
 .center {
 	margin: 0 auto !important;

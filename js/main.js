@@ -89,6 +89,10 @@ jQuery(document).ready(function($) {
 
   // setTimeout(loadLikeBar, 22000);
 
+  //If window location contains /tag or /category , then do the function, else return false or null
+  var current_url = window.location.href;
+  var current_url_path = current_url.match(/(\/tag\/)|(\/category\/)/g);
+
   function sticky_relocate() {
     var window_height = window.innerHeight;
       var window_top = $(window).scrollTop();
@@ -171,7 +175,7 @@ jQuery(document).ready(function($) {
 
   loadNewsletter();
 
-  loadSnapchatModal();
+  // loadSnapchatModal();
 
   // loadLikeBar();
 
@@ -192,19 +196,19 @@ jQuery(document).ready(function($) {
   $('form#cart input[type=text]').css('width','auto');
 
   // FIX PLACEHOLDERS
-    $('[placeholder]').focus(function() {
-        var input = $(this);
-        if (input.val() == input.attr('placeholder')) {
-            input.val('');
-            input.removeClass('placeholder');
-        }
-    }).blur(function() {
-        var input = $(this);
-        if (input.val() == '' || input.val() == input.attr('placeholder')) {
-            input.addClass('placeholder');
-            input.val(input.attr('placeholder'));
-        }
-    }).blur();
+  $('[placeholder]').focus(function() {
+      var input = $(this);
+      if (input.val() == input.attr('placeholder')) {
+          input.val('');
+          input.removeClass('placeholder');
+      }
+  }).blur(function() {
+      var input = $(this);
+      if (input.val() == '' || input.val() == input.attr('placeholder')) {
+          input.addClass('placeholder');
+          input.val(input.attr('placeholder'));
+      }
+  }).blur();
 
   // Snappy Taps
   $(function() {
@@ -260,7 +264,7 @@ jQuery(document).ready(function($) {
   // Sticky Sidebar
   $(function() {
     var target = $('#global-container');
-    if (target.is('.tag,.category,.single')) {
+    if (target.is('.tag,.category')) {
       if (isTouchDevice()===true) {
         return;
       } else {
@@ -362,7 +366,6 @@ jQuery(document).ready(function($) {
     });
   });
 
-    /////////////////////
   // Footer Toggle //
   /////////////////////
 
@@ -381,6 +384,23 @@ jQuery(document).ready(function($) {
     });
   });
 
+  // Fancy List Body Toggle
+  $(function() {
+    $('.listBodyContainer .listBodyToggle, .listItem a.listReadMore, .listItem a.itemTitle, .listHeroCover').on('click tap', function(event) {
+      event.preventDefault();
+      $('.listBodyContainer, .listHeroCover').toggleClass('open');
+    });
+  });
+
+  // Color Fancy list bodies
+  // var colors = ["bluePinkGradientFade", "yellowBlueGradient", "purpleGradientFade", "brandGradientFade"]
+  // var randomColor = Math.floor(Math.random()*colors.length);
+  //
+  // $(".listBodyContainer").each(function () {
+  //     $(this).addClass(colors[randomColor]);
+  //     randomColor = (randomColor + 1) % colors.length;
+  // });
+
   // CLOSE Facebook LIKE BAR
   // $(function() {
   //   $("#likeBar-close").on('click tap', function(event) {
@@ -388,6 +408,38 @@ jQuery(document).ready(function($) {
   //         $('#likeBar').animate({bottom: "-60px"});
   //         createCookie("facebook", "read", 7);
   //     });
+  // });
+
+  console.log(isMobile);
+  // Fancy List Panels
+  if (isMobile) {
+    $.scrollify({
+      section: ".listItem",
+      sectionName : "section-name",
+      offset: 0,
+      // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
+      standardScrollElements: ".listBodyContainer, .everything, .listItem:last-child",
+      scrollSpeed: 400
+    });
+  } else {
+    $.scrollify({
+      section: ".listItem",
+      offset: 0,
+      sectionName : "section-name",
+      // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
+      standardScrollElements: ".listBodyContainer, .everything, .listItem:last-child",
+      scrollSpeed: 400
+    });
+  }
+
+  // Fancy List Scrolling
+  // $(function() {
+  //     if ($('#global-container').is('.tag, .category, .single')) {
+  //         var shareButton = document.querySelector('post-social');
+  //         shareButton.addEventListener('click', recordShare, false);
+  //     } else {
+  //         return;
+  //     }
   // });
 
 });

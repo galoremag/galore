@@ -9,6 +9,12 @@
 	#cover-stories .rsGalore h1 {
 		font-size: 85px !important;
 	}
+	// .darlings a.postimage, .post-grid a.postimage {
+	// 	height: 360px !important
+	// }
+	.thumb {
+		max-height: 400px;
+	}
 }
 
 /* Tablets and up (768px and up) */
@@ -122,7 +128,7 @@
 		padding: 20px 40px;
 	}
 	.jumbotron-in {
-		padding: 120px 0 100px 0;
+		padding: 120px 10px 100px 10px;
 	}
 	.jumbotron-in .container {
 		padding: auto 0px !important;
@@ -273,7 +279,7 @@
 		display: none !important;
 	}
 	.jumbotron-in {
-		padding: 120px 0 60px 0;
+		padding: 120px 10px 60px 10px;
 	}
 	.rsGalore {
 		height: 280px !important;
@@ -306,15 +312,26 @@
 	}
 
 	.footbut {
-		bottom: 30px;
+		bottom: 15px;
 	}
 
 	footer {
-		padding-top: 100px;
+		padding-top: 120px;
 	}
 	a#footer-close {
 		top: 80px;
 	}
+
+	/* Contribute Form mobile queries */
+
+	.contributorHeading {
+		padding-top: 190px;
+	}
+
+	.contributorDescriptions p {
+		margin: 0px;
+	}
+
 }
 
 // The Real iPhone media queries
@@ -343,6 +360,154 @@ and (orientation : portrait) {
 	  padding-right: 0;
 	  border: 10px solid white;
 	  box-shadow: 1px 1px 25px fade(@brand, 30%);
+	}
+
+	.listHero {
+		background-attachment: scroll;
+		& .listHeroCover {
+			background: fade(black, 66%);
+			width: 100%;
+			height: 100vh;
+			display: none;
+			position: absolute;
+			z-index: 1;
+			.transition;
+		}
+		& .listHeroCover.open {
+			display: block;
+			.transition;
+		}
+	}
+	.listBodyContainer {
+		position: absolute;
+		background-color: white;
+		width: 80%;
+		height: 100vh;
+		right: -80%;
+		margin-top: -100vh;
+		z-index: 1;
+		box-shadow: inset 0 0 10px fade(@brand, 20%);
+		.transition;
+	}
+	.listBodyContainer.open {
+		.transition;
+		right: 0;
+	}
+	.listBodyContainer.open .listBodyToggle {
+		transform: rotate(180deg);
+		-ms-animation: none;
+		-moz-animation: none;
+		-webkit-animation: none;
+		animation: none;
+	}
+	.listBodyContainer .listBodyToggle {
+		border-radius: 50%;
+		background: black;
+		.brand-shadow;
+		.wiggle;
+		position: absolute;
+		margin-left: -65px;
+		margin-top: 10px;
+		color: #fff;
+		font-size: 18px;
+		padding: 8px 13px 7px 12px
+	}
+	.listBody {
+		margin: 0;
+		height: 100vh;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+	.nopadright {
+		padding-right: 0px;
+	}
+	body.menu-open .modal-nav {
+		position: absolute;
+		top:100px;
+	}
+	#modal-nav-button {
+		width: 32px;
+		height: 32px;
+		/*padding: 6px 10px 5px 8px;*/
+		margin: 10px;
+	}
+	ul#menu-footer-menu li:first-child, ul#menu-footer li:first-child {
+		display: none;
+	}
+	.hero-slider {
+		padding: 0px;
+	}
+	.home-sex-dating .excerpt {
+		display: none;
+	}
+	figure.hammy-responsive {
+		width: 100%;
+	}
+	.post h4 {
+		text-align: center;
+	}
+	ul.post-social {
+		width: 100%;
+		padding: 20px 100px;
+	}
+	ul.post-social li:first-child {
+		margin-right: 0px !important;
+	}
+	ul.post-social h4 {
+		float: right;
+		text-align: right;
+		width: 100%;
+	}
+	div.specialFlagMd {
+		top: 30px;
+	}
+	.specialMd ul.post-social {
+		width: 100% !important;
+		position: absolute !important;
+		right: 0px !important;
+		bottom: -65px !important;
+	}
+	footer div.footer-icon {
+		display: none !important;
+	}
+	.rsGalore {
+		height: 280px !important;
+	}
+	.rsGalore .rsGCaption {
+		font-size: 18px !important;
+		padding: 10px 10px !important;
+	}
+	.rsGalore .rsTags {
+		top: 10px;
+		right: 0px;
+		padding: 2px 6px;
+		background: @brand;
+		box-shadow: 1px 1px 0px rgba(255,255,0,1);
+		z-index: 9999;
+		letter-spacing: 0px;
+	}
+
+	.category .rsText h2 {
+		font-size: 22px !important;
+		padding-top: 40px !important;
+	}
+
+	.snapchat-modal.in .snapchat-modal-dialog {
+		margin-top: 20px;
+	}
+
+	.snapchat-modal-header {
+		height: 40px
+	}
+	.footbut {
+		bottom: 15px;
+	}
+
+	footer {
+		padding-top: 120px;
+	}
+	a#footer-close {
+		top: 80px;
 	}
 }
 
@@ -507,9 +672,57 @@ and (orientation : portrait) {
 	ul#menu-footer-menu li:last-child, ul#menu-footer li:last-child {
 		display: none !important;
 	}*/
-	.thumb {
-		width: 100%;
+
+	/*== Mobile Fancy List ==*/
+
+	#global-inner.single-list {
+		overflow-x: hidden
 	}
+
+	.single-list p, .single-list h1, .single-list h3 {
+		padding: 15px;
+	}
+
+/*	.single-list .listHero h1, .single-list .listHero h3 {
+		padding: 0;
+	}*/
+
+	.listHero {
+		height: 100vh;
+	}
+
+	.listItem {
+		// width: 200vh;
+		height: 100vh;
+	}
+
+	// .listItem.shift {
+	// 	position: relative;
+	// 	left: -92vh;
+	//
+	// }
+
+	.listHeader {
+		// width: 100vh;
+		height: 100vh;
+		float: left;
+		padding: 62vh 10px 10px 10px;
+		& h1 {
+			font-size: 32px;
+		}
+	}
+
+	.listHeroBody {
+		width: 50vh;
+		height: 100vh;
+		overflow-y: scroll;
+		background: white;
+		& h1 {
+			.font6;
+			padding: 0 15px !important;
+		}
+	}
+
 	.email-signup-dialog {
 		margin-top: 20px;
 	}
@@ -520,12 +733,8 @@ and (orientation : portrait) {
 		-webkit-transform: scale(0.7);
 	}
 
-	.footbut {
-		bottom: 45px;
-	}
-
 	a.cat-icon {
-	  	bottom: 38px;
+	  	bottom: 4px;
 	}
 }
 

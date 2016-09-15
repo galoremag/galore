@@ -1,19 +1,26 @@
-<?php if ( wp_is_mobile() ) : ?>
-	<!­­ cmnUNT | Begin ad tag ­­>
-	<div id="cmn_ad_tag_head" class="fw_galoremag text-center">
-	    <script type="text/javascript">
-	    	cmnUNT('3x3', tile_num++);
-	    </script>
-	</div>
-	<!­­ cmnUNT | End ad tag ­­>
-<?php endif; ?>
+<!-- LEADERBOARD -->
+<?php if ( is_single() ) : ?>
 
-<?php if ( wp_is_mobile() ) : ?>
-	<!­­ cmnUNT | Begin ad tag ­­>
-	<script type="text/javascript">
-		cmnUNT('tover', tile_num++);
-	</script>
-	<!­­ cmnUNT | End ad tag ­­>
+	<?php if ( wp_is_mobile() ) : ?>
+		<!-- /60899964/Article_Mobile_Leaderboard -->
+		<div id='div-gpt-ad-1465835581876-6' class="center-block text-center">
+		<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-6'); });
+		</script>
+		</div>
+	<?php endif; ?>
+
+<?php else : ?>
+
+	<?php if ( wp_is_mobile() ) : ?>
+		<!-- /60899964/Home_Mobile_Leaderboard -->
+		<div id='div-gpt-ad-1465835581876-17' class="center-block text-center">
+		<script type='text/javascript'>
+		googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-17'); });
+		</script>
+		</div>
+	<?php endif; ?>
+
 <?php endif; ?>
 
 <?php if ( wp_is_mobile() ) : ?>
@@ -139,7 +146,7 @@
 			<div class="modal-nav-content">
 				<!-- <div class="modal-nav-header">
 					<div class="modal-nav-close">
-						<i class="fa fa-close"></i>
+						<i class="btr bt-times"></i>
 					</div>
 				</div> -->
 				<ul class="modal-nav-menu text-center">
@@ -168,36 +175,18 @@
 
 <?php if ( wp_is_mobile() ) : ?>
 
-<?php $args = array( 'tag' => 'superhero', 'post_type' => array('featured', 'post'), 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
+	<?php lg_unit(); ?>
 
-$postslist = get_posts( $args );
-
-// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
-foreach ($postslist as $post) : setup_postdata($post);
-?>
-
-<?php
-$thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
-$url = $thumb[0];
-?>
-
-<div id="superhero" style="background: url(<?php echo $url ?>) no-repeat;">
-	<div class="specialFlag"><?php echo get_post_meta( $post->ID, 'featured', true ); ?></div>
-	<div class="info">
-		<h1 class="pad20 nomarg"><?php the_title(); ?></h1>
-		<div class="cta">
-			<a class="center-block btn btn-primary" href="<?php echo get_post_meta( $post->ID, 'link', true ); ?>" title="<?php the_title_attribute(); ?>">Read More</a>
-			<img class="specialPixel" SRC="https://ad.doubleclick.net/ddm/ad/N9556.2353504GALORE/B9575230.132670120;sz=1x1;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" BORDER=0 WIDTH=1 HEIGHT=1 ALT="Advertisement">
-			<a href="https://ad.doubleclick.net/ddm/clk/305312944;132670120;o"/></a>
-		</div>
-		<p class="specialTip">Scroll to site</p>
-		<a id="scroll-down"><i class="fa fa-arrow-circle-o-down"></i></a>
+	<div class="snapPostXl">
+		<a href="//snapchat.com/add/galoremag" target="_blank" class="snapPostContent">
+			<img src="<?php echo content_url(); ?>/themes/galore/images/galore_snapcode.svg" title="Galore Snapchat" />
+			<h1>Watched by Over 100K Daily</h1>
+			<p>Screenshot that ^^^ or tap to follow</p>
+			<div class="readMore center-block">
+				<i class="btr bt-arrow-down"></i>
+			</div>
+		</a>
 	</div>
-</div>
-
-<?php endforeach; ?>
-
-<?php wp_reset_postdata(); ?>
 
 <?php endif; ?>
 
