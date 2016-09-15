@@ -55,6 +55,8 @@ Template Name: Contributor Submission
           <div class="row text-center contributorForm">
             <div class="col-sm-6 col-sm-offset-3">
               <?php echo do_shortcode("[RM_Form id='1']"); ?>
+              <div class="g-recaptcha" data-sitekey="6LfrzwYUAAAAAFNnNUAsGnGbMA1zM1vjXrnGo2O2"></div>
+
             </div>
           </div>
 
