@@ -115,7 +115,7 @@
 						'post__in'  => get_option( 'sticky_posts' ),
 						'ignore_sticky_posts' => 1
 					);
-					$bsQuery = new WP_Query( $args );
+					$firstQuery = new WP_Query( $args );
 
 					if(have_posts()) :	while($bsQuery->have_posts()) :  $bsQuery->the_post();
 
@@ -163,11 +163,11 @@
 						'category_name' => 'beauty,fashion',
 						'showposts' => 2,
 						'orderby' => 'date',
-						'offset' => 4,
+						'offset' => 1,
 						'post__in'  => get_option( 'sticky_posts' ),
 						'ignore_sticky_posts' => 2
 					);
-					$bsQuery = new WP_Query( $args );
+					$secondQuery = new WP_Query( $args );
 
 					if(have_posts()) :	while($bsQuery->have_posts()) :  $bsQuery->the_post();
 
