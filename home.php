@@ -135,9 +135,10 @@
 						'post__in'  => get_option( 'sticky_posts' ),
 						'ignore_sticky_posts' => 1
 					);
+
 					$firstQuery = new WP_Query( $args );
 
-					if(have_posts()) :	while($bsQuery->have_posts()) :  $bsQuery->the_post();
+					if(have_posts()) :	while($firstQuery->have_posts()) :  $firstQuery->the_post();
 
 					//Show the left hand side column
 					if($counter == 1) :
@@ -202,7 +203,7 @@
 					);
 					$secondQuery = new WP_Query( $args );
 
-					if(have_posts()) :	while($bsQuery->have_posts()) :  $bsQuery->the_post();
+					if(have_posts()) :	while($secondQuery->have_posts()) :  $secondQuery->the_post();
 
 					//Show the left hand side column
 					if($counter == 1) :
