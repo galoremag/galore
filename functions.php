@@ -91,26 +91,6 @@
 
 	======================================================================================================================== */
 
-	/**
-	 * Custom callback for outputting comments
-	 *
-	 * @return void
-	 * @author Keir Whitaker
-	 */
-	function starkers_comment( $comment, $args, $depth ) {
-		$GLOBALS['comment'] = $comment;
-		?>
-		<?php if ( $comment->comment_approved == '1' ): ?>
-		<li>
-			<article id="comment-<?php comment_ID() ?>">
-				<?php echo get_avatar( $comment ); ?>
-				<h4><?php comment_author_link() ?></h4>
-				<time><a href="#comment-<?php comment_ID() ?>" pubdate><?php comment_date() ?> at <?php comment_time() ?></a></time>
-				<?php comment_text() ?>
-			</article>
-		<?php endif;
-	}
-
 	// BOOTSTRAP
 
 	// ADD POST THUMBNAIL TO ADMIN COLUMN
@@ -155,6 +135,7 @@
 	      return $skins;
 	}
 
+	// Image Compression
 	function get_template_part_with_hammy($template_name) {
 	    $content = load_template_part($template_name);
 	    if(function_exists('hammy_replace_images')){
@@ -164,7 +145,6 @@
 	}
 
 	// MOST RECENT POSTS FROM TAG 'FEATURED'
-
 	function add_additional_posts_to_slider($slides, $options, $type) {
 	    if( $options['id'] !== 1 ) { return $slides; }
 
@@ -196,8 +176,7 @@
 	add_action('genesis_after_entry', 'include_social', 9);
 
 	function include_social() {
-		if ( is_single() )
-	require(CHILD_DIR.'/social.php');
+		if ( is_single() ) require(CHILD_DIR.'/social.php');
 	}
 
 	// add category nicenames in body and post class
@@ -218,7 +197,6 @@
 	add_filter( 'body_class', 'category_id_class' );
 
 	// ADD PAGE TO BODY CLASS
-
 	function add_slug_body_class( $classes ) {
 	global $post;
 	if ( isset( $post ) ) {
@@ -229,7 +207,6 @@
 	add_filter( 'body_class', 'add_slug_body_class' );
 
 	// GET VIEW COUNT OF POSTS - ADD AS CUSTOM FIELD
-
 	function wpb_set_post_views($postID) {
 	    $count_key = 'wpb_post_views_count';
 	    $count = get_post_meta($postID, $count_key, true);
@@ -246,7 +223,6 @@
 	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
 	// ADD POST ID TO THE VIEW COUNTER
-
 	function wpb_track_post_views ($post_id) {
 	    if ( !is_single() ) return;
 	    if ( empty ( $post_id) ) {
@@ -291,15 +267,15 @@
 	}
 
 	// TV Redirect
-	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+	$url = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
 	if (strpos($url,'/tv/') !== false) {
 	    wp_redirect( 'http://tv.galoremag.com', 301 ); exit;
 	}
 
-	// if (strpos($url,'/shop/') !== false) {
-	//     wp_redirect( 'http://galoremag.com', 301 ); exit;
-	// }
+	if (strpos($url,'/shop/') !== false) {
+	    wp_redirect( 'https://galoremag.com', 301 ); exit;
+	}
 
 	// Popular Stories
 
@@ -373,6 +349,7 @@
 	    );
 	}
 
+	// Add post thumbnail to WP-API
 	function sb_api_featured_images( $data, $post ) {
 
 		$featured_id = get_post_thumbnail_id( $post->ID );
@@ -406,20 +383,7 @@
 	add_theme_support( 'title-tag' );
 	add_theme_support('auto-load-next-post');
 
-	// Hide user accounts
-	// add_action(‘template_redirect’, ‘bwp_template_redirect’);
-	//
-	// function bwp_template_redirect()
-	//
-	// {
-	//   if (is_author())
-	//
-	//   {
-	//     wp_redirect( home_url() ); exit;
-	//   }
-	// }
-
-	// DEBUGGIN'
+	// DEBUGGIN' CONSOLE LOGGIN
 	// function debug_to_console( $data ) {
 	//
 	// 	if ( is_array( $data ) ) {
