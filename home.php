@@ -46,7 +46,7 @@
 			        'post_type' => 'post',
 			        'tax_query' => array(
 			          array(
-			            'taxonomy' => 'section', // change taxonomy
+			            'taxonomy' => 'sections', // change taxonomy
 			            'field' => 'slug',
 			            'terms' => 'hideHome',
 									'operator' => 'NOT IN'
@@ -200,7 +200,7 @@
 				        'post_type' => 'post',
 				        'tax_query' => array(
 				          array(
-				            'taxonomy' => 'section', // change taxonomy
+				            'taxonomy' => 'sections', // change taxonomy
 				            'field' => 'slug',
 										'terms' => 'hideHome',
 										'operator' => 'NOT IN'
@@ -265,7 +265,7 @@
 				        'post_type' => 'post',
 				        'tax_query' => array(
 				          array(
-				            'taxonomy' => 'section', // change taxonomy
+				            'taxonomy' => 'sections', // change taxonomy
 				            'field' => 'slug',
 										'terms' => 'hideHome',
 										'operator' => 'NOT IN'
@@ -314,7 +314,7 @@
 				        'post_type' => 'post',
 				        'tax_query' => array(
 				          array(
-				            'taxonomy' => 'section', // change taxonomy
+				            'taxonomy' => 'sections', // change taxonomy
 				            'field' => 'slug',
 										'terms' => 'hideHome',
 										'operator' => 'NOT IN'
@@ -384,7 +384,7 @@
 						        'post_type' => 'post',
 						        'tax_query' => array(
 						          array(
-						            'taxonomy' => 'section', // change taxonomy
+						            'taxonomy' => 'sections', // change taxonomy
 						            'field' => 'slug',
 												'terms' => 'hideHome',
 												'operator' => 'NOT IN'
@@ -424,7 +424,7 @@
 						        'post_type' => 'post',
 						        'tax_query' => array(
 						          array(
-						            'taxonomy' => 'section', // change taxonomy
+						            'taxonomy' => 'sections', // change taxonomy
 						            'field' => 'slug',
 												'terms' => 'hideHome',
 												'operator' => 'NOT IN'
@@ -489,7 +489,7 @@
 						        'post_type' => 'post',
 						        'tax_query' => array(
 						          array(
-						            'taxonomy' => 'section', // change taxonomy
+						            'taxonomy' => 'sections', // change taxonomy
 						            'field' => 'slug',
 												'terms' => 'hideHome',
 												'operator' => 'NOT IN'
@@ -556,7 +556,7 @@
 						        'post_type' => 'post',
 						        'tax_query' => array(
 						          array(
-						            'taxonomy' => 'section', // change taxonomy
+						            'taxonomy' => 'sections', // change taxonomy
 						            'field' => 'slug',
 												'terms' => 'hideHome',
 												'operator' => 'NOT IN'
@@ -677,7 +677,7 @@
 										'post_type' => 'post',
 										'tax_query' => array(
 											array(
-												'taxonomy' => 'section', // change taxonomy
+												'taxonomy' => 'sections', // change taxonomy
 												'field' => 'slug',
 												'terms' => 'hideHome',
 												'operator' => 'NOT IN'
