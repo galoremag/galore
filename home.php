@@ -48,7 +48,7 @@
 			          array(
 			            'taxonomy' => 'sections', // change taxonomy
 			            'field' => 'slug',
-			            'terms' => 'hideHome',
+			            'terms' => 'hidehome',
 									'operator' => 'NOT IN'
 			            )
 					      )
