@@ -48,7 +48,8 @@
 			          array(
 			            'taxonomy' => 'section', // change taxonomy
 			            'field' => 'slug',
-			            'terms' => 'homepage'
+			            'terms' => 'hideHome',
+									'operator' => 'NOT IN'
 			            )
 					      )
 			        )
@@ -201,7 +202,8 @@
 				          array(
 				            'taxonomy' => 'section', // change taxonomy
 				            'field' => 'slug',
-				            'terms' => 'homepage'
+										'terms' => 'hideHome',
+										'operator' => 'NOT IN'
 				            )
 						      )
 				        )
@@ -265,7 +267,8 @@
 				          array(
 				            'taxonomy' => 'section', // change taxonomy
 				            'field' => 'slug',
-				            'terms' => 'homepage'
+										'terms' => 'hideHome',
+										'operator' => 'NOT IN'
 				            )
 						      )
 				        )
@@ -313,7 +316,8 @@
 				          array(
 				            'taxonomy' => 'section', // change taxonomy
 				            'field' => 'slug',
-				            'terms' => 'homepage'
+										'terms' => 'hideHome',
+										'operator' => 'NOT IN'
 				            )
 						      )
 				        )
@@ -382,7 +386,8 @@
 						          array(
 						            'taxonomy' => 'section', // change taxonomy
 						            'field' => 'slug',
-						            'terms' => 'homepage'
+												'terms' => 'hideHome',
+												'operator' => 'NOT IN'
 						            )
 								      )
 						        )
@@ -421,7 +426,8 @@
 						          array(
 						            'taxonomy' => 'section', // change taxonomy
 						            'field' => 'slug',
-						            'terms' => 'homepage'
+												'terms' => 'hideHome',
+												'operator' => 'NOT IN'
 						            )
 								      )
 						        )
@@ -485,7 +491,8 @@
 						          array(
 						            'taxonomy' => 'section', // change taxonomy
 						            'field' => 'slug',
-						            'terms' => 'homepage'
+												'terms' => 'hideHome',
+												'operator' => 'NOT IN'
 						            )
 								      )
 						        )
@@ -551,7 +558,8 @@
 						          array(
 						            'taxonomy' => 'section', // change taxonomy
 						            'field' => 'slug',
-						            'terms' => 'homepage'
+												'terms' => 'hideHome',
+												'operator' => 'NOT IN'
 						            )
 								      )
 						        )
@@ -671,7 +679,8 @@
 											array(
 												'taxonomy' => 'section', // change taxonomy
 												'field' => 'slug',
-												'terms' => 'homepage'
+												'terms' => 'hideHome',
+												'operator' => 'NOT IN'
 												)
 											)
 										)
