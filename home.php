@@ -26,7 +26,27 @@
 			<?php sm_unit(); ?>
 
 			<?php
-				$postslist = get_posts('numberposts=20&order=DESC&orderby=date&offset=0');
+				$args = array(
+					// 'numberposts' => 20,
+					'posts_per_page' => 20,
+					'order' => 'DESC',
+					'orderby' => 'date',
+					'offset' => 0,
+					'tax_query' => array(
+			      array(
+			        'post_type' => 'post',
+			        'tax_query' => array(
+			          array(
+			            'taxonomy' => 'sections', // change taxonomy
+			            'field' => 'slug',
+			            'terms' => 'hidehome',
+									'operator' => 'NOT IN'
+			            )
+					      )
+			        )
+			      )
+				);
+				$postslist = get_posts($args);
 				foreach ($postslist as $post) :
 				setup_postdata($post);
 			?>
@@ -165,7 +185,20 @@
 						'orderby' => 'date',
 						'offset' => 1,
 						'post__in'  => get_option( 'sticky_posts' ),
-						'ignore_sticky_posts' => 2
+						'ignore_sticky_posts' => 4,
+						'tax_query' => array(
+				      array(
+				        'post_type' => 'post',
+				        'tax_query' => array(
+				          array(
+				            'taxonomy' => 'sections', // change taxonomy
+				            'field' => 'slug',
+										'terms' => 'hidehome',
+										'operator' => 'NOT IN'
+				            )
+						      )
+				        )
+				      )
 					);
 					$secondQuery = new WP_Query( $args );
 
@@ -212,7 +245,26 @@
 					<!-- <div class="brand"></div> -->
 					<h2 class="text-center">Health + Fitness <i class="fa fa-heartbeat"></i></h2>
 					<?php
-					$args = array( 'category_name' => 'health', 'post_type' => 'post', 'showposts' => 1, 'orderby' => 'date', 'order' => 'DESC' );
+					$args = array(
+						'category_name' => 'health',
+						'post_type' => 'post',
+						'showposts' => 1,
+						'orderby' => 'date',
+						'order' => 'DESC',
+						'tax_query' => array(
+				      array(
+				        'post_type' => 'post',
+				        'tax_query' => array(
+				          array(
+				            'taxonomy' => 'sections', // change taxonomy
+				            'field' => 'slug',
+										'terms' => 'hidehome',
+										'operator' => 'NOT IN'
+				            )
+						      )
+				        )
+				      )
+					);
 
 					$postslist = get_posts( $args );
 
@@ -241,7 +293,27 @@
 						</div>
 
 					<?php
-					$args = array( 'category_name' => 'health', 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'offset' => 1 );
+					$args = array(
+						'category_name' => 'health',
+						'post_type' => 'post',
+						'showposts' => 2,
+						'orderby' => 'date',
+						'order' => 'DESC',
+						'offset' => 1,
+						'tax_query' => array(
+				      array(
+				        'post_type' => 'post',
+				        'tax_query' => array(
+				          array(
+				            'taxonomy' => 'sections', // change taxonomy
+				            'field' => 'slug',
+										'terms' => 'hidehome',
+										'operator' => 'NOT IN'
+				            )
+						      )
+				        )
+				      )
+					);
 
 					$postslist = get_posts( $args );
 
@@ -293,7 +365,26 @@
 					<div class="row-fluid">
 						<div class="col-sm-8">
 							<?php
-							$postslist = get_posts('category_name=sex-dating&numberposts=1&order=DESC&orderby=date');
+							$args = array(
+								'category_name' => 'sex-dating',
+								'posts_per_page' => 1,
+								'order' => 'DESC',
+								'orderby' => 'date',
+								'tax_query' => array(
+						      array(
+						        'post_type' => 'post',
+						        'tax_query' => array(
+						          array(
+						            'taxonomy' => 'sections', // change taxonomy
+						            'field' => 'slug',
+												'terms' => 'hidehome',
+												'operator' => 'NOT IN'
+						            )
+								      )
+						        )
+						      )
+							);
+							$postslist = get_posts($args);
 							foreach ($postslist as $post) :
 							setup_postdata($post);
 							?>
@@ -314,7 +405,26 @@
 						</div>
 						<div class="col-sm-4">
 							<?php
-							$postslist = get_posts('category_name=sex-dating&numberposts=2&order=DESC&orderby=date&offset=1');
+							$args = array(
+								'category_name' => 'sex-dating',
+								'posts_per_page' => 2,
+								'order' => 'DESC',
+								'orderby' => 'date',
+								'tax_query' => array(
+						      array(
+						        'post_type' => 'post',
+						        'tax_query' => array(
+						          array(
+						            'taxonomy' => 'sections', // change taxonomy
+						            'field' => 'slug',
+												'terms' => 'hidehome',
+												'operator' => 'NOT IN'
+						            )
+								      )
+						        )
+						      )
+							);
+							$postslist = get_posts($args);
 							foreach ($postslist as $post) :
 							setup_postdata($post);
 							?>
@@ -360,8 +470,27 @@
 
 							$grids = 3; //Grids per row-fluid
 
-							/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
-							query_posts($query_string . 'category_name=pop&ignore_sticky_posts=0&posts_per_page=3');
+							$args = array(
+								'category_name' => 'pop',
+								'posts_per_page' => 3,
+								'order' => 'DESC',
+								'orderby' => 'date',
+								'tax_query' => array(
+						      array(
+						        'post_type' => 'post',
+						        'tax_query' => array(
+						          array(
+						            'taxonomy' => 'sections', // change taxonomy
+						            'field' => 'slug',
+												'terms' => 'hidehome',
+												'operator' => 'NOT IN'
+						            )
+								      )
+						        )
+						      )
+							);
+
+							query_posts($args);
 
 
 							if(have_posts()) :	while(have_posts()) :  the_post();
@@ -408,8 +537,27 @@
 
 							$grids = 2; //Grids per row-fluid
 
-							/*Setting up our custom query (In here we are setting it to show 12 posts per page and eliminate all sticky posts) */
-							query_posts($query_string . 'category_name=pop&ignore_sticky_posts=0&posts_per_page=2&offset=3');
+							$args = array(
+								'category_name' => 'pop',
+								'ignore_sticky_posts' => 0,
+								'posts_per_page' => 2,
+								'offset' => 3,
+								'tax_query' => array(
+						      array(
+						        'post_type' => 'post',
+						        'tax_query' => array(
+						          array(
+						            'taxonomy' => 'sections', // change taxonomy
+						            'field' => 'slug',
+												'terms' => 'hidehome',
+												'operator' => 'NOT IN'
+						            )
+								      )
+						        )
+						      )
+							);
+
+							query_posts($args);
 
 
 							if(have_posts()) :	while(have_posts()) :  the_post();
@@ -499,13 +647,31 @@
 						<ul class="alm-listing alm-ajax">
 
 							<?php
-							$args = array( 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC' );
+
+							$args = array(
+								'posts_per_page' => 4,
+								'order' => 'DESC',
+								'orderby' => 'date',
+								'tax_query' => array(
+									array(
+										'post_type' => 'post',
+										'tax_query' => array(
+											array(
+												'taxonomy' => 'sections', // change taxonomy
+												'field' => 'slug',
+												'terms' => 'hidehome',
+												'operator' => 'NOT IN'
+												)
+											)
+										)
+									)
+							);
 
 							$postslist = get_posts( $args );
 
-							// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
 							foreach ($postslist as $post) : setup_postdata($post);
 							?>
+
 							<li class="post">
 								<article class="row-fluid">
 									<div class="nopad col-sm-5">
