@@ -84,7 +84,7 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 	<!-- RSS feed defaults -->
 	<channel>
 		<snf:logo><url><?php echo get_stylesheet_directory_uri(); ?>/images/galore-logo-short-straight-black-rss.jpg</url></snf:logo>
-		<title><?php bloginfo_rss( 'name' ); wp_title_rss(); ?></title>
+		<title><?php wp_title_rss(); ?></title>
 		<link><?php bloginfo_rss( 'url' ) ?></link>
 		<description><?php bloginfo_rss( 'description' ) ?></description>
 		<lastBuildDate><?php echo mysql2date( 'D, d M Y H:i:s +0000', get_lastpostmodified( 'GMT' ), false ); ?></lastBuildDate>
