@@ -110,9 +110,17 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 				<pubDate><?php echo mysql2date( 'D, d M Y H:i:s +0000', get_post_time( 'Y-m-d H:i:s', true ), false ); ?></pubDate>
 
 				<!-- Echo content and related posts -->
-				<content:encoded>
-					<![CDATA[<?php echo the_excerpt_rss(); echo $postlink; echo my_rss_related(); ?>]]>
-				</content:encoded>
+				<?php if (get_option('rss_use_excerpt')) : ?>
+						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink; echo my_rss_related(); ?>]]></description>
+				<?php else : ?>
+						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink; echo my_rss_related(); ?>]]></description>
+					<?php $content = get_the_content_feed('rss2'); ?>
+					<?php if ( strlen( $content ) > 0 ) : ?>
+						<content:encoded><![CDATA[<?php echo $content; echo $postlink; echo my_rss_related(); ?>]]></content:encoded>
+					<?php else : ?>
+						<content:encoded><![CDATA[<?php the_excerpt_rss(); echo $postlink; echo my_rss_related(); ?>]]></content:encoded>
+					<?php endif; ?>
+				<?php endif; ?>
 
 				<!-- Advertisements -->
 
