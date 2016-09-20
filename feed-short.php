@@ -16,15 +16,10 @@ function my_rss_related() {
 	global $post;
 	// Setup post data.
 	$pid     = $post->ID;
-	$tags    = wp_get_post_tags( $pid );
-	$tag_ids = array();
-	// Loop through post tags.
-	foreach ( $tags as $individual_tag ) {
-		$tag_ids[] = $individual_tag->term_id;
-	}
+	$cat     = get_the_terms( $pid, 'category' )[0];
 	// Execute WP_Query.
 	$related_by_tag = new WP_Query( array(
-		'tag__in'          => $tag_ids,
+		'category__in'          => $cat->ID,
 		'post__not_in'     => array( $pid ),
 		'posts_per_page'   => 3,
 	) );
@@ -111,14 +106,14 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 
 				<!-- Echo content and related posts -->
 				<?php if (get_option('rss_use_excerpt')) : ?>
-						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink; ?>]]></description>
+						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink; echo my_rss_related(); ?>]]></description>
 				<?php else : ?>
-						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink; ?>]]></description>
+						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink; echo my_rss_related(); ?>]]></description>
 					<?php $content = get_the_content_feed('rss2'); ?>
 					<?php if ( strlen( $content ) > 0 ) : ?>
-						<content:encoded><![CDATA[<?php echo $content; echo $postlink; ?>]]></content:encoded>
+						<content:encoded><![CDATA[<?php echo $content; echo $postlink; echo my_rss_related(); ?>]]></content:encoded>
 					<?php else : ?>
-						<content:encoded><![CDATA[<?php the_excerpt_rss(); echo $postlink; ?>]]></content:encoded>
+						<content:encoded><![CDATA[<?php the_excerpt_rss(); echo $postlink; echo my_rss_related(); ?>]]></content:encoded>
 					<?php endif; ?>
 				<?php endif; ?>
 
