@@ -8,7 +8,7 @@
  * @subpackage theme
  */
 /**
- * Get related posts based on category.
+ * Get related posts based on tags.
  *
  * THIS IS OPTIONAL!
  */
@@ -18,7 +18,7 @@ function my_rss_related() {
 	$cat_ID = $cat_ID[0]->cat_ID;
 	$this_post = $post->ID;
 
-	$args = array( 'category_in' => $cat_ID, 'post_type' => 'post', 'posts_per_page' => 2, 'caller_get_posts' => 1, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
+	$args = array( 'category_in' => $cat_ID, 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
 
 	$related_by_cat = get_posts( $args );
 	// Loop through posts and build HTML.
@@ -38,7 +38,7 @@ function my_rss_related() {
 header( 'Content-Type: ' . feed_content_type( 'rss-http' ) . '; charset=' . get_option( 'blog_charset' ), true );
 $frequency  = 1;        // Default '1'. The frequency of RSS updates within the update period.
 $duration   = 'hourly'; // Default 'hourly'. Accepts 'hourly', 'daily', 'weekly', 'monthly', 'yearly'.
-$postlink   = '<br /><a href="' . get_permalink() . '">See the rest of the story at mysite.com</a><br /><br />';
+$postlink   = '<br /><a href="' . get_permalink() . '">See the rest of the story at GaloreMag.com</a><br /><br />';
 $email      = get_the_author_meta( 'email');
 $author     = get_the_author();
 $postimages = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' );
@@ -104,14 +104,14 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 
 				<!-- Echo content and related posts -->
 				<?php if (get_option('rss_use_excerpt')) : ?>
-						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink; echo my_rss_related(); ?>]]></description>
+						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink;?>]]></description>
 				<?php else : ?>
-						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink; echo my_rss_related(); ?>]]></description>
+						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink;?>]]></description>
 					<?php $content = get_the_content_feed('rss2'); ?>
 					<?php if ( strlen( $content ) > 0 ) : ?>
-						<content:encoded><![CDATA[<?php echo $content; echo $postlink; echo my_rss_related(); ?>]]></content:encoded>
+						<content:encoded><![CDATA[<?php echo $content; echo $postlink;?>]]></content:encoded>
 					<?php else : ?>
-						<content:encoded><![CDATA[<?php the_excerpt_rss(); echo $postlink; echo my_rss_related(); ?>]]></content:encoded>
+						<content:encoded><![CDATA[<?php the_excerpt_rss(); echo $postlink;?>]]></content:encoded>
 					<?php endif; ?>
 				<?php endif; ?>
 
