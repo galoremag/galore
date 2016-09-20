@@ -23,26 +23,27 @@ Template Name: Contributor Submission
 
           <div class="row-fluid contributorHeading">
             <div class="col-sm-12">
-              <h1 class="text-center" style="font-size: 70px; font-weight: bold; letter-spacing: 5px; color: #ffffff;">Write For Us</h1>
+              <h1 class="text-center"><?php the_title(); ?></h1>
             </div>
           </div>
 
           <div class="row text-center contributorStats">
             <div class="col-sm-12">
-              <h2>Contributing to the Voice of Generation-Y</h2>
+              <h2>Contributing to the Voice of Generation-Z</h2>
             </div>
+            <div class="spacer20"></div>
             <div class="col-sm-12">
               <div class="col-sm-4">
-                <i class="fa fa-globe" aria-hidden="true"></i>
-                <p class="stats">Over 1M Unique Visitors</p>
+                <i class="btr bt-bar-chart" aria-hidden="true"></i>
+                <h3 class="stats">Over 1M Unique Visitors / Month</h3>
               </div>
               <div class="col-sm-4">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                <p class="stats">Over 200k Instagram Followers</p>
+                <i class="btr bt-smile" aria-hidden="true"></i>
+                <h3 class="stats">Chill (Bi-Coastal) Culture</h3>
               </div>
               <div class="col-sm-4">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                <p class="stats">Over 200k Twitter Followers</p>
+                <i class="btr bt-paper-plane" aria-hidden="true"></i>
+                <h3 class="stats">Freedom of Expression</h3>
               </div>
             </div>
           </div>
@@ -52,86 +53,9 @@ Template Name: Contributor Submission
           </div>
 
           <div class="row text-center contributorForm">
-            <form>
-            <div class="col-sm-12">
-              <h2>Apply</h2>
+            <div class="col-sm-6 col-sm-offset-3">
+              <?php echo do_shortcode("[RM_Form id='1']"); ?>
             </div>
-            <div class="form-group row">
-              <label class="col-xs-4 col-form-label">First:</label>
-              <div class="col-xs-8">
-                <input class="form-control" type="text">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-xs-4 col-form-label">Last:</label>
-              <div class="col-xs-8">
-                <input class="form-control" type="text">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-xs-4 col-form-label">Email Address:</label>
-              <div class="col-xs-8">
-                <input class="form-control" type="email">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-xs-4 col-form-label">Location:</label>
-              <div class="col-xs-8">
-                <input class="form-control" type="text">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-xs-12 col-form-label">Interests/Hobbies:</label>
-              <p>Tell us about yourself</p>
-              <div class="col-xs-12">
-                <textarea class="form-control" rows="5" type="text">
-                </textarea>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-xs-12 col-form-label">Sample Writing Link:</label>
-              <p>Please provide a link to a sample of your writing online</p>
-              <div class="col-xs-12">
-                <input class="form-control" type="url" placeholder="https://galoremag.com/barbie-has-officially-become-an-instagram-thot/">
-              </div>
-            </div>
-            <div class="form-group row formInterests">
-              <label class="col-xs-12 col-form-label">Interested Verticals:</label>
-              <div class="checkbox" class="col-sm-12">
-                <label>
-                  <input type="checkbox" value="">
-                  Beauty
-                </label>
-                <label>
-                  <input type="checkbox" value="">
-                  Fashion
-                </label>
-                <label>
-                  <input type="checkbox" value="">
-                  Sex + Dating
-                </label>
-              </div>
-              <div class="checkbox" class="col-sm-12">
-                <label>
-                  <input type="checkbox" value="">
-                  Health
-                </label>
-                <label>
-                  <input type="checkbox" value="">
-                  Pop
-                </label>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-xs-12 col-form-label">Article Ideas:</label>
-              <p>Please list some article ideas you have</p>
-              <div class="col-xs-12">
-                <textarea class="form-control" rows="5" type="text">
-                </textarea>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-default text-center">Submit</button>
-            </form>
           </div>
 
         </div>

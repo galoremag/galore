@@ -146,7 +146,7 @@
 			<div class="modal-nav-content">
 				<!-- <div class="modal-nav-header">
 					<div class="modal-nav-close">
-						<i class="fa fa-close"></i>
+						<i class="btr bt-times"></i>
 					</div>
 				</div> -->
 				<ul class="modal-nav-menu text-center">

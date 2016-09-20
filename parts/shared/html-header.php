@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0, minimal-ui">
 
 		<!-- Pinterest Verification -->
-		<meta name="p:domain_verify" content="8c3f8aadea8dcff760f98a676ca9a2f7"/>
+		<meta name="p:domain_verify" content="ce4daefc546feb856b7627a5bfcd4d51"/>
 
 		<meta name="google-site-verification" content="9q_iilZ2axazp6DWJG9YsrsLMupyES5IOH2jc4Mm2t4" />
 
