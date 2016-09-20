@@ -111,14 +111,14 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 
 				<!-- Echo content and related posts -->
 				<?php if (get_option('rss_use_excerpt')) : ?>
-						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink; echo my_rss_related(); ?>]]></description>
+						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink; ?>]]></description>
 				<?php else : ?>
-						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink; echo my_rss_related(); ?>]]></description>
+						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink; ?>]]></description>
 					<?php $content = get_the_content_feed('rss2'); ?>
 					<?php if ( strlen( $content ) > 0 ) : ?>
-						<content:encoded><![CDATA[<?php echo $content; echo $postlink; echo my_rss_related(); ?>]]></content:encoded>
+						<content:encoded><![CDATA[<?php echo $content; echo $postlink; ?>]]></content:encoded>
 					<?php else : ?>
-						<content:encoded><![CDATA[<?php the_excerpt_rss(); echo $postlink; echo my_rss_related(); ?>]]></content:encoded>
+						<content:encoded><![CDATA[<?php the_excerpt_rss(); echo $postlink; ?>]]></content:encoded>
 					<?php endif; ?>
 				<?php endif; ?>
 
