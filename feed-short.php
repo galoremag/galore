@@ -14,19 +14,17 @@
  */
 function my_rss_related() {
 	global $post;
-	// Setup post data.
-	$pid     = $post->ID;
-	$cat     = get_the_terms( $pid, 'category' )[0];
-	// Execute WP_Query.
-	$related_by_tag = new WP_Query( array(
-		'category__in'          => $cat->ID,
-		'post__not_in'     => array( $pid ),
-		'posts_per_page'   => 3,
-	) );
+	$cat_ID = get_the_category($post->ID);
+	$cat_ID = $cat_ID[0]->cat_ID;
+	$this_post = $post->ID;
+
+	$args = array( 'category_in' => $cat_ID, 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
+
+	$related_by_cat = get_posts( $args );
 	// Loop through posts and build HTML.
-	if ( $related_by_tag->have_posts() ) :
+	if ( $related_by_cat->have_posts() ) :
 		echo 'Related Stories:<br />';
-			while ( $related_by_tag->have_posts() ) : $related_by_tag->the_post();
+			while ( $related_by_cat->have_posts() ) : $related_by_cat->the_post();
 				echo '<a href="' . get_permalink() . '">' . get_the_title() . '</a><br />';
 			endwhile;
 		else :

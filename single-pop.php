@@ -14,7 +14,7 @@
 <div class="container-fluid nopad">
 	<div class="row-fluid">
 		<?php
-			global $wp_query;
+			global $post;
 			$cat_ID = get_the_category($post->ID);
 			$cat_ID = $cat_ID[0]->cat_ID;
 			$this_post_ID = $post->ID;
@@ -79,7 +79,7 @@
 				<ul class="container-fluid">
 
 					<?php
-					global $wp_query;
+					global $post;
 					$cat_ID = get_the_category($post->ID);
 					$cat_ID = $cat_ID[0]->cat_ID;
 					$this_post = $post->ID;
@@ -127,7 +127,7 @@
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
 
-					echo do_shortcode('[ajax_load_more previous_post="true" previous_post_id="'.$wp_query->post->ID.'" orderby="date" category="pop" button_label="Loading" repeater="template_2" post_type="post"]');
+					echo do_shortcode('[ajax_load_more previous_post="true" previous_post_id="'.$post->post->ID.'" orderby="date" category="pop" button_label="Loading" repeater="template_2" post_type="post"]');
 			    ?>
 			</ul>
 		</div>
