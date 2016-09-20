@@ -8,7 +8,7 @@
  * @subpackage theme
  */
 /**
- * Get related posts based on tags.
+ * Get related posts based on category.
  *
  * THIS IS OPTIONAL!
  */
@@ -18,7 +18,7 @@ function my_rss_related() {
 	$cat_ID = $cat_ID[0]->cat_ID;
 	$this_post = $post->ID;
 
-	$args = array( 'category_in' => $cat_ID, 'post_type' => 'post', 'posts_per_page' => 2, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
+	$args = array( 'category_in' => $cat_ID, 'post_type' => 'post', 'posts_per_page' => 2, 'caller_get_posts' => 1, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
 
 	$related_by_cat = get_posts( $args );
 	// Loop through posts and build HTML.
