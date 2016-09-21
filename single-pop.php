@@ -14,7 +14,7 @@
 <div class="container-fluid nopad">
 	<div class="row-fluid">
 		<?php
-			global $post;
+			global $wp_query;
 			$cat_ID = get_the_category($post->ID);
 			$cat_ID = $cat_ID[0]->cat_ID;
 			$this_post_ID = $post->ID;
