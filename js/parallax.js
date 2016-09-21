@@ -40,7 +40,7 @@ function isTouchDevice() {
                 }, 1);
             }
         }
-
+        console.log($sections);
         if ($sections == null) {
           return;
         } else {
