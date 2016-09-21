@@ -411,6 +411,7 @@
 								'posts_per_page' => 2,
 								'order' => 'DESC',
 								'orderby' => 'date',
+								'offset' => 1,
 								'tax_query' => array(
 						      array(
 						        'post_type' => 'post',
