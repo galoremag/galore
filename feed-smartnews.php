@@ -89,8 +89,8 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 				<media:thumbnail>
 					<url><?php echo the_post_thumbnail_url('large'); ?></url>
 				</media:thumbnail>
-				<pubDate><?php mysql2date( 'D, d M Y H:i:s +0000', get_post_time( 'Y-m-d H:i:s', true ), false ); ?></pubDate>
-				<div><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></div>
+				<pubDate><?php echo mysql2date( 'D, d M Y', get_post_time( 'Y-m-d', true ), false ); ?></pubDate>
+				<!-- <div><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></div> -->
 
 				<!-- Echo content and related posts -->
 				<?php if (get_option('rss_use_excerpt')) : ?>

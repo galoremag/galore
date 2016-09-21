@@ -410,13 +410,13 @@
 	 * Register custom RSS template.
 	 */
 	function my_rss_template() {
-		add_feed( 'short', 'my_custom_rss_render' );
+		add_feed( 'smartnews', 'my_custom_rss_render' );
 	}
 	/**
 	 * Custom RSS template callback.
 	 */
 	function my_custom_rss_render() {
-		get_template_part( 'feed', 'short' );
+		get_template_part( 'feed', 'smartnews' );
 	}
 
 ?>
