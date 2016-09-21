@@ -65,12 +65,13 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 
 	<!-- RSS feed defaults -->
 	<channel>
-		<snf:logo><url>http://res.cloudinary.com/galore/image/upload/c_scale,f_auto,fl_lossy.progressive,w_290/v1474475414/galore/ads/galore-logo-short-straight-black-rss.jpg</url></snf:logo>
-		<title><?php wp_title_rss(); ?></title>
+		<snf:logo><url>http://res.cloudinary.com/galore/image/upload/c_scale,f_auto,fl_lossy.progressive,w_250/v1474478580/galore/logos/galore-logo-short-straight-black-rss.png</url></snf:logo>
+		<title>Galore</title>
 		<link><?php bloginfo_rss( 'url' ) ?></link>
 		<description><?php bloginfo_rss( 'description' ) ?></description>
 		<lastBuildDate><?php echo mysql2date( 'D, d M Y H:i:s +0000', get_lastpostmodified( 'GMT' ), false ); ?></lastBuildDate>
 		<language><?php bloginfo_rss( 'language' ); ?></language>
+		<copyright>Galore Media, Inc.</copyright>
 		<sy:updatePeriod><?php echo apply_filters( 'rss_update_period', $duration ); ?></sy:updatePeriod>
 		<sy:updateFrequency><?php echo apply_filters( 'rss_update_frequency', $frequency ); ?></sy:updateFrequency>
 		<atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
