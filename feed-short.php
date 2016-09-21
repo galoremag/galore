@@ -105,18 +105,7 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 
 				<snf:advertisement>
 				<snf:adcontent>
-					<script type='text/javascript'>
-						googletag.cmd.push(function() {
-							googletag.defineSlot('/60899964/Home_300x250', [300, 250], 'div-gpt-ad-1465835581876-9').addService(googletag.pubads());
-							googletag.pubads().enableSingleRequest();
-							googletag.pubads().collapseEmptyDivs();
-							googletag.pubads().setTargeting('Category', []).setTargeting('Article', []);
-							googletag.enableServices();
-						});
-					</script>
-					<script type="text/javascript">
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-9'); });
-					</script>
+				<![CDATA[<script type='text/javascript'>(function() { var useSSL = 'https:' == document.location.protocol; var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js'; document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>'); })();</script> <script type='text/javascript'>googletag.cmd.push(function() { googletag.defineSlot('/60899964/Home_300x250', [300, 250], 'div-gpt-ad-1465835581876-9').addService(googletag.pubads()); googletag.pubads().enableSingleRequest(); googletag.pubads().collapseEmptyDivs(); googletag.pubads().setTargeting('Category', []).setTargeting('Article', []); googletag.pubads().enableSyncRendering(); googletag.enableServices(); });</script> <div id='div-gpt-ad-1465835581876-9' style='height:250px; width:300px;'> <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-9'); });</script> </div> ]]>
 				</snf:adcontent>
 				</snf:advertisement>
 
