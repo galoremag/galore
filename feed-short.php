@@ -64,7 +64,7 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 
 	<!-- RSS feed defaults -->
 	<channel>
-		<snf:logo><url><?php echo get_stylesheet_directory_uri(); ?>/images/galore-logo-short-straight-black-rss.jpg</url></snf:logo>
+		<snf:logo><url>http://res.cloudinary.com/galore/image/upload/c_scale,f_auto,fl_lossy.progressive,w_290/v1474475414/galore/ads/galore-logo-short-straight-black-rss.jpg</url></snf:logo>
 		<title><?php wp_title_rss(); ?></title>
 		<link><?php bloginfo_rss( 'url' ) ?></link>
 		<description><?php bloginfo_rss( 'description' ) ?></description>
