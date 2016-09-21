@@ -41,7 +41,9 @@ function isTouchDevice() {
             }
         }
 
-        if ($firstSection && $lastSection) {
+        if ($sections == null) {
+          return;
+        } else {
           updateYTriggers();
           window.setInterval(updateYTriggers, 200);
         }
