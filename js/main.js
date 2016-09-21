@@ -265,6 +265,7 @@ jQuery(document).ready(function($) {
   $(function() {
     var target = $('#global-container');
     if (target.is('.tag,.category')) {
+      debugger;
       if (isTouchDevice()===true) {
         return;
       } else {
