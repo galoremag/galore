@@ -361,7 +361,15 @@ and (orientation : portrait) {
 	  border: 10px solid white;
 	  box-shadow: 1px 1px 25px fade(@brand, 30%);
 	}
-
+	#related-posts .container-fluid {
+		padding: 0;
+		& .col-xs-6 {
+			padding: 0;
+			& h3 {
+				font-size: 16px;
+			}
+		}
+	}
 	.listHero {
 		background-attachment: scroll;
 		& .listHeroCover {
