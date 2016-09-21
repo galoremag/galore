@@ -245,6 +245,12 @@
 	return $excerpt;
 	}
 
+	// Customize excerpt read more
+	function new_excerpt_more( $more ) {
+	  return '';
+	}
+	add_filter('excerpt_more', 'new_excerpt_more');
+
 	// Disable auto-embeds for WordPress >= v3.5
 	remove_filter( 'the_content', array( $GLOBALS['wp_embed'], 'autoembed' ), 8 );
 
