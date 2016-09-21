@@ -443,10 +443,10 @@ jQuery(document).ready(function($) {
   // });
 
   // Try to force page reload on back button
-  if ($('#global-container').is('.single') && $(document).scrollTop() > 500) {
-    window.onpopstate = function() {
-      $('global-container').load(location.href);
-    };
-  }
+  // if ($('#global-container').is('.single') && $(document).scrollTop() > 500) {
+  //   window.onpopstate = function() {
+  //     $('global-container').load(location.href);
+  //   };
+  // }
 
 });
