@@ -94,12 +94,12 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 
 				<!-- Echo content and related posts -->
 				<?php if (get_option('rss_use_excerpt')) : ?>
-						<content:encoded><![CDATA[<?php the_excerpt_rss(); echo $postlink;?>]]></content:encoded>
+						<content:encoded><![CDATA[<?php the_excerpt_rss(); ?>]]></content:encoded>
 				<?php else : ?>
 					<?php if ( strlen( $content ) > 0 ) : ?>
-						<content:encoded><![CDATA[<?php echo $content; echo $postlink;?>]]></content:encoded>
+						<content:encoded><![CDATA[<?php echo $content; ?>]]></content:encoded>
 					<?php else : ?>
-						<content:encoded><![CDATA[<?php the_excerpt_rss(); echo $postlink;?>]]></content:encoded>
+						<content:encoded><![CDATA[<?php the_excerpt_rss(); ?>]]></content:encoded>
 					<?php endif; ?>
 				<?php endif; ?>
 
