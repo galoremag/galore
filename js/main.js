@@ -410,24 +410,26 @@ jQuery(document).ready(function($) {
 
   console.log(isMobile);
   // Fancy List Panels
-  if (isMobile) {
-    $.scrollify({
-      section: ".listItem",
-      sectionName : "section-name",
-      offset: 0,
-      // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
-      standardScrollElements: ".listBodyContainer, .everything, .listItem:last-child",
-      scrollSpeed: 400
-    });
-  } else {
-    $.scrollify({
-      section: ".listItem",
-      offset: 0,
-      sectionName : "section-name",
-      // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
-      standardScrollElements: ".listBodyContainer, .everything, .listItem:last-child",
-      scrollSpeed: 400
-    });
+  if ($('#global-container').is('.single-list')) {
+    if (isMobile) {
+      $.scrollify({
+        section: ".listItem",
+        sectionName : "section-name",
+        offset: 0,
+        // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
+        standardScrollElements: ".listBodyContainer, .everything, .listItem:last-child",
+        scrollSpeed: 400
+      });
+    } else {
+      $.scrollify({
+        section: ".listItem",
+        offset: 0,
+        sectionName : "section-name",
+        // interstitialSection : "header, #footer-open, #ctoolbar, #listBodyToggle",
+        standardScrollElements: ".listBodyContainer, .everything, .listItem:last-child",
+        scrollSpeed: 400
+      });
+    }
   }
 
   // Fancy List Scrolling
@@ -439,5 +441,12 @@ jQuery(document).ready(function($) {
   //         return;
   //     }
   // });
+
+  // Try to force page reload on back button
+  if ($('#global-container').is('.single') && $(document).scrollTop() > 500) {
+    window.onpopstate = function() {
+      $('global-container').load(location.href);
+    };
+  }
 
 });
