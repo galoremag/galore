@@ -87,7 +87,7 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 				<guid isPermaLink="false"><?php the_guid(); ?></guid>
 				<author><?php echo $email ?><?php echo ' (' . $author . ')' ?></author>
 				<media:thumbnail>
-					<url><?php echo esc_url( $postimage ); ?>"/></url>
+					<url><?php echo esc_url( $postimage ); ?></url>
 				</media:thumbnail>
 				<pubDate><?php echo mysql2date( 'D, d M Y H:i:s +0000', get_post_time( 'Y-m-d H:i:s', true ), false ); ?></pubDate>
 
