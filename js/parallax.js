@@ -41,8 +41,10 @@ function isTouchDevice() {
             }
         }
 
-        updateYTriggers();
-        window.setInterval(updateYTriggers, 200);
+        if ($firstSection && $lastSection) {
+          updateYTriggers();
+          window.setInterval(updateYTriggers, 200);
+        }
 
         // when page has scrolled see if we hit the scroll target
         $(window).on('scroll', function() {

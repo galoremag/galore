@@ -90,10 +90,10 @@ jQuery(document).ready(function($) {
   var current_url = window.location.href;
   var current_url_path = current_url.match(/(\/tag\/)|(\/category\/)/g);
 
-  function sticky_relocate(container) {
+  function sticky_relocate() {
     var window_height = window.innerHeight;
     var window_top = $(window).scrollTop();
-    var div_top = $(container).offset().top;
+    var div_top = $('#sidebar-anchor').offset().top;
     if (window_top > (div_top - 50)) {
         $('#sidebar').addClass('sticky').css({'height': window_height, 'overflow':'scroll'});
     } else {
@@ -266,8 +266,8 @@ jQuery(document).ready(function($) {
       if (isTouchDevice()===true) {
         return;
       } else {
-          $(window).scroll(sticky_relocate('#sidebar-anchor'));
-          // sticky_relocate('#sidebar-anchor');
+          $(window).scroll(sticky_relocate);
+          sticky_relocate();
       }
     } else {
       return;
