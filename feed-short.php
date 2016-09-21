@@ -43,7 +43,8 @@ $email      = get_the_author_meta( 'email');
 $author     = get_the_author();
 $postimages = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' );
 // Check for post image. If none, fallback to a default.
-$postimage = ( $postimages ) ? $postimages[0] : get_stylesheet_directory_uri() . '/images/default.jpg';
+// $postimage = ( $postimages ) ? $postimages[0] : get_stylesheet_directory_uri() . '/images/default.jpg';
+$postimage = the_post_thumbnail_url('large');
 $content = get_the_content_feed('rss2');
 /**
  * Start RSS feed.
