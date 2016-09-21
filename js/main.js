@@ -10,13 +10,10 @@ var recordShare = function (e) {
 }
 
 jQuery(window).on('load', function($) {
-
   "use strict";
-
 });
 
 jQuery(document).ready(function($) {
-
   "use strict";
 
   // Create cookie
@@ -93,15 +90,15 @@ jQuery(document).ready(function($) {
   var current_url = window.location.href;
   var current_url_path = current_url.match(/(\/tag\/)|(\/category\/)/g);
 
-  function sticky_relocate() {
+  function sticky_relocate(container) {
     var window_height = window.innerHeight;
-      var window_top = $(window).scrollTop();
-      var div_top = $('#sidebar-anchor').offset().top;
-      if (window_top > (div_top - 50)) {
-          $('#sidebar').addClass('sticky').css({'height': window_height, 'overflow':'scroll'});
-      } else {
-          $('#sidebar').removeClass('sticky');
-      }
+    var window_top = $(window).scrollTop();
+    var div_top = $(container).offset().top;
+    if (window_top > (div_top - 50)) {
+        $('#sidebar').addClass('sticky').css({'height': window_height, 'overflow':'scroll'});
+    } else {
+        $('#sidebar').removeClass('sticky');
+    }
   }
 
   function isTouchDevice() {
@@ -269,8 +266,8 @@ jQuery(document).ready(function($) {
       if (isTouchDevice()===true) {
         return;
       } else {
-          $(window).scroll(sticky_relocate);
-          sticky_relocate();
+          $(window).scroll(sticky_relocate('#sidebar-anchor'));
+          // sticky_relocate('#sidebar-anchor');
       }
     } else {
       return;
