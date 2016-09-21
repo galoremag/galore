@@ -335,11 +335,11 @@ jQuery(document).ready(function($) {
       });
   });
 
-  // $(function() {
-  //   $('#glides').perfectScrollbar({
-  //     suppressScrollY: true
-  //   });
-  // });
+  $(function() {
+    $('#glides').perfectScrollbar({
+      suppressScrollY: true
+    });
+  });
 
   // Nav Button
   $(function() {
