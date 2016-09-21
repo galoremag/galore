@@ -327,6 +327,7 @@
 						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 					</div>
 					<?php endforeach; ?>
+					<?php wp_reset_postdata(); ?>
 					<div class="row-fluid">
 						<div class="spacer20"></div>
 						<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/tag/darling"><i class="fa fa-bomb"></i> Bombshells <i class="fa fa-bomb"></i></a></p>
@@ -371,6 +372,7 @@
 								'posts_per_page' => 1,
 								'order' => 'DESC',
 								'orderby' => 'date',
+								'offset' => 0,
 								'tax_query' => array(
 						      array(
 						        'post_type' => 'post',
