@@ -38,12 +38,13 @@ function my_rss_related() {
 header( 'Content-Type: ' . feed_content_type( 'rss-http' ) . '; charset=' . get_option( 'blog_charset' ), true );
 $frequency  = 1;        // Default '1'. The frequency of RSS updates within the update period.
 $duration   = 'hourly'; // Default 'hourly'. Accepts 'hourly', 'daily', 'weekly', 'monthly', 'yearly'.
-$postlink   = '<br /><a href="' . get_permalink() . '">See the rest of the story at GaloreMag.com</a><br /><br />';
+$postlink   = '<br /><a href="' . get_permalink() . '">Read this story on GaloreMag.com</a><br /><br />';
 $email      = get_the_author_meta( 'email');
 $author     = get_the_author();
 $postimages = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' );
 // Check for post image. If none, fallback to a default.
 $postimage = ( $postimages ) ? $postimages[0] : get_stylesheet_directory_uri() . '/images/default.jpg';
+$content = get_the_content_feed('rss2');
 /**
  * Start RSS feed.
  */
@@ -60,19 +61,6 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 	xmlns:snf="http://www.smartnews.be/snf"
 	<?php do_action( 'rss2_ns' ); ?>
 >
-
-<script type='text/javascript'>
-
-		  googletag.cmd.push(function() {
-			googletag.defineSlot('/60899964/Home_300x250', [300, 250], 'div-gpt-ad-1465835581876-9').addService(googletag.pubads());
-
-		    googletag.pubads().enableSingleRequest();
-		    googletag.pubads().collapseEmptyDivs();
-		    googletag.pubads().setTargeting('Category', []).setTargeting('Article', []);
-		    googletag.enableServices();
-		  });
-		</script>
-		<!-- END DFP script -->
 
 	<!-- RSS feed defaults -->
 	<channel>
@@ -97,17 +85,15 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 				<link><?php the_permalink_rss(); ?></link>
 				<guid isPermaLink="false"><?php the_guid(); ?></guid>
 				<author><?php echo $email ?><?php echo ' (' . $author . ')' ?></author>
-				<image>
+				<media:thumbnail>
 					<url><?php echo esc_url( $postimage ); ?>"/></url>
-				</image>
+				</media:thumbnail>
 				<pubDate><?php echo mysql2date( 'D, d M Y H:i:s +0000', get_post_time( 'Y-m-d H:i:s', true ), false ); ?></pubDate>
 
 				<!-- Echo content and related posts -->
 				<?php if (get_option('rss_use_excerpt')) : ?>
 						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink;?>]]></description>
 				<?php else : ?>
-						<description><![CDATA[<?php the_excerpt_rss(); echo $postlink;?>]]></description>
-					<?php $content = get_the_content_feed('rss2'); ?>
 					<?php if ( strlen( $content ) > 0 ) : ?>
 						<content:encoded><![CDATA[<?php echo $content; echo $postlink;?>]]></content:encoded>
 					<?php else : ?>
@@ -119,6 +105,15 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 
 				<snf:advertisement>
 				<snf:adcontent>
+					<script type='text/javascript'>
+						googletag.cmd.push(function() {
+							googletag.defineSlot('/60899964/Home_300x250', [300, 250], 'div-gpt-ad-1465835581876-9').addService(googletag.pubads());
+							googletag.pubads().enableSingleRequest();
+							googletag.pubads().collapseEmptyDivs();
+							googletag.pubads().setTargeting('Category', []).setTargeting('Article', []);
+							googletag.enableServices();
+						});
+					</script>
 					<script type="text/javascript">
 					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-9'); });
 					</script>
