@@ -2,6 +2,10 @@ function isTouchDevice() {
     return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
 };
 
+$.fn.exists = function () {
+    return this.length !== 0;
+};
+
 (function() {
     if (isTouchDevice()===false) {
         var $sections = $('.listHero'),
@@ -40,10 +44,8 @@ function isTouchDevice() {
                 }, 1);
             }
         }
-        console.log($sections);
-        if ($sections == null) {
-          return;
-        } else {
+
+        if ($sections.exists()) {
           updateYTriggers();
           window.setInterval(updateYTriggers, 200);
         }
