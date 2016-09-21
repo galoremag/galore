@@ -403,6 +403,7 @@
 								</ul> -->
 							</div>
 							<?php endforeach; ?>
+							<?php wp_reset_postdata(); ?>
 						</div>
 						<div class="col-sm-4">
 							<?php
