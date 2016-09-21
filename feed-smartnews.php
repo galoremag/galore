@@ -45,7 +45,6 @@ $author     = get_the_author();
 // Check for post image. If none, fallback to a default.
 // $postimage = ( $postimages ) ? $postimages[0] : get_stylesheet_directory_uri() . '/images/default.jpg';
 // $postimage = the_post_thumbnail_url('large');
-$content = get_the_content_feed('rss2');
 /**
  * Start RSS feed.
  */
@@ -94,6 +93,7 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 				<!-- <div><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></div> -->
 
 				<!-- Echo content and related posts -->
+				<?php $content = get_the_content_feed('rss2'); ?>
 				<?php if (get_option('rss_use_excerpt')) : ?>
 						<content:encoded><![CDATA[<?php the_excerpt_rss(); ?>]]></content:encoded>
 				<?php else : ?>
