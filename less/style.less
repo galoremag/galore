@@ -1316,17 +1316,16 @@ ul.post-social h4 {
   padding: 0;
 }
 
-div.catlinks li {
-	position: absolute;
-	top: 20px;
-	right: 0px;
-	z-index: 9;
-}
+// div.catlinks li {
+// 	position: absolute;
+// 	top: 20px;
+// 	right: 0px;
+// 	z-index: 9;
+// }
 
 div.single-featured-image div.catlinks li {
   position: relative;
-  top: -40px;
-  left: -5px;
+  top: 0;
   float: left;
 	margin-right: 10px;
   width: auto;
@@ -1757,15 +1756,22 @@ div.catlinks {
 	background: @brand;
 	color: white;
 	padding: 3px 8px;
-	top: 15px;
-	left: 0px;
+	top: 25px;
+	// left: 20px;
 	z-index: 9;
+}
+
+.single article div.catlinks {
+	top: 110px;
+	left: 15px;
 }
 
 div.catlinks li {
 	.font2;
 	// margin: 0px;
 }
+
+div.catlinks li a { color:white !important;.font2; }
 
 // div.catlinks li a {
 //   background: @brand;
@@ -1774,6 +1780,10 @@ div.catlinks li {
 //   opacity: 1;
 //   .font2;
 // }
+
+article div.col-sm-7 {
+  padding: auto !important;
+}
 
 div.excerpt p {
 	text-rendering: geometricPrecision;
@@ -1794,7 +1804,7 @@ article p {
 	margin: 10px 0;
 }
 
-article img, article p img, article p img.alignnone {
+.single article img,.single article p img,.single article p img.alignnone {
     margin: 10px 0;
 }
 

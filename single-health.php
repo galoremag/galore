@@ -29,8 +29,8 @@
 				<?php setPostViews(get_the_ID()); ?>
 				<h1><?php the_title(); ?></h1>
 				<div class="single-featured-image">
-					<?php if ( has_post_thumbnail() ) { the_post_thumbnail('large', array('class' => 'postFeaturedImg')); } ?>
 					<div class="catlinks"><?php the_category(); ?></div>
+					<?php if ( has_post_thumbnail() ) { the_post_thumbnail('large', array('class' => 'postFeaturedImg')); } ?>
 				</div>
 				<div id="social-links">
 					<ul id="post-social" class="post-social hidden-xs hidden-sm">
