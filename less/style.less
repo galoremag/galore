@@ -1752,18 +1752,28 @@ div.catlinks ul.post-categories {
 	margin: 0;
 }
 
-div.catlinks li {
-	.font2;
-	margin: 0px;
+div.catlinks {
+	position: absolute;
+	background: @brand;
+	color: white;
+	padding: 3px 8px;
+	top: 15px;
+	left: 0px;
+	z-index: 9;
 }
 
-div.catlinks li a {
-  background: @brand;
-  color: white !important;
-  padding: 4px 8px;
-  opacity: 1;
-  .font2;
+div.catlinks li {
+	.font2;
+	// margin: 0px;
 }
+
+// div.catlinks li a {
+//   background: @brand;
+//   color: white !important;
+//   padding: 4px 8px;
+//   opacity: 1;
+//   .font2;
+// }
 
 div.excerpt p {
 	text-rendering: geometricPrecision;
