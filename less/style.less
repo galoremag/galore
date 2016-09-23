@@ -1323,12 +1323,15 @@ div.catlinks li {
 	z-index: 9;
 }
 
-div.single-featured-image div.catlinks li {
-  position: relative;
-  top: 10px;
-  float: left;
-	margin-right: 10px;
-  width: auto;
+div.single-featured-image div.catlinks {
+  top: 5px;
+  & li {
+    position: relative;
+    top: 0;
+    float: left;
+  	margin-right: 10px;
+    width: auto;
+  }
 }
 
 .single div.catlinks li:last-child {
