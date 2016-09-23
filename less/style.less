@@ -1316,12 +1316,12 @@ ul.post-social h4 {
   padding: 0;
 }
 
-// div.catlinks li {
-// 	position: absolute;
-// 	top: 20px;
-// 	right: 0px;
-// 	z-index: 9;
-// }
+div.catlinks li {
+	// position: relative;
+	top: 20px;
+	left: 0px;
+	z-index: 9;
+}
 
 div.single-featured-image div.catlinks li {
   position: relative;
@@ -1752,18 +1752,19 @@ div.catlinks ul.post-categories {
 }
 
 div.catlinks {
-	position: absolute;
-	background: @brand;
-	color: white;
-	padding: 3px 8px;
-	top: 25px;
-	// left: 20px;
-	z-index: 9;
+  position: relative;
+  background: red;
+  color: #fff;
+  padding: 3px 8px;
+  top: 50px;
+  left: -5px;
+  z-index: 9;
+  display: inline-block;
 }
 
 .single article div.catlinks {
-	top: 110px;
-	left: 15px;
+	top: 45px;
+	left: -5px;
 }
 
 div.catlinks li {
