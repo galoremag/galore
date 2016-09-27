@@ -34,7 +34,7 @@
 							</div>
 						</div>
 						<div class="nopadright col-sm-8">
-							<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+							<h3><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 							<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 
 							<div class="excerpt"><?php the_excerpt(); ?></div>
@@ -54,7 +54,7 @@
 			<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
 			<?php endif; ?>
 
-			<?php 
+			<?php
 			$cat = get_category( get_query_var( 'cat' ) );
 			$category = $cat->slug;
 			echo do_shortcode('[ajax_load_more category="'.$category.'" offset="7" ignore_sticky_posts="true"]');

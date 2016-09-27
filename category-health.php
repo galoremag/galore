@@ -41,7 +41,7 @@
 							</ul>
 						</div>
 						<div class="nopadright col-sm-7">
-							<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+							<h3><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 							<p class="byline hidden-xs"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 							<p class="byline visible-xs pull-left nomarg"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <br /> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 							<ul class="post-social visible-xs">
@@ -64,7 +64,7 @@
 			<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
 			<?php endif; ?>
 
-			<?php 
+			<?php
 			echo do_shortcode('[ajax_load_more category="health" button_label="Loading" offset="7" ignore_sticky_posts="true"]');
 			?>
 
@@ -79,7 +79,7 @@
 	                'category_name'=> 'health',
 	                'ignore_sticky_posts'=> 'true',
 	                'numberposts'  => 4,
-	                'orderby'      => 'meta_value', 
+	                'orderby'      => 'meta_value',
 	                'meta_key'     => 'post_views_count',
 	                'order'        => 'DESC',
 	                'post_status'  => 'publish',
@@ -89,7 +89,7 @@
 				            'after' => '2 month ago'
 				        )
 				    )
-	            ); 
+	            );
 			    $ranking = 0;
 			?>
 			<?php query_posts($args); ?>
@@ -100,7 +100,7 @@
 						<div class="thumb">
 							<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
 						</div>
-						<h4 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
+						<h4><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
 						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 					</article>
 				</li>
