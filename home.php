@@ -34,7 +34,7 @@
 					'offset' => 0,
 					'tax_query' => array(
 			      array(
-			        'post_type' => array('post','list'),
+			        'post_type' => array('list'),
 			        'tax_query' => array(
 			          array(
 			            'taxonomy' => 'sections', // change taxonomy
@@ -62,9 +62,8 @@
 				</h4> -->
 				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 			</div>
-			<?php endforeach; ?>
-
-			<?php wp_reset_postdata(); ?>
+			<?php endforeach; wp_reset_postdata(); ?>
+			<?php endif; ?>
 
 			<!-- SECOND NEEDED? -->
 
