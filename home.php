@@ -46,9 +46,14 @@
 			        )
 			      )
 				);
-				$the_query = new WP_Query( $args );
+				$postslist = get_posts($args);
+				foreach ($postslist as $post) : setup_postdata($post);
 			?>
-			<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+			<?php if ($postslist) : ?>
+			<?php global $post; ?>
+			<?php foreach ($pageposts as $post) : ?>
+			<?php setup_postdata($post); ?>
+
 			<div class="glide">
 				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
@@ -61,7 +66,11 @@
 				</h4> -->
 				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 			</div>
-			<?php endwhile; endif; ?>
+			<?php endforeach; ?>
+			<?php else : ?>
+			<h2 class="center">Not Found</h2>
+			<p class="center">Sorry, but you are looking for something that isn't here.</p>
+			<?php endif; ?>
 
 			<?php wp_reset_postdata(); ?>
 
