@@ -161,13 +161,14 @@
 	    $slides = array_merge($slides,  (array)$query->posts); // merge queried data
 
 	    // Query #2 parameters
-	    // $args = array(
-	    //     'posts_per_page' => 3,
-	    //     'orderby' => 'date',
-	    //     'tag' => 'featured'
-	    // );
-	    // $query = new WP_Query($args);
-	    // $slides = array_merge($slides, (array)$query->posts); // merge queried data
+	    $args = array(
+					'post_type' => array('post','list'),
+	        'posts_per_page' => 3,
+	        'orderby' => 'date',
+	        'tag' => 'featured'
+	    );
+	    $query = new WP_Query($args);
+	    $slides = array_merge($slides, (array)$query->posts); // merge queried data
 
 	    return $slides;
 	}
