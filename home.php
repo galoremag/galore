@@ -32,7 +32,8 @@
 					'order' => 'DESC',
 					'orderby' => 'date',
 					'offset' => 0,
-					'post_type' => 'any',
+					'post_type' => array('list', 'post'),
+					'public' => true,
 					'tax_query' => array(
 			      array(
 			        'tax_query' => array(
