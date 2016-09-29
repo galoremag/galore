@@ -46,8 +46,6 @@
 			        )
 			      )
 				);
-				$postslist = get_posts($args);
-				foreach ($postslist as $post) : setup_postdata($post);
 			?>
 			<?php if ($postslist) : ?>
 			<?php global $post; ?>
