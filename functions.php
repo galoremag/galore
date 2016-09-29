@@ -153,22 +153,22 @@
 	    // Query #1 parameters  https://gist.github.com/luetkemj/2023628
 	    $args = array(
 				'post_type' => array('list'),
-	        'posts_per_page' => 3,
-	        'orderby' => 'date',
-					'tag' => 'featured'
+	      'posts_per_page' => 3,
+	      'orderby' => 'date',
+				'tag' => 'featured'
 	    );
 	    $query = new WP_Query($args);
 	    $slides = array_merge($slides,  (array)$query->posts); // merge queried data
 
 	    // Query #2 parameters
-	    $args = array(
-				'post_type' => array('list'),
-	        'posts_per_page' => 3,
-	        'orderby' => 'date',
-	        'tag' => 'featured'
-	    );
-	    $query = new WP_Query($args);
-	    $slides = array_merge($slides, (array)$query->posts); // merge queried data
+	    // $args = array(
+			// 	'post_type' => array('list'),
+			// 	'posts_per_page' => 3,
+			// 	'orderby' => 'date',
+			// 	'tag' => 'featured'
+	    // );
+	    // $query = new WP_Query($args);
+	    // $slides = array_merge($slides, (array)$query->posts); // merge queried data
 
 	    return $slides;
 	}
