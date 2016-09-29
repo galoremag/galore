@@ -27,14 +27,14 @@
 
 			<?php
 				$args = array(
-					'numberposts' => 20,
-					// 'posts_per_page' => 20,
+					// 'numberposts' => 20,
+					'posts_per_page' => 20,
 					'order' => 'DESC',
 					'orderby' => 'date',
 					'offset' => 0,
 					'tax_query' => array(
 			      array(
-			        'post_type' => array('list'),
+			        'post_type' => 'list',
 			        'tax_query' => array(
 			          array(
 			            'taxonomy' => 'sections', // change taxonomy
