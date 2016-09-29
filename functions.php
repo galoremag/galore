@@ -154,7 +154,7 @@
 	    $args = array(
 	      'posts_per_page' => 3,
 	      'orderby' => 'date',
-				'tag' => 'featured'
+				'tag' => 'featured',
 				'order' => 'DESC',
 				'orderby' => 'date',
 				'offset' => 0,
