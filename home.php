@@ -32,9 +32,9 @@
 					'order' => 'DESC',
 					'orderby' => 'date',
 					'offset' => 0,
+					'post_type' => 'list',
 					'tax_query' => array(
 			      array(
-			        'post_type' => 'list',
 			        'tax_query' => array(
 			          array(
 			            'taxonomy' => 'sections', // change taxonomy
