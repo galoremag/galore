@@ -48,7 +48,7 @@
 				);
 				$postslist = get_posts($args);
 				if ($postslist) :
-				foreach ($postslist as $post) : setup_postdata($post);
+				foreach ($postslist as $post) :
 			?>
 			<div class="glide">
 				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
