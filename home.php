@@ -32,7 +32,7 @@
 					'order' => 'DESC',
 					'orderby' => 'date',
 					'offset' => 0,
-					'post_type' => ['list', 'post'],
+					'post_type' => array('list', 'post'),
 					'tax_query' => array(
 			      array(
 			        'tax_query' => array(
@@ -46,7 +46,7 @@
 			        )
 			      )
 				);
-				$postslist = get_posts($args);
+				$postslist = new WP_Query( $args );
 				if ($postslist) :
 				foreach ($postslist as $post) :
 				setup_postdata($post);
