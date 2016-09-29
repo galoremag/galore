@@ -34,7 +34,7 @@
 					'offset' => 0,
 					'tax_query' => array(
 			      array(
-			        'post_type' => 'post',
+			        'post_type' => array('post','list'),
 			        'tax_query' => array(
 			          array(
 			            'taxonomy' => 'sections', // change taxonomy
@@ -46,10 +46,9 @@
 			        )
 			      )
 				);
-				$postslist = get_posts($args);
-				foreach ($postslist as $post) :
-				setup_postdata($post);
+				$the_query = new WP_Query( $args );
 			?>
+			<?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 			<div class="glide">
 				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
@@ -62,7 +61,7 @@
 				</h4> -->
 				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 			</div>
-			<?php endforeach; ?>
+			<?php endwhile; endif; ?>
 
 			<?php wp_reset_postdata(); ?>
 
