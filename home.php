@@ -51,7 +51,7 @@
 			?>
 			<?php if ($postslist) : ?>
 			<?php global $post; ?>
-			<?php foreach ($pageposts as $post) : ?>
+			<?php foreach ($postslist as $post) : ?>
 			<?php setup_postdata($post); ?>
 
 			<div class="glide">
