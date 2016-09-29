@@ -34,6 +34,7 @@
 					'offset' => 0,
 					'post_type' => array('list', 'post'),
 					'public' => true,
+					'post__not_in' => get_option( 'sticky_posts' ),
 					'tax_query' => array(
 			      array(
 			        'tax_query' => array(
