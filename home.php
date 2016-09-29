@@ -46,12 +46,9 @@
 			        )
 			      )
 				);
+				$postslist = get_posts($args);
+				foreach ($postslist as $post) : setup_postdata($post);
 			?>
-			<?php if ($postslist) : ?>
-			<?php global $post; ?>
-			<?php foreach ($postslist as $post) : ?>
-			<?php setup_postdata($post); ?>
-
 			<div class="glide">
 				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
@@ -65,10 +62,6 @@
 				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 			</div>
 			<?php endforeach; ?>
-			<?php else : ?>
-			<h2 class="center">Not Found</h2>
-			<p class="center">Sorry, but you are looking for something that isn't here.</p>
-			<?php endif; ?>
 
 			<?php wp_reset_postdata(); ?>
 
