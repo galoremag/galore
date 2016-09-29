@@ -152,10 +152,15 @@
 
 	    // Query #1 parameters  https://gist.github.com/luetkemj/2023628
 	    $args = array(
-				'post_type' => array('list'),
 	      'posts_per_page' => 3,
 	      'orderby' => 'date',
 				'tag' => 'featured'
+				'order' => 'DESC',
+				'orderby' => 'date',
+				'offset' => 0,
+				'post_type' => array('list', 'post'),
+				'public' => true,
+				'post__not_in' => get_option( 'sticky_posts' )
 	    );
 	    $query = new WP_Query($args);
 	    $slides = array_merge($slides,  (array)$query->posts); // merge queried data
