@@ -152,7 +152,7 @@
 
 	    // Query #1 parameters  https://gist.github.com/luetkemj/2023628
 	    $args = array(
-					'post_type' => array('post','list'),
+					'post_type' => array('list'),
 	        'posts_per_page' => 3,
 	        'orderby' => 'date',
 					'tag' => 'featured'
@@ -162,7 +162,7 @@
 
 	    // Query #2 parameters
 	    $args = array(
-					'post_type' => array('post','list'),
+				'post_type' => array('list'),
 	        'posts_per_page' => 3,
 	        'orderby' => 'date',
 	        'tag' => 'featured'
