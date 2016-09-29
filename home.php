@@ -47,10 +47,8 @@
 			      )
 				);
 				$postslist = new WP_Query( $args );
-				if ($postslist) :
-				foreach ($postslist as $post) :
-				setup_postdata($post);
 			?>
+			<?php if ( $postslist->have_posts() ) : while ( $postslist->have_posts() ) : $postslist->the_post(); ?>
 			<div class="glide">
 				<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
@@ -63,7 +61,7 @@
 				</h4> -->
 				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 			</div>
-			<?php endforeach; wp_reset_postdata(); ?>
+			<?php endwhile; wp_reset_postdata(); ?>
 			<?php endif; ?>
 
 			<!-- SECOND NEEDED? -->
