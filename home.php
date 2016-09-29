@@ -47,6 +47,7 @@
 			      )
 				);
 				$postslist = get_posts($args);
+				if ($postslist) :
 				foreach ($postslist as $post) : setup_postdata($post);
 			?>
 			<div class="glide">
