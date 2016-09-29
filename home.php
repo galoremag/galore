@@ -27,8 +27,8 @@
 
 			<?php
 				$args = array(
-					// 'numberposts' => 20,
-					'posts_per_page' => 20,
+					'numberposts' => 20,
+					// 'posts_per_page' => 20,
 					'order' => 'DESC',
 					'orderby' => 'date',
 					'offset' => 0,
