@@ -152,6 +152,7 @@
 
 	    // Query #1 parameters  https://gist.github.com/luetkemj/2023628
 	    $args = array(
+					'post_type' => array('post','list'),
 	        'posts_per_page' => 3,
 	        'orderby' => 'date',
 					'tag' => 'featured'
@@ -160,13 +161,13 @@
 	    $slides = array_merge($slides,  (array)$query->posts); // merge queried data
 
 	    // Query #2 parameters
-	    $args = array(
-	        'posts_per_page' => 3,
-	        'orderby' => 'date',
-	        'tag' => 'featured'
-	    );
-	    $query = new WP_Query($args);
-	    $slides = array_merge($slides, (array)$query->posts); // merge queried data
+	    // $args = array(
+	    //     'posts_per_page' => 3,
+	    //     'orderby' => 'date',
+	    //     'tag' => 'featured'
+	    // );
+	    // $query = new WP_Query($args);
+	    // $slides = array_merge($slides, (array)$query->posts); // merge queried data
 
 	    return $slides;
 	}
@@ -424,5 +425,19 @@
 	function my_custom_rss_render() {
 		get_template_part( 'feed', 'smartnews' );
 	}
+
+	// Load ad script after Ajax load more item
+	<!-- /60899964/Article_Mobile_300x250_pos2 -->
+<div id='div-gpt-ad-1465835581876-4' style='height:250px; width:300px;' class="visible-xs center-block">
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-4'); });
+</script>
+</div>
+
+<!-- /60899964/Article_300x250_970x250_pos2 -->
+<div id='div-gpt-ad-1465835581876-1' style='height:250px; width:300px;' class="hidden-xs center-block">
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-1'); });
+</script>
 
 ?>
