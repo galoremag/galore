@@ -138,6 +138,7 @@ WP Post Template: Fancy List
 
 			</article>
 			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
 
 			<hr></hr>
 
@@ -209,6 +210,7 @@ WP Post Template: Fancy List
 								</article>
 							</li>
 							<?php endforeach; ?>
+							<?php wp_reset_postdata(); ?>
 
 						</ul>
 

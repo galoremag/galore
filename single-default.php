@@ -52,6 +52,7 @@
 				</ul> -->
 			</article>
 			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
 			<!-- <hr> -->
 
 			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-interstitial' ) ); ?>
@@ -102,6 +103,7 @@
 						</div>
 					</li>
 					<?php endforeach; ?>
+					<?php wp_reset_postdata(); ?>
 
 				</ul>
 
