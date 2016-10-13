@@ -85,7 +85,7 @@ echo '<?xml version="1.0" encoding="' . get_option( 'blog_charset' ) . '"?' . '>
 				<title><?php the_title_rss(); ?></title>
 				<link><?php the_permalink_rss(); ?></link>
 				<guid isPermaLink="false"><?php the_guid(); ?></guid>
-				<author><?php echo get_the_author() ; ?></author>
+				<author>By <?php echo get_the_author() ; ?></author>
 				<media:thumbnail>
 					<url><?php echo the_post_thumbnail_url('large'); ?></url>
 				</media:thumbnail>
