@@ -437,6 +437,20 @@ jQuery(document).ready(function($) {
     $(function() {
       $.fn.almComplete = function(alm) {
         console.log("Ajax Load More Complete!");
+        googletag.cmd.push(function() {
+  		    googletag.defineSlot('/60899964/Article_300x250_970x250', [[970, 250], [300, 250]], 'div-gpt-ad-1465835581876-0').addService(googletag.pubads());
+  		    googletag.defineSlot('/60899964/Article_300x250_970x250_pos2', [[970, 250], [300, 250]], 'div-gpt-ad-1465835581876-1').addService(googletag.pubads());
+
+  				// Mobile ad units
+  				if (isMobile) {
+  					googletag.defineSlot('/60899964/Article_Mobile_300x250', [300, 250], 'div-gpt-ad-1465835581876-3').addService(googletag.pubads());
+  					googletag.defineSlot('/60899964/Article_Mobile_300x250_pos2', [300, 250], 'div-gpt-ad-1465835581876-4').addService(googletag.pubads());
+  				}
+
+  		    googletag.pubads().enableSingleRequest();
+  		    googletag.pubads().collapseEmptyDivs();
+  		    googletag.pubads().setTargeting('Category', []).setTargeting('Article', []);
+  		    googletag.enableServices();
       };
     })(jQuery);
   }
