@@ -432,6 +432,15 @@ jQuery(document).ready(function($) {
     }
   }
 
+  // Trigger something after the infinite scroll loads more content
+  if ($('#global-container').is('.single')) {
+    $(function() {
+      $.fn.almComplete = function(alm) {
+        console.log("Ajax Load More Complete!");
+      };
+    })(jQuery);
+  }
+
   // Fancy List Scrolling
   // $(function() {
   //     if ($('#global-container').is('.tag, .category, .single')) {
