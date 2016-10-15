@@ -451,8 +451,9 @@ jQuery(document).ready(function($) {
   		    googletag.pubads().collapseEmptyDivs();
   		    googletag.pubads().setTargeting('Category', []).setTargeting('Article', []);
   		    googletag.enableServices();
-      };
-    })(jQuery);
+        };
+      })(jQuery);
+    }
   }
 
   // Fancy List Scrolling
