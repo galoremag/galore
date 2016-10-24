@@ -53,7 +53,7 @@
 			</article>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-			<hr>
+			<!-- <hr> -->
 
 			<h2 class="text-center">Gimme <span>More</span></h2>
 			<div class="spacer20"></div>
@@ -66,8 +66,6 @@
 				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-interstitial' ) ); ?>
 
 				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-oop' ) ); ?>
-
-				<hr />
 
 				<ul class="container-fluid">
 

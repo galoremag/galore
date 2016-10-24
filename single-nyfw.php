@@ -66,12 +66,6 @@
 			<?php wp_reset_postdata(); ?>
 			<!-- <hr> -->
 
-			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-interstitial' ) ); ?>
-
-			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-oop' ) ); ?>
-
-			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
-
 			<h2 class="text-center">Gimme More <i class="fa fa-diamond"></i> <span>NYFW</span></h2>
 			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
@@ -83,8 +77,6 @@
 				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-interstitial' ) ); ?>
 
 				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-oop' ) ); ?>
-
-				<hr />
 
 				<ul class="container-fluid">
 

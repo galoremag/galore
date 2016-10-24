@@ -79,8 +79,6 @@
 
 				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-oop' ) ); ?>
 
-				<hr />
-
 				<ul class="container-fluid">
 
 					<?php

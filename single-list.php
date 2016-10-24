@@ -160,7 +160,6 @@ WP Post Template: Fancy List
 				<div class="row-fluid">
 					<div id="content" class="col-sm-12 nopad">
 						<h2 id="stickHead" class="text-center"><i class="fa fa-diamond"></i> More Everything <i class="fa fa-diamond"></i></h2>
-						<hr>
 
 						<!-- Special Post -->
 
@@ -169,8 +168,6 @@ WP Post Template: Fancy List
 						<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-interstitial' ) ); ?>
 
 						<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-oop' ) ); ?>
-
-						<hr />
 
 						<ul class="container-fluid">
 
