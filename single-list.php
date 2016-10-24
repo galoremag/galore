@@ -163,7 +163,14 @@ WP Post Template: Fancy List
 						<hr>
 
 						<!-- Special Post -->
-						<?php md_unit(); ?>
+
+						<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/sponsored-md' ) ); ?>
+
+						<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-interstitial' ) ); ?>
+
+						<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-oop' ) ); ?>
+
+						<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
 
 						<hr />
 
@@ -216,19 +223,7 @@ WP Post Template: Fancy List
 
 						<hr />
 
-						<!-- /60899964/Home_300x250_970x250_pos4 -->
-						<div id='div-gpt-ad-1467230007625-0' class="hidden-xs text-center">
-						<script type='text/javascript'>
-						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-0'); });
-						</script>
-						</div>
-
-						<!-- /60899964/Home_Mobile_300x250_pos4 -->
-						<div id='div-gpt-ad-1467230007625-1' style='height:250px; width:300px;' class="visible-xs-block text-center">
-						<script type='text/javascript'>
-						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-1'); });
-						</script>
-						</div>
+						<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-two-300x250' ) ); ?>
 
 						<hr />
 
