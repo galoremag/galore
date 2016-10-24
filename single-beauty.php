@@ -79,8 +79,6 @@
 
 				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-oop' ) ); ?>
 
-				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
-
 				<hr />
 
 				<ul class="container-fluid">
@@ -119,6 +117,10 @@
 					<?php wp_reset_postdata(); ?>
 
 				</ul>
+
+				<hr />
+
+				<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
 
 				<hr />
 
