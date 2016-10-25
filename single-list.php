@@ -173,7 +173,7 @@ WP Post Template: Fancy List
 
 							<?php
 
-							$args = array( 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post_ID) );
+							$args = array( 'post_type' => 'post', 'showposts' => 2, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array(get_the_ID()) );
 
 							$postslist = get_posts( $args );
 
