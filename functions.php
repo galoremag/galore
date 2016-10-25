@@ -454,6 +454,9 @@
 		get_template_part( 'feed', 'smartnews' );
 	}
 
+	// Hide weird RoyalSlider error on dev
+	add_filter('deprecated_constructor_trigger_error', '__return_false');
+
 	// Load ad script after Ajax load more item
 // 	<!-- /60899964/Article_Mobile_300x250_pos2 -->
 // <div id='div-gpt-ad-1465835581876-4' style='height:250px; width:300px;' class="visible-xs center-block">
