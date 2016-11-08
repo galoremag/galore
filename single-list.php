@@ -182,7 +182,7 @@ WP Post Template: Fancy List
 							?>
 
 							<li class="related post pull-left col-xs-6">
-								<div class="container">
+								<div class="container nopad">
 									<div class="row-fluid">
 										<div class="nopad col-sm-12">
 											<div class="catlinks"><?php the_category(); ?></div>

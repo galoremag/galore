@@ -19,6 +19,7 @@
     "postinstall": "./node_modules/.bin/bower --allow-root install && ./node_modules/.bin/grunt build"
   },
   "dependencies": {
+    "bcrypt": "^0.8.7",
     "bower": "^1.5.2",
     "grunt": "0.4.5",
     "grunt-cli": "0.1.13",
