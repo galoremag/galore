@@ -182,7 +182,7 @@
 					// 	//Implode the posts and set a variable to pass to our exclude param.
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
-					echo do_shortcode('[ajax_load_more orderby="date" offset="4" category="nyfw" exclude="'.$wp_query->post->ID.'" button_label="Loading"]');
+					echo do_shortcode('[ajax_load_more orderby="date" offset="4" category="nyfw" exclude="'.$wp_query->post->ID.'" button_label="Loading" cache="true" cache_id="1546845955"]');
 			    ?>
 			</ul>
 		</div>
