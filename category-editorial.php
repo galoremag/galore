@@ -65,7 +65,7 @@
 			<?php endif; ?>
 
 			<?php
-			echo do_shortcode('[ajax_load_more category="editorial" button_label="Loading" offset="7" ignore_sticky_posts="true"]');
+			echo do_shortcode('[ajax_load_more category="editorial" button_label="Loading" offset="7" ignore_sticky_posts="true" cache="true" cache_id="4138640799"]');
 			?>
 
 			<div class="spacer40"></div>

@@ -58,7 +58,7 @@
 			<?php
 			$tag = get_the_tags( get_query_var( 'tag' ) );
 			$tags = $tag->slug;
-			echo do_shortcode('[ajax_load_more button_label="Loading" ignore_sticky_posts="true" tag="'.$tags.'" offset="0"]');
+			echo do_shortcode('[ajax_load_more button_label="Loading" ignore_sticky_posts="true" tag="'.$tags.'" offset="0" cache="true" cache_id="3687440425"]');
 			?>
 
 			<div class="spacer40"></div>

@@ -734,7 +734,7 @@
 					  <!-- Infinite Scroll -->
 
 						<?php
-						echo do_shortcode('[ajax_load_more button_label="Loading" offset="32" post_type="post"]');
+						echo do_shortcode('[ajax_load_more button_label="Loading" offset="32" post_type="post" cache="true" cache_id="6776227749"]');
 						?>
 
 						<div class="spacer40"></div>
