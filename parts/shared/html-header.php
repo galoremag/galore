@@ -123,7 +123,7 @@
 		/></noscript>
 		<!-- End Facebook Pixel Code -->
 
-		<script src='//cdn.goroost.com/roostjs/sl6otjre2knha1dhhy3trjd9y94q775x' async></script>
+		<!-- <script src='//cdn.goroost.com/roostjs/sl6otjre2knha1dhhy3trjd9y94q775x' async></script> -->
 
 		<!-- Main JS script file -->
 		<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
