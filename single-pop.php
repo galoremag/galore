@@ -129,7 +129,7 @@
 					$cat_ID = get_the_category($post->ID);
 					$cat_ID = $cat_ID[0]->cat_ID;
 					$this_post = $post->ID;
-					$args = array( 'category_name' => 'pop', 'post_type' => 'post', 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
+					$args = array( 'category_name' => 'pop', 'post_type' => 'post', 'offset' => 2, 'showposts' => 4, 'orderby' => 'date', 'order' => 'DESC', 'post__not_in' => array($this_post) );
 					$postslist = get_posts( $args );
 					// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
 					foreach ($postslist as $post) : setup_postdata($post);
@@ -183,7 +183,7 @@
 					// 	//Implode the posts and set a variable to pass to our exclude param.
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
-					echo do_shortcode('[ajax_load_more offset="4" rderby="date" category="pop" exclude="'.$wp_query->post->ID.'" button_label="Loading" cache="true" cache_id="6776227749"]');
+					echo do_shortcode('[ajax_load_more offset="6" rderby="date" category="pop" exclude="'.$wp_query->post->ID.'" button_label="Loading" cache="true" cache_id="6776227749"]');
 			    ?>
 			</ul>
 		</div>
