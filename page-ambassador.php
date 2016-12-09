@@ -30,7 +30,6 @@ Template Name: Ambassador Submission
           <div class="row text-center contributorDescriptions">
             <?php the_content(); ?>
           </div>
-
           <div class="row text-center contributorStats">
             <div class="spacer20"></div>
             <div class="col-sm-12">
@@ -58,7 +57,6 @@ Template Name: Ambassador Submission
               </div>
             </div>
           </div>
-
           <div class="row text-center contributorForm">
             <div class="col-sm-6 col-sm-offset-3">
               <?php echo do_shortcode("[RM_Form id='1']"); ?>
