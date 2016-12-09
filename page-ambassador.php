@@ -28,7 +28,9 @@ Template Name: Ambassador Submission
           </div>
 
           <div class="row text-center contributorDescriptions">
-            <?php the_content(); ?>
+            <div class="col-sm-10 col-sm-offset-1">
+              <?php the_content(); ?>
+            </div>
           </div>
           <div class="row text-center contributorStats">
             <div class="spacer20"></div>
