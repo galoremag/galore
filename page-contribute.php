@@ -27,27 +27,6 @@ Template Name: Contributor Submission
             </div>
           </div>
 
-          <div class="row text-center contributorStats">
-            <div class="col-sm-12">
-              <h2>Contributing to the Voice of Generation-Z</h2>
-            </div>
-            <div class="spacer20"></div>
-            <div class="col-sm-12">
-              <div class="col-sm-4">
-                <i class="btr bt-bar-chart" aria-hidden="true"></i>
-                <h3 class="stats">Over 1M Unique Visitors / Month</h3>
-              </div>
-              <div class="col-sm-4">
-                <i class="btr bt-smile" aria-hidden="true"></i>
-                <h3 class="stats">Chill (Bi-Coastal) Culture</h3>
-              </div>
-              <div class="col-sm-4">
-                <i class="btr bt-paper-plane" aria-hidden="true"></i>
-                <h3 class="stats">Freedom of Expression</h3>
-              </div>
-            </div>
-          </div>
-
           <div class="row text-center contributorDescriptions">
             <?php the_content(); ?>
           </div>

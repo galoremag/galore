@@ -47,12 +47,19 @@ jQuery(document).ready(function($) {
   }
 
   function loadNewsletter() {
-    if (isTouchDevice()===true) {
-      return;
-    } else if (readCookie("newsletter")) {
+    // if (isTouchDevice()===true) {
+    //   return;
+    // } else if (readCookie("newsletter")) {
+    //   return;
+    // } else {
+    //   $('#email-signup').delay(6000).css({'display' : 'flex'});
+    // }
+
+    // do it on mobile
+    if (readCookie("newsletter")) {
       return;
     } else {
-      $('#email-signup').delay(6000).show();
+      $('#email-signup').delay(6000).css({'display' : 'flex'});
     }
   }
 
@@ -170,8 +177,6 @@ jQuery(document).ready(function($) {
 
   // End of Tracking
 
-  loadNewsletter();
-
   // loadSnapchatModal();
 
   // loadLikeBar();
@@ -219,8 +224,14 @@ jQuery(document).ready(function($) {
     });
   });
 
-  // // Navbar Shrinks on Scroll
+  // Show modal on scroll
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 200) {
+      setTimeout(loadNewsletter(), 3000);
+    }
+  })
 
+  // Navbar Shrinks on Scroll
   $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
       $('#deskNav').addClass('shrink');
@@ -281,11 +292,11 @@ jQuery(document).ready(function($) {
   $(function() {
     $('#signupButton').on('click tap', function(e) {
       e.preventDefault();
-      $("#email-signup").show();
-          $("#newsletterClose").click(function() {
-              $("#email-signup").hide();
-              createCookie("newsletter", "read", 14);
-          });
+      $("#email-signup").css({'display' : 'flex'});
+      $("#newsletterClose").click(function() {
+          $("#email-signup").hide();
+          createCookie("newsletter", "read", 14);
+      });
     });
   });
 

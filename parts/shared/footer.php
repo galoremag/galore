@@ -60,9 +60,7 @@
 	            </div>
 	            <div class="email-signup-body">
 	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
-	                <p class="text-center">
-	                    Get updates right in your inbox.
-	                </p>
+	                <h1>For fashion and beauty news, celeb tea, the down and dirty on sex and dating <br/>— <span>AND MORE</span> —<br/> sign up below and join the Girl Cult.</h1>
 	                <!-- <h2 class="text-center">Get On The List</h2> -->
 	                <form action="https://galoremag.createsend.com/t/i/s/tjcj/" method="post">
 	                    <div class="form-group">
