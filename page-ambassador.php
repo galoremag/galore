@@ -23,16 +23,16 @@ Template Name: Ambassador Submission
 
           <div class="row-fluid contributorHeading">
             <div class="col-sm-12">
-              <h1 class="text-center"><?php the_title(); ?></h1>
+              <!-- <h1 class="text-center"><?php the_title(); ?></h1> -->
             </div>
           </div>
 
-          <div class="row text-center contributorDescriptions">
+          <div class="row-fluid text-center contributorDescriptions">
             <div class="col-sm-10 col-sm-offset-1">
               <?php the_content(); ?>
             </div>
           </div>
-          <div class="row text-center contributorStats">
+          <div class="row-fluid text-center contributorStats">
             <div class="spacer20"></div>
             <div class="col-sm-12">
               <div class="col-sm-6">
@@ -59,11 +59,11 @@ Template Name: Ambassador Submission
               </div>
             </div>
           </div>
-          <div class="row text-center contributorForm">
+
+          <div class="row-fluid text-center contributorForm">
             <div class="col-sm-6 col-sm-offset-3">
               <?php echo do_shortcode("[RM_Form id='1']"); ?>
               <div class="g-recaptcha" data-sitekey="6LfrzwYUAAAAAFNnNUAsGnGbMA1zM1vjXrnGo2O2"></div>
-
             </div>
           </div>
 
