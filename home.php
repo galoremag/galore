@@ -10,7 +10,7 @@
 		<div class="container">
 			<div class="row-fluid">
 				<div class="hero-slider col-md-10 col-md-offset-1">
-					<?php echo do_shortcode( '[new_royalslider id="2"]' ); ?>
+					<?php echo do_shortcode( '[new_royalslider id="4"]' ); ?>
 				</div>
 			</div>
 		</div>
