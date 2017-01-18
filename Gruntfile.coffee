@@ -43,9 +43,9 @@ module.exports = (grunt) ->
       style:
         options:
           cleancss: true
-          report: "min"
+          report: 'min'
         files:
-          "style.css": "less/style.less"
+          'style.css': ['less/style.less']
 
     # During developement, watch files and recompile/reload
     watch:
