@@ -47,15 +47,7 @@ jQuery(document).ready(function($) {
   }
 
   function loadNewsletter() {
-    // if (isTouchDevice()===true) {
-    //   return;
-    // } else if (readCookie("newsletter")) {
-    //   return;
-    // } else {
-    //   $('#email-signup').delay(6000).css({'display' : 'flex'});
-    // }
-
-    // do it on mobile
+    // only on mobile
     if (readCookie("newsletter")) {
       return;
     } else {
