@@ -4,8 +4,6 @@ node_modules/
 # Bower packages downloaded via "bower install"
 bower_components/
 
-!prod.js
-
 # Misc files types
 *.DS_Store
 *.log
