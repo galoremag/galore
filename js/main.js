@@ -124,6 +124,7 @@ jQuery(document).ready(function($) {
   }
 
   // Tracking Info
+
   // function setCookie(cname, cvalue, exdays) {
   //   var d = new Date();
   //   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -375,7 +376,6 @@ jQuery(document).ready(function($) {
   });
 
   // Footer Toggle //
-  /////////////////////
 
   $(function() {
     $('#footer-open').on('click tap', function(event) {
@@ -400,15 +400,6 @@ jQuery(document).ready(function($) {
     });
   });
 
-  // Color Fancy list bodies
-  // var colors = ["bluePinkGradientFade", "yellowBlueGradient", "purpleGradientFade", "brandGradientFade"]
-  // var randomColor = Math.floor(Math.random()*colors.length);
-  //
-  // $(".listBodyContainer").each(function () {
-  //     $(this).addClass(colors[randomColor]);
-  //     randomColor = (randomColor + 1) % colors.length;
-  // });
-
   // CLOSE Facebook LIKE BAR
   // $(function() {
   //   $("#likeBar-close").on('click tap', function(event) {
@@ -418,7 +409,6 @@ jQuery(document).ready(function($) {
   //     });
   // });
 
-  // console.log(isMobile);
   // Fancy List Panels
   $(function() {
     if ($('#global-container').is('.single-list')) {

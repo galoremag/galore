@@ -67,7 +67,7 @@
 	 */
 
 	function starkers_script_enqueuer() {
-		// wp_register_script( 'site', get_template_directory_uri().'/js/prod.js', array( 'jquery' ) );
+		// wp_register_script( 'site', get_template_directory_uri().'/prod.js', array( 'jquery' ) );
 		// wp_enqueue_script( 'site' );
 
 		wp_register_style( 'bootstrap', get_stylesheet_directory_uri().'/bower_components/bootstrap/dist/css/bootstrap.min.css', '', '', 'screen' );
