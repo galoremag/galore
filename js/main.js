@@ -2,7 +2,6 @@ var recordShare = function (e) {
   var el = event.target;
   var clickedItem = el.getAttribute('class');
   console.log("You clicked " + clickedItem);
-  // _kmq.push(['record', clickedItem]);
   ga(
       "send", "event", "Social Share", clickedItem,
       document.location.pathname + document.location.search
