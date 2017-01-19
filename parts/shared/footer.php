@@ -113,6 +113,7 @@
 						<li><a href="<?php bloginfo('url'); ?>/category/sex-dating/feed" title="Sex + Dating">Sex + Dating &nbsp;<i class="fa fa-rss"></i></a></li>
 						<li><a href="<?php bloginfo('url'); ?>/category/health/feed" title="Fitness">Fitness &nbsp;<i class="fa fa-rss"></i></a></li>
 						<li><a href="<?php bloginfo('url'); ?>/category/pop/feed" title="Pop">Pop &nbsp;<i class="fa fa-rss"></i></a></li>
+						<li><a href="<?php bloginfo('url'); ?>/category/politics/feed" title="Politics">Politics &nbsp;<i class="fa fa-rss"></i></a></li>
 					</ul>
 				</div>
 

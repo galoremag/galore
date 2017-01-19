@@ -252,7 +252,7 @@
 
 		    googletag.pubads().enableSingleRequest();
 		    googletag.pubads().collapseEmptyDivs();
-		    googletag.pubads().setTargeting('Category', ['beauty', 'pop', 'fashion', 'health', 'sex-dating']);
+		    googletag.pubads().setTargeting('Category', ['beauty', 'pop', 'fashion', 'health', 'sex-dating', 'politics']);
 		    googletag.enableServices();
 		  });
 		</script>

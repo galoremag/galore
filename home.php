@@ -80,7 +80,7 @@
 
 <div id="home-container">
 
-	<!-- FASHION SECTION -->
+	<!-- FASHION + BEAUTY SECTION -->
 
 	<div class="home-fashion nopad container">
 		<div class="row-fluid home-fashion-in nopad">
@@ -459,15 +459,15 @@
 		</div>
 	</div>
 
-	<!-- POP SECTION -->
+	<!-- POP + POLITICS SECTION -->
 
 	<div class="pop">
 		<div class="pop-in">
 			<div class="container nopad">
 				<div class="row-fluid">
 					<div class="col-sm-12">
-						<h2>Guilty Pleasure <i class="fa fa-star"></i></h2>
-						<h3>Best of Pop Culture</h3>
+						<h2>Pop + Politics <i class="fa fa-star"></i></h2>
+						<h3>Guilty Pleasures + State Treasures</h3>
 						<div class="spacer20"></div>
 						<div class="row post-grid">
 							<?php
@@ -476,7 +476,7 @@
 							$grids = 3; //Grids per row-fluid
 
 							$args = array(
-								'category_name' => 'pop',
+								'category_name' => 'pop,politics',
 								'posts_per_page' => 3,
 								'order' => 'DESC',
 								'orderby' => 'date',
@@ -543,7 +543,7 @@
 							$grids = 2; //Grids per row-fluid
 
 							$args = array(
-								'category_name' => 'pop',
+								'category_name' => 'pop,politics',
 								'ignore_sticky_posts' => 0,
 								'posts_per_page' => 2,
 								'offset' => 3,
