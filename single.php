@@ -17,6 +17,8 @@ elseif ( in_category('parties') ) {
     include(TEMPLATEPATH . '/single-parties.php'); }
 elseif ( in_category('editorial') ) {
     include(TEMPLATEPATH . '/single-editorial.php'); }
+elseif ( in_category('politics') ) {
+    include(TEMPLATEPATH . '/single-politics.php'); }
 else {
     include(TEMPLATEPATH . '/single-default.php');
   }
