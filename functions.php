@@ -70,7 +70,7 @@
 		// wp_register_script( 'site', get_template_directory_uri().'/prod.js', array( 'jquery' ) );
 		// wp_enqueue_script( 'site' );
 
-		wp_register_style( 'bootstrap', get_stylesheet_directory_uri().'/bower_components/bootstrap/dist/css/bootstrap.min.css', '', '', 'screen' );
+	wp_register_style( 'bootstrap', get_stylesheet_directory_uri().'/bower_components/bootstrap/dist/css/bootstrap.min.css', '', '', 'screen' );
     wp_enqueue_style( 'bootstrap' );
 
     wp_register_style( 'sliderskin', get_stylesheet_directory_uri().'/rs-galore-skin/rs-galore.css', '', '', 'screen' );
@@ -79,7 +79,7 @@
     wp_register_style( 'perfect-scrollbar', get_stylesheet_directory_uri().'/css/perfect-scrollbar.min.css', '', '', 'screen' );
     wp_enqueue_style( 'perfect-scrollbar' );
 
-		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
+	wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
     wp_enqueue_style( 'screen' );
 	}
 
@@ -456,6 +456,15 @@
 
 	// Hide weird RoyalSlider error on dev
 	add_filter('deprecated_constructor_trigger_error', '__return_false');
+
+	// remove wp version param from any enqueued scripts
+	function vc_remove_wp_ver_css_js( $src ) {
+	    if ( strpos( $src, 'ver=' . get_bloginfo( 'version' ) ) )
+	        $src = remove_query_arg( 'ver', $src );
+	    return $src;
+	}
+	add_filter( 'style_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
+	add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
 
 	// Load ad script after Ajax load more item
 // 	<!-- /60899964/Article_Mobile_300x250_pos2 -->
