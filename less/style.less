@@ -772,15 +772,15 @@ nav.shrink {
 
 .modal-nav {
 	position: fixed;
-  display: block;
+	display: block;
 	width: 100%;
 	height: 100%;
 	background: white;
 	z-index: 99;
 	overflow: scroll;
 	top: -100vh;
-  left: 0;
-  .transition;
+	left: 0;
+	.transition;
 	// left: 0;
 }
 
@@ -841,16 +841,17 @@ ul.modal-nav-menu {
 	padding-top: 100px;
 	z-index: 1000;
 	position: relative;
-}
-
-ul.modal-nav-menu li {
-	list-style-type: none;
-	padding: 20px;
-	font-size: 42px;
-}
-
-ul.modal-nav-menu li a:hover {
-	color: @yell;
+	& li {
+		list-style-type: none;
+		padding: 10px;
+		font-size: 42px;
+		& a:hover {
+			color: @yell;
+		}
+	}
+	& li.span {
+		font-size: 22px !important;
+	}
 }
 
 @keyframes scroll-down {
@@ -884,20 +885,18 @@ ul.modal-nav-menu li a:hover {
 	top: 0px;
 	padding: 0px;
 	margin: 0px;
-  // height: 100vh;
-  .brandBackground;
+	// height: 100vh;
+	.brandBackground;
 	.translate;
-}
-
-.jumbotron h1 {
-	font: 40px !important;
-}
-
-.jumbotron-in {
-	padding: 120px 0px 120px 0px;
-  .brandBackgroundGlaze;
-	width: 100%;
-	height: 100%;
+	& h1 {
+		font: 40px !important;
+	}
+	& .jumbotron-in {
+		padding: 120px 0px 120px 0px;
+		.brandBackgroundGlaze;
+		width: 100%;
+		height: 100%;
+	}
 }
 
 #new-royalslider-6,

@@ -72,7 +72,10 @@
 					<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a> + <a href="<?php bloginfo('url'); ?>/category/fashion" title="Fashion">Fashion</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/health" title="health">Health</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a> + <a href="<?php bloginfo('url'); ?>/category/politics" title="Politics">Politics</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a> + <a href="<?php bloginfo('url'); ?>/category/politics" title="Politics">Politics <span class="badge">New</span></a></li>
+					<hr />
+					<h1>Join the movement</h1>
+					<li class="span"><a href="https://galoremag.com/contribute" title="Contribute" target="_blank">Become a Contributor</a> and <a href="https://galoremag.com/galore-girl" title="GaloreGirl" target="_blank">Apply to become a Galore Girl</a></li>
 					<div id="site-search" class="visible-xs">
 						<!-- <?php get_search_form(); ?> -->
 						<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
@@ -154,9 +157,10 @@
 					<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a> + <a href="<?php bloginfo('url'); ?>/category/fashion" title="Fashion">Fashion</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/health" title="health">Health</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a> + <a href="<?php bloginfo('url'); ?>/category/politics" title="Politics">Politics</a></li>
-					<li><a href="https://galoremag.com/galore-girl" title="GaloreGirl" target="_blank">Galore Girl </a></li>
-					<li><a href="https://galoremag.com/contribute" title="Contribute" target="_blank">Contribute </a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a> + <a href="<?php bloginfo('url'); ?>/category/politics" title="Politics">Politics <span class="badge">New</span></a></li>
+					<hr />
+					<h1>Join the movement</h1>
+					<li class="span"><a href="https://galoremag.com/contribute" title="Contribute" target="_blank">Become a Contributor</a> and <a href="https://galoremag.com/galore-girl" title="GaloreGirl" target="_blank">Apply to become a Galore Girl</a></li>
 					<div id="site-search" class="visible-xs">
 						<!-- <?php get_search_form(); ?> -->
 						<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">

@@ -34,12 +34,12 @@
 				</div>
 				<div id="social-links">
 					<ul id="post-social" class="post-social hidden-xs hidden-sm">
-						<li><a class="share-facebook" href="javascript:;" target="popup" onclick="recordShare(); window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
-						<li><a class="share-twitter" href="javascript:;" target="popup" onclick="recordShare(); window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
+						<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
+						<li><a class="share-twitter" href="#" target="popup" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>','Tweet this post','width=600,height=400')"><i class="fa fa-twitter"></i></a></li>
 					</ul>
 				</div>
 
-				<p class="byline"><i class="fa fa-diamond"></i> <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> By <?php the_author_posts_link(); ?></p>
+				<p class="byline"><i class="fa fa-balance-scale"></i> <time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> By <?php the_author_posts_link(); ?></p>
 				<?php edit_post_link('EDIT. THIS. PIECE.', '<p>', '</p>'); ?>
 				<div class="spacer20"></div>
 				<?php the_content(); ?>
@@ -63,11 +63,8 @@
 			</article>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-			<hr>
-
-			<h2 class="text-center">Gimme More <i class="fa fa-diamond"></i> <span>POLITICS</span></h2>
-			<div class="spacer20"></div>
-			<hr />
+			<!-- <hr> -->
+			<h2 class="text-center">Gimme More <i class="fa fa-balance-scale"></i> <span>Politics</span></h2>
 			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
 
@@ -183,7 +180,7 @@
 					// 	//Implode the posts and set a variable to pass to our exclude param.
 					// 	$postsNotIn = implode(",", $post_ids);
 					// }
-					echo do_shortcode('[ajax_load_more offset="6" rderby="date" category="politics" exclude="'.$wp_query->post->ID.'" button_label="Loading" cache="true" cache_id="6776227749"]');
+					echo do_shortcode('[ajax_load_more orderby="date" offset="6" category="politics" exclude="'.$wp_query->post->ID.'" button_label="Loading" cache="true" cache_id="3988084773"]');
 			    ?>
 			</ul>
 		</div>
