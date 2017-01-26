@@ -80,7 +80,7 @@
 
 <div id="home-container">
 
-	<!-- FASHION SECTION -->
+	<!-- FASHION + BEAUTY SECTION -->
 
 	<div class="home-fashion nopad container">
 		<div class="row-fluid home-fashion-in nopad">
@@ -125,9 +125,7 @@
 					<!-- Posts -->
 					<?php
 					$counter = 1; //start counter
-
 					$grids = 1; //Grids per row-fluid
-
 					$args = array(
 						'category_name' => 'beauty,fashion',
 						'showposts' => 1,
@@ -135,11 +133,8 @@
 						'post__in'  => get_option( 'sticky_posts' ),
 						'ignore_sticky_posts' => 1
 					);
-
 					$firstQuery = new WP_Query( $args );
-
 					if(have_posts()) :	while($firstQuery->have_posts()) :  $firstQuery->the_post();
-
 					//Show the left hand side column
 					if($counter == 1) :
 					?>
@@ -177,9 +172,7 @@
 					<!-- 2nd row -->
 					<?php
 					$counter = 1; //start counter
-
 					$grids = 2; //Grids per row-fluid
-
 					$args = array(
 						'category_name' => 'beauty,fashion',
 						'showposts' => 2,
@@ -202,9 +195,7 @@
 				      )
 					);
 					$secondQuery = new WP_Query( $args );
-
 					if(have_posts()) :	while($secondQuery->have_posts()) :  $secondQuery->the_post();
-
 					//Show the left hand side column
 					if($counter == 1) :
 					?>
@@ -266,9 +257,7 @@
 				        )
 				      )
 					);
-
 					$postslist = get_posts( $args );
-
 					// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
 					foreach ($postslist as $post) : setup_postdata($post);
 					?>
@@ -315,9 +304,7 @@
 				        )
 				      )
 					);
-
 					$postslist = get_posts( $args );
-
 					// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
 					foreach ($postslist as $post) : setup_postdata($post);
 					?>
@@ -459,24 +446,22 @@
 		</div>
 	</div>
 
-	<!-- POP SECTION -->
+	<!-- POP + POLITICS SECTION -->
 
 	<div class="pop">
 		<div class="pop-in">
 			<div class="container nopad">
 				<div class="row-fluid">
 					<div class="col-sm-12">
-						<h2>Guilty Pleasure <i class="fa fa-star"></i></h2>
-						<h3>Best of Pop Culture</h3>
+						<h2>Pop + Politics <i class="fa fa-star"></i></h2>
+						<h3>Guilty Pleasures + State Treasures</h3>
 						<div class="spacer20"></div>
 						<div class="row post-grid">
 							<?php
 							$counter = 1; //start counter
-
 							$grids = 3; //Grids per row-fluid
-
 							$args = array(
-								'category_name' => 'pop',
+								'category_name' => 'pop,politics',
 								'posts_per_page' => 3,
 								'order' => 'DESC',
 								'orderby' => 'date',
@@ -494,10 +479,7 @@
 						        )
 						      )
 							);
-
 							query_posts($args);
-
-
 							if(have_posts()) :	while(have_posts()) :  the_post();
 							?>
 							<?php
@@ -539,11 +521,9 @@
 						<div class="row post-grid">
 							<?php
 							$counter = 1; //start counter
-
 							$grids = 2; //Grids per row-fluid
-
 							$args = array(
-								'category_name' => 'pop',
+								'category_name' => 'pop,politics',
 								'ignore_sticky_posts' => 0,
 								'posts_per_page' => 2,
 								'offset' => 3,
@@ -561,10 +541,7 @@
 						        )
 						      )
 							);
-
 							query_posts($args);
-
-
 							if(have_posts()) :	while(have_posts()) :  the_post();
 							?>
 							<?php
@@ -652,7 +629,6 @@
 						<ul class="alm-listing alm-ajax">
 
 							<?php
-
 							$args = array(
 								'posts_per_page' => 4,
 								'order' => 'DESC',
@@ -671,9 +647,7 @@
 										)
 									)
 							);
-
 							$postslist = get_posts( $args );
-
 							foreach ($postslist as $post) : setup_postdata($post);
 							?>
 

@@ -1,7 +1,6 @@
 <?php
  /*
  Template Name: The Latest
-
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site will use a
@@ -53,8 +52,8 @@
 			<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
 			<?php endif; ?>
 
-			<?php 
-			echo do_shortcode('[ajax_load_more post_type="post" category="beauty,fitness,tv,mag,models,parties,pop,sex-dating,style" button_label="More Shit"]');
+			<?php
+			echo do_shortcode('[ajax_load_more post_type="post" category="beauty,fitness,tv,mag,models,parties,pop,sex-dating,style,politics" button_label="More Shit"]');
 			?>
 
 			<!-- <div id="post-nav">
