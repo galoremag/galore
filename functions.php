@@ -364,12 +364,13 @@
 	add_filter( 'allowed_http_origin', '__return_true' );
 
 	// DEFER JS PARSING
-	function defer_parsing_of_js ( $url ) {
-		if ( FALSE === strpos( $url, '.js' ) ) return $url;
-		if ( strpos( $url, 'jquery.js' ) ) return $url;
-		return $url . " async onload='myinit()'";
-	}
-	add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+	// this was breaking the signup forms?
+	// function defer_parsing_of_js ( $url ) {
+	// 	if ( FALSE === strpos( $url, '.js' ) ) return $url;
+	// 	if ( strpos( $url, 'jquery.js' ) ) return $url;
+	// 	return $url . " async onload='myinit()'";
+	// }
+	// add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
 
 
 	// Add Featured Image to WP-API Response
