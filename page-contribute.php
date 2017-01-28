@@ -27,15 +27,11 @@ Template Name: Contributor Submission
             </div>
           </div>
 
-          <div class="row text-center contributorDescriptions">
-            <?php the_content(); ?>
-          </div>
+          <hr />
 
-          <div class="row text-center contributorForm">
-            <div class="col-sm-6 col-sm-offset-3">
-              <?php echo do_shortcode("[RM_Form id='1']"); ?>
-              <div class="g-recaptcha" data-sitekey="6LfrzwYUAAAAAFNnNUAsGnGbMA1zM1vjXrnGo2O2"></div>
-
+          <div class="row-fluid text-center contributorDescriptions">
+            <div class="col-sm-8 col-sm-offset-2">
+              <?php the_content(); ?>
             </div>
           </div>
 
