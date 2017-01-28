@@ -417,7 +417,7 @@
 	}
 
 	add_theme_support( 'title-tag' );
-	add_theme_support('auto-load-next-post');
+	// add_theme_support('auto-load-next-post');
 
 	// DEBUGGIN' CONSOLE LOGGIN
 	// function debug_to_console( $data ) {
