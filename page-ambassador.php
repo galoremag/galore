@@ -32,40 +32,6 @@ Template Name: Ambassador Submission
               <?php the_content(); ?>
             </div>
           </div>
-          <div class="row-fluid text-center contributorStats">
-            <div class="spacer20"></div>
-            <div class="col-sm-12">
-              <div class="col-sm-6">
-                <i class="btr bt-gift" aria-hidden="true"></i>
-                <h3 class="stats">Perks</h3>
-                <ul>
-                  <li>Receive Galore gift bags of bomb products from top fashion and beauty brands</li>
-                  <li>Preferred access to GALORE parties and events</li>
-                  <li>Get the inside scoop on our first annual Galore conference</li>
-                  <li>Priority internship, employment, and Kitten influencer project consideration</li>
-                  <li>Network with other dope girls just like yourself</li>
-                </ul>
-              </div>
-              <div class="col-sm-6">
-                <i class="btr bt-smile" aria-hidden="true"></i>
-                <h3 class="stats">What You<br />Need to Do</h3>
-                <ul>
-                  <li>Follow us on all social media and engage in our content; like, comment, tag and add us to your bio, Galore Girl</li>
-                  <li>Share stories from galoremag.com and don't forget to tell your friends</li>
-                  <li>Be our eyes and ears- we may be in your city and need a local connect to hook us up!</li>
-                  <li>Get involved in our new consumer insights group</li>
-                  <li>Participate in the majority of projects within this program</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="row-fluid text-center contributorForm">
-            <div class="col-sm-6 col-sm-offset-3">
-              <?php echo do_shortcode("[RM_Form id='1']"); ?>
-              <div class="g-recaptcha" data-sitekey="6LfrzwYUAAAAAFNnNUAsGnGbMA1zM1vjXrnGo2O2"></div>
-            </div>
-          </div>
 
         </div>
     </div>
