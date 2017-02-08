@@ -232,7 +232,7 @@
 
 				googletag.defineSlot('/60899964/Galore_Medium_Native', ['fluid'], 'div-gpt-ad-1470080205208-0').addService(googletag.pubads());
 				googletag.defineSlot('/60899964/Galore_Small_Native', [[240, 340], [260, 360]], 'div-gpt-ad-1486418137570-0').addService(googletag.pubads());
-				
+
 				// Mobile ad units
 				if (isMobile) {
 					googletag.defineSlot('/60899964/Galore_Mobile_Wallpaper', ['fluid'], 'div-gpt-ad-1470080205208-1').addService(googletag.pubads());
@@ -260,6 +260,14 @@
 
 		<!-- reCAPTCHA forms -->
 		<script src='https://www.google.com/recaptcha/api.js'></script>
+
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+		  (adsbygoogle = window.adsbygoogle || []).push({
+		    google_ad_client: "ca-pub-6300084900738168",
+		    enable_page_level_ads: true
+		  });
+		</script>
 
 	</head>
 	<body>
