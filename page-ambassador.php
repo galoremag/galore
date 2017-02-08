@@ -22,12 +22,12 @@ Template Name: Ambassador Submission
         <div id="content" class="nopad col-sm-10 col-sm-offset-1">
 
           <div class="row-fluid contributorHeading">
-            <div class="col-sm-12">
-              <h1 class="text-center"><?php the_title(); ?></h1>
+            <div class="contributorHeadingIn">
+              <div class="col-sm-12">
+                <h1 class="text-center"><?php the_title(); ?></h1>
+              </div>
             </div>
           </div>
-
-          <hr />
 
           <div class="row-fluid text-center contributorDescriptions">
             <div class="col-sm-8 col-sm-offset-2">

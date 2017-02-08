@@ -6,6 +6,9 @@
 
 	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
 
+	<!-- Datepicker -->
+	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/bootstrap-datepicker.min.js'></script>
+
 	<?php wp_footer(); ?>
 
 	<!-- Facebook Code -->
@@ -34,6 +37,9 @@
 	</script>
 
 	<script type="text/javascript" src="//s.skimresources.com/js/96437X1551327.skimlinks.js"></script>
+
+	<!-- Main JS script file -->
+	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
 
 	</body>
 </html>

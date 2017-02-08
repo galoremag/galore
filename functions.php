@@ -70,8 +70,11 @@
 		// wp_register_script( 'site', get_template_directory_uri().'/prod.js', array( 'jquery' ) );
 		// wp_enqueue_script( 'site' );
 
-	wp_register_style( 'bootstrap', get_stylesheet_directory_uri().'/bower_components/bootstrap/dist/css/bootstrap.min.css', '', '', 'screen' );
+		wp_register_style( 'bootstrap', get_stylesheet_directory_uri().'/bower_components/bootstrap/dist/css/bootstrap.min.css', '', '', 'screen' );
     wp_enqueue_style( 'bootstrap' );
+
+		wp_register_style( 'datepicker', get_stylesheet_directory_uri().'/css/datepicker.css', '', '', 'screen' );
+    wp_enqueue_style( 'datepicker' );
 
     wp_register_style( 'sliderskin', get_stylesheet_directory_uri().'/rs-galore-skin/rs-galore.css', '', '', 'screen' );
     wp_enqueue_style( 'sliderskin' );
@@ -79,7 +82,7 @@
     wp_register_style( 'perfect-scrollbar', get_stylesheet_directory_uri().'/css/perfect-scrollbar.min.css', '', '', 'screen' );
     wp_enqueue_style( 'perfect-scrollbar' );
 
-	wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
+		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
     wp_enqueue_style( 'screen' );
 	}
 
