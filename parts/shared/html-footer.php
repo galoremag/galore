@@ -6,9 +6,6 @@
 
 	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
 
-	<!-- Datepicker -->
-	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/bootstrap-datepicker.min.js'></script>
-
 	<?php wp_footer(); ?>
 
 	<!-- Facebook Code -->
@@ -40,6 +37,9 @@
 
 	<!-- Main JS script file -->
 	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
+
+	<!-- Datepicker -->
+	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/bootstrap-datepicker.min.js'></script>
 
 	</body>
 </html>
