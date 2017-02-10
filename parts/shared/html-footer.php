@@ -38,8 +38,5 @@
 	<!-- Main JS script file -->
 	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
 
-	<!-- Datepicker -->
-	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/js/bootstrap-datepicker.min.js'></script>
-
 	</body>
 </html>
