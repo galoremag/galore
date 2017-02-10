@@ -73,9 +73,6 @@
 		wp_register_style( 'bootstrap', get_stylesheet_directory_uri().'/bower_components/bootstrap/dist/css/bootstrap.min.css', '', '', 'screen' );
     wp_enqueue_style( 'bootstrap' );
 
-		wp_register_style( 'datepicker', get_stylesheet_directory_uri().'/css/datepicker.css', '', '', 'screen' );
-    wp_enqueue_style( 'datepicker' );
-
     wp_register_style( 'sliderskin', get_stylesheet_directory_uri().'/rs-galore-skin/rs-galore.css', '', '', 'screen' );
     wp_enqueue_style( 'sliderskin' );
 
