@@ -128,9 +128,6 @@
 
 		<script src='//cdn.goroost.com/roostjs/sl6otjre2knha1dhhy3trjd9y94q775x' async></script>
 
-		<!-- Create it with slider online build tool for better performance. -->
-		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
-
 		<!-- PERFORMANCE MONITORING -->
 		<script>
 		var _prum = [['id', '55284752abe53d0d1f35d79a'],

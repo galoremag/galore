@@ -38,5 +38,8 @@
 	<!-- Main JS script file -->
 	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
 
+	<!-- Create it with slider online build tool for better performance. -->
+	<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
+
 	</body>
 </html>
