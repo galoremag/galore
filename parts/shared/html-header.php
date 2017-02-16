@@ -20,12 +20,6 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico"/>
 
-		<!-- basic stylesheet -->
-		<link rel="stylesheet" href="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/royalslider.css">
-
-		<!-- Datepicker stylesheet -->
-		<!-- <link rel="stylesheet" href="<?php echo content_url(); ?>/themes/galore/datepicker.css"> -->
-
 		<?php wp_head(); ?>
 
 		<!-- Google Analytics -->

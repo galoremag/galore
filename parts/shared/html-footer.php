@@ -4,8 +4,6 @@
 	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
 	<![endif]-->
 
-	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
-
 	<?php wp_footer(); ?>
 
 	<!-- Facebook Code -->
@@ -34,12 +32,6 @@
 	</script>
 
 	<script type="text/javascript" src="//s.skimresources.com/js/96437X1551327.skimlinks.js"></script>
-
-	<!-- Main JS script file -->
-	<script type='text/javascript' src='<?php echo content_url(); ?>/themes/galore/prod.js'></script>
-
-	<!-- Create it with slider online build tool for better performance. -->
-	<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
 
 	</body>
 </html>
