@@ -67,23 +67,29 @@
 	 */
 
 	function starkers_script_enqueuer() {
-		// wp_register_script( 'site', get_template_directory_uri().'/prod.js', array( 'jquery' ) );
-		// wp_enqueue_script( 'site' );
+		wp_register_style( 'bootstrap-css', get_stylesheet_directory_uri().'/bower_components/bootstrap/dist/css/bootstrap.min.css', '', '', 'screen' );
+    wp_enqueue_style( 'bootstrap-css' );
 
-		wp_register_style( 'bootstrap', get_stylesheet_directory_uri().'/bower_components/bootstrap/dist/css/bootstrap.min.css', '', '', 'screen' );
-    wp_enqueue_style( 'bootstrap' );
+		wp_register_style( 'royalslider-css', plugins_url().'/new-royalslider/lib/royalslider/royalslider.css', '', '', 'screen' );
+    wp_enqueue_style( 'royalslider-css' );
 
-		wp_register_style( 'datepicker', get_stylesheet_directory_uri().'/css/datepicker.css', '', '', 'screen' );
-    wp_enqueue_style( 'datepicker' );
-
-    wp_register_style( 'sliderskin', get_stylesheet_directory_uri().'/rs-galore-skin/rs-galore.css', '', '', 'screen' );
-    wp_enqueue_style( 'sliderskin' );
+    wp_register_style( 'royalslider-skin', get_stylesheet_directory_uri().'/rs-galore-skin/rs-galore.css', '', '', 'screen' );
+    wp_enqueue_style( 'royalslider-skin' );
 
     wp_register_style( 'perfect-scrollbar', get_stylesheet_directory_uri().'/css/perfect-scrollbar.min.css', '', '', 'screen' );
     wp_enqueue_style( 'perfect-scrollbar' );
 
-		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
-    wp_enqueue_style( 'screen' );
+		wp_register_style( 'site-css', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
+    wp_enqueue_style( 'site-css' );
+
+		wp_register_style( 'royalslider-js', plugins_url().'/new-royalslider/lib/royalslider/jquery.royalslider.min.js', '', '', 'screen' );
+    wp_enqueue_style( 'royalslider-js' );
+
+		wp_register_script( 'bootstrap-js', get_template_directory_uri().'/bower_components/bootstrap/dist/js/bootstrap.min.js');
+		wp_enqueue_script( 'bootstrap-js' );
+
+		wp_register_script( 'site-js', get_template_directory_uri().'/prod.js');
+		wp_enqueue_script( 'site-js' );
 	}
 
 	add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer' );

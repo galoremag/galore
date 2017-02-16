@@ -174,9 +174,6 @@ jQuery(document).ready(function($) {
 
   defaultSelect();
 
-  // Datepicker
-  $('#form_1_1-element-9 ,#form_2_1-element-9').datepicker();
-
   // $("#address .rm_ad_container .slimField ,#address .rm_ad_container .slimField").addClass("form-group");
   $("#address .rm_ad_container .slimField input ,#address .rm_ad_container .wideField input").addClass("form-control");
 

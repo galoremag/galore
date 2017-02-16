@@ -20,12 +20,6 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico"/>
 
-		<!-- basic stylesheet -->
-		<link rel="stylesheet" href="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/royalslider.css">
-
-		<!-- Datepicker stylesheet -->
-		<!-- <link rel="stylesheet" href="<?php echo content_url(); ?>/themes/galore/datepicker.css"> -->
-
 		<?php wp_head(); ?>
 
 		<!-- Google Analytics -->
@@ -127,9 +121,6 @@
 		<!-- End Facebook Pixel Code -->
 
 		<script src='//cdn.goroost.com/roostjs/sl6otjre2knha1dhhy3trjd9y94q775x' async></script>
-
-		<!-- Create it with slider online build tool for better performance. -->
-		<script src="<?php echo content_url(); ?>/plugins/new-royalslider/lib/royalslider/jquery.royalslider.min.js"></script>
 
 		<!-- PERFORMANCE MONITORING -->
 		<script>
