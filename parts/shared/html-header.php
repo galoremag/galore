@@ -222,6 +222,8 @@
 		    googletag.defineOutOfPageSlot('/60899964/Home_OOP', 'div-gpt-ad-1467924264305-3').addService(googletag.pubads());
 
 				googletag.defineSlot('/60899964/Galore_Medium_Native', ['fluid'], 'div-gpt-ad-1470080205208-0').addService(googletag.pubads());
+				googletag.defineSlot('/60899964/Galore_InContent_Medium_Native', ['fluid'], 'div-gpt-ad-1486941865725-0').addService(googletag.pubads());
+				
 				googletag.defineSlot('/60899964/Galore_Small_Native', [[240, 340], [260, 360]], 'div-gpt-ad-1486418137570-0').addService(googletag.pubads());
 
 				// Mobile ad units
