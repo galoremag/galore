@@ -174,17 +174,17 @@ jQuery(document).ready(function($) {
 
   defaultSelect();
 
-  // $("#form_1_1-element-9 ,#form_2_1-element-9 ,#form_9_1-element-10 ,#form_10_1-element-9").parent().attr("id", "birthdayPicker");
-  //
-  // // Birthday Picker
-  // $("#birthdayPicker").birthdayPicker({
-	// 	"defaultDate": "04-01-1995",
-	// 	"maxYear": "2016",
-	// 	"maxAge": 65,
-	// 	"callback": function(value) {
-  //     $('.birthday').val(value);
-	// 	}
-	// });
+  $("#form_1_1-element-9 ,#form_2_1-element-9 ,#form_9_1-element-10 ,#form_10_1-element-9").parent().attr("id", "birthdayPicker");
+
+  // Birthday Picker
+  $("#birthdayPicker").birthdayPicker({
+		"defaultDate": "04-01-1995",
+		"maxYear": "2016",
+		"maxAge": 65,
+		"callback": function(value) {
+      $('.birthday').val(value);
+		}
+	});
 
   // $("#address .rm_ad_container .slimField ,#address .rm_ad_container .slimField").addClass("form-group");
   $("#address .rm_ad_container .slimField input ,#address .rm_ad_container .wideField input").addClass("form-control");
