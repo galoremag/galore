@@ -11,6 +11,18 @@
 @salmon : #FA7470;
 @galwhite : antiquewhite;
 
+@deskNav : #545454;
+@modal_nav_bg : black;
+@global_background : black;
+@global_text : white;
+@home_bg : black;
+@content_bg : black;
+@pop_bg : black;
+@link : white;
+@header_font : white;
+@slider_border : black;
+
+
 .randomColor() {
   @randomColor: `(Math.random()*0xFFFFFF<<0).toString(16)`;
   @colorHex: e(@randomColor);
@@ -301,6 +313,10 @@ p {
 }
 
 // GRADIENTS
+
+.darkGlaze {
+	background: fade(black, 90)
+}
 
 .heroGradient {
 	background-attachment: fixed;

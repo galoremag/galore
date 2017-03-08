@@ -3,7 +3,7 @@ Theme Name: Galore
 Theme URI: http://galoremag.com/
 Author: Aaron Smulktis
 Author URI: http://galoremag.com/
-Description: 2015 Digital GaloreMag.com
+Description: 2017 © GaloreMag.com
 Version: 1.0.1
 */
 
@@ -236,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	.font1;
-	color: black;
+	color: @header_font;
 	text-transform: uppercase;
 	font-size: 42px;
 	letter-spacing: 0.5px;
@@ -251,27 +251,27 @@ h1 span {
 
 h2 {
 	.font2;
-	color: black;
+	color: @header_font;
 	font-size: 28px;
 	margin: 10px 0px;
 }
 
 h3, h3 a {
-	color: black;
+	color: @header_font;
 	.font2;
 	font-size: 22px;
 	margin: 5px 0px;
 }
 
 h4 {
-	color: black;
+	color: @header_font;
 	.font2;
 	font-size: 18px;
 	margin: 5px 0px;
 }
 
 h5 {
-	color: black;
+	color: @header_font;
 	.font4;
 	font-size: 22px;
 	margin: 0px;
@@ -286,7 +286,7 @@ h1 span, h2 span, h3 span {
 }
 
 h1 a, h2 a, h3 a, h4 a {
-	color: black;
+	color: @link;
 	.transition;
 }
 
@@ -305,6 +305,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h1 a:hover span, h2 a:hover span
 body {
 	overflow-x: hidden;
 	.font4;
+  color: @global_text;
+  background: @global_background;
 	/*padding: 130px 90px 0 90px;*/
 }
 
@@ -351,7 +353,8 @@ body.menu-open {
 }
 
 #global-inner.the-latest {
-	.heroGradientFade;
+	// .heroGradientFade;
+  .darkGlaze;
 }
 
 /* STYLE BACKGROUND */
@@ -361,11 +364,13 @@ body.menu-open {
 }
 
 #global-inner.category-fashion {
-	.bluePinkGradientFade;
+	// .bluePinkGradientFade;
+  .darkGlaze;
 }
 
 #global-inner.fashion {
-	.bluePinkGradientFade;
+	// .bluePinkGradientFade;
+  .darkGlaze;
 }
 
 /* BEAUTY BACKGROUND */
@@ -375,17 +380,20 @@ body.menu-open {
 }
 
 #global-inner.category-beauty {
-	.heroGradientFade;
+	// .heroGradientFade;
+  .darkGlaze;
 }
 
 #global-inner.beauty {
-	.heroGradientFade;
+	// .heroGradientFade;
+  .darkGlaze;
 }
 
 /* AUTHOR */
 
 #global-inner.author {
-	.brandGradientFade;
+	// .brandGradientFade;
+  .darkGlaze;
 }
 
 /* SEX & DATING BACKGROUND */
@@ -399,7 +407,8 @@ body.menu-open {
 }
 
 #global-inner.sex-dating {
-	.brandGradientFade;
+	// .brandGradientFade;
+  .darkGlaze;
 }
 
 /* POP BACKGROUND */
@@ -409,11 +418,13 @@ body.menu-open {
 }
 
 #global-inner.category-pop {
-	.brandGradientFade;
+	// .brandGradientFade;
+  .darkGlaze;
 }
 
 #global-inner.pop {
-	.brandGradientFade;
+	// .brandGradientFade;
+  .darkGlaze;
 }
 
 /* PARTIES BACKGROUND */
@@ -423,11 +434,13 @@ body.menu-open {
 }
 
 #global-inner.category-parties {
-	.brandGradientFade;
+	// .brandGradientFade;
+  .darkGlaze;
 }
 
 #global-inner.parties {
-	.brandGradientFade;
+	// .brandGradientFade;
+  .darkGlaze;
 }
 
 /* ERROR 404 BACKGROUND */
@@ -437,7 +450,8 @@ body.menu-open {
 }
 
 #global-inner.error404 {
-	.brandGradientFade;
+	// .brandGradientFade;
+  .darkGlaze;
 }
 
 #global-container.category-health {
@@ -445,7 +459,8 @@ body.menu-open {
 }
 
 #global-inner.health {
-	.bluePinkGradientFade;
+	// .bluePinkGradientFade;
+  .darkGlaze;
 }
 
 /* LATEST BACKGROUND */
@@ -455,12 +470,13 @@ body.menu-open {
 }
 
 #global-inner.latest {
-	.heroGradientFade;
+	// .heroGradientFade;
+  .darkGlaze;
 }
 
 #global-inner.home {
 	padding: 0px 0px 0px 0px !important;
-	background: white;
+	background: @global_background;
 	/*background: antiquewhite !important;*/
 }
 
@@ -471,7 +487,8 @@ body.menu-open {
 }
 
 #global-inner.signup {
-	.heroGradientFade;
+	// .heroGradientFade;
+  .darkGlaze;
 }
 
 #global-inner .signup #content {
@@ -485,7 +502,8 @@ body.menu-open {
 }
 
 #global-inner.search {
-	.heroGradientFade;
+	// .heroGradientFade;
+  .darkGlaze;
 }
 
 /* GENERAL PAGE BACKGROUND */
@@ -495,7 +513,8 @@ body.menu-open {
 }
 
 #global-inner.page {
-	.heroGradientFade;
+	// .heroGradientFade;
+  .darkGlaze;
 }
 
 /* SHOP PAGES BACKGROUNDS */
@@ -505,7 +524,8 @@ body.menu-open {
 }
 
 #global-inner.shopp-collection {
-	.heroGradientFade;
+	// .heroGradientFade;
+  .darkGlaze;
 }
 
 /* ABOUT BACKGROUND */
@@ -515,7 +535,8 @@ body.menu-open {
 }
 
 #global-inner.page-about {
-	.heroGradientFade;
+	// .heroGradientFade;
+  .darkGlaze;
 }
 
 /* DMCA POLICY BACKGROUND */
@@ -525,7 +546,8 @@ body.menu-open {
 }
 
 #global-inner.dmca-policy {
-	.heroGradientFade;
+	// .heroGradientFade;
+  .darkGlaze;
 }
 
 /* CONTACT BACKGROUND */
@@ -535,7 +557,8 @@ body.menu-open {
 }
 
 #global-inner.page-contact {
-	.heroGradientFade;
+	// .heroGradientFade;
+  .darkGlaze;
 }
 
 /* TAG BACKGROUND */
@@ -545,7 +568,8 @@ body.menu-open {
 }
 
 #global-inner.tag {
-	.heroGradientFade;
+	// .heroGradientFade;
+  .darkGlaze;
 }
 
 /* MODELS BACKGROUND */
@@ -555,11 +579,13 @@ body.menu-open {
 }
 
 #global-inner.category-models {
-	.brandGradientFade;
+	// .brandGradientFade;
+  .darkGlaze;
 }
 
 #global-inner.models {
-	.brandGradientFade;
+	// .brandGradientFade;
+  .darkGlaze;
 }
 
 .models {
@@ -686,7 +712,7 @@ nav.shrink {
 
 #deskNav.shrink {
 	border-radius: 0px;
-	background: white;
+	background: @deskNav;
 	.transition;
 }
 
@@ -787,7 +813,7 @@ nav.shrink {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background: white;
+	background: @modal_nav_bg;
 	z-index: 99;
 	overflow: scroll;
 	top: -100vh;
@@ -905,7 +931,8 @@ ul.modal-nav-menu {
 	}
 	& .jumbotron-in {
 		padding: 120px 0px 120px 0px;
-		.brandBackgroundGlaze;
+    .darkGlaze;
+		// .brandBackgroundGlaze;
 		width: 100%;
 		height: 100%;
 	}
@@ -922,7 +949,7 @@ ul.modal-nav-menu {
 .hero-slider {
   padding-left: 0px;
   padding-right: 0px;
-  border: 10px solid white;
+  border: 10px solid @slider_border;
   box-shadow: 1px 1px 25px fade(@brand, 30%);
 }
 
@@ -1011,11 +1038,7 @@ ul.modal-nav-menu {
 /* CUSTOM SLIDER */
 
 .ps-container.ps-in-scrolling>.ps-scrollbar-x-rail { background-color: lighten(@brand, 80%); }
-.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x { background-color: .heroGradientFade !important; }
-
-#latest-container {
-	background: white;
-}
+// .ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x { background-color: .heroGradientFade !important; }
 
 #glides {
   width: 100%;
@@ -1090,14 +1113,14 @@ ul.modal-nav-menu {
 	padding: 20px 20px 90px 20px;
 	/*background: ghostwhite;*/
 	/*background: lavenderblush;*/
-	background: white;
+	background: @content_bg;
 	/*box-shadow: 0px 0px 10px rgba(255,0,50, 0.3);*/
 	min-height: 100vh;
 }
 
 .home #content {
 	/*background: lavenderblush !important;*/
-	background: white;
+	background: @content_bg;
 }
 
 .home .everything {
@@ -1105,7 +1128,7 @@ ul.modal-nav-menu {
 }
 
 #sidebar {
-	background: lighten(@brand, 25%);
+	background: darken(@brand, 25%);
 	padding: 10px 20px 120px 20px;
 }
 
@@ -1269,14 +1292,15 @@ img.postFeaturedImg.wp-post-image {
 
 #home-container .sex-dating-in {
 	padding: 40px 0px 80px 0px;
-	.bluePinkGradientFade;
+	// .bluePinkGradientFade;
+  .darkGlaze;
 	width: 100%;
 	height: 100%;
 }
 
 .sex-dating .LightText h1, .sex-dating .LightText h2 {
 	/*color: @brand;*/
-	color: black;
+	color: @header_font;
 	text-shadow: 1px 1px 0px rgba(255,255,0,1);
 }
 
@@ -1417,7 +1441,7 @@ img.postFeaturedImg.wp-post-image {
 
 }
 
-div.pop {background: white;}
+div.pop {background: @pop_bg;}
 
 .pop-in {
 	padding: 20px 0px 40px 0px;
@@ -1444,12 +1468,14 @@ div.pop {background: white;}
 .pop-in .post-grid .entry a:hover {color: darken(@brand, 20%);}
 
 #home-container {
-	background: url(images/greyfloral.png) repeat;
+	// background: url(images/greyfloral.png) repeat;
+  background: @home_bg;
 }
 
 .home-fashion {
 	padding: 20px 0px 40px 0px;
-	.greyGradientFade;
+	// .greyGradientFade;
+  .darkGlaze;
 }
 
 .beauty-fashion {
@@ -1457,7 +1483,8 @@ div.pop {background: white;}
 }
 
 .darlings {
-	.pinkBlueGradientFade;
+	// .pinkBlueGradientFade;
+  .darkGlaze;
 }
 
 .darlings .brand {
@@ -1905,7 +1932,7 @@ ul#menu-footer-menu li a:hover, ul#menu-footer li a:hover, a.close-footer:hover 
 }
 
 .alm-listing li h3 a {
-	color: black;
+	color: @header_font;
 	margin-top: 0px !important;
 }
 
@@ -2371,7 +2398,8 @@ td:nth-child(2){
     padding-top: 250px;
     width: 100%;
     height: 100%;
-    .heroGradientFade;
+    // .heroGradientFade;
+    .darkGlaze;
   }
   & h1 {
     font-size: 70px;
