@@ -200,10 +200,10 @@
 
 		<!-- Edgemesh -->
 		<script
-		    type="application/javascript"
-		    src="https://cdn.jsdelivr.net/edgemesh/latest/edgemesh.client.min.js"
-		    onload="window.edgemesh = new Edgemesh()">
-		</script>
+			type="application/javascript"
+			src="https://sig.edgeno.de/edgemesh.client.min.js"
+			onload="window.edgemesh = new Edgemesh()">
+        </script>
 
 	</head>
 	<body>
