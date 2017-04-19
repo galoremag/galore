@@ -198,12 +198,5 @@
 		  });
 		</script>
 
-		<!-- Edgemesh -->
-		<script
-			type="application/javascript"
-			src="https://sig.edgeno.de/edgemesh.client.min.js"
-			onload="window.edgemesh = new Edgemesh()">
-        </script>
-
 	</head>
 	<body>
