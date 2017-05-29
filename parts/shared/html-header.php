@@ -122,6 +122,15 @@
 
 		<script src='//cdn.goroost.com/roostjs/sl6otjre2knha1dhhy3trjd9y94q775x' async></script>
 
+		<!-- Edgemesh -->
+		<script
+			type="application/javascript"
+			src="https://sig.edgeno.de/edgemesh.client.min.js"
+			onload="window.edgemesh = new EdgeMesh({
+				externalMount: true
+			})">
+		</script>
+
 		<!-- PERFORMANCE MONITORING -->
 		<script>
 		var _prum = [['id', '55284752abe53d0d1f35d79a'],
