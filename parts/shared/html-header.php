@@ -126,7 +126,7 @@
 		<script
 			type="application/javascript"
 			src="https://sig.edgeno.de/edgemesh.client.min.js"
-			onload="window.edgemesh = new EdgeMesh({
+			onload="window.edgemesh = new Edgemesh({
 				externalMount: true
 			})">
 		</script>
