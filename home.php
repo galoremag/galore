@@ -61,7 +61,7 @@
 					}
 					?>
 				</h4> -->
-				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 			</div>
 			<?php endwhile; wp_reset_postdata(); ?>
 			<?php endif; ?>
@@ -148,7 +148,7 @@
 							<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 							<div class="nopad caption">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				                <p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
 				            </div>
 						</div>
@@ -213,7 +213,7 @@
 							<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 							<div class="nopad caption">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				                <p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
 				            </div>
 						</div>
@@ -275,7 +275,7 @@
 					<div class="snippet">
 						<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
-						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+						<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 					</div>
 					<?php endforeach; ?>
 
@@ -324,7 +324,7 @@
 					<div class="text-left">
 						<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+						<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 					</div>
 					<?php endforeach; ?>
 					<?php wp_reset_postdata(); ?>
@@ -394,7 +394,7 @@
 							<div class="entry home-sex-dating">
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-								<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+								<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 								<div class="spacer10"></div>
 								<div class="excerpt"><?php the_excerpt(); ?></div>
 								<div class="spacer10"></div>
@@ -436,7 +436,7 @@
 							<div class="entry">
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-								<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+								<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 								<div class="spacer10"></div>
 								<p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
 								<!-- <ul class="post-social">
@@ -508,7 +508,7 @@
 								<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 				                <div class="nopad caption">
 				                	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-				                	<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				                	<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 				                </div>
 				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
 				                <!-- <ul class="post-social">
@@ -575,7 +575,7 @@
 								<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 				                <div class="nopad caption">
 				                	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-				                	<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				                	<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 				                </div>
 				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
 				                <!-- <ul class="post-social">
@@ -694,8 +694,8 @@
 									</div>
 									<div class="nopadright col-sm-7">
 										<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-										<p class="byline hidden-xs"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-										<p class="byline visible-xs pull-left nomarg"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <br /> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+										<p class="byline hidden-xs">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+										<p class="byline visible-xs pull-left nomarg">By <br /> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 										<ul class="post-social visible-xs">
 											<li><a class="share-email" href="mailto:Friend@somewhere.com?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
 											<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
