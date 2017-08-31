@@ -14,7 +14,7 @@
 <div class="container-fluid nopad">
 	<div class="row-fluid">
 		<div class="col-md-6 col-md-offset-3 container-fixed nopad">
-		<?php echo do_shortcode( '[new_royalslider id="13"]' ); ?>
+		<?php echo get_new_royalslider(13); ?>
 		</div>
 	</div>
 	<div class="row-fluid">
