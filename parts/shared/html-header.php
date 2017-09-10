@@ -127,13 +127,13 @@
 		<script src='//cdn.goroost.com/roostjs/avy8ddi0wxrgx357erfsb6b0jky4b15i' async></script>		
 
 		<!-- Edgemesh -->
-		<script
+		<!-- <script
 			type="application/javascript"
 			src="https://sig.edgeno.de/edgemesh.client.min.js"
 			onload="window.edgemesh = new Edgemesh({
 				externalMount: true
 			})">
-		</script>
+		</script> -->
 
 		<!-- PERFORMANCE MONITORING -->
 		<script>
