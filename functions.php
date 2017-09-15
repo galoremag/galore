@@ -205,7 +205,6 @@
 		}
 
 		return $args;
-		return $args;
 	}
 
 	// Clear cache when you save post, or during any other action
