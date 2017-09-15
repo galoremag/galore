@@ -194,13 +194,17 @@
 	add_filter('new_royalslider_posts_slider_query_args', 'galorers_custom_query', 10, 2);
 
 	function galorers_custom_query($args, $index) {
-		$args = array(
-			'tag' => 'featured',
-			'post_type' => array('list','post'),
-			'public' => true,
-			'posts_per_page' => 3
-		);
-		$index = '4';
+		// Front page slider
+		if ($index == 4) {
+			$args = array(
+				'tag' => 'featured',
+				'post_type' => array('list','post'),
+				'public' => true,
+				'posts_per_page' => 3
+			);
+		}
+
+		return $args;
 		return $args;
 	}
 
