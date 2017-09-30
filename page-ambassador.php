@@ -29,9 +29,16 @@ Template Name: Ambassador Submission
             </div>
           </div>
 
-          <div class="row-fluid text-center contributorDescriptions">
-            <div class="col-sm-8 col-sm-offset-2">
-              <?php the_content(); ?>
+          <div class="row-fluid text-right contributorDescriptions">
+            <div class="col-sm-6">
+              <div class="container-fluid">
+                <?php the_content(); ?>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="container-fluid">
+                <?php echo do_shortcode("[RM_Form id='2']"); ?>
+              </div>
             </div>
           </div>
 
