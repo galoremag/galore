@@ -1652,8 +1652,32 @@ h2.stuckHead {
 	background: lightpink;
 	width: 100%;
 	height: 50px;
-	left: 0px;
 	padding: 10px;
+}
+
+/*-- ABOUT PAGE --*/
+
+.page-about {
+	ul li {
+		margin-top: 20px;
+	}
+	& #ava-video {
+		padding: 98px 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		& div#phoneFrame {
+			display: block;
+			width: 400px;
+			height: 700px;
+			opacity: 1;
+			background: url(images/phoneFrame.gif) no-repeat !important;
+			pointer-events: none !important;
+			position: absolute;
+			top: 0;
+			z-index: 9999;
+		}
+	}
 }
 
 /*--- Contributor & Galore Girl Signup ---*/

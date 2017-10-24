@@ -18,47 +18,51 @@ Template Name: About
 	<div class="row-fluid">
 		<div id="content" class="col-sm-10 col-sm-offset-1">
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-sm-10 col-sm-offset-1">
 					<h1 class="text-center">A <span>Talent-Driven</span> Content Studio</h1>
 					<p class="section__intro">Galore Media is the voice for the cool, creative and daring Gen Z girl. We work with brands across all categories to create campaigns that work across all mobile platforms, driven by talent and premium creative. Along with it's own channels, Galore Media is able to drive significant reach through it's influencer platform Kitten, and through an expertise in paid amplification for Instagram and Facebook.</p>
 				</div>
 			</div>
 			<section id="ad-campaigns">
 				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1 text-center">
-						<h3 class="align--center">Snapshot <i class="fa fa-globe"></i></h3>
+					<div class="col-sm-6">
+						<div id="ava-video">
+							<video width="293" height="520" src="http://res.cloudinary.com/galore/video/upload/c_scale,h_520/v1508796016/galore/ava-allan.mp4" controls autoplay onclick="this.paused?this.play():this.pause();"></video>
+							<div id="phoneFrame"></div>
+						</div>
+						<h4 class="text-center">Ava Allan for Bongo</h4>
+					</div>
+					<div class="col-sm-6">
+						&nbsp;
+						&nbsp;
+						<hr />
+						<h2 class="align--center">Snapshot <i class="fa fa-globe"></i></h2>
 						<ul class="text-left">
-							<li>+ 25M videos views across our channels</li>
-							<li>+ Featured talent including Kylie Jenner, Bella Thorne, Zendaya, Gigi Hadid and many others.</li>
-							<li>+ 100 pieces of Branded content per month</li>
-							<li>+ Representing over 150 top creators</li>
-							<li>+ Includes talent including Ava Allen, Ava Dash, Nala Wayans and more</li>
-							<li>+ 60M daily reach</li>
-							<li>+ Over 100M mobile video views each month</li>
+							<li><h4>+ 25M videos views across our channels</h4></li>
+							<li><h4>+ Featured talent including Kylie Jenner, Bella Thorne, Zendaya, Gigi Hadid and many others.</h4></li>
+							<li><h4>+ 100 pieces of Branded content per month</h4></li>
+							<li><h4>+ Representing over 150 top creators</h4></li>
+							<li><h4>+ Includes talent including Ava Allen, Ava Dash, Nala Wayans and more</h4></li>
+							<li><h4>+ 60M daily reach</h4></li>
+							<li><h4>+ Over 100M mobile video views each month</h4></li>
 						</ul>
 					</div>
 				</div><!-- .row -->
 			</section>
 
-			<section id="iphone-sim">
-				<div class="row">
-					<div class="col-sm-12">
-						<div id="ava-video">
-							<video></video>
-						</div>
-						<p class="caption text-">Ava Allan for Bongo</p>
-						<p>We make videos for where our audience of Gen Z girls lives, chiefly Instagram and Snap. We shoot daily from our LA and NY studios, powering the social channels of our partners with on-brand, talent lead video content.</p>
-					</div>
-				</div><!-- .row -->
+			<section>
+				<blockquote><h2>We make &amp; publish wherever our audience of Gen Z girls lives, mainly Instagram and Snap. <span>We shoot daily</span> from our <span>LA</span> and <span>NY</span> studios, powering the social channels of our partners with on-brand, talent lead video content.</h2></blockquote>
 			</section>
 
 			<section id="ad-campaigns">
-				<div class="row">
-					<div class="col-sm-12">
+				<div class="row text-right">
+					<div class="col-sm-8">
 						<h2 class="align--center">Global Talent Campaigns</h2>
-						<img src="" title="Sahara Ray and Sofia Jamora packaging for L'Oreal" />
 						<p>Five top influencers were used for L'Oreal's Global Colorista Campaign</p>
 						<p>When L'Oreal did it's first global campaign with influencers, they came to our agency Kitten, who represents over 150 of the biggest young stars on social media. The Colorista campaign included original video, a multi-day shoot in Paris, and being including on the product packaging.</p>
+					</div>
+					<div class="col-sm-4">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/sahara-sofia.png" title="Sahara Ray and Sofia Jamora packaging for L'Oreal" />
 					</div>
 				</div><!-- .row -->
 			</section>
