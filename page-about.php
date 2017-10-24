@@ -36,8 +36,7 @@ Template Name: About
 						&nbsp;
 						&nbsp;
 						<hr />
-						<h2 class="align--center">Snapshot <i class="fa fa-globe"></i></h2>
-						<ul class="text-left">
+						<h2 class="">Snapshot <i class="fa fa-globe"></i></h2>
 							<li><h4>+ 25M videos views across our channels</h4></li>
 							<li><h4>+ Featured talent including Kylie Jenner, Bella Thorne, Zendaya, Gigi Hadid and many others.</h4></li>
 							<li><h4>+ 100 pieces of Branded content per month</h4></li>
@@ -57,8 +56,7 @@ Template Name: About
 			<section id="ad-campaigns">
 				<div class="row text-right">
 					<div class="col-sm-8">
-						<h2 class="align--center">Global Talent Campaigns</h2>
-						<p>Five top influencers were used for L'Oreal's Global Colorista Campaign</p>
+						<h2 class="">Global Talent Campaigns</h2>
 						<p>When L'Oreal did it's first global campaign with influencers, they came to our agency Kitten, who represents over 150 of the biggest young stars on social media. The Colorista campaign included original video, a multi-day shoot in Paris, and being including on the product packaging.</p>
 					</div>
 					<div class="col-sm-4">
@@ -70,36 +68,45 @@ Template Name: About
 			<section id="ad-campaigns">
 				<div class="row">
 					<div class="col-sm-12">
-						<h3 class="align--center">Trend and Consumer Insights</h3>
-						<img src="" title="???" />
+						<h3 class="">Trend and Consumer Insights</h3>
 						<p>Galore Media has a proprietary network of 10K culture-makers, who have been identified to have a forward looking view on "what's next" in culture, and inform our research and trend forecasting product.</p>
-						<h2>HOW IT WORKS</h2>
-						<ul>
-							<li>• Rapid polling to specific demos</li>
-							<li>• Social listening on given topic</li>
-							<li>• Galore Trend Insights team to collapse data into a custom report</li>
-							<li>• For product releases, can leverage data with qualitative to provide a confidence score for a specific launch</li>
-							<li>• Film or TV releases will also receive an affinity score from Culture Makers within this segment.</li>
-						</ul>
 					</div>
 				</div><!-- .row -->
 			</section>
 
+			<section>
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 text-center">
+						<h1>HOW IT WORKS</h1>
+						<ul>
+							<li><h4>• Rapid polling to specific demos</h4></li>
+							<li><h4>• Social listening on given topic</h4></li>
+							<li><h4>• Galore Trend Insights team to collapse data into a custom report</h4></li>
+							<li><h4>• For product releases, can leverage data with qualitative to provide a confidence score for a specific launch</h4></li>
+							<li><h4>• Film or TV releases will also receive an affinity score from Culture Makers within this segment.</h4></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<hr />
+
 			<section id="influecer-promotions">
 				<div class="row">
 					<div class="col-sm-12">
-						<h2 class="align--center">Influencer promotions</h2>
-						<img src="" title="???" />
+						<img src="<?php echo get_template_directory_uri(); ?>/images/influencer-promotions.png" title="Influencer Promotions" />
+						<h2 class="">Influencer promotions</h2>
 						<h4>INFLUENCER for BRAND</h4>
 						<p>The Kitten roster is filled with some of the best creators for Instagram and Snap. Best of all, they have huge audiences that allow them to drive awareness for a brand across their networks, with very high engagement.</p>
 					</div>
 				</div><!-- .row -->
 			</section>
 
-			<section id="influecer-promotions">
+			<section id="product-collaborations">
 				<div class="row">
-					<div class="col-sm-12">
-						<h2 class="align--center">Product Collaborations</h2>
+					<div class="col-sm-12 text-right">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/product-collab.png" title="Product Collaborations" />
+						<h2 class="">Product Collaborations</h2>
 						<img src="" title="Missguided" />
 						<p>When it comes to product collaborations, Galore's fans turn up. Working with Missguided, the Galore creative team designed a 20-piece collection inspired by Lil' Kim, and shot and produced all of the creative assets including the lookbook, bts video, a kit of social assets, in addition to getting the clothes on celebrities like Paris Hilton and Keke Palmer, and pushed out to our Kitten influencers and Galore Girls. Result....the collection sold out in 2 Weeks.</p>
 					</div>
@@ -109,8 +116,7 @@ Template Name: About
 			<section id="influecer-promotions">
 				<div class="row">
 					<div class="col-sm-12">
-						<h2 class="align--center">Experiential</h2>
-						<img src="" title="Party Photos" />
+						<h2 class="">Experiential</h2>
 						<p>With Instagram turning events into media moments (and the pull of Netflix keeping people at home), unique experiential moments are more important than ever. Either through music driven events like Galore Fashion Week, Miami SWIM, Sisterhood of Sound, or our new music Festival Girl Cult, Galore brings a creative and fun approach to live events, which are always attended by the most sought after names in our target demo.</p>
 						<!-- https://galoremag.com/kylie-jenner-hosted-our-generation-bombshell-issue-release-party-check-it-out/
 						https://galoremag.com/highlights-from-last-nights-girl-cult-dinner-with-keke-palmer/ -->
