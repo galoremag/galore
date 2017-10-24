@@ -96,7 +96,6 @@ Template Name: About
 					<div class="col-sm-12">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/influencer-promotions.png" title="Influencer Promotions" />
 						<h2 class="">Influencer promotions</h2>
-						<h4>INFLUENCER for BRAND</h4>
 						<p>The Kitten roster is filled with some of the best creators for Instagram and Snap. Best of all, they have huge audiences that allow them to drive awareness for a brand across their networks, with very high engagement.</p>
 					</div>
 				</div><!-- .row -->
