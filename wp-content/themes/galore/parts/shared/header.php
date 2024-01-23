@@ -97,7 +97,7 @@
 	<div id="main-menu" class="modal-nav">
 		<div class="modal-nav-content">
 			<ul class="modal-nav-menu text-center">
-				<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i> GaloreTV</li>
+				<!-- <li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i> GaloreTV</li> -->
 				<li><a href="<?php bloginfo('url'); ?>/category/girl-cult" title="Girl Cult">Girl Cult <span class="badge">New</span></a></li>
 				<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a> + <a href="<?php bloginfo('url'); ?>/category/fashion" title="Fashion">Fashion</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/category/dating" title="Dating">Dating</a></li>
@@ -215,7 +215,7 @@
 				</div>
 			</div> -->
 			<ul class="modal-nav-menu text-center">
-				<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i> GaloreTV</li>
+				<!-- <li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i> GaloreTV</li> -->
 				<li><a href="<?php bloginfo('url'); ?>/category/girl-cult" title="Girl Cult">Girl Cult <span class="badge">New</span></a></li>
 				<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a> + <a href="<?php bloginfo('url'); ?>/category/fashion" title="Fashion">Fashion</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/category/dating" title="Dating">Dating</a></li>
