@@ -353,10 +353,10 @@
 	</script>
 	</div> -->
 
-	<!-- DATING SECTION -->
+	<!-- SEX + DATING SECTION -->
 
-	<div class="dating nopad">
-		<div class="dating-in nopad">
+	<div class="sex-dating nopad">
+		<div class="sex-dating-in nopad">
 			<div class="container nopad">
 				<div class="col-sm-12 verPad40">
 					<div class="row-fluid">
@@ -391,7 +391,7 @@
 							foreach ($postslist as $post) :
 							setup_postdata($post);
 							?>
-							<div class="entry home-dating">
+							<div class="entry home-sex-dating">
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 								<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
