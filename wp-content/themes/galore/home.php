@@ -353,7 +353,7 @@
 	</script>
 	</div>
 
-	<!-- SEX + DATING SECTION -->
+	<!-- DATING SECTION -->
 
 	<div class="dating nopad">
 		<div class="dating-in nopad">
