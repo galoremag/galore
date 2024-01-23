@@ -1,0 +1,111 @@
+/* ---- VARIABLES ---- */
+/* Smartphones (portrait and landscape) ------------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  p {
+    margin: 0 10px !important;
+  }
+  header {
+    margin: 0px;
+  }
+  header img {
+    width: 100px !important;
+    top: 15px;
+  }
+  .navbar {
+    margin-bottom: 0px !important;
+    padding-bottom: 20px !important;
+  }
+  .rsContent h1 {
+    font-size: 25px !important;
+  }
+  .rsContent h2 {
+    font-size: 18px !important;
+  }
+  .rsContent h3 {
+    font-size: 16px !important;
+  }
+  .rsContent h4 {
+    font-size: 14px !important;
+  }
+  /*.rsABlock p, .rsSBlock p {display: none !important;}*/
+  .rsABlock,
+  .rsSBlock {
+    padding: 0px 20px !important;
+    margin: 0px !important;
+    width: 100% !important;
+    pointer-events: none !important;
+    top: 100px !important;
+  }
+  .rsContent p {
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+  .rsContent h1,
+  .rsContent h2,
+  .rsContent h3,
+  .rsContent h4 {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  .GaloreDarkBox button,
+  .GaloreLightBox button,
+  .DarkTextRight button,
+  .LightTextRight button,
+  .DarkText button,
+  .LightText button {
+    display: none;
+  }
+  .GaloreDarkBox,
+  .GaloreLightBox,
+  .DarkTextRight,
+  .LightTextRight,
+  .DarkText,
+  .LightText {
+    width: 100% !important;
+    margin: 0px !important;
+  }
+  .bottom-nav nav ul {
+    text-align: right !important;
+    float: right !important;
+  }
+  .bottom-nav nav li {
+    display: block !important;
+  }
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+}

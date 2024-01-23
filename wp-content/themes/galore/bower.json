@@ -1,0 +1,13 @@
+{
+  "name": "grunt-bower-wordpress",
+  "dependencies": {
+    "bootstrap": "3.2.*",
+    "jquery": "1.11.*",
+    "fontawesome": "4.3.0",
+    "jquery.scrollTo": "~2.1.1",
+    "jquery-placeholder": "~2.1.2",
+    "jquery-cookie": "~1.4.1",
+    "js-cookie": "~2.0.4",
+    "Scrollify": "^1.0.4"
+  }
+}

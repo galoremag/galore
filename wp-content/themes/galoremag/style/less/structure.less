@@ -1,0 +1,45 @@
+/* ========================================================= Structure ===*/
+.well{
+  background-color: #fff;
+  border: 1px solid #b9babd;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #d4d6d9;
+  margin-left:0;
+}
+.well .span6{
+  width: 440px;
+}
+.well .span12{
+  width: 900px;
+}
+.well .span9{
+  width: 660px;
+}
+/* ========================================================= MQ ===*/
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .well .span3{
+    width: 190px;
+  }
+  .well .span6{
+    width: 332px;
+  }
+  .well .span12{
+    width: 685px;
+  }
+}
+
+@media (max-width: 767px) {
+  .well .span6, .well .span12{
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .well .span6, .well .span12{
+    width: 100%;
+  }
+}

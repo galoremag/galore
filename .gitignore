@@ -9,6 +9,20 @@ bower_components/
 # prod.js
 # style.css
 
+# Ignore everything #
+*
+**
+!import/
+!import/**
+!wp-content/
+wp-content/*
+
+###############################
+# Start editing!
+
+!wp-content/themes/galore/
+!wp-content/plugins/ad-switcher/
+
 # Misc files types
 *.DS_Store
 *.log
