@@ -353,22 +353,22 @@
 	</script>
 	</div> -->
 
-	<!-- SEX + DATING SECTION -->
+	<!-- DATING SECTION -->
 
-	<div class="sex-dating nopad">
-		<div class="sex-dating-in nopad">
+	<div class="dating nopad">
+		<div class="dating-in nopad">
 			<div class="container nopad">
 				<div class="col-sm-12 verPad40">
 					<div class="row-fluid">
 						<div class="col-sm-12">
-							<h2>Sex + Dating <i class="fa fa-heart"></i></h2>
+							<h2>Dating <i class="fa fa-heart"></i></h2>
 						</div>
 					</div>
 					<div class="row-fluid">
 						<div class="col-sm-8">
 							<?php
 							$args = array(
-								'category_name' => 'sex-dating',
+								'category_name' => 'dating',
 								'posts_per_page' => 1,
 								'order' => 'DESC',
 								'orderby' => 'date',
@@ -391,7 +391,7 @@
 							foreach ($postslist as $post) :
 							setup_postdata($post);
 							?>
-							<div class="entry home-sex-dating">
+							<div class="entry home-dating">
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 								<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
@@ -410,7 +410,7 @@
 						<div class="col-sm-4">
 							<?php
 							$args = array(
-								'category_name' => 'sex-dating',
+								'category_name' => 'dating',
 								'posts_per_page' => 3,
 								'order' => 'DESC',
 								'orderby' => 'date',
@@ -451,7 +451,7 @@
 					<div class="row-fluid">
 						<div class="col-sm-12">
 							<div class="spacer20"></div>
-							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> &nbsp; Hook It Up &nbsp;<i class="fa fa-heart"></i></a></p>
+							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/dating"><i class="fa fa-heart"></i> &nbsp; Hook It Up &nbsp;<i class="fa fa-heart"></i></a></p>
 						</div>
 					</div>
 				</div>
