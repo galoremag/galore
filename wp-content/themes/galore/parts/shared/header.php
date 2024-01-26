@@ -50,11 +50,12 @@
 					</div>
 					<div>
 						<ul class="top-social navbar-right tab hidden-xs">
-							<li><a href="<?php bloginfo('url'); ?>/category/girl-cult" title="Girl Cult" target="_blank">Girl Cult</a></li>
-<!-- 							<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li> -->
+							<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">TV <i class="fa fa-television"></i></a></li>
+							<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
 							<li><a href="https://www.facebook.com/galore" target="_blank"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 							<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="http://kittenagency.com" target="_blank">Kitten <i class="fa fa-paw"></i></a></li>
 							<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
 							<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
 							<!-- <li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li> -->
@@ -67,32 +68,32 @@
 		<div id="main-menu" class="modal-nav">
 			<div class="modal-nav-content">
 				<ul class="modal-nav-menu text-center">
-					<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i> GaloreTV</li>
-					<li><a href="<?php bloginfo('url'); ?>/category/girl-cult" title="Girl Cult">Girl Cult <span class="badge">New</span></a></li>
+					<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i>GaloreTV <span class="badge">New</span></a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a> + <a href="<?php bloginfo('url'); ?>/category/fashion" title="Fashion">Fashion</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/dating" title="Dating">Dating</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/health" title="health">Health</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a> + <a href="<?php bloginfo('url'); ?>/category/politics" title="Politics">Politics <span class="badge">New</span></a></li>
-<!-- 					<hr />
-					<h1>Join the movement</h1>
-					<li class="span"><a href="https://galoremag.com/contribute" title="Contribute" target="_blank">Become a Contributor</a> and <a href="https://galoremag.com/galore-girl" title="GaloreGirl" target="_blank">Apply to become a Galore Girl</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a> + <a href="<?php bloginfo('url'); ?>/category/politics" title="Politics">Politics</a></li>
+					<hr />
+					<p>Apply to be a:</p>
+					<li><a href="https://galoremag.com/galore-girl" title="GaloreGirl" target="_blank">Galore Girl</a> or <a href="https://galoremag.com/contribute" title="Contribute" target="_blank">Contributor</a></li>
 					<div id="site-search" class="visible-xs">
-						<!- <?php get_search_form(); ?> ->
+						<!-- <?php get_search_form(); ?> -->
 						<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
 							<label class="form-group">
 								<input type="search" class="form-control" placeholder="<?php echo esc_attr_x( 'Search...', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
 							</label>
 							<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 						</form>
-					</div> -->
+					</div>
 				</div>
 				<div>
 					<ul class="top-social navbar-right tab hidden-xs">
-						<li><a href="<?php bloginfo('url'); ?>/category/girl-cult" title="Girl Cult" target="_blank">Girl Cult</a></li>
-<!-- 						<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li> -->
+						<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">TV <i class="fa fa-television"></i></a></li>
+						<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
 						<li><a href="https://www.facebook.com/galore" target="_blank"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 						<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="http://kittenagency.com" target="_blank">Kitten <i class="fa fa-paw"></i></a></li>
 						<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
 						<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
 						<!-- <li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li> -->
@@ -129,11 +130,12 @@
 					</div>
 					<div>
 						<ul class="top-social navbar-right tab hidden-xs">
-							<li><a href="<?php bloginfo('url'); ?>/category/girl-cult" title="Girl Cult" target="_blank">Girl Cult</a></li>
-<!-- 							<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li> -->
+							<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">TV <i class="fa fa-television"></i></a></li>
+							<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
 							<li><a href="https://www.facebook.com/galore" target="_blank"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 							<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="http://kittenagency.com" target="_blank">Kitten <i class="fa fa-paw"></i></a></li>
 							<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
 							<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
 							<!-- <li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li> -->
@@ -151,24 +153,23 @@
 					</div>
 				</div> -->
 				<ul class="modal-nav-menu text-center">
-					<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i> GaloreTV</li>
-					<li><a href="<?php bloginfo('url'); ?>/category/girl-cult" title="Girl Cult">Girl Cult <span class="badge">New</span></a></li>
+					<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i>GaloreTV <span class="badge">New</span></a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a> + <a href="<?php bloginfo('url'); ?>/category/fashion" title="Fashion">Fashion</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/dating" title="Dating">Dating</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/health" title="health">Health</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a> + <a href="<?php bloginfo('url'); ?>/category/politics" title="Politics">Politics <span class="badge">New</span></a></li>
-<!-- 					<hr />
-					<h1>Join the movement</h1>
-					<li class="span"><a href="https://galoremag.com/contribute" title="Contribute" target="_blank">Become a Contributor</a> and <a href="https://galoremag.com/galore-girl" title="GaloreGirl" target="_blank">Apply to become a Galore Girl</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a> + <a href="<?php bloginfo('url'); ?>/category/politics" title="Politics">Politics</a></li>
+					<hr />
+					<p>Apply to be a:</p>
+					<li><a href="https://galoremag.com/galore-girl" title="GaloreGirl" target="_blank">Galore Girl</a> or <a href="https://galoremag.com/contribute" title="Contribute" target="_blank">Contributor</a></li>
 					<div id="site-search" class="visible-xs">
-						<!- <?php get_search_form(); ?> ->
+						<!-- <?php get_search_form(); ?> -->
 						<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
 							<label class="form-group">
 								<input type="search" class="form-control" placeholder="<?php echo esc_attr_x( 'Search...', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
 							</label>
 							<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 						</form>
-					</div> -->
+					</div>
 				</ul>
 			</div>
 		</div>

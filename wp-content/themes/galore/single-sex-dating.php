@@ -75,7 +75,7 @@
 
 			<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/single-one-300x250' ) ); ?>
 
-			<h2 class="text-center">Gimme More <i class="fa fa-heart"></i> <span>Sex + Dating</span></h2>
+			<h2 class="text-center">Gimme More <i class="fa fa-heart"></i> <span>Dating</span></h2>
 			<div class="spacer20"></div>
 			<ul id="related-posts" class="row-fluid">
 
@@ -97,24 +97,13 @@
 
 					// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
 					foreach ($postslist as $post) : setup_postdata($post);
-					$categories = get_the_category($post->ID);
-					if ( count( $categories ) > 0 ) {
-						$displayed_category = $categories[0]->cat_ID;
-						$displayed_category_name = $categories[0]->cat_name;
-						$displayed_category_link = get_category_link( $categories[0]->term_id );
-						$cat_random_rotation_value = rand(-3, 3);
-					}
 					?>
 
 					<li class="related post pull-left col-xs-6">
 						<div class="container nopad">
 							<div class="row-fluid">
 								<div class="nopad col-sm-12">
-									<?php if( $categories ) : ?>
-   				<div class="catlinks catlinks_post_feed" style="transform: rotate(<?php echo $cat_random_rotation_value ?>deg); position: relative; z-index: 2; transform-origin: 0px 0px;">
-	  			 <ul class="post-categories">
-	   				<li><a class="updated_catlinks_anchor_tag" href="<?php echo $displayed_category_link ?>" rel="category tag"><?php echo 						$displayed_category_name ?></a></li></ul></div>
-								<?php endif; ?>
+									<div class="catlinks"><?php the_category(); ?></div>
 									<div class="thumb">
 										<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
 									</div>
@@ -152,22 +141,11 @@
 					$postslist = get_posts( $args );
 					// $postslist = get_posts('tag=darling&numberposts=4&order=DESC&orderby=date&offset=0');
 					foreach ($postslist as $post) : setup_postdata($post);
-					$categories = get_the_category($post->ID);
-					if ( count( $categories ) > 0 ) {
-						$displayed_category = $categories[0]->cat_ID;
-						$displayed_category_name = $categories[0]->cat_name;
-						$displayed_category_link = get_category_link( $categories[0]->term_id );
-						$cat_random_rotation_value = rand(-3, 3);
-					}
 					?>
 					<li class="post">
 						<article class="row-fluid">
 							<div class="nopad col-sm-5">
-								<?php if( $categories ) : ?>
-   				<div class="catlinks catlinks_post_feed" style="transform: rotate(<?php echo $cat_random_rotation_value ?>deg); position: relative; z-index: 2; transform-origin: 0px 0px;">
-	  			 <ul class="post-categories">
-	   				<li><a class="updated_catlinks_anchor_tag" href="<?php echo $displayed_category_link ?>" rel="category tag"><?php echo 						$displayed_category_name ?></a></li></ul></div>
-								<?php endif; ?>
+								<div class="catlinks"><?php the_category(); ?></div>
 								<div class="thumb">
 									<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
 								</div>

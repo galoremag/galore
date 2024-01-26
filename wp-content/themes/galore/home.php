@@ -61,7 +61,7 @@
 					}
 					?>
 				</h4> -->
-				<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 			</div>
 			<?php endwhile; wp_reset_postdata(); ?>
 			<?php endif; ?>
@@ -102,17 +102,17 @@
 				<div class="row-fluid post-grid">
 
 					<!-- 300x250 unit -->
-					<!-- <div class="thumbnail col-sm-6 horpad10">
+					<div class="thumbnail col-sm-6 horpad10">
 						<div class="nopad">
 
-								<!- /60899964/Home_Mobile_300x250 ->
+								<!-- /60899964/Home_Mobile_300x250 -->
 								<div id='div-gpt-ad-1465835581876-13' style='height:250px; width:300px;' class="visible-xs">
 								<script type='text/javascript'>
 								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-13'); });
 								</script>
 								</div>
 
-								<!- /60899964/Home_300x250 ->
+								<!-- /60899964/Home_300x250 -->
 								<div id='div-gpt-ad-1465835581876-9' style='height:250px; width:300px;' class="hidden-xs">
 								<script type='text/javascript'>
 								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-9'); });
@@ -120,17 +120,17 @@
 								</div>
 
 						</div>
-					</div> -->
+					</div>
 
 					<!-- Posts -->
 					<?php
 					$counter = 1; //start counter
 
-					$grids = 2; //Grids per row-fluid
+					$grids = 1; //Grids per row-fluid
 
 					$args = array(
 						'category_name' => 'beauty,fashion',
-						'showposts' => 2,
+						'showposts' => 1,
 						'orderby' => 'date',
 						'post__in'  => get_option( 'sticky_posts' ),
 						'ignore_sticky_posts' => 1
@@ -148,7 +148,7 @@
 							<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 							<div class="nopad caption">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-				                <p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
 				            </div>
 						</div>
@@ -184,7 +184,7 @@
 						'category_name' => 'beauty,fashion',
 						'showposts' => 2,
 						'orderby' => 'date',
-						'offset' => 2,
+						'offset' => 1,
 						'post__in'  => get_option( 'sticky_posts' ),
 						'ignore_sticky_posts' => 4,
 						'tax_query' => array(
@@ -213,7 +213,7 @@
 							<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 							<div class="nopad caption">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-				                <p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				                <p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
 				            </div>
 						</div>
@@ -275,23 +275,23 @@
 					<div class="snippet">
 						<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h4><?php the_title(); ?></h4></a>
-						<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 					</div>
 					<?php endforeach; ?>
 
 						<!-- /60899964/Home_300x250_970x250_pos2 -->
-<!-- 						<div id='div-gpt-ad-1465835581876-10' class="snippet hidden-xs">
+						<div id='div-gpt-ad-1465835581876-10' class="snippet hidden-xs">
 						<script type='text/javascript'>
 						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-10'); });
 						</script>
-						</div> -->
+						</div>
 
 						<!-- /60899964/Home_Mobile_300x250_pos2 -->
-<!-- 						<div id='div-gpt-ad-1465835581876-14' style='height:250px; width:300px;' class="snippet visible-xs">
+						<div id='div-gpt-ad-1465835581876-14' style='height:250px; width:300px;' class="snippet visible-xs">
 						<script type='text/javascript'>
 						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-14'); });
 						</script>
-						</div> -->
+						</div>
 
 					<?php
 					$args = array(
@@ -324,7 +324,7 @@
 					<div class="text-left">
 						<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-						<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+						<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 					</div>
 					<?php endforeach; ?>
 					<?php wp_reset_postdata(); ?>
@@ -340,18 +340,18 @@
 	<!-- 100x100 -->
 
 	<!-- /60899964/Home_Mobile_OOP -->
-<!-- 	<div id='div-gpt-ad-1467924264305-2' class="visible-xs">
+	<div id='div-gpt-ad-1467924264305-2' class="visible-xs">
 	<script type='text/javascript'>
 	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467924264305-2'); });
 	</script>
-	</div> -->
+	</div>
 
 	<!-- /60899964/Home_OOP -->
-<!-- 	<div id='div-gpt-ad-1467924264305-3' class="hidden-xs">
+	<div id='div-gpt-ad-1467924264305-3' class="hidden-xs">
 	<script type='text/javascript'>
 	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467924264305-3'); });
 	</script>
-	</div> -->
+	</div>
 
 	<!-- SEX + DATING SECTION -->
 
@@ -361,14 +361,14 @@
 				<div class="col-sm-12 verPad40">
 					<div class="row-fluid">
 						<div class="col-sm-12">
-							<h2>Sex + Dating <i class="fa fa-heart"></i></h2>
+							<h2>Dating <i class="fa fa-heart"></i></h2>
 						</div>
 					</div>
 					<div class="row-fluid">
 						<div class="col-sm-8">
 							<?php
 							$args = array(
-								'category_name' => 'sex-dating',
+								'category_name' => 'dating',
 								'posts_per_page' => 1,
 								'order' => 'DESC',
 								'orderby' => 'date',
@@ -394,7 +394,7 @@
 							<div class="entry home-sex-dating">
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-								<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+								<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 								<div class="spacer10"></div>
 								<div class="excerpt"><?php the_excerpt(); ?></div>
 								<div class="spacer10"></div>
@@ -411,7 +411,7 @@
 							<?php
 							$args = array(
 								'category_name' => 'sex-dating',
-								'posts_per_page' => 3,
+								'posts_per_page' => 2,
 								'order' => 'DESC',
 								'orderby' => 'date',
 								'offset' => 1,
@@ -436,7 +436,7 @@
 							<div class="entry">
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-								<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+								<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 								<div class="spacer10"></div>
 								<p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p>
 								<!-- <ul class="post-social">
@@ -508,7 +508,7 @@
 								<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 				                <div class="nopad caption">
 				                	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-				                	<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				                	<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 				                </div>
 				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
 				                <!-- <ul class="post-social">
@@ -545,7 +545,7 @@
 							$args = array(
 								'category_name' => 'pop',
 								'ignore_sticky_posts' => 0,
-								'posts_per_page' => 3,
+								'posts_per_page' => 2,
 								'offset' => 3,
 								'tax_query' => array(
 						      array(
@@ -575,7 +575,7 @@
 								<a class="postimage" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 				                <div class="nopad caption">
 				                	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><h3><?php the_title(); ?></h3></a>
-				                	<p class="byline">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+				                	<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 				                </div>
 				                <!-- <p class="pull-left"><a href="<?php esc_url( the_permalink() ); ?>">Read Story <i class="fa fa-mars"></i></a></p> -->
 				                <!-- <ul class="post-social">
@@ -603,18 +603,18 @@
 							?>
 
 							<!-- /60899964/Home_Mobile_300x250_pos3 -->
-<!-- 							<div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;' class="thumbnail col-sm-4 visible-xs">
+							<div id='div-gpt-ad-1465835581876-15' style='height:250px; width:300px;' class="thumbnail col-sm-4 visible-xs">
 							<script type='text/javascript'>
 							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-15'); });
 							</script>
-							</div> -->
+							</div>
 
 							<!-- /60899964/Home_300x250_970x250_pos3 -->
-<!-- 							<div id='div-gpt-ad-1465835581876-11' class="thumbnail col-sm-4 hidden-xs">
+							<div id='div-gpt-ad-1465835581876-11' class="thumbnail col-sm-4 hidden-xs">
 							<script type='text/javascript'>
 							googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-11'); });
 							</script>
-							</div> -->
+							</div>
 
 						</div>
 					</div>
@@ -627,18 +627,18 @@
 			</div>
 
 			<!-- /60899964/Home_Interstitial -->
-<!-- 			<div id='div-gpt-ad-1465835581876-12' class="hidden-xs">
+			<div id='div-gpt-ad-1465835581876-12' class="hidden-xs">
 			<script type='text/javascript'>
 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-12'); });
 			</script>
-			</div> -->
+			</div>
 
 			<!-- /60899964/Home_Mobile_Interstitial -->
-<!-- 			<div id='div-gpt-ad-1465835581876-16' class="visible-xs">
+			<div id='div-gpt-ad-1465835581876-16' class="visible-xs">
 			<script type='text/javascript'>
 			googletag.cmd.push(function() { googletag.display('div-gpt-ad-1465835581876-16'); });
 			</script>
-			</div> -->
+			</div>
 
 			<div class="everything container">
 				<div class="row-fluid">
@@ -673,15 +673,6 @@
 							);
 
 							$postslist = get_posts( $args );
-							
-							
-							$categories = get_the_category();
-							if ( count( $categories ) > 0 ) {
-								$displayed_category = $categories[0];
-								$displayed_category_name = $displayed_category->cat_name;
-								$displayed_category_link = get_category_link( $displayed_category->term_id );
-							}
-
 
 							foreach ($postslist as $post) : setup_postdata($post);
 							?>
@@ -689,16 +680,7 @@
 							<li class="post">
 								<article class="row-fluid">
 									<div class="nopad col-sm-5">
-<!-- 										<div class="catlinks"><?php the_category(); ?></div> -->
-										<?php if( $displayed_category ) : ?>
-   										<div class="catlinks catlinks_post_feed">
-											<ul class="post-categories">
-	   											<li>
-													<a href="<?php echo $displayed_category_link ?>" rel="category tag"><?php echo $displayed_category_name ?></a>
-												</li>
-											</ul>
-										</div>
-										<?php endif; ?>
+										<div class="catlinks"><?php the_category(); ?></div>
 										<div class="thumb">
 											<a href="<?php esc_url( the_permalink() ); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_post_thumbnail('medium'); ?></a>
 										</div>
@@ -712,8 +694,8 @@
 									</div>
 									<div class="nopadright col-sm-7">
 										<h3 class="nomartop"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-										<p class="byline hidden-xs">By <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
-										<p class="byline visible-xs pull-left nomarg">By <br /> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+										<p class="byline hidden-xs"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
+										<p class="byline visible-xs pull-left nomarg"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j, Y \@\ g:i a'); ?></time> <br /> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
 										<ul class="post-social visible-xs">
 											<li><a class="share-email" href="mailto:Friend@somewhere.com?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>"><i class="fa fa-envelope"></i></a></li>
 											<li><a class="share-facebook" href="#" target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>','Share this post on Facebook','width=600,height=400')"><i class="fa fa-facebook"></i></a></li>
@@ -731,19 +713,21 @@
 
 						</ul>
 
+						<hr />
+
 						<!-- /60899964/Home_300x250_970x250_pos4 -->
-<!-- 						<div id='div-gpt-ad-1467230007625-0' class="hidden-xs text-center">
+						<div id='div-gpt-ad-1467230007625-0' class="hidden-xs text-center">
 						<script type='text/javascript'>
 						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-0'); });
 						</script>
-						</div> -->
+						</div>
 
 						<!-- /60899964/Home_Mobile_300x250_pos4 -->
-<!-- 						<div id='div-gpt-ad-1467230007625-1' style='height:250px; width:300px;' class="visible-xs text-center">
+						<div id='div-gpt-ad-1467230007625-1' style='height:250px; width:300px;' class="visible-xs text-center">
 						<script type='text/javascript'>
 						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1467230007625-1'); });
 						</script>
-						</div> -->
+						</div>
 
 						<hr />
 
