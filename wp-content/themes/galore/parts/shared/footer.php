@@ -52,7 +52,7 @@
 	</div>
 
 	<!-- Newsletter Signup -->
-	<div id="email-signup" class="modal" tabindex="-1" role="dialog" aria-labelledby="email-signup" aria-hidden="true">
+	<!-- <div id="email-signup" class="modal" tabindex="-1" role="dialog" aria-labelledby="email-signup" aria-hidden="true">
 	    <div class="email-signup-dialog col-md-4 col-md-offset-4">
 	        <div class="email-signup-content">
 	            <div class="email-signup-header">
@@ -61,7 +61,6 @@
 	            <div class="email-signup-body">
 	                <div class="brand-white" style="margin: 0 auto -100px auto;"></div>
 	                <h1>For fashion and beauty news, celeb tea, the down and dirty on sex and dating <br/>— <span>AND MORE</span> —<br/> sign up below and join the Girl Cult.</h1>
-	                <!-- <h2 class="text-center">Get On The List</h2> -->
 	                <form action="https://galoremag.createsend.com/t/i/s/tjcj/" method="post">
 	                    <div class="form-group">
 	                        <input class="form-control" id="fieldName" name="cm-name" type="text" placeholder="Your Name" required />
@@ -77,7 +76,7 @@
 	        </div>
 	    </div>
 	    <div class="back"></div>
-	</div>
+	</div> -->
 
 	<!-- FOOTER STUFF -->
 
