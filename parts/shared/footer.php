@@ -110,7 +110,7 @@
 						<li><a href="<?php bloginfo('url'); ?>/feed" title="Everything">Everything &nbsp;<i class="fa fa-rss"></i></a></li>
 						<li><a href="<?php bloginfo('url'); ?>/category/fashion/feed" title="Style">Style &nbsp;<i class="fa fa-rss"></i></a></li>
 						<li><a href="<?php bloginfo('url'); ?>/category/beauty/feed" title="Beauty">Beauty &nbsp;<i class="fa fa-rss"></i></a></li>
-						<li><a href="<?php bloginfo('url'); ?>/category/sex-dating/feed" title="Sex + Dating">Sex + Dating &nbsp;<i class="fa fa-rss"></i></a></li>
+						<li><a href="<?php bloginfo('url'); ?>/category/dating/feed" title="Sex + Dating">Dating &nbsp;<i class="fa fa-rss"></i></a></li>
 						<li><a href="<?php bloginfo('url'); ?>/category/health/feed" title="Fitness">Fitness &nbsp;<i class="fa fa-rss"></i></a></li>
 						<li><a href="<?php bloginfo('url'); ?>/category/pop/feed" title="Pop">Pop &nbsp;<i class="fa fa-rss"></i></a></li>
 					</ul>

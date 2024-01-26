@@ -361,14 +361,14 @@
 				<div class="col-sm-12 verPad40">
 					<div class="row-fluid">
 						<div class="col-sm-12">
-							<h2>Sex + Dating <i class="fa fa-heart"></i></h2>
+							<h2>Dating <i class="fa fa-heart"></i></h2>
 						</div>
 					</div>
 					<div class="row-fluid">
 						<div class="col-sm-8">
 							<?php
 							$args = array(
-								'category_name' => 'sex-dating',
+								'category_name' => 'dating',
 								'posts_per_page' => 1,
 								'order' => 'DESC',
 								'orderby' => 'date',

@@ -70,7 +70,7 @@
 				<ul class="modal-nav-menu text-center">
 					<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i>GaloreTV <span class="badge">New</span></a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a> + <a href="<?php bloginfo('url'); ?>/category/fashion" title="Fashion">Fashion</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/dating" title="Dating">Dating</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/health" title="health">Health</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a> + <a href="<?php bloginfo('url'); ?>/category/politics" title="Politics">Politics</a></li>
 					<hr />
@@ -155,7 +155,7 @@
 				<ul class="modal-nav-menu text-center">
 					<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i>GaloreTV <span class="badge">New</span></a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a> + <a href="<?php bloginfo('url'); ?>/category/fashion" title="Fashion">Fashion</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/category/sex-dating" title="Sex + Dating">Sex + Dating</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/dating" title="Dating">Dating</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/health" title="health">Health</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a> + <a href="<?php bloginfo('url'); ?>/category/politics" title="Politics">Politics</a></li>
 					<hr />
