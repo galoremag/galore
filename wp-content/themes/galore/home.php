@@ -355,8 +355,8 @@
 
 	<!-- SEX + DATING SECTION -->
 
-	<div class="sex-dating nopad">
-		<div class="sex-dating-in nopad">
+	<div class="dating nopad">
+		<div class="dating-in nopad">
 			<div class="container nopad">
 				<div class="col-sm-12 verPad40">
 					<div class="row-fluid">
@@ -391,7 +391,7 @@
 							foreach ($postslist as $post) :
 							setup_postdata($post);
 							?>
-							<div class="entry home-sex-dating">
+							<div class="entry home-dating">
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
 								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 								<p class="byline"><time datetime="<?php the_time( 'Y-m-d' ); ?>"><?php the_time('M j \@\ g:i a'); ?></time> <i class="pink fa fa-flash"></i> <?php the_author_posts_link(); ?></p>
