@@ -50,7 +50,7 @@
 					</div>
 					<div>
 						<ul class="top-social navbar-right tab hidden-xs">
-							<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">TV <i class="fa fa-television"></i></a></li>
+							<!-- <li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">TV <i class="fa fa-television"></i></a></li> -->
 							<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
 							<li><a href="https://www.facebook.com/galore" target="_blank"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
@@ -68,7 +68,7 @@
 		<div id="main-menu" class="modal-nav">
 			<div class="modal-nav-content">
 				<ul class="modal-nav-menu text-center">
-					<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i>GaloreTV <span class="badge">New</span></a></li>
+					<!-- <li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i>GaloreTV <span class="badge">New</span></a></li> -->
 					<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a> + <a href="<?php bloginfo('url'); ?>/category/fashion" title="Fashion">Fashion</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/dating" title="Dating">Dating</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/health" title="health">Health</a></li>
@@ -88,7 +88,7 @@
 				</div>
 				<div>
 					<ul class="top-social navbar-right tab hidden-xs">
-						<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">TV <i class="fa fa-television"></i></a></li>
+						<!-- <li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">TV <i class="fa fa-television"></i></a></li> -->
 						<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
 						<li><a href="https://www.facebook.com/galore" target="_blank"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
@@ -130,7 +130,7 @@
 					</div>
 					<div>
 						<ul class="top-social navbar-right tab hidden-xs">
-							<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">TV <i class="fa fa-television"></i></a></li>
+							<!-- <li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank">TV <i class="fa fa-television"></i></a></li> -->
 							<li><a id="signupButton" href="#"><i class="fa fa-envelope"></i></a></li>
 							<li><a href="https://www.facebook.com/galore" target="_blank"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
@@ -153,23 +153,22 @@
 					</div>
 				</div> -->
 				<ul class="modal-nav-menu text-center">
-					<li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i>GaloreTV <span class="badge">New</span></a></li>
+					<!-- <li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i>GaloreTV <span class="badge">New</span></a></li> -->
 					<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a> + <a href="<?php bloginfo('url'); ?>/category/fashion" title="Fashion">Fashion</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/dating" title="Dating">Dating</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/health" title="health">Health</a></li>
 					<li><a href="<?php bloginfo('url'); ?>/category/pop" title="Pop">Pop</a> + <a href="<?php bloginfo('url'); ?>/category/politics" title="Politics">Politics</a></li>
-					<hr />
+					<!-- <hr />
 					<p>Apply to be a:</p>
 					<li><a href="https://galoremag.com/galore-girl" title="GaloreGirl" target="_blank">Galore Girl</a> or <a href="https://galoremag.com/contribute" title="Contribute" target="_blank">Contributor</a></li>
 					<div id="site-search" class="visible-xs">
-						<!-- <?php get_search_form(); ?> -->
 						<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
 							<label class="form-group">
 								<input type="search" class="form-control" placeholder="<?php echo esc_attr_x( 'Search...', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
 							</label>
 							<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 						</form>
-					</div>
+					</div> -->
 				</ul>
 			</div>
 		</div>
