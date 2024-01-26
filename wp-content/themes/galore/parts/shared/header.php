@@ -55,7 +55,7 @@
 							<li><a href="https://www.facebook.com/galore" target="_blank"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 							<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="http://kittenagency.com" target="_blank">Kitten <i class="fa fa-paw"></i></a></li>
+							<!-- <li><a href="http://kittenagency.com" target="_blank">Kitten <i class="fa fa-paw"></i></a></li> -->
 							<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
 							<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
 							<!-- <li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li> -->
@@ -94,7 +94,7 @@
 						<li><a href="https://www.facebook.com/galore" target="_blank"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 						<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="http://kittenagency.com" target="_blank">Kitten <i class="fa fa-paw"></i></a></li>
+						<!-- <li><a href="http://kittenagency.com" target="_blank">Kitten <i class="fa fa-paw"></i></a></li> -->
 						<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
 						<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
 						<!-- <li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li> -->
@@ -136,7 +136,7 @@
 							<li><a href="https://www.facebook.com/galore" target="_blank"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="http://instagram.com/galore/" target="_blank"><i class="fa fa-instagram"></i></a></li>
 							<li><a href="https://twitter.com/thegaloremag" target="_blank"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="http://kittenagency.com" target="_blank">Kitten <i class="fa fa-paw"></i></a></li>
+							<!-- <li><a href="http://kittenagency.com" target="_blank">Kitten <i class="fa fa-paw"></i></a></li> -->
 							<!-- <li><a href="http://princeandjacob.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li> -->
 							<!-- <li><a href="https://www.youtube.com/channel/UCyzzsgpNlmLBKYcXLM3Ro3g" target="_blank"><i class="fa fa-youtube-play"></i></a></li> -->
 							<!-- <li class=""><a href="http://www.slashergirl.com/collections/shop-galore?ref=galore" target="_blank">SHOP</a></li> -->
