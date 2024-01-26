@@ -410,7 +410,7 @@
 						<div class="col-sm-4">
 							<?php
 							$args = array(
-								'category_name' => 'sex-dating',
+								'category_name' => 'dating',
 								'posts_per_page' => 2,
 								'order' => 'DESC',
 								'orderby' => 'date',
@@ -451,7 +451,7 @@
 					<div class="row-fluid">
 						<div class="col-sm-12">
 							<div class="spacer20"></div>
-							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/sex-dating"><i class="fa fa-heart"></i> &nbsp; Hook It Up &nbsp;<i class="fa fa-heart"></i></a></p>
+							<p class="text-center"><a class="btn" href="<?php bloginfo('url'); ?>/category/dating"><i class="fa fa-heart"></i> &nbsp; Hook It Up &nbsp;<i class="fa fa-heart"></i></a></p>
 						</div>
 					</div>
 				</div>
