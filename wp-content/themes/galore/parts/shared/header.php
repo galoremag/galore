@@ -85,7 +85,7 @@
 							</label>
 							<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 						</form>
-					</div> -->
+					</div>
 				</div>
 				<div>
 					<ul class="top-social navbar-right tab hidden-xs">
@@ -171,7 +171,7 @@
 							</label>
 							<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 						</form>
-					</div> -->
+					</div>
 				</ul>
 			</div>
 		</div>

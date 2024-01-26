@@ -76,7 +76,7 @@
 	        </div>
 	    </div>
 	    <div class="back"></div>
-	</div> -->
+	</div>
 
 	<!-- FOOTER STUFF -->
 
