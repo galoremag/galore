@@ -827,8 +827,8 @@ body.menu-open .modal-nav {
 
 #nav-button {
 	padding: 6px 8px 5px 8px;
-    position: absolute;
-    cursor: pointer;
+	position: absolute;
+	cursor: pointer;
 }
 
 #nav-button a#hmbrgr {
@@ -849,6 +849,7 @@ body.menu-open .modal-nav {
 			&:nth-child(1) {
 				transform: rotate(-45deg);
 				-webkit-transform: rotate(-45deg);
+				top: 5px;
 			}
 
 			&:nth-child(2) {
@@ -858,6 +859,7 @@ body.menu-open .modal-nav {
 			&:nth-child(3) {
 				transform: rotate(45deg);
 				-webkit-transform: rotate(45deg);
+				top: 5px;
 			}
 		}
 	}
@@ -2542,12 +2544,12 @@ td:nth-child(2){
 
 #content .updated_catlinks {
 	transform: scale(1.2) rotate(-4deg);
-    position: fixed;
+    position: relative;
 }
 
 #content .updated_catlinks .updated_cat_anchor_tag {
 	left: 3px;
-    top: 1px;
+	top: 1px;
 }
 
 @import "style-responsive.less";
