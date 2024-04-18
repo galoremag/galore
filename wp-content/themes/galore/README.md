@@ -1,5 +1,10 @@
-Galore Media - galoremag.com
+# Galore Theme
+<GaloreMag.com>
 
-# galoremag-2015
+## Helpful Scripts
 
-Reimagining GaloreMag.com for the new year.
+### NPM
+
+`./node_modules/bower/bin/bower install` **Install Dependencies**
+`./node_modules/grunt-cli/bin/grunt build` **Compile styles & JS**
+

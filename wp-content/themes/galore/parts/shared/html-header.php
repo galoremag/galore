@@ -263,3 +263,18 @@
 
 	</head>
 	<body>
+		<!-- Begin Comscore Tag -->
+		<script>
+			var _comscore = _comscore || []; _comscore.push({});
+			(function() {
+			var s = document.createElement("script"),
+				el = document.getElementsByTagName("script")[0];
+			s.async = true;
+			s.src = "https://sb.scorecardresearch.com/cs/36541495/beacon.js";
+			el.parentNode.insertBefore(s, el);
+			})();
+		</script>
+		<noscript>
+			<img src="https://sb.scorecardresearch.com/p?c1=2&c2=36541495&cv=4.4.0&cj=1">
+		</noscript>
+		<!-- End Comscore Tag -->
