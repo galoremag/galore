@@ -154,21 +154,6 @@
 		nativeAI('create','9bd8568d-6ad3-4d6a-955a-0d8a7779328e',isTestMode);
 		</script> -->
 
-		<!-- Begin comScore Tag -->
-		<script>
-			var _comscore = _comscore || [];
-			_comscore.push({ c1: "2", c2: "22114619" });
-			(function() {
-			var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-			s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-			el.parentNode.insertBefore(s, el);
-			})();
-		</script>
-		<noscript>
-		 <img src="http://b.scorecardresearch.com/p?c1=2&c2=22114619&cv=2.0&cj=1" />
-		</noscript>
-		<!-- End comScore Tag -->
-
 		<!-- Quantcast Tag -->
 		<script type="text/javascript">
 		var _qevents = _qevents || [];
@@ -278,3 +263,29 @@
 			<img src="https://sb.scorecardresearch.com/p?c1=2&c2=36541495&cv=4.4.0&cj=1">
 		</noscript>
 		<!-- End Comscore Tag -->
+
+		<!-- Begin Zeta Tag : https://knowledgebase.zetaglobal.com/gswz/tag-implementation-->
+		<script async type="text/javascript">
+			function zync_call() {
+				var z = document.createElement("script");
+				var custom1="{PageCategory}";
+				var custom2="{PostType}";
+				var zmpID="galore-mag";
+				var cache_buster=Date.now();
+				var PageUrl="{PageUrl}";
+				var page_referrer=encodeURIComponent(document.referrer);
+
+				var z_src = "https://live.rezync.com/sync?c=16b6410431b6374e780104abb0443ca8&p=7a1e9a4c1e0f506ddb943f0a4ab54c17&k=galore-mag-pixel-8226&custom1="+custom1+"&custom2="+custom2+"&zmpID="+zmpID+"&cache_buster="+cache_buster+"&PageUrl="+PageUrl+"&page_referrer="+page_referrer;
+				z.setAttribute("src", z_src);
+				document.body.appendChild(z);
+			}
+
+			if (['complete', 'interactive'].indexOf(document.readyState) >= 0) {
+				zync_call();
+			} else {
+				window.addEventListener("DOMContentLoaded", function(){
+					zync_call();
+				});
+			}
+		</script>
+		<!-- End Zeta Tag -->

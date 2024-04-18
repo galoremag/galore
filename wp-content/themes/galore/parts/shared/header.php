@@ -64,7 +64,6 @@
 					<hr />
 					<!-- <p>Apply to be a:</p>
 					<li><a href="https://galoremag.com/galore-girl" title="GaloreGirl" target="_blank">Galore Girl</a> or <a href="https://galoremag.com/contribute" title="Contribute" target="_blank">Contributor</a></li>
-					 -->
 					<div id="site-search" class="visible-xs">
 						<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
 							<label class="form-group">
@@ -73,9 +72,9 @@
 							<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 						</form>
 					</div>
-					<button id="modal-nav-button" type="button" class="nav-button">
+					<!-- <button id="modal-nav-button" type="button" class="nav-button">
 					<i class="fa fa-bars"></i>
-					</button>
+					</button> -->
 					<a id="navbar-brand" class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
 				</div>
 				<div>
@@ -163,11 +162,11 @@
 
 		<div id="main-menu" class="modal-nav">
 			<div class="modal-nav-content">
-				<div class="modal-nav-header">
+				<!-- <div class="modal-nav-header">
 					<div class="modal-nav-close">
 						<i class="btr bt-times"></i>
 					</div>
-				</div>
+				</div> -->
 				<ul class="modal-nav-menu text-center">
 					<!-- <li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i>GaloreTV <span class="badge">New</span></a></li> -->
 					<li><a href="<?php bloginfo('url'); ?>/category/beauty" title="Beauty">Beauty</a></li>
@@ -179,7 +178,6 @@
 					<!-- <hr />
 					<p>Apply to be a:</p>
 					<li><a href="https://galoremag.com/galore-girl" title="GaloreGirl" target="_blank">Galore Girl</a> or <a href="https://galoremag.com/contribute" title="Contribute" target="_blank">Contributor</a></li>
-					-->
 					<div id="site-search" class="visible-xs">
 						<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
 							<label class="form-group">
@@ -190,7 +188,7 @@
 					</div>
 					<button id="modal-nav-button" type="button" class="nav-button">
 					<i class="fa fa-bars"></i>
-					</button>
+					</button> -->
 					<a id="navbar-brand" class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
 				</div>
 				<div>
@@ -211,11 +209,11 @@
 
 	<div id="main-menu" class="modal-nav">
 		<div class="modal-nav-content">
-			<div class="modal-nav-header">
+			<!-- <div class="modal-nav-header">
 				<div class="modal-nav-close">
 					<i class="btr bt-times"></i>
 				</div>
-			</div>
+			</div> -->
 			<ul class="modal-nav-menu text-center">
 				<!-- <li><a href="http://tv.galoremag.com" title="GaloreTV" target="_blank"><i class="fa fa-television"></i> GaloreTV</li> -->
 				<li><a href="<?php bloginfo('url'); ?>/category/girl-cult" title="Girl Cult">Girl Cult <span class="badge">New</span></a></li>
