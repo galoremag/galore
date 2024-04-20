@@ -1,10 +1,10 @@
 @import "lesshat.less";
 
-.hmbrgr{
+.hmbrgr {
 	position: relative;
 	display: inline-block;
 
-	span{
+	span {
 		position: absolute;
 		left: 0;
 		width: 100%;
@@ -12,19 +12,19 @@
 		display: inline-block;
 	}
 
-	&.expand{
+	&.expand {
 		span{
 
-			&:nth-child(1){
+			&:nth-child(1) {
 				.transform(rotate(-45deg));
 				top: 5px;
 			}
 
-			&:nth-child(2){
+			&:nth-child(2) {
 				.opacity(0);
 			}
 
-			&:nth-child(3){
+			&:nth-child(3) {
 				.transform(rotate(45deg));
 				top: 5px;
 			}
