@@ -96,15 +96,7 @@
 							</label>
 							<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 						</form>
-<<<<<<< HEAD
 					</div>
-					<button id="modal-nav-button" type="button" class="nav-button">
-					<i class="fa fa-bars"></i>
-					</button>
-					<a id="navbar-brand" class="navbar-brand" href="<?php bloginfo('url'); ?>"></a>
-=======
-					</div> -->
->>>>>>> f6d64eb (update readme(s), gitignore, functions, js, less, and header)
 				</div>
 				<div>
 					<ul class="top-social navbar-right tab hidden-xs">
@@ -142,9 +134,12 @@
 			<nav id="deskNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<!-- <div id="modal-nav-button" class="nav-button pull-left">
-							<div id="nav-button-desktop"><a href="#" id="hmbrgr-desktop" class="hmbrgr"></a></div>
-						</div> -->
+						<div id="modal-nav-button" class="nav-button pull-left">
+							<!-- <a href="#" id="hmbrgr-desktop" class="hmbrgr"></a> -->
+							<a href="#" id="nav-button-desktop">
+								<i class="btr bt-bars"></i>
+							</a>
+						</div>
 						<div id="site-search" class="pull-left hidden-xs">
 							<!-- <?php get_search_form(); ?> -->
 							<form role="search" method="get" action="<?php echo site_url(); ?>">
@@ -202,7 +197,7 @@
 							</label>
 							<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 						</form>
-					</div> -->
+					</div>
 				</ul>
 			</div>
 		</div>

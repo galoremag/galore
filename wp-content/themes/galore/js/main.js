@@ -295,62 +295,62 @@ jQuery(document).ready(function($) {
   ////// MODALS  //////
   /////////////////////
 
-  $(function() {
-    $('#signupButton').on('click tap', function(e) {
-      e.preventDefault();
-      $("#email-signup").css({'display' : 'flex'});
-      $("#newsletterClose").click(function() {
-          $("#email-signup").hide();
-          createCookie("newsletter", "read", 14);
-      });
-    });
-  });
+  // $(function() {
+  //   $('#signupButton').on('click tap', function(e) {
+  //     e.preventDefault();
+  //     $("#email-signup").css({'display' : 'flex'});
+  //     $("#newsletterClose").click(function() {
+  //         $("#email-signup").hide();
+  //         createCookie("newsletter", "read", 14);
+  //     });
+  //   });
+  // });
 
-  $(function() {
-    $('#email-signup .back').on('click tap', function(e){
-          e.preventDefault();
-          $("#email-signup").hide();
-          createCookie("newsletter", "read", 14);
-    });
-  });
+  // $(function() {
+  //   $('#email-signup .back').on('click tap', function(e){
+  //         e.preventDefault();
+  //         $("#email-signup").hide();
+  //         createCookie("newsletter", "read", 14);
+  //   });
+  // });
 
-  $(function() {
-    $('#fb-modal .back').on('click tap', function(e){
-          e.preventDefault();
-          $("#fb-modal").fadeOut(500);
-          createCookie("facebook", "read", 7);
-    });
-  });
+  // $(function() {
+  //   $('#fb-modal .back').on('click tap', function(e){
+  //         e.preventDefault();
+  //         $("#fb-modal").fadeOut(500);
+  //         createCookie("facebook", "read", 7);
+  //   });
+  // });
 
-  $(function() {
-    $('#snapchat-modal .back').on('click tap', function(e){
-          e.preventDefault();
-          $("#snapchat-modal").fadeOut(500);
-          createCookie("snapchat", "read", 1);
-    });
-  });
+  // $(function() {
+  //   $('#snapchat-modal .back').on('click tap', function(e){
+  //         e.preventDefault();
+  //         $("#snapchat-modal").fadeOut(500);
+  //         createCookie("snapchat", "read", 1);
+  //   });
+  // });
 
-  $(function() {
-    $("#newsletterClose").on('click tap', function(e) {
-      e.preventDefault();
-          $("#email-signup").hide();
-          createCookie("newsletter", "read", 14);
-      });
-  });
+  // $(function() {
+  //   $("#newsletterClose").on('click tap', function(e) {
+  //     e.preventDefault();
+  //         $("#email-signup").hide();
+  //         createCookie("newsletter", "read", 14);
+  //     });
+  // });
 
-  $(function() {
-    $("#fbClose").on('click tap', function() {
-          $("#fb-modal").fadeOut(500);
-          createCookie("facebook", "read", 7);
-      });
-  });
+  // $(function() {
+  //   $("#fbClose").on('click tap', function() {
+  //         $("#fb-modal").fadeOut(500);
+  //         createCookie("facebook", "read", 7);
+  //     });
+  // });
 
-  $(function() {
-    $("#snapchatClose").on('click tap', function() {
-          $("#snapchat-modal").fadeOut(500);
-          createCookie("snapchat", "read", 1);
-      });
-  });
+  // $(function() {
+  //   $("#snapchatClose").on('click tap', function() {
+  //         $("#snapchat-modal").fadeOut(500);
+  //         createCookie("snapchat", "read", 1);
+  //     });
+  // });
 
   $(function() {
     $('#glides').perfectScrollbar({
@@ -359,28 +359,92 @@ jQuery(document).ready(function($) {
   });
 
   // Nav Button
-  $(function() {
-    $('#nav-button, #nav-button-desktop').on('click tap', function(event) {
+  $(function () {
+    var bodyTag = document.getElementsByTagName("body")[0];
+    document.getElementById("nav-button-desktop").addEventListener("click", function (event) {
       console.log("Nav button clicked");
       event.preventDefault(); // Prevent default action
       event.stopPropagation(); // Stop the event from bubbling up
-      $(this).find('#hmbrgr').trigger("click");
-      $('body').toggleClass('menu-open');
+      if (bodyTag.classList.contains("menu-open")) {
+        console.log("Removing menu-open");
+        bodyTag.classList.remove("menu-open");
+      } else {
+        console.log("Adding menu-open");
+        bodyTag.classList.add("menu-open");
+      }
     });
+    // $("#nav-button-desktop").on("click tap", function (event) {
+    //   // $("#hmbrgr-desktop").trigger("click");
+    //   document.getElementsByTagName("body")[0].classList.toggle("menu-open");
+    // });
   });
 
   // HAMBURGER
-  $(function () {
-    $(".hmbrgr").hmbrgr({
-      width: 14,
-      height: 10,
-      barHeight: 1,
-      barColor: "#fff"
-    });
-  });
+  // $(function () {
+  //   $("#hmbrgr-desktop").hmbrgr({
+  //     width: 14,
+  //     height: 10,
+  //     barHeight: 1,
+  //     barColor: "#fff",
+  //     onOpen: function () {
+  //       $("body").addClass("menu-open");
+  //     }, // optional - callback when the hamburger is opening
+  //     onClose: function () {
+  //       $("body").removeClass("menu-open");
+  //     },
+  //   });
+  // });
 
-  // Footer Toggle //
+  // // Nav Button
+  // $(function() {
+  //   $('#nav-button-desktop').on('click tap', function(event) {
+  //     console.log("Nav button clicked");
+  //     // event.preventDefault(); // Prevent default action
+  //     // event.stopPropagation(); // Stop the event from bubbling up
+  //     $('#hmbrgr-desktop').trigger("click");
+  //     $('body').toggleClass('menu-open');
+  //   });
+  // });
+  
+  // $(function() {
+  //   $('#nav-button').on('click tap', function(event) {
+  //     console.log("Nav button clicked");
+  //     event.preventDefault(); // Prevent default action
+  //     event.stopPropagation(); // Stop the event from bubbling up
+  //     $('#hmbrgr').trigger();
+  //     $('body').toggleClass('menu-open');
+  //   });
+  // });
 
+  // // HAMBURGER
+  // $(function () {
+  //   $("#hmbrgr-desktop").hmbrgr({
+  //     width: 14,
+  //     height: 10,
+  //     barHeight: 1,
+  //     barColor: "#fff"
+  //   });
+  // });
+  
+  // $(function () {
+  //   $("#hmbrgr").hmbrgr({
+  //     width: 14,
+  //     height: 10,
+  //     barHeight: 1,
+  //     barColor: "#fff"
+  //   });
+  // });
+  
+  // $(function () {
+  //   $("#hmbrgr-desktop").hmbrgr({
+  //     width: 14,
+  //     height: 10,
+  //     barHeight: 1,
+  //     barColor: "#fff"
+  //   });
+  // });
+
+  // Footer Toggle
   $(function() {
     $('#footer-open').on('click tap', function(event) {
       event.preventDefault();
