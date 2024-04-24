@@ -22,6 +22,7 @@ wp-content/*
 
 !wp-content/themes/galore/
 !wp-content/plugins/ad-switcher/
+!README.md
 
 # Misc files types
 *.DS_Store

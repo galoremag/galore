@@ -831,6 +831,12 @@ body.menu-open .modal-nav {
     cursor: pointer;
 }
 
+#nav-button-desktop {
+	padding: 6px 8px 5px 8px;
+    position: absolute;
+    cursor: pointer;
+}
+
 #nav-button a#hmbrgr {
 	position: relative;
 	display: inline-block;
@@ -858,6 +864,40 @@ body.menu-open .modal-nav {
 			&:nth-child(3) {
 				transform: rotate(45deg);
 				-webkit-transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+#nav-button-desktop a#hmbrgr-desktop {
+	position: relative;
+	display: inline-block;
+	pointer-events: none !important;
+
+	span {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		background: #fff;
+		display: inline-block;
+	}
+
+	&.expand {
+		span {
+			&:nth-child(1) {
+				transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+				top: 5px;
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+			}
+
+			&:nth-child(3) {
+				transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+				top: 5px;
 			}
 		}
 	}
@@ -1273,7 +1313,7 @@ li.post div.catlinks ul li a {
 }
 
 img.postFeaturedImg.wp-post-image {
-  margin: -20px 0 0 0 !important
+  margin: 0 0 0 0 !important
 }
 
 #home-container .dating {
@@ -2034,7 +2074,7 @@ input, textarea, .form-control { .font2; color: @brand !important; }
 	padding: 5px 10px;
 	color: white !important;
 	.font2;
-	margin: 10px 15px;
+	margin: 10px 15px 10px 0px;
 	border-radius: 20px;
 	opacity: 0.7;
 	width: 200px;
@@ -2542,12 +2582,12 @@ td:nth-child(2){
 
 #content .updated_catlinks {
 	transform: scale(1.2) rotate(-4deg);
-    position: fixed;
+    position: absolute;
 }
 
-#content .updated_catlinks .updated_cat_anchor_tag {
+#content .updated_catlinks .updated_catlinks_anchor_tag {
 	left: 3px;
-    top: 1px;
+    top: 30px;
 }
 
 @import "style-responsive.less";

@@ -360,24 +360,30 @@ jQuery(document).ready(function($) {
 
   // Nav Button
   $(function() {
-    $('#nav-button').on('click tap', function(event) {
-      $('.hmbrgr').click();
+    $('#nav-button, #nav-button-desktop').on('click tap', function(event) {
+      console.log("Nav button clicked");
+      event.preventDefault(); // Prevent default action
+      event.stopPropagation(); // Stop the event from bubbling up
+      $(this).find('#hmbrgr').trigger("click");
+      $('body').toggleClass('menu-open');
     });
   });
 
   // HAMBURGER
   $(function() {
-    $('.hmbrgr').hmbrgr({
-      width     : 14,
-      height    : 10,
-      barHeight : 1,
-      barColor  : '#fff',
-      onOpen    : function(){
-        $('body').addClass('menu-open');
-      },   // optional - callback when the hamburger is opening
-      onClose   : function(){
-        $('body').removeClass('menu-open');
-      }
+    $('#hmbrgr').each(function() {
+      $(this).hmbrgr({
+        width: 14,
+        height: 10,
+        barHeight: 1,
+        barColor: '#fff',
+        onOpen: function() {
+          $('body').addClass('menu-open');
+        },
+        onClose: function() {
+          $('body').removeClass('menu-open');
+        }
+      });
     });
   });
 
