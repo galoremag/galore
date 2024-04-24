@@ -370,20 +370,12 @@ jQuery(document).ready(function($) {
   });
 
   // HAMBURGER
-  $(function() {
-    $('#hmbrgr').each(function() {
-      $(this).hmbrgr({
-        width: 14,
-        height: 10,
-        barHeight: 1,
-        barColor: '#fff',
-        onOpen: function() {
-          $('body').addClass('menu-open');
-        },
-        onClose: function() {
-          $('body').removeClass('menu-open');
-        }
-      });
+  $(function () {
+    $(".hmbrgr").hmbrgr({
+      width: 14,
+      height: 10,
+      barHeight: 1,
+      barColor: "#fff"
     });
   });
 
