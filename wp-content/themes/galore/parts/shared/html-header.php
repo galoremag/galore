@@ -250,13 +250,21 @@
 	<body>
 		<!-- Begin Comscore Tag -->
 		<script>
-			var _comscore = _comscore || []; _comscore.push({});
+			var _comscore = _comscore || [];
+			_comscore.push({
+				c1: "2",
+				c2: "36541495",
+				options: {
+					enableFirstPartyCookie: true,
+					bypassUserConsentRequirementFor1PCookie: true
+				}
+			});
 			(function() {
-			var s = document.createElement("script"),
-				el = document.getElementsByTagName("script")[0];
-			s.async = true;
-			s.src = "https://sb.scorecardresearch.com/cs/36541495/beacon.js";
-			el.parentNode.insertBefore(s, el);
+				var s = document.createElement("script"),
+					el = document.getElementsByTagName("script")[0];
+				s.async = true;
+				s.src = "https://sb.scorecardresearch.com/cs/36541495/beacon.js";
+				el.parentNode.insertBefore(s, el);
 			})();
 		</script>
 		<noscript>
@@ -268,14 +276,14 @@
 		<script async type="text/javascript">
 			function zync_call() {
 				var z = document.createElement("script");
-				var custom1="{PageCategory}";
-				var custom2="{PostType}";
-				var zmpID="galore-mag";
-				var cache_buster=Date.now();
-				var PageUrl="{PageUrl}";
-				var page_referrer=encodeURIComponent(document.referrer);
+				var custom1 = "{PageCategory}";
+				var custom2 = "{PostType}";
+				var zmpID = "galore-mag";
+				var cache_buster = Date.now();
+				var PageUrl = "{PageUrl}";
+				var page_referrer = encodeURIComponent(document.referrer);
 
-				var z_src = "https://live.rezync.com/sync?c=16b6410431b6374e780104abb0443ca8&p=7a1e9a4c1e0f506ddb943f0a4ab54c17&k=galore-mag-pixel-8226&custom1="+custom1+"&custom2="+custom2+"&zmpID="+zmpID+"&cache_buster="+cache_buster+"&PageUrl="+PageUrl+"&page_referrer="+page_referrer;
+				var z_src = "https://live.rezync.com/sync?c=16b6410431b6374e780104abb0443ca8&p=7a1e9a4c1e0f506ddb943f0a4ab54c17&k=galore-mag-pixel-8226&custom1=" + custom1 + "&custom2=" + custom2 + "&zmpID=" + zmpID + "&cache_buster=" + cache_buster + "&PageUrl=" + PageUrl + "&page_referrer=" + page_referrer;
 				z.setAttribute("src", z_src);
 				document.body.appendChild(z);
 			}
@@ -283,7 +291,7 @@
 			if (['complete', 'interactive'].indexOf(document.readyState) >= 0) {
 				zync_call();
 			} else {
-				window.addEventListener("DOMContentLoaded", function(){
+				window.addEventListener("DOMContentLoaded", function() {
 					zync_call();
 				});
 			}

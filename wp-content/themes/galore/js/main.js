@@ -380,75 +380,18 @@ jQuery(document).ready(function($) {
   });
 
   // HAMBURGER
-  // $(function () {
-  //   $("#hmbrgr-desktop").hmbrgr({
-  //     width: 14,
-  //     height: 10,
-  //     barHeight: 1,
-  //     barColor: "#fff",
-  //     onOpen: function () {
-  //       $("body").addClass("menu-open");
-  //     }, // optional - callback when the hamburger is opening
-  //     onClose: function () {
-  //       $("body").removeClass("menu-open");
-  //     },
-  //   });
-  // });
-
-  // // Nav Button
-  // $(function() {
-  //   $('#nav-button-desktop').on('click tap', function(event) {
-  //     console.log("Nav button clicked");
-  //     // event.preventDefault(); // Prevent default action
-  //     // event.stopPropagation(); // Stop the event from bubbling up
-  //     $('#hmbrgr-desktop').trigger("click");
-  //     $('body').toggleClass('menu-open');
-  //   });
-  // });
-  
-  // $(function() {
-  //   $('#nav-button').on('click tap', function(event) {
-  //     console.log("Nav button clicked");
-  //     event.preventDefault(); // Prevent default action
-  //     event.stopPropagation(); // Stop the event from bubbling up
-  //     $('#hmbrgr').trigger();
-  //     $('body').toggleClass('menu-open');
-  //   });
-  // });
-
-  // // HAMBURGER
-  // $(function () {
-  //   $("#hmbrgr-desktop").hmbrgr({
-  //     width: 14,
-  //     height: 10,
-  //     barHeight: 1,
-  //     barColor: "#fff"
-  //   });
-  // });
-  
-  // $(function () {
-  //   $("#hmbrgr").hmbrgr({
-  //     width: 14,
-  //     height: 10,
-  //     barHeight: 1,
-  //     barColor: "#fff"
-  //   });
-  // });
-  
-  // $(function () {
-  //   $("#hmbrgr-desktop").hmbrgr({
-  //     width: 14,
-  //     height: 10,
-  //     barHeight: 1,
-  //     barColor: "#fff"
-  //   });
-  // });
-
-  // Footer Toggle
-  $(function() {
-    $('#footer-open').on('click tap', function(event) {
-      event.preventDefault();
-      $('#footer').toggleClass('footerOn');
+  $(function () {
+    $(".hmbrgr").hmbrgr({
+      width: 14,
+      height: 10,
+      barHeight: 1,
+      barColor: "#fff",
+      onOpen: function () {
+        $("body").addClass("menu-open");
+      }, // optional - callback when the hamburger is opening
+      onClose: function () {
+        $("body").removeClass("menu-open");
+      },
     });
   });
 
