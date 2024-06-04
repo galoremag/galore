@@ -134,12 +134,12 @@
 			<nav id="deskNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<div id="modal-nav-button" class="nav-button pull-left">
-							<!-- <a href="#" id="hmbrgr-desktop" class="hmbrgr"></a> -->
+						<!-- <div id="modal-nav-button" class="nav-button pull-left">
+							<a href="#" id="hmbrgr-desktop" class="hmbrgr"></a>
 							<a href="#" id="nav-button-desktop">
 								<i class="btr bt-bars"></i>
 							</a>
-						</div>
+						</div> -->
 						<div id="site-search" class="pull-left hidden-xs">
 							<!-- <?php get_search_form(); ?> -->
 							<form role="search" method="get" action="<?php echo site_url(); ?>">
