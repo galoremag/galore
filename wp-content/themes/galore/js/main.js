@@ -360,19 +360,19 @@ jQuery(document).ready(function($) {
 
   // Nav Button
   $(function () {
-    var bodyTag = document.getElementsByTagName("body")[0];
-    document.getElementById("nav-button-desktop").addEventListener("click", function (event) {
-      console.log("Nav button clicked");
-      event.preventDefault(); // Prevent default action
-      event.stopPropagation(); // Stop the event from bubbling up
-      if (bodyTag.classList.contains("menu-open")) {
-        console.log("Removing menu-open");
-        bodyTag.classList.remove("menu-open");
-      } else {
-        console.log("Adding menu-open");
-        bodyTag.classList.add("menu-open");
-      }
-    });
+    // var bodyTag = document.getElementsByTagName("body")[0];
+    // document.getElementById("nav-button-desktop").addEventListener("click", function (event) {
+    //   console.log("Nav button clicked");
+    //   event.preventDefault(); // Prevent default action
+    //   event.stopPropagation(); // Stop the event from bubbling up
+    //   if (bodyTag.classList.contains("menu-open")) {
+    //     console.log("Removing menu-open");
+    //     bodyTag.classList.remove("menu-open");
+    //   } else {
+    //     console.log("Adding menu-open");
+    //     bodyTag.classList.add("menu-open");
+    //   }
+    // });
     // $("#nav-button-desktop").on("click tap", function (event) {
     //   // $("#hmbrgr-desktop").trigger("click");
     //   document.getElementsByTagName("body")[0].classList.toggle("menu-open");
@@ -380,28 +380,28 @@ jQuery(document).ready(function($) {
   });
 
   // HAMBURGER
-  $(function () {
-    $(".hmbrgr").hmbrgr({
-      width: 14,
-      height: 10,
-      barHeight: 1,
-      barColor: "#fff",
-      onOpen: function () {
-        $("body").addClass("menu-open");
-      }, // optional - callback when the hamburger is opening
-      onClose: function () {
-        $("body").removeClass("menu-open");
-      },
-    });
-  });
+  // $(function () {
+  //   $(".hmbrgr").hmbrgr({
+  //     width: 14,
+  //     height: 10,
+  //     barHeight: 1,
+  //     barColor: "#fff",
+  //     onOpen: function () {
+  //       $("body").addClass("menu-open");
+  //     }, // optional - callback when the hamburger is opening
+  //     onClose: function () {
+  //       $("body").removeClass("menu-open");
+  //     },
+  //   });
+  // });
 
-  $(function() {
-    $("#footer-close").on('click tap', function(event) {
-      event.preventDefault();
-      $('#footer').toggleClass('footerOn');
-      // createCookie("newsletter", "read", 14);
-    });
-  });
+  // $(function() {
+  //   $("#footer-close").on('click tap', function(event) {
+  //     event.preventDefault();
+  //     $('#footer').toggleClass('footerOn');
+  //     // createCookie("newsletter", "read", 14);
+  //   });
+  // });
 
   // Fancy List Body Toggle
   $(function() {
